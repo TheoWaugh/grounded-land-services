@@ -7,36 +7,44 @@ interface Message {
   role: "user" | "assistant";
   content: string;
 }
+function renderLink(label: string, href: string, key: number | string) {
+  const isExternal = href.startsWith("tel:") || href.startsWith("http");
+  const className = "font-semibold underline text-[#C4922A] hover:text-amber-600 transition-colors";
+  if (isExternal) {
+    return (
+      <a key={key} href={href} className={className}>
+        {label}
+      </a>
+    );
+  }
+  return (
+    <Link key={key} href={href} className={className}>
+      {label}
+    </Link>
+  );
+}
+
 function renderMessageContent(text: string) {
-  const parts = text.split(/(\[[^\]]+\]\([^)]+\)|\*\*[^*]+\*\*)/g);
+  const parts = text.split(
+    /(\*\*\[[^\]]+\]\([^)]+\)\*\*|\[[^\]]+\]\([^)]+\)|\*\*[^*]+\*\*)/g
+  );
 
   return parts.map((part, i) => {
+    // Bold-wrapped link: **[label](href)**
+    const boldLinkMatch = part.match(/^\*\*\[([^\]]+)\]\(([^)]+)\)\*\*$/);
+    if (boldLinkMatch) {
+      const [, label, href] = boldLinkMatch;
+      return renderLink(label, href, i);
+    }
+
+    // Plain link: [label](href)
     const linkMatch = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
     if (linkMatch) {
       const [, label, href] = linkMatch;
-      const isExternal = href.startsWith("tel:") || href.startsWith("http");
-      if (isExternal) {
-        return (
-          <a
-            key={i}
-            href={href}
-            className="font-semibold underline text-[#C4922A] hover:text-amber-600 transition-colors"
-          >
-            {label}
-          </a>
-        );
-      }
-      return (
-        <Link
-          key={i}
-          href={href}
-          className="font-semibold underline text-[#C4922A] hover:text-amber-600 transition-colors"
-        >
-          {label}
-        </Link>
-      );
+      return renderLink(label, href, i);
     }
 
+    // Plain bold: **text**
     const boldMatch = part.match(/^\*\*([^*]+)\*\*$/);
     if (boldMatch) {
       return <strong key={i}>{boldMatch[1]}</strong>;

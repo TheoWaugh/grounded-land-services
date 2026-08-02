@@ -21,6 +21,8 @@ export interface ServiceSection {
     left: ComparisonSide;
     right: ComparisonSide;
   };
+  loopingVideo?: { videoId: string; caption?: string };
+  areaMapQuery?: string;
 }
 
 export interface ServicePricing {

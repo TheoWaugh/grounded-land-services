@@ -189,6 +189,18 @@ return (
                 ))}
               </div>
             )}
+            {section.areaMapQuery && (
+              <div className="mt-6 rounded-2xl overflow-hidden border border-gray-100">
+                <iframe
+                  title={`Map of ${section.areaMapQuery}`}
+                  width="100%"
+                  height="320"
+                  style={{ border: 0 }}
+                  loading="lazy"
+                  src={`https://www.google.com/maps?q=${encodeURIComponent(section.areaMapQuery)}&output=embed`}
+                />
+              </div>
+            )}
             {section.loopingVideo && (
               <LoopingVideo
                 videoId={section.loopingVideo.videoId}

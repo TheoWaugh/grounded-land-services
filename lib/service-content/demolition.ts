@@ -20,6 +20,7 @@ const challengesIntro = facts
           `Every demolition project begins with careful planning. We evaluate the structure, surrounding property, utilities, and future goals to ensure the demolition is completed safely while minimizing unnecessary disturbance to the site. Once demolition is complete, we remove debris, grade the area if needed, and leave your property clean and ready for whatever comes next.`,
           `Whether you're preparing for new construction, reclaiming unused land, or removing unsafe structures, Grounded Land Services provides dependable demolition solutions throughout ${city} and the surrounding Central Texas region.`,
         ],
+        areaMapQuery: `${city}, Texas`,
       },
       {
         heading: "Why Property Owners Choose Professional Demolition",

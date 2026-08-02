@@ -9,6 +9,7 @@ const navLinks = [
   { label: "Services", href: "/services" },
   { label: "Gallery", href: "/gallery" },
   { label: "Service Areas", href: "/service-areas" },
+  { label: "FAQs", href: "/faq" },
 ];
 
 export default function Header() {

@@ -1,8 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import ScrollReveal from "./components/ScrollReveal";
 import QuoteForm from "./components/QuoteForm";
-
 const services = [
   {
     title: "Forestry Mulching",
@@ -104,37 +106,37 @@ const testimonials = [
     name: "Barrett Garrison",
     location: "Spicewood, TX",
     rating: 5,
-    text: "We couldn't be happier with the work Grounded Land Services and owner, Logan Arnold, did on our ranch in Spicewood, TX. They took on a challenging property with a lot of cleanup needed, clearing years of overgrown cedar across rough, rocky terrain. What impressed us most was the care and respect they showed for the land — they preserved the oaks and trees we wanted to keep while restoring the property to its full potential. Our ranch is in the best shape it has been in years, and we would gladly recommend them to anyone looking to care for their land the right way.",
+    text: "We couldn't be happier with the work Grounded Land Services and owner, Logan Arnold, did on our ranch in Spicewood, TX. They took on a challenging property with a lot of cleanup needed, including removing trash and debris from a burned-down house and old, dilapidated sheds, while also clearing years of overgrown cedar across rough, rocky terrain. What impressed us most was the care and respect they showed for the land. They took the time to preserve the oaks and the trees we wanted to keep, while thoughtfully restoring the property and helping it reach its full potential. Their attention to detail, hard work, and understanding of the land truly made a difference. Logan and his team were dependable, punctual, friendly, and always one step ahead — anticipating challenges and helping us make good decisions throughout the process. It's clear they take pride in what they do, and we are grateful for the incredible transformation they helped create. Our ranch is in the best shape it has been in years, and we would gladly use Grounded Land Services again and recommend them to anyone looking to care for their land the right way.",
   },
-  {
+ {
     name: "Christopher Durst",
     location: "Uhland, TX",
     rating: 5,
-    text: "We really appreciate the work Logan and his team did for us at the Uhland Fall Fest. They truly helped us curate a raw, unusable piece of land that was full of cedar trees and barbed mesquite into a beautiful, picturesque parkland for families to enjoy. I highly recommend these guys. First-class operation!",
+    text: "We really appreciate the work Logan and his team did for us at the Uhland Fall Fest. They truly helped us curate a raw, unusable piece of land that was full of cedar trees and barbed mesquite into a beautiful, picturesque parkland for families to enjoy. I highly recommend these guys. Happy to discuss my experience by phone. First-class operation!",
   },
   {
     name: "Dylan Gavit",
     location: "Bertram, TX",
     rating: 5,
-    text: "On time, hard-working, nonstop, knowledgeable, easy to work with. They mowed down giant cedar brush piles that had been there for at least 15 years down to nothing. I would highly recommend them to anyone needing absolutely any sort of land clearing. 10/10 five star crew.",
+    text: "On time, hard-working, nonstop, knowledgeable, easy to work with, generous, first responder supportive, like-minded, honest, good people, outstanding equipment, top-tier service, went out of their way multiple times to make sure my wife and I were satisfied in a patient manner. All around great people and land clearing company I see sky rocketing. More than fair prices for services. My wife and I recently bought 5 acres in Bertram, Texas. We found Grounded Land Services and gave them a try. Man are we glad we did. They were able to mow down giant cedar brush piles that had been there for at least 15 years down to nothing, worked all day and then some to get the job done and went out of their way to do a little extra on the house. These guys have been nothing short of amazing to work with — we sat in lawn chairs and watched them work meticulously yet efficiently. I would highly recommend them to anyone needing absolutely any sort of land clearing needed. 10/10 five star crew and business.",
   },
   {
     name: "Mike Janak",
     location: "Texas",
     rating: 5,
-    text: "Logan cleared a 50 ft by 300 ft path through heavily wooded, sloping terrain. Walking that area before was a miserable experience and now it&apos;s a beautiful stroll on my property! His attention to detail — especially the cleanup — has my neighbors asking for his card.",
+    text: "I hired Grounded Land Services to clear a 50' x 300' path through heavily wooded, sloping terrain that was inundated with Huisache and Prickly Pear. Walking that area before was a miserable experience and now it's a beautiful stroll on my property! Logan's attention to detail and especially the cleanup has my neighbors asking me for his business card.",
   },
   {
     name: "Mckenzie Schultz",
     location: "Texas",
     rating: 5,
-    text: "I had an excellent experience with Grounded Land Services! They cleared five acres of heavy underbrush efficiently and thoroughly. The results exceeded my expectations! The crew was extremely professional and communicated clearly throughout the entire process.",
+    text: "I had an excellent experience with Grounded Land Services! They cleared five acres of heavy underbrush for me efficiently and thoroughly. The results exceeded my expectations! The crew was extremely professional and communicated clearly throughout the entire process. It's clear they take pride in their work. So happy with the results, would 100% recommend to anyone needing their services!",
   },
   {
     name: "Jacque Mendenhall",
     location: "Texas",
     rating: 5,
-    text: "We had a fantastic experience from start to finish. He truly listened to what we needed and followed through with care and attention to detail. He completed work before and after the July 4th flood — impressed with his consistency, reliability, and quality.",
+    text: "We had a fantastic experience working with Grounded Land Services! From start to finish, the communication was clear and professional. He truly listened to what we needed and followed through with care and attention to detail. He completed work both before and after the July 4th flood, and we were impressed with his consistency, reliability, and the quality of the results. Highly recommend for any land clearing or related projects.",
   },
   {
     name: "Kelley Arnold",
@@ -146,13 +148,19 @@ const testimonials = [
     name: "Evan Smith",
     location: "Texas",
     rating: 5,
-    text: "I am truly grateful for the quality of work and attention to detail Logan provided when mulching my cedar piles. He is very professional and I highly recommend his services. It&apos;s been a refreshing process to have a job done well and on time. Thanks Logan!",
+    text: "I am truly grateful for the quality of work and attention to detail Logan provided when mulching my cedar piles. He is very professional and I highly recommend his services. It's been a refreshing process to have a job done well and on time. Thanks Logan!",
   },
   {
     name: "Gary Gorton",
     location: "Texas",
     rating: 5,
     text: "Ground Land Services is a rare find. Knowledgeable, professional, punctual and a fair price. Logan met and exceeded all of our expectations. We will definitely use him again.",
+  },
+  {
+    name: "Kathy Wendt",
+    location: "Texas",
+    rating: 5,
+    text: "Grounded Land Services did an amazing job. He got rid of dead trees, branches, and stumps. He made our property looking great again. I highly recommend his services.",
   },
   {
     name: "Melanie Madsen",
@@ -170,21 +178,86 @@ const galleryImages = [
   { src: "/images/work/IMG_1890.jpeg", wide: false },
   { src: "/images/work/IMG_7145.jpeg", wide: false },
 ];
+function TestimonialSlider() {
+  const [page, setPage] = useState(0);
+  const perPage = 3;
+  const totalPages = Math.ceil(testimonials.length / perPage);
 
+  const goTo = (p: number) => setPage((p + totalPages) % totalPages);
+  const current = testimonials.slice(page * perPage, page * perPage + perPage);
+
+  return (
+    <div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 min-h-[280px]">
+        {current.map((t) => (
+          <div key={t.name} className="testimonial-card h-full flex flex-col">
+            <div className="stars text-lg mb-4">{"★".repeat(t.rating)}</div>
+            <p className="text-[#1d1d1f] text-sm leading-relaxed flex-1 mb-6">
+              &ldquo;{t.text}&rdquo;
+            </p>
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-[#C4922A] flex items-center justify-center text-white font-semibold text-sm flex-shrink-0">
+                {t.name.split(" ").map((n) => n[0]).join("")}
+              </div>
+              <div>
+                <p className="font-semibold text-[#0a0a0a] text-sm">{t.name}</p>
+                <p className="text-[#6e6e73] text-xs">{t.location}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="flex items-center justify-center gap-4 mt-8">
+        <button
+          onClick={() => goTo(page - 1)}
+          className="w-10 h-10 rounded-full bg-white border border-gray-200 hover:border-[#C4922A] flex items-center justify-center transition-colors"
+          aria-label="Previous testimonials"
+        >
+          <svg className="w-4 h-4 text-[#0a0a0a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+
+        <div className="flex gap-2">
+          {Array.from({ length: totalPages }).map((_, i) => (
+            <button
+              key={i}
+              onClick={() => goTo(i)}
+              className={`w-2 h-2 rounded-full transition-colors ${
+                i === page ? "bg-[#C4922A]" : "bg-gray-300 hover:bg-gray-400"
+              }`}
+              aria-label={`Go to testimonial page ${i + 1}`}
+            />
+          ))}
+        </div>
+
+        <button
+          onClick={() => goTo(page + 1)}
+          className="w-10 h-10 rounded-full bg-white border border-gray-200 hover:border-[#C4922A] flex items-center justify-center transition-colors"
+          aria-label="Next testimonials"
+        >
+          <svg className="w-4 h-4 text-[#0a0a0a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  );
+}
 export default function Home() {
   return (
     <>
       {/* ══════════ HERO ══════════ */}
       <section className="relative h-screen min-h-[600px] flex items-end overflow-hidden">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-        >
-          <source src="/homepage-video.mp4" type="video/mp4" />
-        </video>
+        <Image
+          src="/images/official/homepage-pic.JPG"
+          alt="Grounded Land Services — transforming Texas land"
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+        />
         <div className="absolute inset-0 hero-overlay" />
 
         <div className="relative z-10 w-full max-w-7xl mx-auto px-6 pb-24 md:pb-32">
@@ -311,7 +384,7 @@ export default function Home() {
               Unmatched Expertise &<br />Dedication to Your Land
             </h2>
             <p className="text-[#6e6e73] text-lg max-w-2xl mx-auto leading-relaxed">
-              At Grounded Land Services, we bring unmatched expertise and cutting-edge equipment to every project. Our team&apos;s precision and attention to detail ensure your land transformation is completed efficiently, safely, and to the highest standards.
+              At Grounded Land Services, we bring unmatched expertise and cutting-edge equipment to every project. Our team's precision and attention to detail ensure your land transformation is completed efficiently, safely, and to the highest standards.
             </p>
           </ScrollReveal>
 
@@ -377,6 +450,34 @@ export default function Home() {
         </div>
       </section>
 
+            {/* ══════════ SERVICE AREAS PREVIEW ══════════ */}
+      <section className="py-12 px-6 bg-white border-t border-gray-100">
+        <div className="max-w-7xl mx-auto text-center">
+          <ScrollReveal>
+            <p className="section-label mb-3">Coverage</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0a0a0a] mb-4">
+              Serving Property Owners Across Texas
+            </h2>
+            <p className="text-[#6e6e73] mb-8 max-w-xl mx-auto">
+              No matter where your property is located, Grounded Land Services travels statewide to provide professional land clearing, forestry mulching, demolition, rock crushing, and site preparation services.
+            </p>
+            <div className="flex flex-wrap justify-center gap-2 mb-8 max-w-3xl mx-auto">
+              {["Austin", "San Antonio", "Houston", "Dallas", "Marble Falls", "Fredericksburg", "Dripping Springs", "Kerrville", "Georgetown", "Round Rock", "Bastrop", "Waco"].map((city) => (
+                <Link key={city} href="/service-areas" className="px-3 py-1.5 rounded-full bg-[#f5f5f7] text-[#1d1d1f] text-sm hover:bg-gray-200 transition-colors">
+                  {city}
+                </Link>
+              ))}
+              <Link href="/service-areas" className="px-3 py-1.5 rounded-full bg-[#C4922A]/15 text-[#8B6618] text-sm font-medium hover:bg-[#C4922A]/25 transition-colors">
+                +100 more cities →
+              </Link>
+            </div>
+            <Link href="/service-areas" className="btn-dark">
+              View All Service Areas
+            </Link>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* ══════════ TESTIMONIALS ══════════ */}
       <section className="py-14 md:py-20 px-6 bg-[#f5f5f7]">
         <div className="max-w-7xl mx-auto">
@@ -387,31 +488,7 @@ export default function Home() {
             </h2>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {testimonials.map((t, i) => (
-              <ScrollReveal
-                key={t.name}
-                animation="reveal"
-                delay={([0, 100, 200, 300, 400, 500] as const)[i]}
-              >
-                <div className="testimonial-card h-full flex flex-col">
-                  <div className="stars text-lg mb-4">{"★".repeat(t.rating)}</div>
-                  <p className="text-[#1d1d1f] text-sm leading-relaxed flex-1 mb-6">
-                    &ldquo;{t.text}&rdquo;
-                  </p>
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-[#C4922A] flex items-center justify-center text-white font-semibold text-sm flex-shrink-0">
-                      {t.name.split(" ").map((n) => n[0]).join("")}
-                    </div>
-                    <div>
-                      <p className="font-semibold text-[#0a0a0a] text-sm">{t.name}</p>
-                      <p className="text-[#6e6e73] text-xs">{t.location}</p>
-                    </div>
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
+          <TestimonialSlider />
         </div>
       </section>
 
@@ -457,34 +534,6 @@ export default function Home() {
               <QuoteForm dark={true} />
             </ScrollReveal>
           </div>
-        </div>
-      </section>
-
-      {/* ══════════ SERVICE AREAS PREVIEW ══════════ */}
-      <section className="py-12 px-6 bg-white border-t border-gray-100">
-        <div className="max-w-7xl mx-auto text-center">
-          <ScrollReveal>
-            <p className="section-label mb-3">Coverage</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0a0a0a] mb-4">
-              Serving All of Texas
-            </h2>
-            <p className="text-[#6e6e73] mb-8 max-w-xl mx-auto">
-              From Austin to Houston, San Antonio to Dallas — we travel to where your land needs us.
-            </p>
-            <div className="flex flex-wrap justify-center gap-2 mb-8 max-w-3xl mx-auto">
-              {["Austin", "San Antonio", "Houston", "Dallas", "Marble Falls", "Fredericksburg", "Dripping Springs", "Kerrville", "Georgetown", "Round Rock", "Bastrop", "Waco"].map((city) => (
-                <Link key={city} href="/service-areas" className="px-3 py-1.5 rounded-full bg-[#f5f5f7] text-[#1d1d1f] text-sm hover:bg-gray-200 transition-colors">
-                  {city}
-                </Link>
-              ))}
-              <Link href="/service-areas" className="px-3 py-1.5 rounded-full bg-[#C4922A]/15 text-[#8B6618] text-sm font-medium hover:bg-[#C4922A]/25 transition-colors">
-                +100 more cities →
-              </Link>
-            </div>
-            <Link href="/service-areas" className="btn-dark">
-              View All Service Areas
-            </Link>
-          </ScrollReveal>
         </div>
       </section>
     </>

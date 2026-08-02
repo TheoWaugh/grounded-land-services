@@ -11,20 +11,21 @@ export interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     name: "Jacque Mendenhall",
-    quote: "We had a fantastic experience working with Grounded Land Services! From start to finish, the communication was clear and professional. He completed work both before and after the July 4th flood, and we were impressed with his consistency, reliability, and the quality of the results. Highly recommend for any land clearing or related projects.",
+    quote: "We had a fantastic experience working with Grounded Land Services! From start to finish, the communication was clear and professional. He truly listened to what we needed and followed through with care and attention to detail. He completed work both before and after the July 4th flood, and we were impressed with his consistency, reliability, and the quality of the results. Highly recommend for any land clearing or related projects.",
   },
   {
     name: "Christopher Durst",
-    quote: "We really appreciate the work Logan and his team did for us at the Uhland Fall Fest. They truly helped us curate a raw, unusable piece of land that was full of cedar trees and barbed mesquite into a beautiful, picturesque parkland for families to enjoy. I highly recommend these guys. First-class operation!",
+    quote: "We really appreciate the work Logan and his team did for us at the Uhland Fall Fest. They truly helped us curate a raw, unusable piece of land that was full of cedar trees and barbed mesquite into a beautiful, picturesque parkland for families to enjoy. I highly recommend these guys. Happy to discuss my experience by phone. First-class operation!",
   },
   {
     name: "Dylan Gavit",
     location: "Bertram, TX",
-    quote: "On time, hard-working, nonstop, knowledgeable, easy to work with, generous, honest, good people, outstanding equipment, top-tier service. My wife and I recently bought 5 acres in Bertram, Texas, and Grounded Land Services mowed down giant cedar brush piles that had been there for at least 15 years down to nothing — working all day and then some to get the job done. More than fair prices. 10/10 five star crew and business.",
+    quote: "On time, hard-working, nonstop, knowledgeable, easy to work with, generous, first responder supportive, like-minded, honest, good people, outstanding equipment, top-tier service, went out of their way multiple times to make sure my wife and I were satisfied in a patient manner. All around great people and land clearing company I see sky rocketing. More than fair prices for services. My wife and I recently bought 5 acres in Bertram, Texas. We found Grounded Land Services and gave them a try. Man are we glad we did. They were able to mow down giant cedar brush piles that had been there for at least 15 years down to nothing, worked all day and then some to get the job done and went out of their way to do a little extra on the house. These guys have been nothing short of amazing to work with — we sat in lawn chairs and watched them work meticulously yet efficiently. I would highly recommend them to anyone needing absolutely any sort of land clearing needed. 10/10 five star crew and business.",
   },
   {
-    name: "McKenzie Schultz",
-    quote: "I had an excellent experience with Grounded Land Services! They cleared five acres of heavy underbrush efficiently and thoroughly. The results exceeded my expectations! The owner, Logan, was very communicative throughout the entire process and provided great service. I can't recommend Grounded Land Services enough!",
+    name: "Mckenzie Schultz",
+    location: "Texas",
+    quote: "I had an excellent experience with Grounded Land Services! They cleared five acres of heavy underbrush for me efficiently and thoroughly. The results exceeded my expectations! The crew was extremely professional and communicated clearly throughout the entire process. It's clear they take pride in their work. So happy with the results, would 100% recommend to anyone needing their services!",
   },
   {
     name: "Mike Janak",
@@ -33,7 +34,7 @@ const testimonials: Testimonial[] = [
   {
     name: "Barrett Garrison",
     location: "Spicewood, TX",
-    quote: "We couldn't be happier with the work Grounded Land Services and owner, Logan Arnold, did on our ranch in Spicewood, TX. They took on a challenging property with a lot of cleanup needed, clearing years of overgrown cedar across rough, rocky terrain. What impressed us most was the care and respect they showed for the land — they preserved the oaks and trees we wanted to keep while restoring the property to its full potential. Logan and his team were dependable, punctual, and always one step ahead. Our ranch is in the best shape it has been in years, and we would gladly recommend them to anyone looking to care for their land the right way.",
+    quote: "We couldn't be happier with the work Grounded Land Services and owner, Logan Arnold, did on our ranch in Spicewood, TX. They took on a challenging property with a lot of cleanup needed, including removing trash and debris from a burned-down house and old, dilapidated sheds, while also clearing years of overgrown cedar across rough, rocky terrain. What impressed us most was the care and respect they showed for the land. They took the time to preserve the oaks and the trees we wanted to keep, while thoughtfully restoring the property and helping it reach its full potential. Their attention to detail, hard work, and understanding of the land truly made a difference. Logan and his team were dependable, punctual, friendly, and always one step ahead — anticipating challenges and helping us make good decisions throughout the process. It's clear they take pride in what they do, and we are grateful for the incredible transformation they helped create. Our ranch is in the best shape it has been in years, and we would gladly use Grounded Land Services again and recommend them to anyone looking to care for their land the right way.",
   },
   {
     name: "Melanie Madsen",
@@ -48,14 +49,18 @@ const testimonials: Testimonial[] = [
     location: "Buda, TX",
     quote: "Grounded Land Services did an amazing job clearing our property in Buda, TX. They removed thick cedar and brush while protecting the trees we wanted to keep. The crew was professional, on time, and left the property clean and ready for our next project. If you need land clearing in Central Texas, I highly recommend Grounded Land Services!",
   },
+  {
+    name: "Kathy Wendt",
+    quote: "Grounded Land Services did an amazing job. He got rid of dead trees, branches, and stumps. He made our property looking great again. I highly recommend his services.",
+  },
 ];
 
-const featuredNames = ["Jacque Mendenhall", "Christopher Durst", "Dylan Gavit"];
+const featuredNames = ["Jacque Mendenhall", "Christopher Durst", "Mckenzie Schultz"];
 
 function TestimonialCard({ t }: { t: Testimonial }) {
   return (
     <div
-      className="break-inside-avoid relative p-7 bg-white border border-gray-100 rounded-2xl hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 group"
+      className="break-inside-avoid relative p-7 bg-white border border-gray-100 rounded-2xl hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 group flex flex-col"
     >
       <svg
         className="absolute top-6 right-6 w-9 h-9 text-amber-100 group-hover:text-amber-200 transition-colors duration-300"
@@ -105,7 +110,7 @@ export default function Testimonials() {
 
   return (
     <div>
-      <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 [&>*]:mb-5">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 items-start">
         {featured.map((t) => (
           <TestimonialCard key={t.name} t={t} />
         ))}
@@ -113,19 +118,13 @@ export default function Testimonials() {
 
       {rest.length > 0 && (
         <>
-          <div
-            className={`grid transition-all duration-500 ease-in-out ${
-              showAll ? "grid-rows-[1fr] opacity-100 mt-5" : "grid-rows-[0fr] opacity-0"
-            }`}
-          >
-            <div className="overflow-hidden">
-              <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 [&>*]:mb-5">
-                {rest.map((t) => (
-                  <TestimonialCard key={t.name} t={t} />
-                ))}
-              </div>
+          {showAll && (
+            <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 [&>*]:mb-5 mt-5">
+              {rest.map((t) => (
+                <TestimonialCard key={t.name} t={t} />
+              ))}
             </div>
-          </div>
+          )}
 
           <div className="text-center mt-8">
             <button

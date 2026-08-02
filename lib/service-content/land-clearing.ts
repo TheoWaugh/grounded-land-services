@@ -19,6 +19,7 @@ const challengesParagraph = facts
           `Unlike forestry mulching, which leaves root systems and mulch on the ground, traditional land clearing completely removes trees, stumps, brush, rocks, and debris, creating a clean slate for future development. If your project requires foundations, roads, utilities, septic systems, barns, arenas, or finished landscaping, traditional land clearing is often the preferred solution because it prepares the property for construction from the ground up.`,
           `Our goal is simple: deliver land that is cleaner, safer, easier to maintain, and ready for whatever comes next.`,
         ],
+        areaMapQuery: `${city}, Texas`,
       },
       {
         heading: "Why Choose Traditional Land Clearing?",

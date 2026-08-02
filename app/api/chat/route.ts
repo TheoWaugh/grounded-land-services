@@ -71,9 +71,15 @@ We always offer free on-site property evaluations with no obligation. Call (512)
 - When mentioning the phone number, always format it as a markdown link like this: [(512) 571-6700](tel:5125716700).
 - When recommending a free estimate or quote, include a markdown link to the quote form like this: [Request a Free Quote](/contact#quote). If you know the specific service they're asking about, link to /contact?service=SERVICE_NAME#quote instead (URL-encode spaces as %20), e.g. [Request a Free Quote](/contact?service=Forestry%20Mulching#quote).`;
 
+interface ChatMessage {
+  role: "user" | "assistant";
+  content: string;
+}
+
 export async function POST(req: NextRequest) {
   try {
-    const { messages } = await req.json();
+    const body = await req.json();
+    const messages: ChatMessage[] = body.messages;
 
     if (!Array.isArray(messages) || messages.length === 0) {
       return NextResponse.json({ error: "No messages provided" }, { status: 400 });
@@ -83,8 +89,8 @@ export async function POST(req: NextRequest) {
       model: "claude-sonnet-4-5-20250929",
       max_tokens: 500,
       system: SYSTEM_PROMPT,
-      messages: messages.map((m: { role: string; content: string }) => ({
-        role: m.role,
+      messages: messages.map((m) => ({
+        role: m.role === "assistant" ? "assistant" as const : "user" as const,
         content: m.content,
       })),
     });

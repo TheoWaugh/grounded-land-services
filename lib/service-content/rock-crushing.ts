@@ -20,6 +20,7 @@ const challengesIntro = facts
           `Instead of paying to remove natural limestone and imported materials, we crush rock directly on-site into reusable aggregate that can be used for driveways, private roads, parking areas, building pads, erosion control, and other construction projects. This efficient process reduces hauling costs, minimizes waste, and creates valuable material from resources already found on your property.`,
           `Every property presents different challenges, which is why we evaluate each project individually to determine the most efficient and cost-effective rock crushing solution for your land.`,
         ],
+        areaMapQuery: `${city}, Texas`,
       },
       {
         heading: "Why Property Owners Choose Rock Crushing",

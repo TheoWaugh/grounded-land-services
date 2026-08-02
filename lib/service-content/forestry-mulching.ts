@@ -19,6 +19,7 @@ const challengesIntro = facts
 `If you're looking for [professional forestry mulching](/services/forestry-mulching) in ${city}, Texas, [Grounded Land Services](/) provides efficient, environmentally responsible land clearing solutions for residential, commercial, agricultural, and ranch properties throughout ${city} and the surrounding Central Texas region. Whether you're reclaiming overgrown acreage, removing invasive cedar trees, creating trails, improving wildlife habitat, reducing wildfire fuel, or preparing land for future improvements, our experienced team has the equipment and expertise to transform your property while preserving its natural beauty.`,
           `Every property has unique goals, which is why we carefully evaluate your land before recommending the best clearing method. Whether your objective is improving access, increasing usable acreage, restoring native grasses, or enhancing the appearance of your property, Grounded Land Services delivers professional forestry mulching services tailored to your specific needs.`,
         ],
+        areaMapQuery: `${city}, Texas`,
       },
       {
         heading: "Why Property Owners Choose Forestry Mulching",

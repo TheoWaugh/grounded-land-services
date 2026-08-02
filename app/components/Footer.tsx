@@ -98,7 +98,7 @@ export default function Footer() {
         <div className="lg:col-span-1">
           <Link href="/" className="inline-block mb-4">
             <Image
-              src="/logo.png"
+              src="/logos.png"
               alt="Grounded Land Services"
               width={130}
               height={65}
