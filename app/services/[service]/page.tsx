@@ -13,6 +13,7 @@ import { servicesContent } from "@/lib/services-content";
 import { serviceImagePosition } from "@/data/service-image-position";
 import RichText from "@/app/components/RichText";
 import LoopingVideo from "@/app/components/LoopingVideo";
+import BreadcrumbSchema from "@/app/components/BreadcrumbSchema";
 
 type PageParams = Promise<{ service: string }>;
 
@@ -36,6 +37,13 @@ export default async function ServiceDetailPage({ params }: { params: PageParams
 
 return (
     <section className="bg-white">
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Services", url: "/services" },
+          { name: content.title, url: `/services/${service}` },
+        ]}
+      />
       <ServiceStickyTitle title={content.title} />
 
 <div className="pt-8 relative">

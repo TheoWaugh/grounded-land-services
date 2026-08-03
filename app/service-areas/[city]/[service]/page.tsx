@@ -11,6 +11,7 @@ import { slugify } from "@/data/service-areas";
 import { serviceImagePosition } from "@/data/service-image-position";
 import RichText from "@/app/components/RichText";
 import LoopingVideo from "@/app/components/LoopingVideo";
+import BreadcrumbSchema from "@/app/components/BreadcrumbSchema";
 
 type PageParams = Promise<{ city: string; service: string }>;
 
@@ -39,7 +40,7 @@ export default async function ServicePage({ params }: { params: PageParams }) {
   const { city, service } = await params;
   const result = getServiceContent(city, service);
   if (!result) notFound();
-  const { content } = result;
+  const { content, cityName } = result;
   const quoteLabel = quoteFormLabels[service] ?? "";
   const quoteHref = `/contact?service=${encodeURIComponent(quoteLabel)}#quote`;
   const imageSrc = serviceImages[service];
@@ -47,6 +48,14 @@ export default async function ServicePage({ params }: { params: PageParams }) {
 
 return (
     <section className="bg-white">
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Service Areas", url: "/service-areas" },
+          { name: cityName, url: `/service-areas/${city}` },
+          { name: quoteFormLabels[service] ?? content.title, url: `/service-areas/${city}/${service}` },
+        ]}
+      />
 <ServiceStickyTitle title={content.title} />
 
 {imageSrc && (

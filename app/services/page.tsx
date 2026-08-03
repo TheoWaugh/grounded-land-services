@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import ScrollReveal from "../components/ScrollReveal";
+import BreadcrumbSchema from "../components/BreadcrumbSchema";
 
 const allServices = [
   {
@@ -108,6 +109,12 @@ const otherServices = [
 export default function ServicesPage() {
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Services", url: "/services" },
+        ]}
+      />
       {/* Hero */}
       <section className="relative h-64 md:h-80 flex items-end overflow-hidden bg-[#0a0a0a]">
         <Image

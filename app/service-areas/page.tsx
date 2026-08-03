@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import ScrollReveal from "../components/ScrollReveal";
 import { serviceAreas, rockCrushingCities } from "@/data/service-areas";
+import BreadcrumbSchema from "../components/BreadcrumbSchema";
 
 export default function ServiceAreasPage() {
   const [expandedRegion, setExpandedRegion] = useState<string | null>("Hill Country");
@@ -16,6 +17,12 @@ export default function ServiceAreasPage() {
 
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Service Areas", url: "/service-areas" },
+        ]}
+      />
       {/* Hero */}
       <section className="relative h-64 md:h-80 flex items-end overflow-hidden bg-[#0a0a0a]">
         <div
