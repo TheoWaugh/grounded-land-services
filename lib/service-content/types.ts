@@ -23,6 +23,7 @@ export interface ServiceSection {
   };
   loopingVideo?: { videoId: string; caption?: string };
   areaMapQuery?: string;
+  relatedServices?: { label: string; href: string }[];
 }
 
 export interface ServicePricing {

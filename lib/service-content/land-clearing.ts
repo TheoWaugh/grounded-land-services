@@ -96,6 +96,22 @@ const challengesParagraph = facts
         list: nearbyList,
         areasServed: true,
       },
-          ],
+      {
+        heading: "Related Services",
+        relatedServices: [
+          { label: "Forestry Mulching", href: "/services/forestry-mulching" },
+          { label: "Forestry Mulching Cleanup", href: "/services/forestry-mulching-cleanup" },
+          { label: "Cedar Tree Removal", href: "/services/cedar-tree-removal" },
+          { label: "Rock & Cactus Removal", href: "/services/rock-cactus-removal" },
+          { label: "Rock Crushing", href: "/services/rock-crushing" },
+          { label: "Demolition", href: "/services/demolition" },
+          { label: "Site Preparation", href: "/services/site-preparation" },
+          { label: "Underbrushing", href: "/services/underbrushing" },
+          { label: "Fence Line Clearing", href: "/services/fence-line-clearing" },
+          { label: "Residential Lot Clearing", href: "/services/residential-lot-clearing" },
+          { label: "Commercial Lot Clearing", href: "/services/commercial-lot-clearing" },
+        ],
+      },
+    ],
   };
 }

@@ -216,6 +216,22 @@ return (
                 caption={section.loopingVideo.caption}
               />
             )}
+            {section.relatedServices && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-2">
+                {section.relatedServices.map((r) => (
+                  
+                    <a key={r.label}
+                    href={r.href}
+                    className="flex items-center justify-between gap-2 p-4 bg-[#f9f9f9] border border-gray-100 rounded-xl hover:border-amber-200 hover:bg-amber-50 transition-colors text-sm font-semibold text-[#0a0a0a]"
+                  >
+                    {r.label}
+                    <svg className="w-4 h-4 text-[#C4922A] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </a>
+                ))}
+              </div>
+            )}
 
             {section.comparison && (
               <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-6 items-start mt-2">

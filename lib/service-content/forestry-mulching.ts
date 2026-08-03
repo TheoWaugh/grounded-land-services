@@ -130,9 +130,24 @@ const challengesIntro = facts
       },
 {
         heading: `Serving ${city} and the Surrounding Communities`,
-paragraphs: [`Grounded Land Services proudly provides [forestry mulching](/services/forestry-mulching) services throughout ${city} and nearby communities, including:`],
+        paragraphs: [`Grounded Land Services proudly provides [forestry mulching](/services/forestry-mulching) services throughout ${city} and nearby communities, including:`],
         list: nearbyList,
         areasServed: true,
+      },
+      {
+        heading: "Related Services",
+        relatedServices: [
+          { label: "Traditional Land Clearing", href: "/services/land-clearing" },
+          { label: "Forestry Mulching Cleanup", href: "/services/forestry-mulching-cleanup" },
+          { label: "Cedar Tree Removal", href: "/services/cedar-tree-removal" },
+          { label: "Rock & Cactus Removal", href: "/services/rock-cactus-removal" },
+          { label: "Underbrushing", href: "/services/underbrushing" },
+          { label: "Fence Line Clearing", href: "/services/fence-line-clearing" },
+          { label: "Fire Breaks", href: "/services/fire-breaks" },
+          { label: "Right-of-Way Clearing", href: "/services/right-of-way-clearing" },
+          { label: "ATV Trail Creation", href: "/services/atv-trail-creation" },
+          { label: "Tree Pile Shredding", href: "/services/tree-pile-shredding" },
+        ],
       },
     ],
   };

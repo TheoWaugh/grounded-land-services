@@ -549,9 +549,24 @@ paragraphs: [
           "Selective clearing allows desirable hardwoods, mature shade trees, and native vegetation to remain untouched while unwanted growth is removed with precision.",
         ],
       },
+      {
+        heading: "Related Services",
+        relatedServices: [
+          { label: "Traditional Land Clearing", href: "/services/land-clearing" },
+          { label: "Forestry Mulching Cleanup", href: "/services/forestry-mulching-cleanup" },
+          { label: "Cedar Tree Removal", href: "/services/cedar-tree-removal" },
+          { label: "Underbrushing", href: "/services/underbrushing" },
+          { label: "Fence Line Clearing", href: "/services/fence-line-clearing" },
+          { label: "Fire Breaks", href: "/services/fire-breaks" },
+          { label: "Right-of-Way Clearing", href: "/services/right-of-way-clearing" },
+          { label: "Commercial Lot Clearing", href: "/services/commercial-lot-clearing" },
+          { label: "ATV Trail Creation", href: "/services/atv-trail-creation" },
+          { label: "Tree Pile Shredding", href: "/services/tree-pile-shredding" },
+        ],
+      },
     ],
-
-faqs: [
+    
+    faqs: [
       { question: "What is forestry mulching?", answer: "Forestry mulching is a land clearing method that uses a specialized machine to grind trees, brush, and vegetation into mulch. The mulch is left on the ground to reduce erosion, retain moisture, and improve soil health while eliminating the need to burn or haul away debris." },
       { question: "How does forestry mulching work?", answer: "A forestry mulcher cuts and grinds unwanted vegetation into fine mulch. Trees, brush, cedar, saplings, and undergrowth are processed on-site, leaving a clean, natural mulch layer." },
       { question: "What is forestry mulching used for?", answer: "Forestry mulching is commonly used for cedar removal, brush clearing, land clearing, fence line clearing, firebreak construction, ATV trail creation, right-of-way maintenance, wildlife habitat improvement, and homesite preparation." },
