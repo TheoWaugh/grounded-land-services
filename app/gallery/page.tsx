@@ -67,6 +67,7 @@ const allImages = [
   { src: "/images/service-pics/IMG_3053.jpeg", alt: "Cedar removal in progress", tag: "Cedar Removal" },
   { src: "/images/service-pics/IMG_3180.jpeg", alt: "Mulching complete", tag: "Mulching" },
   { src: "/images/service-pics/IMG_3191.jpeg", alt: "Land ready for development", tag: "Site Prep" },
+  { src: "/images/work/spicewood-harley-raking1.JPEG", alt: "Harley raking in Spicewood, TX", tag: "Site Prep" },
 ];
 
 const tags = ["All", "Land Clearing", "Mulching", "Cedar Removal", "Rock Crushing", "Site Prep", "Aerial", "Dirt Work", "Driveways", "Equipment"];
