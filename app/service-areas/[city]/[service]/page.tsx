@@ -12,6 +12,10 @@ import { serviceImagePosition } from "@/data/service-image-position";
 import RichText from "@/app/components/RichText";
 import LoopingVideo from "@/app/components/LoopingVideo";
 import BreadcrumbSchema from "@/app/components/BreadcrumbSchema";
+import BeforeAfterSlider from "@/app/components/BeforeAfterSlider";
+import ServiceMedia from "@/app/components/ServiceMedia";
+import Image from "next/image";
+import VideoCarousel from "@/app/components/VideoCarousel";
 
 type PageParams = Promise<{ city: string; service: string }>;
 
@@ -135,28 +139,42 @@ return (
               </ul>
             )}
 
+            {section.iconCards && (
+              <div
+                className={`grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2 ${
+                  section.iconCardsColumns === 4
+                    ? "lg:grid-cols-4"
+                    : section.iconCardsColumns === 3
+                    ? "lg:grid-cols-3"
+                    : ""
+                }`}
+              >
+                {section.iconCards.map((card) => (
+                  <div
+                    key={card.title}
+                    className="p-5 bg-white border-2 border-[#0a0a0a] rounded-2xl hover:shadow-xl hover:-translate-y-1 transition-all duration-200"
+                  >
+                    <div className="w-12 h-12 rounded-xl bg-[#C4922A] flex items-center justify-center text-2xl mb-4 shadow-sm">
+                      {card.icon}
+                    </div>
+                    <h3 className="font-bold text-[#0a0a0a] mb-1.5">{card.title}</h3>
+                    <p className="text-sm leading-relaxed text-[#6e6e73]">{card.description}</p>
+                  </div>
+                ))}
+              </div>
+            )}
+            {section.media && <ServiceMedia items={section.media} />}
+
             {section.list && section.areasServed && (
               <>
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mt-2">
+                <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2.5 mt-2">
                   {section.list.map((item) => (
                     <li key={item}>
-                      <a
-                        href={`/service-areas/${slugify(item)}/${service}`}
-                        className="flex items-start gap-2 text-sm text-[#1d1d1f] bg-[#f9f9f9] border border-gray-100 rounded-xl px-3.5 py-2.5 hover:border-amber-200 hover:bg-amber-50 transition-colors"
+                      
+                      <a  href={`/service-areas/${slugify(item)}/${service}`}
+                        className="flex items-center gap-2 text-sm font-medium text-[#0a0a0a] bg-white border-2 border-[#0a0a0a] rounded-full px-4 py-2.5 hover:bg-[#f5f5f5] hover:shadow-md transition-all justify-center text-center"
                       >
-                        <svg
-                          className="w-4 h-4 text-[#C4922A] flex-shrink-0 mt-0.5"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2.5}
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#0a0a0a] flex-shrink-0" />
                         <span>{item}</span>
                       </a>
                     </li>
@@ -164,7 +182,7 @@ return (
                 </ul>
 
                 {content.county && (
-                  <div className="mt-6 rounded-2xl overflow-hidden border border-gray-100">
+                  <div className="mt-6 rounded-2xl overflow-hidden border-2 border-[#0a0a0a]">
                     <iframe
                       title={`Map of ${content.county}`}
                       width="100%"
@@ -181,22 +199,34 @@ return (
             )}
 
 {section.steps && (
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-2">
-                {section.steps.map((step, idx) => (
-                  <div
-                    key={step.title}
-                    className="flex flex-col gap-2 p-4 bg-[#f9f9f9] border border-gray-100 rounded-2xl"
-                  >
-                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-[#0a0a0a] text-[#C4922A] font-bold text-sm flex items-center justify-center">
-                      {idx + 1}
-                    </span>
-                    <div>
-                      <h3 className="font-bold text-[#0a0a0a] mb-1">{step.title}</h3>
-                      <p className="text-sm text-[#3a3a3c] leading-relaxed">{step.description}</p>
+              <>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-2">
+                  {section.steps.map((step, idx) => (
+                    <div
+                      key={step.title}
+                      className="flex flex-col gap-2 p-4 bg-[#f9f9f9] border border-gray-100 rounded-2xl"
+                    >
+                      <span className="flex-shrink-0 w-8 h-8 rounded-full bg-[#0a0a0a] text-[#C4922A] font-bold text-sm flex items-center justify-center">
+                        {idx + 1}
+                      </span>
+                      <div>
+                        <h3 className="font-bold text-[#0a0a0a] mb-1">{step.title}</h3>
+                        <p className="text-sm text-[#3a3a3c] leading-relaxed">{step.description}</p>
+                      </div>
                     </div>
+                  ))}
+                </div>
+                {section.ctaButton && (
+                  <div className="mt-6 text-center">
+                    <a
+                      href={section.ctaButton.href}
+                      className="inline-block px-6 py-3 bg-[#C4922A] text-black font-semibold rounded-full hover:bg-amber-500 transition-colors text-sm"
+                    >
+                      {section.ctaButton.label}
+                    </a>
                   </div>
-                ))}
-              </div>
+                )}
+              </>
             )}
             {section.areaMapQuery && (
               <div className="mt-6 rounded-2xl overflow-hidden border border-gray-100">
@@ -216,6 +246,12 @@ return (
                 caption={section.loopingVideo.caption}
               />
             )}
+            {section.videoCarousel && (
+              <VideoCarousel
+                videoIds={section.videoCarousel.videoIds}
+                captions={section.videoCarousel.captions}
+              />
+            )}
             {section.relatedServices && (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-2">
                 {section.relatedServices.map((r) => (
@@ -233,62 +269,108 @@ return (
               </div>
             )}
 
-            {section.comparison && (
+           {section.comparison && (
               <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-6 items-start mt-2">
-                {(["left", "right"] as const).map((side, idx) => {
-                  const data = section.comparison![side];
-                  return (
-                    <div key={side} className="contents md:contents">
-                      {idx === 1 && (
-                        <div className="flex md:flex-col items-center justify-center py-2 md:py-0">
-                          <span className="w-10 h-10 rounded-full bg-[#0a0a0a] text-[#C4922A] font-bold text-xs flex items-center justify-center">
-                            VS
-                          </span>
-                        </div>
-                      )}
-                      <div className="p-5 bg-[#f9f9f9] border border-gray-100 rounded-2xl">
-                        <h3 className="font-bold text-[#0a0a0a] mb-3">{data.heading}</h3>
-                        {data.paragraphs?.map((p, j) => (
-                          <p key={j} className="text-[#3a3a3c] leading-relaxed mb-3 text-sm">
-                            {p}
-                          </p>
+                <div>
+                  <div className="p-5 bg-[#f9f9f9] border border-gray-100 rounded-2xl">
+                    <h3 className="font-bold text-[#0a0a0a] mb-3">{section.comparison.left.heading}</h3>
+                    {section.comparison.left.paragraphs?.map((p, j) => (
+                      <p key={j} className="text-[#3a3a3c] leading-relaxed mb-3 text-sm">
+                        {p}
+                      </p>
+                    ))}
+                    {section.comparison.left.listIntro && (
+                      <p className="font-semibold text-amber-800 mb-2 text-sm">{section.comparison.left.listIntro}</p>
+                    )}
+                    {section.comparison.left.list && (
+                      <ul className="space-y-1.5">
+                        {section.comparison.left.list.map((item) => (
+                          <li key={item} className="flex items-start gap-2 text-sm text-[#1d1d1f]">
+                            <svg className="w-3.5 h-3.5 text-[#C4922A] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>{item}</span>
+                          </li>
                         ))}
-                        {data.listIntro && (
-                          <p className="font-semibold text-amber-800 mb-2 text-sm">
-                            {data.listIntro}
-                          </p>
-                        )}
-                        {data.list && (
-                          <ul className="space-y-1.5">
-                            {data.list.map((item) => (
-                              <li
-                                key={item}
-                                className="flex items-start gap-2 text-sm text-[#1d1d1f]"
-                              >
-                                <svg
-                                  className="w-3.5 h-3.5 text-[#C4922A] flex-shrink-0 mt-1"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={2.5}
-                                    d="M5 13l4 4L19 7"
-                                  />
-                                </svg>
-                                <span>{item}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        )}
-                      </div>
+                      </ul>
+                    )}
+                  </div>
+                  {section.comparison.left.image && (
+                    <div className="relative w-full aspect-video rounded-xl overflow-hidden mt-3">
+                      <Image
+                        src={section.comparison.left.image}
+                        alt={section.comparison.left.imageAlt ?? section.comparison.left.heading}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                      />
                     </div>
-                  );
-                })}
+                  )}
+                </div>
+
+                <div className="flex md:flex-col items-center justify-center py-2 md:py-0">
+                  <span className="w-10 h-10 rounded-full bg-[#0a0a0a] text-[#C4922A] font-bold text-xs flex items-center justify-center">
+                    VS
+                  </span>
+                </div>
+
+                <div>
+                  <div className="p-5 bg-[#f9f9f9] border border-gray-100 rounded-2xl">
+                    <h3 className="font-bold text-[#0a0a0a] mb-3">{section.comparison.right.heading}</h3>
+                    {section.comparison.right.paragraphs?.map((p, j) => (
+                      <p key={j} className="text-[#3a3a3c] leading-relaxed mb-3 text-sm">
+                        {p}
+                      </p>
+                    ))}
+                    {section.comparison.right.listIntro && (
+                      <p className="font-semibold text-amber-800 mb-2 text-sm">{section.comparison.right.listIntro}</p>
+                    )}
+                    {section.comparison.right.list && (
+                      <ul className="space-y-1.5">
+                        {section.comparison.right.list.map((item) => (
+                          <li key={item} className="flex items-start gap-2 text-sm text-[#1d1d1f]">
+                            <svg className="w-3.5 h-3.5 text-[#C4922A] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                  {section.comparison.right.image && (
+                    <div className="relative w-full aspect-video rounded-xl overflow-hidden mt-3">
+                      <Image
+                        src={section.comparison.right.image}
+                        alt={section.comparison.right.imageAlt ?? section.comparison.right.heading}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                      />
+                    </div>
+                  )}
+                </div>
               </div>
             )}
+
+            {section.compareSlider && (
+              <div className="mt-6">
+                <BeforeAfterSlider
+                  beforeSrc={section.compareSlider.beforeSrc}
+                  beforeLabel={section.compareSlider.beforeLabel}
+                  afterSrc={section.compareSlider.afterSrc}
+                  afterLabel={section.compareSlider.afterLabel}
+                />
+                <p className="text-center text-xs text-[#6e6e73] mt-2">
+                  Drag the slider to compare
+                </p>
+              </div>
+            )}
+            {section.closingParagraphs?.map((p, j) => (
+              <p key={j} className="text-[#3a3a3c] leading-relaxed mt-4 text-[15px]">
+                {p}
+              </p>
+            ))}
           </div>
         ))}
 

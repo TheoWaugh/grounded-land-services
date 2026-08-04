@@ -3,6 +3,8 @@ export interface ComparisonSide {
   paragraphs?: string[];
   listIntro?: string;
   list?: string[];
+  image?: string;
+  imageAlt?: string;
 }
 
 export interface ProcessStep {
@@ -21,9 +23,21 @@ export interface ServiceSection {
     left: ComparisonSide;
     right: ComparisonSide;
   };
+  compareSlider?: {
+    beforeSrc: string;
+    beforeLabel: string;
+    afterSrc: string;
+    afterLabel: string;
+  };
+  closingParagraphs?: string[];
   loopingVideo?: { videoId: string; caption?: string };
   areaMapQuery?: string;
   relatedServices?: { label: string; href: string }[];
+  iconCards?: { icon: string; title: string; description: string }[];
+  iconCardsColumns?: 2 | 3 | 4;
+  ctaButton?: { label: string; href: string };
+  media?: { type: "image" | "youtube"; src: string; alt?: string; caption?: string }[];
+videoCarousel?: { videoIds: string[]; captions?: string[] };
 }
 
 export interface ServicePricing {

@@ -22,6 +22,47 @@ const challengesParagraph = facts
         areaMapQuery: `${city}, Texas`,
       },
       {
+        heading: "Land Clearing vs. Forestry Mulching",
+        paragraphs: [
+          `Many ${city} property owners ask whether they should choose traditional land clearing or forestry mulching. Although both services remove unwanted vegetation, they are designed for very different goals. Choosing the right method depends on how you plan to use your property once the work is complete.`,
+        ],
+        comparison: {
+          left: {
+            heading: "Traditional Land Clearing",
+            list: [
+              "Removes trees, brush, stumps, and root systems",
+              "Creates a build-ready site",
+              "Best for construction and development",
+              "Ideal for home sites and commercial projects",
+              "Allows grading and excavation to begin",
+              "Produces a completely cleared property",
+              "Removes heavy vegetation permanently",
+            ],
+          },
+          right: {
+            heading: "Forestry Mulching",
+            list: [
+              "Grinds brush and small trees into mulch",
+              "Leaves the existing root systems in place",
+              "Best for property maintenance",
+              "Ideal for ranches, hunting properties, and recreational land",
+              "Minimal ground disturbance",
+              "Leaves a natural layer of protective mulch",
+              "Excellent for controlling invasive brush",
+            ],
+          },
+        },
+        compareSlider: {
+          beforeSrc: "/images/service-pics/traditional-land-clearing.jpeg",
+          beforeLabel: "Traditional Land Clearing",
+          afterSrc: "/images/service-pics/fine-mulch.jpeg",
+          afterLabel: "Forestry Mulching",
+        },
+        closingParagraphs: [
+          "Our team can evaluate your property and recommend the best approach — or combine both methods to maximize results.",
+        ],
+      },
+      {
         heading: "Why Choose Traditional Land Clearing?",
         paragraphs: [
           "Traditional land clearing is the best choice when a property needs to be completely transformed rather than selectively managed. While forestry mulching is an excellent option for vegetation management, traditional clearing permanently removes unwanted vegetation and obstacles, allowing property owners to maximize the usable space on their land.",
@@ -34,15 +75,7 @@ const challengesParagraph = facts
           "Agricultural development", "Recreational properties", "Property restoration",
         ],
       },
-      {
-        heading: "Traditional Land Clearing vs. Forestry Mulching",
-        paragraphs: [
-          `Many ${city} property owners ask whether they should choose traditional land clearing or forestry mulching. The answer depends on your long-term plans for the property.`,
-          "Traditional land clearing completely removes unwanted vegetation, stumps, roots, brush, rocks, and debris. The result is a clean, construction-ready property with minimal obstacles remaining. This method is recommended for new construction, commercial projects, full site preparation, heavy cedar infestations, rock removal, pasture establishment, and large-scale property transformations.",
-          "Forestry mulching grinds brush and smaller trees into nutrient-rich mulch while leaving the root systems intact. It's an excellent solution for selective clearing, wildlife habitat improvement, trail creation, wildfire mitigation, and brush management where complete land disturbance is unnecessary.",
-          "Our team can evaluate your property and recommend the best approach — or combine both methods to maximize results.",
-        ],
-      },
+      
       {
         heading: `${city}'s Unique Land Clearing Challenges`,
         paragraphs: [
