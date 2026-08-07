@@ -19,7 +19,23 @@ const challengesParagraph = facts
           `Unlike [forestry mulching](/services/forestry-mulching), which leaves root systems and mulch on the ground, traditional land clearing completely removes trees, stumps, brush, rocks, and debris, creating a clean slate for future development. If your project requires foundations, roads, utilities, septic systems, barns, arenas, or finished landscaping, traditional land clearing is often the preferred solution because it prepares the property for construction from the ground up.`,
           `Our goal is simple: deliver land that is cleaner, safer, easier to maintain, and ready for whatever comes next.`,
         ],
-        areaMapQuery: `${city}, Texas`,
+        listIntro: "Traditional land clearing is commonly used for:",
+        list: [
+          { label: "Residential home sites", href: "/services/residential-lot-clearing" },
+          { label: "Commercial developments", href: "/services/commercial-lot-clearing" },
+          { label: "Ranch and farm improvements", href: "/services/residential-lot-clearing" },
+          { label: "Pasture restoration", href: "/services/residential-lot-clearing" },
+          { label: "Utility installations", href: "/services/utility-trenching" },
+          { label: "Road and driveway construction", href: "/services/gravel-driveways-roads" },
+          { label: "Subdivision development", href: "/services/commercial-lot-clearing" },
+          { label: "Barn and shop sites", href: "/services/residential-lot-clearing" },
+          { label: "Recreational properties", href: "/services/residential-lot-clearing" },
+          { label: "Wildlife habitat improvements", href: "/services/residential-lot-clearing" },
+        ],
+        videoCarousel: {
+          videoIds: ["aSRb_PbjbIE", "W1AeIo_miIA"],
+          captions: ["Land clearing in action", "Completed land clearing project"],
+        },
       },
       {
         heading: "Land Clearing vs. Forestry Mulching",
@@ -82,6 +98,7 @@ const challengesParagraph = facts
           challengesParagraph,
           `Grounded Land Services has experience working throughout the greater ${city} area, including rural acreage, residential lots, ranches, commercial developments, and recreational properties. We understand local terrain, drainage concerns, and the importance of protecting valuable native hardwoods while creating functional, build-ready land.`,
         ],
+        areaMapQuery: `${city}, Texas`,
       },
       {
         heading: "Benefits of Professional Land Clearing",

@@ -24,8 +24,7 @@ export const servicesContent: Record<string, ServicePageContent> = {
           { label: "Utility installations", href: "/services/utility-trenching" },
           { label: "Road and driveway construction", href: "/services/gravel-driveways-roads" },
           { label: "Subdivision development", href: "/services/commercial-lot-clearing" },
-         { label: "Barn and shop sites", href: "/services/residential-lot-clearing" },
-          { label: "Pipeline and utility corridors", href: "/services/right-of-way-clearing" },
+          { label: "Barn and shop sites", href: "/services/residential-lot-clearing" },
           { label: "Recreational properties", href: "/services/residential-lot-clearing" },
           { label: "Wildlife habitat improvements", href: "/services/residential-lot-clearing" },
         ],
@@ -56,7 +55,7 @@ videoCarousel: {
             heading: "Forestry Mulching",
             list: [
               "Grinds brush and small trees into mulch",
-              "Leaves the existing root systems in place",
+              "Leaves the existing root systems and stumps in place",
               "Best for property maintenance",
               "Ideal for ranches, hunting properties, and recreational land",
               "Minimal ground disturbance",

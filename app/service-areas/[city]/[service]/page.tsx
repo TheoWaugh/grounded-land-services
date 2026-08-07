@@ -115,27 +115,44 @@ return (
 
 {section.list && !section.areasServed && (
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mt-2">
-                {section.list.map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-start gap-2 text-sm text-[#1d1d1f] bg-[#f9f9f9] border border-gray-100 rounded-xl px-3.5 py-2.5"
-                  >
-                    <svg
-                      className="w-4 h-4 text-[#C4922A] flex-shrink-0 mt-0.5"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2.5}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    <span>{item}</span>
-                  </li>
-                ))}
+                {section.list.map((item) => {
+                  const isLink = typeof item !== "string";
+                  const label = isLink ? item.label : item;
+                  const content = (
+                    <>
+                      <svg
+                        className="w-4 h-4 text-[#C4922A] flex-shrink-0 mt-0.5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2.5}
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                      <span>{label}</span>
+                    </>
+                  );
+                  return (
+                    <li key={label}>
+                      {isLink ? (
+                        <a
+                          href={item.href}
+                          className="flex items-start gap-2 text-sm text-[#1d1d1f] bg-[#f9f9f9] border border-gray-100 rounded-xl px-3.5 py-2.5 hover:border-amber-200 hover:bg-amber-50 transition-colors"
+                        >
+                          {content}
+                        </a>
+                      ) : (
+                        <div className="flex items-start gap-2 text-sm text-[#1d1d1f] bg-[#f9f9f9] border border-gray-100 rounded-xl px-3.5 py-2.5">
+                          {content}
+                        </div>
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             )}
 
@@ -168,10 +185,10 @@ return (
             {section.list && section.areasServed && (
               <>
                 <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2.5 mt-2">
-                  {section.list.map((item) => (
+                  {(section.list as string[]).map((item) => (
                     <li key={item}>
-                      
-                      <a  href={`/service-areas/${slugify(item)}/${service}`}
+                      <a
+                        href={`/service-areas/${slugify(item)}/${service}`}
                         className="flex items-center gap-2 text-sm font-medium text-[#0a0a0a] bg-white border-2 border-[#0a0a0a] rounded-full px-4 py-2.5 hover:bg-[#f5f5f5] hover:shadow-md transition-all justify-center text-center"
                       >
                         <span className="w-1.5 h-1.5 rounded-full bg-[#0a0a0a] flex-shrink-0" />

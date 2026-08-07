@@ -12,11 +12,13 @@ export interface ProcessStep {
   description: string;
 }
 
+export type ServiceListItem = string | { label: string; href: string };
+
 export interface ServiceSection {
   heading?: string;
   paragraphs?: string[];
   listIntro?: string;
-  list?: string[];
+  list?: ServiceListItem[];
   areasServed?: boolean;
   steps?: ProcessStep[];
   comparison?: {
