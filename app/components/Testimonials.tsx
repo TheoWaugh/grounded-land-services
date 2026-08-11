@@ -53,6 +53,10 @@ const testimonials: Testimonial[] = [
     name: "Kathy Wendt",
     quote: "Grounded Land Services did an amazing job. He got rid of dead trees, branches, and stumps. He made our property looking great again. I highly recommend his services.",
   },
+  {
+    name: "Steve King",
+    quote: "Logan worked on our property behind our pool and did a wonderful job clearing just over 1/2 acre. Logan's attention to detail coupled with methodical work ethic and a desire to do things the right way the first time lends to an outstanding finished product. He even found a source for the debris that saved us hundreds of dollars in dump truck removal costs! In addition, a neighbor asked me for his contact information! We highly recommend Logan and Grounded Land Services! They are professional, trustworthy and hard working. We are very happy and will be seeding soon with grass and Texas native flower seeds. Thanks to Grounded Land Services!!!",
+  },
 ];
 
 const featuredNames = ["Jacque Mendenhall", "Christopher Durst", "Mckenzie Schultz"];

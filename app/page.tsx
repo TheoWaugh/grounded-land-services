@@ -108,17 +108,23 @@ const testimonials = [
     rating: 5,
     text: "We couldn't be happier with the work Grounded Land Services and owner, Logan Arnold, did on our ranch in Spicewood, TX. They took on a challenging property with a lot of cleanup needed, including removing trash and debris from a burned-down house and old, dilapidated sheds, while also clearing years of overgrown cedar across rough, rocky terrain. What impressed us most was the care and respect they showed for the land. They took the time to preserve the oaks and the trees we wanted to keep, while thoughtfully restoring the property and helping it reach its full potential. Their attention to detail, hard work, and understanding of the land truly made a difference. Logan and his team were dependable, punctual, friendly, and always one step ahead — anticipating challenges and helping us make good decisions throughout the process. It's clear they take pride in what they do, and we are grateful for the incredible transformation they helped create. Our ranch is in the best shape it has been in years, and we would gladly use Grounded Land Services again and recommend them to anyone looking to care for their land the right way.",
   },
- {
-    name: "Christopher Durst",
-    location: "Uhland, TX",
+  {
+    name: "Steve King",
+    location: "Texas",
     rating: 5,
-    text: "We really appreciate the work Logan and his team did for us at the Uhland Fall Fest. They truly helped us curate a raw, unusable piece of land that was full of cedar trees and barbed mesquite into a beautiful, picturesque parkland for families to enjoy. I highly recommend these guys. Happy to discuss my experience by phone. First-class operation!",
+    text: "Logan worked on our property behind our pool and did a wonderful job clearing just over 1/2 acre. Logan's attention to detail coupled with methodical work ethic and a desire to do things the right way the first time lends to an outstanding finished product. He even found a source for the debris that saved us hundreds of dollars in dump truck removal costs! In addition, a neighbor asked me for his contact information! We highly recommend Logan and Grounded Land Services! They are professional, trustworthy and hard working. We are very happy and will be seeding soon with grass and Texas native flower seeds. Thanks to Grounded Land Services!!!",
   },
   {
     name: "Dylan Gavit",
     location: "Bertram, TX",
     rating: 5,
     text: "On time, hard-working, nonstop, knowledgeable, easy to work with, generous, first responder supportive, like-minded, honest, good people, outstanding equipment, top-tier service, went out of their way multiple times to make sure my wife and I were satisfied in a patient manner. All around great people and land clearing company I see sky rocketing. More than fair prices for services. My wife and I recently bought 5 acres in Bertram, Texas. We found Grounded Land Services and gave them a try. Man are we glad we did. They were able to mow down giant cedar brush piles that had been there for at least 15 years down to nothing, worked all day and then some to get the job done and went out of their way to do a little extra on the house. These guys have been nothing short of amazing to work with — we sat in lawn chairs and watched them work meticulously yet efficiently. I would highly recommend them to anyone needing absolutely any sort of land clearing needed. 10/10 five star crew and business.",
+  },
+  {
+    name: "Christopher Durst",
+    location: "Uhland, TX",
+    rating: 5,
+    text: "We really appreciate the work Logan and his team did for us at the Uhland Fall Fest. They truly helped us curate a raw, unusable piece of land that was full of cedar trees and barbed mesquite into a beautiful, picturesque parkland for families to enjoy. I highly recommend these guys. Happy to discuss my experience by phone. First-class operation!",
   },
   {
     name: "Mike Janak",
@@ -168,6 +174,7 @@ const testimonials = [
     rating: 5,
     text: "GLS raked our hill country acreage to clean up brush and prep for grass. Looks smooth as can be now! Appreciate their time and flexibility. Job well done.",
   },
+
 ];
 
 const galleryImages = [

@@ -69,9 +69,10 @@ const allImages = [
   { src: "/images/service-pics/IMG_3191.jpeg", alt: "Land ready for development", tag: "Site Prep" },
   { src: "/images/work/spicewood-harley-raking1.JPEG", alt: "Harley raking in Spicewood, TX", tag: "Site Prep" },
   { src: "/images/work/harley-rake-pic.JPEG", alt: "Harley rake equipment", tag: "Equipment" },
+  { src: "/images/work/king-rock-removal.jpeg", alt: "Rock removal project", tag: "Site Prep" },
 ];
 
-const tags = ["All", "Land Clearing", "Mulching", "Cedar Removal", "Rock Crushing", "Site Prep", "Aerial", "Dirt Work", "Driveways", "Equipment"];
+const tags = ["All", "Land Clearing", "Forestry Mulching", "Cedar Removal", "Rock Crushing", "Site Prep", "Aerial", "Dirt Work", "Driveways", "Equipment"];
 const galleryVideos = [
   { id: "aSRb_PbjbIE", caption: "Land clearing in action" },
   { id: "W1AeIo_miIA", caption: "Completed land clearing project" },
