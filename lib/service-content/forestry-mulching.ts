@@ -20,8 +20,9 @@ const challengesIntro = facts
           `Every property has unique goals, which is why we carefully evaluate your land before recommending the best clearing method. Whether your objective is improving access, increasing usable acreage, restoring native grasses, or enhancing the appearance of your property, Grounded Land Services delivers professional forestry mulching services tailored to your specific needs.`,
         ],
         videoCarousel: {
-          videoIds: ["KjYxH1hgTwM", "hLimv0coUqo", "RwfM81A1NRk"],
+          videoIds: ["KjYxH1hgTwM", "hLimv0coUqo", "RwfM81A1NRk", "_3PySbe3zwU"],
           captions: [
+            "Forestry mulching in action",
             "Forestry mulching in action",
             "Forestry mulching in action",
             "Forestry mulching in action",

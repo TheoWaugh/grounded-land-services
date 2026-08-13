@@ -15,7 +15,7 @@ export const serviceAreas: Record<string, string[]> = {
   ],
   "San Antonio Area": [
     "San Antonio", "Seguin", "Gonzales", "Luling", "Lockhart",
-    "Cuero", "Hallettsville", "Schulenburg",
+    "Cuero", "Hallettsville", "Schulenburg", "Harwood",
   ],
   "Houston Area": [
     "Houston", "Brookshire", "Conroe", "Cypress", "Fulshear",
