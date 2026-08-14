@@ -5,8 +5,15 @@ export function forestryMulchingContent(city: string, nearby: string[]): Service
   const nearbyList = nearby.slice(0, 12);
   const facts = cityFacts[city];
 
+const soilContext = facts?.soil
+  ? ` The area's ${facts.soil} plays a major role in how vegetation grows and how mulching equipment performs on-site.`
+  : "";
+const groundContext = facts?.groundConditions
+  ? ` Ground conditions vary across the property, with ${facts.groundConditions} throughout the area.`
+  : "";
+
 const challengesIntro = facts
-    ? `${city} sits on ${facts.terrain}, part of ${facts.county}, presenting unique land management challenges from dense growth of ${facts.trees} and rapidly expanding development near ${facts.nearby}.`
+    ? `${city} sits on ${facts.terrain}, part of ${facts.county}, presenting unique land management challenges from dense growth of ${facts.trees} and rapidly expanding development near ${facts.nearby}.${soilContext}${groundContext}`
     : `${city} and the surrounding Texas Hill Country present unique land management challenges due to rocky limestone terrain, rolling hills, dense cedar growth, mesquite, and rapidly expanding development.`;
 
   return {
@@ -16,8 +23,10 @@ const challengesIntro = facts
       {
         heading: `Professional Forestry Mulching Services in ${city}, TX`,
         paragraphs: [
-`If you're looking for [professional forestry mulching](/services/forestry-mulching) in ${city}, Texas, [Grounded Land Services](/) provides efficient, environmentally responsible land clearing solutions for residential, commercial, agricultural, and ranch properties throughout ${city} and the surrounding Central Texas region. Whether you're reclaiming overgrown acreage, removing invasive cedar trees, creating trails, improving wildlife habitat, reducing wildfire fuel, or preparing land for future improvements, our experienced team has the equipment and expertise to transform your property while preserving its natural beauty.`,
-          `Every property has unique goals, which is why we carefully evaluate your land before recommending the best clearing method. Whether your objective is improving access, increasing usable acreage, restoring native grasses, or enhancing the appearance of your property, Grounded Land Services delivers professional forestry mulching services tailored to your specific needs.`,
+          facts?.terrain && facts?.invasiveVegetation
+            ? `If you're looking for [professional forestry mulching](/services/forestry-mulching) in ${city}, Texas, [Grounded Land Services](/) provides efficient, environmentally responsible land clearing solutions for residential, commercial, agricultural, and ranch properties throughout the area. Properties around ${city} typically sit on ${facts.terrain}, where ${facts.invasiveVegetation} tend to dominate overgrown acreage. Our mulching equipment is built to grind through this kind of dense brush and uneven ground efficiently, clearing unwanted vegetation while preserving the mature trees you want to keep.`
+            : `If you're looking for [professional forestry mulching](/services/forestry-mulching) in ${city}, Texas, [Grounded Land Services](/) provides efficient, environmentally responsible land clearing solutions for residential, commercial, agricultural, and ranch properties throughout ${city} and the surrounding Central Texas region. Whether you're reclaiming overgrown acreage, removing invasive cedar trees, creating trails, improving wildlife habitat, reducing wildfire fuel, or preparing land for future improvements, our experienced team has the equipment and expertise to transform your property while preserving its natural beauty.`,
+          "Every property has unique goals, which is why we carefully evaluate your land before recommending the best clearing method. Whether your objective is improving access, increasing usable acreage, restoring native grasses, or enhancing the appearance of your property, Grounded Land Services delivers professional forestry mulching services tailored to your specific needs.",
         ],
         videoCarousel: {
           videoIds: ["KjYxH1hgTwM", "hLimv0coUqo", "RwfM81A1NRk", "_3PySbe3zwU"],
@@ -81,7 +90,7 @@ const challengesIntro = facts
         iconCards: [
           { icon: "🌱", title: "Minimal Ground Disturbance", description: "Protect the soil by clearing vegetation without the extensive disruption of traditional land clearing." },
           { icon: "🚫", title: "No Burn Piles or Debris Hauling", description: "Vegetation is turned into natural mulch on-site, eliminating the need for hauling or burning." },
-          { icon: "🌲", title: "Control Invasive Cedar & Brush", description: "Clear cedar, mesquite, yaupon, and other invasive vegetation that compete with native grasses and trees." },
+          { icon: "🌲", title: "Control Invasive Cedar & Brush", description: facts?.invasiveVegetation ? `Clear ${facts.invasiveVegetation.split(",").slice(0, 2).join(",")} and other invasive vegetation that compete with native grasses and desirable trees.` : "Clear cedar, mesquite, yaupon, and other invasive vegetation that compete with native grasses and trees." },
           { icon: "🛤️", title: "Improve Property Access", description: "Open overgrown areas, restore fence lines, and create trails for easier access across your property." },
           { icon: "🔥", title: "Reduce Wildfire Fuel", description: "Remove excess brush and vegetation to help lower wildfire fuel loads and improve land management." },
           { icon: "💧", title: "Promote Healthier Land", description: "Natural mulch helps retain moisture, reduce erosion, and return nutrients to the soil." },
@@ -202,10 +211,10 @@ const challengesIntro = facts
           "No two properties are exactly alike, which is why every forestry mulching project is priced based on your property's unique characteristics. Factors such as vegetation density, terrain, accessibility, and the overall scope of work all play a role in determining the final cost.",
         ],
         iconCards: [
-          { icon: "🌳", title: "Vegetation Density", description: "Properties with thick cedar, mesquite, yaupon, and dense underbrush require more time and equipment than lightly overgrown land." },
+          { icon: "🌳", title: "Vegetation Density", description: facts?.invasiveVegetation ? `Properties with thick ${facts.invasiveVegetation} and dense underbrush require more time and equipment than lightly overgrown land.` : "Properties with thick cedar, mesquite, yaupon, and dense underbrush require more time and equipment than lightly overgrown land." },
           { icon: "🌲", title: "Tree Size", description: "The size and diameter of the trees being mulched play a significant role in determining the scope and cost of the project." },
           { icon: "📐", title: "Acreage", description: "Larger properties typically require more time and equipment, while open acreage may be completed more efficiently than densely wooded land." },
-          { icon: "🪨", title: "Terrain & Accessibility", description: "Rocky limestone terrain, steep slopes, limited access, and other site conditions can affect equipment productivity and project timelines." },
+          { icon: "🪨", title: "Terrain & Accessibility", description: `${city}'s terrain, slope, and property access can all affect equipment productivity and project timelines. A [free on-site estimate](/contact?service=Forestry%20Mulching#quote) gives the most accurate picture.` },
           { icon: "🚜", title: "Project Scope", description: "Whether you need selective cedar removal, trail creation, fence line clearing, or complete vegetation management will influence the overall cost." },
           { icon: "✅", title: "Desired Finish", description: "The level of finish you want — from basic brush reduction to a clean, park-like appearance — can impact the amount of time required to complete the job." },
         ],

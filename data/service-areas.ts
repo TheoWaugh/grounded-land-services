@@ -16,6 +16,7 @@ export const serviceAreas: Record<string, string[]> = {
   "San Antonio Area": [
     "San Antonio", "Seguin", "Gonzales", "Luling", "Lockhart",
     "Cuero", "Hallettsville", "Schulenburg", "Harwood",
+    "Shiner", "Belmont", "New Berlin", "Floresville",
   ],
   "Houston Area": [
     "Houston", "Brookshire", "Conroe", "Cypress", "Fulshear",
@@ -36,7 +37,7 @@ export const serviceAreas: Record<string, string[]> = {
     "Rising Star", "Smithville", "Somerville",
     "Stephenville", "Temple", "Waco", "Wellborn",
   ],
-  "East Texas": ["Huntsville", "Cisco", "Tyler"],
+  
 };
 
 export const rockCrushingCities = [

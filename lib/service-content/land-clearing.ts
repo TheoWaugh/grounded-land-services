@@ -5,8 +5,15 @@ export function landClearingContent(city: string, nearby: string[]): ServiceCont
   const nearbyList = nearby.slice(0, 12);
   const facts = cityFacts[city];
 
+const soilContext = facts?.soil
+  ? ` The area's ${facts.soil} plays a major role in how vegetation grows and how ground equipment performs on-site.`
+  : "";
+const groundContext = facts?.groundConditions
+  ? ` Ground conditions vary across the property, with ${facts.groundConditions} throughout the area.`
+  : "";
+
 const challengesParagraph = facts
-    ? `Land clearing in ${city} presents unique challenges due to ${facts.terrain} found throughout ${facts.county}, along with dense growth of ${facts.trees}, and rapidly growing residential developments near ${facts.nearby}. Every property requires careful planning to preserve desirable trees while removing invasive vegetation and preparing the site for future use.`
+    ? `Land clearing in ${city} presents unique challenges due to ${facts.terrain} found throughout ${facts.county}, along with dense growth of ${facts.trees}, and rapidly growing residential developments near ${facts.nearby}.${soilContext}${groundContext} Every property requires careful planning to preserve desirable trees while removing invasive vegetation and preparing the site for future use.`
     : `Land clearing in ${city} presents unique challenges due to Texas's rocky terrain, dense brush, and rapidly growing residential developments. Every property requires careful planning to preserve desirable trees while removing invasive vegetation and preparing the site for future use.`;
   return {
     title: `Traditional Land Clearing in ${city}, Texas`,
@@ -15,7 +22,9 @@ const challengesParagraph = facts
       {
         heading: `Professional Traditional Land Clearing Services in ${city}, TX`,
         paragraphs: [
-          `[Grounded Land Services](/) provides [professional traditional land clearing](/services/land-clearing) in ${city}, Texas, helping homeowners, ranch owners, developers, and commercial property owners transform overgrown land into clean, usable property. Whether you're preparing a homesite, expanding pasture, developing commercial land, or reclaiming acreage covered in cedar, mesquite, brush, and heavy vegetation, our experienced team has the equipment and expertise to complete the job efficiently and safely.`,
+          facts?.groundConditions && facts?.invasiveVegetation
+            ? `[Grounded Land Services](/) provides [professional traditional land clearing](/services/land-clearing) in ${city}, Texas, helping homeowners, ranch owners, developers, and commercial property owners transform overgrown land into clean, usable property. Properties around ${city} typically have ${facts.groundConditions}, with ${facts.invasiveVegetation} common on overgrown acreage. Our equipment is built to handle this kind of ground while completely removing trees, stumps, brush, and debris — leaving a clean, construction-ready site no matter the starting conditions.`
+            : `[Grounded Land Services](/) provides [professional traditional land clearing](/services/land-clearing) in ${city}, Texas, helping homeowners, ranch owners, developers, and commercial property owners transform overgrown land into clean, usable property. Whether you're preparing a homesite, expanding pasture, developing commercial land, or reclaiming acreage covered in cedar, mesquite, brush, and heavy vegetation, our experienced team has the equipment and expertise to complete the job efficiently and safely.`,
           `Unlike [forestry mulching](/services/forestry-mulching), which leaves root systems and mulch on the ground, traditional land clearing completely removes trees, stumps, brush, rocks, and debris, creating a clean slate for future development. If your project requires foundations, roads, utilities, septic systems, barns, arenas, or finished landscaping, traditional land clearing is often the preferred solution because it prepares the property for construction from the ground up.`,
           `Our goal is simple: deliver land that is cleaner, safer, easier to maintain, and ready for whatever comes next.`,
         ],

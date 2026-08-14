@@ -239,9 +239,10 @@ body {
 }
 
 /* ── Scrollbar ─────────────────────────────────── */
-::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: rgba(196,146,42,0.3); border-radius: 3px; }
+::-webkit-scrollbar { width: 12px; }
+::-webkit-scrollbar-track { background: #f5f5f7; }
+::-webkit-scrollbar-thumb { background: #C4922A; border-radius: 6px; border: 2px solid #f5f5f7; }
+::-webkit-scrollbar-thumb:hover { background: #A67B1F; }
 
 /* ── Nav links ─────────────────────────────────── */
 .nav-link {

@@ -69,7 +69,7 @@ const allImages = [
   { src: "/images/service-pics/IMG_3180.jpeg", alt: "Mulching complete", tag: "Forestry Mulching" },
   { src: "/images/service-pics/IMG_3191.jpeg", alt: "Land ready for development", tag: "Site Prep" },
   { src: "/images/work/spicewood-harley-raking1.JPEG", alt: "Harley raking in Spicewood, TX", tag: "Site Prep" },
-  { src: "/images/work/harley-rake-pic.JPEG", alt: "Harley rake equipment", tag: "Equipment" },
+  { src: "/images/work/harley-rake-pic.jpeg", alt: "Harley rake equipment", tag: "Equipment" },
   { src: "/images/work/king-rock-removal.jpeg", alt: "Rock removal project", tag: "Rock Crushing & Removal" },
   { src: "/images/work/harwood-mulching.JPEG", alt: "Forestry mulching project in Harwood, TX", tag: "Forestry Mulching" },
   { src: "/images/work/299-275-case-pic.jpeg", alt: "Grounded Land Services equipment", tag: "Equipment" },
