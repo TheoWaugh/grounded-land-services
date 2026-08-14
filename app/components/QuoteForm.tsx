@@ -29,6 +29,9 @@ const services = [
   "Dirt Work",
   "Demolition",
   "Driveways",
+  "Rock Removal",
+  "Right of way Clearing",
+  "Forestry Mulching Cleanup",
   "Other / Multiple Services",
 ];
 
