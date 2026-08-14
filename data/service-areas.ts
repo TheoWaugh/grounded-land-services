@@ -30,18 +30,7 @@ export const serviceAreas: Record<string, string[]> = {
     "Moulton", "Flatonia", "Yoakum", "Edna", "Hondo",
     "Pleasanton", "Poteet", "Goliad",
   ],
-  
-  "Houston Area": [
-    "Houston", "Brookshire", "Conroe", "Cypress", "Fulshear",
-    "Katy", "Magnolia", "Navasota", "Pearland", "Sugar Land",
-    "The Woodlands", "Tomball",
-  ],
-  "Dallas / Fort Worth": [
-    "Dallas", "Fort Worth", "Caddo Mills", "Celina", "Decatur",
-    "Denton", "Fate", "Forney", "Frisco", "Granbury",
-    "McKinney", "Melissa", "Princeton", "Prosper", "Rockwall",
-    "Royse City", "Terrell", "Waxahachie", "Weatherford",
-  ],
+
   
   
 };
