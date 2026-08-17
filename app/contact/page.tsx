@@ -6,7 +6,7 @@ import QuoteForm from "../components/QuoteForm";
 const faqs = [
   {
     q: "How do I get a quote?",
-    a: "Fill out the form on this page or call us at (512) 571-6700. Logan will reach out to discuss your project, walk the land if needed, and provide a detailed quote — completely free.",
+    a: "Fill out the form on this page or call us at (512) 571-6700. Owner and operator Logan will reach out to discuss your project, walk the land if needed, and provide a detailed quote — completely free.",
   },
   {
     q: "Do you travel for projects?",

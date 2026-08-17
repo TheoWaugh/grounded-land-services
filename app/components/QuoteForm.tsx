@@ -93,6 +93,9 @@ export default function QuoteForm({ dark = true }: { dark?: boolean }) {
 
       if (res.ok) {
         setSubmitted(true);
+        if (typeof window !== "undefined" && (window as any).fbq) {
+          (window as any).fbq("track", "Lead");
+        }
       } else {
         alert(
           "Something went wrong sending your request. Please call us at (512) 571-6700."

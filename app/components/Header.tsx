@@ -60,9 +60,25 @@ className={`nav-link text-lg transition-colors ${                pathname === li
 
         {/* CTA */}
 <div className="hidden md:flex items-center gap-5">
-<a href="tel:5125716700" className="nav-link text-lg">            (512) 571-6700
+<a href="tel:5125716700"
+            className="nav-link text-lg"
+            onClick={() => {
+              if (typeof window !== "undefined" && (window as any).fbq) {
+                (window as any).fbq("track", "Contact");
+              }
+            }}
+          >
+            (512) 571-6700
           </a>
-          <Link href="/contact" className="btn-primary text-sm px-5 py-2.5">
+          <Link
+            href="/contact"
+            className="btn-primary text-sm px-5 py-2.5"
+            onClick={() => {
+              if (typeof window !== "undefined" && (window as any).fbq) {
+                (window as any).fbq("track", "Contact");
+              }
+            }}
+          >
             Contact Us
           </Link>
         </div>
