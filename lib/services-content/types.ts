@@ -10,10 +10,12 @@ export interface ServiceMediaItem {
 export interface ServicePageSection {
   heading?: string;
   subheading?: string;
+  subheadingCentered?: boolean;
   paragraphs?: string[];
   listIntro?: string;
   list?: ServiceListItem[];
   listColumns?: 2 | 3 | 4;
+  scenarios?: { icon: string; title: string; description: string }[];
   steps?: { title: string; description: string }[];
   note?: { text: string; linkLabel: string; href: string };
   media?: ServiceMediaItem[];

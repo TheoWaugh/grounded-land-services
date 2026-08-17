@@ -87,6 +87,7 @@ const galleryVideos = [
   { id: "RwfM81A1NRk", caption: "Forestry mulching in action" },
   { id: "0jYU5H4qCi0", caption: "Pool Demolition" },
   { id: "_3PySbe3zwU", caption: "Forestry mulching in action" },
+  { id: "sroBopMm2rc", caption: "Completed land clearing action" },
 ];
 export default function GalleryPage() {
   const [activeTag, setActiveTag] = useState("All");

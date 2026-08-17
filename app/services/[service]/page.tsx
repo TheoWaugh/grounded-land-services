@@ -83,7 +83,13 @@ return (
               </>
             )}
             {section.subheading && (
-              <h3 className="text-lg font-bold text-[#0a0a0a] mb-3 mt-8 pb-2 border-b border-amber-100">
+              <h3
+                className={
+                  section.subheadingCentered
+                    ? "text-2xl md:text-3xl font-bold text-[#0a0a0a] mb-3 mt-8 text-center"
+                    : "text-lg font-bold text-[#0a0a0a] mb-3 mt-8 pb-2 border-b border-amber-100"
+                }
+              >
                 {section.subheading}
               </h3>
             )}
@@ -133,14 +139,7 @@ const content = (
                 })}
               </ul>
             )}
-              {section.note && (
-              <p className="text-sm text-[#6e6e73] mt-4">
-                {section.note.text}{" "}
-                <a href={section.note.href} className="font-semibold text-[#C4922A] hover:text-amber-600 transition-colors">
-                  {section.note.linkLabel}
-                </a>
-              </p>
-            )}
+              
 {section.media && <ServiceMedia items={section.media} />}
 {section.videoCarousel && (
               <VideoCarousel
@@ -244,11 +243,29 @@ const content = (
                 </p>
               </div>
             )}
-            {section.closingParagraphs?.map((p, j) => (
-              <p key={j} className="text-[#3a3a3c] leading-relaxed mt-4 text-[15px]">
-                {p}
+            {section.note && (
+              <p className="text-sm text-[#6e6e73] mt-4">
+                {section.note.text}{" "}
+                <a href={section.note.href} className="font-semibold text-[#C4922A] hover:text-amber-600 transition-colors">
+                  {section.note.linkLabel}
+                </a>
               </p>
-            ))}
+            )}
+            {section.closingParagraphs?.map((p, j) => {
+              const isLast = j === (section.closingParagraphs?.length ?? 0) - 1;
+              return isLast ? (
+                <div key={j} className="my-10 py-8 border-y border-gray-200 text-center">
+                  <p className="text-[#0a0a0a] leading-snug text-xl md:text-2xl font-light tracking-wide uppercase max-w-xl mx-auto">
+                    <RichText text={p} />
+                  </p>
+                  <div className="w-10 h-px bg-[#C4922A] mx-auto mt-6" />
+                </div>
+              ) : (
+                <p key={j} className="text-[#3a3a3c] leading-relaxed mt-4 text-[15px]">
+                  <RichText text={p} />
+                </p>
+              );
+            })}
 {section.iconCards && (
               <div
                 className={`grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2 ${
@@ -269,6 +286,20 @@ const content = (
                     </div>
                     <h3 className="font-bold text-[#0a0a0a] mb-1.5">{card.title}</h3>
                     <p className="text-sm leading-relaxed text-[#6e6e73]">{card.description}</p>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {section.scenarios && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6 mt-2">
+                {section.scenarios.map((s) => (
+                  <div key={s.title} className="flex gap-3">
+                    <span className="text-xl flex-shrink-0 mt-0.5">{s.icon}</span>
+                    <div>
+                      <h4 className="font-bold text-[#0a0a0a] text-[15px] mb-1">{s.title}</h4>
+                      <p className="text-sm text-[#6e6e73] leading-relaxed">{s.description}</p>
+                    </div>
                   </div>
                 ))}
               </div>
