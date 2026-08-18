@@ -108,7 +108,10 @@ const allVideoIds = content.sections.flatMap((s) => [
       </div>
 
       <div className="max-w-3xl mx-auto px-6">
-        <p className="text-lg text-[#3a3a3c] leading-relaxed mb-10 mt-8"><RichText text={content.intro} /></p>
+        <p className="text-lg text-[#3a3a3c] leading-relaxed mb-3 mt-8"><RichText text={content.intro} /></p>
+        <p className="text-xs text-[#9a9a9e] mb-10">
+          Written by Grounded Land Services — Central Texas land clearing professionals, based on firsthand experience working properties throughout the region.
+        </p>
 {content.sections.map((section, i) => (
           <div key={i} className={section.heading ? "mb-12 pt-2" : "mb-10"}>
             {section.heading && (
