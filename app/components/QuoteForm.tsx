@@ -143,8 +143,9 @@ export default function QuoteForm({ dark = true }: { dark?: boolean }) {
       {/* Row 1: Name + Phone */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label className={labelClass}>Full Name *</label>
+          <label className={labelClass} htmlFor="name-input">Full Name *</label>
           <input
+            id="name-input"
             type="text"
             name="name"
             required
@@ -155,8 +156,9 @@ export default function QuoteForm({ dark = true }: { dark?: boolean }) {
           />
         </div>
         <div>
-          <label className={labelClass}>Phone Number *</label>
+          <label className={labelClass} htmlFor="phone-input">Phone Number *</label>
           <input
+            id="phone-input"
             type="tel"
             name="phone"
             required
@@ -170,8 +172,9 @@ export default function QuoteForm({ dark = true }: { dark?: boolean }) {
 
       {/* Row 2: Email */}
       <div>
-        <label className={labelClass}>Email Address *</label>
+        <label className={labelClass} htmlFor="email-input">Email Address *</label>
         <input
+          id="email-input"
           type="email"
           name="email"
           required
@@ -185,8 +188,9 @@ export default function QuoteForm({ dark = true }: { dark?: boolean }) {
       {/* Row 3: Property Address + City */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label className={labelClass}>Property Address *</label>
+          <label className={labelClass} htmlFor="address-input">Property Address *</label>
           <input
+            id="address-input"
             type="text"
             name="address"
             required
@@ -197,8 +201,9 @@ export default function QuoteForm({ dark = true }: { dark?: boolean }) {
           />
         </div>
         <div>
-          <label className={labelClass}>City *</label>
+          <label className={labelClass} htmlFor="city-input">City *</label>
           <input
+            id="city-input"
             type="text"
             name="city"
             required
@@ -213,8 +218,9 @@ export default function QuoteForm({ dark = true }: { dark?: boolean }) {
       {/* Row 4: Lot Size + Service */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label className={labelClass}>Lot Size (acres)</label>
+          <label className={labelClass} htmlFor="lotsize-input">Lot Size (acres)</label>
           <input
+            id="lotsize-input"
             type="text"
             name="lotSize"
             placeholder="e.g. 5 acres"
@@ -224,8 +230,9 @@ export default function QuoteForm({ dark = true }: { dark?: boolean }) {
           />
         </div>
         <div>
-          <label className={labelClass}>Service Needed</label>
+          <label className={labelClass} htmlFor="service-select">Service Needed</label>
           <select
+            id="service-select"
             name="service"
             value={form.service}
             onChange={handleChange}
@@ -241,8 +248,9 @@ export default function QuoteForm({ dark = true }: { dark?: boolean }) {
 
       {/* Comments */}
       <div>
-        <label className={labelClass}>Project Details / Comments</label>
+        <label className={labelClass} htmlFor="comments-input">Project Details / Comments</label>
         <textarea
+          id="comments-input"
           name="comments"
           rows={4}
           placeholder="Tell us about your project — land conditions, timeline, specific needs..."
