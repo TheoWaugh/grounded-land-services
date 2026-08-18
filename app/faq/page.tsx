@@ -5,6 +5,9 @@ import { servicesContent } from "@/lib/services-content";
 export const metadata: Metadata = {
   title: "Frequently Asked Questions | Grounded Land Services",
   description: "Answers to common questions about land clearing, forestry mulching, rock crushing, demolition, and every service Grounded Land Services offers across Central Texas.",
+  alternates: {
+    canonical: "https://www.groundedlandservices.com/faq",
+  },
 };
 
 export default function FaqPage() {

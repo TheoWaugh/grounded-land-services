@@ -2,6 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import ScrollReveal from "../components/ScrollReveal";
 import QuoteForm from "../components/QuoteForm";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Us",
+  description: "Get a free quote from Grounded Land Services. Call (512) 571-6700 or fill out our contact form for land clearing, forestry mulching, cedar removal, and site development across Central Texas.",
+  alternates: {
+    canonical: "https://www.groundedlandservices.com/contact",
+  },
+};
 
 const faqs = [
   {

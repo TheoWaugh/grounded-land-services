@@ -2,6 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import ScrollReveal from "../components/ScrollReveal";
 import BreadcrumbSchema from "../components/BreadcrumbSchema";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Our Services",
+  description: "Explore our full range of land clearing and site development services across Central Texas — forestry mulching, land clearing, cedar removal, rock crushing, demolition, and more.",
+  alternates: {
+    canonical: "https://www.groundedlandservices.com/services",
+  },
+};
 
 const allServices = [
   {

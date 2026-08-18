@@ -25,7 +25,34 @@ export async function generateMetadata({
   const { service } = await params;
   const content = servicesContent[service];
   if (!content) return {};
-  return { title: content.title, description: content.metaDescription };
+  return {
+    title: content.title,
+    description: content.metaDescription,
+    alternates: {
+      canonical: `https://www.groundedlandservices.com/services/${service}`,
+    },
+  };
+}
+function ServiceSchema({ service, content }: { service: string; content: { title: string; metaDescription: string } }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: content.title,
+    description: content.metaDescription,
+    provider: { "@id": "https://www.groundedlandservices.com/#business" },
+    areaServed: {
+      "@type": "State",
+      name: "Texas",
+    },
+    url: `https://www.groundedlandservices.com/services/${service}`,
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  );
 }
 
 export default async function ServiceDetailPage({ params }: { params: PageParams }) {
@@ -44,8 +71,8 @@ return (
           { name: content.title, url: `/services/${service}` },
         ]}
       />
+      <ServiceSchema service={service} content={content} />
       <ServiceStickyTitle title={content.title} />
-
 <div className="pt-8 relative">
         <ServiceHeroImage
           src={content.heroImage}

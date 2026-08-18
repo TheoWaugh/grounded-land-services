@@ -30,7 +30,32 @@ export async function generateMetadata({
   return {
     title: result.content.title,
     description: result.content.metaDescription,
+    alternates: {
+      canonical: `https://www.groundedlandservices.com/service-areas/${city}/${service}`,
+    },
   };
+}
+function ServiceSchema({ city, service, cityName, content }: { city: string; service: string; cityName: string; content: { title: string; metaDescription: string } }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: content.title,
+    description: content.metaDescription,
+    provider: { "@id": "https://www.groundedlandservices.com/#business" },
+    areaServed: {
+      "@type": "City",
+      name: cityName,
+      containedInPlace: { "@type": "State", name: "Texas" },
+    },
+    url: `https://www.groundedlandservices.com/service-areas/${city}/${service}`,
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  );
 }
 
 const quoteFormLabels: Record<string, string> = {
@@ -60,6 +85,7 @@ return (
           { name: quoteFormLabels[service] ?? content.title, url: `/service-areas/${city}/${service}` },
         ]}
       />
+      <ServiceSchema city={city} service={service} cityName={cityName} content={content} />
 <ServiceStickyTitle title={content.title} />
 
 {imageSrc && (
