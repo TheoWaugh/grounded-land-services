@@ -185,12 +185,16 @@ export default function ChatWidget() {
         <div className="border-t border-gray-100 p-3 bg-white">
           <div className="flex gap-2 items-center bg-[#f5f5f7] rounded-full pl-4 pr-1.5 py-1.5 focus-within:ring-2 focus-within:ring-[#C4922A]/40 transition-all">
             <input
+              id="chat-message-input"
+              name="chatMessage"
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && sendMessage()}
               placeholder="Ask about pricing, services..."
               disabled={loading}
+              autoComplete="off"
+              aria-label="Chat message"
               className="flex-1 bg-transparent text-sm outline-none disabled:opacity-50 placeholder:text-gray-400"
             />
             <button
