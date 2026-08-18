@@ -57,6 +57,11 @@ const testimonials: Testimonial[] = [
     name: "Steve King",
     quote: "Logan worked on our property behind our pool and did a wonderful job clearing just over 1/2 acre. Logan's attention to detail coupled with methodical work ethic and a desire to do things the right way the first time lends to an outstanding finished product. He even found a source for the debris that saved us hundreds of dollars in dump truck removal costs! In addition, a neighbor asked me for his contact information! We highly recommend Logan and Grounded Land Services! They are professional, trustworthy and hard working. We are very happy and will be seeding soon with grass and Texas native flower seeds. Thanks to Grounded Land Services!!!",
   },
+  {
+    name: "John Cortez",
+    location: "Burnet, TX",
+    quote: "I highly recommend Logan and Grounded Land Services. I hired Logan to help clean up a couple years' worth of downed cedar trees, limbs, and other wood debris on my property, and he did an outstanding job. Logan was professional, dependable, and clearly knew what he was doing. He carefully stacked and burned the cedar and debris, managed the burn safely, and then went back over the area with his equipment to rake and clean up what remained. He did a great job clearing out the leftover cedar, rocks, and debris and left the property looking considerably better than when he started. What impressed me most was that Logan didn't just get the fire going and call it finished — he stayed focused on the entire job through the final cleanup. He took pride in his work, treated my property with respect, and delivered exactly what I hired him to do. I wouldn't hesitate to use Logan and Grounded Land Services again and would highly recommend him to anyone needing land clearing, cedar removal, burning, or general property cleanup.",
+  },
 ];
 
 const featuredNames = ["Jacque Mendenhall", "Christopher Durst", "Mckenzie Schultz"];

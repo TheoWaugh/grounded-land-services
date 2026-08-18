@@ -924,40 +924,209 @@ paragraphs: [
     metaDescription: "Professional rock and cactus removal in Texas — clearing embedded rock and invasive Prickly Pear to make land safe and usable.",
     icon: "🪨",
     heroImage: "/images/official/cactus-rock-removal.jpeg",
-    intro: "Texas land often comes with two stubborn obstacles standing between you and usable acreage: embedded rock and aggressive Prickly Pear cactus. Both make pastures dangerous for livestock and people alike, and both are labor-intensive to remove without the right equipment. We clear both efficiently, leaving safe, workable ground behind.",
+        intro: "Texas land often comes with two stubborn obstacles standing between you and usable acreage: embedded rock and aggressive Prickly Pear cactus. Both make pastures dangerous for livestock and people alike, and both are labor-intensive to remove without the right equipment. We clear both efficiently — often as part of a larger [forestry mulching](/services/forestry-mulching) or [land clearing](/services/land-clearing) project — leaving safe, workable ground behind.",
     sections: [
-      {
-        heading: "The Problem With Rock & Cactus",
-        paragraphs: [
-          "Surface rock and limestone outcroppings limit usable acreage, damage mowing equipment, and create serious footing hazards for livestock and horses. Prickly Pear cactus spreads through both seed and fallen pads, meaning an untreated patch can quietly take over acres of pasture over a few seasons.",
-          "Both problems compound each other over time — clearing early is almost always less costly than clearing later, once growth or rock exposure has spread further.",
+                  {
+        heading: "What Is Rock & Cactus Removal?",
+                paragraphs: [
+          "Rock and cactus removal is the process of removing unwanted rocks, boulders, prickly pear, and other obstacles that interfere with how you use or maintain your property. On Central Texas and Texas Hill Country properties, rocky ground and dense cactus can make it difficult to mow, graze livestock, maintain fences, improve access, or prepare land for construction.",
+          "Depending on the site, removal may involve [excavation](/services/dirt-work-grading), mechanical rock removal, vegetation clearing, or a combination of methods. The goal isn't necessarily to remove every rock or cactus on your property, but to strategically clear problem areas and create more usable, accessible land.",
         ],
-      },
-      {
-        heading: "What We Clear",
+        listIntro: "What Can We Remove? We can address a variety of obstacles commonly found on Central Texas properties, including:",
         list: [
-          "Surface and embedded rock", "Limestone outcroppings",
-          "Prickly Pear cactus (root and pad)", "Rock piles from past clearing",
-          "Rocky building-pad areas", "Pasture and grazing land obstructions",
+          "Limestone and surface rock",
+          "Large rocks and boulders",
+          "Buried or partially buried rock",
+          "Prickly pear and dense cactus growth",
+        ],
+      },
+            
+              {
+        heading: "Rock & Cactus Removal Approaches",
+        paragraphs: [
+          "The right approach depends on what you're dealing with and what you want to accomplish with your property. Rocky Hill Country ground may require excavation or specialized equipment, while dense cactus can be cleared with the right equipment and incorporated into a larger vegetation-management project.",
+        ],
+        comparison: {
+          left: {
+            heading: "🪨 Rock Removal",
+            list: [
+              "Removes exposed, buried, or partially buried rock",
+              "Uses excavation and specialized equipment based on rock size and location",
+              "Best for rocks interfering with construction, access, grading, or property use",
+              "Rock can be removed, relocated, or incorporated into the project when practical",
+              "Often combined with excavation, grading, or site preparation",
+            ],
+          },
+          right: {
+            heading: "🌵 Cactus Removal",
+            list: [
+              "Removes unwanted prickly pear and dense cactus growth",
+              "Uses specialized equipment suited to the density and location of the cactus",
+              "Best for cactus taking over pastures, fence lines, access areas, or usable acreage",
+              "Cleared cactus is handled according to the project's scope",
+              "Often combined with land clearing, forestry mulching, or underbrushing",
+            ],
+          },
+        },
+                compareSlider: {
+          beforeSrc: "/images/service-pics/rock-removal-before.jpeg",
+          beforeLabel: "Before",
+          afterSrc: "/images/service-pics/rock-removal-after.jpeg",
+          afterLabel: "After",
+        },
+      },
+            {
+        subheading: "When Both Are a Problem",
+        paragraphs: [
+          "Many Central Texas properties have rocky terrain and dense cactus in the same areas. When that's the case, rock and cactus removal can be incorporated into a larger [land clearing](/services/land-clearing) or [site preparation](/services/site-preparation) project rather than treating each problem separately.",
+          "The right approach depends on the size and location of the rock, cactus density, terrain, equipment access, and your intended use of the property.",
+        ],
+      },
+                  {
+        heading: "Benefits of Rock & Cactus Removal",
+        paragraphs: [
+          "Rocky ground and dense cactus can make otherwise usable Central Texas acreage difficult to access, maintain, or improve. Removing problem areas can reclaim usable space, improve access, simplify property maintenance, and prepare your land for its next use.",
+        ],
+        iconCards: [
+          { icon: "🏡", title: "Reclaim Usable Land", description: "Turn rocky or cactus-covered areas into more functional space for your property." },
+          { icon: "🚜", title: "Improve Property Access", description: "Clear obstacles from driveways, roads, trails, gates, and other important access routes." },
+          { icon: "🐄", title: "Improve Pasture", description: "Open areas for grazing, mowing, and maintaining more usable pasture." },
+          { icon: "🏗️", title: "Prepare for Construction", description: "Clear rock and cactus from areas planned for homesites, buildings, roads, pads, or other improvements." },
+          { icon: "🌵", title: "Manage Dense Cactus", description: "Reclaim areas where prickly pear and other cactus growth has become difficult to manage." },
+          { icon: "🪨", title: "Remove Obstacles", description: "Remove rocks and boulders that interfere with grading, fencing, mowing, or everyday property use." },
+          { icon: "🔧", title: "Simplify Property Maintenance", description: "Create more accessible ground for mowing, fencing, equipment, livestock, and general upkeep." },
+          { icon: "🌄", title: "Improve Your Property", description: "Open up difficult areas and create a cleaner, more functional landscape." },
+        ],
+        iconCardsColumns: 4,
+                media: [
+          { type: "image", src: "/images/official/cactus-rock-removal.jpeg", alt: "Rock and cactus removal project" },
+        ],
+      },
+            {
+        heading: "When You Should Choose Rock & Cactus Removal",
+        paragraphs: [
+          "Rock and cactus removal can make sense when natural obstacles are preventing you from using, maintaining, or improving your property. The right scope depends on the condition of the land and what you plan to do with it.",
+        ],
+        scenarios: [
+          { icon: "🐄", title: "Your Pasture Is Difficult to Use", description: "Rocks or dense cactus are limiting grazing, mowing, or access to otherwise usable areas." },
+          { icon: "🏗️", title: "Rocks Are Interfering With Construction", description: "Large or buried rock is creating obstacles for a homesite, building pad, driveway, road, or other improvement." },
+          { icon: "🌵", title: "Cactus Is Taking Over", description: "Dense prickly pear is spreading across pastures, fence lines, access areas, or other portions of the property you want to reclaim." },
+          { icon: "🚜", title: "Your Access Routes Are Blocked", description: "Rock, cactus, or surrounding vegetation is making roads, trails, gates, or driveways difficult to use or maintain." },
+          { icon: "🔧", title: "You're Installing or Repairing Fences", description: "Clearing rock and cactus along fence lines can provide better access for installation, repairs, and ongoing maintenance." },
+          { icon: "🏡", title: "You're Preparing for a Property Improvement", description: "You're planning a homesite, shop, barn, road, pasture improvement, or another project that requires a more accessible work area." },
+          { icon: "🌄", title: "You Want to Reclaim Difficult Terrain", description: "Rocky, cactus-covered areas can be some of the most difficult portions of a Central Texas property to use. Strategic removal can open these areas for other purposes." },
+          { icon: "🛠️", title: "You Want Easier Long-Term Maintenance", description: "If you're constantly working around rocks and cactus, clearing targeted areas can make mowing, fencing, livestock management, and general property upkeep easier." },
+        ],
+      },
+            {
+        heading: "Our Rock & Cactus Removal Process",
+        paragraphs: [
+          "Every property is different. We evaluate the site, understand your goals, and determine the right equipment and approach for the rock, cactus, and terrain you're dealing with.",
+        ],
+        steps: [
+          { title: "Contact Us", description: "Tell us about your property, the obstacles you're dealing with, and what you want to accomplish." },
+          { title: "Evaluate the Property", description: "We assess the rock, cactus, terrain, access, surrounding vegetation, and site conditions." },
+          { title: "Determine the Approach", description: "We select the right equipment and removal approach based on the material, location, and project goals." },
+          { title: "Plan the Work", description: "We identify the areas to clear and any trees, structures, fences, or other features to preserve." },
+          { title: "Remove Rock & Cactus", description: "Our equipment is used to remove the targeted rock, cactus, and surrounding obstacles according to the project plan." },
+          { title: "Final Pass", description: "We review the completed area and make sure the site is left in the agreed-upon condition." },
+        ],
+        ctaButton: { label: "Request a Free Estimate", href: "/contact?service=Rock%20%26%20Cactus%20Removal#quote" },
+      },
+            {
+        heading: "Rock & Cactus Removal Cost Factors",
+        paragraphs: [
+          "The cost of rock and cactus removal depends on the property, the material being removed, and the desired finished condition. Rock size, cactus density, terrain, access, and whether material needs to be hauled away can all affect the equipment, labor, and time required.",
+        ],
+        iconCards: [
+          { icon: "🪨", title: "Rock Size & Quantity", description: "Larger rocks, boulders, and greater quantities of material generally require more time and equipment to remove." },
+          { icon: "🌵", title: "Cactus Density", description: "Scattered cactus requires less work than dense growth covering large areas of the property." },
+          { icon: "📐", title: "Clearing Area", description: "The size of the area being cleared affects the equipment time and production required to complete the project." },
+          { icon: "⛰️", title: "Terrain & Ground Conditions", description: "Rocky Hill Country terrain, slopes, uneven ground, and difficult ground conditions can affect equipment productivity." },
+          { icon: "🚜", title: "Site Access", description: "Narrow gates, fences, structures, limited entry points, and restricted access can make equipment movement more challenging." },
+          { icon: "📍", title: "Material Location", description: "Rock or cactus located around structures, fences, trees, utilities, or other obstacles may require more careful and time-consuming work." },
+          { icon: "🚛", title: "Debris Haul-Off", description: "If removed rock, cactus, brush, or other debris needs to be loaded, transported, and disposed of off-site, hauling requirements will add to the overall project cost." },
+          { icon: "🏗️", title: "Desired Finished Condition", description: "Projects requiring additional excavation, grading, site preparation, or complete debris removal will have different costs than simply clearing targeted problem areas." },
+        ],
+        iconCardsColumns: 4,
+        ctaButton: { label: "Request a Free Estimate", href: "/contact?service=Rock%20%26%20Cactus%20Removal#quote" },
+      },
+            {
+        heading: "Property Types We Serve",
+        paragraphs: [
+          "Rocky terrain and cactus are common across Central Texas, but every property has different challenges. Grounded Land Services helps property owners clear rock and cactus from a variety of residential, agricultural, recreational, and rural properties.",
+        ],
+        iconCards: [
+          { icon: "🏡", title: "Residential Acreage", description: "Clear rock and cactus from rural homesites, large residential lots, and acreage properties." },
+          { icon: "🐄", title: "Ranches & Pastures", description: "Reclaim pasture, grazing areas, and open acreage affected by rocks, boulders, or dense cactus." },
+          { icon: "🦌", title: "Hunting & Recreational Properties", description: "Improve access to trails, hunting areas, campsites, and other recreational areas." },
+          { icon: "🌳", title: "Rural & Undeveloped Land", description: "Open difficult areas and remove obstacles that make undeveloped acreage harder to access or manage." },
+          { icon: "🏗️", title: "Homesites & Building Areas", description: "Remove rock and cactus from areas being prepared for homes, shops, barns, buildings, and other improvements." },
+          { icon: "🚧", title: "Roads, Driveways & Access Areas", description: "Clear obstacles from planned or existing roads, driveways, trails, and other property access routes." },
+        ],
+        iconCardsColumns: 3,
+      },
+            {
+        heading: "Related Services",
+        relatedServices: [
+          { label: "Forestry Mulching", href: "/services/forestry-mulching" },
+          { label: "Land Clearing", href: "/services/land-clearing" },
+          { label: "Excavation", href: "/services/dirt-work-grading" },
+          { label: "Dirt Work & Grading", href: "/services/dirt-work-grading" },
+          { label: "Site Preparation", href: "/services/site-preparation" },
+          { label: "Tree & Stump Removal", href: "/services/tree-stump-removal" },
         ],
       },
       {
-        heading: "Our Removal Process",
-        steps: [
-          { title: "Site Assessment", description: "We evaluate rock density and cactus coverage to determine the right equipment approach." },
-          { title: "Cactus Removal", description: "Prickly Pear is removed at the root to prevent regrowth from remaining pads." },
-          { title: "Rock Extraction", description: "Surface and embedded rock is excavated and can be crushed on-site into usable aggregate if desired." },
-          { title: "Site Cleanup", description: "The cleared area is left level and safe for grazing, mowing, or development." },
+        heading: "Why Choose Grounded Land Services?",
+        paragraphs: [
+          "Choosing the right contractor can make all the difference in how your property looks today — and for years to come. At [Grounded Land Services](/), we believe land clearing isn't just about clearing land; it's about leaving your property in better condition than we found it. From the equipment we operate to the attention we give every project, our goal is to deliver results that are clean, professional, and built to last.",
+          "From your first phone call to the final walkthrough, we're committed to providing honest communication, dependable scheduling, and quality workmanship. We show up prepared, treat your property with respect, and stand behind the work we perform.",
+          "When you hire Grounded Land Services, you're not just hiring a land clearing contractor — you're choosing a company that takes pride in leaving your land cleaner, healthier, and ready for whatever comes next.",
+        ],
+        media: [
+          { type: "image", src: "/images/service-pics/why-choose-us.jpeg", alt: "Why choose Grounded Land Services" },
         ],
       },
+      {
+        heading: "Ready to Reclaim Your Property?",
+        paragraphs: [
+          "Whether you're dealing with limestone, large rocks, prickly pear, or difficult Hill Country terrain, Grounded Land Services can help you clear the obstacles standing between you and a more usable property.",
+          "From targeted rock and cactus removal to larger land clearing, excavation, and site preparation projects, we'll help you determine the right approach for your property.",
+        ],
+        ctaButton: { label: "Request a Free Estimate", href: "/contact?service=Rock%20%26%20Cactus%20Removal#quote" },
+      },
     ],
-    faqs: [
-      { question: "Does cactus grow back if not removed at the root?", answer: "Yes — Prickly Pear can regenerate from fallen pads, so full root removal is important for lasting results." },
-      { question: "Can removed rock be reused on my property?", answer: "Often, yes. We can crush usable rock into aggregate for driveways, roads, or building pads instead of hauling it away." },
-      { question: "Is rock removal necessary before building?", answer: "In many cases yes, especially for foundations, septic systems, and areas requiring stable, level ground." },
-      { question: "How dangerous is Prickly Pear to livestock?", answer: "Its spines can cause serious injury and infection in livestock and horses, making removal a safety priority for grazing land." },
+        faqs: [
+      { question: "How do I remove rocks from my property?", answer: "The right method depends on the size, location, and depth of the rock. Smaller surface rocks may be removed with appropriate equipment, while larger or partially buried rocks can require excavation and specialized equipment. The best approach also depends on whether you want the rock removed completely, relocated, or incorporated into the property." },
+      { question: "What types of rock can you remove?", answer: "We can address many of the rocks commonly found on Central Texas properties, including limestone, surface rock, large rocks, boulders, and partially buried rock. The size, location, and accessibility of the material will determine the appropriate removal approach." },
+      { question: "Can you remove large limestone rocks?", answer: "Yes. Large limestone rocks and boulders can sometimes be excavated or otherwise removed depending on their size, depth, location, and accessibility. Some larger or deeply embedded rock may require additional equipment or a different approach." },
+      { question: "Can you remove buried rock?", answer: "Potentially, yes. Partially or fully buried rock can require excavation to determine how deeply it extends and how it can be safely removed. Rock conditions vary significantly across Central Texas, so the property should be evaluated before determining the best approach." },
+      { question: "Can you remove rocks from a pasture?", answer: "Yes. Removing problem rocks can open pasture areas for grazing, mowing, equipment access, and general property maintenance. Strategic removal may be preferable to attempting to remove every rock across an entire property." },
+      { question: "Can you remove rocks before building a house?", answer: "Yes. Rock removal can be part of preparing a homesite, building pad, driveway, road, or other construction area. Depending on the project, rock removal may be combined with excavation, dirt work, grading, or site preparation.", link: { label: "Site Preparation", href: "/services/site-preparation" } },
+      { question: "Can you remove rocks from a driveway or road?", answer: "Yes. Problem rocks can be removed from existing or planned driveways, roads, and access routes when they interfere with travel, grading, drainage, or construction." },
+      { question: "What happens to the rock after it is removed?", answer: "Depending on the project, removed rock may be relocated on the property, incorporated into another area, or hauled away. The best option depends on the type and amount of material and what you want to accomplish with the property." },
+      { question: "How much does rock removal cost?", answer: "Rock removal costs vary based on rock size, quantity, depth, location, terrain, access, equipment requirements, and whether the material needs to be hauled off-site. A few surface rocks can be very different from a large area containing heavily embedded limestone." },
+      { question: "How do I remove prickly pear cactus from my property?", answer: "The best approach depends on how much cactus is present and where it is growing. Small isolated areas may be manageable with appropriate tools, while dense cactus across acreage can require specialized equipment and a larger clearing approach." },
+      { question: "What types of cactus can you remove?", answer: "We primarily encounter prickly pear and other unwanted cactus growth on Central Texas properties. The density, size, location, and surrounding vegetation will determine how the area should be approached." },
+      { question: "Can you clear cactus from a pasture?", answer: "Yes. Dense cactus can be removed from pasture and other open areas to reclaim usable ground and improve access for grazing, mowing, and property maintenance." },
+      { question: "Can you remove cactus from a fence line?", answer: "Yes. Cactus growing along fence lines can make inspection, repairs, replacement, and general fence maintenance difficult. Clearing these areas can improve access and make future maintenance easier.", link: { label: "Fence Line Clearing", href: "/services/fence-line-clearing" } },
+      { question: "Can you remove cactus around my house?", answer: "Yes. Cactus can be cleared from areas around homes, shops, barns, driveways, and other structures when site conditions allow. Equipment access, surrounding vegetation, structures, and the density of the cactus all factor into the work." },
+      { question: "Will cactus grow back after removal?", answer: "Cactus can return if pieces or new growth become established after clearing. Long-term management may be necessary to keep previously cleared areas open. The amount of regrowth depends on the property and how the area is managed after removal." },
+      { question: "How do I keep cactus from coming back?", answer: "Keeping cleared areas maintained and addressing new growth before it becomes established can help prevent cactus from becoming a larger problem again. The best long-term strategy depends on the property, vegetation, land use, and how frequently the area can be maintained." },
+      { question: "How much does cactus removal cost?", answer: "Cactus removal costs depend on density, acreage, terrain, access, surrounding vegetation, and the desired finished condition. Dense cactus spread across several acres will require a different scope of work than scattered growth in a small area." },
+      { question: "Can you remove rock and cactus at the same time?", answer: "Yes. In fact, many Central Texas properties have rocky terrain and dense cactus growing in the same areas. Addressing both during the same project can make sense when the goal is to reclaim an area for pasture, access, construction, or general property use.", link: { label: "Traditional Land Clearing", href: "/services/land-clearing" } },
+      { question: "Why do rock and cactus often need to be removed together?", answer: "Rocky Hill Country terrain can create conditions where cactus becomes difficult to manage, while dense cactus can make rocky areas even harder to access. Removing both can create a more usable work area and make future property maintenance easier." },
+      { question: "How do I clear rocky and cactus-covered land?", answer: "Start by determining what you want the finished property to look like. Identify areas you want to preserve, areas you want opened, and any planned improvements. From there, the rock and cactus can be evaluated separately to determine the appropriate equipment and approach. Larger projects may also incorporate land clearing, forestry mulching, excavation, or grading.", link: { label: "Forestry Mulching", href: "/services/forestry-mulching" } },
+      { question: "Should I remove rock or cactus first?", answer: "There isn't one answer for every property. The sequence can depend on the type and location of the rock, cactus density, terrain, equipment access, and what other work is planned. If the project also involves construction or grading, the overall site plan should be considered before deciding the sequence." },
+      { question: "Can rock and cactus removal be part of a larger land-clearing project?", answer: "Yes. Rock and cactus removal can often be combined with land clearing, forestry mulching, excavation, grading, tree removal, and site preparation. Combining services can make sense when multiple types of vegetation and ground obstacles are preventing you from using the property.", link: { label: "Traditional Land Clearing", href: "/services/land-clearing" } },
+      { question: "Can you clear rock and cactus before building?", answer: "Yes. Removing rock and cactus can be an important part of preparing areas for homesites, shops, barns, roads, driveways, building pads, and other improvements. Additional excavation, grading, or site preparation may also be required depending on the project.", link: { label: "Dirt Work & Grading", href: "/services/dirt-work-grading" } },
+      { question: "Do I need to remove every rock and cactus on my property?", answer: "No. Strategic removal is often more practical than completely clearing a large property. You may only need to remove obstacles from areas you want to build on, access, mow, graze, fence, or otherwise use." },
+      { question: "What should I do after rock and cactus removal?", answer: "That depends on your plans for the property. Cleared areas may be used for pasture, access, recreation, construction, fencing, or other improvements. Depending on the project, grading, excavation, dirt work, site preparation, or additional vegetation clearing may be the next step.", link: { label: "Site Preparation", href: "/services/site-preparation" } },
+      { question: "How do I know if my property needs rock and cactus removal?", answer: "If rock or cactus is preventing you from accessing, maintaining, mowing, grazing, fencing, building on, or otherwise using part of your property, removal may be worth considering. Grounded Land Services can evaluate the property and help determine what areas should be addressed and what approach makes the most sense." },
+      { question: "How do I get started with rock and cactus removal?", answer: "Contact Grounded Land Services with your property location, approximate acreage, the type of rock or cactus you're dealing with, and what you're hoping to accomplish. We'll evaluate the project and help determine whether rock removal, cactus removal, land clearing, forestry mulching, excavation, or a combination of services is the right approach.", link: { label: "Request a Free Quote", href: "/contact?service=Rock%20%26%20Cactus%20Removal#quote" } },
     ],
-    pricing: { range: "$1,800 – $5,000", unit: "per acre", note: "Pricing depends on rock density, depth, and cactus coverage across the property." },
+    pricing: { range: "$2,000 – $5,000+", unit: "per acre", note: "Pricing depends on rock density, depth, and cactus coverage across the property." },
   },
 
   "rock-crushing": {

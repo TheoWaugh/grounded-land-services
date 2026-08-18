@@ -109,10 +109,10 @@ const testimonials = [
     text: "We couldn't be happier with the work Grounded Land Services and owner, Logan Arnold, did on our ranch in Spicewood, TX. They took on a challenging property with a lot of cleanup needed, including removing trash and debris from a burned-down house and old, dilapidated sheds, while also clearing years of overgrown cedar across rough, rocky terrain. What impressed us most was the care and respect they showed for the land. They took the time to preserve the oaks and the trees we wanted to keep, while thoughtfully restoring the property and helping it reach its full potential. Their attention to detail, hard work, and understanding of the land truly made a difference. Logan and his team were dependable, punctual, friendly, and always one step ahead — anticipating challenges and helping us make good decisions throughout the process. It's clear they take pride in what they do, and we are grateful for the incredible transformation they helped create. Our ranch is in the best shape it has been in years, and we would gladly use Grounded Land Services again and recommend them to anyone looking to care for their land the right way.",
   },
   {
-    name: "Steve King",
-    location: "Texas",
+    name: "John Cortez",
+    location: "Burnet, TX",
     rating: 5,
-    text: "Logan worked on our property behind our pool and did a wonderful job clearing just over 1/2 acre. Logan's attention to detail coupled with methodical work ethic and a desire to do things the right way the first time lends to an outstanding finished product. He even found a source for the debris that saved us hundreds of dollars in dump truck removal costs! In addition, a neighbor asked me for his contact information! We highly recommend Logan and Grounded Land Services! They are professional, trustworthy and hard working. We are very happy and will be seeding soon with grass and Texas native flower seeds. Thanks to Grounded Land Services!!!",
+    text: "I highly recommend Logan and Grounded Land Services. I hired Logan to help clean up a couple years' worth of downed cedar trees, limbs, and other wood debris on my property, and he did an outstanding job. Logan was professional, dependable, and clearly knew what he was doing. He carefully stacked and burned the cedar and debris, managed the burn safely, and then went back over the area with his equipment to rake and clean up what remained. He did a great job clearing out the leftover cedar, rocks, and debris and left the property looking considerably better than when he started. What impressed me most was that Logan didn't just get the fire going and call it finished — he stayed focused on the entire job through the final cleanup. He took pride in his work, treated my property with respect, and delivered exactly what I hired him to do. I wouldn't hesitate to use Logan and Grounded Land Services again and would highly recommend him to anyone needing land clearing, cedar removal, burning, or general property cleanup.",
   },
   {
     name: "Dylan Gavit",
@@ -128,43 +128,49 @@ const testimonials = [
   },
   {
     name: "Mike Janak",
-    location: "Texas",
+    location: "Spicewood, Texas",
     rating: 5,
     text: "I hired Grounded Land Services to clear a 50' x 300' path through heavily wooded, sloping terrain that was inundated with Huisache and Prickly Pear. Walking that area before was a miserable experience and now it's a beautiful stroll on my property! Logan's attention to detail and especially the cleanup has my neighbors asking me for his business card.",
   },
   {
+    name: "Steve King",
+    location: "Bertram, Texas",
+    rating: 5,
+    text: "Logan worked on our property behind our pool and did a wonderful job clearing just over 1/2 acre. Logan's attention to detail coupled with methodical work ethic and a desire to do things the right way the first time lends to an outstanding finished product. He even found a source for the debris that saved us hundreds of dollars in dump truck removal costs! In addition, a neighbor asked me for his contact information! We highly recommend Logan and Grounded Land Services! They are professional, trustworthy and hard working. We are very happy and will be seeding soon with grass and Texas native flower seeds. Thanks to Grounded Land Services!!!",
+  },
+  {
     name: "Mckenzie Schultz",
-    location: "Texas",
+    location: "Luling, Texas",
     rating: 5,
     text: "I had an excellent experience with Grounded Land Services! They cleared five acres of heavy underbrush for me efficiently and thoroughly. The results exceeded my expectations! The crew was extremely professional and communicated clearly throughout the entire process. It's clear they take pride in their work. So happy with the results, would 100% recommend to anyone needing their services!",
   },
   {
     name: "Jacque Mendenhall",
-    location: "Texas",
+    location: "Bertram, Texas",
     rating: 5,
     text: "We had a fantastic experience working with Grounded Land Services! From start to finish, the communication was clear and professional. He truly listened to what we needed and followed through with care and attention to detail. He completed work both before and after the July 4th flood, and we were impressed with his consistency, reliability, and the quality of the results. Highly recommend for any land clearing or related projects.",
   },
   {
     name: "Kelley Arnold",
-    location: "Texas",
+    location: "Bertram, Texas",
     rating: 5,
     text: "Logan, owner of Grounded Land Services, is the hardest worker out there! He has great attention to detail, does impeccable work, a work ethic that far exceeds his years, is honest and operates his business with the utmost integrity and professionalism.",
   },
   {
     name: "Evan Smith",
-    location: "Texas",
+    location: "Bertram, Texas",
     rating: 5,
     text: "I am truly grateful for the quality of work and attention to detail Logan provided when mulching my cedar piles. He is very professional and I highly recommend his services. It's been a refreshing process to have a job done well and on time. Thanks Logan!",
   },
   {
     name: "Gary Gorton",
-    location: "Texas",
+    location: "Lago Vista, Texas",
     rating: 5,
     text: "Ground Land Services is a rare find. Knowledgeable, professional, punctual and a fair price. Logan met and exceeded all of our expectations. We will definitely use him again.",
   },
   {
     name: "Kathy Wendt",
-    location: "Texas",
+    location: "Burnet, Texas",
     rating: 5,
     text: "Grounded Land Services did an amazing job. He got rid of dead trees, branches, and stumps. He made our property looking great again. I highly recommend his services.",
   },
@@ -267,13 +273,12 @@ export default function Home() {
         />
         <div className="absolute inset-0 hero-overlay" />
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 pb-24 md:pb-32">
-          <p className="section-label-light mb-4 tracking-widest">Grounded Land Services</p>
+       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 pb-24 md:pb-32 flex flex-col items-start text-left">
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.05] tracking-tight max-w-4xl mb-6">
-            Transform<br />Your Land.
+           Reclaim Your Land.<br />Build What's Next.
           </h1>
           <p className="text-white/75 text-lg md:text-xl max-w-xl mb-10 leading-relaxed">
-            Premier land clearing and site development across Texas. Power, precision, and the professional finish your property deserves.
+            Premier land clearing and site development across Central Texas. Power, precision, and the professional finish your property deserves.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href="/contact#quote" className="btn-primary text-base">
@@ -297,7 +302,7 @@ export default function Home() {
           {[
             { stat: "100+", label: "Projects Completed" },
             { stat: "5★", label: "Average Rating" },
-            { stat: "Texas", label: "Wide Coverage" },
+            { stat: "Central", label: "Texas Coverage" },
             { stat: "Licensed", label: "& Certified" },
           ].map((item, i) => (
             <div key={i}>
@@ -463,7 +468,7 @@ export default function Home() {
           <ScrollReveal>
             <p className="section-label mb-3">Coverage</p>
             <h2 className="text-3xl md:text-4xl font-bold text-[#0a0a0a] mb-4">
-              Serving Property Owners Across Texas
+              Serving Central Texas Property Owners 
             </h2>
             <p className="text-[#6e6e73] mb-8 max-w-xl mx-auto">
               No matter where your property is located, Grounded Land Services travels statewide to provide professional land clearing, forestry mulching, demolition, rock crushing, and site preparation services.

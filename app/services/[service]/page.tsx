@@ -70,8 +70,7 @@ return (
       </div>
 
       <div className="max-w-3xl mx-auto px-6">
-        <p className="text-lg text-[#3a3a3c] leading-relaxed mb-10 mt-8">{content.intro}</p>
-
+        <p className="text-lg text-[#3a3a3c] leading-relaxed mb-10 mt-8"><RichText text={content.intro} /></p>
 {content.sections.map((section, i) => (
           <div key={i} className={section.heading ? "mb-12 pt-2" : "mb-10"}>
             {section.heading && (
@@ -140,7 +139,6 @@ const content = (
               </ul>
             )}
               
-{section.media && <ServiceMedia items={section.media} />}
 {section.videoCarousel && (
               <VideoCarousel
                 videoIds={section.videoCarousel.videoIds}
@@ -290,6 +288,7 @@ const content = (
                 ))}
               </div>
             )}
+{section.media && <ServiceMedia items={section.media} />}
 
             {section.scenarios && (
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6 mt-2">
@@ -334,6 +333,16 @@ const content = (
                     </svg>
                   </a>
                 ))}
+              </div>
+            )}
+                        {section.ctaButton && !section.steps && (
+              <div className="mt-6 text-center">
+                <a
+                  href={section.ctaButton.href}
+                  className="inline-block px-6 py-3 bg-[#C4922A] text-black font-semibold rounded-full hover:bg-amber-500 transition-colors text-sm"
+                >
+                  {section.ctaButton.label}
+                </a>
               </div>
             )}
 
@@ -385,8 +394,20 @@ const content = (
           </div>
         ))}
 
+        <TrustBadges />
+
+        <div className="mb-16">
+          <div className="text-center mb-8">
+            <p className="text-xs font-bold tracking-[0.15em] uppercase text-[#C4922A] mb-2">
+              Customer Reviews
+            </p>
+            <h2 className="text-3xl font-bold text-[#0a0a0a]">What Our Customers Say</h2>
+          </div>
+          <Testimonials />
+        </div>
+
         {content.faqs.length > 0 && (
-          <div className="mb-16 -mx-6 md:-mx-10 px-6 md:px-10 py-10 bg-gradient-to-b from-[#faf9f7] to-white rounded-3xl">
+          <div className="mb-12 -mx-6 md:-mx-10 px-6 md:px-10 py-10 bg-gradient-to-b from-[#faf9f7] to-white rounded-3xl">
             <div className="text-center mb-8">
               <p className="text-xs font-bold tracking-[0.15em] uppercase text-[#C4922A] mb-2">
                 Common Questions
@@ -396,18 +417,6 @@ const content = (
             <FaqAccordion faqs={content.faqs} />
           </div>
         )}
-
-        <TrustBadges />
-
-        <div className="mb-12">
-          <div className="text-center mb-8">
-            <p className="text-xs font-bold tracking-[0.15em] uppercase text-[#C4922A] mb-2">
-              Customer Reviews
-            </p>
-            <h2 className="text-3xl font-bold text-[#0a0a0a]">What Our Customers Say</h2>
-          </div>
-          <Testimonials />
-        </div>
       </div>
 
       <div className="mt-16 w-full bg-[#0a0a0a] py-10 px-6 text-center">
