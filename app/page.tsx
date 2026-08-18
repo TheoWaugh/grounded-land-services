@@ -275,7 +275,7 @@ export default function Home() {
 
        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 pb-24 md:pb-32 flex flex-col items-start text-left">
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.05] tracking-tight max-w-4xl mb-6">
-           Reclaim Your Land.<br />Build What's Next.
+           Reclaim Your Land.<br />
           </h1>
           <p className="text-white/75 text-lg md:text-xl max-w-xl mb-10 leading-relaxed">
             Premier land clearing and site development across Central Texas. Power, precision, and the professional finish your property deserves.
@@ -302,7 +302,7 @@ export default function Home() {
           {[
             { stat: "100+", label: "Projects Completed" },
             { stat: "5★", label: "Average Rating" },
-            { stat: "Central", label: "Texas Coverage" },
+            { stat: "Central Texas", label: "Coverage" },
             { stat: "Licensed", label: "& Certified" },
           ].map((item, i) => (
             <div key={i}>
