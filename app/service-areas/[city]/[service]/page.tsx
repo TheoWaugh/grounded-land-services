@@ -16,6 +16,8 @@ import BeforeAfterSlider from "@/app/components/BeforeAfterSlider";
 import ServiceMedia from "@/app/components/ServiceMedia";
 import Image from "next/image";
 import VideoCarousel from "@/app/components/VideoCarousel";
+import VideoSchema from "@/app/components/VideoSchema";
+import { videoMetadata } from "@/data/video-metadata";
 
 type PageParams = Promise<{ city: string; service: string }>;
 
@@ -75,7 +77,15 @@ export default async function ServicePage({ params }: { params: PageParams }) {
   const imageSrc = serviceImages[service];
   const imageAlt = serviceAltText[service] ?? content.title;
 
-return (
+const allVideoIds = content.sections.flatMap((s) => [
+    ...(s.videoCarousel?.videoIds ?? []),
+    ...(s.loopingVideo ? [s.loopingVideo.videoId] : []),
+  ]);
+  const pageVideos = allVideoIds
+    .map((id) => videoMetadata[id] && { videoId: id, ...videoMetadata[id] })
+    .filter((v): v is { videoId: string; name: string; description: string; uploadDate: string } => Boolean(v));
+
+  return (
     <section className="bg-white">
       <BreadcrumbSchema
         items={[
@@ -86,6 +96,7 @@ return (
         ]}
       />
       <ServiceSchema city={city} service={service} cityName={cityName} content={content} />
+      <VideoSchema videos={pageVideos} />
 <ServiceStickyTitle title={content.title} />
 
 {imageSrc && (

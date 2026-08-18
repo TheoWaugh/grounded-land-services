@@ -14,6 +14,8 @@ import { serviceImagePosition } from "@/data/service-image-position";
 import RichText from "@/app/components/RichText";
 import LoopingVideo from "@/app/components/LoopingVideo";
 import BreadcrumbSchema from "@/app/components/BreadcrumbSchema";
+import VideoSchema from "@/app/components/VideoSchema";
+import { videoMetadata } from "@/data/video-metadata";
 
 type PageParams = Promise<{ service: string }>;
 
@@ -62,7 +64,15 @@ export default async function ServiceDetailPage({ params }: { params: PageParams
 
   const quoteHref = `/contact?service=${encodeURIComponent(content.title)}#quote`;
 
-return (
+const allVideoIds = content.sections.flatMap((s) => [
+    ...(s.videoCarousel?.videoIds ?? []),
+    ...(s.loopingVideo ? [s.loopingVideo.videoId] : []),
+  ]);
+  const pageVideos = allVideoIds
+    .map((id) => videoMetadata[id] && { videoId: id, ...videoMetadata[id] })
+    .filter((v): v is { videoId: string; name: string; description: string; uploadDate: string } => Boolean(v));
+
+  return (
     <section className="bg-white">
       <BreadcrumbSchema
         items={[
@@ -72,6 +82,7 @@ return (
         ]}
       />
       <ServiceSchema service={service} content={content} />
+      <VideoSchema videos={pageVideos} />
       <ServiceStickyTitle title={content.title} />
 <div className="pt-8 relative">
         <ServiceHeroImage
