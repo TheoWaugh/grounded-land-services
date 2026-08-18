@@ -31,7 +31,8 @@ comparison?: {
     afterSrc: string;
     afterLabel: string;
   };
-  closingParagraphs?: string[];
+    closingParagraphs?: string[];
+  emphasizeLastClosing?: boolean;
   iconCards?: { icon: string; title: string; description: string }[];
   iconCardsColumns?: 2 | 3 | 4;
   areaMapQuery?: string;

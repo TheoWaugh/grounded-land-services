@@ -251,7 +251,7 @@ const content = (
             )}
             {section.closingParagraphs?.map((p, j) => {
               const isLast = j === (section.closingParagraphs?.length ?? 0) - 1;
-              return isLast ? (
+              return isLast && section.emphasizeLastClosing ? (
                 <div key={j} className="my-10 py-8 border-y border-gray-200 text-center">
                   <p className="text-[#0a0a0a] leading-snug text-xl md:text-2xl font-light tracking-wide uppercase max-w-xl mx-auto">
                     <RichText text={p} />

@@ -391,16 +391,6 @@ return (
           </div>
         ))}
 
-        {content.faqs && content.faqs.length > 0 && (
-          <div className="mb-12">
-            <h2 className="text-2xl font-bold text-[#0a0a0a] mb-6 flex items-center gap-3">
-              <span className="w-1.5 h-6 bg-[#C4922A] rounded-full inline-block" />
-              Frequently Asked Questions
-            </h2>
-            <FaqAccordion faqs={content.faqs} />
-          </div>
-        )}
-
         <TrustBadges />
 
         <div className="mb-12">
@@ -410,6 +400,16 @@ return (
           </h2>
           <Testimonials />
         </div>
+
+        {content.faqs && content.faqs.length > 0 && (
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold text-[#0a0a0a] mb-6 flex items-center gap-3">
+              <span className="w-1.5 h-6 bg-[#C4922A] rounded-full inline-block" />
+              Frequently Asked Questions
+            </h2>
+            <FaqAccordion faqs={content.faqs} />
+          </div>
+        )}
 
 </div>
 

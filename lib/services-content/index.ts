@@ -649,11 +649,12 @@ paragraphs: [
             "Completed land clearing project",
           ],
         },
-        closingParagraphs: [
+                closingParagraphs: [
           "Every property is different. Cedar density, tree size, terrain, access, surrounding vegetation, and your desired finished result all influence how the work should be approached.",
           "At [Grounded Land Services](/), we evaluate the property and your goals before determining the most effective clearing method. Depending on the project, cedar removal may be performed as a dedicated cedar-clearing project or combined with [forestry mulching](/services/forestry-mulching), [land clearing](/services/land-clearing), tree removal, grading, excavation, or [other land services](/services).",
-          "The goal isn't simply to remove cedar  it's to give you back usable, manageable land.",
+          "The goal isn't simply to remove cedar — it's to give you back usable, manageable land.",
         ],
+        emphasizeLastClosing: true,
       },
       {
         heading: "Approaches to Cedar Removal",
