@@ -472,10 +472,10 @@ export default function Home() {
               Serving Central Texas Property Owners 
             </h2>
             <p className="text-[#6e6e73] mb-8 max-w-xl mx-auto">
-              No matter where your property is located, Grounded Land Services travels statewide to provide professional land clearing, forestry mulching, demolition, rock crushing, and site preparation services.
+              Grounded Land Services provides professional land clearing, forestry mulching, excavation, demolition, rock removal, and site preparation throughout Central and South-Central Texas. Our specialized equipment and experience are built for the demanding terrain and vegetation found across the Austin, Hill Country, and San Antonio corridor.
             </p>
             <div className="flex flex-wrap justify-center gap-2 mb-8 max-w-3xl mx-auto">
-              {["Austin", "San Antonio", "Houston", "Dallas", "Marble Falls", "Fredericksburg", "Dripping Springs", "Kerrville", "Georgetown", "Round Rock", "Bastrop", "Waco"].map((city) => (
+              {["Austin", "San Antonio", "Bertram", "Luling", "Marble Falls", "Fredericksburg", "Dripping Springs", "Kerrville", "Georgetown", "Round Rock", "Bastrop", "Waco"].map((city) => (
                 <Link key={city} href="/service-areas" className="px-3 py-1.5 rounded-full bg-[#f5f5f7] text-[#1d1d1f] text-sm hover:bg-gray-200 transition-colors">
                   {city}
                 </Link>

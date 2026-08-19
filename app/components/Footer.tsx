@@ -106,7 +106,7 @@ export default function Footer() {
             />
           </Link>
           <p className="text-white/45 text-sm leading-relaxed mb-6">
-            Premier land clearing and site development across Texas. Transforming raw acreage into functional, high-value assets.
+            Premier land clearing and site development throughout Central Texas. Transforming raw acreage into functional, high-value assets.
           </p>
           {/* Socials */}
           <div className="flex gap-3">

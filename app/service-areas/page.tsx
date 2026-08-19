@@ -41,12 +41,16 @@ export default function ServiceAreasPage() {
         <div className="max-w-7xl mx-auto">
           <ScrollReveal>
             <div className="max-w-2xl mb-10">
-              <p className="section-label mb-3">Texas Coverage</p>
+              <p className="section-label mb-3">Central & South Central Texas Coverage</p>
               <h2 className="text-3xl font-bold text-[#0a0a0a] mb-4">
-                We Travel to Where Your Land Needs Us
+                We Go Where the Work Takes Us
               </h2>
               <p className="text-[#6e6e73] leading-relaxed">
-                Grounded Land Services operates across Texas — from the Hill Country and Central Texas to Houston, Dallas, and beyond. Don&apos;t see your city? Give us a call. We may still be able to help.
+                Grounded Land Services serves Central and South-Central Texas, from the Austin metro and Hill Country to the San Antonio corridor. Don't see your city? Give us a call at{" "}
+                <a href="tel:5125716700" className="font-semibold text-[#C4922A] hover:text-amber-600 transition-colors">
+                  (512) 571-6700
+                </a>{" "}
+                — we may still be able to help.
               </p>
             </div>
           </ScrollReveal>
