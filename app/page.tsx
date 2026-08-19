@@ -472,7 +472,31 @@ export default function Home() {
               Serving Central Texas Property Owners 
             </h2>
             <p className="text-[#6e6e73] mb-8 max-w-xl mx-auto">
-              Grounded Land Services provides professional land clearing, forestry mulching, excavation, demolition, rock removal, and site preparation throughout Central and South-Central Texas. Our specialized equipment and experience are built for the demanding terrain and vegetation found across the Austin, Hill Country, and San Antonio corridor.
+              Grounded Land Services provides professional{" "}
+              <Link href="/services/land-clearing" className="text-[#C4922A] hover:text-amber-600 font-medium transition-colors">
+                land clearing
+              </Link>
+              ,{" "}
+              <Link href="/services/forestry-mulching" className="text-[#C4922A] hover:text-amber-600 font-medium transition-colors">
+                forestry mulching
+              </Link>
+              ,{" "}
+              <Link href="/services/dirt-work-grading" className="text-[#C4922A] hover:text-amber-600 font-medium transition-colors">
+                excavation
+              </Link>
+              ,{" "}
+              <Link href="/services/demolition" className="text-[#C4922A] hover:text-amber-600 font-medium transition-colors">
+                demolition
+              </Link>
+              ,{" "}
+              <Link href="/services/rock-removal" className="text-[#C4922A] hover:text-amber-600 font-medium transition-colors">
+                rock removal
+              </Link>
+              , and{" "}
+              <Link href="/services/site-preparation" className="text-[#C4922A] hover:text-amber-600 font-medium transition-colors">
+                site preparation
+              </Link>{" "}
+              throughout Central and South-Central Texas. Our specialized equipment and experience are built for the demanding terrain and vegetation found across the Austin, Hill Country, and San Antonio corridor.
             </p>
             <div className="flex flex-wrap justify-center gap-2 mb-8 max-w-3xl mx-auto">
               {["Austin", "San Antonio", "Bertram", "Luling", "Marble Falls", "Fredericksburg", "Dripping Springs", "Kerrville", "Georgetown", "Round Rock", "Bastrop", "Waco"].map((city) => (
