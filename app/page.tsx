@@ -335,7 +335,7 @@ export default function Home() {
                 animation="reveal"
                 delay={([0, 100, 200, 300, 400, 500] as const)[i]}
               >
-                <Link href={`/services#${service.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`} className="group block rounded-2xl overflow-hidden bg-white card-hover">
+                <Link href={`/services/${service.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`} className="group block rounded-2xl overflow-hidden bg-white card-hover">
                   <div className="relative h-52 overflow-hidden">
                     <Image
                       src={service.img}
@@ -366,6 +366,7 @@ export default function Home() {
           alt="Grounded Land Services CAT excavator on cleared Texas land"
           fill
           className="object-cover"
+          style={{ objectPosition: "center 67%" }}
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
@@ -379,8 +380,8 @@ export default function Home() {
               <p className="text-white/70 text-lg max-w-md mb-8 leading-relaxed">
                 Our fleet of CAT excavators and high-flow mulching heads handles the toughest terrain Texas has to offer.
               </p>
-              <Link href="/gallery" className="btn-ghost">
-                View Our Work →
+              <Link href="/equipment" className="btn-ghost">
+                View Our Equipment →
               </Link>
             </ScrollReveal>
           </div>
