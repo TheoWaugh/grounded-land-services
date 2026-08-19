@@ -1130,45 +1130,226 @@ paragraphs: [
     pricing: { range: "$2,000 – $5,000+", unit: "per acre", note: "Pricing depends on rock density, depth, and cactus coverage across the property." },
   },
 
-  "rock-crushing": {
+    "rock-crushing": {
     title: "Rock Crushing",
-    metaDescription: "Professional mobile rock crushing in Texas — turn on-site limestone into usable aggregate for driveways, roads, and building pads.",
+    metaDescription: "Central & South-Central Texas rock crushing — turn on-site limestone and excavated rock into usable aggregate for driveways, roads, and building pads.",
     icon: "⛏️",
     heroImage: "/images/official/rock-crushing.jpeg",
-    intro: "Central Texas is built on limestone, and that rock doesn't have to be a liability. Mobile rock crushing processes excavated stone directly on your property into reusable aggregate — cutting hauling costs, reducing waste, and producing quality material for driveways, ranch roads, and building pads.",
+                intro: "Break Down Rock. Improve Your Land. Put It to Work. Grounded Land Services provides rock crushing and rock processing for properties across [Central and South-Central Texas](/service-areas). We can crush rock where it sits to improve pasture and usable acreage, or relocate suitable loose rock to driveways, access roads, and other areas where the material can be put to work.",
     sections: [
-      {
-        heading: "Turning Rock Into a Resource",
+                  
+              {
+        heading: "Rock Crushing & In-Place Rock Processing",
         paragraphs: [
-          "Instead of paying to haul unwanted rock off-site and separately paying to import gravel or base material, rock crushing does both jobs at once. Limestone, fieldstone, and even demolition concrete can be processed into a usable aggregate right where it's needed.",
-          "This is especially valuable on large acreage or ranch properties, where hauling costs for both removal and importing material can add up quickly across a big project.",
+          "Rock can be one of the biggest obstacles to improving a property. Exposed limestone, shallow rock, and loose material left behind after [land clearing](/services/land-clearing) or [rock removal](/services/rock-cactus-removal) can make pastures harder to maintain, limit access, and create challenges for [driveways](/services/gravel-driveways-roads) and other improvements.",
+          "Grounded Land Services uses specialized rock-crushing and rock-breaking attachments to process suitable rock directly on your property. Depending on the material, location, and desired result, rock can be crushed where it sits, relocated and processed where it is needed, or incorporated into a larger [land improvement project](/services).",
         ],
+        scenarios: [
+          { icon: "🪨", title: "Crush Rock Where It Sits", description: "When exposed or shallow rock is interfering with pasture or usable acreage, we can process suitable material in place. This can help break down rocky areas and make the property more manageable without requiring every piece of rock to be hauled away." },
+          { icon: "🚜", title: "Relocate & Crush Loose Rock", description: "Land clearing and rock removal can leave loose rock scattered across a property. When suitable, that material can be gathered and relocated to a planned driveway, access road, or other improvement area before being crushed and processed." },
+          { icon: "♻️", title: "Turn Existing Rock Into a Resource", description: "Instead of automatically hauling suitable rock off the property, we can look for opportunities to put that material to work. Processed rock may be useful for driveways, ranch roads, access routes, work areas, and other property improvements." },
+          { icon: "🏗️", title: "Part of a Larger Land Improvement Project", description: "Rock crushing can be incorporated into land clearing, excavation, rock removal, grading, and site preparation projects. By addressing rock as part of the overall project, property owners can work toward a more accessible, manageable, and usable property." },
+        ],
+        iconCardsColumns: 2,
+        note: {
+          text: "Have rock in the way or rock that could be put to work?",
+          linkLabel: "Get a Quote",
+          href: "/contact?service=Rock%20Crushing#quote",
+        },
+      },
+          {
+        heading: "What We Can Crush & Process",
+        paragraphs: [
+          "Central and South-Central Texas properties commonly contain limestone, caliche, and other rocky material that can create challenges during land clearing, excavation, pasture improvement, and road construction.",
+          "The type, size, hardness, location, and condition of the rock all affect how it can be processed. We evaluate the material and your property's needs to determine the most appropriate approach.",
+        ],
+        iconCards: [
+          { icon: "🪨", title: "Limestone", description: "Limestone is common throughout Central Texas and can range from loose surface rock to large, solid formations. Depending on the material and project, suitable limestone can be crushed or broken down to improve the property or provide usable material for other improvements." },
+          { icon: "🧱", title: "Caliche", description: "Caliche is common across much of Central and South-Central Texas and is frequently encountered during excavation, road work, and property improvements. Suitable caliche can be processed for applications such as driveways, ranch roads, and other site improvements." },
+          { icon: "📦", title: "Loose & Scattered Rock", description: "Land clearing and rock removal can leave loose rock scattered throughout a property. Suitable material can sometimes be gathered, relocated, and processed where it is needed instead of being hauled away." },
+          { icon: "🗿", title: "Large & Oversized Rock", description: "Large rocks that interfere with pasture, access, construction, or other property improvements can be broken down using the appropriate equipment and approach for the material." },
+          { icon: "🛤️", title: "Existing Road Material", description: "Rock and oversized material that has surfaced or accumulated within an existing ranch or access road may be processed as part of a road rejuvenation project, helping make better use of material already present in the road." },
+          { icon: "🔍", title: "Material Evaluation", description: "Not every rock is suitable for every application or processing method. We consider the material, surrounding ground conditions, site access, desired result, and intended use before determining the best approach." },
+        ],
+        iconCardsColumns: 3,
+      },
+        {
+        heading: "Rock Crushing for Pasture & Property Improvement",
+        paragraphs: [
+          "Rocky ground can make pastures and acreage difficult to maintain, limit equipment access, and reduce the amount of land that can be practically used. When rock is exposed or sitting near the surface, crushing and processing it in place can be an effective part of improving the property.",
+        ],
+                scenarios: [
+          { icon: "🌾", title: "Improve Usable Acreage", description: "Processing suitable surface and shallow rock can help make rocky areas more manageable and create more usable ground across the property." },
+          { icon: "🚜", title: "Improve Pasture Access", description: "Rocky areas can make it difficult for tractors, trucks, mowers, and other equipment to move across a property. Processing problematic rock can help improve access and make routine pasture maintenance easier." },
+          { icon: "🪨", title: "Make Rocky Ground More Manageable", description: "Rather than leaving exposed rock scattered throughout a pasture or acreage, suitable material can be processed in place to help create a more consistent and manageable surface." },
+          { icon: "🚧", title: "Reduce Obstacles During Land Management", description: "Large and shallow rocks can interfere with mowing, grading, brush management, fencing, and other property maintenance activities. Processing these obstacles can help make future land management more practical." },
+          { icon: "♻️", title: "Reuse Material Where It Makes Sense", description: "Rock processed during pasture improvement doesn't always need to be hauled away. Where appropriate, the resulting material can remain on the property or be incorporated into nearby improvements such as roads, driveways, or work areas." },
+          { icon: "🐄", title: "Improve the Property Without Removing Everything", description: "Not every rock needs to be excavated, loaded, and hauled away. In some situations, processing rock where it sits can be a more practical approach to improving the property while making use of material already present." },
+        ],
+        note: {
+          text: "Have rocky pasture or acreage that's difficult to use?",
+          linkLabel: "Get a Quote",
+          href: "/contact?service=Rock%20Crushing#quote",
+        },
       },
       {
+        subheading: "Rock Uncovered During Land Clearing?",
+        paragraphs: [
+          "Land clearing and excavation can uncover significant amounts of rock that may otherwise need to be moved or hauled away. When the material is suitable for crushing, processing it on-site can provide an opportunity to reuse that rock for your property's own improvements.",
+        ],
+        note: {
+          text: "",
+          linkLabel: "Get a Quote",
+          href: "/contact?service=Rock%20Crushing#quote",
+        },
+      },
+    
+            {
         heading: "Common Applications",
-        list: [
-          "Ranch and private roads", "Driveway base material",
-          "Building pad preparation", "Drainage and culvert backfill",
-          "Parking area surfacing", "Erosion control projects",
+        paragraphs: [
+          "Rock crushing and in-place rock processing can support a variety of property and land improvement projects. Depending on the material, location, and desired result, suitable rock can be processed where it sits or relocated to an area where it can be put to work.",
+        ],
+        iconCards: [
+          { icon: "🛣️", title: "Driveways", description: "Loose rock recovered during land clearing or rock removal can potentially be relocated to a planned driveway and processed in place. This gives property owners an opportunity to put suitable material already on their land toward a new driveway or access route. [Explore Driveways](/services/gravel-driveways-roads)" },
+          { icon: "🐄", title: "Ranch & Access Roads", description: "Processed rock can be used to improve ranch roads, internal access routes, and equipment paths across large properties. Existing rock can sometimes be processed where it is already located or moved to areas that need improvement. [Explore ATV Trails](/services/atv-trail-creation)" },
+          { icon: "🔄", title: "Road Rejuvenation", description: "Existing ranch and access roads can develop exposed rock, oversized material, and rough sections over time. Rock processing can help break down problematic material and rework existing road surfaces using material already present in the road. [Explore Driveways](/services/gravel-driveways-roads)" },
+          { icon: "🏗️", title: "Building & Construction Areas", description: "Rock encountered during site development can be processed as part of preparing areas for buildings, shops, barns, or other structures. Processing suitable material can help address rock that would otherwise interfere with site preparation. [Explore Site Preparation](/services/site-preparation)" },
+                    { icon: "🚜", title: "Work & Equipment Areas", description: "Processed rock can be used to improve areas where trucks, trailers, tractors, and other equipment regularly travel or operate, creating more practical surfaces for everyday property use. [Explore Rock & Cactus Removal](/services/rock-cactus-removal)" },
+          { icon: "📐", title: "Site Preparation", description: "Rock processing can complement land clearing, excavation, grading, and site preparation when rock is encountered during a larger project. Addressing the rock as part of the overall work can help prepare the property for its next use. [Explore Site Preparation](/services/site-preparation)" },
+        ],
+        iconCardsColumns: 3,
+        note: {
+          text: "Have rock that needs to be moved, processed, or put to work?",
+          linkLabel: "Get a Quote",
+          href: "/contact?service=Rock%20Crushing#quote",
+        },
+      },
+        {
+        heading: "Our Rock Crushing Process",
+        paragraphs: [
+          "Every property and rock situation is different. We evaluate the material, where it is located, and what you want to accomplish before determining the best way to process it.",
+        ],
+        steps: [
+          { title: "Evaluate the Property", description: "We assess the type, size, location, and amount of rock, along with site access and the desired result. From there, we determine the most appropriate equipment and approach for the project." },
+          { title: "Crush or Break the Rock", description: "Depending on the material and project, we can use the FAE rock crusher on our Cat 275, an Epiroc drum cutter on our Cat 323, or a hydraulic hammer to break down larger or harder rock." },
+          { title: "Rework & Put the Material to Work", description: "When loose rock needs to be moved, we can relocate it to a planned driveway, road, or other improvement area before processing. Suitable material can then be reworked in place or incorporated into the project, while rock processed in place can help improve pasture, access, and overall property usability." },
+        ],
+        ctaButton: { label: "Get a Quote", href: "/contact?service=Rock%20Crushing#quote" },
+      },
+            {
+        heading: "Rock Crushing vs. Hauling Rock Away",
+        paragraphs: [
+          "When rock is uncovered during land clearing, excavation, or rock removal, property owners often have a choice: haul the material away and bring in new aggregate, or find a way to reuse suitable rock already on the property. In the right situation, processing existing rock can provide a practical alternative to removing a material you may already have a use for.",
+        ],
+        comparison: {
+          left: {
+            heading: "Process Existing Rock",
+            list: [
+              "Reuse material already on the property",
+              "Potentially reduce hauling",
+              "Material can stay on-site",
+              "Can improve rocky areas in place",
+            ],
+          },
+          right: {
+            heading: "Haul Rock Away & Import Material",
+            list: [
+              "Remove existing material",
+              "Pay for hauling & disposal",
+              "Purchase and haul in new aggregate",
+              "May require additional site work",
+            ],
+          },
+        },
+        closingParagraphs: [
+          "Rock crushing isn't the right solution for every project. The quantity and type of rock, site access, hauling distance, desired end use, and overall project requirements all need to be considered. We evaluate these factors before recommending an approach.",
         ],
       },
       {
-        heading: "Our Rock Crushing Process",
-        steps: [
-          { title: "Material Assessment", description: "We evaluate rock type, volume, and your intended use to plan the right approach." },
-          { title: "Excavation (if needed)", description: "Large rock or exposed limestone is excavated ahead of processing." },
-          { title: "On-Site Crushing", description: "Rock is processed into aggregate sized appropriately for your project." },
-          { title: "Placement", description: "Finished aggregate is spread or stockpiled exactly where you need it." },
+        subheading: "Is Rock Crushing Right for Your Property?",
+        paragraphs: [
+          "If you already have rock on-site, the best solution may be to process and reuse it rather than automatically hauling it away. Grounded Land Services can evaluate the material and project conditions to help determine whether in-place rock processing makes sense.",
+        ],
+        note: {
+          text: "",
+          linkLabel: "Get a Quote",
+          href: "/contact?service=Rock%20Crushing#quote",
+        },
+      },
+            {
+        heading: "Rock Crushing for Central Texas Properties",
+        paragraphs: [
+          "Central Texas sits on some of the most limestone-heavy geology in the state, which means rock is a fact of life for property owners throughout the Austin metro, Texas Hill Country, and the San Antonio corridor. Rather than treating that limestone as an obstacle, on-site crushing turns it into a usable resource for roads, pads, and driveways.",
+          "We provide rock crushing throughout Central and South-Central Texas, including properties across the Austin, Hill Country, and San Antonio corridor.",
+        ],
+        listIntro: "Rock crushing is available in cities including:",
+        list: [
+          { label: "Austin", href: "/service-areas/austin/rock-crushing" },
+          { label: "Bee Cave", href: "/service-areas/bee-cave/rock-crushing" },
+          { label: "Bertram", href: "/service-areas/bertram/rock-crushing" },
+          { label: "Burnet", href: "/service-areas/burnet/rock-crushing" },
+          { label: "Dripping Springs", href: "/service-areas/dripping-springs/rock-crushing" },
+          { label: "Fredericksburg", href: "/service-areas/fredericksburg/rock-crushing" },
+          { label: "Georgetown", href: "/service-areas/georgetown/rock-crushing" },
+          { label: "Johnson City", href: "/service-areas/johnson-city/rock-crushing" },
+          { label: "Kerrville", href: "/service-areas/kerrville/rock-crushing" },
+          { label: "Leander", href: "/service-areas/leander/rock-crushing" },
+          { label: "Liberty Hill", href: "/service-areas/liberty-hill/rock-crushing" },
+          { label: "Marble Falls", href: "/service-areas/marble-falls/rock-crushing" },
+          { label: "New Braunfels", href: "/service-areas/new-braunfels/rock-crushing" },
+          { label: "Round Rock", href: "/service-areas/round-rock/rock-crushing" },
+          { label: "San Marcos", href: "/service-areas/san-marcos/rock-crushing" },
+        ],
+                listColumns: 4,
+        areaMapQuery: "Central Texas",
+        note: {
+          text: "Don't see your city? Check out our Service Areas page or give us a call.",
+          linkLabel: "View Service Areas",
+          href: "/service-areas",
+        },
+      },
+      {
+        heading: "Related Services",
+        relatedServices: [
+          { label: "Traditional Land Clearing", href: "/services/land-clearing" },
+          { label: "Site Preparation", href: "/services/site-preparation" },
+          { label: "Dirt Work & Grading", href: "/services/dirt-work-grading" },
+          { label: "Gravel Driveways & Roads", href: "/services/gravel-driveways-roads" },
+          { label: "Rock & Cactus Removal", href: "/services/rock-cactus-removal" },
+          { label: "Demolition", href: "/services/demolition" },
+        ],
+      },
+      {
+        heading: "Why Choose Grounded Land Services?",
+        paragraphs: [
+          "Choosing the right contractor can make all the difference in how your property looks today — and for years to come. At [Grounded Land Services](/), we believe land clearing isn't just about clearing land; it's about leaving your property in better condition than we found it. From the equipment we operate to the attention we give every project, our goal is to deliver results that are clean, professional, and built to last.",
+          "From your first phone call to the final walkthrough, we're committed to providing honest communication, dependable scheduling, and quality workmanship. We show up prepared, treat your property with respect, and stand behind the work we perform.",
+          "When you hire Grounded Land Services, you're not just hiring a land clearing contractor — you're choosing a company that takes pride in leaving your land cleaner, healthier, and ready for whatever comes next.",
+        ],
+        media: [
+          { type: "image", src: "/images/service-pics/why-choose-us.jpeg", alt: "Why choose Grounded Land Services" },
         ],
       },
     ],
-    faqs: [
-      { question: "Is rock crushing cheaper than hauling rock away?", answer: "In most cases, yes — it eliminates disposal and importing costs by reusing material already on-site." },
-      { question: "Can you crush concrete from demolition too?", answer: "Yes, concrete, masonry, and similar demolition material can often be processed the same way." },
-      { question: "What can the finished aggregate be used for?", answer: "Driveways, ranch roads, building pads, drainage projects, and general site preparation." },
-      { question: "How long does a rock crushing project take?", answer: "Smaller projects can be completed in a single day; larger volumes may take several days depending on scope." },
+        faqs: [
+      { question: "What is rock crushing?", answer: "Rock crushing is the process of breaking down suitable rock into smaller, more manageable material. Grounded Land Services performs in-place rock crushing and rock processing as part of property improvement, land clearing, road work, and other projects." },
+      { question: "Can you crush rock where it sits?", answer: "Yes. When conditions are suitable, we can process rock where it is located. This can be useful for exposed or shallow rock that is interfering with pasture, access, or other areas of the property." },
+      { question: "Can you move loose rock and crush it somewhere else?", answer: "Yes. Loose rock uncovered during land clearing or rock removal can sometimes be gathered and relocated to a planned driveway, access road, or other improvement area before being processed." },
+      { question: "Can crushed rock be used for a driveway?", answer: "Potentially. If the material is suitable and the project conditions allow, rock already on the property can be relocated and processed for use in a driveway or access route. The suitability of the finished material depends on the rock and the requirements of the project.", link: { label: "Gravel Driveways & Roads", href: "/services/gravel-driveways-roads" } },
+      { question: "Can you crush limestone?", answer: "Yes. Limestone is common throughout Central Texas and can be processed depending on its size, hardness, location, and the desired result." },
+      { question: "Can you crush caliche?", answer: "Suitable caliche can be processed depending on its condition and the intended application. Caliche is common throughout Central and South-Central Texas and can be encountered during excavation, road work, and property improvements." },
+      { question: "Can rock crushing improve a pasture?", answer: "Yes. Processing suitable exposed or shallow rock can help make rocky pasture more manageable, improve equipment access, and reduce obstacles that interfere with mowing and other property maintenance." },
+      { question: "Can you rejuvenate an existing ranch road?", answer: "Yes. Rock processing can be incorporated into road rejuvenation projects where oversized rock, exposed rock, or rough material is affecting an existing ranch or access road. The appropriate approach depends on the condition of the road and the material present." },
+      { question: "Is rock crushing cheaper than hauling rock away?", answer: "It can be, but it depends on the project. The amount and type of rock, hauling distance, site access, equipment requirements, and how the material will be reused all affect the overall cost. We evaluate these factors before recommending an approach." },
+      { question: "Can rock from land clearing be reused?", answer: "In many cases, suitable rock uncovered during land clearing can potentially be processed and reused on the property. Depending on the project, it may be used for driveways, access roads, work areas, or other improvements.", link: { label: "Traditional Land Clearing", href: "/services/land-clearing" } },
+      { question: "What equipment do you use for rock crushing?", answer: "Grounded Land Services uses specialized attachments based on the rock and the desired result. Our equipment can include an FAE rock crusher on a Cat 275, an Epiroc drum cutter on a Cat 323, or a hydraulic hammer for larger or harder rock.", link: { label: "View Our Equipment", href: "/equipment" } },
+      { question: "Do you haul the rock away after crushing?", answer: "Not necessarily. One of the advantages of in-place rock processing is the ability to reuse suitable material on the property. Depending on the project, processed material can remain in place, be reworked, or be relocated to another area of the property." },
+      { question: "Can you crush large rocks?", answer: "Large rocks can often be broken down using the appropriate equipment, but the best approach depends on the rock's size, hardness, location, and surrounding conditions." },
+      { question: "How much does rock crushing cost?", answer: "Rock crushing costs vary depending on the amount and type of rock, site conditions, equipment requirements, access, and the desired result. Because every property is different, we evaluate the project before providing a quote." },
+      { question: "Do you offer rock crushing as part of land clearing?", answer: "Yes. Rock crushing and processing can be incorporated into larger land clearing, excavation, rock removal, grading, and site preparation projects when suitable rock is encountered.", link: { label: "Site Preparation", href: "/services/site-preparation" } },
+      { question: "Where do you provide rock crushing services?", answer: "Grounded Land Services provides rock crushing and in-place rock processing across Central and South-Central Texas, including the Austin area, Texas Hill Country, and surrounding communities within our service area.", link: { label: "Request a Free Quote", href: "/contact?service=Rock%20Crushing#quote" } },
     ],
-pricing: { range: "$3,000 – $4,000+", unit: "per day", note: "Pricing depends on rock volume, depth, and the amount of aggregate being produced." },
+    pricing: { range: "$3,000 – $4,000+", unit: "per day", note: "Pricing depends on rock volume, depth, and the amount of aggregate being produced." },
   },
   "tree-pile-shredding": {
     title: "Tree Pile Shredding",

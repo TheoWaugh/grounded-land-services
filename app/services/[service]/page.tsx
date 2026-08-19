@@ -324,7 +324,7 @@ const content = (
                       {card.icon}
                     </div>
                     <h3 className="font-bold text-[#0a0a0a] mb-1.5">{card.title}</h3>
-                    <p className="text-sm leading-relaxed text-[#6e6e73]">{card.description}</p>
+                    <p className="text-sm leading-relaxed text-[#6e6e73]"><RichText text={card.description} /></p>
                   </div>
                 ))}
               </div>
