@@ -17,6 +17,11 @@ export default function ServiceMedia({ items }: { items: ServiceMediaItem[] }) {
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
+              {item.caption && (
+                <span className="absolute top-3 left-3 px-2.5 py-1 bg-black/70 text-white text-xs font-semibold rounded-full">
+                  {item.caption}
+                </span>
+              )}
             </div>
           ) : (
             <div className="relative w-full aspect-video mx-auto bg-black">
@@ -29,7 +34,7 @@ export default function ServiceMedia({ items }: { items: ServiceMediaItem[] }) {
               />
             </div>
           )}
-          {item.caption && (
+          {item.caption && item.type !== "image" && (
             <figcaption className="px-3 py-2 text-xs text-[#6e6e73] bg-[#f9f9f9]">
               {item.caption}
             </figcaption>

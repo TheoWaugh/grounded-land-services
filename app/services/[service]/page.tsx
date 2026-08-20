@@ -432,6 +432,12 @@ const content = (
                 )}
               </>
             )}
+            {!section.steps && section.loopingVideo && (
+              <LoopingVideo
+                videoId={section.loopingVideo.videoId}
+                caption={section.loopingVideo.caption}
+              />
+            )}
           </div>
         ))}
 

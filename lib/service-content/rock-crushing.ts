@@ -14,6 +14,12 @@ const challengesIntro = facts
     metaDescription: `Professional mobile rock crushing services in ${city}, TX — turn on-site limestone into usable aggregate for roads, driveways, and building pads.`,
     sections: [
       {
+        loopingVideo: {
+          videoId: "dDwjB_BdTiI",
+          caption: "Rock crushing in action",
+        },
+      },
+      {
         heading: `Professional Rock Crushing Services in ${city}, TX`,
         paragraphs: [
           facts?.groundConditions
@@ -72,6 +78,7 @@ const challengesIntro = facts
           "Excavating and hauling this material away is often one of the most expensive parts of a site development project. Mobile rock crushing provides a more efficient solution by converting excavated rock into reusable aggregate, eliminating unnecessary waste while creating materials that can be used throughout the property.",
           `Whether you're building a custom home, developing commercial property, constructing ranch roads, or preparing land for agriculture in ${city}, professional rock crushing helps maximize the value of your existing materials while reducing transportation costs and environmental impact.`,
         ],
+        areaMapQuery: `${city}, Texas`,
       },
       {
         heading: `Why ${city} Properties Benefit from Rock Crushing`,

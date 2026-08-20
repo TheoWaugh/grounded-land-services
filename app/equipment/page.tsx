@@ -18,6 +18,7 @@ interface UsedFor {
 }
 
 interface EquipmentItem {
+  id?: string;
   name: string;
   category: string;
   icon: string;
@@ -94,8 +95,9 @@ const baseMachines: EquipmentItem[] = [
 ];
 
 const attachments: EquipmentItem[] = [
-  {
-    name: "Prinoth M450s-1900 Mulching Head",
+    {
+    id: "prinoth",
+    name: "2025 Prinoth M450s-1900 Mulching Head",
     category: "Forestry Mulcher Attachment",
     icon: "⚙️",
     image: "/images/service-pics/cat-275-pic.jpeg",
@@ -223,7 +225,7 @@ const attachments: EquipmentItem[] = [
 
 function EquipmentCard({ item, index }: { item: EquipmentItem; index: number }) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center border-2 border-[#0a0a0a] rounded-3xl overflow-hidden">
+    <div id={item.id} className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center border-2 border-[#0a0a0a] rounded-3xl overflow-hidden scroll-mt-24">
       <div className={`relative w-full aspect-[4/3] ${index % 2 === 1 ? "md:order-2" : ""}`}>
         <Image
           src={item.image}

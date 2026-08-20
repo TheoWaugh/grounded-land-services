@@ -1135,10 +1135,15 @@ paragraphs: [
     metaDescription: "Central & South-Central Texas rock crushing — turn on-site limestone and excavated rock into usable aggregate for driveways, roads, and building pads.",
     icon: "⛏️",
     heroImage: "/images/official/rock-crushing.jpeg",
-                intro: "Break Down Rock. Improve Your Land. Put It to Work. Grounded Land Services provides rock crushing and rock processing for properties across [Central and South-Central Texas](/service-areas). We can crush rock where it sits to improve pasture and usable acreage, or relocate suitable loose rock to driveways, access roads, and other areas where the material can be put to work.",
-    sections: [
-                  
-              {
+    intro: "Break Down Rock. Improve Your Land. Put It to Work. Grounded Land Services provides rock crushing and rock processing for properties across [Central and South-Central Texas](/service-areas). We can crush rock where it sits to improve pasture and usable acreage, or relocate suitable loose rock to driveways, access roads, and other areas where the material can be put to work.",
+        sections: [
+      {
+        loopingVideo: {
+          videoId: "dDwjB_BdTiI",
+          caption: "Rock crushing in action",
+        },
+      },
+      {
         heading: "Rock Crushing & In-Place Rock Processing",
         paragraphs: [
           "Rock can be one of the biggest obstacles to improving a property. Exposed limestone, shallow rock, and loose material left behind after [land clearing](/services/land-clearing) or [rock removal](/services/rock-cactus-removal) can make pastures harder to maintain, limit access, and create challenges for [driveways](/services/gravel-driveways-roads) and other improvements.",
@@ -1358,35 +1363,219 @@ paragraphs: [
     heroImage: "/images/official/tree-pile-shredding.jpeg",
     intro: "Old brush piles and downed trees from past clearing projects don't have to sit as an eyesore or fire hazard forever. Tree pile shredding processes that accumulated debris into fine mulch directly on-site — no burn piles, no hauling fees, and no lingering cleanup.",
     sections: [
-      {
-        heading: "Why Shred Instead of Burn or Haul",
+              {
+        heading: "What Is Tree Pile Shredding?",
         paragraphs: [
-          "Burning brush piles carries fire risk, air quality concerns, and in many areas requires permits or is restricted seasonally. Hauling large volumes of debris off-site is expensive and time-consuming. Shredding solves both problems at once, converting the pile into a useful, soil-enriching mulch layer right where it sits.",
+          "Tree pile shredding is the process of breaking down accumulated trees, limbs, brush, and other woody debris using specialized [forestry mulching](/equipment#prinoth) equipment. Instead of burning a pile or hauling large amounts of material away, the material is processed into fine, nutrient mulch on-site.",
+          "Tree piles commonly accumulate after land clearing, cedar removal, storm cleanup, right-of-way clearing, or property maintenance. Shredding these piles can reclaim space, improve the appearance of the property, and make the cleared area easier to use and maintain.",
         ],
+        compareSlider: {
+          beforeSrc: "/images/service-pics/tree-pile-shredding-before.JPEG",
+          beforeLabel: "Before",
+          afterSrc: "/images/service-pics/tree-pile-shredding-after.JPG",
+          afterLabel: "After",
+        },
+      },
+            {
+        heading: "Tree Pile Shredding vs. Burning",
+        paragraphs: [
+          "Once trees and woody debris have been piled, property owners generally have two common ways to deal with the material: shred or mulch the pile on-site, or burn it when conditions allow. Each approach has different considerations depending on your property, access, desired finished condition, and whether you want the material removed afterward.",
+        ],
+                comparison: {
+          left: {
+            heading: "🌲 Shredding / Mulching",
+            list: [
+              "Processes trees and woody debris into fine mulch",
+              "No open fire required",
+              "Can be combined with haul-off if you want the material removed",
+              "Provides more control over when the pile is processed",
+              "Can reclaim the area without waiting for a burn window",
+            ],
+            image: "/images/service-pics/choose-shredding.JPG",
+            imageAlt: "Tree pile shredding example",
+          },
+          right: {
+            heading: "🔥 Burning",
+            list: [
+              "Reduces woody debris through controlled burning",
+              "Requires suitable weather and burn conditions",
+              "Leaves ash and potentially partially burned material",
+              "Depends on burn restrictions and conditions",
+              "Smoke, wind, and surrounding vegetation must be considered",
+            ],
+            image: "/images/service-pics/choose-burning.jpeg",
+            imageAlt: "Controlled burning example",
+          },
+        },
       },
       {
-        heading: "Great For",
-        list: [
-          "Old clearing debris piles", "Storm damage cleanup",
-          "Fallen or dead trees", "Overgrown brush accumulations",
-          "Pre-construction site cleanup", "Fire-hazard reduction",
+        subheading: "Which Option Is Right for Your Tree Pile?",
+        paragraphs: [
+          "Shredding or mulching is often the better choice when you want a controlled cleanup without an open fire, or when you want the processed material left on-site or hauled off. Burning may be appropriate for some rural properties when weather, site conditions, and local requirements allow it.",
+        ],
+        note: {
+          text: "Grounded Land Services can evaluate your tree pile and property conditions to help determine the most practical approach.",
+          linkLabel: "Get a Quote",
+          href: "/contact?service=Tree%20Pile%20Shredding#quote",
+        },
+      },
+            {
+        heading: "Benefits of Tree Pile Shredding",
+        paragraphs: [
+          "Large tree piles can take up valuable space, interfere with property use, and become difficult to manage. Over time, dense piles can also provide shelter for snakes, rodents, and other wildlife, making them an undesirable feature around homes, work areas, and frequently used parts of the property. Shredding the material can help reclaim space, simplify cleanup, and turn bulky woody debris into fine mulch that's easier to manage or haul away.",
+        ],
+        iconCards: [
+          { icon: "🌲", title: "Reclaim Usable Space", description: "Remove large tree piles and open areas for pasture, recreation, access, or future improvements." },
+          { icon: "🚜", title: "Improve Property Access", description: "Clear piles that are blocking roads, trails, driveways, gates, or equipment access." },
+          { icon: "🐍", title: "Reduce Wildlife Habitat", description: "Remove dense piles that can provide shelter for snakes, rodents, and other unwanted wildlife." },
+          { icon: "🧹", title: "Clean Up Cleared Land", description: "Process leftover trees and brush from land clearing, cedar removal, or property maintenance." },
+          { icon: "🔥", title: "Avoid Open Burning", description: "Deal with accumulated woody debris without creating an active burn pile on your property." },
+          { icon: "🏡", title: "Improve Property Appearance", description: "Remove large, unsightly piles and create a cleaner, more organized property." },
+        ],
+        iconCardsColumns: 3,
+                media: [
+          { type: "image", src: "/images/service-pics/shredding-before.JPG", alt: "Before tree pile shredding", caption: "Before" },
+          { type: "image", src: "/images/service-pics/shredding-after.JPG", alt: "After tree pile shredding", caption: "After" },
         ],
       },
-      {
+            {
+        heading: "When You Should Choose Tree Pile Shredding",
+        paragraphs: [
+          "Tree pile shredding is a practical option when brush piles and woody debris are taking up valuable space or getting in the way of using your property. Whether the pile came from a recent clearing project, storm damage, cedar removal, or years of accumulated debris, shredding can help you regain control of the area.",
+        ],
+        scenarios: [
+          { icon: "🌲", title: "You Have Large Tree Piles", description: "You've cleared trees or brush and now have large piles that need to be processed." },
+          { icon: "🏡", title: "You Want to Reclaim the Area", description: "The pile is occupying space you'd rather use for your home, pasture, recreation, access, or future improvements." },
+          { icon: "🔥", title: "You Don't Want to Burn", description: "You'd prefer to avoid an open burn and have the material processed with equipment instead." },
+          { icon: "🐍", title: "The Pile Has Become a Wildlife Shelter", description: "Dense, undisturbed piles can attract snakes, rodents, and other wildlife. Removing the pile can eliminate that shelter." },
+          { icon: "🚜", title: "The Pile Is Blocking Access", description: "Tree piles are interfering with driveways, roads, trails, gates, or equipment access." },
+          { icon: "🌳", title: "You Need to Finish a Clearing Project", description: "You've completed the main clearing work but still need the remaining tree piles processed before moving forward." },
+          { icon: "🌧️", title: "Storm Damage Has Created Debris", description: "Fallen trees and limbs have accumulated into piles that need to be cleaned up and processed." },
+          { icon: "🚛", title: "You Want the Material Removed", description: "The pile can be shredded and hauled off-site when you want the area left as clean and open as possible." },
+        ],
+      },
+            {
         heading: "Our Shredding Process",
         steps: [
           { title: "Pile Assessment", description: "We evaluate pile size, material type, and access for equipment." },
           { title: "On-Site Shredding", description: "High-capacity mulching equipment processes the pile into fine mulch." },
-          { title: "Spreading or Removal", description: "Mulch can be spread on-site or, if you prefer, hauled away." },
+          { title: "Spreading or Removal", description: "Mulch is spread on-site during the process or, if you prefer, hauled away." },
+        ],
+        ctaButton: { label: "Get a Quote", href: "/contact?service=Tree%20Pile%20Shredding#quote" },
+      },
+            {
+        heading: "Tree Pile Shredding Cost Factors",
+        paragraphs: [
+          "The cost of tree pile shredding depends primarily on the amount and type of material, equipment access, and what you want done with the processed debris. Every pile is different, so we evaluate the site and project scope before providing an estimate.",
+        ],
+        iconCards: [
+          { icon: "🌲", title: "Pile Size & Volume", description: "Larger or more densely packed piles require more processing time and equipment." },
+          { icon: "🪵", title: "Material Type", description: "Large trunks, heavy limbs, hardwood trees, and mixed woody debris can affect production and processing time." },
+          { icon: "🚜", title: "Equipment Access", description: "Narrow gates, steep terrain, fences, structures, or other obstacles can make accessing the pile more difficult." },
+          { icon: "🔢", title: "Number of Piles", description: "Multiple piles spread across a property can increase equipment travel and overall production time." },
+          { icon: "🚛", title: "Haul-Off", description: "If you want the mulched material loaded and hauled off-site, transportation and disposal costs will be added to the project." },
+          { icon: "🪨", title: "Rocks & Dirt Mixed Into the Pile", description: "Piles containing rocks, dirt, or other non-woody material may require grappling and sorting before shredding, adding time and equipment costs to the project." },
+        ],
+        iconCardsColumns: 3,
+        ctaButton: { label: "Get a Quote", href: "/contact?service=Tree%20Pile%20Shredding#quote" },
+      },
+            {
+        heading: "Property Types We Serve",
+        paragraphs: [
+          "Tree piles can accumulate on properties of all sizes, whether they're created from land clearing, cedar removal, storm damage, or years of property maintenance. Grounded Land Services provides tree pile shredding for property owners across Central & South-Central Texas.",
+        ],
+        iconCards: [
+          { icon: "🏡", title: "Residential Acreage", description: "Clean up tree piles around homes, acreage, driveways, and frequently used areas." },
+          { icon: "🐄", title: "Ranches & Pastures", description: "Process accumulated woody debris and reclaim space for grazing, access, or property improvements." },
+          { icon: "🌳", title: "Rural & Undeveloped Land", description: "Clear existing tree piles from undeveloped acreage and prepare areas for future use." },
+          { icon: "🦌", title: "Hunting & Recreational Properties", description: "Remove debris piles that interfere with trails, access, hunting areas, and recreational use." },
+          { icon: "🏗️", title: "Construction & Development Sites", description: "Clean up tree piles left from clearing projects before construction, grading, or site preparation." },
+          { icon: "🚧", title: "Roads, Trails & Access Areas", description: "Process piles that are taking up space along roads, trails, driveways, and other access routes." },
+        ],
+        iconCardsColumns: 3,
+      },
+            {
+        heading: "Serving Central Texas Property Owners",
+        paragraphs: [
+          "Grounded Land Services provides tree pile shredding for property owners throughout Central and South-Central Texas. From rural acreage and ranches to residential properties and recently cleared land, we travel throughout the region to help property owners reclaim space and clean up accumulated woody debris.",
+          "Serving property owners throughout the Austin, Hill Country, and San Antonio areas.",
+        ],
+        listIntro: "Find Your Service Area — select your city to see the services available in your area:",
+        list: [
+          { label: "Austin", href: "/service-areas/austin/forestry-mulching" },
+          { label: "Bertram", href: "/service-areas/bertram/forestry-mulching" },
+          { label: "Burnet", href: "/service-areas/burnet/forestry-mulching" },
+          { label: "Dripping Springs", href: "/service-areas/dripping-springs/forestry-mulching" },
+          { label: "Fredericksburg", href: "/service-areas/fredericksburg/forestry-mulching" },
+          { label: "Georgetown", href: "/service-areas/georgetown/forestry-mulching" },
+          { label: "Johnson City", href: "/service-areas/johnson-city/forestry-mulching" },
+          { label: "Kerrville", href: "/service-areas/kerrville/forestry-mulching" },
+          { label: "Leander", href: "/service-areas/leander/forestry-mulching" },
+          { label: "Liberty Hill", href: "/service-areas/liberty-hill/forestry-mulching" },
+          { label: "Marble Falls", href: "/service-areas/marble-falls/forestry-mulching" },
+          { label: "New Braunfels", href: "/service-areas/new-braunfels/forestry-mulching" },
+          { label: "Round Rock", href: "/service-areas/round-rock/forestry-mulching" },
+          { label: "San Marcos", href: "/service-areas/san-marcos/forestry-mulching" },
+          { label: "Spicewood", href: "/service-areas/spicewood/forestry-mulching" },
+        ],
+        listColumns: 4,
+        areaMapQuery: "Central Texas",
+        note: {
+          text: "Don't see your city?",
+          linkLabel: "View Service Areas",
+          href: "/service-areas",
+        },
+      },
+      {
+        heading: "Why Choose Grounded Land Services?",
+        paragraphs: [
+          "Choosing the right contractor can make all the difference in how your property looks today — and for years to come. At [Grounded Land Services](/), we believe land clearing isn't just about clearing land; it's about leaving your property in better condition than we found it. From the equipment we operate to the attention we give every project, our goal is to deliver results that are clean, professional, and built to last.",
+          "From your first phone call to the final walkthrough, we're committed to providing honest communication, dependable scheduling, and quality workmanship. We show up prepared, treat your property with respect, and stand behind the work we perform.",
+          "When you hire Grounded Land Services, you're not just hiring a land clearing contractor — you're choosing a company that takes pride in leaving your land cleaner, healthier, and ready for whatever comes next.",
+        ],
+        media: [
+          { type: "image", src: "/images/service-pics/why-choose-us.jpeg", alt: "Why choose Grounded Land Services" },
+        ],
+      },
+      {
+        heading: "Related Services",
+        relatedServices: [
+          { label: "Traditional Land Clearing", href: "/services/land-clearing" },
+          { label: "Forestry Mulching", href: "/services/forestry-mulching" },
+          { label: "Forestry Mulching Cleanup", href: "/services/forestry-mulching-cleanup" },
+          { label: "Tree & Stump Removal", href: "/services/tree-stump-removal" },
+          { label: "Underbrushing", href: "/services/underbrushing" },
+          { label: "Fence Line Clearing", href: "/services/fence-line-clearing" },
+          { label: "Fire Breaks", href: "/services/fire-breaks" },
+          { label: "Right-of-Way Clearing", href: "/services/right-of-way-clearing" },
+          { label: "Commercial Lot Clearing", href: "/services/commercial-lot-clearing" },
+          { label: "ATV Trail Creation", href: "/services/atv-trail-creation" },
         ],
       },
     ],
-    faqs: [
-      { question: "Do you haul the mulch away after shredding?", answer: "It's up to you — many property owners leave it as a protective ground layer, but we can haul it off if preferred." },
-      { question: "Can you shred large tree trunks?", answer: "Yes, our equipment handles both brush and larger fallen trees." },
-      { question: "Is this cheaper than burning or hauling?", answer: "Usually — it avoids burn permits, hauling fees, and disposal costs in one pass." },
+        faqs: [
+      { question: "What is tree pile shredding?", answer: "Tree pile shredding is the process of breaking down piles of trees, limbs, brush, and other woody debris into fine mulch using specialized [forestry mulching](/services/forestry-mulching) equipment. The processed material can either remain on the property or, depending on the project, be loaded and hauled off." },
+      { question: "What types of tree piles can you shred?", answer: "We can process many types of woody debris, including piles created from land clearing, cedar removal, tree removal, storm cleanup, right-of-way clearing, and property maintenance. The size, composition, and accessibility of the pile will determine the most practical approach." },
+      { question: "Can you shred a large tree pile?", answer: "Yes. Large tree piles can be processed with the appropriate equipment and access. The size and density of the pile, along with the diameter of the trees and amount of material, will affect production time and project cost." },
+      { question: "Can you shred a tree pile and haul it off?", answer: "Yes. Tree piles can be shredded first and then the processed material can be loaded and hauled off-site. This can be a practical option when you want the area left as clean and open as possible." },
+      { question: "Is tree pile shredding the same as forestry mulching?", answer: "Not exactly. Forestry mulching is generally used to process standing vegetation directly on the ground, while tree pile shredding focuses on existing piles of trees and woody debris that have already been cut or accumulated. Although, they both require the same equipment.", link: { label: "Forestry Mulching", href: "/services/forestry-mulching" } },
+      { question: "Is shredding a tree pile better than burning it?", answer: "It depends on the property and your desired finished condition. Shredding provides a controlled, equipment-based way to process the material without an open fire and can also be combined with haul-off. Burning may be appropriate on some properties when weather, site conditions, and local requirements allow it." },
+      { question: "Can you shred a pile with rocks and dirt mixed into it?", answer: "Yes, but piles containing significant amounts of large rocks, dirt, or other non-woody material require grappling and sorting first. Separating those materials can add time and equipment costs to the project and helps ensure the woody material can be processed properly." },
+      { question: "What happens to the material after the pile is shredded?", answer: "That depends on your project. The processed material can remain on-site or be loaded and hauled away. We can discuss the desired finished condition before the work begins." },
+      { question: "Can tree pile shredding remove the entire pile?", answer: "Yes, shredding removes the pile by processing the woody material into fine mulch. If you want the material completely removed, shredding can be combined with haul-off to leave the area substantially cleaner." },
+      { question: "How long does it take to shred a tree pile?", answer: "Production time depends on the pile's size, volume, material, accessibility, and whether additional sorting or haul-off is required. A relatively small pile may be processed quickly, while large or difficult piles can require considerably more time." },
+      { question: "How much does tree pile shredding cost?", answer: "Typically $2,000–$4,000+, but every pile is different. Cost can be affected by pile size, material type, equipment access, number of piles, rocks or dirt mixed into the material, and whether the shredded debris needs to be hauled off." },
+      { question: "Can you shred piles left over from land clearing?", answer: "Yes. Tree pile shredding can be used to clean up woody debris left after land clearing, cedar removal, tree removal, and other vegetation-clearing projects.", link: { label: "Traditional Land Clearing", href: "/services/land-clearing" } },
+      { question: "Can you shred storm-damaged tree piles?", answer: "Yes. Fallen trees and limbs from storms can often be processed once they've been gathered into accessible piles. The material should be evaluated first to determine the safest and most efficient approach." },
+      { question: "Are tree piles a problem for snakes and wildlife?", answer: "Large, dense, undisturbed piles can provide shelter for snakes, rodents, and other wildlife. Removing or processing the pile can eliminate that concentrated shelter area, although it does not guarantee wildlife will leave the surrounding property." },
+      { question: "Can you shred a tree pile near my house or other structures?", answer: "Yes. Piles located near homes, buildings, fences, utilities, or other improvements require careful evaluation. Access, surrounding conditions, pile composition, and equipment clearance will determine whether the work can be performed safely." },
+      { question: "Do I need to move the trees into a pile before you arrive?", answer: "No. If trees and debris are already scattered across the property, we can evaluate whether gathering and piling the material should be included as part of the project. The additional handling required will affect the scope and cost." },
+      { question: "Can tree pile shredding be combined with land clearing?", answer: "Yes. Tree pile shredding can be incorporated into a larger land clearing project, allowing the standing vegetation to be cleared and resulting tree piles to be processed as part of the overall project.", link: { label: "Traditional Land Clearing", href: "/services/land-clearing" } },
+      { question: "Can tree pile shredding be combined with cedar removal?", answer: "Yes. Cedar removal can create substantial amounts of woody debris, particularly on heavily wooded Hill Country properties. Shredding the resulting piles can be an effective way to clean up the property after cedar removal.", link: { label: "Cedar Tree Removal", href: "/services/cedar-tree-removal" } },
+      { question: "What should I do with a tree pile if I don't want to burn it?", answer: "Tree pile shredding is one option. The pile can be processed into fine mulch and either left on-site or combined with haul-off if you want the debris removed from the property." },
+      { question: "How do I get rid of a large tree pile?", answer: "The best approach depends on the size, composition, location, and accessibility of the pile. Options may include shredding, shredding with haul-off, or controlled burning where appropriate. Grounded Land Services can evaluate the pile and recommend the most practical approach.", link: { label: "Request a Free Quote", href: "/contact?service=Tree%20Pile%20Shredding#quote" } },
     ],
-    pricing: { range: "$1,200 – $3,000", unit: "per job", note: "Pricing depends on pile size, material type, and site accessibility." },
+    pricing: { range: "$2,000 – $4,000+", unit: "per job", note: "Pricing depends on pile size, material type, and site accessibility." },
   },
 
   "fence-line-clearing": {
@@ -1396,35 +1585,180 @@ paragraphs: [
     heroImage: "/images/official/fence-line-clearing.jpeg",
     intro: "A fence is only as good as the ground it's built on. Fence line clearing removes brush, overhanging limbs, and encroaching vegetation along your property line, creating a clean, accessible path for new installation or ongoing maintenance of an existing fence.",
     sections: [
-      {
-        heading: "Why Clear Fence Lines",
+            
+        {
+        heading: "What Is Fence Line Clearing?",
         paragraphs: [
-          "Overgrown vegetation along a fence line does more than look messy — it can damage posts and wire, obscure property boundaries, and make routine maintenance or inspection difficult. Clearing that growth protects your investment and keeps boundary lines clearly defined.",
+          "Fence line clearing is the removal of unwanted trees, brush, and vegetation along an existing or planned fence line to create a cleaner, more accessible corridor. It can help expose buried or damaged fence sections, improve access for maintenance, and create a workable path for installing new fencing.",
+          "In Central Texas, fence lines commonly become overgrown with cedar trees, mesquite, brush, vines, and other woody vegetation. Depending on the condition of the fence line and the size of the vegetation, Grounded Land Services can use [forestry mulching](/services/forestry-mulching), [traditional land clearing](/services/land-clearing), or a combination of both to clear the corridor.",
+          "Whether you're maintaining an existing fence or preparing for a new one, the right clearing approach depends on the vegetation, terrain, access, and overall condition of the property.",
+        ],
+        media: [
+          { type: "image", src: "/images/service-pics/fence-line.jpeg", alt: "Fence line clearing project in Central Texas" },
         ],
       },
-      {
-        heading: "Ideal For",
-        list: [
-          "New fence installation prep", "Existing fence maintenance",
-          "Property boundary definition", "Ranch perimeter upkeep",
-          "Easement and right-of-way access",
+                  {
+        heading: "Fence Line Clearing Approaches",
+        paragraphs: [
+          "Not every fence line requires the same type of clearing. Some can be opened efficiently by mulching the existing vegetation, while others require larger trees, stumps, rocks, or other obstacles to be removed. We choose the approach based on the vegetation, terrain, access, and condition of the fence line.",
+        ],
+        comparison: {
+          left: {
+            heading: "Forestry Mulching",
+            paragraphs: [
+              "Best for cedar, mesquite, brush, and smaller trees.",
+              "Forestry mulching is an efficient way to reclaim an overgrown fence corridor without hauling large amounts of vegetation away. Our mulching equipment cuts and processes trees and brush directly on-site, leaving the material as mulch across the cleared area.",
+            ],
+          },
+          right: {
+            heading: "Land Clearing",
+            paragraphs: [
+              "Best for larger trees, stumps, rocks, and heavy vegetation.",
+              "Land clearing is better suited for fence lines with larger obstacles or vegetation that needs to be physically removed. It can clear a more complete corridor when trees, stumps, rocks, or heavy growth are preventing access to the fence line.",
+              
+            ],
+          },
+        },
+        note: {
+          text: "Not sure which approach fits your fence line?",
+          linkLabel: "Get a Quote",
+          href: "/contact?service=Fence%20Line%20Clearing#quote",
+        },
+      },
+            {
+        heading: "Benefits of Fence Line Clearing",
+        paragraphs: [
+          "Keeping your fence line clear makes it easier to access, inspect, maintain, and install. Removing overgrown cedar, mesquite, and brush can also help keep vegetation from interfering and damaging the fence itself.",
+        ],
+        iconCards: [
+          { icon: "🧱", title: "Protect Your Fence", description: "Remove trees and brush that can grow into fence posts, damage wire, or interfere with gates and other fencing components." },
+          { icon: "🌳", title: "Control Brush", description: "Clear overgrown cedar, mesquite, and woody brush that can quickly take over fence lines across Central Texas properties." },
+          { icon: "👀", title: "See Your Property Boundaries", description: "Open up hidden fence lines so posts, wire, gates, and property boundaries are easier to see and inspect." },
+          { icon: "🚜", title: "Create Better Access", description: "Open a clear path along the fence line for equipment, property maintenance, repairs, and routine inspections." },
+          { icon: "🐄", title: "Manage Pastures & Livestock", description: "Keep fence lines accessible for checking boundaries, maintaining pastures, and identifying areas where livestock could get through." },
+          { icon: "🛠️", title: "Prepare for New Fencing", description: "Clear trees, brush, and other obstacles to give fencing crews a more accessible work area for installing or replacing a fence." },
+        ],
+        iconCardsColumns: 3,
+      },
+            {
+        heading: "When You Should Choose Fence Line Clearing",
+        paragraphs: [
+          "Fence line clearing is especially useful for both existing fences and properties being prepared for new fencing. If vegetation or other obstacles are making your fence line difficult to access, it may be time to clear it.",
+        ],
+        scenarios: [
+          { icon: "🌲", title: "Your Fence Line Is Overgrown", description: "Cedar, mesquite, brush, and other vegetation have grown along the fence making it difficult to access or maintain." },
+          { icon: "🔍", title: "You Can't Properly Inspect the Fence", description: "Overgrown vegetation is hiding damaged posts, wire, gates, or sections of fencing that need attention." },
+          { icon: "🛠️", title: "You're Installing a New Fence", description: "Clearing the fence line can provide a cleaner, more accessible work area for installing a new fence and future maintenance." },
+          { icon: "🌳", title: "Trees Are Growing Into the Fence", description: "Larger trees and branches can interfere with posts, wire, and gates or make future fence maintenance more difficult." },
+          { icon: "🚜", title: "You Need Better Property Access", description: "A cleared fence line can provide easier access for equipment, repairs, inspections, and routine property maintenance." },
+          { icon: "🧹", title: "An Old Fence Line Has Been Neglected", description: "Years of vegetation growth have covered or obscured an existing fence, making it difficult to locate, access, or maintain." },
         ],
       },
+    
       {
         heading: "Our Process",
         steps: [
-          { title: "Line Assessment", description: "We walk the fence line to gauge vegetation density and access needs." },
+          { title: "Evaluate Fence Line", description: "We walk the fence line getting measurements and to gauge vegetation density and terrain." },
           { title: "Clearing", description: "Brush, limbs, and undergrowth are cleared to the width your project requires." },
           { title: "Final Walkthrough", description: "We confirm the line is clean and ready for fencing work or ongoing use." },
         ],
       },
+            {
+        heading: "Fence Line Clearing Cost Factors",
+        paragraphs: [
+          "The cost of clearing a fence line depends on the size and condition of the area being cleared. Several factors can affect the equipment, labor, and time required for your project.",
+        ],
+        iconCards: [
+          { icon: "📏", title: "Fence Line Length", description: "Longer fence lines require more time, making total linear footage one of the biggest factors in project cost." },
+          { icon: "🌳", title: "Vegetation Density", description: "Thick cedar, mesquite, brush, and other dense vegetation can take more time to clear than lightly overgrown fence lines." },
+          { icon: "🪵", title: "Tree Size", description: "Larger trees require more time and larger forestry mulchers to remove compared to smaller trees and brush." },
+          { icon: "🚜", title: "Equipment Access", description: "Steep terrain, narrow entrances, rough ground, or limited access can affect which equipment can reach the fence line and how efficiently the work can be completed." },
+          { icon: "🪨", title: "Rocks & Terrain", description: "Rocky ground, uneven terrain, and other site conditions can make clearing more difficult and increase the time required to complete the work." },
+          { icon: "🚛", title: "Fence & Debris Removal", description: "Removing an existing fence, posts, wire, stumps, or other debris can add to the cost of a project, especially when materials need to be collected and hauled away." },
+        ],
+        iconCardsColumns: 3,
+        ctaButton: { label: "Get a Quote", href: "/contact?service=Fence%20Line%20Clearing#quote" },
+      },
+      {
+        heading: "Serving Central Texas Property Owners",
+        paragraphs: [
+          "Grounded Land Services provides fence line clearing for property owners throughout Central and South-Central Texas. From rural acreage and ranches to residential properties, we travel throughout the region to help property owners reclaim boundaries and clean up fence lines.",
+          "Serving property owners throughout the Austin, Hill Country, and San Antonio areas.",
+        ],
+        listIntro: "Find Your Service Area — select your city to see the services available in your area:",
+        list: [
+          { label: "Austin", href: "/service-areas/austin/forestry-mulching" },
+          { label: "Bertram", href: "/service-areas/bertram/forestry-mulching" },
+          { label: "Burnet", href: "/service-areas/burnet/forestry-mulching" },
+          { label: "Dripping Springs", href: "/service-areas/dripping-springs/forestry-mulching" },
+          { label: "Fredericksburg", href: "/service-areas/fredericksburg/forestry-mulching" },
+          { label: "Georgetown", href: "/service-areas/georgetown/forestry-mulching" },
+          { label: "Johnson City", href: "/service-areas/johnson-city/forestry-mulching" },
+          { label: "Kerrville", href: "/service-areas/kerrville/forestry-mulching" },
+          { label: "Leander", href: "/service-areas/leander/forestry-mulching" },
+          { label: "Liberty Hill", href: "/service-areas/liberty-hill/forestry-mulching" },
+          { label: "Marble Falls", href: "/service-areas/marble-falls/forestry-mulching" },
+          { label: "New Braunfels", href: "/service-areas/new-braunfels/forestry-mulching" },
+          { label: "Round Rock", href: "/service-areas/round-rock/forestry-mulching" },
+          { label: "San Marcos", href: "/service-areas/san-marcos/forestry-mulching" },
+          { label: "Spicewood", href: "/service-areas/spicewood/forestry-mulching" },
+        ],
+        listColumns: 4,
+        areaMapQuery: "Central Texas",
+        note: {
+          text: "Don't see your city?",
+          linkLabel: "View Service Areas",
+          href: "/service-areas",
+        },
+      },
+      {
+        heading: "Why Choose Grounded Land Services?",
+        paragraphs: [
+          "Choosing the right contractor can make all the difference in how your property looks today — and for years to come. At [Grounded Land Services](/), we believe land clearing isn't just about clearing land; it's about leaving your property in better condition than we found it. From the equipment we operate to the attention we give every project, our goal is to deliver results that are clean, professional, and built to last.",
+          "From your first phone call to the final walkthrough, we're committed to providing honest communication, dependable scheduling, and quality workmanship. We show up prepared, treat your property with respect, and stand behind the work we perform.",
+          "When you hire Grounded Land Services, you're not just hiring a land clearing contractor — you're choosing a company that takes pride in leaving your land cleaner, healthier, and ready for whatever comes next.",
+        ],
+        media: [
+          { type: "image", src: "/images/service-pics/why-choose-us.jpeg", alt: "Why choose Grounded Land Services" },
+        ],
+      },
+      {
+        heading: "Related Services",
+        relatedServices: [
+          { label: "Traditional Land Clearing", href: "/services/land-clearing" },
+          { label: "Forestry Mulching", href: "/services/forestry-mulching" },
+          { label: "Forestry Mulching Cleanup", href: "/services/forestry-mulching-cleanup" },
+          { label: "Tree & Stump Removal", href: "/services/tree-stump-removal" },
+          { label: "Underbrushing", href: "/services/underbrushing" },
+          { label: "Tree Pile Shredding", href: "/services/tree-pile-shredding" },
+          { label: "Fire Breaks", href: "/services/fire-breaks" },
+          { label: "Right-of-Way Clearing", href: "/services/right-of-way-clearing" },
+          { label: "Commercial Lot Clearing", href: "/services/commercial-lot-clearing" },
+          { label: "ATV Trail Creation", href: "/services/atv-trail-creation" },
+        ],
+      },
     ],
-    faqs: [
-      { question: "How wide do you clear along the fence line?", answer: "It depends on your project — we tailor clearing width to what's needed for installation, equipment access, or maintenance." },
-      { question: "Can you clear an existing fence line without damaging the fence?", answer: "Yes, our operators work carefully around existing fencing and posts." },
-      { question: "Do you handle long ranch perimeters?", answer: "Yes, we regularly clear extended fence lines across large ranch and rural properties." },
+        faqs: [
+      { question: "How much does fence line clearing cost?", answer: "$2,500–$5,000+. Fence line clearing costs vary based on the length of the fence line, vegetation density, tree size, terrain, equipment access, and whether an existing fence or debris needs to be removed. The best way to determine your cost is to have the fence line evaluated." },
+      { question: "How much fence line can you clear in a day?", answer: "Production depends on vegetation density, tree size, terrain, access, and the clearing method used. Lightly overgrown fence lines can typically be cleared much faster than dense cedar, mesquite, or heavily wooded areas." },
+      { question: "Can you clear an existing fence line?", answer: "Yes. We can clear vegetation around existing fences and open up access to posts, wire, gates, and other fencing components. If the existing fence also needs to be removed, that can be included as part of the project." },
+      { question: "Can you remove an old fence?", answer: "Yes. Existing fence posts, wire, and other fencing materials can be removed when included in the scope of work. Fence removal and disposal can affect the overall project cost." },
+      { question: "Can you clear a fence line before a new fence is installed?", answer: "Yes. Clearing the fence line before installation can give fencing crews a cleaner and more accessible area to work in while removing trees, brush, and other obstacles that could interfere with the new fence." },
+      { question: "Do you remove cedar and mesquite along fence lines?", answer: "Yes. Cedar and mesquite are common sources of overgrowth along Central Texas fence lines. We can remove or mulch these and other woody vegetation depending on the site conditions.", link: { label: "Cedar Tree Removal", href: "/services/cedar-tree-removal" } },
+      { question: "Can you clear fence lines on rocky properties?", answer: "Yes. Rocky and uneven terrain can be cleared, although site conditions may affect the equipment required, production rate, and overall cost." },
+      { question: "Do you haul away the vegetation?", answer: "It depends on the clearing method and project requirements. Forestry mulching processes vegetation on-site, while larger trees, stumps, old fencing, or other debris may require removal and hauling." },
+      { question: "Will fence line clearing damage my existing fence?", answer: "We plan the work around existing fencing whenever possible. The condition, location, and accessibility of the fence will be evaluated before determining the appropriate clearing approach." },
+      { question: "Can you clear a fence line without removing the fence?", answer: "Yes. When the existing fence is staying in place, we can work around it to remove unwanted vegetation and improve access to the fence line." },
+      { question: "Do I need to remove the fence before clearing?", answer: "Not necessarily. In many cases, vegetation can be cleared while the existing fence remains in place. However, severely overgrown or damaged fencing may need to be removed depending on the scope of work." },
+      { question: "What is the difference between fence line clearing and forestry mulching?", answer: "Fence line clearing describes what area is being cleared, while forestry mulching is one method used to clear it. Forestry mulching is generally suited for cedar, mesquite, brush, and smaller trees, while larger obstacles may require traditional land clearing.", link: { label: "Forestry Mulching", href: "/services/forestry-mulching" } },
+      { question: "Can you clear a fence line for livestock?", answer: "Yes. Clearing fence lines can improve access for livestock management, fence inspections, repairs, and maintaining pasture boundaries." },
+      { question: "Can you clear a fence line for property access?", answer: "Yes. A cleared fence line can provide an accessible path for equipment, maintenance, inspections, and other property needs." },
+      { question: "Do you clear both sides of a fence?", answer: "The scope can be adjusted to the needs of the property. Fence lines may require clearing on one side, both sides, or a wider area depending on access, vegetation, and the intended use of the cleared space." },
+      { question: "How wide should a fence line be cleared?", answer: "There is no single width that works for every property. The required clearing width depends on the type of fence, vegetation, terrain, equipment access, and whether the area will also be used for maintenance or property access." },
+      { question: "Can you clear fence lines on large ranches?", answer: "Yes. We work on rural properties, ranches, pastures, and larger acreage where long or heavily overgrown fence lines may require specialized equipment and a planned clearing approach." },
+      { question: "How do I get a quote for fence line clearing?", answer: "Contact Grounded Land Services with information about your property and fence line. Photos, approximate fence-line length, location, and details about the vegetation can help us understand the project and determine the next steps.", link: { label: "Request a Free Quote", href: "/contact?service=Fence%20Line%20Clearing#quote" } },
     ],
-    pricing: { range: "$3 – $8", unit: "per linear foot", note: "Pricing depends on vegetation density and clearing width required." },
+    pricing: { range: "$2,500 – $5,000+", unit: "per job", note: "Pricing depends on distance, vegetation density and clearing width required." },
   },
 
   "demolition": {
