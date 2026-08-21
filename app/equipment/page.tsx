@@ -123,8 +123,9 @@ const attachments: EquipmentItem[] = [
       { label: "Forestry Mulching Cleanup", href: "/services/forestry-mulching-cleanup" },
     ],
   },
-  {
-    name: "Bobcat 84\" Soil Conditioner (Harley Rake)",
+    {
+    id: "harley-rake",
+    name: "2025 Bobcat 84\" Soil Conditioner (Harley Rake)",
     category: "High-Flow Attachment",
     icon: "🪨",
     image: "/images/work/harley-rake-pic.jpeg",

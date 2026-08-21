@@ -269,7 +269,31 @@ const content = (
                 </div>
               </div>
             )}
-{section.compareSlider && (
+{section.iconCards && (
+              <div
+                className={`grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2 ${
+                  section.iconCardsColumns === 4
+                    ? "lg:grid-cols-4"
+                    : section.iconCardsColumns === 3
+                    ? "lg:grid-cols-3"
+                    : ""
+                }`}
+              >
+{section.iconCards.map((card) => (
+                  <div
+                    key={card.title}
+                    className="p-5 bg-white border-2 border-[#0a0a0a] rounded-2xl hover:shadow-xl hover:-translate-y-1 transition-all duration-200"
+                  >
+                    <div className="w-12 h-12 rounded-xl bg-[#C4922A] flex items-center justify-center text-2xl mb-4 shadow-sm">
+                      {card.icon}
+                    </div>
+                    <h3 className="font-bold text-[#0a0a0a] mb-1.5">{card.title}</h3>
+                    <p className="text-sm leading-relaxed text-[#6e6e73]"><RichText text={card.description} /></p>
+                  </div>
+                ))}
+              </div>
+            )}
+            {section.compareSlider && (
               <div className="mt-6">
                 <BeforeAfterSlider
                   beforeSrc={section.compareSlider.beforeSrc}
@@ -305,30 +329,6 @@ const content = (
                 </p>
               );
             })}
-{section.iconCards && (
-              <div
-                className={`grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2 ${
-                  section.iconCardsColumns === 4
-                    ? "lg:grid-cols-4"
-                    : section.iconCardsColumns === 3
-                    ? "lg:grid-cols-3"
-                    : ""
-                }`}
-              >
-{section.iconCards.map((card) => (
-                  <div
-                    key={card.title}
-                    className="p-5 bg-white border-2 border-[#0a0a0a] rounded-2xl hover:shadow-xl hover:-translate-y-1 transition-all duration-200"
-                  >
-                    <div className="w-12 h-12 rounded-xl bg-[#C4922A] flex items-center justify-center text-2xl mb-4 shadow-sm">
-                      {card.icon}
-                    </div>
-                    <h3 className="font-bold text-[#0a0a0a] mb-1.5">{card.title}</h3>
-                    <p className="text-sm leading-relaxed text-[#6e6e73]"><RichText text={card.description} /></p>
-                  </div>
-                ))}
-              </div>
-            )}
 {section.media && <ServiceMedia items={section.media} />}
 
             {section.scenarios && (
