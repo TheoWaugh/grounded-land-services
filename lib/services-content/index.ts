@@ -2379,16 +2379,20 @@ pricing: { range: "$5 – $15", unit: "per linear foot", note: "Pricing depends 
     title: "Forestry Mulching Cleanup",
     metaDescription: "Professional forestry mulching cleanup in Texas — touch-up mulching and finish work to leave your property clean and evenly processed.",
     icon: "🧹",
-    heroImage: "/images/official/forestry-mulching.jpeg",
+    heroImage: "/images/service-pics/forestry-mulching-cleanup.jpeg",
     intro: "Not every forestry mulching job is finished to the same standard. Forestry mulching cleanup removes the thick layer of mulch left behind, stumps that are scattered throughout the property, and any debris left over. We finish the job to a clean, professional standard — whether it's touch-up work on our own project or cleanup after another contractor.",
     sections: [
-            {
+                  {
         heading: "Forestry Mulching Cleanup in Central Texas",
         subheading: "Take Your Property From Rough and Mulched to Clean and Finished",
         paragraphs: [
           "Forestry mulching doesn't always leave a property ready for its next use. Thick layers of mulch, stumps scattered around the property, rocks, and large, unprocessed debris can leave the ground rough and difficult to maintain.",
-          "Grounded Land Services specializes in forestry mulching cleanup, removing excess material and topping it off with our [Harley rake](/equipment#harley-rake) to create a clean, smooth surface that's ready for native grass seed and zero turn mowing.",
+          "Grounded Land Services specializes in forestry mulching cleanup, removing excess material and topping it off with our [Harley rake](/equipment#harley-rake) to create a clean, smooth surface that's ready for native grass seed and zero-turn mowing.",
         ],
+        loopingVideo: {
+          videoId: "H0pDWNJABEI",
+          caption: "Completed forestry mulching cleanup",
+        },
         ctaButton: { label: "Request a Quote", href: "/contact?service=Forestry%20Mulching%20Cleanup#quote" },
       },
             {
