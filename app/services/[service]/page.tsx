@@ -329,21 +329,21 @@ const content = (
                 </p>
               );
             })}
-{section.media && <ServiceMedia items={section.media} />}
-
-            {section.scenarios && (
+{section.scenarios && (
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6 mt-2">
                 {section.scenarios.map((s) => (
                   <div key={s.title} className="flex gap-3">
                     <span className="text-xl flex-shrink-0 mt-0.5">{s.icon}</span>
                     <div>
                       <h4 className="font-bold text-[#0a0a0a] text-[15px] mb-1">{s.title}</h4>
-                      <p className="text-sm text-[#6e6e73] leading-relaxed">{s.description}</p>
+                      <p className="text-sm text-[#6e6e73] leading-relaxed"><RichText text={s.description} /></p>
                     </div>
                   </div>
                 ))}
               </div>
             )}
+
+            {section.media && <ServiceMedia items={section.media} />}
 
             {section.areaMapQuery && (
               <div className="mt-6 rounded-2xl overflow-hidden border border-gray-100">

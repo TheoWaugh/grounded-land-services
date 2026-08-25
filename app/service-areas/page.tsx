@@ -142,7 +142,7 @@ export default function ServiceAreasPage() {
                   </svg>
                 </button>
 
-                <div className={`overflow-hidden transition-all duration-300 ${expandedRegion === region ? "max-h-[800px]" : "max-h-0"}`}>
+                <div className={`overflow-hidden transition-all duration-300 ${expandedRegion === region ? "max-h-[6000px]" : "max-h-0"}`}>
                   <div className="px-6 pb-6 bg-[#f9f9f9]">
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 pt-4">
                       {cities.map((city) => {

@@ -3,6 +3,7 @@ import Link from "next/link";
 import ScrollReveal from "../components/ScrollReveal";
 import QuoteForm from "../components/QuoteForm";
 import type { Metadata } from "next";
+import RichText from "../components/RichText";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -15,11 +16,11 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "How do I get a quote?",
-    a: "Fill out the form on this page or call us at (512) 571-6700. Owner and operator Logan will reach out to discuss your project, walk the land if needed, and provide a detailed quote — completely free.",
+    a: "Fill out the form on this page or call us at [(512) 571-6700](tel:5125716700). Owner and operator Logan will reach out to discuss your project, walk the land if needed, and provide a detailed quote — completely free.",
   },
   {
     q: "Do you travel for projects?",
-    a: "Yes! We service most of Texas, including Austin, San Antonio, Houston, Dallas, and hundreds of cities in between. Check our Service Areas page for the full list.",
+    a: "Yes! We service Central and South-Central Texas, including the Austin metro, Texas Hill Country, and San Antonio corridor. Check our [Service Areas page](/service-areas) for the full list.",
   },
   {
     q: "How long does a land clearing project take?",
@@ -31,7 +32,7 @@ const faqs = [
   },
   {
     q: "What's the difference between forestry mulching and traditional clearing?",
-    a: "Forestry mulching is a single-step process that grinds vegetation into mulch on-site — no hauling, no burn piles. Traditional clearing removes all material and stumps, leaving a fully clean slate. Both have ideal use cases depending on your goals.",
+    a: "[Forestry mulching](/services/forestry-mulching) is a single-step process that grinds vegetation into mulch on-site — no hauling, no burn piles. [Traditional land clearing](/services/land-clearing) removes all material and stumps, leaving a fully clean slate. Both have ideal use cases depending on your goals.",
   },
   {
     q: "Do you offer financing or payment plans?",
@@ -86,18 +87,18 @@ export default function ContactPage() {
             </div>
           </a>
 
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-full bg-[#C4922A] flex items-center justify-center flex-shrink-0">
+          <a href="/service-areas" className="flex items-center gap-4 group">
+            <div className="w-12 h-12 rounded-full bg-[#C4922A] flex items-center justify-center flex-shrink-0 group-hover:bg-[#D4A840] transition-colors">
               <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
             </div>
             <div>
-              <p className="text-white/40 text-xs mb-0.5 uppercase tracking-wide">Service Area</p>
-              <p className="text-white font-medium">All of Texas</p>
+              <p className="text-white/40 text-xs mb-0.5 uppercase tracking-wide">Texas Coverage</p>
+              <p className="text-white font-medium">Central & South Central</p>
             </div>
-          </div>
+          </a>
         </div>
       </section>
 
@@ -205,7 +206,7 @@ export default function ContactPage() {
               <ScrollReveal key={i} delay={([0, 100, 200, 300, 400, 500] as const)[i]}>
                 <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
                   <h3 className="font-semibold text-[#0a0a0a] mb-2">{faq.q}</h3>
-                  <p className="text-[#6e6e73] text-sm leading-relaxed">{faq.a}</p>
+                  <p className="text-[#6e6e73] text-sm leading-relaxed"><RichText text={faq.a} /></p>
                 </div>
               </ScrollReveal>
             ))}

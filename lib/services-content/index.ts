@@ -2112,37 +2112,187 @@ paragraphs: [
     metaDescription: "Professional underbrushing in Texas — clear dense undergrowth while preserving mature canopy trees for a safer, more open landscape.",
     icon: "🌱",
     heroImage: "/images/official/underbrushing.jpeg",
-    intro: "Underbrushing targets the tangled layer beneath your tree canopy — small invasive trees, vines, and dense thickets — while leaving your mature trees completely intact. The result is a safer, more open, park-like property with dramatically reduced wildfire risk.",
+    intro: " Grounded Land Services provides professional underbrushing for residential, ranch, and commercial properties throughout Central Texas. Underbrushing is an effective way to open up overgrown areas, improve visibility and access, reduce vegetation that can contribute to wildfire risk, and make wooded properties easier to maintain without clearing the larger trees that give the property its character.",
     sections: [
-      {
-        heading: "Why Underbrushing Matters",
+              {
+        heading: "Professional Underbrushing Services",
         paragraphs: [
-          "Dense undergrowth acts as 'ladder fuel,' allowing ground fires to climb into tree canopies during wildfires. Clearing that layer creates defensible space around structures and dramatically improves both safety and visibility across a property, without sacrificing the shade and character of established trees.",
+          "Underbrushing focuses on the vegetation growing beneath and around established trees. Rather than clearing an entire wooded area, we selectively remove the brush and smaller vegetation while preserving the larger hardwoods and legacy trees you want to keep.",
+          "Using our [forestry mulcher](/equipment#prinoth), Grounded Land Services can efficiently process dense brush, vines, weeds, and small woody growth directly into mulch. The result is a more open, accessible, and manageable property without removing the mature trees that define the landscape.",
         ],
+        media: [
+          { type: "image", src: "/images/service-pics/underbrushing-pic.jpeg", alt: "Underbrushing project in Central Texas" },
+        ],
+        ctaButton: { label: "Get an Underbrushing Estimate", href: "/contact?service=Underbrushing#quote" },
       },
-      {
-        heading: "Benefits of Underbrushing",
+            {
+        heading: "What Is Underbrushing?",
+        paragraphs: [
+          "Underbrushing is the selective clearing of brush and low growing vegetation from beneath and around larger trees. It is commonly used on overgrown properties where the goal is to open up under the canopy while preserving mature hardwoods and legacy trees.",
+        ],
+        listIntro: "Using a forestry mulcher, we can remove vegetation such as:",
         list: [
-          "Reduced wildfire risk", "Improved property visibility",
-          "Preserved mature tree canopy", "Enhanced curb appeal",
-          "Easier property navigation", "Healthier understory regrowth",
+          "Dense brush",
+          "Vines",
+          "Weeds",
+          "Small trees and growth",
+          "Thorny vegetation",
+          "Other low growing vegetation",
+        ],
+        listColumns: 3,
+        closingParagraphs: [
+          "Unlike complete [land clearing](/services/land-clearing), underbrushing focuses on cleaning out under the canopy while keeping the larger trees in place.",
         ],
       },
-      {
-        heading: "Our Process",
+        {
+        heading: "Where Underbrushing Can Help",
+        paragraphs: [
+          "Underbrushing can make wooded and overgrown properties easier to use, maintain, and manage without removing the larger trees that define the landscape.",
+        ],
+        scenarios: [
+          { icon: "🔧", title: "Property Maintenance", description: "Reduce thick canopy vegetation and make wooded areas easier to maintain over time." },
+          { icon: "🚜", title: "Improved Access", description: "Open up overgrown areas around homes, trails, fences, driveways, and other parts of the property." },
+          { icon: "👀", title: "Better Visibility", description: "Clear vegetation beneath the tree canopy to improve visibility around homes, roads, driveways, and property boundaries." },
+          { icon: "🔥", title: "Fire Mitigation", description: "Reduce dense brush and low growing vegetation beneath mature trees to help manage ladder fuels on the property." },
+          { icon: "🌳", title: "Open Up Overgrown Areas", description: "Turn dense, difficult to access canopies into an open and usable area while preserving established trees." },
+          { icon: "🦌", title: "Wildlife & Recreation", description: "Create more open space beneath the canopy for walking trails, recreation, wildlife viewing, and enjoying the property." },
+        ],
+        media: [
+          { type: "image", src: "/images/work/IMG_1592.jpeg", alt: "Underbrushing project in Central Texas" },
+        ],
+      },
+            {
+        heading: "Benefits of Underbrushing",
+        paragraphs: [
+          "Underbrushing can transform an overgrown wooded property without sacrificing the mature trees that make it valuable.",
+        ],
+        iconCards: [
+          { icon: "🌳", title: "Preserve Mature Trees", description: "Remove competing canopy vegetation while keeping established hardwoods and legacy trees in place." },
+          { icon: "🌿", title: "Reduce Dense Vegetation", description: "Mulch thick brush, vines, weeds, and other small tree growth that can make wooded areas difficult to access and maintain." },
+          { icon: "🏡", title: "Improve Property Appearance", description: "Open up the canopies and create a cleaner, more intentional appearance beneath the existing tree canopy." },
+          { icon: "🚶", title: "Improve Usability", description: "Make more of your property accessible for walking, recreation, maintenance, trails, and everyday use." },
+          { icon: "🔥", title: "Manage Wildfire Fuels", description: "Reduce dense vegetation and ladder fuels that can contribute to the spread of wildfire." },
+          { icon: "🔧", title: "Lower Ongoing Maintenance", description: "By removing established understory growth, you can make wooded areas easier to maintain and keep open over time." },
+        ],
+        iconCardsColumns: 3,
+      },
+            {
+        heading: "Our Underbrushing Process",
+        paragraphs: [
+          "Every property has different vegetation and tree density, so we tailor the work to the existing conditions and the trees you want to preserve.",
+        ],
         steps: [
-          { title: "Canopy Assessment", description: "We identify which mature trees stay untouched before clearing begins." },
-          { title: "Selective Underbrush Removal", description: "Dense undergrowth, vines, and small invasive trees are cleared beneath the canopy." },
-          { title: "Final Cleanup", description: "The area is left open, clean, and ready to enjoy." },
+          { title: "Evaluate the Property", description: "We identify the mature trees and legacy trees to preserve, assess the understory, and determine the areas that need to be cleared." },
+          { title: "Mulch the Understory", description: "Using our forestry mulcher, we work beneath and around the larger trees to remove brush, vines, weeds, and other low growing vegetation." },
+          { title: "Open & Clean the Property", description: "We leave the canopy more open and accessible, with the mulched vegetation left on site to naturally break down." },
+        ],
+        ctaButton: { label: "Get an Underbrushing Estimate", href: "/contact?service=Underbrushing#quote" },
+      },
+            {
+        heading: "Underbrushing Cost Factors",
+        paragraphs: [
+          "Every property is different, so the cost of underbrushing depends on the amount of vegetation, tree density, terrain, and overall scope of the project.",
+        ],
+        iconCards: [
+          { icon: "📏", title: "Property Size", description: "Larger areas generally require more equipment time and production to complete." },
+          { icon: "🌿", title: "Vegetation Density", description: "Dense brush, vines, and overgrowth take more time to mulch than lighter understory vegetation." },
+          { icon: "🌳", title: "Tree Density", description: "The number and spacing of mature trees can affect production since working carefully around trees requires more maneuvering." },
+          { icon: "⛰️", title: "Terrain", description: "Steep slopes, uneven ground, rocky areas, and other difficult terrain can increase the time required to complete the work." },
+          { icon: "🚜", title: "Access", description: "Limited access to the property or work area can affect equipment movement and overall production." },
+          { icon: "✅", title: "Desired Finish", description: "The amount of vegetation to be removed and how open you want the canopy can affect the overall scope of the project." },
+        ],
+        iconCardsColumns: 3,
+        ctaButton: { label: "Get an Underbrushing Estimate", href: "/contact?service=Underbrushing#quote" },
+      },
+            {
+        heading: "Serving Central Texas Property Owners",
+        subheading: "Underbrushing Where You Need It",
+        paragraphs: [
+          "Grounded Land Services provides professional underbrushing throughout Central Texas for homeowners, ranch owners, and property owners looking to reclaim overgrown areas.",
+          "From dense understory around mature hardwoods to overgrown areas along driveways, trails, and property boundaries, we bring the equipment and experience needed to open up your property while preserving the larger trees you want to keep.",
+        ],
+        listIntro: "Explore underbrushing services in cities including:",
+        list: [
+          { label: "Austin", href: "/service-areas/austin/forestry-mulching" },
+          { label: "Bertram", href: "/service-areas/bertram/forestry-mulching" },
+          { label: "Burnet", href: "/service-areas/burnet/forestry-mulching" },
+          { label: "Dripping Springs", href: "/service-areas/dripping-springs/forestry-mulching" },
+          { label: "Fredericksburg", href: "/service-areas/fredericksburg/forestry-mulching" },
+          { label: "Georgetown", href: "/service-areas/georgetown/forestry-mulching" },
+          { label: "Johnson City", href: "/service-areas/johnson-city/forestry-mulching" },
+          { label: "Kerrville", href: "/service-areas/kerrville/forestry-mulching" },
+          { label: "Leander", href: "/service-areas/leander/forestry-mulching" },
+          { label: "Liberty Hill", href: "/service-areas/liberty-hill/forestry-mulching" },
+          { label: "Marble Falls", href: "/service-areas/marble-falls/forestry-mulching" },
+          { label: "New Braunfels", href: "/service-areas/new-braunfels/forestry-mulching" },
+          { label: "Round Rock", href: "/service-areas/round-rock/forestry-mulching" },
+          { label: "San Marcos", href: "/service-areas/san-marcos/forestry-mulching" },
+          { label: "Spicewood", href: "/service-areas/spicewood/forestry-mulching" },
+        ],
+        listColumns: 4,
+        areaMapQuery: "Central Texas",
+        note: {
+          text: "Don't see your city?",
+          linkLabel: "Explore Our Service Areas",
+          href: "/service-areas",
+        },
+      },
+        {
+        heading: "Why Choose Grounded Land Services",
+        paragraphs: [
+          "Underbrushing requires more than simply running a mulcher through the property. The goal is to remove the unwanted vegetation while protecting the mature trees and legacy trees you want to keep.",
+        ],
+        scenarios: [
+          { icon: "🌲", title: "Specialized Forestry Equipment", description: "Our [forestry mulcher](/equipment#prinoth) is built to efficiently process dense brush, vines, weeds, and woody vegetation." },
+          { icon: "🎯", title: "Selective Clearing", description: "We work around established trees to clear under their canopy without disturbing the larger trees that define your property." },
+          { icon: "👷", title: "Experienced Equipment Operators", description: "Our operators understand how to work around trees, uneven terrain, fences, structures, and other obstacles found on properties." },
+          { icon: "🛠️", title: "More Than Underbrushing", description: "If your property needs additional [clearing](/services/land-clearing), [trail work](/services/atv-trail-creation), [grading](/services/dirt-work-grading), or other [land services](/services), we can handle the next phase of the project with our equipment and attachments." },
+        ],
+        media: [
+          { type: "image", src: "/images/service-pics/why-choose-us.jpeg", alt: "Why choose Grounded Land Services" },
         ],
       },
+        {
+        heading: "Related Services",
+        paragraphs: [
+          "Underbrushing can be part of a larger property improvement project. Explore our other services to see how we can help with the rest of your property.",
+        ],
+        relatedServices: [
+          { label: "Forestry Mulching", href: "/services/forestry-mulching" },
+          { label: "Land Clearing", href: "/services/land-clearing" },
+          { label: "Fence Line Clearing", href: "/services/fence-line-clearing" },
+          { label: "ATV Trail Creation", href: "/services/atv-trail-creation" },
+          { label: "Site Preparation", href: "/services/site-preparation" },
+          { label: "Cedar Tree Removal", href: "/services/cedar-tree-removal" },
+        ],
+      },
+        {
+        heading: "Property Types We Serve",
+        paragraphs: [
+          "Underbrushing can benefit properties with established trees and dense canopy vegetation that needs to be managed without removing the larger trees.",
+        ],
+        iconCards: [
+          { icon: "🏡", title: "Residential Properties", description: "Open up wooded areas around homes, driveways, fences, and outdoor spaces while preserving mature trees." },
+          { icon: "🐄", title: "Ranch & Rural Properties", description: "Manage dense understory across larger properties, ranches, and wooded acreage." },
+          { icon: "🦌", title: "Recreational Properties", description: "Create more accessible and enjoyable areas around trails, hunting areas, campsites, and outdoor recreation spaces." },
+          { icon: "🏢", title: "Commercial Properties", description: "Improve visibility, access, and vegetation management around commercial properties and their surrounding wooded areas." },
+        ],
+        iconCardsColumns: 2,
+      },
     ],
-    faqs: [
-      { question: "Will underbrushing harm my mature trees?", answer: "No — the whole point is to leave the canopy trees intact while clearing what's growing beneath them." },
-      { question: "How does this help with wildfire safety?", answer: "It removes the 'ladder fuel' that lets ground fires climb into treetops, creating defensible space around structures." },
-      { question: "Is underbrushing different from forestry mulching?", answer: "They're related — underbrushing specifically targets undergrowth beneath a canopy rather than broader brush or cedar removal across open land." },
+        faqs: [
+      { question: "What is underbrushing?", answer: "Underbrushing is the selective clearing of brush, vines, weeds, and other low growing vegetation from beneath and around larger trees while preserving mature hardwoods and legacy trees." },
+      { question: "What vegetation can you remove with underbrushing?", answer: "We can mulch dense brush, vines, weeds, small trees, woody growth, thorny vegetation, and other low growing vegetation beneath the tree canopy." },
+      { question: "Does underbrushing remove the larger trees?", answer: "No. The goal of underbrushing is to clear the vegetation beneath and around larger trees while preserving the mature trees and legacy trees you want to keep." },
+      { question: "How is underbrushing different from forestry mulching?", answer: "Underbrushing focuses specifically on clearing under the canopy beneath and around established trees. Forestry mulching can be used to clear a broader area of vegetation, including trees and larger woody growth.", link: { label: "Forestry Mulching", href: "/services/forestry-mulching" } },
+      { question: "Can underbrushing help with wildfire mitigation?", answer: "Yes. Removing dense vegetation and ladder fuels can help reduce the amount of combustible vegetation beneath mature trees and improve overall vegetation management." },
+      { question: "Can you underbrush around my house?", answer: "Yes. Underbrushing can open up wooded areas around homes, driveways, fences, trails, and other areas where dense vegetation has become difficult to manage." },
+      { question: "Does the mulch get hauled away?", answer: "Typically, no. The forestry mulcher processes the vegetation into mulch and leaves it on site to naturally break down." },
+      { question: "How much does underbrushing cost?", answer: "$2,500–$3,000 per day. Cost depends on factors such as property size, vegetation density, tree density, terrain, access, and the desired finished appearance. We evaluate each property individually to provide an accurate estimate." },
+      { question: "Can you preserve specific trees?", answer: "Yes. During the site evaluation, we can identify mature hardwoods, legacy trees, and other trees you want preserved and tailor the work around them." },
+      { question: "Do you provide underbrushing throughout Central Texas?", answer: "Yes. Grounded Land Services provides professional underbrushing throughout our Central Texas service area.", link: { label: "Request a Free Quote", href: "/contact?service=Underbrushing#quote" } },
     ],
-    pricing: { range: "$1,000 – $2,800", unit: "per acre", note: "Pricing depends on undergrowth density and canopy coverage." },
+    pricing: { range: "$2,500 – $3,000", unit: "per day", note: "Pricing depends on undergrowth density and canopy coverage." },
   },
 
   "utility-trenching": {
