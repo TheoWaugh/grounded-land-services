@@ -1765,38 +1765,194 @@ paragraphs: [
     title: "Demolition",
     metaDescription: "Professional demolition services in Texas — safe removal of homes, structures, concrete, and foundations to prepare your site for what's next.",
     icon: "🏚️",
-    heroImage: "/images/service-pics/IMG_3191.jpeg",
+    heroImage: "/images/service-pics/demolition-image.jpeg",
     intro: "Demolition is often the first step toward a much bigger project. Whether it's an aging home, an old barn, or a deteriorating concrete slab, we safely remove unwanted structures and prepare your property for its next phase — cleanly, efficiently, and with full attention to underlying utilities and site conditions.",
     sections: [
-      {
-        heading: "A Planned, Careful Process",
+        {
+        heading: "Professional Demolition Services",
         paragraphs: [
-          "Every demolition project begins with an evaluation of the structure, surrounding utilities, and access before any equipment moves in. That planning step prevents costly surprises and keeps the project moving safely from start to finish.",
+          "Demolition is often the first step toward reclaiming a property or preparing it for something new. Whether you're removing an aging structure, an unwanted swimming pool, or deteriorating concrete, the goal is more than simply tearing it down — it's leaving the site ready for what comes next.",
+          "Grounded Land Services provides demolition for residential, ranch, and commercial properties throughout Central Texas. We use [heavy equipment and specialized attachments](/equipment) to carefully dismantle unwanted structures, break up concrete, remove debris, and prepare the area for its next use.",
+          "From small outbuildings and concrete slabs to larger structures and swimming pools, we evaluate each project individually and build the demolition approach around the site, access, materials, and your plans for the property.",
+        ],
+        loopingVideo: {
+          videoId: "0jYU5H4qCi0",
+          caption: "Pool demolition in action",
+        },
+        ctaButton: { label: "Get a Free Demolition Estimate", href: "/contact?service=Demolition#quote" },
+      },
+       {
+        heading: "Why Property Owners Choose Demolition",
+        paragraphs: [
+          "Sometimes removing what's already there is the best way to move forward with your property. Demolition can eliminate structures that are no longer useful and open up space for a new plan.",
+        ],
+        iconCards: [
+          { icon: "🏚️", title: "Remove Deteriorated Structures", description: "Older buildings, barns, sheds, and other structures can become difficult or costly to repair as they deteriorate." },
+          { icon: "🏡", title: "Reclaim Unused Space", description: "Remove an unwanted pool, structure, or concrete to turn an underused area back into usable property." },
+          { icon: "🔨", title: "Make Room for Something New", description: "Clear existing structures to make space for a new home, shop, driveway, landscaping, or other project." },
+          { icon: "🔧", title: "Eliminate Ongoing Maintenance", description: "Removing an unused or deteriorating structure can eliminate the maintenance, repairs, and upkeep that come with keeping it on the property." },
+        ],
+        iconCardsColumns: 2,
+      },
+        {
+        heading: "Pool Demolition",
+        paragraphs: [
+          "An old or damaged swimming pool can become a major problem for a property owner. Cracked concrete, structural deterioration, leaks, or concrete cancer can make an aging pool difficult and expensive to maintain.",
+          "[Grounded Land Services](/) provides demolition for residential, ranch, and commercial properties throughout Central Texas. We use heavy equipment and specialized attachments to carefully dismantle unwanted structures, break up concrete, remove debris, and prepare the area for its next use.", 
+        ],
+        subheading: "When Pool Demolition Makes Sense",
+        scenarios: [
+          { icon: "🧱", title: "Concrete Cancer", description: "Deteriorating reinforcing steel can cause concrete to crack, spall, and weaken over time." },
+          { icon: "🏊", title: "Structural Damage", description: "Significant cracking or deterioration can make an older pool difficult to repair." },
+          { icon: "🏡", title: "Unused Pools", description: "Removing a pool that is no longer being used can reclaim valuable yard space." },
+          { icon: "💰", title: "Expensive Repairs", description: "When ongoing repairs and maintenance no longer make financial sense, removal may be the better option." },
         ],
       },
-      {
-        heading: "Structures We Handle",
-        list: [
-          "Houses and mobile homes", "Barns and outbuildings", "Sheds and garages",
-          "Concrete slabs and foundations", "Swimming pools", "Commercial buildings",
-          "Driveways and parking lots", "Agricultural structures",
+            {
+        heading: "Structure & Concrete Demolition",
+        paragraphs: [
+          "Not every demolition project involves a large building. We also remove smaller structures and concrete features that are taking up space, deteriorating, or interfering with your plans for the property.",
+        ],
+        iconCards: [
+          { icon: "🏚️", title: "Barns & Outbuildings", description: "Demolish and remove barns, sheds, detached garages, workshops, and other unwanted structures." },
+          { icon: "🧱", title: "Concrete Slabs & Patios", description: "Break up and remove old concrete slabs, patios, walkways, and other surface-level concrete." },
+          { icon: "🏗️", title: "Foundations", description: "Remove unwanted concrete foundations and building pads when clearing a site for a new project." },
+          { icon: "🛣️", title: "Driveways & Access Areas", description: "Remove deteriorated or unwanted concrete driveways, parking areas, and other access surfaces." },
+        ],
+        iconCardsColumns: 2,
+        closingParagraphs: [
+          "Whether you're clearing an old structure or removing concrete to make room for something new, we can handle the demolition and cleanup needed to reclaim the space.",
         ],
       },
-      {
+            {
+        heading: "What Happens to Demolition Debris?",
+        paragraphs: [
+          "Demolition doesn't end when a structure comes down. Concrete, wood, metal, and other materials need to be broken down, separated, and removed from the site so the property can be used for its next purpose.",
+          "Grounded Land Services handles the cleanup and removal of demolition debris as part of the project. Depending on the material and project requirements, debris can be processed, loaded, and hauled away, while recyclable materials may be separated when practical.",
+          "For projects involving large amounts of concrete, our [rock crushing](/services/rock-crushing) capabilities can also provide an option for processing concrete and other suitable material on site when conditions allow.",
+        ],
+                closingParagraphs: [
+          "The goal is simple: remove the unwanted structure or concrete, clean up the site, and leave you with a property ready for what's next.",
+        ],
+        emphasizeLastClosing: true,
+      },
+        {
         heading: "Our Demolition Process",
-        steps: [
-          { title: "Consultation & Planning", description: "We evaluate the structure and develop a safe, efficient demolition plan." },
-          { title: "Utility Verification", description: "Utilities are verified and disconnected as required before work begins." },
-          { title: "Controlled Demolition", description: "The structure is safely removed with minimal disturbance to the surrounding site." },
-          { title: "Debris Removal & Grading", description: "Materials are cleared and the site is graded, ready for its next phase." },
+        paragraphs: [
+          "Every demolition project is different, so we plan the work around the structure, site conditions, and your goals for the property.",
         ],
+        steps: [
+          { title: "Evaluate & Plan", description: "We assess the structure, surrounding area, access, materials, and site conditions to determine the safest and most efficient approach." },
+          { title: "Demolish & Remove", description: "We use the appropriate heavy equipment and attachments to dismantle the structure, break up concrete, and remove the material from the site." },
+          { title: "Clean & Prepare", description: "We clean up remaining debris and leave the area ready for its next use, whether that's construction, grading, landscaping, or simply reclaiming the space." },
+        ],
+        ctaButton: { label: "Get a Demolition Estimate", href: "/contact?service=Demolition#quote" },
+      },
+        {
+        heading: "Demolition Cost Factors",
+        paragraphs: [
+          "Every demolition project is different, so pricing depends on the property and the work required. Several factors can affect the overall cost of demolition.",
+        ],
+        iconCards: [
+          { icon: "📏", title: "Size of the Structure", description: "Larger structures generally require more equipment time, labor, and debris removal." },
+          { icon: "🧱", title: "Type of Material", description: "Concrete, steel, masonry, wood, and other materials require different equipment and handling methods." },
+          { icon: "🚜", title: "Site Access", description: "Tight access, steep terrain, or limited working space can affect the equipment and approach needed for the project." },
+          { icon: "🏚️", title: "Structure Condition", description: "The age, condition, and structural integrity of a building or pool can affect how the demolition needs to be approached." },
+          { icon: "🚛", title: "Debris Volume", description: "The amount and type of material generated during demolition can affect processing, loading, hauling, and disposal costs." },
+          { icon: "🌳", title: "Site Conditions", description: "Terrain, surrounding structures, vegetation, utilities, and other conditions can influence the equipment, time, and planning required." },
+        ],
+        iconCardsColumns: 3,
+        ctaButton: { label: "Get a Demolition Estimate", href: "/contact?service=Demolition#quote" },
+      },
+        {
+        heading: "Serving Central Texas Property Owners",
+        subheading: "Demolition Where You Need It",
+        paragraphs: [
+          "Grounded Land Services provides demolition services throughout Central Texas for residential, ranch, and commercial properties.",
+          "Whether you're removing an old pool, tearing down an outbuilding, or clearing concrete from a property, we bring the equipment and experience needed to complete the demolition and clean up the site.",
+        ],
+        listIntro: "Explore demolition services in Central Texas including:",
+        list: [
+          { label: "Austin", href: "/service-areas/austin/demolition" },
+          { label: "Bertram", href: "/service-areas/bertram/demolition" },
+          { label: "Burnet", href: "/service-areas/burnet/demolition" },
+          { label: "Dripping Springs", href: "/service-areas/dripping-springs/demolition" },
+          { label: "Fredericksburg", href: "/service-areas/fredericksburg/demolition" },
+          { label: "Georgetown", href: "/service-areas/georgetown/demolition" },
+          { label: "Johnson City", href: "/service-areas/johnson-city/demolition" },
+          { label: "Kerrville", href: "/service-areas/kerrville/demolition" },
+          { label: "Leander", href: "/service-areas/leander/demolition" },
+          { label: "Liberty Hill", href: "/service-areas/liberty-hill/demolition" },
+          { label: "Marble Falls", href: "/service-areas/marble-falls/demolition" },
+          { label: "New Braunfels", href: "/service-areas/new-braunfels/demolition" },
+          { label: "Round Rock", href: "/service-areas/round-rock/demolition" },
+          { label: "San Marcos", href: "/service-areas/san-marcos/demolition" },
+          { label: "Spicewood", href: "/service-areas/spicewood/demolition" },
+        ],
+        listColumns: 4,
+        areaMapQuery: "Central Texas",
+        note: {
+          text: "Don't see your city?",
+          linkLabel: "Explore Our Service Areas",
+          href: "/service-areas",
+        },
+      },
+            {
+        heading: "Why Choose Grounded Land Services",
+        paragraphs: [
+          "When you hire Grounded Land Services, you're getting more than a demolition crew. We bring the equipment and landwork capabilities needed to take a project from demolition through site cleanup.",
+        ],
+        iconCards: [
+          { icon: "🚜", title: "Heavy Equipment Capability", description: "Our Cat excavators and specialized attachments give us the ability to handle structures, concrete, pools, and demanding demolition projects." },
+          { icon: "👷", title: "Experienced Equipment Operators", description: "We approach each project based on the structure, materials, surrounding property, access, and site conditions." },
+          { icon: "🌲", title: "Demolition & Landwork", description: "When your demolition project also requires clearing, grading, excavation, or other landwork, we can continue preparing the property after the demolition is complete." },
+          { icon: "✅", title: "One Contractor From Start to Finish", description: "From tearing down the unwanted structure to cleaning up the site and preparing it for what's next, we can handle multiple stages of the project under one roof." },
+        ],
+        iconCardsColumns: 2,
+        media: [
+          { type: "image", src: "/images/service-pics/why-choose-us.jpeg", alt: "Why choose Grounded Land Services for demolition" },
+        ],
+      },
+            {
+        heading: "Related Services",
+        paragraphs: [
+          "Demolition often goes hand in hand with other land services. Explore our related services to see how we can help with the next stage of your project.",
+        ],
+        relatedServices: [
+          { label: "Land Clearing", href: "/services/land-clearing" },
+          { label: "Site Preparation", href: "/services/site-preparation" },
+          { label: "Excavation", href: "/services/dirt-work-grading" },
+          { label: "Grading", href: "/services/dirt-work-grading" },
+          { label: "Rock Removal", href: "/services/rock-cactus-removal" },
+          { label: "Rock Crushing", href: "/services/rock-crushing" },
+        ],
+      },
+            {
+        heading: "Property Types We Serve",
+        paragraphs: [
+          "Demolition needs can vary depending on the property and what you're planning to do with the space. We work with property owners across Central Texas on a wide range of demolition projects.",
+        ],
+        iconCards: [
+          { icon: "🏡", title: "Residential Properties", description: "Homes, backyards, pools, detached garages, sheds, patios, driveways, and other residential structures." },
+          { icon: "🐄", title: "Ranch & Rural Properties", description: "Barns, outbuildings, agricultural structures, concrete features, and other unwanted structures on larger properties." },
+          { icon: "🏢", title: "Commercial Properties", description: "Commercial structures, concrete surfaces, and other site features that need to be removed before redevelopment or construction." },
+          { icon: "📈", title: "Investment & Development Properties", description: "Clear unwanted structures and existing site features to prepare properties for redevelopment, resale, or a new construction project." },
+        ],
+        iconCardsColumns: 2,
       },
     ],
-    faqs: [
-      { question: "Do you handle swimming pool demolition?", answer: "Yes, including pools affected by structural deterioration — we can backfill and prepare the space for reuse afterward." },
-      { question: "Do I need permits for demolition?", answer: "Requirements vary by city and county; we can help you determine what's needed before starting." },
-      { question: "Can you recycle demolition debris?", answer: "Where practical, concrete and metal are separated for recycling or reuse, including into crushed aggregate." },
-      { question: "What happens after demolition is complete?", answer: "We can move directly into grading, land clearing, or site preparation so your property is ready for its next build." },
+        faqs: [
+      { question: "How much does demolition cost?", answer: "Demolition costs vary based on the size and type of structure, materials involved, site access, debris volume, and the condition of the property. We evaluate each project individually to provide an accurate estimate." },
+      { question: "Do you demolish swimming pools?", answer: "Yes. We demolish and remove unwanted swimming pools, including older pools affected by structural deterioration or concrete cancer." },
+      { question: "What is concrete cancer?", answer: "Concrete cancer is the deterioration of concrete caused by corrosion of the reinforcing steel inside it. As the steel expands, it can cause the surrounding concrete to crack, spall, and deteriorate." },
+      { question: "Do you remove demolition debris?", answer: "Yes. Debris removal and site cleanup can be included as part of your demolition project. Depending on the material and project requirements, debris may be processed, loaded, hauled away, or recycled when practical." },
+      { question: "Can you demolish barns and outbuildings?", answer: "Yes. We can demolish and remove barns, sheds, detached garages, workshops, and other unwanted structures." },
+      { question: "Do you demolish concrete?", answer: "Yes. We can break up and remove concrete slabs, patios, foundations, driveways, walkways, and other concrete structures." },
+      { question: "Can you grade the property after demolition?", answer: "Yes. Depending on the project, we can transition from demolition into grading, clearing, excavation, or other landwork needed to prepare the site for its next use.", link: { label: "Site Preparation", href: "/services/site-preparation" } },
+      { question: "How long does a demolition project take?", answer: "Project timelines vary depending on the size and complexity of the demolition, site access, materials, and amount of debris that needs to be removed. We can provide a more accurate timeline after evaluating the property." },
+      { question: "Do I need to prepare anything before demolition?", answer: "The preparation required depends on the project. During the site evaluation, we'll identify access requirements, surrounding features, and other considerations that need to be addressed before demolition begins." },
+      { question: "Do you provide residential demolition?", answer: "Yes. We provide demolition for residential properties, including swimming pools, detached structures, concrete, and other unwanted structures." },
+      { question: "What happens to the property after demolition?", answer: "After the demolition and debris removal are complete, the site can be left ready for its next use. Depending on the project, additional grading, clearing, excavation, or site preparation can also be performed.", link: { label: "Request a Free Quote", href: "/contact?service=Demolition#quote" } },
     ],
     pricing: { range: "$1,500 – $10,000+", unit: "per job", note: "Pricing depends on structure size, materials, foundation type, and debris hauling needs." },
   },
@@ -1806,38 +1962,149 @@ paragraphs: [
     metaDescription: "Professional site preparation in Texas — clearing, grading, and prepping your property to be construction-ready from the ground up.",
     icon: "📐",
     heroImage: "/images/work/IMG_1641.jpeg",
-    intro: "Before the first brick is laid, a construction site needs to be truly ready — cleared, graded, and stable. Site preparation bridges the gap between raw land and a build-ready canvas, handling every detail so your contractors can start on schedule with no surprises underfoot.",
+        intro: "Prepare Your Property for What's Next. Grounded Land Services provides professional site preparation for residential, ranch, and commercial properties across Central Texas. From clearing vegetation and removing trees to excavation, rock removal, grading, and final site cleanup, we prepare your property for the next stage of construction.",
     sections: [
-      {
-        heading: "What Site Preparation Covers",
+        {
+        heading: "What Is Site Preparation?",
         paragraphs: [
-          "Site prep typically combines clearing, grading, drainage planning, and debris removal into one coordinated phase, ensuring the ground beneath your future structure is stable, level, and properly draining before construction begins.",
+          "Site preparation is the process of getting your property ready for construction, development, or its next planned use. Depending on the site, this may include clearing vegetation, removing trees and stumps, handling rock, excavating, grading, and preparing the surface for a clean, workable finish.",
+          "Grounded Land Services combines heavy equipment with specialized attachments, including our [high-flow soil conditioner](/equipment#harley-rake), to prepare properties efficiently while leaving the site ready for what comes next.",
+        ],
+        media: [
+          { type: "image", src: "/images/service-pics/IMG_2911.jpeg", alt: "Site preparation project in Central Texas" },
         ],
       },
-      {
-        heading: "Common Site Prep Needs",
+            {
+        heading: "Site Preparation Services",
+        paragraphs: [
+          "Every property requires a different approach. We tailor our site preparation work to the existing conditions of your land and the requirements of your project.",
+        ],
+        iconCards: [
+          { icon: "🌲", title: "Land Clearing", description: "Remove trees, brush, and unwanted vegetation to open up the property and create a workable site. [Explore Land Clearing](/services/land-clearing)" },
+          { icon: "🪵", title: "Tree & Stump Removal", description: "Remove larger trees and stumps that interfere with construction, access, or the planned use of the property. [Explore Tree & Stump Removal](/services/tree-stump-removal)" },
+          { icon: "🪨", title: "Rock Removal", description: "Remove surface and embedded limestone, caliche, and other rock that can interfere with construction or grading. [Explore Rock & Cactus Removal](/services/rock-cactus-removal)" },
+          { icon: "🚧", title: "Excavation", description: "Excavate soil and rock for building pads, driveways, drainage features, utilities, and other site improvements." },
+          { icon: "📐", title: "Grading & Surface Preparation", description: "Shape and level the site while using our soil conditioner when appropriate to create a smoother, more consistent surface. [Explore Dirt Work & Grading](/services/dirt-work-grading)" },
+          { icon: "🧹", title: "Site Cleanup", description: "Remove remaining debris, rough spots, and material left behind during the preparation process so the property is ready for the next phase. [Explore Site Cleanup](/services/site-cleanup)" },
+        ],
+        iconCardsColumns: 3,
+      },
+        {
+        heading: "What Can We Prepare Your Property For?",
+        paragraphs: [
+          "Our site preparation services can help get your property ready for a wide range of projects, including:",
+        ],
         list: [
-          "Vegetation and debris clearing", "Rough and finish grading",
-          "Drainage planning", "Building pad leveling",
-          "Access road preparation", "Utility trench readiness",
+          "Home and Barndominium Construction",
+          { label: "Driveways and Access Roads", href: "/services/gravel-driveways-roads" },
+          "Shop and Outbuilding Construction",
+          "Building Pads",
+          "Drainage Improvements",
+          "Utility Installation",
+          "Ranch and Agricultural Improvements",
+          "Commercial Development",
         ],
+        listColumns: 2,
+        media: [
+          { type: "image", src: "/images/service-pics/choose-traditional.jpeg", alt: "Site preparation for construction in Central Texas" },
+        ],
+        closingParagraphs: [
+          "We can handle everything from initial land clearing and excavation to grading and surface preparation, helping create a clean, workable site for the next stage of your project.",
+        ],
+      },
+            {
+        heading: "Why Proper Site Preparation Matters",
+        paragraphs: [
+          "A well prepared site gives your project a better starting point. Clearing unwanted vegetation, addressing rock and uneven ground, and properly shaping the property can make the next phase of construction more efficient.",
+        ],
+        iconCards: [
+          { icon: "🚜", title: "Better Construction Access", description: "Create workable access for equipment, materials, and construction crews." },
+          { icon: "🧹", title: "A Cleaner Building Site", description: "Remove vegetation, trees, stumps, rock, and other obstacles before construction begins." },
+          { icon: "📐", title: "Proper Surface Preparation", description: "Grade and condition the ground to create a more consistent surface for the next phase of your project." },
+          { icon: "✅", title: "Fewer Surprises", description: "Address difficult site conditions early instead of discovering them after construction has already started." },
+        ],
+        iconCardsColumns: 2,
+      },
+        {
+        heading: "Our Site Preparation Process",
+        paragraphs: [
+          "We keep the process straightforward and tailor the work to the conditions of your property.",
+        ],
+        steps: [
+          { title: "Evaluate & Plan", description: "We assess the terrain, vegetation, rock, access, and overall site conditions to determine what the property needs." },
+          { title: "Clear, Excavate & Grade", description: "We remove vegetation, trees, stumps, and rock as needed, then excavate and grade the site to create a workable surface." },
+          { title: "Finish & Prepare", description: "When appropriate, we use our soil conditioner to smooth and condition the surface, clean up remaining debris, and leave the property ready for the next phase." },
+        ],
+        ctaButton: { label: "Get a Site Preparation Estimate", href: "/contact?service=Site%20Preparation#quote" },
       },
       {
-        heading: "Our Process",
-        steps: [
-          { title: "Site Evaluation", description: "We assess terrain, drainage, and access before planning the prep sequence." },
-          { title: "Clearing", description: "Vegetation and debris are removed to expose workable ground." },
-          { title: "Grading", description: "The site is graded to the elevations and drainage plan your project requires." },
-          { title: "Final Inspection", description: "We confirm the site is ready to hand off to your builder or contractor." },
+        heading: "Serving Central Texas Property Owners",
+        paragraphs: [
+          "Grounded Land Services provides Site Preparation throughout Central and South-Central Texas, from the Austin area through the Texas Hill Country and toward San Antonio.",
+        ],
+        listIntro: "We serve property owners throughout Central Texas including:",
+        list: [
+          { label: "Austin", href: "/service-areas" },
+          { label: "Bertram", href: "/service-areas" },
+          { label: "Burnet", href: "/service-areas" },
+          { label: "Dripping Springs", href: "/service-areas" },
+          { label: "Fredericksburg", href: "/service-areas" },
+          { label: "Georgetown", href: "/service-areas" },
+          { label: "Johnson City", href: "/service-areas" },
+          { label: "Kerrville", href: "/service-areas" },
+          { label: "Leander", href: "/service-areas" },
+          { label: "Liberty Hill", href: "/service-areas" },
+          { label: "Marble Falls", href: "/service-areas" },
+          { label: "New Braunfels", href: "/service-areas" },
+          { label: "Round Rock", href: "/service-areas" },
+          { label: "San Marcos", href: "/service-areas" },
+          { label: "Spicewood", href: "/service-areas" },
+        ],
+        listColumns: 4,
+        areaMapQuery: "Central Texas",
+        note: {
+          text: "Don't see your city?",
+          linkLabel: "View Service Areas",
+          href: "/service-areas",
+        },
+      },
+      {
+        heading: "Why Choose Grounded Land Services?",
+        paragraphs: [
+          "Choosing the right contractor can make all the difference in how your property looks today — and for years to come. At [Grounded Land Services](/), we believe land clearing isn't just about clearing land; it's about leaving your property in better condition than we found it. From the equipment we operate to the attention we give every project, our goal is to deliver results that are clean, professional, and built to last.",
+          "From your first phone call to the final walkthrough, we're committed to providing honest communication, dependable scheduling, and quality workmanship. We show up prepared, treat your property with respect, and stand behind the work we perform.",
+          "When you hire Grounded Land Services, you're not just hiring a land clearing contractor — you're choosing a company that takes pride in leaving your land cleaner, healthier, and ready for whatever comes next.",
+        ],
+        media: [
+          { type: "image", src: "/images/service-pics/why-choose-us.jpeg", alt: "Why choose Grounded Land Services" },
+        ],
+      },
+            {
+        heading: "Related Services",
+        paragraphs: [
+          "Explore more services that can help prepare, improve, or transform your property.",
+        ],
+        relatedServices: [
+          { label: "Land Clearing", href: "/services/land-clearing" },
+          { label: "Grading", href: "/services/dirt-work-grading" },
+          { label: "Rock Removal", href: "/services/rock-cactus-removal" },
+          { label: "Forestry Mulching", href: "/services/forestry-mulching" },
+          { label: "Stump & Tree Removal", href: "/services/tree-stump-removal" },
+          { label: "Demolition", href: "/services/demolition" },
         ],
       },
     ],
-    faqs: [
-      { question: "Do you coordinate with my general contractor?", answer: "Yes, we're happy to work directly with your builder to make sure the site meets their specifications." },
-      { question: "Can you handle drainage planning as part of site prep?", answer: "Yes, proper grading for drainage is a core part of preventing future flooding or erosion issues." },
-      { question: "How long does site preparation typically take?", answer: "It varies by acreage and terrain, but most residential sites are ready within a few days to two weeks." },
+      faqs: [
+      { question: "What does site preparation include?", answer: "Site preparation can include land clearing, tree and stump removal, rock removal, excavation, grading, and surface preparation depending on the condition of the property and the requirements of the project." },
+      { question: "Do you provide site preparation for home construction?", answer: "Yes. We prepare residential properties for homes, barndominiums, shops, driveways, and other construction projects." },
+      { question: "Can you remove trees and stumps as part of site preparation?", answer: "Yes. Tree and stump removal is included when existing vegetation or stumps interfere with the planned construction area.", link: { label: "Tree & Stump Removal", href: "/services/tree-stump-removal" } },
+      { question: "Can you remove limestone and rock?", answer: "Yes. We can remove surface and embedded limestone, caliche, and other rock when it interferes with construction or site grading.", link: { label: "Rock & Cactus Removal", href: "/services/rock-cactus-removal" } },
+      { question: "Do you use a Harley rake for site preparation?", answer: "Yes. When site conditions are appropriate, we use our high flow soil conditioner to smooth, condition, and clean up the surface after the heavier site work is complete.", link: { label: "View Our Equipment", href: "/equipment" } },
+      { question: "Can you prepare an existing property for a new project?", answer: "Yes. Site preparation isn't limited to undeveloped land. We can prepare existing properties for additions, new structures, driveways, improvements, and other projects." },
+      { question: "How much does site preparation cost?", answer: "The cost depends on factors such as property size, vegetation, terrain, rock, access, excavation requirements, and the desired finished condition. We evaluate each property individually to provide an accurate estimate." },
+      { question: "Do you provide site preparation throughout Central Texas?", answer: "Yes. Grounded Land Services provides site preparation throughout our Central Texas service area.", link: { label: "Request a Free Quote", href: "/contact?service=Site%20Preparation#quote" } },
     ],
-    pricing: { range: "$3,000 – $12,000+", unit: "per job", note: "Pricing depends on acreage, terrain complexity, and the scope of grading required." },
+    pricing: { range: "$2,500 – $10,000+", unit: "per job", note: "Pricing depends on acreage, terrain complexity, and the scope of grading required." },
   },
 
   "underbrushing": {
@@ -2503,12 +2770,12 @@ pricing: { range: "$5 – $15", unit: "per linear foot", note: "Pricing depends 
         ],
         iconCardsColumns: 3,
       },
-                  {
+        {
         heading: "Serving Central Texas Property Owners",
         paragraphs: [
           "Grounded Land Services provides forestry mulching cleanup throughout Central and South-Central Texas, from the Austin area through the Texas Hill Country and toward San Antonio.",
         ],
-        listIntro: "We serve property owners throughout cities including:",
+        listIntro: "We serve property owners throughout Central Texas including:",
         list: [
           { label: "Austin", href: "/service-areas" },
           { label: "Bertram", href: "/service-areas" },

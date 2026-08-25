@@ -24,7 +24,8 @@ const allServices = [
       "Versatile: right-of-way, pasture restoration, wildfire mitigation",
       "Natural, long-term site improvement",
     ],
-    img: "/images/official/forestry-mulching.jpeg",
+        img: "/images/official/forestry-mulching.jpeg",
+    imgPosition: "77% center",
     icon: "🌿",
   },
   {
@@ -32,6 +33,12 @@ const allServices = [
     desc: "Traditional land clearing is about more than just removing trees — it's about unlocking the full potential of your acreage. Our comprehensive clearing process delivers a total site transformation that turns rugged terrain into a manicured, functional landscape. This is the ideal choice for property owners preparing for a home build, expanding usable pasture, or creating a park-like backyard. Results are level, seed-ready, stump-free, debris-free, and instantly mowable.",
     img: "/images/official/land-clearing.jpeg",
     icon: "🏗️",
+  },
+    {
+    title: "Forestry Mulching Cleanup",
+    desc: "Take your mulched property from rough terrain to a smooth, finished surface. Forestry mulching is a great first step, but it leaves behind a thick blanket of mulch, exposed stumps, and hidden debris. Grounded Land Services specializes in complete forestry mulching cleanup throughout Central Texas. We clear away excess mulch, leftover stumps, and smooth the underlying soil so your site is ready for planting, seeding, or construction.",
+    img: "/images/service-pics/mulching-cleanup-square.jpeg",
+    icon: "🧹",
   },
   {
     title: "Cedar Tree Removal",
@@ -64,17 +71,24 @@ const allServices = [
     icon: "🔒",
   },
   {
-    title: "Site Preparation",
-    desc: "Before the first brick is laid, site preparation transforms raw land into a construction-ready canvas. This essential phase involves precision clearing, debris removal, and expert grading to ensure a level, stable foundation for your future build. We handle every detail so your contractors can hit the ground running.",
-    img: "/images/work/IMG_1641.jpeg",
-    icon: "📐",
-  },
-  {
     title: "Underbrushing",
     desc: "Transform your property's aesthetic and safety with professional underbrushing. This strategic land management technique focuses on clearing out dense thickets, small invasive trees, and tangled vines while leaving your mature canopy completely intact. By removing ladder fuels that allow ground fires to climb into treetops, underbrushing creates a vital fire-resistant buffer and defensible space around your home — resulting in a park-like environment that boosts property value and improves visibility.",
     img: "/images/official/underbrushing.jpeg",
     icon: "🌱",
   },
+      {
+    title: "Demolition",
+    desc: "Tear down old structures and make room for your next project. Grounded Land Services provides residential and commercial demolition throughout Central Texas. From tearing out concrete pads and old driveways to removing outdated buildings, sheds, and pools, we safely haul away debris and restore your terrain so it's ready for new construction or landscaping.",
+    img: "/images/work/anderson-pool-demo.jpeg",
+    icon: "🏚️",
+  },
+  {
+    title: "Site Preparation",
+    desc: "Before the first brick is laid, site preparation transforms raw land into a construction-ready canvas. This essential phase involves precision clearing, debris removal, and expert grading to ensure a level, stable foundation for your future build. We handle every detail so your contractors can hit the ground running.",
+    img: "/images/work/IMG_1641.jpeg",
+    icon: "📐",
+  },
+  
   {
     title: "Utility Trenching",
     desc: "Our utility trenching service provides the critical underground pathways needed for water, electrical, gas, and communication lines. We utilize specialized equipment to ensure every trench is excavated to the exact depth and width required by local codes, protecting your vital systems from frost, surface pressure, and future damage. Our focus on site safety and soil stability ensures your utilities are installed correctly the first time.",
@@ -110,9 +124,8 @@ const otherServices = [
   "ATV Trail Creation",
   "Tree & Stump Removal",
   "Gravel Driveways & Roads",
-  "Demolition & Debris Removal",
+  "Debris Removal",
   "Storm Damage Cleanup",
-  "Forestry Mulching Cleanup",
 ];
 
 export default function ServicesPage() {
@@ -172,6 +185,7 @@ export default function ServicesPage() {
                     alt={service.title}
                     fill
                     className="object-cover"
+                    style={{ objectPosition: service.imgPosition ?? "center" }}
                     sizes="(max-width: 1024px) 100vw, 40vw"
                   />
                 </div>
