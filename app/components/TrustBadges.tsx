@@ -37,7 +37,7 @@ export default function TrustBadges() {
           </svg>
         </div>
         <div>
-<p className="font-bold text-[#0a0a0a] text-sm">5.0 on Google (12 reviews)</p>
+<p className="font-bold text-[#0a0a0a] text-sm">5.0 on Google (13 reviews)</p>
           <p className="text-xs text-[#6e6e73]">Based on verified customer reviews</p>
         </div>
       </a>

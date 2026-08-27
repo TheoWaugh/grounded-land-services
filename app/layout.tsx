@@ -139,7 +139,7 @@ const jsonLd = {
     ratingValue: "5.0",
     bestRating: "5",
     worstRating: "1",
-    reviewCount: "18",
+    reviewCount: "19",
   },
     review: [
     {
@@ -249,6 +249,12 @@ const jsonLd = {
       author: { "@type": "Person", name: "Kathy Wendt" },
       reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
       reviewBody: "Grounded Land Services did an amazing job. He got rid of dead trees, branches, and stumps. He made our property looking great again. I highly recommend his services.",
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Organization", name: "XPERT LLC" },
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      reviewBody: "I am very happy; he did an excellent job. I recommend him — an excellent person.",
     },
   ],
 };

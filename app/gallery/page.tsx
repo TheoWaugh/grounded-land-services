@@ -68,6 +68,7 @@ const allImages = [
   { src: "/images/service-pics/IMG_3180.jpeg", alt: "Forestry mulching complete in Central Texas", tag: "Forestry Mulching" },
   { src: "/images/service-pics/IMG_3191.jpeg", alt: "Texas land ready for development", tag: "Site Prep" },
   { src: "/images/work/spicewood-harley-raking1.JPEG", alt: "Completed Harley raking in Spicewood, TX", tag: "Site Prep" },
+  { src: "/images/work/brixton-mulching-2.jpeg", alt: "Completed Forestry mulching project in Round Rock, Texas", tag: "Forestry Mulching" },
   { src: "/images/work/harley-rake-pic.jpeg", alt: "Harley rake attachment on a CAT 275 excavator", tag: "Equipment" },
   { src: "/images/work/king-rock-removal.jpeg", alt: "Rock removal project in Bertram, TX", tag: "Rock Crushing & Removal" },
   { src: "/images/work/harwood-mulching.JPEG", alt: "Completed forestry mulching project in Harwood, TX", tag: "Forestry Mulching" },
@@ -75,6 +76,8 @@ const allImages = [
   { src: "/images/work/dji_fly_20251022_072324_0022_1768263397042_photo.jpeg", alt: "Completed land clearing job in Spicewood, TX", tag: "Land Clearing" },
   { src: "/images/work/IMG_6405.jpeg", alt: "Completed erosion control job in Central Texas", tag: "Site Prep" },
   { src: "/images/work/275-pic-equipment.jpeg", alt: "CAT 275 excavator with brush grapple in Spicewood, TX", tag: "Equipment" },
+  { src: "/images/work/brixton-mulching-1.JPEG", alt: "Completed Forestry mulching project in Central Texas", tag: "Forestry Mulching" },
+  
 ];
 
 const tags = ["All", "Land Clearing", "Forestry Mulching", "Forestry Mulching Cleanup", "Rock Crushing & Removal", "Site Prep", "Demolition", "Driveways", "Equipment"];

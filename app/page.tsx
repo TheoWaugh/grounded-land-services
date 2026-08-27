@@ -180,6 +180,12 @@ const testimonials = [
     rating: 5,
     text: "GLS raked our hill country acreage to clean up brush and prep for grass. Looks smooth as can be now! Appreciate their time and flexibility. Job well done.",
   },
+    {
+    name: "XPERT LLC",
+    location: "Round Rock, Texas",
+    rating: 5,
+    text: "I am very happy; he did an excellent job. I recommend him — an excellent person.",
+  },
 
 ];
 

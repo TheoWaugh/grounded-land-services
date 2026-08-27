@@ -2300,35 +2300,160 @@ paragraphs: [
     metaDescription: "Professional utility trenching in Texas — precise excavation for water, electrical, gas, and communication line installation.",
     icon: "⚡",
     heroImage: "/images/official/utility-trenching.webp",
-    intro: "Utility trenching provides the critical underground pathway for water, electrical, gas, and communication lines. Getting the depth, width, and soil handling right the first time protects your systems from frost, surface pressure, and future damage — details that matter long after the trench is backfilled.",
+    intro: "Grounded Land Services provides professional utility trenching for residential, ranch, and commercial properties throughout Central Texas. We excavate trenches for underground water lines, electrical conduit, plumbing, communications, and other utility installations.",
     sections: [
-      {
-        heading: "Precision Matters",
+        {
+        heading: "Professional Utility Trenching",
         paragraphs: [
-          "Every utility trench needs to meet exact depth and width specifications required by local code and the utility provider's standards. Getting this wrong can mean costly rework, code violations, or damaged lines down the road. We use specialized excavation equipment to hit those specs consistently.",
+          "Utility trenching is an important part of preparing a property for underground utilities. A properly excavated trench provides the space needed for utility lines, conduit, and other underground infrastructure while giving the installation crew a workable path to complete their work.",
+          "Grounded Land Services provides trench excavation for a variety of residential, ranch, and commercial projects. We use our [excavator](/equipment) to efficiently dig trenches through rock, soil, clay, gravel, and other ground conditions commonly found throughout Central Texas.",
+          "We work from the project requirements provided by the utility or installation contractor to excavate the trench to the required location, depth, and width.",
+        ],
+          ctaButton: { label: "Get a Utility Trenching Estimate", href: "/contact?service=Utility%20Trenching#quote" },
+      },
+            {
+        heading: "Utility Trenching Applications",
+        paragraphs: [
+          "Underground utilities can require trenching across a variety of properties and project types. We provide the excavation needed to create a clear path for utility installation.",
+        ],
+        iconCards: [
+          { icon: "💧", title: "Water Lines", description: "Excavate trenches for underground water lines serving homes, shops, barns, ranch properties, and other structures." },
+          { icon: "⚡", title: "Electrical Conduit", description: "Prepare trenches for underground electrical conduit and power lines." },
+          { icon: "🚰", title: "Plumbing Lines", description: "Excavate for underground plumbing and other water or waste lines as required by the project." },
+          { icon: "📡", title: "Communications", description: "Create trench paths for underground communications, internet, and other low voltage utility lines." },
+          { icon: "🔥", title: "Propane & Fuel Lines", description: "Excavate trenches for underground propane and fuel lines when specified by the appropriate installation contractor." },
+          { icon: "🔌", title: "Utility Connections", description: "Dig trenches connecting existing utility infrastructure to new homes, buildings, shops, wells, tanks, and other structures." },
+        ],
+        iconCardsColumns: 3,
+      },
+            {
+        heading: "Trenching for Different Site Conditions",
+        paragraphs: [
+          "Not every property is easy to trench. Central Texas terrain can range from soft soil to hard, rocky ground, and utility routes may cross areas with existing vegetation, structures, or changing elevations.",
+        ],
+        scenarios: [
+          { icon: "🟤", title: "Soil & Clay", description: "Excavate through common Central Texas soils and clay to create the required trench for your utility project." },
+          { icon: "🪨", title: "Rocky Ground", description: "Work through areas containing limestone, caliche, and other rock that can make trenching more difficult." },
+          { icon: "⛰️", title: "Sloped Properties", description: "Follow utility routes across changing elevations and uneven terrain while working within the project requirements." },
+          { icon: "🌳", title: "Undeveloped Land", description: "Trench across wooded, brushy, or otherwise undeveloped areas where utilities need to reach new structures or other improvements." },
+          { icon: "🏡", title: "Existing Properties", description: "Work around existing homes, buildings, driveways, fences, and other features when adding or extending underground utilities." },
+          { icon: "📏", title: "Long Utility Runs", description: "Handle extended trenching projects across larger residential, ranch, and rural properties." },
         ],
       },
-      {
-        heading: "What We Trench For",
-        list: [
-          "Water lines", "Electrical service", "Gas lines",
-          "Communication and fiber lines", "Septic and drain lines", "Irrigation systems",
+            {
+        heading: "Why Proper Trenching Matters",
+        paragraphs: [
+          "The trench is the foundation of an underground utility installation. Proper excavation helps create a clear, consistent path for the utility contractor and can make the installation process more efficient.",
         ],
+        iconCards: [
+          { icon: "📏", title: "Proper Trench Depth", description: "Trenches that are too shallow can leave underground utilities vulnerable to damage from vehicles, equipment, landscaping, and normal property use. Excavating to the required depth helps provide the clearance and protection specified for the utility being installed." },
+          { icon: "🛤️", title: "Clear Utility Path", description: "A properly excavated trench creates a continuous route between the connection points, helping keep the installation organized." },
+          { icon: "🔧", title: "Easier Installation", description: "A clean, accessible trench gives the utility contractor a workable area for placing lines, conduit, and other underground infrastructure." },
+          { icon: "🏡", title: "Protect Existing Property", description: "Careful excavation helps minimize unnecessary disturbance around existing structures, driveways, landscaping, and other property features." },
+          { icon: "📋", title: "Efficient Project Planning", description: "Understanding the terrain, access, utility route, and excavation requirements before digging helps keep the project organized from the beginning." },
+          { icon: "✅", title: "Ready for the Next Step", description: "Once excavation is complete, the trench can be turned over to the appropriate utility or installation contractor for the next stage of the project." },
+        ],
+        iconCardsColumns: 3,
       },
-      {
-        heading: "Our Process",
+            {
+        heading: "Our Utility Trenching Process",
+        paragraphs: [
+          "Every trenching project is different. We evaluate the property, understand the utility route and project requirements, and use the appropriate equipment to complete the excavation.",
+        ],
         steps: [
-          { title: "Utility Locate", description: "Existing utilities are located and marked before any digging begins." },
-          { title: "Trenching", description: "Trenches are excavated to the exact depth and width required." },
-          { title: "Inspection Window", description: "Trenches are left open for inspection if required before backfill." },
-          { title: "Backfill & Grading", description: "Trenches are backfilled and compacted, with the surface graded back to level." },
+          { title: "Plan the Trench", description: "We review the utility route, required trench dimensions, site access, terrain, and existing features that could affect excavation." },
+          { title: "Excavate the Trench", description: "Using our excavator, we dig the trench to the required width and depth while following the planned utility route." },
+          { title: "Prepare for Installation", description: "We leave the trench ready for the utility or installation contractor to place the appropriate lines, conduit, or other infrastructure." },
+        ],
+        ctaButton: { label: "Get a Utility Trenching Estimate", href: "/contact?service=Utility%20Trenching#quote" },
+      },
+        {
+        heading: "Utility Trenching Cost Factors",
+        paragraphs: [
+          "The cost of utility trenching depends on the size and complexity of the excavation. Several factors can affect the amount of equipment time and labor required to complete the project.",
+        ],
+        iconCards: [
+          { icon: "📏", title: "Trench Length", description: "Longer utility runs require more excavation time and can increase the overall project cost." },
+          { icon: "📐", title: "Trench Depth & Width", description: "Deeper or wider trenches require more excavation and can increase the amount of material that needs to be handled." },
+          { icon: "🪨", title: "Ground Conditions", description: "Rock, limestone, caliche, and other difficult ground conditions can slow excavation and require additional equipment or attachments." },
+          { icon: "🚜", title: "Site Access", description: "Limited access can make equipment positioning and material handling more difficult, increasing the time required to complete the work." },
+          { icon: "⛰️", title: "Terrain", description: "Slopes, uneven ground, and changing elevations can make trench excavation more challenging." },
+          { icon: "🛤️", title: "Utility Route Complexity", description: "Routes with multiple turns, elevation changes, crossings, or obstacles can require more time and careful excavation than a straight utility run." },
+        ],
+        iconCardsColumns: 3,
+        ctaButton: { label: "Get a Utility Trenching Estimate", href: "/contact?service=Utility%20Trenching#quote" },
+      },
+            {
+        heading: "Serving Central Texas Property Owners",
+        subheading: "Utility Trenching Where You Need It",
+        paragraphs: [
+          "Grounded Land Services provides professional utility trenching throughout Central Texas for homeowners, ranch owners, builders, and contractors.",
+          "From short residential utility connections to long trench runs across larger rural properties, we bring the equipment and excavation capabilities needed to create the trench for your underground utility project.",
+        ],
+        listIntro: "We serve property owners throughout Central Texas including:",
+        list: [
+          { label: "Austin", href: "/service-areas" },
+          { label: "Bertram", href: "/service-areas" },
+          { label: "Burnet", href: "/service-areas" },
+          { label: "Dripping Springs", href: "/service-areas" },
+          { label: "Fredericksburg", href: "/service-areas" },
+          { label: "Georgetown", href: "/service-areas" },
+          { label: "Johnson City", href: "/service-areas" },
+          { label: "Kerrville", href: "/service-areas" },
+          { label: "Leander", href: "/service-areas" },
+          { label: "Liberty Hill", href: "/service-areas" },
+          { label: "Marble Falls", href: "/service-areas" },
+          { label: "New Braunfels", href: "/service-areas" },
+          { label: "Round Rock", href: "/service-areas" },
+          { label: "San Marcos", href: "/service-areas" },
+          { label: "Spicewood", href: "/service-areas" },
+        ],
+        listColumns: 4,
+        areaMapQuery: "Central Texas",
+        note: {
+          text: "Don't see your city?",
+          linkLabel: "Explore Our Service Areas",
+          href: "/service-areas",
+        },
+      },
+        {
+        heading: "Why Choose Grounded Land Services?",
+        paragraphs: [
+          "Choosing the right contractor for your utility trenching project can make the entire process easier. At [Grounded Land Services](/), we focus on providing clean, precise excavation that follows the requirements of your project. From the equipment we operate to the way we approach each jobsite, our goal is to leave you with a properly excavated trench ready for the next stage of installation.",
+          "From your first phone call to the completion of the excavation, we're committed to honest communication, dependable scheduling, and quality workmanship. We show up prepared, work carefully around your property, and take pride in doing the job right.",
+          "When you hire Grounded Land Services, you're choosing an excavation contractor that understands the importance of proper trenching and has the equipment and experience to handle utility excavation across Central Texas.",
+        ],
+        media: [
+          { type: "image", src: "/images/service-pics/why-choose-us.jpeg", alt: "Why choose Grounded Land Services" },
+        ],
+      },
+
+        {
+        heading: "Related Services",
+        paragraphs: [
+          "Utility trenching is often one part of a larger excavation or property development project. Explore our related services to see how we can help with the rest of your project.",
+        ],
+        relatedServices: [
+          { label: "Site Preparation", href: "/services/site-preparation" },
+          { label: "Grading", href: "/services/dirt-work-grading" },
+          { label: "Land Clearing", href: "/services/land-clearing" },
+          { label: "Forestry Mulching", href: "/services/forestry-mulching" },
+          { label: "Rock Removal", href: "/services/rock-cactus-removal" },
+          { label: "Driveway & Road Construction", href: "/services/gravel-driveways-roads" },
         ],
       },
     ],
-    faqs: [
-      { question: "Do you call in utility locates before digging?", answer: "Yes, existing utilities are always located and marked before trenching begins." },
-      { question: "Can you trench for multiple utility types at once?", answer: "Yes, we can coordinate trenching for water, electrical, and communication lines in a single project." },
-      { question: "Do you handle backfill and compaction too?", answer: "Yes, backfilling and proper compaction are included as part of the trenching process." },
+        faqs: [
+      { question: "What is utility trenching?", answer: "Utility trenching is the excavation of a narrow trench used to create a path for underground utility lines, conduit, plumbing, and other infrastructure." },
+      { question: "What types of utilities can you trench for?", answer: "We excavate trenches for water lines, electrical conduit, plumbing, communications, propane and fuel lines, and other underground utilities." },
+      { question: "How deep should a utility trench be?", answer: "Required trench depth depends on the type of utility, local requirements, and the specifications provided by the utility or installation contractor. We excavate according to the requirements of your project." },
+      { question: "Can you trench through rock?", answer: "Yes. Our excavator paired with a drum cutter or hammer can work through difficult Central Texas ground conditions, including limestone, caliche, and hard soil. Additional attachments may be required depending on the amount and type of rock encountered.", link: { label: "View Our Equipment", href: "/equipment" } },
+      { question: "Do you install utility lines?", answer: "We can install drainage pipe and electrical conduit as part of the project. Electrical connections and wiring are completed by the appropriate licensed electrician." },
+      { question: "Can you trench on a sloped property?", answer: "Yes. We can excavate utility trenches across sloped and uneven terrain while following the planned utility route and project requirements." },
+      { question: "Can you handle long utility runs?", answer: "Yes. We can handle longer trenching projects across residential, ranch, and rural properties." },
+      { question: "Do you locate existing utilities before digging?", answer: "Utility locating should be completed before excavation begins. The appropriate utility locating service should be contacted to identify existing underground utilities before work starts." },
+      { question: "How much does utility trenching cost?", answer: "The cost depends on trench length, depth and width, ground conditions, access, terrain, and the complexity of the utility route. We evaluate each project individually to provide an accurate estimate." },
+      { question: "Do you provide utility trenching throughout Central Texas?", answer: "Yes. Grounded Land Services provides utility trenching throughout our Central Texas service area.", link: { label: "Request a Free Quote", href: "/contact?service=Utility%20Trenching#quote" } },
     ],
     pricing: { range: "$8 – $25", unit: "per linear foot", note: "Pricing depends on trench depth, soil conditions, and utility type." },
   },
