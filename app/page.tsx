@@ -15,18 +15,18 @@ const services = [
   {
     title: "Land Clearing",
     desc: "Total site transformation — stump free, debris free, seed ready, and instantly mowable. Ideal for home builds, pasture expansion, and more.",
-    icon: "🏗️",
+    icon: "🌳",
     img: "/images/official/land-clearing.jpeg",
   },
   {
-    title: "Cedar Tree Removal",
-    desc: "Eliminate water-thieving invasive cedars consuming up to 30 gallons/day, restore pasture health, and create critical wildfire breaks.",
-    icon: "🌲",
-    img: "/images/official/cedar-removal.jpeg",
+    title: "Forestry Mulching Cleanup",
+    desc: "Take your mulched property from rough terrain to a smooth, finished surface — removing excess mulch, leftover stumps, and debris so your site is ready for planting, seeding, or construction.",
+    icon: "🧹",
+    img: "/images/service-pics/mulching-cleanup-square.jpeg",
   },
   {
-    title: "Rock & Cactus Removal",
-    desc: "Remove embedded rocks and invasive cactus — including Prickly Pear — that overrun pastures and make land dangerous for livestock, horses, and people.",
+    title: "Rock Removal",
+    desc: "Excavate surface rock, embedded stone, and limestone outcroppings that limit grazing, damage equipment, and stand in the way of construction.",
     icon: "🪨",
     img: "/images/official/cactus-rock-removal.jpeg",
   },
@@ -37,10 +37,10 @@ const services = [
     img: "/images/official/rock-crushing.jpeg",
   },
   {
-    title: "Fence Line Clearing",
-    desc: "Clean, accessible perimeter lines for new fence installation or maintenance of existing borders — protecting your investment and property visibility.",
-    icon: "🔒",
-    img: "/images/official/fence-line-clearing.jpeg",
+    title: "Demolition",
+    desc: "Tear down old structures and make room for your next project — from concrete pads and old driveways to outdated buildings, sheds, and pools.",
+    icon: "🏚️",
+    img: "/images/work/anderson-pool-demo.jpeg",
   },
 ];
 

@@ -1236,7 +1236,7 @@ paragraphs: [
         ],
         steps: [
           { title: "Evaluate the Property", description: "We assess the type, size, location, and amount of rock, along with site access and the desired result. From there, we determine the most appropriate equipment and approach for the project." },
-          { title: "Crush or Break the Rock", description: "Depending on the material and project, we can use the FAE rock crusher on our Cat 275, an Epiroc drum cutter on our Cat 323, or a hydraulic hammer to break down larger or harder rock." },
+          { title: "Crush or Break the Rock", description: "Depending on the material and project, we can use the FAE rock crusher on our Cat 275, an Epiroc drum cutter on our Cat 323, or a hydraulic hammer to break down larger rock." },
           { title: "Rework & Put the Material to Work", description: "When loose rock needs to be moved, we can relocate it to a planned driveway, road, or other improvement area before processing. Suitable material can then be reworked in place or incorporated into the project, while rock processed in place can help improve pasture, access, and overall property usability." },
         ],
         ctaButton: { label: "Get a Quote", href: "/contact?service=Rock%20Crushing#quote" },
@@ -2578,38 +2578,245 @@ pricing: { range: "$25 – $60", unit: "per linear foot", note: "Pricing depends
     metaDescription: "Professional rock removal in Texas — excavating surface rock and limestone outcroppings to make land safe, usable, and build-ready.",
     icon: "🪨",
     heroImage: "/images/official/cactus-rock-removal.jpeg",
-    intro: "Central Texas is known for its rocky, limestone-heavy terrain — great for scenery, tough on land usability. Rock removal excavates surface rock, embedded stone, and limestone outcroppings that limit grazing, damage equipment, and stand in the way of construction, leaving you with safe, workable ground.",
+    intro: "Rocky terrain can make a property difficult to access, maintain, and safely use. Grounded Land Services provides professional rock removal throughout Central Texas, removing large surface rocks, boulders, and embedded limestone from ranches, homesites, driveways, roads, and construction areas. By clearing problematic rock, we can help transform difficult, rocky property into cleaner, safer, and more accessible space.",
     sections: [
-      {
-        heading: "When Rock Removal Is Needed",
+        {
+        heading: "What Is Rock Removal?",
         paragraphs: [
-          "Exposed rock and limestone shelves can block fence installation, damage mowers and tractors, and create serious footing hazards for livestock. For construction projects, buried rock often has to be excavated before foundations, septic systems, or utilities can be installed.",
+          "Rock removal is the process of excavating, loosening, lifting, relocating, or removing unwanted rocks, boulders, and exposed or embedded limestone. Grounded Land Services uses specialized [equipment](/equipment) and attachments to remove rock that makes a property difficult to access, maintain, grade, or safely use.",
+          "Across Central Texas, rocky terrain is common on residential properties, ranches, roads, pastures, and construction sites. Removing problematic rock can create cleaner, safer, and more accessible space while preparing the property for its next use.",
+        ],
+        subheading: "More Than Just Moving Rocks",
+        scenarios: [
+          { icon: "✅", title: "Safer and Easier to Maintain", description: "Reduce hazards and make routine property maintenance simpler." },
+          { icon: "🚜", title: "Better Access", description: "Improve access for trucks, equipment, and vehicles." },
+          { icon: "🛣️", title: "More Usable Space", description: "Open up space for driveways, roads, and building sites." },
+          { icon: "🏡", title: "Fewer Obstacles", description: "Remove obstacles around homes, fences, and other property features." },
+        ],
+                iconCardsColumns: 3,
+        compareSlider: {
+          beforeSrc: "/images/service-pics/rock-removal-before.jpeg",
+          beforeLabel: "Before",
+          afterSrc: "/images/service-pics/rock-removal-after.jpeg",
+          afterLabel: "After",
+        },
+      },
+            {
+        heading: "Professional Rock Removal Solutions",
+        paragraphs: [
+          "Every rock removal project is different. Some rocks can be excavated and relocated, while larger or embedded rock may require additional equipment to break it loose and remove it. Grounded Land Services evaluates each property to determine the most practical approach based on the rock, terrain, access, and your goals for the property.",
+        ],
+        iconCards: [
+          { icon: "🚜", title: "Excavate & Relocate", description: "Large surface rocks and boulders can often be excavated, and relocated to another area of the property. This is a practical option when you want to clear an area while keeping the rock on site." },
+          { icon: "🏗️", title: "Excavate & Remove", description: "When rock needs to be completely cleared from an area, we can excavate and remove it from the property. This is commonly needed for homesites, driveways, roads, building pads, and other areas requiring a clean working surface." },
+          { icon: "⛏️", title: "Crush & Reuse", description: "Excavated rock doesn't always have to be hauled away. When the material is suitable, we provide our [rock crushing](/services/rock-crushing) service to process it into usable aggregate for applications such as driveways and ranch roads. This can turn unwanted rock into a useful resource for your property." },
+        ],
+        iconCardsColumns: 3,
+        note: {
+          text: "Have rock you need removed? We'll evaluate your property and recommend the best approach for your project.",
+          linkLabel: "Get a Quote",
+          href: "/contact?service=Rock%20Removal#quote",
+        },
+      },
+                  {
+        heading: "Types of Rock We Remove",
+        paragraphs: [
+          "Central Texas properties can have everything from loose surface rock to large boulders and embedded limestone. Grounded Land Services can evaluate the material on your property and determine the best approach for removing it.",
+        ],
+        iconCards: [
+          { icon: "🪨", title: "Large Boulders", description: "Remove large surface boulders that interfere with access, construction, landscaping, or property maintenance." },
+          { icon: "🗿", title: "Surface Rock", description: "Remove loose and shallow surface rock from pastures, lots, roadsides, and other areas using our high flow [Harley rake](/equipment#harley-rake)." },
+          { icon: "⛏️", title: "Embedded Rock", description: "Excavate rock that is partially or deeply buried and difficult to remove with standard equipment." },
+          { icon: "🏔️", title: "Limestone", description: "Remove exposed or embedded limestone commonly found throughout the rocky terrain of Central Texas." },
+          { icon: "🪨", title: "Rocky Outcrops", description: "Clear sections of exposed rock that limit access or prevent an area from being used as intended." },
+          { icon: "🏗️", title: "Construction Rock", description: "Remove rock uncovered during excavation, grading, or site preparation that needs to be cleared from the work area." },
+        ],
+        iconCardsColumns: 3,
+        media: [
+          { type: "image", src: "/images/service-pics/rock-removal-rake.jpeg", alt: "Rock removal with rake attachment in Central Texas" },
         ],
       },
-      {
-        heading: "Common Rock Removal Projects",
-        list: [
-          "Pasture and grazing land clearing", "Building pad preparation",
-          "Driveway and road excavation", "Septic system site prep",
-          "Fence line rock clearing", "Large boulder extraction",
+        {
+        heading: "When Do You Need Rock Removal?",
+        paragraphs: [
+          "Rock removal can make a major difference when rocks and boulders limit how you can access, maintain, or use your property. From preparing a homesite to opening up a ranch road, removing problematic rock can turn difficult terrain into functional, accessible space.",
+        ],
+        scenarios: [
+          { icon: "🏡", title: "Preparing a Homesite", description: "Remove rock that interferes with building pads, foundations, grading, or other site preparation." },
+          { icon: "🛣️", title: "Building or Improving a Driveway", description: "Clear large rocks and embedded limestone from planned driveway routes to create a cleaner surface for construction." },
+          { icon: "🚜", title: "Opening Up Roads & Access", description: "Remove rocky obstacles that make roads, ranch trails, and property access difficult for trucks, equipment, and vehicles." },
+          { icon: "🐄", title: "Improving Pasture & Ranch Land", description: "Clear problematic rock from areas used for grazing, equipment access, fencing, or general property maintenance." },
+          { icon: "💧", title: "Preparing for Drainage & Utilities", description: "Remove rock that interferes with drainage systems, utility trenches, electrical conduit, or other underground installations." },
+          { icon: "⚠️", title: "Making Property Safer", description: "Remove rocks and boulders that create hazards for people, vehicles, livestock, and equipment or make routine property maintenance more difficult." },
+        ],
+        media: [
+          { type: "image", src: "/images/work/rock-removal-pic-2.jpeg", alt: "Completed rock removal job in Bee Cave, Texas" },
         ],
       },
-      {
-        heading: "Our Process",
+
+            {
+        heading: "Rock Removal vs. Rock Crushing",
+        paragraphs: [
+          "Not every rock removal project needs the same solution. Depending on the type and quantity of rock on your property, it may make more sense to remove it, relocate it, or process it into usable material.",
+        ],
+        comparison: {
+          left: {
+            heading: "Rock Removal",
+            listIntro: "Rock removal is the right choice when the goal is to clear unwanted rock from a specific area.",
+            list: [
+              "Remove large rocks and boulders",
+              "Excavate embedded limestone",
+              "Clear rock from homesites and building areas",
+              "Open up space for driveways and roads",
+              "Improve property access and maintenance",
+              "Relocate usable rock elsewhere on the property",
+              "Haul away rock that is no longer needed",
+            ],
+          },
+          right: {
+            heading: "Rock Crushing",
+            listIntro: "Rock crushing is a good option when suitable rock can be processed and reused on the property.",
+            list: [
+              "Crush suitable limestone and rock",
+              "Create usable aggregate on-site",
+              "Build or improve driveways and ranch roads",
+              "Reduce the need to haul material off-site",
+              "Turn unwanted rock into a useful resource",
+              "Reuse material already available on your property",
+            ],
+          },
+        },
+        media: [
+          { type: "image", src: "/images/official/cactus-rock-removal.jpeg", alt: "Rock removal in Central Texas" }
+        ],
+        subheading: "Remove the Rock. Reuse the Material.",
+        closingParagraphs: [
+          "In some cases, the best solution is a combination of both services. We can excavate rock from an area where it's causing a problem, then use our rock crushing process to create suitable material into aggregate for a driveway, ranch road, or other application.",
+          "Instead of paying to haul usable rock away, you may be able to turn material already on your property into something useful.",
+        ],
+        note: {
+          text: "",
+          linkLabel: "Explore Our Rock Crushing Services",
+          href: "/services/rock-crushing",
+        },
+      },
+        {
+        heading: "Why Rock Removal Can Be Challenging in Central Texas",
+        paragraphs: [
+          "Central Texas is known for its rocky terrain and limestone geology. What makes the Hill Country beautiful can also make certain properties difficult to access, maintain, grade, and develop.",
+          "Rock removal can become more challenging when large or deeply embedded rock is combined with steep terrain, limited access, trees, fences, structures, or other obstacles.",
+        ],
+        scenarios: [
+          { icon: "🪨", title: "Hard Limestone", description: "Much of Central Texas contains hard limestone that can be difficult to excavate with standard equipment. Larger or deeply embedded formations may require hammering to break the material loose before it can be removed." },
+          { icon: "⛏️", title: "Large & Embedded Rock", description: "Some rocks extend well below the surface, making them substantially more difficult to remove than loose surface rock. The size, depth, and location of the rock all affect the equipment and approach required." },
+          { icon: "⛰️", title: "Sloped & Uneven Terrain", description: "Hillsides, uneven ground, and rocky terrain can make equipment access and safe excavation more difficult. Proper planning is important when working on slopes or challenging ground conditions." },
+          { icon: "🚧", title: "Limited Access", description: "Narrow gates, fences, trees, structures, and other property features can restrict equipment access to the work area. We evaluate access before determining the most practical approach for the project." },
+          { icon: "🏡", title: "Working Around Existing Property", description: "Rock removal may need to be performed near homes, driveways, fences, trees, utilities, or other features that need to remain in place. Careful equipment operation and planning help minimize unnecessary disturbance to the surrounding property." },
+        ],
+      },
+            {
+        heading: "Our Rock Removal Process",
+        paragraphs: [
+          "Every property has different rock, terrain, and access conditions, so we tailor our approach to the project.",
+        ],
         steps: [
-          { title: "Site Assessment", description: "We evaluate rock size, depth, and density across the project area." },
-          { title: "Excavation", description: "Surface and embedded rock is excavated using equipment matched to the job." },
-          { title: "Material Handling", description: "Removed rock can be hauled off-site, or crushed on-site into reusable aggregate." },
-          { title: "Final Grading", description: "The cleared area is leveled and left ready for its next use." },
+          { title: "Evaluate & Plan", description: "We assess the rock, terrain, site access, and your goals for the property to determine the most practical equipment and removal approach." },
+          { title: "Remove & Process", description: "We use the appropriate heavy equipment and attachments to excavate, break, relocate, or remove the rock. When suitable, excavated material can also be processed with our rock crusher for reuse on the property." },
+          { title: "Clean Up", description: "Once the rock is removed, we clean up the work area and leave it ready for its next use, whether that's seeding, construction, improved access, or general property maintenance." },
+        ],
+        ctaButton: { label: "Get a Rock Removal Estimate", href: "/contact?service=Rock%20Removal#quote" },
+      },
+            {
+        heading: "Serving Central Texas Property Owners",
+        paragraphs: [
+          "[Grounded Land Services](/) provides professional rock removal throughout Central and South-Central Texas. From the rocky terrain of the Texas Hill Country to residential and ranch properties throughout the Austin area, we help property owners remove rock that limits access, maintenance, construction, and everyday use.",
+          "We're equipped to work on a variety of Central Texas properties, including ranches, rural acreage, homesites, driveways, roads, pastures, and construction sites.",
+        ],
+        listIntro: "Our rock removal services are available throughout Central Texas, including:",
+        list: [
+          { label: "Austin", href: "/service-areas" },
+          { label: "Bee Cave", href: "/service-areas" },
+          { label: "Bertram", href: "/service-areas" },
+          { label: "Burnet", href: "/service-areas" },
+          { label: "Dripping Springs", href: "/service-areas" },
+          { label: "Georgetown", href: "/service-areas" },
+          { label: "Johnson City", href: "/service-areas" },
+          { label: "Leander", href: "/service-areas" },
+          { label: "Liberty Hill", href: "/service-areas" },
+          { label: "Llano", href: "/service-areas" },
+          { label: "Marble Falls", href: "/service-areas" },
+          { label: "Round Rock", href: "/service-areas" },
+          { label: "San Marcos", href: "/service-areas" },
+          { label: "Spicewood", href: "/service-areas" },
+          { label: "Wimberley", href: "/service-areas" },
+        ],
+        listColumns: 4,
+        areaMapQuery: "Central Texas",
+        note: {
+          text: "Don't see your area listed? We may still be able to help. Contact us to discuss your property and project.",
+          linkLabel: "View All Service Areas",
+          href: "/service-areas",
+        },
+      },
+            {
+        heading: "Why Choose Grounded Land Services?",
+        paragraphs: [
+          "Choosing the right contractor for your rock removal project can make a major difference in the finished result. At [Grounded Land Services](/), we focus on safely and efficiently removing problematic rocks, boulders, and limestone while creating cleaner, more accessible space. From surface rock to larger embedded formations, we use the right equipment and approach for the conditions of your property.",
+          "From your first phone call to the completion of the project, we're committed to honest communication, dependable scheduling, and quality workmanship. We show up prepared, work carefully around your property, and take pride in leaving each jobsite clean and ready for its next use.",
+          "When you hire Grounded Land Services, you're choosing a rock removal contractor that understands Central Texas terrain and has the equipment and experience to turn difficult, rocky property into safer, more accessible, and more usable space.",
+        ],
+        media: [
+          { type: "image", src: "/images/service-pics/why-choose-us.jpeg", alt: "Why choose Grounded Land Services for rock removal" },
         ],
       },
+            {
+        heading: "Related Services",
+        paragraphs: [
+          "Rock removal is often part of a larger land clearing, excavation, or site preparation project. Explore our related services to see how we can help prepare your property from start to finish.",
+        ],
+        relatedServices: [
+          { label: "Land Clearing", href: "/services/land-clearing" },
+          { label: "Forestry Mulching", href: "/services/forestry-mulching" },
+          { label: "Site Preparation", href: "/services/site-preparation" },
+          { label: "Grading", href: "/services/dirt-work-grading" },
+          { label: "Rock Crushing", href: "/services/rock-crushing" },
+          { label: "Cedar Tree Removal", href: "/services/cedar-tree-removal" },
+        ],
+      },
+            {
+        heading: "Rock Removal for Different Property Types",
+        paragraphs: [
+          "Rock can create challenges on almost any type of property. Whether you're preparing land for construction or simply trying to make a rocky property safer and easier to access, Grounded Land Services can tailor the removal approach to your property's needs.",
+        ],
+        iconCards: [
+          { icon: "🏡", title: "Residential Properties", description: "Remove large rocks and boulders from homesites, yards, driveways, and other areas where rock interferes with construction, access, or maintenance." },
+          { icon: "🐄", title: "Ranches & Farms", description: "Clear problematic rock from pastures, ranch roads, fence lines, equipment paths, and other areas of working ranch and agricultural properties." },
+          { icon: "🏗️", title: "Construction Sites", description: "Remove rock encountered during site preparation, excavation, grading, foundation work, and other construction projects." },
+          { icon: "🛣️", title: "Roads & Driveways", description: "Clear surface and embedded rock from planned roadways, driveways, entrances, and access routes to create cleaner, more usable paths." },
+          { icon: "🦌", title: "Recreational Properties", description: "Remove rocky obstacles from hunting areas, trails, campsites, ATV routes, and other recreational areas to make the property easier and safer to navigate." },
+          { icon: "🏢", title: "Commercial Properties", description: "Prepare commercial properties for construction, grading, parking areas, access roads, drainage, and other site development needs by removing problematic rock." },
+        ],
+        iconCardsColumns: 3,
+      },
     ],
-    faqs: [
-      { question: "Can removed rock be reused instead of hauled away?", answer: "Yes — we can crush much of the removed rock into usable aggregate for driveways, roads, or building pads." },
-      { question: "Do you remove large boulders?", answer: "Yes, our equipment handles everything from surface stone to large embedded boulders." },
-      { question: "Is rock removal required before building a home?", answer: "Often, yes — especially for foundations, septic systems, and areas needing stable, level ground." },
+        faqs: [
+      { question: "What is rock removal?", answer: "Rock removal is the process of excavating, breaking, relocating, or removing unwanted rocks, boulders, and embedded limestone from a property. The goal is to create safer, cleaner, and more accessible space for construction, access, maintenance, or general property use." },
+      { question: "What types of rock can you remove?", answer: "We can remove large boulders, surface rock, embedded rock, exposed limestone, rocky outcrops, and rock encountered during excavation or site preparation. The appropriate removal method depends on the size, depth, location, and quantity of the material." },
+      { question: "Can you remove large boulders?", answer: "Yes. Large boulders can be excavated and relocated or removed from the property. The size and location of the boulder determine the equipment and approach required." },
+      { question: "Can you remove embedded limestone?", answer: "Yes. Deeply embedded limestone may require specialized excavation attachments such as a drum cutter to break the material loose before it can be excavated and removed.", link: { label: "View Our Equipment", href: "/equipment" } },
+      { question: "Can you remove surface rock?", answer: "Yes. Our high flow Harley rake can be used to gather and windrow loose and shallow surface rock, helping leave the ground cleaner and easier to maintain." },
+      { question: "What happens to the rock after you remove it?", answer: "Depending on the project, rock can be relocated to another area of the property, hauled away, or processed for reuse. If the material is suitable, we can use our FAE rock crusher attachment to turn excavated rock into usable aggregate.", link: { label: "Rock Crushing", href: "/services/rock-crushing" } },
+      { question: "Can you turn excavated rock into a driveway?", answer: "In some cases, yes. Suitable excavated rock can be processed with our FAE rock crusher attachment and used as aggregate for driveways, ranch roads, and other applications. The material must be suitable for crushing and the project must have appropriate site conditions." },
+      { question: "Do you haul away removed rock?", answer: "Rock can be loaded and hauled away when disposal is needed. Hauling costs depend on the amount of material and the project's location." },
+      { question: "Can rock removal make my property safer?", answer: "Yes. Removing large rocks and boulders can eliminate obstacles and hazards for people, vehicles, livestock, and equipment while making the property easier to access and maintain." },
+      { question: "Can rock removal improve property access?", answer: "Yes. Removing problematic rock from roads, driveways, trails, and equipment paths can turn difficult to access areas into cleaner and more usable property." },
+      { question: "Can rock removal be combined with land clearing?", answer: "Yes. Rock removal can be incorporated into larger land clearing or site preparation projects when rock is preventing an area from being fully cleared, accessed, or prepared.", link: { label: "Land Clearing", href: "/services/land-clearing" } },
+      { question: "How much does rock removal cost?", answer: "$1,750–$6,000 per acre, but pricing varies based on the size and quantity of rock, how deeply it is embedded, site accessibility, terrain, equipment requirements, hauling, and the desired finished result. We provide customized estimates based on the specific property and project." },
+      { question: "How long does rock removal take?", answer: "Project timelines vary depending on the amount and type of rock, accessibility, terrain, and removal method. Smaller projects may be completed quickly, while larger or deeply embedded rock can require more time and equipment." },
+      { question: "Do you provide free rock removal estimates?", answer: "Yes. Contact Grounded Land Services to discuss your project and schedule a free estimate.", link: { label: "Request a Free Quote", href: "/contact?service=Rock%20Removal#quote" } },
+      { question: "What areas do you serve for rock removal?", answer: "Grounded Land Services provides rock removal throughout Central and South-Central Texas, including the Austin metro, Texas Hill Country, and surrounding areas. Availability depends on the project location and scope.", link: { label: "View Service Areas", href: "/service-areas" } },
     ],
-    pricing: { range: "$1,500 – $6,000", unit: "per acre", note: "Pricing depends on rock size, depth, and density across the property." },
+    pricing: { range: "$1,750 – $6,000", unit: "per acre", note: "Pricing depends on rock size, depth, and density across the property." },
   },
 
   "right-of-way-clearing": {

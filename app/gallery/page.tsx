@@ -77,7 +77,7 @@ const allImages = [
   { src: "/images/work/IMG_6405.jpeg", alt: "Completed erosion control job in Central Texas", tag: "Site Prep" },
   { src: "/images/work/275-pic-equipment.jpeg", alt: "CAT 275 excavator with brush grapple in Spicewood, TX", tag: "Equipment" },
   { src: "/images/work/brixton-mulching-1.JPEG", alt: "Completed Forestry mulching project in Central Texas", tag: "Forestry Mulching" },
-  
+  { src: "/images/work/rock-removal-pic-2.jpeg", alt: "Completed rock removal job in Bee Cave, Texas", tag: "Rock Crushing & Removal" },
 ];
 
 const tags = ["All", "Land Clearing", "Forestry Mulching", "Forestry Mulching Cleanup", "Rock Crushing & Removal", "Site Prep", "Demolition", "Driveways", "Equipment"];
