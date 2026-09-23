@@ -15,6 +15,7 @@ export default function ServiceMedia({ items }: { items: ServiceMediaItem[] }) {
                 alt={item.alt ?? ""}
                 fill
                 className="object-cover"
+                style={{ objectPosition: item.position ?? "center" }}
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
               {item.caption && (

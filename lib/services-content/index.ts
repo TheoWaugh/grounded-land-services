@@ -2501,37 +2501,136 @@ paragraphs: [
     metaDescription: "Professional site cleanup in Texas — post-construction debris removal and land restoration for a polished, ready-to-use finish.",
     icon: "✨",
     heroImage: "/images/official/site-cleanup.jpeg",
-    intro: "The final step of any successful project is a thorough site cleanup. We turn a cluttered, post-construction area into a pristine, move-in-ready property — removing wood scraps and metal debris, restoring the natural grade, and smoothing out equipment ruts left behind.",
+        intro: "The final step of any successful project is a thorough site cleanup. We turn cluttered, post-construction areas into clean, usable properties by removing wood scraps, metal debris, loose rock, and other leftover materials while smoothing ruts and preparing the ground for the next step.",
     sections: [
-      {
-        heading: "Finishing the Job Right",
+           {
+        heading: "What Is Site Cleanup?",
         paragraphs: [
-          "A great build deserves a great finish. Site cleanup closes out a project properly, restoring the land around a finished structure so it's genuinely ready for landscaping, move-in, or immediate use — not left looking like a construction zone.",
+          "Site cleanup is the process of cleaning and preparing a property after construction, excavation, demolition, or other major site work. It involves removing leftover construction debris, loose rock, excess material, and other job site remnants while addressing ruts, rough ground, and disturbed soil.",
+          "At Grounded Land Services, we use our [Harley rake](/equipment#harley-rake) and [Cat 275](/equipment#cat-275) to clean up the surface and leave the site more level, usable, and ready for the next phase — whether that means landscaping, seeding, sod, or continued site work.",
+        ],
+        media: [
+          { type: "image", src: "/images/service-pics/IMG_2911.jpeg", alt: "Site cleanup project in Central Texas" },
+        ],
+        ctaButton: { label: "Get a Quote", href: "/contact?service=Site%20Cleanup#quote" },
+      },
+       {
+        heading: "What We Clean Up",
+        paragraphs: [
+          "Construction and excavation can leave behind more than just dirt. Our site cleanup service is designed to address the loose materials, debris, and rough ground left behind after the main work is complete.",
+        ],
+        iconCards: [
+          { icon: "🪵", title: "Wood Scraps & Construction Debris", description: "Remove leftover lumber, scrap wood, and other construction materials from the site." },
+          { icon: "🔩", title: "Metal & Miscellaneous Debris", description: "Clear metal scraps and other miscellaneous job site debris left behind after construction." },
+          { icon: "🪨", title: "Loose Rock & Surface Material", description: "Remove loose rock and surface material that's left scattered across the property." },
+          { icon: "🟤", title: "Excess Dirt & Disturbed Soil", description: "Address excess dirt piles and disturbed soil left behind during excavation or construction." },
+          { icon: "🚜", title: "Equipment Ruts & Uneven Areas", description: "Smooth out ruts and uneven ground created by equipment traffic during the project." },
+          { icon: "📐", title: "Rough or Compacted Areas", description: "Rework rough or compacted ground so the property is more level and usable." },
+        ],
+        iconCardsColumns: 3,
+      },
+            {
+        heading: "Why Our Harley Rake Works So Well",
+        paragraphs: [
+          "Our [Harley rake](/equipment#harley-rake) is an effective way to turn rough, disturbed ground into a clean, workable surface after construction. It allows us to work through the soil, break up rough areas, collect smaller debris and loose rock, and smooth the surface for a cleaner final finish.",
+          "The result is a clean, more uniform surface that looks finished and gives you a better foundation for landscaping, seeding, laying sod, or moving forward with the next stage of your project.",
+        ],
+        media: [
+          { type: "image", src: "/images/service-pics/choose-traditional.jpeg", alt: "Site cleanup with Harley rake in Central Texas" },
         ],
       },
-      {
-        heading: "What's Included",
-        list: [
-          "Wood and metal debris removal", "Equipment rut leveling",
-          "Natural grade restoration", "Construction material disposal",
-          "Final soil smoothing", "Pre-landscaping prep",
+            {
+        heading: "When You Need Site Cleanup",
+        paragraphs: [
+          "Site cleanup is often the final step between completing the main work and having a property ready to use. You may need professional site cleanup:",
         ],
+        scenarios: [
+          { icon: "🏡", title: "After Building a New Home or Structure", description: "Clean up the property once construction is complete." },
+          { icon: "🚧", title: "After Excavation or Foundation Work", description: "Address disturbed soil and rough ground left behind from excavation." },
+          { icon: "🏚️", title: "After Demolition or Removal Work", description: "Clean up debris and rough ground following demolition." },
+          { icon: "⚡", title: "After Utility Installation or Trenching", description: "Restore the surface after utility lines or trenches have been installed." },
+          { icon: "🚜", title: "Construction Has Left Ruts, Rock & Debris", description: "Address rough ground, ruts, and leftover material from a completed project." },
+          { icon: "🌱", title: "Before Landscaping, Seeding, or Sod", description: "Prepare a clean, level surface before the next phase of your project." },
+        ],
+        closingParagraphs: [
+          "Whether you need a quick cleanup or more extensive ground preparation, we can help get the property looking and working the way it should.",
+        ],
+        ctaButton: { label: "Get a Quote", href: "/contact?service=Site%20Cleanup#quote" },
       },
-      {
-        heading: "Our Process",
+            {
+        heading: "Our Site Cleanup Process",
         steps: [
-          { title: "Site Walk", description: "We assess remaining debris and areas needing restoration." },
-          { title: "Debris Removal", description: "Leftover materials are cleared and hauled or disposed of appropriately." },
-          { title: "Grade Restoration", description: "Ruts and disturbed soil are leveled and smoothed to a clean finish." },
+          { title: "Assess the Site", description: "We evaluate the condition of the property, identify leftover debris and rough areas, and determine the equipment and approach needed to complete the cleanup." },
+          { title: "Clean & Prepare", description: "We remove loose debris and materials while using our Harley rake to work the surface, address ruts and rough areas, and create a more consistent finish." },
+          { title: "Final Cleanup", description: "We make a final pass over the site to ensure the work area is clean, accessible, and ready for whatever comes next." },
+        ],
+        ctaButton: { label: "Get a Quote", href: "/contact?service=Site%20Cleanup#quote" },
+      },
+      {
+        heading: "Serving Central Texas Property Owners",
+        subheading: "Site Cleanup Where You Need It",
+        paragraphs: [
+          "Grounded Land Services provides professional site cleanup throughout Central Texas for homeowners, ranch owners, builders, and contractors.",
+        ],
+        listIntro: "We serve property owners throughout Central Texas including:",
+        list: [
+          { label: "Austin", href: "/service-areas" },
+          { label: "Bertram", href: "/service-areas" },
+          { label: "Burnet", href: "/service-areas" },
+          { label: "Dripping Springs", href: "/service-areas" },
+          { label: "Fredericksburg", href: "/service-areas" },
+          { label: "Georgetown", href: "/service-areas" },
+          { label: "Johnson City", href: "/service-areas" },
+          { label: "Kerrville", href: "/service-areas" },
+          { label: "Leander", href: "/service-areas" },
+          { label: "Liberty Hill", href: "/service-areas" },
+          { label: "Marble Falls", href: "/service-areas" },
+          { label: "New Braunfels", href: "/service-areas" },
+          { label: "Round Rock", href: "/service-areas" },
+          { label: "San Marcos", href: "/service-areas" },
+          { label: "Spicewood", href: "/service-areas" },
+        ],
+        listColumns: 4,
+        areaMapQuery: "Central Texas",
+        note: {
+          text: "Don't see your city?",
+          linkLabel: "Explore Our Service Areas",
+          href: "/service-areas",
+        },
+      },
+      {
+        heading: "Why Choose Grounded Land Services?",
+        paragraphs: [
+          "Site cleanup is more than simply picking up debris. The goal is to leave the property with a clean, usable surface that is ready for the next stage of the project.",
+          "At [Grounded Land Services](/),, we bring the right equipment, experienced operators, and attention to detail to every cleanup job. From removing leftover materials to smoothing rough, disturbed ground, we focus on leaving your property with a professional finished result.",
+        ],
+        media: [
+          { type: "image", src: "/images/service-pics/why-choose-us.jpeg", alt: "Why choose Grounded Land Services" },
+        ],
+      },
+            {
+        heading: "Related Services",
+        paragraphs: [
+          "Site cleanup often goes hand in hand with other land clearing and site development services. If your project requires more than final cleanup, Grounded Land Services also provides:",
+        ],
+        relatedServices: [
+          { label: "Site Preparation", href: "/services/site-preparation" },
+          { label: "Dirt Work & Grading", href: "/services/dirt-work-grading" },
+          { label: "Demolition", href: "/services/demolition" },
+          { label: "Land Clearing", href: "/services/land-clearing" },
+          { label: "Utility Trenching", href: "/services/utility-trenching" },
+          { label: "Rock Removal", href: "/services/rock-removal" },
         ],
       },
     ],
-    faqs: [
-      { question: "What kind of debris do you remove?", answer: "Wood scraps, metal, leftover building materials, and general construction debris." },
-      { question: "Can you fix ruts left by construction equipment?", answer: "Yes, leveling and smoothing disturbed soil is a core part of site cleanup." },
-      { question: "Is site cleanup done before or after landscaping?", answer: "Before — it prepares the ground so landscaping can begin on a clean, level surface." },
+        faqs: [
+      { question: "What does construction site cleanup include?", answer: "Construction site cleanup can include removing leftover wood, metal, loose rock, excess materials, small debris, and other remnants left behind after construction or site work. We can also address ruts, rough ground, and disturbed soil." },
+      { question: "Can you clean up a site after another contractor finishes?", answer: "Yes. We can clean and prepare properties after builders, excavators, demolition contractors, utility contractors, and other site work has been completed." },
+      { question: "Can a Harley rake remove construction debris?", answer: "A Harley rake is effective for working through soil, collecting smaller debris and loose rock, and smoothing disturbed ground. Larger or unsuitable debris may require separate removal methods.", link: { label: "View Our Equipment", href: "/equipment" } },
+      { question: "Can you prepare the site for sod or seeding?", answer: "Yes. Site cleanup can include smoothing and conditioning disturbed ground to create a more consistent surface for sod, seed, landscaping, or other finishing work." },
+      { question: "Do you haul away construction debris?", answer: "The scope depends on the type and amount of debris on the property. We can evaluate the site and determine the most practical approach for cleanup and removal.", link: { label: "Request a Free Quote", href: "/contact?service=Site%20Cleanup#quote" } },
     ],
-    pricing: { range: "$800 – $3,500", unit: "per job", note: "Pricing depends on debris volume and the extent of grade restoration needed." },
+    pricing: { range: "$1,750 – $2,500+", unit: "per job", note: "Pricing depends on debris volume and the extent of grade restoration needed." },
   },
 
   "retaining-walls": {
@@ -2826,35 +2925,157 @@ pricing: { range: "$25 – $60", unit: "per linear foot", note: "Pricing depends
     heroImage: "/images/official/underbrushing.jpeg",
     intro: "Right-of-way clearing keeps the corridors that matter most — access roads, utility lines, pipeline easements, and property boundaries — open, safe, and accessible. Whether it's a single driveway easement or miles of utility corridor, we clear vegetation efficiently while respecting the surrounding land.",
     sections: [
-      {
-        heading: "Why Right-of-Way Clearing Matters",
+            {
+        heading: "What Is Right-of-Way Clearing?",
         paragraphs: [
-          "Overgrown right-of-ways create safety hazards, restrict access for maintenance crews and emergency vehicles, and can violate easement agreements or utility company requirements. Regular clearing keeps these corridors compliant and functional.",
+          "Right-of-way clearing, also known as ROW clearing, is the removal of trees, brush, and other vegetation from a defined corridor to maintain access for utilities, roads, infrastructure, property access, or other projects. A right-of-way may be newly established or an existing corridor that has become overgrown and difficult to access.",
+          "[Grounded Land Services](/) clears vegetation and other obstructions to open these corridors, improve access, and create a manageable path for construction, maintenance, or ongoing property use.",
         ],
       },
-      {
-        heading: "Common Applications",
+        {
+        heading: "Where We Provide Right-of-Way Clearing",
+        paragraphs: [
+          "Right-of-way clearing can be needed anywhere a defined corridor needs to remain open, accessible, and manageable. Grounded Land Services provides clearing for:",
+        ],
+        scenarios: [
+          { icon: "⚡", title: "Utility Easements", description: "Clear corridors for power lines, pipelines, and other utility infrastructure." },
+          { icon: "🛣️", title: "Access Roads & Corridors", description: "Open and maintain access roads across rural and ranch properties." },
+          { icon: "📏", title: "Property Right-of-Ways", description: "Clear defined property right-of-ways for access or boundary purposes." },
+          { icon: "🔒", title: "Fence Lines", description: "Open corridors along fence lines that have become overgrown or difficult to access." },
+          { icon: "🚧", title: "Construction Access", description: "Clear temporary or permanent access corridors for construction projects." },
+          { icon: "🐄", title: "Rural & Ranch Corridors", description: "Maintain long-distance corridors across larger rural and ranch properties." },
+          { icon: "🔄", title: "Existing ROW Maintenance", description: "Reclaim right-of-ways that have become overgrown since they were last cleared." },
+          { icon: "🏗️", title: "Utility & Infrastructure Projects", description: "Clear corridors needed for new utility or infrastructure installations." },
+        ],
+      },
+            {
+        heading: "What We Clear",
+        paragraphs: [
+          "Right-of-way corridors can become difficult to access when trees, brush, and other vegetation take over. Our equipment allows us to clear a wide range of vegetation and obstructions, including:",
+        ],
         list: [
-          "Utility corridor maintenance", "Pipeline easement clearing",
-          "Access road clearing", "Property line right-of-ways",
-          "Municipal and county road frontage", "Long-distance ranch road corridors",
+          "Cedar",
+          "Mesquite",
+          "Yaupon",
+          "Huisache",
+          "Small trees and saplings",
+          "Brush and undergrowth",
+          "Downed trees and limbs",
+          "Overgrown vegetation",
         ],
+        listColumns: 4,
+        closingParagraphs: [
+          "We can also work selectively around mature trees, fences, structures, and other features that need to remain in place.",
+        ],
+      },
+            {
+        heading: "New ROW Clearing & Maintenance",
+        paragraphs: [
+          "Whether you're establishing a new corridor or reclaiming an existing one, the goal is the same: maintain a clear, accessible path through the property.",
+        ],
+        comparison: {
+          left: {
+            heading: "New Right-of-Way Clearing",
+            paragraphs: [
+              "Clear trees, brush, and other vegetation from a planned corridor for utilities, access roads, construction, infrastructure, or property access.",
+            ],
+          },
+          right: {
+            heading: "Existing ROW Maintenance",
+            paragraphs: [
+              "Overgrown vegetation can quickly restrict access to an established right-of-way. We can maintain existing corridors by removing vegetation that has grown back and restore usable access.",
+            ],
+          },
+        },
+      },
+            {
+        heading: "Equipment Built for Right-of-Way Clearing",
+        paragraphs: [
+          "Right-of-way projects can involve everything from dense brush and small trees to larger vegetation and difficult terrain. Our equipment gives us the flexibility to match the approach to the conditions of each corridor.",
+        ],
+        iconCards: [
+          { icon: "🌲", title: "Cat 275 XE", description: "High flow power for efficient vegetation clearing and mulching along ROW corridors. [View Equipment](/equipment#cat-275)" },
+          { icon: "🚜", title: "Cat 323 Excavator", description: "Ideal for larger trees, stumps, heavy vegetation, and clearing work that requires additional reach and digging capability. [View Equipment](/equipment)" },
+          { icon: "⚙️", title: "Prinoth M450s-1900 Mulching Head", description: "Designed to process cleared vegetation into a fine, consistent mulch finish while helping keep the corridor clean and manageable. [View Equipment](/equipment#prinoth)" },
+        ],
+        iconCardsColumns: 3,
+      },
+            {
+        heading: "Our Right-of-Way Clearing Process",
+        steps: [
+          { title: "Assess", description: "We evaluate the corridor, terrain, vegetation, access, and areas that need to remain protected." },
+          { title: "Clear", description: "We remove trees, brush, and other vegetation within the designated clearing area using the right equipment for the project." },
+          { title: "Finish", description: "We clean up the corridor and leave it open, accessible, and ready for its intended use." },
+        ],
+        ctaButton: { label: "Get a Quote", href: "/contact?service=Right-of-Way%20Clearing#quote" },
       },
       {
-        heading: "Our Process",
-        steps: [
-          { title: "Corridor Assessment", description: "We evaluate the width, length, and vegetation density of the right-of-way." },
-          { title: "Clearing", description: "Brush and encroaching vegetation are cleared to the required width." },
-          { title: "Final Inspection", description: "We confirm the corridor meets access and safety requirements." },
+        heading: "Serving Central Texas",
+        paragraphs: [
+          "[Grounded Land Services](/) provides professional right-of-way clearing throughout Central and South-Central Texas. From rural properties and ranches in the Texas Hill Country to utility easements and access corridors throughout the Austin area, we help property owners and contractors clear overgrown vegetation and restore access to defined ROWs.",
+          "We're equipped to work on a variety of right-of-way projects, including utility easements, property access routes, fence lines, construction access corridors, rural ranch roads, and existing ROWs that have become overgrown.",
+        ],
+        listIntro: "Our rock removal services are available throughout Central Texas, including:",
+        list: [
+          { label: "Austin", href: "/service-areas" },
+          { label: "Bee Cave", href: "/service-areas" },
+          { label: "Bertram", href: "/service-areas" },
+          { label: "Burnet", href: "/service-areas" },
+          { label: "Dripping Springs", href: "/service-areas" },
+          { label: "Georgetown", href: "/service-areas" },
+          { label: "Johnson City", href: "/service-areas" },
+          { label: "Leander", href: "/service-areas" },
+          { label: "Liberty Hill", href: "/service-areas" },
+          { label: "Llano", href: "/service-areas" },
+          { label: "Marble Falls", href: "/service-areas" },
+          { label: "Round Rock", href: "/service-areas" },
+          { label: "San Marcos", href: "/service-areas" },
+          { label: "Spicewood", href: "/service-areas" },
+          { label: "Wimberley", href: "/service-areas" },
+        ],
+        listColumns: 4,
+        areaMapQuery: "Central Texas",
+        note: {
+          text: "Don't see your area listed? We may still be able to help. Contact us to discuss your property and project.",
+          linkLabel: "View All Service Areas",
+          href: "/service-areas",
+        },
+      },
+            {
+        heading: "Why Choose Grounded Land Services?",
+        paragraphs: [
+          "Right-of-way clearing requires the right equipment, efficient clearing methods, and attention to the boundaries of the corridor. Grounded Land Services combines heavy equipment and practical field experience to clear overgrown ROWs while keeping surrounding property, trees, fences, and structures in mind.",
+        ],
+        scenarios: [
+          { icon: "🚜", title: "Heavy Equipment Capability", description: "Cat 275 XE and Cat 323 equipment gives us the flexibility to handle a range of ROW clearing conditions." },
+          { icon: "🎯", title: "Selective Clearing", description: "We can clear designated areas while working around mature trees, fences, structures, and other features that need to remain." },
+          { icon: "🌲", title: "Efficient Vegetation Clearing", description: "Our mulching equipment allows us to process cleared vegetation and leave the corridor more manageable." },
+          { icon: "📍", title: "Central Texas Experience", description: "We understand the cedar, mesquite, yaupon, and other vegetation commonly found throughout Central Texas." },
         ],
       },
+            {
+        heading: "Related Services",
+        relatedServices: [
+          { label: "Land Clearing", href: "/services/land-clearing" },
+          { label: "Forestry Mulching", href: "/services/forestry-mulching" },
+          { label: "Fence Line Clearing", href: "/services/fence-line-clearing" },
+          { label: "Cedar Tree Removal", href: "/services/cedar-tree-removal" },
+          { label: "Underbrushing", href: "/services/underbrushing" },
+          { label: "Fire Breaks", href: "/services/fire-breaks" },
+        ],
+      },
+
     ],
-    faqs: [
-      { question: "Do you clear long utility corridors?", answer: "Yes, we regularly handle extended right-of-way clearing for utility and pipeline easements." },
-      { question: "Can you match a specific clearing width?", answer: "Yes — we clear to whatever width your easement agreement or utility provider requires." },
-      { question: "Is this different from fence line clearing?", answer: "Right-of-way clearing is often broader in scope and purpose, covering access and utility corridors rather than just property boundary lines." },
+        faqs: [
+      { question: "What is right-of-way clearing?", answer: "Right-of-way clearing is the removal of trees, brush, and other vegetation from a defined corridor to maintain access for utilities, roads, infrastructure, property access, or other projects." },
+      { question: "What types of right-of-ways can you clear?", answer: "We clear utility easements, property right-of-ways, access corridors, fence lines, construction access routes, and rural or ranch corridors." },
+      { question: "Can you clear an existing overgrown right-of-way?", answer: "Yes. We can reclaim existing ROWs that have become overgrown by removing trees, cedar, brush, and other vegetation that restricts access." },
+      { question: "Can you selectively clear a right-of-way?", answer: "Yes. When needed, we can work selectively around mature trees, fences, structures, and other features that need to remain in place." },
+      { question: "Can you clear vegetation around utility easements?", answer: "Yes. We can clear vegetation from designated utility easements to help restore access and create a more manageable corridor for maintenance or future work." },
+      { question: "Do you remove trees and stumps during ROW clearing?", answer: "Yes. Depending on the project, we can remove trees and stumps as part of the ROW clearing process.", link: { label: "Tree & Stump Removal", href: "/services/tree-stump-removal" } },
+      { question: "How much does right-of-way clearing cost?", answer: "$4,000–$8,000+, depending on the length and width of the ROW, vegetation density, terrain, access, tree size, and the amount of clearing and cleanup required. We can evaluate the site and provide a project-specific estimate.", link: { label: "Request a Free Quote", href: "/contact?service=Right-of-Way%20Clearing#quote" } },
     ],
-    pricing: { range: "$3 – $10", unit: "per linear foot", note: "Pricing depends on corridor width, vegetation density, and total length." },
+    pricing: { range: "$4,000 – $8,000+", unit: "per acre", note: "Pricing depends on corridor width, vegetation density, and total acreage." },
   },
 
   "residential-lot-clearing": {
@@ -2979,35 +3200,148 @@ pricing: { range: "$25 – $60", unit: "per linear foot", note: "Pricing depends
     heroImage: "/images/official/underbrushing.jpeg",
     intro: "Whether it's for recreation, hunting access, or general property navigation, ATV trail creation opens up clean, rideable paths across your land — cleared efficiently with minimal disturbance to the surrounding property.",
     sections: [
-      {
-        heading: "Why Property Owners Add Trails",
+        {
+        heading: "What Is ATV Trail Creation?",
         paragraphs: [
-          "A well-planned trail system makes a large property dramatically more usable — better access for hunting, easier property inspection, and simply more enjoyable land to explore on an ATV or UTV.",
+          "ATV trail creation is the process of planning, clearing, and preparing a usable trail through a property for ATVs, UTVs, and other off-road vehicles. A good trail follows the natural terrain of the property while providing enough width, clearance, and access for safe and enjoyable riding.",
+          "[Grounded Land Services](/) can clear trees, cedar, brush, and other vegetation from the planned trail while addressing rough areas, obstacles, and difficult sections of terrain. Trails can be created for recreational riding, hunting access, property maintenance, or simply getting more use out of your land.",
+          "The goal is to create a trail that fits the property rather than forcing a straight path through it.",
+        ],
+                 videoCarousel: {
+          videoIds: ["KjYxH1hgTwM", "RwfM81A1NRk"],
+          captions: ["ATV trail creation in action", "ATV trail creation in action"],
+        },
+        ctaButton: { label: "Get a Quote", href: "/contact?service=ATV%20Trail%20Creation#quote" },
+      },
+            {
+        heading: "What We Can Do",
+        paragraphs: [
+          "Every property is different, so ATV trail work can range from basic trail clearing to more involved preparation of the trail surface.",
+        ],
+        iconCards: [
+          { icon: "🌲", title: "Trail Clearing", description: "Remove cedar, brush, small trees, and overgrown vegetation from the planned trail." },
+          { icon: "🗺️", title: "Trail Layout", description: "Work with the natural terrain to create a practical route through the property." },
+          { icon: "🪨", title: "Obstacle Removal", description: "Remove trees, stumps, rocks, and other obstacles that interfere with trail access." },
+          { icon: "📐", title: "Trail Surface Preparation", description: "Address rough or uneven areas to create a more usable trail surface." },
+          { icon: "🚜", title: "Access Improvements", description: "Open up existing paths and improve access to areas that are difficult to reach." },
+          { icon: "🔄", title: "Trail Maintenance", description: "Reclaim overgrown ATV and UTV trails that have become difficult to use." },
+        ],
+        iconCardsColumns: 3,
+      },
+            {
+        heading: "Where ATV Trails Make Sense",
+        paragraphs: [
+          "ATV and UTV trails can add recreational access and practical value to many types of properties. We can create trails for:",
+        ],
+        scenarios: [
+          { icon: "🐄", title: "Ranches & Rural Acreage", description: "Explore more of the property and connect different areas of the ranch." },
+          { icon: "🦌", title: "Hunting Properties", description: "Create access to hunting areas, stands, feeders, and remote portions of the property." },
+          { icon: "🏍️", title: "Recreational Properties", description: "Build riding trails for ATVs, UTVs, and other off-road vehicles." },
+          { icon: "🚒", title: "Fire & Emergency Access", description: "Create access routes through large properties to help firefighters and emergency crews reach remote areas and improve access during wildfire response." },
+          { icon: "🚜", title: "Property Access", description: "Connect existing roads, gates, pastures, work areas, and other parts of the property." },
+          { icon: "🔄", title: "Existing Trails", description: "Reopen and improve trails that have become overgrown or difficult to navigate." },
+        ],
+        media: [
+          { type: "image", src: "/images/service-pics/IMG_2966.jpeg", alt: "ATV trail creation project in Central Texas", position: "center 80%" },
         ],
       },
-      {
-        heading: "Ideal For",
-        list: [
-          "Recreational ATV/UTV trails", "Hunting property access",
-          "Ranch inspection routes", "Property perimeter trails",
-          "Connecting existing cleared areas",
-        ],
-      },
-      {
-        heading: "Our Process",
+            {
+        heading: "Our ATV Trail Creation Process",
         steps: [
-          { title: "Trail Planning", description: "We walk the property with you to map out the most useful and scenic trail route." },
-          { title: "Clearing", description: "Vegetation is cleared to create a clean, rideable path." },
-          { title: "Final Walkthrough", description: "We review the finished trail system with you to confirm it meets your needs." },
+          { title: "Plan", description: "We evaluate the property, terrain, vegetation, existing access, and intended use to determine a practical trail route." },
+          { title: "Clear", description: "We remove trees, cedar, brush, rocks, and other obstacles along the planned trail while working with the natural terrain." },
+          { title: "Finish", description: "We address rough or difficult sections and leave the trail open, accessible, and ready for ATV or UTV use." },
+        ],
+        ctaButton: { label: "Get a Quote", href: "/contact?service=ATV%20Trail%20Creation#quote" },
+      },
+            {
+        heading: "Why Access Trails Matter",
+        paragraphs: [
+          "In large rural properties, getting emergency equipment to a remote area can be difficult when there are no established access routes. A properly planned access trail can provide a way for property owners, firefighters, and emergency personnel to reach areas that may otherwise be difficult to access.",
+          "Wildfires can spread quickly through dry grass, brush, cedar, and wooded areas across Texas. Maintaining usable access trails throughout large properties can help improve access to remote portions of the land during an emergency.",
+        ],
+        subheading: "Fire Access Trails Can Be Used To:",
+        scenarios: [
+          { icon: "🚒", title: "Access Remote Areas", description: "Provide access to remote areas of large properties." },
+          { icon: "🧑‍🚒", title: "Help Emergency Crews", description: "Help emergency crews reach areas that may otherwise be difficult to access." },
+          { icon: "🌲", title: "Create Additional Routes", description: "Create additional routes through heavily wooded or brush-covered areas." },
+          { icon: "🔥", title: "Improve Emergency Access", description: "Improve access for property owners during fire or emergency situations." },
+          { icon: "🛣️", title: "Connect Access Points", description: "Connect existing roads, gates, and other access points." },
+        ],
+        closingParagraphs: [
+          "For large ranches and rural properties, creating and maintaining access trails can be an important part of overall property and fire preparedness.",
+        ],
+      },
+      {
+        heading: "Serving Central Texas Property Owners",
+        paragraphs: [
+          "[Grounded Land Services](/) provides ATV and UTV trail creation throughout Central and South-Central Texas. From rural ranches and large properties in the Texas Hill Country to recreational acreage throughout the Austin area, we help property owners create usable trails through wooded, brush covered, and uneven terrain.",
+          "We're equipped to build and improve trails for recreational riding, hunting access, property maintenance, fire preparedness, and emergency access. Whether you're creating new trails or reopening existing ones that have become overgrown, we can help make more of your property accessible and usable.",
+        ],
+        listIntro: "Our rock removal services are available throughout Central Texas, including:",
+        list: [
+          { label: "Austin", href: "/service-areas" },
+          { label: "Bee Cave", href: "/service-areas" },
+          { label: "Bertram", href: "/service-areas" },
+          { label: "Burnet", href: "/service-areas" },
+          { label: "Dripping Springs", href: "/service-areas" },
+          { label: "Georgetown", href: "/service-areas" },
+          { label: "Johnson City", href: "/service-areas" },
+          { label: "Leander", href: "/service-areas" },
+          { label: "Liberty Hill", href: "/service-areas" },
+          { label: "Llano", href: "/service-areas" },
+          { label: "Marble Falls", href: "/service-areas" },
+          { label: "Round Rock", href: "/service-areas" },
+          { label: "San Marcos", href: "/service-areas" },
+          { label: "Spicewood", href: "/service-areas" },
+          { label: "Wimberley", href: "/service-areas" },
+        ],
+        listColumns: 4,
+        areaMapQuery: "Central Texas",
+        note: {
+          text: "Don't see your area listed? We may still be able to help. ",
+          linkLabel: "View All Service Areas",
+          href: "/service-areas",
+        },
+      },
+            {
+        heading: "Why Choose Grounded Land Services?",
+        paragraphs: [
+          "Creating a good ATV or access trail takes more than simply clearing a path through the brush. The route needs to work with the property's terrain, vegetation, existing access, and intended use.",
+          "[Grounded Land Services](/) combines heavy equipment and practical land clearing experience to create trails that are usable, manageable, and suited to the property.",
+        ],
+        scenarios: [
+          { icon: "🗺️", title: "Built Around the Terrain", description: "We work with the natural layout of the property rather than forcing a straight path." },
+          { icon: "🚜", title: "Heavy Equipment Capability", description: "Our equipment allows us to clear vegetation, remove obstacles, and address difficult sections of trail." },
+          { icon: "🎯", title: "More Than Recreation", description: "Trails can provide valuable property access for hunting, maintenance, fire preparedness, and emergency access." },
+          { icon: "📍", title: "Central Texas Experience", description: "We understand the cedar, mesquite, brush, rock, and terrain commonly found throughout Central Texas." },
+        ],
+         media: [
+          { type: "image", src: "/images/service-pics/why-choose-us.jpeg", alt: "Why choose Grounded Land Services for rock removal" },
+        ],
+      },
+            {
+        heading: "Related Services",
+        relatedServices: [
+          { label: "Land Clearing", href: "/services/land-clearing" },
+          { label: "Forestry Mulching", href: "/services/forestry-mulching" },
+          { label: "Cedar Tree Removal", href: "/services/cedar-tree-removal" },
+          { label: "Underbrushing", href: "/services/underbrushing" },
+          { label: "Fence Line Clearing", href: "/services/fence-line-clearing" },
+          { label: "Right-of-Way Clearing", href: "/services/right-of-way-clearing" },
         ],
       },
     ],
-    faqs: [
-      { question: "Can you create a full trail loop around my property?", answer: "Yes, we can plan and clear trail systems that loop or connect across your entire property." },
-      { question: "Will trail clearing disturb the surrounding land?", answer: "No — we use forestry mulching or selective clearing to open trails with minimal impact outside the path itself." },
-      { question: "Can trails be used for hunting access too?", answer: "Yes, ATV trails are commonly used for both recreation and hunting property access." },
+        faqs: [
+      { question: "Can you build ATV trails on wooded or heavily overgrown property?", answer: "Yes. We can clear cedar, brush, large trees, and other vegetation to create usable trails through wooded or overgrown areas." },
+      { question: "Can you build trails for both ATVs and UTVs?", answer: "Yes. Trail width and layout can be planned around the type of vehicles that will be using the trail." },
+      { question: "Can you use the natural terrain when building a trail?", answer: "Yes. We work with the natural terrain to create a practical route rather than simply cutting a straight path through the property." },
+      { question: "Can you remove rocks, stumps, and trees from an ATV trail?", answer: "Yes. Depending on the property and trail conditions, we can remove or address trees, stumps, rocks, and other obstacles that interfere with access.", link: { label: "Tree & Stump Removal", href: "/services/tree-stump-removal" } },
+      { question: "Can you reopen an existing overgrown ATV trail?", answer: "Yes. We can reclaim existing trails that have become overgrown or difficult to navigate and restore access." },
+      { question: "Can ATV trails be used for fire access?", answer: "Yes. Access trails can provide critical routes through large rural properties and help improve access for property owners and emergency personnel during fire or other emergency situations.", link: { label: "Fire Breaks", href: "/services/fire-breaks" } },
+      { question: "How much does ATV trail creation cost?", answer: "$2,500–$4,500. The cost depends on the length and width of the trail, total acreage, vegetation density, terrain, access, and obstacles. We can evaluate the property and provide a project specific estimate.", link: { label: "Request a Free Quote", href: "/contact?service=ATV%20Trail%20Creation#quote" } },
     ],
-    pricing: { range: "$1 – $3", unit: "per linear foot", note: "Pricing depends on trail width, vegetation density, and total trail length." },
+    pricing: { range: "$2,500 – $4,500+", unit: "per acre", note: "Pricing depends on trail width, vegetation density, and total trail length." },
   },
 
   "tree-stump-removal": {

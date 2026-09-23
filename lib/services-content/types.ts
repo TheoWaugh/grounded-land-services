@@ -5,6 +5,7 @@ export interface ServiceMediaItem {
   src: string; // image path, or YouTube video ID for youtube type
   alt?: string;
   caption?: string;
+  position?: string;
 }
 
 export interface ServicePageSection {

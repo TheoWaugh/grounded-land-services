@@ -139,7 +139,7 @@ const jsonLd = {
     ratingValue: "5.0",
     bestRating: "5",
     worstRating: "1",
-    reviewCount: "19",
+    reviewCount: "23",
   },
     review: [
     {
@@ -255,6 +255,30 @@ const jsonLd = {
       author: { "@type": "Organization", name: "XPERT LLC" },
       reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
       reviewBody: "I am very happy; he did an excellent job. I recommend him — an excellent person.",
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Justin Sharrock" },
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      reviewBody: "Logan came to give quote. One of the only companies that responded. We set up a date, he came out, and did a great job. All while I was at work. Great guy at a fair price.",
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Ted Waugh" },
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      reviewBody: "Grounded Land Services did an excellent job with our land clearing project. Logan was professional, responsive, and efficient from start to finish. The work was completed quickly, the property was left clean, and the service exceeded expectations.I highly recommend Grounded Land Services for reliable land clearing and property cleanup.,"
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Holton Garrison" },
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      reviewBody: "I had a great experience with Grounded Land Services! Logan and his team did an excellent job removing rock from my property in Liberty Hill. They were professional, responsive, and left the property clean and ready for the next step. I highly recommend Grounded Land Services!",
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Clint Strittmatter" },
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      reviewBody: "Logan did an amazing job with clearing my property. I'm going to need another day and I definitely won't hesitate to have him back out again. Thanks Logan!",
     },
   ],
 };

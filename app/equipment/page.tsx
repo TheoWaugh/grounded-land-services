@@ -63,7 +63,8 @@ const baseMachines: EquipmentItem[] = [
     ],
   },
   {
-        name: "2026 CAT 275 XE Land Management",
+    id: "cat-275",
+    name: "2026 CAT 275 XE Land Management",
     category: "Compact Track Loader",
     icon: "🌲",
     image: "/images/service-pics/IMG_2509.jpeg",

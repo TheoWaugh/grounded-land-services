@@ -66,6 +66,23 @@ const testimonials: Testimonial[] = [
     name: "XPERT LLC",
     quote: "I am very happy; he did an excellent job. I recommend him — an excellent person.",
   },
+    {
+    name: "Justin Sharrock",
+    quote: "Logan came to give quote. One of the only companies that responded. We set up a date, he came out, and did a great job. All while I was at work. Great guy at a fair price.",
+  },
+  {
+    name: "Ted Waugh",
+    quote: "Grounded Land Services did an excellent job with our land clearing project. Logan was professional, responsive, and efficient from start to finish. The work was completed quickly, the property was left clean, and the service exceeded expectations. I highly recommend Grounded Land Services for reliable land clearing and property cleanup.",
+  },
+    {
+    name: "Holton Garrison",
+    location: "Liberty Hill, TX",
+    quote: "I had a great experience with Grounded Land Services! Logan and his team did an excellent job removing rock from my property in Liberty Hill. They were professional, responsive, and left the property clean and ready for the next step. I highly recommend Grounded Land Services!",
+  },
+    {
+    name: "Clint Strittmatter",
+    quote: "Logan did an amazing job with clearing my property. I'm going to need another day and I definitely won't hesitate to have him back out again. Thanks Logan!",
+  },
 ];
 
 const featuredNames = ["Jacque Mendenhall", "Christopher Durst", "Mckenzie Schultz"];
