@@ -970,9 +970,9 @@ paragraphs: [
           },
         },
                 compareSlider: {
-          beforeSrc: "/images/service-pics/rock-removal-before.jpeg",
+          beforeSrc: "/images/service-pics/liberty-hill-rock-removal-2.jpeg",
           beforeLabel: "Before",
-          afterSrc: "/images/service-pics/rock-removal-after.jpeg",
+          afterSrc: "/images/work/liberty-hill-rock-removal-1.jpeg",
           afterLabel: "After",
         },
       },
@@ -2463,37 +2463,138 @@ paragraphs: [
     metaDescription: "Professional dirt work and grading in Texas — precision leveling and soil moving for stable, well-drained building sites and driveways.",
     icon: "🚜",
     heroImage: "/images/official/dirt-work.jpeg",
-    intro: "Dirt work and grading is the invisible foundation behind almost every successful project. Precision leveling, soil moving, and drainage-focused grading prevent future flooding, erosion, and structural issues — work that goes unnoticed when done right, and becomes very noticeable when it isn't.",
+    intro: "Grounded Land Services provides dirt work and grading for residential, rural, and land improvement projects throughout Central and South Central Texas. From rough grading and drainage adjustments to preparing areas for construction, driveways, and other site work, we help shape and prepare the ground for its next use.",
     sections: [
-      {
-        heading: "Why Grading Is Foundational",
+            {
+        heading: "What Is Dirt Work & Grading?",
         paragraphs: [
-          "Improper grading is one of the most common causes of drainage problems, foundation issues, and erosion on rural and residential properties alike. Getting elevations and slope right from the start avoids expensive fixes later.",
+          "Dirt work involves moving and shaping soil to prepare a property for construction, access, drainage, and other site work. This can include cutting high areas, filling low areas, spreading material, and reshaping the ground.",
+          "Grading focuses on creating the proper elevations and slopes so water can drain properly and the ground is prepared for its intended use. Depending on the project, dirt work and grading may be performed together to create a more functional, usable surface.",
         ],
       },
-      {
-        heading: "Common Grading Projects",
-        list: [
-          "Building pad leveling", "Driveway crowning and grading",
-          "Large acreage leveling", "Drainage swale creation",
-          "Erosion repair", "Pond and stock tank shaping",
+            {
+        heading: "When Dirt Work & Grading Makes Sense",
+        paragraphs: [
+          "Dirt work and grading can improve how a property drains, functions, and prepares for future construction or use.",
+        ],
+        scenarios: [
+          { icon: "🏗️", title: "Construction Areas", description: "Prepare and shape ground for homes, buildings, pads, and other structures." },
+          { icon: "🛣️", title: "Driveways & Access", description: "Shape and level areas for new or improved access." },
+          { icon: "💧", title: "Drainage Issues", description: "Adjust slopes and elevations to help direct water away from structures or problem areas." },
+          { icon: "〰️", title: "Uneven Ground", description: "Cut high areas, fill low spots, and reshape rough terrain." },
+          { icon: "📐", title: "Site Preparation", description: "Prepare cleared areas for the next phase of construction or property work." },
+          { icon: "🔧", title: "Property Improvements", description: "Rework existing areas that have developed ruts, erosion, or poor drainage." },
         ],
       },
-      {
-        heading: "Our Process",
+            {
+        heading: "Equipment for Dirt Work & Grading",
+        paragraphs: [
+          "The right equipment makes a difference when moving and shaping material. Grounded Land Services uses a combination of heavy equipment and grading attachments depending on the size and requirements of the project.",
+        ],
+        iconCards: [
+          { icon: "🚜", title: "Cat 275 XE", description: "Used for grading, spreading, leveling, and material handling. [View Equipment](/equipment#cat-275)" },
+          { icon: "⛏️", title: "Cat 323 Excavator", description: "Used for digging, cutting, filling, drainage work, and heavier dirt work. [View Equipment](/equipment)" },
+          { icon: "📐", title: "Harley Rake / Soil Conditioner", description: "Used for surface preparation, finish grading, and creating a smoother, more consistent surface. [View Equipment](/equipment#harley-rake)" },
+        ],
+        iconCardsColumns: 3,
+      },
+            {
+        heading: "Dirt Work & Grading Services",
+        paragraphs: [
+          "Depending on the property and project, our dirt work and grading services can include:",
+        ],
+        iconCards: [
+          { icon: "📐", title: "Rough Grading", description: "Shape and level ground for construction and future site work." },
+          { icon: "✨", title: "Finish Grading", description: "Refine elevations and slopes after major site work is complete." },
+          { icon: "🔄", title: "Cut & Fill", description: "Move soil from higher areas to lower areas to create more usable terrain." },
+          { icon: "💧", title: "Drainage Grading", description: "Adjust slopes to help direct surface water where it needs to go." },
+          { icon: "🛣️", title: "Driveway Preparation", description: "Prepare and shape ground for driveways and access areas." },
+          { icon: "🏗️", title: "Site Pad Preparation", description: "Grade and prepare areas for homes, buildings, or other structures." },
+        ],
+        iconCardsColumns: 3,
+      },
+            {
+        heading: "Our Dirt Work & Grading Process",
+        paragraphs: [
+          "Every property has different terrain and grading requirements. We start by evaluating the area and then determine the best approach for the project.",
+        ],
         steps: [
-          { title: "Site Survey", description: "We assess existing elevations and drainage patterns before planning grading work." },
-          { title: "Rough Grading", description: "Major soil movement establishes the overall shape and slope of the site." },
-          { title: "Finish Grading", description: "Final passes create smooth, precise elevations ready for construction or landscaping." },
+          { title: "Assess", description: "Evaluate the existing terrain, elevations, drainage, access, and overall site conditions." },
+          { title: "Move & Shape", description: "Cut, fill, move, and shape material to create the desired grades and elevations." },
+          { title: "Finish", description: "Fine tune the surface and leave the area prepared for its intended use or next phase of work." },
+        ],
+        ctaButton: { label: "Get a Quote", href: "/contact?service=Dirt%20Work%20%26%20Grading#quote" },
+      },
+            {
+        heading: "Why Choose Grounded Land Services?",
+        paragraphs: [
+          "Dirt work often ties into larger property projects. Grounded Land Services has the equipment and experience to handle grading alongside [clearing](/services/land-clearing), [rock removal](/services/rock-removal), and other [site preparation](/services/site-preparation) needs.",
+        ],
+        scenarios: [
+          { icon: "🚜", title: "Heavy Equipment", description: "Cat 275 XE skid steer and Cat 323 excavator for a range of dirt work and grading projects." },
+          { icon: "🔧", title: "One Contractor", description: "Combine grading with land clearing, rock removal, site preparation, and other property work." },
+          { icon: "📍", title: "Central Texas Experience", description: "Familiar with the rocky, uneven terrain and varied soil conditions found throughout Central and South Central Texas." },
+          { icon: "✅", title: "Practical Site Preparation", description: "We focus on creating usable grades and surfaces that are ready for the property's next phase." },
+        ],
+        media: [
+          { type: "image", src: "/images/service-pics/why-choose-us.jpeg", alt: "Why choose Grounded Land Services" },
+        ],
+      },
+            {
+        heading: "Serving Central Texas Property Owners",
+        subheading: "Dirt Work & Grading Where You Need It",
+        paragraphs: [
+          "[Grounded Land Services](/) provides professional dirt work and grading throughout Central and South-Central Texas for homeowners, ranch owners, builders, and contractors.",
+          "From shaping a single building pad or driveway to reworking larger areas of rural property, we bring the equipment and experience needed to prepare your ground for its next phase.",
+        ],
+        listIntro: "We serve property owners throughout Central Texas including:",
+        list: [
+          { label: "Austin", href: "/service-areas" },
+          { label: "Bertram", href: "/service-areas" },
+          { label: "Burnet", href: "/service-areas" },
+          { label: "Dripping Springs", href: "/service-areas" },
+          { label: "Fredericksburg", href: "/service-areas" },
+          { label: "Georgetown", href: "/service-areas" },
+          { label: "Johnson City", href: "/service-areas" },
+          { label: "Kerrville", href: "/service-areas" },
+          { label: "Leander", href: "/service-areas" },
+          { label: "Liberty Hill", href: "/service-areas" },
+          { label: "Marble Falls", href: "/service-areas" },
+          { label: "New Braunfels", href: "/service-areas" },
+          { label: "Round Rock", href: "/service-areas" },
+          { label: "San Marcos", href: "/service-areas" },
+          { label: "Spicewood", href: "/service-areas" },
+        ],
+        listColumns: 4,
+        areaMapQuery: "Central Texas",
+        note: {
+          text: "Don't see your city?",
+          linkLabel: "Explore Our Service Areas",
+          href: "/service-areas",
+        },
+      },
+            {
+        heading: "Related Services",
+        relatedServices: [
+          { label: "Site Preparation", href: "/services/site-preparation" },
+          { label: "Land Clearing", href: "/services/land-clearing" },
+          { label: "Rock Removal", href: "/services/rock-removal" },
+          { label: "Forestry Mulching", href: "/services/forestry-mulching" },
+          { label: "Residential Lot Clearing", href: "/services/residential-lot-clearing" },
+          { label: "Utility Trenching", href: "/services/utility-trenching" },
         ],
       },
     ],
-    faqs: [
-      { question: "Can grading fix an existing drainage problem?", answer: "In many cases, yes — regrading to the correct slope is one of the most effective ways to resolve standing water or erosion issues." },
-      { question: "Do you grade driveways too?", answer: "Yes, proper crowning and grading is a standard part of driveway construction and maintenance." },
-      { question: "How much soil movement is typical for a project?", answer: "It varies widely by site — a simple building pad may need minimal work, while larger acreage leveling can involve substantial soil movement." },
+        faqs: [
+      { question: "What is dirt work?", answer: "Dirt work involves moving, placing, cutting, filling, and shaping soil to prepare a property for construction, access, drainage, or other site work." },
+      { question: "What is grading?", answer: "Grading involves shaping the ground to establish the desired elevations and slopes for drainage, construction, or property use." },
+      { question: "Can you fix drainage problems?", answer: "Yes, we can reshape and grade areas to improve surface drainage. Each property needs to be evaluated to determine the appropriate approach." },
+      { question: "Can you grade a driveway?", answer: "Yes. We can prepare and shape ground for new driveways or improve existing areas that have developed ruts, uneven surfaces, or drainage issues.", link: { label: "Gravel Driveways & Roads", href: "/services/gravel-driveways-roads" } },
+      { question: "Can you prepare a building site?", answer: "Yes. Dirt work and grading can be combined with land clearing and site preparation to prepare an area for construction.", link: { label: "Site Preparation", href: "/services/site-preparation" } },
+      { question: "Do you bring in dirt?", answer: "Material requirements depend on the project. We can evaluate whether existing material can be cut, filled, and reshaped or whether additional material may be needed." },
+      { question: "How much does dirt work and grading cost?", answer: "$1,500–$5,000+. Pricing depends on the size of the area, amount of material to be moved, terrain, access, drainage requirements, and overall scope of work. The best way to determine the cost is to evaluate the property and project requirements.", link: { label: "Request a Free Quote", href: "/contact?service=Dirt%20Work%20%26%20Grading#quote" } },
     ],
-    pricing: { range: "$1,500 – $8,000+", unit: "per job", note: "Pricing depends on acreage, soil volume, and grading complexity." },
+    pricing: { range: "$1,500 – $5,000+", unit: "per job", note: "Pricing depends on acreage, soil volume, and grading complexity." },
   },
 
   "site-cleanup": {
@@ -2638,7 +2739,7 @@ paragraphs: [
     metaDescription: "Professional retaining wall construction in Texas — engineered walls that manage elevation change and stop soil erosion.",
     icon: "🧱",
     heroImage: "/images/official/retaining-walls.jpeg",
-    intro: "Retaining walls do more than look good — they're engineered structures that hold back soil, manage elevation change, and turn sloped, unusable land into functional, level space. Built right, they solve erosion problems while adding lasting value and visual character to a property.",
+    intro: "Grounded Land Services provides retaining wall construction and site preparation throughout Central and South-Central Texas. From sloped residential properties to larger rural projects, we build retaining walls and prepare the surrounding ground to help manage elevation changes, erosion, drainage, and usable space.",
     sections: [
       {
         heading: "More Than Decorative",
@@ -2694,9 +2795,9 @@ pricing: { range: "$25 – $60", unit: "per linear foot", note: "Pricing depends
         ],
                 iconCardsColumns: 3,
         compareSlider: {
-          beforeSrc: "/images/service-pics/rock-removal-before.jpeg",
+          beforeSrc: "/images/service-pics/liberty-hill-rock-removal-2.jpeg",
           beforeLabel: "Before",
-          afterSrc: "/images/service-pics/rock-removal-after.jpeg",
+          afterSrc: "/images/work/liberty-hill-rock-removal-1.jpeg",
           afterLabel: "After",
         },
       },
@@ -2786,7 +2887,7 @@ pricing: { range: "$25 – $60", unit: "per linear foot", note: "Pricing depends
           },
         },
         media: [
-          { type: "image", src: "/images/official/cactus-rock-removal.jpeg", alt: "Rock removal in Central Texas" }
+          { type: "image", src: "/images/work/liberty-hill-rock-removal-after-3.jpeg", alt: "Completed rock removal job in Liberty Hill, TX" }
         ],
         subheading: "Remove the Rock. Reuse the Material.",
         closingParagraphs: [
@@ -3015,7 +3116,7 @@ pricing: { range: "$25 – $60", unit: "per linear foot", note: "Pricing depends
           "[Grounded Land Services](/) provides professional right-of-way clearing throughout Central and South-Central Texas. From rural properties and ranches in the Texas Hill Country to utility easements and access corridors throughout the Austin area, we help property owners and contractors clear overgrown vegetation and restore access to defined ROWs.",
           "We're equipped to work on a variety of right-of-way projects, including utility easements, property access routes, fence lines, construction access corridors, rural ranch roads, and existing ROWs that have become overgrown.",
         ],
-        listIntro: "Our rock removal services are available throughout Central Texas, including:",
+        listIntro: "Our ROW services are available throughout Central Texas, including:",
         list: [
           { label: "Austin", href: "/service-areas" },
           { label: "Bee Cave", href: "/service-areas" },
@@ -3052,6 +3153,9 @@ pricing: { range: "$25 – $60", unit: "per linear foot", note: "Pricing depends
           { icon: "🌲", title: "Efficient Vegetation Clearing", description: "Our mulching equipment allows us to process cleared vegetation and leave the corridor more manageable." },
           { icon: "📍", title: "Central Texas Experience", description: "We understand the cedar, mesquite, yaupon, and other vegetation commonly found throughout Central Texas." },
         ],
+        media: [
+          { type: "image", src: "/images/service-pics/why-choose-us.jpeg", alt: "Why choose Grounded Land Services for rock removal" },
+        ],
       },
             {
         heading: "Related Services",
@@ -3083,38 +3187,162 @@ pricing: { range: "$25 – $60", unit: "per linear foot", note: "Pricing depends
     metaDescription: "Professional residential lot clearing in Texas — preparing homesites for new construction, additions, or backyard transformations.",
     icon: "🏡",
     heroImage: "/images/official/land-clearing.jpeg",
-    intro: "Building a new home starts with a clean, buildable lot. Residential lot clearing removes trees, brush, stumps, and debris from your homesite, leaving a level, construction-ready foundation for your builder to get started.",
+    intro: "Grounded Land Services provides residential lot clearing for homeowners preparing property for new construction, homesites, driveways, access, landscaping, and other site work. We clear vegetation, trees, stumps, rock, and other obstacles while preserving mature trees and features you want to keep.",
     sections: [
-      {
-        heading: "Preparing Your Homesite",
+            {
+        heading: "What Is Residential Lot Clearing?",
         paragraphs: [
-          "Whether you're clearing a wooded lot for a custom home, opening up space for an addition, or reclaiming an overgrown backyard, residential lot clearing is scoped and scaled to fit smaller, tighter properties — a different approach than large acreage clearing.",
+          "Residential lot clearing is the process of removing vegetation, trees, stumps, rock, and other obstacles from a residential property so the land is ready for its next phase. For a new home, that may mean creating a clean homesite for construction. On an existing property, it may involve reclaiming an overgrown lot, opening access, or preparing an area for landscaping and additional site work.",
+          "At [Grounded Land Services](/), residential lot clearing is tailored to the property and the project. Some lots may only require vegetation removal, while others need larger trees, stumps, surface rock, or heavier site work addressed. When possible, we can selectively clear around mature trees or other features the property owner wants to preserve.",
+          "The goal is not simply to remove everything from the property. It is to leave the area cleared and ready for whatever comes next — whether that is construction, driveway installation, grading, landscaping, or additional site preparation.",
+        ],
+        media: [
+          { type: "image", src: "/images/service-pics/choose-traditional.jpeg", alt: "Residential lot clearing project in Central Texas" },
         ],
       },
-      {
-        heading: "Ideal For",
-        list: [
-          "New home construction sites", "Backyard renovations",
-          "Pool and patio installation prep", "Garage and shop building pads",
-          "Overgrown residential lots", "Small acreage homesites",
+            {
+        heading: "What We Clear",
+        paragraphs: [
+          "Every residential lot is different, so the scope of clearing depends on the property's vegetation, terrain, and what needs to happen next. Grounded Land Services can remove cedar, mesquite, yaupon, brush, overgrown vegetation, trees, stumps, downed trees, and large limbs that interfere with preparing the property.",
+          "When needed, we can also address [surface rock](/services/rock-removal) and other obstacles that make construction, access, or future site work more difficult. Larger trees and stumps may require [excavator](/equipment) work, while [mulching](/services/forestry-mulching) equipment can efficiently process smaller trees and heavy brush in areas where mulching is appropriate.",
+          "Residential lot clearing does not always mean clearing every tree on the property. If you want to keep mature oaks or other desirable trees, we can work around them and focus on the vegetation and obstacles that need to be removed.",
         ],
       },
+                 {
+        heading: "When Residential Lot Clearing Makes Sense",
+        paragraphs: [
+          "Residential lot clearing is often the first step when a property needs to be opened up for construction or future use. Grounded Land Services works with homeowners preparing property for new home construction, homesite preparation, driveways, access areas, landscaping, and other site work.",
+          "It can also be a practical solution for an overgrown residential property or unused lot where cedar, mesquite, brush, trees, and other vegetation have taken over. Clearing the property can create usable space, improve access, and make it easier to move forward with grading, construction, or landscaping.",
+          "For rural residential properties and larger homesites, clearing may involve a combination of vegetation removal, [tree and stump removal](/services/tree-stump-removal), [surface rock removal](/services/rock-removal), and other [site preparation](/services/site-preparation) rather than a single clearing method.",
+        ],
+        media: [
+          { type: "image", src: "/images/work/kingsland-forestry-mulching.jpeg", alt: "Forestry mulching project in Kingsland, TX" },
+        ],
+      },
+            {
+        heading: "Residential Lot Clearing vs. Forestry Mulching",
+        paragraphs: [
+          "Both services can be used to clear unwanted vegetation from a residential property, but the scope of work and finished goal can be different.",
+        ],
+               comparison: {
+          left: {
+            heading: "Residential Lot Clearing",
+            list: [
+              "Primary Goal: Prepare a residential property for construction, access, landscaping, or additional site work",
+              "Building Sites: Involves traditional land clearing to open the property and prepare the area for a house or other structures without leaving stumps behind",
+              "Stumps & Large Trees: Can include excavator work to remove larger trees and stumps",
+              "Rock & Site Work: May include surface rock removal, excavation, grading, and other site preparation",
+              "Material Handling: Depending on the project, material may be mulched, hauled off, or burned on site",
+              "Finished Goal: Leave the property ready for the next phase of construction or site work",
+            ],
+            image: "/images/service-pics/choose-traditional.jpeg",
+            imageAlt: "Traditional land clearing example",
+          },
+          right: {
+            heading: "Forestry Mulching",
+            list: [
+              "Primary Goal: Remove and process unwanted vegetation directly on the property",
+              "Building Sites: Generally better suited to vegetation removal rather than full building site preparation",
+              "Stumps & Large Trees: The mulcher can process suitable vegetation, while larger trees and stumps require additional equipment",
+              "Rock & Site Work: Rock removal, excavation, and grading are outside the primary purpose of forestry mulching",
+              "Material Handling: Vegetation is processed into mulch and distributed across the cleared area",
+              "Finished Goal: Open up an overgrown property while leaving processed vegetation on site",
+            ],
+            image: "/images/service-pics/choose-forestry.jpeg",
+            imageAlt: "Forestry mulching example",
+          },
+        },
+      },
       {
-        heading: "Our Process",
+        subheading: "Which Approach Fits Your Property?",
+        paragraphs: [
+          "For a new home or building site, [traditional land clearing](/services/land-clearing) is typically the better approach when the property needs to be prepared beyond simply removing vegetation.",
+          "When vegetation is the primary issue, [forestry mulching](/services/forestry-mulching) may be a more appropriate solution. Some residential properties may also benefit from a combination of clearing methods depending on the existing trees, vegetation, stumps, rock, and intended use of the property.",
+        ],
+      },
+
+            {
+        heading: "Our Residential Lot Clearing Process",
+        paragraphs: [
+          "Every residential lot has different clearing requirements. We start by looking at the property and what you need the land prepared for, then determine the right combination of equipment and clearing methods.",
+        ],
         steps: [
-          { title: "Site Walk", description: "We evaluate the lot, access points, and any trees you'd like preserved." },
-          { title: "Clearing", description: "Trees, brush, and stumps are removed to prepare a build-ready lot." },
-          { title: "Debris Removal", description: "Cleared material is hauled or processed based on your preference." },
-          { title: "Final Grading", description: "The lot is left level and ready for your builder." },
+          { title: "Assess", description: "We evaluate the property, vegetation, trees, stumps, rock, terrain, and areas that need to be preserved. We also consider what the cleared area needs to be ready for." },
+          { title: "Clear", description: "We remove the vegetation and obstacles within the agreed clearing area. Depending on the project, this can include mulching, tree and stump removal, rock removal, and other clearing work." },
+          { title: "Prepare", description: "Once the clearing is complete, we leave the property ready for its next phase. Additional work such as grading, dirt work, rock removal, or other site preparation can be incorporated when the project requires it." },
+        ],
+        ctaButton: { label: "Get a Quote", href: "/contact?service=Residential%20Lot%20Clearing#quote" },
+      },
+      {
+        heading: "Why Choose Grounded Land Services?",
+        paragraphs: [
+          "Residential lot clearing often requires more than simply removing brush. Grounded Land Services brings the equipment and experience to handle different aspects of a residential property clearing project, from vegetation and tree removal to stumps, surface rock, and site preparation.",
+        ],
+        scenarios: [
+          { icon: "🚜", title: "Heavy Equipment for Residential Properties", description: "Our equipment allows us to handle both vegetation focused clearing and heavier residential lot clearing when the project requires it." },
+          { icon: "📍", title: "Central Texas Experience", description: "We work throughout Central and South-Central Texas, where residential properties can range from wooded Hill Country lots to overgrown rural homesites and larger residential acreage." },
+          { icon: "🎯", title: "Selective Clearing", description: "Not every tree needs to come down. We work around mature trees and other features the property owner wants to preserve while clearing the areas that need to be opened." },
+          { icon: "🔧", title: "One Project, Multiple Needs", description: "Residential clearing can involve several different types of work. Depending on the project, we can address vegetation, trees, stumps, surface rock, and additional site preparation as part of the overall project." },
+        ],
+        media: [
+          { type: "image", src: "/images/service-pics/why-choose-us.jpeg", alt: "Why choose Grounded Land Services for rock removal" },
+        ],
+      },
+{
+        heading: "Serving Central Texas",
+        paragraphs: [
+          "[Grounded Land Services](/) provides professional residential lot clearing throughout Central and South-Central Texas. From residential properties and rural homesites in the Texas Hill Country to lots throughout the Austin area, we help homeowners and builders clear vegetation, trees, stumps, and other obstacles to prepare properties for construction and site work.",
+          "We're equipped to handle a variety of residential lot clearing projects, including new homesites, overgrown residential lots, driveway and access clearing, tree and stump removal, and properties that need to be cleared before site preparation, grading, or construction.",
+        ],
+        listIntro: "Our Residential Lot Clearing services are available throughout Central Texas, including:",
+        list: [
+          { label: "Austin", href: "/service-areas" },
+          { label: "Bee Cave", href: "/service-areas" },
+          { label: "Bertram", href: "/service-areas" },
+          { label: "Burnet", href: "/service-areas" },
+          { label: "Dripping Springs", href: "/service-areas" },
+          { label: "Georgetown", href: "/service-areas" },
+          { label: "Johnson City", href: "/service-areas" },
+          { label: "Leander", href: "/service-areas" },
+          { label: "Liberty Hill", href: "/service-areas" },
+          { label: "Llano", href: "/service-areas" },
+          { label: "Marble Falls", href: "/service-areas" },
+          { label: "Round Rock", href: "/service-areas" },
+          { label: "San Marcos", href: "/service-areas" },
+          { label: "Spicewood", href: "/service-areas" },
+          { label: "Wimberley", href: "/service-areas" },
+        ],
+        listColumns: 4,
+        areaMapQuery: "Central Texas",
+        note: {
+          text: "Don't see your area listed? We may still be able to help. Contact us to discuss your property and project.",
+          linkLabel: "View All Service Areas",
+          href: "/service-areas",
+        },
+      },
+            {
+        heading: "Related Services",
+        relatedServices: [
+          { label: "Land Clearing", href: "/services/land-clearing" },
+          { label: "Forestry Mulching", href: "/services/forestry-mulching" },
+          { label: "Cedar Tree Removal", href: "/services/cedar-tree-removal" },
+          { label: "Stump & Tree Removal", href: "/services/tree-stump-removal" },
+          { label: "Rock Removal", href: "/services/rock-removal" },
+          { label: "Site Preparation", href: "/services/site-preparation" },
         ],
       },
     ],
-    faqs: [
-      { question: "Can you clear a lot while preserving specific trees?", answer: "Yes — we identify and protect any trees you'd like to keep before clearing begins." },
-      { question: "Do you handle small residential lots?", answer: "Yes, residential lot clearing is scaled specifically for smaller, tighter properties." },
-      { question: "How long does a typical residential lot take?", answer: "Most residential lots are cleared within one to three days depending on size and density." },
+        faqs: [
+      { question: "What is residential lot clearing?", answer: "Residential lot clearing is the removal of vegetation, trees, stumps, rock, and other obstacles from a residential property so it can be used for construction, access, landscaping, or other site work." },
+      { question: "Can you clear a lot for a new house?", answer: "Yes. When preparing a property for a new home, we can perform traditional land clearing to remove trees, stumps, brush, and other obstacles from the building area and prepare the property for the next phase of construction.", link: { label: "Traditional Land Clearing", href: "/services/land-clearing" } },
+      { question: "Can you preserve mature trees?", answer: "Yes. We can selectively clear around mature trees and other features you want to keep, provided the property and project scope allow for it." },
+      { question: "Can you remove stumps?", answer: "Yes. Larger stumps can be removed with our equipment when complete removal is needed for construction, access, or other site work.", link: { label: "Tree & Stump Removal", href: "/services/tree-stump-removal" } },
+      { question: "Can you remove rocks from a residential lot?", answer: "Yes. We can remove surface rock when it interferes with construction, access, landscaping, or other work on the property.", link: { label: "Rock Removal", href: "/services/rock-removal" } },
+      { question: "Can you clear an overgrown residential lot?", answer: "Yes. We can remove cedar, mesquite, yaupon, brush, trees, downed vegetation, stumps, and other obstacles from overgrown residential properties." },
+      { question: "Is residential lot clearing the same as forestry mulching?", answer: "No. Forestry mulching focuses primarily on removing and processing vegetation on site. Residential lot clearing can involve a broader scope, including traditional land clearing, tree and stump removal, rock removal, and other preparation needed for construction or future site work.", link: { label: "Forestry Mulching", href: "/services/forestry-mulching" } },
+      { question: "How much does residential lot clearing cost?", answer: "$2,000–$5,000+ per acre. The cost depends on factors such as the size of the property, vegetation density, tree size, stumps, rock, terrain, access, and the amount of clearing and site preparation required. The best way to determine the cost is to evaluate the property and the specific scope of work.", link: { label: "Request a Free Quote", href: "/contact?service=Residential%20Lot%20Clearing#quote" } },
     ],
-    pricing: { range: "$2,000 – $7,000", unit: "per lot", note: "Pricing depends on lot size, vegetation density, and debris hauling needs." },
+    pricing: { range: "$2,000 – $5,000+", unit: "per acre", note: "Pricing depends on lot size, vegetation density, services needed, and debris hauling needs." },
   },
 
   "fire-breaks": {
@@ -3122,37 +3350,156 @@ pricing: { range: "$25 – $60", unit: "per linear foot", note: "Pricing depends
     metaDescription: "Professional firebreak construction in Texas — clearing strategic vegetation barriers to slow wildfire spread and protect structures.",
     icon: "🔥",
     heroImage: "/images/official/forestry-mulching.jpeg",
-    intro: "A properly constructed firebreak can be the difference between a contained brush fire and a property-wide disaster. We clear strategic vegetation barriers around homes, structures, and property lines to slow the spread of wildfire and give you critical defensible space.",
+    intro: "Professional fire break clearing for ranches, rural properties, and large acreage throughout Central Texas. We clear cedar, brush, trees, and other vegetation to create strategic breaks in vegetation and improve critical access across your property.",
     sections: [
-      {
-        heading: "How Firebreaks Work",
+            {
+        heading: "What Is a Fire Break?",
         paragraphs: [
-          "Firebreaks reduce or remove combustible vegetation in a defined strip, breaking the continuous fuel that allows wildfire to travel across a property. Combined with underbrushing and cedar removal, firebreaks create meaningful defensible space around homes, barns, and other structures.",
+          "A fire break is a cleared area where vegetation and other combustible fuels have been reduced or removed to create a break in continuous vegetation. Fire breaks can help slow the spread of wildfire by reducing the amount of fuel available for a fire to burn through.",
+          "On large rural properties, fire breaks can also provide improved access for property owners and emergency personnel. Strategic clearing around structures, property boundaries, roads, pastures, and other areas can help create more manageable areas across the property.",
+          "[Grounded Land Services](/) uses heavy equipment to clear cedar, brush, trees, and other vegetation while working with the property's terrain and existing features. The goal is to create practical fire breaks that fit the property and its specific conditions.",
+        ],
+        media: [
+          { type: "image", src: "/images/service-pics/fire-breaks-pic.jpeg", alt: "Fire break clearing project in Central Texas", position: "center 95%" },
+        ],
+        ctaButton: { label: "Get a Quote", href: "/contact?service=Fire%20Breaks#quote" },
+      },
+    
+            {
+        heading: "Why Fire Breaks Matter in Texas",
+        paragraphs: [
+          "Texas properties can contain large amounts of dry grass, dense cedar, brush, and wooded vegetation that can provide continuous fuel for wildfires. During periods of dry weather, these conditions can make it difficult to protect large rural properties and reach remote areas quickly.",
+          "Creating and maintaining fire breaks can help reduce continuous vegetation across a property while providing additional access routes for property owners and emergency personnel.",
+        ],
+        subheading: "Fire Breaks Can Be Especially Useful For:",
+        iconCards: [
+          { icon: "🏡", title: "Reducing Vegetation Around Structures", description: "Reduce continuous vegetation around structures and other important areas." },
+          { icon: "🌲", title: "Creating Separation", description: "Create separation between heavily vegetated areas." },
+          { icon: "🚜", title: "Improving Access", description: "Improve access across large ranches and rural properties." },
+          { icon: "🚒", title: "Emergency Response Routes", description: "Provide additional routes for emergency response." },
+          { icon: "🌿", title: "Managing Wildfire Fuels", description: "Manage cedar, brush, and other wildfire fuels." },
+          { icon: "🔄", title: "Strategic Maintenance", description: "Create strategic cleared areas that can be maintained over time." },
+        ],
+        iconCardsColumns: 3,
+        closingParagraphs: [
+          "A fire break is one part of a broader wildfire preparedness plan, but maintaining accessible, strategically cleared areas can make a large property more manageable during fire conditions.",
         ],
       },
-      {
-        heading: "Common Applications",
-        list: [
-          "Defensible space around homes", "Ranch and rural property protection",
-          "Perimeter fire barriers", "Wildland-urban interface properties",
-          "Seasonal wildfire preparedness",
+            {
+        heading: "Where Fire Breaks Make Sense in Texas",
+        paragraphs: [
+          "Texas properties can have very different wildfire conditions depending on the vegetation, terrain, and location. In Central Texas, dense cedar, brush, wooded areas, and dry grasses can create continuous fuels across large properties. Wind, drought, and dry vegetation can further increase wildfire spread and intensity.",
+        ],
+        subheading: "Fire Breaks Can Be Strategically Placed Around:",
+        scenarios: [
+          { icon: "🐄", title: "Ranches & Large Acreage", description: "Create breaks through areas with dense cedar, brush, grass, or wooded vegetation." },
+          { icon: "🏡", title: "Rural Homes & Properties", description: "Reduce continuous vegetation around homes, barns, outbuildings, and other structures." },
+          { icon: "🦌", title: "Hunting Properties", description: "Create strategic breaks and access routes through heavily wooded or brush covered areas." },
+          { icon: "🌾", title: "Pastures & Grassland", description: "Break up continuous grass fuels and provide additional access across the property." },
+          { icon: "🌲", title: "Cedar & Brush Heavy Areas", description: "Reduce dense vegetation that can contribute to wildfire intensity and spread." },
+          { icon: "📏", title: "Property Boundaries", description: "Create strategic breaks along selected portions of a property where appropriate." },
+          { icon: "🛣️", title: "Roads & Access Routes", description: "Use existing roads and trails as part of a broader fire access and fuel reduction strategy." },
+          { icon: "📍", title: "Remote Areas", description: "Create access and cleared areas where terrain or vegetation makes emergency response more difficult." },
+        ],
+                closingParagraphs: [
+          "The right location and design for a fire break depends on the property's vegetation, terrain, access, and overall fire-management goals. Texas A&M Forest Service recommends considering natural fire breaks and terrain when planning fuel reduction treatments.",
+        ],
+        media: [
+          { type: "image", src: "/images/service-pics/fire-breaks-2.jpeg", alt: "Fire break clearing project in Central Texas" },
         ],
       },
-      {
-        heading: "Our Process",
+            {
+        heading: "What We Clear for Fire Breaks",
+        paragraphs: [
+          "Creating a fire break starts with reducing the vegetation and other fuels that can create a continuous path for wildfire. In Central Texas, that can mean clearing dense cedar, mesquite, yaupon, brush, small trees, dry vegetation, and downed limbs from designated areas.",
+          "Grounded Land Services can clear heavily overgrown areas and create separation between vegetation while working with the existing terrain and property layout. Depending on the project, we can selectively work around mature trees, fences, structures, roads, and other features that need to remain.",
+          "The amount and type of clearing needed will depend on the property's vegetation, terrain, access, and the purpose of the fire break. Our goal is to create a practical cleared area that can be maintained and incorporated into the property's overall fire preparedness.",
+        ],
+      },
+       {
+        heading: "Fire Breaks & Access Trails",
+        paragraphs: [
+          "On large ranches and rural properties, a fire break can serve more than one purpose. When designed as an [access route](/services/atv-trail-creation), a cleared trail can create a more usable path across the property while also reducing continuous vegetation areas.",
+          "These routes can provide property owners and emergency personnel with additional access to remote areas while connecting roads, gates, pastures, structures, and other parts of the property. Grounded Land Services can combine vegetation clearing and trail creation to develop practical access routes based on the property's terrain and intended use.",
+          "Fire access trails should be planned around the property's vegetation, terrain, existing roads, and overall fire management needs.",
+        ],
+      },
+            {
+        heading: "Our Fire Break Clearing Process",
         steps: [
-          { title: "Risk Assessment", description: "We evaluate vegetation, terrain, and structure placement to plan effective firebreak locations." },
-          { title: "Clearing", description: "Vegetation is cleared to create a barrier strip sized to your property's needs." },
-          { title: "Ongoing Maintenance", description: "We can schedule periodic maintenance to keep firebreaks effective season to season." },
+          { title: "Plan the Clearing", description: "We evaluate the property's terrain, vegetation, access, and surrounding features to determine where the fire break should be created." },
+          { title: "Clear the Vegetation", description: "We remove cedar, brush, trees, and other vegetation from the designated area while working around features that need to remain." },
+          { title: "Finish the Fire Break", description: "We clean up the cleared area and address rough sections so the fire break is usable and easier to maintain." },
+        ],
+        ctaButton: { label: "Get a Quote", href: "/contact?service=Fire%20Breaks#quote" },
+      },
+            {
+        heading: "Serving Central Texas Property Owners",
+        paragraphs: [
+          "[Grounded Land Services](/) provides professional fire break clearing throughout Central and South-Central Texas. From rural properties and ranches in the Texas Hill Country to large acreage around the Austin area, we help property owners reduce dense vegetation and create more manageable areas for wildfire preparedness and access.",
+          "We're equipped to create fire breaks on ranches, rural homesites, hunting properties, pastures, and large acreage properties where cedar, brush, mesquite, trees, and other vegetation create continuous fuel across the land.",
+        ],
+        listIntro: "Our Fire Break services are available throughout Central Texas, including:",
+        list: [
+          { label: "Austin", href: "/service-areas" },
+          { label: "Bee Cave", href: "/service-areas" },
+          { label: "Bertram", href: "/service-areas" },
+          { label: "Burnet", href: "/service-areas" },
+          { label: "Dripping Springs", href: "/service-areas" },
+          { label: "Georgetown", href: "/service-areas" },
+          { label: "Johnson City", href: "/service-areas" },
+          { label: "Leander", href: "/service-areas" },
+          { label: "Liberty Hill", href: "/service-areas" },
+          { label: "Llano", href: "/service-areas" },
+          { label: "Marble Falls", href: "/service-areas" },
+          { label: "Round Rock", href: "/service-areas" },
+          { label: "San Marcos", href: "/service-areas" },
+          { label: "Spicewood", href: "/service-areas" },
+          { label: "Wimberley", href: "/service-areas" },
+        ],
+        listColumns: 4,
+        areaMapQuery: "Central Texas",
+        note: {
+          text: "Don't see your area listed? We may still be able to help. Contact us to discuss your property and project.",
+          linkLabel: "View All Service Areas",
+          href: "/service-areas",
+        },
+      },
+            {
+        heading: "Why Choose Grounded Land Services?",
+        paragraphs: [
+          "Fire break clearing requires more than simply cutting vegetation. The property's terrain, vegetation density, access, and surrounding features all need to be considered.",
+          "Grounded Land Services brings heavy equipment and Central Texas land clearing experience to create practical fire breaks and access routes. We can work through dense cedar, brush, mesquite, trees, and difficult terrain while working around features that need to remain.",
+        ],
+        media: [
+          { type: "image", src: "/images/service-pics/why-choose-us.jpeg", alt: "Why choose Grounded Land Services for rock removal" },
+        ],
+      },
+            {
+        heading: "Related Services",
+        paragraphs: [
+          "Fire break clearing often works alongside other land management and vegetation clearing services. Grounded Land Services also provides:",
+        ],
+        relatedServices: [
+          { label: "Land Clearing", href: "/services/land-clearing" },
+          { label: "Forestry Mulching", href: "/services/forestry-mulching" },
+          { label: "Cedar Tree Removal", href: "/services/cedar-tree-removal" },
+          { label: "Underbrushing", href: "/services/underbrushing" },
+          { label: "ATV Trail Creation", href: "/services/atv-trail-creation" },
+          { label: "Right-of-Way Clearing", href: "/services/right-of-way-clearing" },
         ],
       },
     ],
-    faqs: [
-      { question: "How wide should a firebreak be?", answer: "Width depends on terrain, vegetation, and fire risk in your area — we'll recommend the right sizing during your consultation." },
-      { question: "Do firebreaks need regular maintenance?", answer: "Yes, vegetation regrowth means firebreaks are most effective when maintained on a seasonal or annual basis." },
-      { question: "Can this be combined with cedar removal?", answer: "Yes, cedar removal and underbrushing are often combined with firebreak clearing for maximum wildfire protection." },
+      faqs: [
+      { question: "What is a fire break?", answer: "A fire break is a cleared area where vegetation and other combustible fuels have been reduced or removed to create separation between areas of vegetation." },
+      { question: "How does a fire break help during a wildfire?", answer: "Reducing continuous vegetation can reduce available fuel and may help slow fire spread while providing improved access for firefighters across the property." },
+      { question: "Where should a fire break be placed?", answer: "The location depends on the property's terrain, vegetation, structures, roads, access, and overall fire management needs. Each property should be evaluated individually." },
+      { question: "Can you clear cedar and brush for a fire break?", answer: "Yes. We clear cedar, mesquite, brush, small trees, and other vegetation from designated fire break areas.", link: { label: "Cedar Tree Removal", href: "/services/cedar-tree-removal" } },
+      { question: "Can a fire break also be used as an access trail?", answer: "Yes. A properly planned cleared route can provide both vegetation separation and access for property owners or emergency personnel.", link: { label: "ATV Trail Creation", href: "/services/atv-trail-creation" } },
+      { question: "Can you create fire breaks around homes and outbuildings?", answer: "Yes. We can clear designated areas around homes, barns, shops, and other structures while working around features that need to remain." },
+      { question: "How much does fire break clearing cost?", answer: "$2,000–$4,000 per acre. Pricing depends on the clearing method, length and width of the fire break, vegetation density, terrain, access, and the amount of clearing required. We can evaluate your property and provide a project specific estimate.", link: { label: "Request a Free Quote", href: "/contact?service=Fire%20Breaks#quote" } },
     ],
-    pricing: { range: "$1,500 – $4,000", unit: "per project", note: "Pricing depends on firebreak length, width, and vegetation density." },
+    pricing: { range: "$2,000 – $4,000+", unit: "per acre", note: "Pricing depends on firebreak length, width, clearing method, and vegetation density." },
   },
 
   "commercial-lot-clearing": {
@@ -3160,28 +3507,97 @@ pricing: { range: "$25 – $60", unit: "per linear foot", note: "Pricing depends
     metaDescription: "Professional commercial lot clearing in Texas — preparing land for retail, industrial, or commercial development projects.",
     icon: "🏢",
     heroImage: "/images/work/IMG_1641.jpeg",
-    intro: "Commercial development timelines don't leave room for delays. Commercial lot clearing prepares raw or overgrown land for retail, industrial, or office development — cleared, graded, and ready to hand off to your development team on schedule.",
+    intro: "Grounded Land Services provides commercial lot clearing throughout Central and South-Central Texas. We clear trees, brush, cedar, mesquite, stumps, and other vegetation from commercial properties to prepare sites for construction, development, access, and other planned uses.",
     sections: [
-      {
-        heading: "Built for Commercial Timelines",
+            {
+        heading: "What Is Commercial Lot Clearing?",
         paragraphs: [
-          "Commercial projects often involve larger scopes, tighter deadlines, and coordination with multiple contractors. Our crews and equipment are set up to handle larger commercial acreage efficiently, keeping your development timeline on track.",
+          "Commercial lot clearing is the process of removing trees, brush, vegetation, stumps, and other obstacles from a property so the site can be prepared for construction or development. Unlike basic property cleanup, commercial clearing is typically part of a larger construction project where the cleared site needs to meet specific plans and site requirements.",
+          "A commercial property may need to be cleared for a new building, parking area, access road, utility installation, retail or office development, storage facility, or other commercial use. Depending on the site, clearing may involve dense cedar and mesquite, larger trees, brush, stumps, rock, old structures, or other obstacles that need to be addressed before construction can begin.",
+          "Commercial lot clearing also requires planning around existing site conditions. Property access, terrain, drainage, existing vegetation, utilities, neighboring properties, and the planned use of the site can all affect how the clearing work is performed.",
+          "Grounded Land Services brings heavy [equipment](/equipment) to commercial clearing projects to handle larger vegetation, stumps, debris, and difficult terrain efficiently. When needed, clearing can also be combined with [demolition](/services/demolition), [rock removal](/services/rock-removal), [dirt work](/services/dirt-work-grading), grading, and [site preparation](/services/site-preparation) to help move the property toward the next phase of development.",
         ],
       },
-      {
-        heading: "Ideal For",
-        list: [
-          "Retail and office development", "Industrial site preparation",
-          "Multi-acre commercial parcels", "Parking lot and access road prep",
-          "Municipal and public works projects",
+            {
+        heading: "Commercial Properties We Clear",
+        paragraphs: [
+          "Commercial clearing projects can vary significantly in size, vegetation, and site conditions. Grounded Land Services can clear a variety of commercial properties, including:",
         ],
+        scenarios: [
+          { icon: "🏢", title: "Commercial Building Sites", description: "Clear property for offices, retail buildings, warehouses, shops, and other commercial structures." },
+          { icon: "🏗️", title: "Development Sites", description: "Prepare undeveloped or overgrown acreage for planned commercial development." },
+          { icon: "🏬", title: "Retail & Business Properties", description: "Clear lots for new businesses, expansions, parking areas, and access improvements." },
+          { icon: "🏭", title: "Industrial & Storage Sites", description: "Remove vegetation and obstacles from properties planned for industrial, equipment, or storage uses." },
+          { icon: "🛣️", title: "Roads & Access Areas", description: "Clear vegetation for private roads, entrances, driveways, and other commercial access areas." },
+          { icon: "⚡", title: "Utility & Infrastructure Areas", description: "Clear vegetation and obstacles where utilities or other site infrastructure will be installed." },
+        ],
+        iconCardsColumns: 3,
       },
-      {
-        heading: "Our Process",
+            {
+        heading: "What We Clear",
+        paragraphs: [
+          "Commercial properties can have a wide range of vegetation and site obstacles. Grounded Land Services uses specialized equipment and attachments to clear the materials standing in the way of your project.",
+        ],
+        iconCards: [
+          { icon: "🌲", title: "Cedar & Mesquite", description: "Remove dense cedar and mesquite growth common throughout Central Texas." },
+          { icon: "🪵", title: "Trees & Stumps", description: "Remove larger trees and stumps when complete removal is required for the planned site." },
+          { icon: "🌿", title: "Brush & Undergrowth", description: "Clear thick brush, yaupon, vines, and other overgrown vegetation." },
+          { icon: "🍃", title: "Downed Trees & Debris", description: "Clean up fallen trees, limbs, and existing debris across the property." },
+          { icon: "🪨", title: "Rock & Surface Obstacles", description: "Remove or process rock and other obstacles that interfere with site preparation. [Explore Rock Removal](/services/rock-removal)" },
+          { icon: "🌾", title: "Overgrown Areas", description: "Clear heavily vegetated portions of commercial properties that need to be opened for development or construction." },
+        ],
+        iconCardsColumns: 3,
+      },
+            {
+        heading: "Our Commercial Lot Clearing Process",
         steps: [
-          { title: "Project Coordination", description: "We coordinate with your developer or general contractor on scope, timeline, and specifications." },
-          { title: "Clearing", description: "Vegetation, trees, and debris are cleared across the full commercial parcel." },
-          { title: "Grading", description: "The site is graded to prepare for construction or paving." },
+          { title: "Assess", description: "Evaluate the site, vegetation, terrain, access, and project requirements." },
+          { title: "Clear", description: "Remove trees, brush, stumps, debris, and other site obstacles." },
+          { title: "Prepare", description: "Clean up the site and complete additional grading, rock removal, or site preparation as needed." },
+        ],
+        ctaButton: { label: "Get a Quote", href: "/contact?service=Commercial%20Lot%20Clearing#quote" },
+      },
+            {
+        heading: "Serving Central Texas Property Owners",
+        paragraphs: [
+          "[Grounded Land Services](/) provides professional commercial lot clearing throughout Central and South-Central Texas. From development sites in the Texas Hill Country to commercial properties around the Austin area, we help businesses and developers prepare land for construction.",
+          "We're equipped to clear commercial building sites, retail and business properties, industrial sites, and development acreage where cedar, mesquite, brush, and other vegetation stand in the way of a project.",
+        ],
+        listIntro: "Our commercial lot clearing services are available throughout Central Texas, including:",
+        list: [
+          { label: "Austin", href: "/service-areas" },
+          { label: "Bee Cave", href: "/service-areas" },
+          { label: "Bertram", href: "/service-areas" },
+          { label: "Burnet", href: "/service-areas" },
+          { label: "Dripping Springs", href: "/service-areas" },
+          { label: "Georgetown", href: "/service-areas" },
+          { label: "Johnson City", href: "/service-areas" },
+          { label: "Leander", href: "/service-areas" },
+          { label: "Liberty Hill", href: "/service-areas" },
+          { label: "Llano", href: "/service-areas" },
+          { label: "Marble Falls", href: "/service-areas" },
+          { label: "Round Rock", href: "/service-areas" },
+          { label: "San Marcos", href: "/service-areas" },
+          { label: "Spicewood", href: "/service-areas" },
+          { label: "Wimberley", href: "/service-areas" },
+        ],
+        listColumns: 4,
+        areaMapQuery: "Central Texas",
+        note: {
+          text: "Don't see your area listed? We may still be able to help. Contact us to discuss your property and project.",
+          linkLabel: "View All Service Areas",
+          href: "/service-areas",
+        },
+      },
+            {
+        heading: "Related Services",
+        relatedServices: [
+          { label: "Site Preparation", href: "/services/site-preparation" },
+          { label: "Land Clearing", href: "/services/land-clearing" },
+          { label: "Demolition", href: "/services/demolition" },
+          { label: "Dirt Work & Grading", href: "/services/dirt-work-grading" },
+          { label: "Rock Removal", href: "/services/rock-removal" },
+          { label: "Forestry Mulching", href: "/services/forestry-mulching" },
         ],
       },
     ],
@@ -3278,7 +3694,7 @@ pricing: { range: "$25 – $60", unit: "per linear foot", note: "Pricing depends
           "[Grounded Land Services](/) provides ATV and UTV trail creation throughout Central and South-Central Texas. From rural ranches and large properties in the Texas Hill Country to recreational acreage throughout the Austin area, we help property owners create usable trails through wooded, brush covered, and uneven terrain.",
           "We're equipped to build and improve trails for recreational riding, hunting access, property maintenance, fire preparedness, and emergency access. Whether you're creating new trails or reopening existing ones that have become overgrown, we can help make more of your property accessible and usable.",
         ],
-        listIntro: "Our rock removal services are available throughout Central Texas, including:",
+        listIntro: "Our Access Trail services are available throughout Central Texas, including:",
         list: [
           { label: "Austin", href: "/service-areas" },
           { label: "Bee Cave", href: "/service-areas" },
@@ -3349,35 +3765,152 @@ pricing: { range: "$25 – $60", unit: "per linear foot", note: "Pricing depends
     metaDescription: "Professional tree and stump removal in Texas — complete removal of trees and root systems for a clean, build-ready property.",
     icon: "🌳",
     heroImage: "/images/official/land-clearing.jpeg",
-    intro: "Some projects need more than trimming — they need the tree, stump, and root system gone entirely. Tree and stump removal clears individual or multiple trees down to bare ground, leaving no obstruction for construction, grading, or landscaping.",
+    intro: "Grounded Land Services provides professional tree and stump removal for residential and rural properties throughout Central and South-Central Texas. We remove dead or hazardous trees, problem trees that interfere with property use, and stumps that create maintenance, access, or safety concerns.",
     sections: [
-      {
-        heading: "Complete Removal, Not Just Trimming",
+            {
+        heading: "What Is Tree & Stump Removal?",
         paragraphs: [
-          "Unlike selective mulching, tree and stump removal takes the entire tree — trunk, stump, and root system — completely out of the ground. This is the right call when a specific tree is dead, hazardous, or simply in the way of a planned structure, driveway, or septic line.",
+          "Tree and stump removal involves removing dead, damaged, hazardous, or problematic trees and stumps that interfere with the safety and condition of a property.",
+          "At [Grounded Land Services](/), our tree removal service is focused primarily on situations where a tree has become a hazard, obstruction, or property use problem. This can include dead trees, damaged trees, trees that are interfering with construction or access, and trees that need to be removed as part of a larger land clearing project.",
+          "Stump removal addresses the remaining stump and root base after a tree has been cut or has fallen. Removing the stump can eliminate mowing hazards, improve access, make the area easier to maintain, and prepare the ground for construction, landscaping, or other site work.",
+          "Depending on the property and scope of work, tree and stump removal can also be combined with [land clearing](/services/land-clearing), [forestry mulching](/services/forestry-mulching), [rock removal](/services/rock-removal), or [forestry mulching cleanup](/services/forestry-mulching-cleanup) to handle multiple property needs as part of one project.",
+        ],
+        ctaButton: { label: "Get a Quote", href: "/contact?service=Tree%20%26%20Stump%20Removal#quote" },
+      },
+            {
+        heading: "When Tree Removal Makes Sense",
+        paragraphs: [
+          "Tree removal may be needed when a tree has become a safety concern, is interfering with property use, or needs to be removed for planned site work.",
+        ],
+        scenarios: [
+          { icon: "🍂", title: "Dead or Dying Trees", description: "Remove trees that are no longer healthy and may become hazards." },
+          { icon: "⚡", title: "Damaged Trees", description: "Trees damaged by storms, equipment, or other conditions may need to be removed." },
+          { icon: "⚠️", title: "Hazardous Trees", description: "Remove trees that pose a potential risk to structures, driveways, access areas, or people." },
+          { icon: "🚧", title: "Problem Trees", description: "Trees interfering with construction, access, fencing, or other property use." },
         ],
       },
-      {
-        heading: "Common Reasons for Removal",
+            {
+        heading: "When Stump Removal Makes Sense",
+        paragraphs: [
+          "Stumps can become obstacles for mowing, landscaping, house construction, and everyday property use. Grounded Land Services can remove problem stumps when complete removal is needed.",
+        ],
+        listIntro: "Stump removal is commonly needed when a stump is:",
         list: [
-          "Dead or diseased trees", "Storm-damaged trees",
-          "Trees blocking construction", "Root systems threatening foundations",
-          "Stumps left from prior clearing", "Trees too close to structures",
+          "Creating a mowing or safety hazard",
+          "Interfering with construction or site work",
+          "Taking up space needed for landscaping or property use",
+          "Left behind after tree or land clearing work",
+        ],
+        listColumns: 2,
+      },
+            {
+        heading: "Tree Removal vs. Forestry Mulching",
+        paragraphs: [
+          "Tree removal and forestry mulching serve different purposes. The right option depends on the size and condition of the tree and what you need the property ready for.",
+        ],
+        comparison: {
+          left: {
+            heading: "Tree & Stump Removal",
+            list: [
+              "Best for dead, damaged, hazardous, or problem trees",
+              "Removes larger trees and stumps when complete removal is needed",
+              "Useful for construction, access, safety, and property maintenance",
+            ],
+          },
+          right: {
+            heading: "Forestry Mulching",
+            list: [
+              "Best for cedar, mesquite, yaupon, brush, and smaller trees",
+              "Processes vegetation into mulch and leaves it on site",
+              "Ideal for opening up overgrown areas without hauling vegetation away",
+            ],
+          },
+        },
+        note: {
+          text: "Learn more about",
+          linkLabel: "Forestry Mulching",
+          href: "/services/forestry-mulching",
+        },
+      },
+            {
+        heading: "Our Tree & Stump Removal Process",
+        paragraphs: [
+          "Every tree removal project is different. We start by evaluating the tree or stump and the surrounding property, then determine the safest and most practical approach.",
+        ],
+        steps: [
+          { title: "Assess", description: "Evaluate the tree or stump, surrounding structures, access, and overall project needs." },
+          { title: "Remove", description: "Remove the tree or stump using the equipment and approach appropriate for the property." },
+          { title: "Clean Up", description: "Process or remove the resulting debris and leave the work area ready for its next use." },
+        ],
+        ctaButton: { label: "Get a Quote", href: "/contact?service=Tree%20%26%20Stump%20Removal#quote" },
+      },
+            {
+        heading: "Why Choose Grounded Land Services?",
+        paragraphs: [
+          "Tree and stump removal often goes hand in hand with other property work. Grounded Land Services brings the [equipment](/equipment) and experience to handle the removal and related clearing needs in one project.",
+        ],
+        scenarios: [
+          { icon: "🚜", title: "Heavy Equipment", description: "Equipped to handle larger trees, stumps, and difficult access conditions." },
+          { icon: "🎯", title: "Problem-Tree Focus", description: "We focus on dead, damaged, hazardous, and problem trees rather than treating every tree as a removal candidate." },
+          { icon: "📍", title: "Central Texas Experience", description: "Experienced working on residential and rural properties throughout Central and South-Central Texas." },
+          { icon: "🔧", title: "More Than Tree Removal", description: "When needed, we can combine tree and stump removal with land clearing, forestry mulching, rock removal, and site preparation." },
+        ],
+        media: [
+          { type: "image", src: "/images/service-pics/why-choose-us.jpeg", alt: "Why choose Grounded Land Services for rock removal" },
         ],
       },
       {
-        heading: "Our Process",
-        steps: [
-          { title: "Tree Assessment", description: "We evaluate tree size, condition, and root spread before removal." },
-          { title: "Removal", description: "The tree is felled and the stump and major roots are extracted." },
-          { title: "Site Cleanup", description: "The hole is backfilled and the area is left level and clean." },
+        heading: "Serving Central Texas Property Owners",
+        paragraphs: [
+          "[Grounded Land Services](/) provides professional tree and stump removal throughout Central and South-Central Texas. From residential properties and rural acreage in the Texas Hill Country to homesites throughout the Austin area, we help property owners remove dead, damaged, hazardous, or unwanted trees and stumps.",
+          "We're equipped to handle tree and stump removal projects where trees have become a safety hazard, are interfering with property use, or need to be removed before construction or site work. Whether you need a single hazardous tree removed or multiple stumps cleared from a property, we can help safely prepare the area for the next step.",
+        ],
+        listIntro: "Our Tree & Stump removal services are available throughout Central Texas, including:",
+        list: [
+          { label: "Austin", href: "/service-areas" },
+          { label: "Bee Cave", href: "/service-areas" },
+          { label: "Bertram", href: "/service-areas" },
+          { label: "Burnet", href: "/service-areas" },
+          { label: "Dripping Springs", href: "/service-areas" },
+          { label: "Georgetown", href: "/service-areas" },
+          { label: "Johnson City", href: "/service-areas" },
+          { label: "Leander", href: "/service-areas" },
+          { label: "Liberty Hill", href: "/service-areas" },
+          { label: "Llano", href: "/service-areas" },
+          { label: "Marble Falls", href: "/service-areas" },
+          { label: "Round Rock", href: "/service-areas" },
+          { label: "San Marcos", href: "/service-areas" },
+          { label: "Spicewood", href: "/service-areas" },
+          { label: "Wimberley", href: "/service-areas" },
+        ],
+        listColumns: 4,
+        areaMapQuery: "Central Texas",
+        note: {
+          text: "Don't see your area listed? We may still be able to help. ",
+          linkLabel: "View All Service Areas",
+          href: "/service-areas",
+        },
+      },
+            {
+        heading: "Related Services",
+        relatedServices: [
+          { label: "Land Clearing", href: "/services/land-clearing" },
+          { label: "Forestry Mulching", href: "/services/forestry-mulching" },
+          { label: "Cedar Tree Removal", href: "/services/cedar-tree-removal" },
+          { label: "Rock Removal", href: "/services/rock-removal" },
+          { label: "Site Preparation", href: "/services/site-preparation" },
+          { label: "Forestry Mulching Cleanup", href: "/services/forestry-mulching-cleanup" },
         ],
       },
     ],
-    faqs: [
-      { question: "Do you remove the entire root system?", answer: "We remove the stump and major root mass; some fine root remnants may remain but won't affect grading or construction." },
-      { question: "Can you remove a single tree without disturbing the rest of my yard?", answer: "Yes, individual tree and stump removal is scoped precisely to the tree in question." },
-      { question: "What happens to the removed tree?", answer: "It can be hauled away, cut for firewood, or mulched on-site, depending on your preference." },
+        faqs: [
+      { question: "What types of trees do you remove?", answer: "We primarily remove dead, damaged, hazardous, or problem trees that interfere with safety, access, construction, or property use." },
+      { question: "Can you remove large trees?", answer: "Yes. Larger trees can be removed with the appropriate heavy equipment based on the tree, property, access, and surrounding conditions.", link: { label: "View Our Equipment", href: "/equipment" } },
+      { question: "Do you remove tree stumps?", answer: "Yes. We remove problematic stumps when complete removal is needed for safety, access, construction, landscaping, or maintenance." },
+      { question: "Can you remove a tree that is close to a house?", answer: "Potentially. Each situation is different, and we evaluate the tree, surrounding structures, access, and equipment requirements before determining the appropriate approach." },
+      { question: "Do you haul away the tree?", answer: "Depending on the project, tree debris can be processed, stacked, or hauled off as part of the agreed scope of work." },
+      { question: "Can you remove trees as part of land clearing?", answer: "Yes. Tree removal can be combined with land clearing when larger trees need to be removed as part of preparing a property for construction, access, or other site work.", link: { label: "Land Clearing", href: "/services/land-clearing" } },
+      { question: "How much does tree and stump removal cost?", answer: "$300–$1,500+ per tree. The cost depends on factors such as tree size, number of trees, stump size, access, surrounding structures, equipment requirements, and debris handling. The best way to determine the cost is to evaluate the specific project.", link: { label: "Request a Free Quote", href: "/contact?service=Tree%20%26%20Stump%20Removal#quote" } },
     ],
     pricing: { range: "$300 – $1,500", unit: "per tree", note: "Pricing depends on tree size, stump diameter, and root system extent." },
   },
@@ -3387,37 +3920,116 @@ pricing: { range: "$25 – $60", unit: "per linear foot", note: "Pricing depends
     metaDescription: "Professional gravel driveway and road construction in Texas — durable, well-graded access roads built from quality crushed aggregate.",
     icon: "🛤️",
     heroImage: "/images/official/rock-crushing.jpeg",
-    intro: "A well-built gravel driveway or ranch road holds up to Texas weather and heavy use for years. We construct durable, properly graded gravel roads and driveways — often using on-site crushed rock to keep costs down while delivering a stable, long-lasting surface.",
+    intro: "Grounded Land Services provides gravel driveway and private road preparation throughout Central and South-Central Texas. From new rural driveways to existing gravel roads that need reshaping, grading, or maintenance, we help create smoother, more usable access for residential and rural properties.",
     sections: [
-      {
-        heading: "Built to Last",
+            {
+        heading: "What We Do",
         paragraphs: [
-          "A good gravel road starts with proper grading and drainage — without it, even quality aggregate will wash out or rut over time. We build from the ground up: clearing, grading, crowning for drainage, and finishing with a properly sized aggregate layer.",
+          "Gravel driveways and private roads provide practical access for homes, ranches, recreational properties, construction sites, and other rural properties. Over time, traffic, weather, erosion, and drainage can leave gravel surfaces with ruts, potholes, washouts, uneven areas, and exposed rock.",
+          "Grounded Land Services helps build, reshape, and maintain gravel driveways and private roads. Depending on the project, our work can include clearing the existing path, preparing the ground, grading the surface, spreading or reshaping gravel, and addressing problem areas that make the road difficult to use.",
+          "Central and South-Central Texas properties can present challenging conditions, including rocky ground, uneven terrain, and heavy rainfall that can affect gravel access roads. Proper grading and surface preparation can help create a more usable driveway or road and improve how it handles everyday traffic and weather.",
+          "For maintenance and surface preparation, our [Cat 275 XE](/equipment#cat-275) and [Harley rake](/equipment#harley-rake) allows us to break up and reshape uneven material, work surface rock and debris, and leave a smoother, more consistent gravel surface. Larger excavation or drainage work can also be handled with the [Cat 323](/equipment#cat-323) when the project requires it.",
         ],
       },
-      {
-        heading: "Applications",
-        list: [
-          "Residential driveways", "Ranch and private roads",
-          "Commercial access roads", "Long rural driveway extensions",
-          "Parking area surfacing",
+            {
+        heading: "When You May Need Gravel Driveway Work",
+        paragraphs: [
+          "Gravel driveways and private roads can require maintenance as traffic and weather change the surface over time. Grounded Land Services can help with:",
+        ],
+        scenarios: [
+          { icon: "🏡", title: "New Driveways & Roads", description: "Prepare access for new homesites, ranches, and rural properties." },
+          { icon: "🕳️", title: "Ruts & Potholes", description: "Reshape damaged areas and restore a more consistent driving surface." },
+          { icon: "💧", title: "Washouts & Erosion", description: "Address areas where water has damaged or displaced gravel." },
+          { icon: "〰️", title: "Uneven Surfaces", description: "Regrade rough or uneven sections that have become difficult to drive." },
+          { icon: "🔄", title: "Gravel Reshaping", description: "Redistribute existing gravel and improve the overall surface." },
+          { icon: "🛣️", title: "Access Improvements", description: "Improve private roads, ranch roads, and property entrances where better access is needed." },
         ],
       },
-      {
-        heading: "Our Process",
+            {
+        heading: "Equipment & Process",
+        paragraphs: [
+          "The equipment and approach used for a gravel driveway or private road depend on the condition of the existing surface and the work required.",
+        ],
+        iconCards: [
+          { icon: "🚜", title: "Cat 275 XE + Harley Rake", description: "Reshape gravel, break up uneven areas, work surface rock, and prepare a smoother driving surface. [View Equipment](/equipment#cat-275)" },
+          { icon: "⛏️", title: "Cat 323 Excavator", description: "Handle excavation, drainage work, larger rock, and areas requiring more digging or material movement. [View Equipment](/equipment#cat-323)" },
+        ],
+        iconCardsColumns: 2,
         steps: [
-          { title: "Route Planning", description: "We plan the driveway or road path, accounting for drainage and terrain." },
-          { title: "Grading & Crowning", description: "The base is graded and crowned to shed water properly." },
-          { title: "Aggregate Placement", description: "Crushed rock — often produced on-site — is placed and compacted to finish the surface." },
+          { title: "Evaluate", description: "Assess the existing road, drainage, terrain, and problem areas." },
+          { title: "Grade & Prepare", description: "Reshape the surface, address problem areas, and prepare the road for gravel as needed." },
+          { title: "Finish", description: "Spread or redistribute gravel and leave the driveway or road smoother and ready for use." },
+        ],
+        ctaButton: { label: "Get a Quote", href: "/contact?service=Gravel%20Driveways%20%26%20Roads#quote" },
+      },
+            {
+        heading: "Why Choose Grounded Land Services?",
+        paragraphs: [
+          "Gravel driveway and road work often ties into other property projects. Grounded Land Services can handle the [clearing](/services/land-clearing), [grading](/services/dirt-work-grading), [rock removal](/services/rock-removal), and surface preparation that may be needed before or alongside gravel work.",
+        ],
+        scenarios: [
+          { icon: "🚜", title: "Heavy Equipment", description: "Cat 275 XE and Cat 323 for grading, excavation, rock, and material handling." },
+          { icon: "🔧", title: "One Contractor", description: "Combine driveway work with land clearing, rock removal, dirt work, or site preparation." },
+          { icon: "📍", title: "Texas Terrain Experience", description: "Familiar with the rocky, uneven conditions found throughout Central and South-Central Texas." },
+          { icon: "✅", title: "Practical Access", description: "Focus on creating smoother, more usable access for homes, ranches, and rural properties." },
+        ],
+         media: [
+          { type: "image", src: "/images/service-pics/why-choose-us.jpeg", alt: "Why choose Grounded Land Services for rock removal" },
+        ],
+      },
+            {
+        heading: "Serving Central Texas Property Owners",
+        paragraphs: [
+          "[Grounded Land Services](/) provides gravel driveway and private road work throughout Central and South-Central Texas. From new homesites in the Texas Hill Country to rural properties throughout the Austin area, we help property owners build, reshape, and maintain gravel access.",
+          "We're equipped to handle driveway and road projects where ruts, potholes, washouts, or uneven surfaces have made access difficult, as well as new driveways being prepared for a homesite or ranch. Whether you need a full driveway rebuilt or an existing road regraded, we can help create smoother, more usable access.",
+        ],
+        listIntro: "Our gravel driveway and road services are available throughout Central Texas, including:",
+        list: [
+          { label: "Austin", href: "/service-areas" },
+          { label: "Bee Cave", href: "/service-areas" },
+          { label: "Bertram", href: "/service-areas" },
+          { label: "Burnet", href: "/service-areas" },
+          { label: "Dripping Springs", href: "/service-areas" },
+          { label: "Georgetown", href: "/service-areas" },
+          { label: "Johnson City", href: "/service-areas" },
+          { label: "Leander", href: "/service-areas" },
+          { label: "Liberty Hill", href: "/service-areas" },
+          { label: "Llano", href: "/service-areas" },
+          { label: "Marble Falls", href: "/service-areas" },
+          { label: "Round Rock", href: "/service-areas" },
+          { label: "San Marcos", href: "/service-areas" },
+          { label: "Spicewood", href: "/service-areas" },
+          { label: "Wimberley", href: "/service-areas" },
+        ],
+        listColumns: 4,
+        areaMapQuery: "Central Texas",
+        note: {
+          text: "Don't see your area listed? We may still be able to help.",
+          linkLabel: "View All Service Areas",
+          href: "/service-areas",
+        },
+      },
+            {
+        heading: "Related Services",
+        relatedServices: [
+          { label: "Dirt Work & Grading", href: "/services/dirt-work-grading" },
+          { label: "Land Clearing", href: "/services/land-clearing" },
+          { label: "Rock Removal", href: "/services/rock-removal" },
+          { label: "Site Preparation", href: "/services/site-preparation" },
+          { label: "Rock Crushing", href: "/services/rock-crushing" },
+          { label: "Utility Trenching", href: "/services/utility-trenching" },
         ],
       },
     ],
-    faqs: [
-      { question: "Can you use rock already on my property?", answer: "Yes — we can crush on-site limestone into usable aggregate, reducing the cost of importing material." },
-      { question: "Do you handle drainage for driveways?", answer: "Yes, proper crowning and grading for drainage is a standard part of every driveway or road build." },
-      { question: "How long does a gravel driveway last?", answer: "With proper base preparation and drainage, a well-built gravel driveway can last many years with only periodic maintenance." },
+        faqs: [
+      { question: "Can you build a new gravel driveway?", answer: "Yes. We can clear and prepare the driveway path, grade the ground, and prepare the surface for gravel." },
+      { question: "Can you repair an existing gravel driveway?", answer: "Yes. We can reshape ruts, potholes, uneven areas, and other surface problems depending on the condition of the driveway." },
+      { question: "Can you build private gravel roads?", answer: "Yes. We work on private roads and access roads for rural properties, ranches, homesites, and other private properties." },
+      { question: "Can you fix gravel driveway washouts?", answer: "Yes. We can evaluate washouts and erosion problems and determine whether grading, drainage work, additional gravel, or other site preparation is needed." },
+      { question: "Do you provide the gravel?", answer: "Gravel can be included in the project depending on the scope. We can determine the appropriate material and quantity needed for the project.", link: { label: "Rock Crushing", href: "/services/rock-crushing" } },
+      { question: "How much does a gravel driveway cost?", answer: "Pricing depends on the driveway or road length, width, existing conditions, terrain, amount of grading, gravel required, drainage needs, and site access. The best way to determine the cost is to evaluate the property and project.", link: { label: "Request a Free Quote", href: "/contact?service=Gravel%20Driveways%20%26%20Roads#quote" } },
     ],
-pricing: { range: "$5 – $15", unit: "per linear foot", note: "Pricing depends on road width, length, base material, and grading needs." },
+pricing: { range: "$2,500 – $5,000+", unit: "per job", note: "Pricing depends on road width, length, base material, and grading needs." },
   },
 
   "storm-damage-cleanup": {
@@ -3425,37 +4037,132 @@ pricing: { range: "$5 – $15", unit: "per linear foot", note: "Pricing depends 
     metaDescription: "Professional storm damage cleanup in Texas — fast removal of downed trees, debris, and storm-damaged vegetation to restore your property.",
     icon: "⛈️",
     heroImage: "/images/official/tree-pile-shredding.jpeg",
-    intro: "Severe storms can leave a property covered in downed trees, broken limbs, and scattered debris overnight. Storm damage cleanup gets your land back to safe, usable condition quickly — clearing fallen trees, processing debris, and restoring access after high winds, ice, or flooding.",
+    intro: "Grounded Land Services provides professional storm damage cleanup for residential and rural properties throughout Central and South Central Texas. We help remove fallen trees, large limbs, brush, and other storm debris while clearing blocked access and addressing ground conditions left behind by severe weather.",
     sections: [
-      {
-        heading: "Fast, Efficient Storm Recovery",
+                  {
+        heading: "What Is Storm Damage Cleanup?",
         paragraphs: [
-          "After a major storm, quick cleanup matters — downed trees and limbs can block driveways, damage fences, and create ongoing safety hazards. We prioritize storm response work to help property owners restore access and safety as soon as possible.",
+          "Texas weather can change quickly, and severe storms can leave properties with significant cleanup needs. High winds can break or uproot trees, large limbs can come down across driveways and roads, and heavy rainfall can leave already damaged areas muddy, rutted, or difficult to access. Tornadoes can cause even more extensive damage, including widespread tree and vegetation damage.",
+          "Storm damage cleanup is the process of clearing these storm related obstacles and getting the property back into usable condition. Depending on the storm, cleanup may involve fallen trees, large limbs, damaged brush, debris piles, blocked access, and areas where heavy debris has disturbed the ground.",
+          "[Grounded Land Services](/) brings specialized [equipment](/equipment) to large storm cleanup projects where chainsaws and hand tools alone aren't enough. Our equipment allows us to handle fallen trees and large debris, reopen access, process suitable woody material, and clean up damaged areas so the property can move toward normal use again.",
+        ],
+        ctaButton: { label: "Get a Quote", href: "/contact?service=Storm%20Damage%20Cleanup#quote" },
+      },
+      
+            {
+        heading: "Storm Damage We Can Help Clean Up",
+        paragraphs: [
+          "Storms can leave behind more than just fallen trees. We help clean up a range of storm related debris and property damage.",
+        ],
+        iconCards: [
+          { icon: "🌳", title: "Fallen Trees", description: "Remove trees that have fallen across property, driveways, or access areas." },
+          { icon: "🪵", title: "Large Limbs & Branches", description: "Clean up broken limbs and heavy branches left behind by high winds." },
+          { icon: "🌿", title: "Storm Damaged Brush", description: "Clean up damaged brush and vegetation that has been knocked down or scattered." },
+          { icon: "🚧", title: "Blocked Access", description: "Clear trees, limbs, and debris blocking driveways, roads, trails, or property access." },
+          { icon: "🔥", title: "Debris Piles", description: "Process or remove piles of woody storm debris left after cleanup." },
+          { icon: "🏡", title: "Damaged Areas", description: "Clean up areas where fallen trees and heavy debris have disturbed the ground or property." },
+        ],
+        iconCardsColumns: 3,
+      },
+            {
+        heading: "When Storm Damage Cleanup Is Needed",
+        paragraphs: [
+          "Storm damage cleanup may be needed after severe weather leaves trees, brush, or debris across areas of the property. In Central and South Central Texas, strong thunderstorms, high winds, tornadoes, and heavy rain can all create cleanup needs.",
+        ],
+        scenarios: [
+          { icon: "⛈️", title: "After Severe Thunderstorms", description: "Remove fallen trees, broken limbs, and scattered debris left behind by strong winds." },
+          { icon: "🌪️", title: "After Tornadoes", description: "Clean up larger areas affected by fallen or damaged trees, brush, and debris." },
+          { icon: "🚧", title: "Blocked Driveways & Roads", description: "Reopen access when trees, limbs, or debris prevent vehicles and equipment from getting through." },
+          { icon: "🐄", title: "Damaged Rural Properties", description: "Clean up storm damaged acreage, ranch roads, trails, and wooded areas." },
+          { icon: "🚜", title: "Large Debris Cleanup", description: "Handle storm debris that is too large or heavy for typical property cleanup equipment." },
+          { icon: "🧹", title: "Post Storm Property Cleanup", description: "Restore usable areas after the immediate storm damage has been cleared." },
         ],
       },
-      {
-        heading: "What We Clean Up",
-        list: [
-          "Downed and broken trees", "Scattered limbs and branches",
-          "Storm-damaged fence lines", "Blocked driveways and roads",
-          "Debris piles from wind or ice damage", "Flood-deposited debris",
+            {
+        heading: "Our Storm Damage Cleanup Process",
+        paragraphs: [
+          "Every storm cleanup project is different, so we start by evaluating the damage, access, and overall condition of the property. From there, we determine the equipment and approach needed to get the property cleaned up and usable again.",
         ],
-      },
-      {
-        heading: "Our Process",
         steps: [
-          { title: "Damage Assessment", description: "We evaluate the extent of storm damage and prioritize access routes and hazards." },
-          { title: "Debris Clearing", description: "Downed trees and debris are removed or mulched on-site." },
-          { title: "Site Restoration", description: "The property is left clean and safe, with access fully restored." },
+          { title: "Assess", description: "Evaluate fallen trees, debris, blocked access, and the overall condition of the property to determine the scope of cleanup." },
+          { title: "Clear", description: "Remove fallen trees, limbs, brush, and other storm debris using the equipment and attachments best suited for the project." },
+          { title: "Clean Up & Restore Access", description: "Process, stack, or remove debris as agreed and clear driveways, roads, trails, and other areas so the property can be used again." },
+        ],
+        ctaButton: { label: "Get a Quote", href: "/contact?service=Storm%20Damage%20Cleanup#quote" },
+      },
+      {
+        heading: "Why Choose Grounded Land Services?",
+        paragraphs: [
+          "Storm damage cleanup can involve large trees, heavy debris, blocked access, and difficult property conditions. [Grounded Land Services](/) brings the equipment and experience needed to handle larger cleanup projects and get your property back into usable condition.",
+        ],
+        scenarios: [
+          { icon: "🚜", title: "Heavy Equipment", description: "Equipped to handle large trees, heavy limbs, brush, and storm debris." },
+          { icon: "🏡", title: "Large Property Cleanup", description: "Experience working on residential properties, rural acreage, and larger tracts of land." },
+          { icon: "🔧", title: "More Than Cleanup", description: "Storm damage can often be combined with [tree removal](/services/tree-stump-removal), [land clearing](/services/land-clearing), [forestry mulching](/services/forestry-mulching), or [dirt work](/services/dirt-work-grading)." },
+          { icon: "📍", title: "Central Texas Experience", description: "Familiar with the terrain, vegetation, and property conditions found throughout Central and South Central Texas." },
+        ],
+        closingParagraphs: [
+          "Whether a storm blocks your driveway or leaves a larger area of your property covered in fallen trees and debris, we can evaluate the damage and determine the right approach for cleanup.",
+        ],
+         media: [
+          { type: "image", src: "/images/service-pics/why-choose-us.jpeg", alt: "Why choose Grounded Land Services for rock removal" },
+        ],
+      },
+            {
+        heading: "Serving Central Texas Property Owners",
+        subheading: "Storm Damage Cleanup Where You Need It",
+        paragraphs: [
+          "[Grounded Land Services](/) provides storm damage cleanup throughout Central and South-Central Texas for homeowners, ranch owners, and property owners dealing with fallen trees and storm debris.",
+          "From a single blocked driveway to larger areas of rural property covered in downed trees, we bring the equipment and experience needed to clear the damage and get your property usable again.",
+        ],
+        listIntro: "We serve property owners throughout Central Texas including:",
+        list: [
+          { label: "Austin", href: "/service-areas" },
+          { label: "Bertram", href: "/service-areas" },
+          { label: "Burnet", href: "/service-areas" },
+          { label: "Dripping Springs", href: "/service-areas" },
+          { label: "Fredericksburg", href: "/service-areas" },
+          { label: "Georgetown", href: "/service-areas" },
+          { label: "Johnson City", href: "/service-areas" },
+          { label: "Kerrville", href: "/service-areas" },
+          { label: "Leander", href: "/service-areas" },
+          { label: "Liberty Hill", href: "/service-areas" },
+          { label: "Marble Falls", href: "/service-areas" },
+          { label: "New Braunfels", href: "/service-areas" },
+          { label: "Round Rock", href: "/service-areas" },
+          { label: "San Marcos", href: "/service-areas" },
+          { label: "Spicewood", href: "/service-areas" },
+        ],
+        listColumns: 4,
+        areaMapQuery: "Central Texas",
+        note: {
+          text: "Don't see your city?",
+          linkLabel: "Explore Our Service Areas",
+          href: "/service-areas",
+        },
+      },
+            {
+        heading: "Related Services",
+        relatedServices: [
+          { label: "Tree & Stump Removal", href: "/services/tree-stump-removal" },
+          { label: "Land Clearing", href: "/services/land-clearing" },
+          { label: "Forestry Mulching", href: "/services/forestry-mulching" },
+          { label: "Site Cleanup", href: "/services/site-cleanup" },
+          { label: "Dirt Work & Grading", href: "/services/dirt-work-grading" },
+          { label: "Right-of-Way Clearing", href: "/services/right-of-way-clearing" },
         ],
       },
     ],
-    faqs: [
-      { question: "How quickly can you respond after a storm?", answer: "We prioritize storm cleanup requests and aim to respond as quickly as possible depending on current demand and storm severity in the area." },
-      { question: "Do you remove entire fallen trees?", answer: "Yes, we remove fallen trees completely, including processing or hauling the debris based on your preference." },
-      { question: "Can you clear a blocked driveway or access road?", answer: "Yes, restoring safe access is often our first priority during storm cleanup." },
+        faqs: [
+      { question: "What types of storm damage do you clean up?", answer: "We clean up fallen trees, large limbs, damaged brush, woody debris, blocked driveways and access roads, and other storm related debris." },
+      { question: "Can you remove large fallen trees?", answer: "Yes. Our heavy equipment can handle large fallen trees and heavy debris that may be difficult to remove with hand tools alone.", link: { label: "View Our Equipment", href: "/equipment" } },
+      { question: "Can you clear a driveway or road blocked by a fallen tree?", answer: "Yes. We remove trees, limbs, and debris blocking driveways, private roads, trails, and other property access areas." },
+      { question: "Do you remove storm debris from the property?", answer: "Depending on the project, debris can be processed, stacked, or removed from the property. The cleanup plan can be discussed when the project is evaluated." },
+      { question: "Can you remove damaged trees that are still standing?", answer: "Yes. If a storm has damaged a standing tree and it has become a hazard or needs to be removed, we can evaluate the tree and determine the appropriate approach.", link: { label: "Tree & Stump Removal", href: "/services/tree-stump-removal" } },
+      { question: "Can storm damage cleanup include stump removal?", answer: "Yes. If a fallen or damaged tree leaves a stump that creates a safety, access, or property-use issue, stump removal can be included as part of the cleanup." },
+      { question: "How much does storm damage cleanup cost?", answer: "$1,500–$5,000+. Pricing depends on the amount of damage, number and size of trees, debris volume, property access, equipment requirements, and whether debris needs to be processed or removed. The best way to determine the cost is to evaluate the specific property.", link: { label: "Request a Free Quote", href: "/contact?service=Storm%20Damage%20Cleanup#quote" } },
     ],
-    pricing: { range: "$1,000 – $5,000+", unit: "per job", note: "Pricing depends on debris volume, tree size, and extent of storm damage." },
+    pricing: { range: "$1,500 – $5,000+", unit: "per job", note: "Pricing depends on debris volume, tree size, and extent of storm damage." },
   },
 
   "forestry-mulching-cleanup": {

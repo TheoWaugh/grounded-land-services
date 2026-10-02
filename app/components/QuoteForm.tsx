@@ -33,6 +33,11 @@ const services = [
   "Right of way Clearing",
   "Forestry Mulching Cleanup",
   "ATV Trail Creation",
+  "Fire Breaks",
+  "Residential Lot Clearing",
+  "Tree & Stump Removal",
+  "Storm Damage Cleanup",
+  "Commercial Lot Clearing",
   "Other / Multiple Services",
 ];
 

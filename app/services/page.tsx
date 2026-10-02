@@ -41,16 +41,16 @@ const allServices = [
     icon: "🧹",
   },
   {
+    title: "Rock Removal",
+    desc: "Rocky terrain can make a property difficult to access, maintain, and safely use. We provide professional rock removal throughout Central Texas, removing large surface rocks, boulders, and embedded limestone from ranches, homesites, driveways, roads, and construction areas. By clearing problematic rock, we help transform difficult, rocky property into cleaner, safer, and more accessible space.",
+    img: "/images/service-pics/rock-removal-rake.jpeg",
+    icon: "🪨",
+  },
+  {
     title: "Cedar Tree Removal",
     desc: "Restore the natural balance and beauty of your land with professional cedar removal. Certain cedar species can become highly invasive, consuming up to 30 gallons of groundwater per day, starving your grass and desirable hardwoods. Our removal process eliminates these thirsty, high-pollen trees to improve pasture health and increase water availability. Dense cedar stands are also a critical wildfire hazard — clearing them creates a safer, more open landscape with enhanced visibility and long-term property value.",
     img: "/images/official/cedar-removal.jpeg",
     icon: "🌲",
-  },
-  {
-    title: "Rock & Cactus Removal",
-    desc: "Reclaim your land from two of Texas's most stubborn obstacles. We remove large embedded rocks that make land unusable and clear invasive cactus — including Prickly Pear — that overrun pastures and make property dangerous for livestock, horses, and people. Our equipment handles everything from surface rock clearing to deep root extraction, leaving your land clean, safe, and ready for grazing, development, or recreational use.",
-    img: "/images/official/cactus-rock-removal.jpeg",
-    icon: "🪨",
   },
   {
     title: "Rock Crushing",
@@ -75,6 +75,12 @@ const allServices = [
     desc: "Transform your property's aesthetic and safety with professional underbrushing. This strategic land management technique focuses on clearing out dense thickets, small invasive trees, and tangled vines while leaving your mature canopy completely intact. By removing ladder fuels that allow ground fires to climb into treetops, underbrushing creates a vital fire-resistant buffer and defensible space around your home — resulting in a park-like environment that boosts property value and improves visibility.",
     img: "/images/official/underbrushing.jpeg",
     icon: "🌱",
+  },
+  {
+    title: "Rock & Cactus Removal",
+    desc: "Reclaim your land from two of Texas's most stubborn obstacles. We remove large embedded rocks that make land unusable and clear invasive cactus — including Prickly Pear — that overrun pastures and make property dangerous for livestock, horses, and people. Our equipment handles everything from surface rock clearing to deep root extraction, leaving your land clean, safe, and ready for grazing, development, or recreational use.",
+    img: "/images/official/cactus-rock-removal.jpeg",
+    icon: "🪨",
   },
       {
     title: "Demolition",
@@ -124,7 +130,6 @@ const otherServices = [
   "ATV Trail Creation",
   "Tree & Stump Removal",
   "Gravel Driveways & Roads",
-  "Debris Removal",
   "Storm Damage Cleanup",
 ];
 
@@ -237,7 +242,7 @@ export default function ServicesPage() {
 <ScrollReveal key={s} delay={([0, 100, 200, 300, 400, 500, 0, 100, 200, 300, 400] as const)[i]}>
                 <Link
                   href={
-                    s === "Demolition & Debris Removal"
+                    s === "Demolition"
                       ? "/services/demolition"
                       : `/services/${s.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`
                   }

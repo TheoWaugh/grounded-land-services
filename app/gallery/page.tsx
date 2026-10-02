@@ -6,81 +6,103 @@ import ScrollReveal from "../components/ScrollReveal";
 import VideoCarousel from "../components/VideoCarousel";
 
 const allImages = [
-  { src: "/images/work/choose-traditional.jpeg", alt: "Traditional land clearing in Bertram, TX", tag: "Land Clearing" },
-  { src: "/images/work/dji_fly_20251216_170548_0077_1768262973755_photo.jpeg", alt: "Completed land clearing job in Gonzales, TX", tag: "Land Clearing" },
-  { src: "/images/work/dji_fly_20260130_143526_0122_1769999345932_photo.jpeg", alt: "Completed forestry mulching job in Burnet, TX", tag: "Forestry Mulching" },
+  { src: "/images/work/dji_fly_20251216_170548_0077_1768262973755_photo.jpeg", alt: "Completed land clearing job in Gonzales, TX", tag: "Land Clearing", featured: true },
+ { src: "/images/work/IMG_1592.jpeg", alt: "Completed forestry mulching job in Johnson City, TX", tag: "Forestry Mulching", featured: true },
+  { src: "/images/work/choose-traditional.jpeg", alt: "Traditional land clearing in Bertram, TX", tag: "Land Clearing", featured: true },
+  { src: "/images/work/dji_fly_20260130_143526_0122_1769999345932_photo.jpeg", alt: "Completed forestry mulching job in Burnet, TX", tag: "Forestry Mulching", featured: true },
+  { src: "/images/work/IMG_0534.jpeg", alt: "Completed forestry mulching job in Burnet, TX", tag: "Forestry Mulching", featured: true },
+  { src: "/images/work/liberty-hill-rock-removal-after-2.jpeg", alt: "Completed rock removal job in Liberty Hill, TX", tag: "Rock Removal & Crushing", featured: true },
+  { src: "/images/work/IMG_1641.jpeg", alt: "Completed land clearing job in Leander, TX", tag: "Land Clearing", featured: true },
+{ src: "/images/work/IMG_1809.jpeg", alt: "Completed rainwater collection tank installation in Westlake Hills, TX", tag: "Rock Removal & Crushing", featured: true },
+ 
+{ src: "/images/work/liberty-hill-rock-removal-after-3.jpeg", alt: "Completed rock removal job in Liberty Hill, TX", tag: "Rock Removal & Crushing", featured: true },
+{ src: "/images/work/henson-clearing-4-mulching.jpeg", alt: "Completed forestry mulching job in Bertram, TX", tag: "Forestry Mulching", featured: true },
+{ src: "/images/work/garrison-clearing-4-land-clearing.jpeg", alt: "Completed land clearing job in Spicewood, TX", tag: "Land Clearing", featured: true },
+  { src: "/images/work/IMG_1890.jpeg", alt: "Completed land clearing job in Belmont, TX", tag: "Land Clearing", featured: true },
+  { src: "/images/work/garrison-clearing-2-land-clearing.jpeg", alt: "Completed land clearing job in Spicewood, TX", tag: "Land Clearing", featured: true },
+  { src: "/images/work/anderson-pool-demo.jpeg", alt: "Completed pool demolition due to concrete cancer in Bertram, TX", tag: "Demolition", featured: true },
+ 
+  { src: "/images/work/henson-before-after-2-mulching.jpeg", alt: "Completed forestry mulching job in Bertram, TX", tag: "Forestry Mulching", featured: true },
+  { src: "/images/work/mendenhall-clearing-land-clearing.jpeg", alt: "One year later: land clearing project in Burnet, TX", tag: "Land Clearing", featured: true },
+  { src: "/images/work/henson-before-after-mulching.jpeg", alt: "Completed forestry mulching job in Bertram, TX", tag: "Forestry Mulching", featured: true },
+  { src: "/images/work/IMG_6567.jpeg", alt: "Completed land project in Burnet, TX", tag: "Land Clearing", featured: true },
+{ src: "/images/work/rockdale-mulching-2.jpeg", alt: "Completed forestry mulching job in Rockdale, TX", tag: "Forestry Mulching", featured: true },
+  { src: "/images/work/liberty-hill-rock-removal-after-4.jpeg", alt: "Completed rock removal job in Liberty Hill, TX", tag: "Rock Removal & Crushing", featured: true },
+  { src: "/images/work/henson-clearing-2-mulching.jpeg", alt: "Completed forestry mulching job in Bertram, TX", tag: "Forestry Mulching", featured: true },
+  
+ 
+  { src: "/images/work/rock-removal-pic-2.jpeg", alt: "Completed rock removal job in Bee Cave, Texas", tag: "Rock Removal & Crushing", featured: true },
+  { src: "/images/work/IMG_7145.jpeg", alt: "Completed underbrushing job in Johnson City, TX", tag: "Forestry Mulching", featured: true },
+  { src: "/images/work/0D85F6BC-81E3-48AD-ABF8-A506D42A0520.jpeg", alt: "Before and after forestry mulching job in Carmine, TX", tag: "Forestry Mulching", featured: true },
+  { src: "/images/work/gorton-rock-removal.JPEG", alt: "Rock removal project in Bertram, TX", tag: "Rock Removal & Crushing", featured: true },
+  { src: "/images/work/497D4F69-C9AD-4DC7-93C7-5A8184A544BE.jpeg", alt: "Completed access trail in Bertram, TX", tag: "Forestry Mulching", featured: true },
+  { src: "/images/work/B8149350-A976-41F6-8DF0-33DA9C4C31ED.jpeg", alt: "Completed forestry mulching job in Luling, TX", tag: "Forestry Mulching", featured: true },
+  { src: "/images/work/king-rock-removal.jpeg", alt: "Rock removal project in Bertram, TX", tag: "Rock Removal & Crushing", featured: true },
+  { src: "/images/work/brixton-mulching-2.jpeg", alt: "Completed Forestry mulching project in Round Rock, Texas", tag: "Forestry Mulching", featured: true },
+
+
+  { src: "/images/work/liberty-hill-rock-removal-after-1.jpeg", alt: "Completed rock removal job in Liberty Hill, TX", tag: "Rock Removal & Crushing" },
   { src: "/images/work/IMG_0363.jpeg", alt: "Completed land clearing job in Spicewood, TX", tag: "Land Clearing" },
-  { src: "/images/work/IMG_0534.jpeg", alt: "Completed forestry mulching job in Burnet, TX", tag: "Forestry Mulching" },
+  { src: "/images/work/liberty-hill-rock-removal-6.JPEG", alt: "Completed rock removal job in Liberty Hill, TX", tag: "Rock Removal & Crushing" },
   { src: "/images/work/IMG_0535.jpeg", alt: "Completed forestry mulching job in Burnet, TX", tag: "Forestry Mulching" },
   { src: "/images/work/IMG_0570.jpeg", alt: "Completed Harley raking job in Bertram, TX", tag: "Site Prep" },
   { src: "/images/work/IMG_0699.jpeg", alt: "Completed forestry mulching job in Bastrop, TX", tag: "Forestry Mulching" },
   { src: "/images/work/IMG_0702.jpeg", alt: "Completed land clearing job in Burnet, TX", tag: "Land Clearing" },
+  { src: "/images/work/liberty-hill-rock-removal-4.JPEG", alt: "Completed rock removal job in Liberty Hill, TX", tag: "Rock Removal & Crushing" },
   { src: "/images/work/IMG_1502.jpeg", alt: "Completed driveway in Dale, TX", tag: "Driveways" },
-  { src: "/images/work/IMG_1592.jpeg", alt: "Completed forestry mulching job in Johnson City, TX", tag: "Forestry Mulching" },
   { src: "/images/work/IMG_1593.jpeg", alt: "Completed forestry mulching job in Kyle, TX", tag: "Forestry Mulching" },
-  { src: "/images/work/IMG_1641.jpeg", alt: "Completed land clearing job in Leander, TX", tag: "Land Clearing" },
-  { src: "/images/work/IMG_1809.jpeg", alt: "Completed rainwater collection tank installation in Westlake Hills, TX", tag: "Rock Crushing & Removal" },
   { src: "/images/work/gorton-cleanup.JPEG", alt: "Forestry mulching cleanup project in Bertram, TX", tag: "Forestry Mulching" },
   { src: "/images/work/IMG_2966.jpeg", alt: "Completed fence line clearing in Burnet, TX", tag: "Forestry Mulching" },
   { src: "/images/work/IMG_3180.jpeg", alt: "Prinoth forestry mulcher on a CAT 275 excavator", tag: "Equipment" },
-  { src: "/images/work/garrison-clearing-4-land-clearing.jpeg", alt: "Completed land clearing job in Spicewood, TX", tag: "Land Clearing" },
-  { src: "/images/work/henson-clearing-4-mulching.jpeg", alt: "Completed forestry mulching job in Bertram, TX", tag: "Forestry Mulching" },
-  { src: "/images/work/IMG_1890.jpeg", alt: "Completed land clearing job in Belmont, TX", tag: "Land Clearing" },
+  { src: "/images/work/henson-clearing-3-mulching.jpeg", alt: "Completed forestry mulching job in Bertram, TX", tag: "Forestry Mulching" },
   { src: "/images/work/garrison-clearing-3-land-clearing.jpeg", alt: "Completed land clearing job in Spicewood, TX", tag: "Land Clearing" },
-  { src: "/images/work/garrison-clearing-2-land-clearing.jpeg", alt: "Completed land clearing job in Spicewood, TX", tag: "Land Clearing" },
-  { src: "/images/work/anderson-pool-demo.jpeg", alt: "Completed pool demolition due to concrete cancer in Bertram, TX", tag: "Demolition" },
+ { src: "/images/work/lago-vista-mulching.JPG", alt: "Completed forestry mulching job in Lago Vista, TX", tag: "Forestry Mulching" },
+  { src: "/images/work/liberty-hill-rock-removal-5.JPEG", alt: "Completed rock removal job in Liberty Hill, TX", tag: "Rock Removal & Crushing" },
   { src: "/images/work/wedding-before-after-3-mulching.jpeg", alt: "Completed underbrushing job in Leander, TX", tag: "Forestry Mulching" },
   { src: "/images/work/wedding-before-after-2-mulching.jpeg", alt: "Completed underbrushing job in Leander, TX", tag: "Forestry Mulching" },
   { src: "/images/work/wedding-before-after-1-mulching.jpeg", alt: "Completed underbrushing job in Leander, TX", tag: "Forestry Mulching" },
   { src: "/images/work/henson-before-after-3-mulching.jpeg", alt: "Completed forestry mulching job in Bertram, TX", tag: "Forestry Mulching" },
-  { src: "/images/work/henson-before-after-2-mulching.jpeg", alt: "Completed forestry mulching job in Bertram, TX", tag: "Forestry Mulching" },
-  { src: "/images/work/henson-before-after-mulching.jpeg", alt: "Completed forestry mulching job in Bertram, TX", tag: "Forestry Mulching" },
-  { src: "/images/work/henson-clearing-3-mulching.jpeg", alt: "Completed forestry mulching job in Bertram, TX", tag: "Forestry Mulching" },
-  { src: "/images/work/henson-clearing-2-mulching.jpeg", alt: "Completed forestry mulching job in Bertram, TX", tag: "Forestry Mulching" },
   { src: "/images/work/henson-clearing-mulching.jpeg", alt: "Completed forestry mulching job in Bertram, TX", tag: "Forestry Mulching" },
   { src: "/images/work/balcones-trail-mulching.jpeg", alt: "Balcones ATV trail forestry mulching at Doeskin Ranch in the Balcones Canyonlands National Wildlife Refuge", tag: "Forestry Mulching" },
   { src: "/images/work/323-pic-equipment.jpeg", alt: "Grounded Land Services CAT 323 used for land clearing in Spicewood, TX", tag: "Equipment" },
-  { src: "/images/work/mendenhall-clearing-land-clearing.jpeg", alt: "One year later: land clearing project in Burnet, TX", tag: "Land Clearing" },
-  { src: "/images/work/IMG_6567.jpeg", alt: "Completed land project in Burnet, TX", tag: "Land Clearing" },
   { src: "/images/work/IMG_7142.jpeg", alt: "Completed underbrushing job in Johnson City, TX", tag: "Forestry Mulching" },
   { src: "/images/work/IMG_7144.jpeg", alt: "Completed forestry mulching job in Johnson City, TX", tag: "Forestry Mulching" },
-  { src: "/images/work/IMG_7145.jpeg", alt: "Completed underbrushing job in Johnson City, TX", tag: "Forestry Mulching" },
   { src: "/images/work/077B2E5E-1FAE-4AA1-8427-01227EF05118.jpeg", alt: "Tree pile shredding in Bertram, TX", tag: "Forestry Mulching" },
   { src: "/images/work/07BE24F3-A999-4B83-AF2F-EEF630E6F1AC.jpeg", alt: "Forestry mulching cleanup in Burnet, TX", tag: "Forestry Mulching Cleanup" },
-  { src: "/images/work/0D85F6BC-81E3-48AD-ABF8-A506D42A0520.jpeg", alt: "Before and after forestry mulching job in Carmine, TX", tag: "Forestry Mulching" },
+  { src: "/images/work/liberty-hill-rock-removal-1.jpeg", alt: "Completed rock removal job in Liberty Hill, TX", tag: "Rock Removal & Crushing" },
   { src: "/images/work/22B0719A-A744-4ADE-85E7-F9AA93064B88.jpeg", alt: "Road rejuvenation in Bertram, TX", tag: "Driveways" },
   { src: "/images/work/3E0906A9-AD6F-4F64-83BB-7F83B3CEC204.jpeg", alt: "Completed forestry mulching in Volente, TX", tag: "Forestry Mulching" },
-  { src: "/images/work/gorton-rock-removal.JPEG", alt: "Rock removal project in Bertram, TX", tag: "Rock Crushing & Removal" },
   { src: "/images/work/40E7FF8B-C150-407E-9C2B-20EB9C32B4F4.jpeg", alt: "Site prep project in Bertram, TX", tag: "Site Prep" },
   { src: "/images/work/4214E3C7-9969-4B6A-B1B5-C9E958CA7619.jpeg", alt: "Land clearing job in Bertram, TX", tag: "Land Clearing" },
   { src: "/images/work/42D640F8-AEBD-4073-9F8A-B55073F78DD4.jpeg", alt: "Completed gravel road in Bertram, TX", tag: "Driveways" },
-  { src: "/images/work/497D4F69-C9AD-4DC7-93C7-5A8184A544BE.jpeg", alt: "Completed access trail in Bertram, TX", tag: "Forestry Mulching" },
   { src: "/images/work/67BC4B9E-CAA7-492D-B8F8-30D7B891D19B.jpeg", alt: "Completed site prep job in Bee Cave, TX", tag: "Site Prep" },
   { src: "/images/work/8DC89224-6F9C-4CB6-B77A-1CCAFD2C0DD0.jpeg", alt: "Completed ATV trail in Bertram, TX", tag: "Forestry Mulching" },
-  { src: "/images/work/B8149350-A976-41F6-8DF0-33DA9C4C31ED.jpeg", alt: "Completed forestry mulching job in Luling, TX", tag: "Forestry Mulching" },
+  { src: "/images/work/liberty-hill-rock-removal-3.JPEG", alt: "Completed rock removal job in Liberty Hill, TX", tag: "Rock Removal & Crushing" },
+  { src: "/images/work/kingsland-forestry-mulching.jpeg", alt: "Completed forestry mulching project in Kingsland, TX", tag: "Forestry Mulching" },
   { src: "/images/work/F6E63EEB-DC78-41A9-AD5D-C83E2F489DAA.jpeg", alt: "Completed land clearing job in Caldwell County, TX", tag: "Forestry Mulching" },
   { src: "/images/service-pics/IMG_0628.jpeg", alt: "CAT excavator on cleared Texas land", tag: "Equipment" },
+  { src: "/images/work/rockdale-mulching-1.JPG", alt: "Completed forestry mulching job in Rockdale, TX", tag: "Forestry Mulching" },
   { src: "/images/service-pics/IMG_2337.jpeg", alt: "Land clearing service in action in Central Texas", tag: "Site Prep" },
   { src: "/images/service-pics/IMG_2509.jpeg", alt: "Forestry mulching service in Central Texas", tag: "Forestry Mulching" },
-  { src: "/images/service-pics/IMG_2911.jpeg", alt: "Land clearing in progress in Central Texas", tag: "Land Clearing" },
-  { src: "/images/service-pics/IMG_2966.jpeg", alt: "Site preparation in Central Texas", tag: "Site Prep" },
-  { src: "/images/service-pics/IMG_3053.jpeg", alt: "Cedar removal in progress in Central Texas", tag: "Cedar Removal" },
+  { src: "/images/service-pics/IMG_2911.jpeg", alt: "Land clearing in progress in Central Texas", tag: "Site Prep" },
+  { src: "/images/service-pics/IMG_2966.jpeg", alt: "Site preparation in Central Texas", tag: "Land Clearing" },
+  { src: "/images/service-pics/IMG_3053.jpeg", alt: "cat 275 in action", tag: "Equipment" },
   { src: "/images/service-pics/IMG_3180.jpeg", alt: "Forestry mulching complete in Central Texas", tag: "Forestry Mulching" },
-  { src: "/images/service-pics/IMG_3191.jpeg", alt: "Texas land ready for development", tag: "Site Prep" },
+  { src: "/images/service-pics/IMG_3191.jpeg", alt: "Texas land ready for development", tag: "Rock Removal & Crushing" },
   { src: "/images/work/spicewood-harley-raking1.JPEG", alt: "Completed Harley raking in Spicewood, TX", tag: "Site Prep" },
-  { src: "/images/work/brixton-mulching-2.jpeg", alt: "Completed Forestry mulching project in Round Rock, Texas", tag: "Forestry Mulching" },
   { src: "/images/work/harley-rake-pic.jpeg", alt: "Harley rake attachment on a CAT 275 excavator", tag: "Equipment" },
-  { src: "/images/work/king-rock-removal.jpeg", alt: "Rock removal project in Bertram, TX", tag: "Rock Crushing & Removal" },
   { src: "/images/work/harwood-mulching.JPEG", alt: "Completed forestry mulching project in Harwood, TX", tag: "Forestry Mulching" },
   { src: "/images/work/299-275-case-pic.jpeg", alt: "Grounded Land Services skid steers with various attachments", tag: "Equipment" },
   { src: "/images/work/dji_fly_20251022_072324_0022_1768263397042_photo.jpeg", alt: "Completed land clearing job in Spicewood, TX", tag: "Land Clearing" },
   { src: "/images/work/IMG_6405.jpeg", alt: "Completed erosion control job in Central Texas", tag: "Site Prep" },
   { src: "/images/work/275-pic-equipment.jpeg", alt: "CAT 275 excavator with brush grapple in Spicewood, TX", tag: "Equipment" },
   { src: "/images/work/brixton-mulching-1.JPEG", alt: "Completed Forestry mulching project in Central Texas", tag: "Forestry Mulching" },
-  { src: "/images/work/rock-removal-pic-2.jpeg", alt: "Completed rock removal job in Bee Cave, Texas", tag: "Rock Crushing & Removal" },
+  { src: "/images/work/liberty-hill-rock-removal-7.JPEG", alt: "Completed rock removal job in Liberty Hill, TX", tag: "Rock Removal & Crushing" },
+  { src: "/images/work/cat-275-pic-2.jpeg", alt: "CAT 275 skid steer land clearing in action in Liberty Hill, TX", tag: "Equipment" }
+ 
 ];
 
-const tags = ["All", "Land Clearing", "Forestry Mulching", "Forestry Mulching Cleanup", "Rock Crushing & Removal", "Site Prep", "Demolition", "Driveways", "Equipment"];
+const tags = ["All", "Land Clearing", "Forestry Mulching", "Forestry Mulching Cleanup", "Rock Removal & Crushing", "Demolition", "Driveways", "Equipment"];
 const galleryVideos = [
   { id: "aSRb_PbjbIE", caption: "Land clearing in action" },
   { id: "W1AeIo_miIA", caption: "Completed land clearing project" },
@@ -95,7 +117,10 @@ export default function GalleryPage() {
   const [activeTag, setActiveTag] = useState("All");
   const [lightboxImg, setLightboxImg] = useState<string | null>(null);
 
-  const filtered = activeTag === "All" ? allImages : allImages.filter((img) => img.tag === activeTag);
+  const filteredAll = activeTag === "All" ? allImages : allImages.filter((img) => img.tag === activeTag);
+  const featuredFiltered = filteredAll.filter((img) => img.featured);
+  const restFiltered = filteredAll.filter((img) => !img.featured);
+  const filtered = filteredAll;
 
   return (
     <>
@@ -165,8 +190,44 @@ export default function GalleryPage() {
           <p className="text-[#6e6e73] text-sm mb-8">
             Showing {filtered.length} of {allImages.length} photos
           </p>
+          {featuredFiltered.length > 0 && (
+            <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4 mb-8">
+              {featuredFiltered.map((img, i) => (
+                <div
+                  key={img.src + i}
+                  className="gallery-item break-inside-avoid rounded-xl overflow-hidden cursor-pointer group"
+                  onClick={() => setLightboxImg(img.src)}
+                >
+                  <div className="relative">
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      width={400}
+                      height={300}
+                      className="gallery-img w-full h-auto"
+                      sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                      <svg
+                        className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                      </svg>
+                    </div>
+                    <span className="absolute top-2 right-2 px-2 py-0.5 bg-black/60 text-white text-xs rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+                      {img.tag}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+
           <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
-            {filtered.map((img, i) => (
+            {restFiltered.map((img, i) => (
               <div
                 key={img.src + i}
                 className="gallery-item break-inside-avoid rounded-xl overflow-hidden cursor-pointer group"

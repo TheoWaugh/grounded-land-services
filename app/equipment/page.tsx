@@ -31,7 +31,7 @@ interface EquipmentItem {
 
 const baseMachines: EquipmentItem[] = [
   {
-          
+    id: "cat-323",
     name: "2025 CAT 323 Excavator",
     category: "Excavator",
     icon: "🚜",
@@ -57,7 +57,7 @@ const baseMachines: EquipmentItem[] = [
       { label: "Fire Breaks", href: "/services/fire-breaks" },
       { label: "Commercial Lot Clearing", href: "/services/commercial-lot-clearing" },
       { label: "Tree & Stump Removal", href: "/services/tree-stump-removal" },
-      { label: "Demolition & Debris Removal", href: "/services/demolition" },
+      { label: "Demolition", href: "/services/demolition" },
       { label: "Storm Damage Cleanup", href: "/services/storm-damage-cleanup" },
       { label: "Forestry Mulching Cleanup", href: "/services/forestry-mulching-cleanup" },
     ],
@@ -67,9 +67,10 @@ const baseMachines: EquipmentItem[] = [
     name: "2026 CAT 275 XE Land Management",
     category: "Compact Track Loader",
     icon: "🌲",
-    image: "/images/service-pics/IMG_2509.jpeg",
+    image: "/images/service-pics/cat-275-equipment.jpeg",
+    imagePosition: "center 52%",
     description:
-      "Our largest land-management platform, the 2026 CAT 275 XE is purpose-built for high-production vegetation and land-management work. Its XE high-flow hydraulic system delivers up to 40 GPM and 134 horsepower, providing the hydraulic power needed to run our specialized attachment lineup. With the capability to run numerous high-flow attachments, the 275 XE can be configured for [forestry mulching](/services/forestry-mulching), [land clearing](/services/land-clearing), [rock crushing](/services/rock-crushing), and more. Its combination of power, stability, and attachment versatility allows us to match the machine to the demands of each project.",
+      "Our largest land management platform, the 2026 CAT 275 XE is purpose built for high production vegetation and land management work. Its XE high flow hydraulic system delivers up to 40 GPM and 134 horsepower, providing the hydraulic power needed to run our specialized attachment lineup. With the capability to run numerous high flow attachments, the 275 XE can be configured for [forestry mulching](/services/forestry-mulching), [land clearing](/services/land-clearing), [rock crushing](/services/rock-crushing), and more. Its combination of power, stability, and attachment versatility allows us to match the machine to the demands of each project.",
     specs: [
       { label: "Horsepower", value: "134 hp" },
       { label: "Hydraulic Flow", value: "40 GPM" },
@@ -84,7 +85,7 @@ const baseMachines: EquipmentItem[] = [
     icon: "🌳",
     image: "/images/service-pics/cat-299-pic.jpeg",
     description:
-      "The 2020 CAT 299 D3 XE, is built specifically for demanding vegetation management work. Its high-flow, high-pressure XE hydraulic system delivers a calculated hydraulic power rating of 94 hp, giving it the muscle to run our full attachment lineup across the densest cedar stands and largest acreage projects.",
+      "The 2020 CAT 299 D3 XE, is built specifically for demanding vegetation management work. Its high flow, high pressure XE hydraulic system delivers a calculated hydraulic power rating of 94 hp, giving it the muscle to run our full attachment lineup across the densest cedar stands and largest acreage projects.",
     specs: [
       { label: "Horsepower", value: "110 hp" },
       { label: "Hydraulic Flow", value: "40 GPM" },
@@ -103,7 +104,7 @@ const attachments: EquipmentItem[] = [
     icon: "⚙️",
     image: "/images/service-pics/cat-275-pic.jpeg",
     description:
-      "Runs on our CAT 275 XE and CAT 299D3 XE platforms. The Prinoth M450S-1900 is a premium forestry mulching head built for demanding vegetation management. Its 74.8-inch cutting width, BCS rotor with 40 cutting tools, and heavy-duty hydraulic system deliver efficient processing and a consistent mulch finish through dense cedar, brush, and small trees. We chose the M450S for its combination of cutting performance, durability, and efficiency in the dense vegetation found throughout Central Texas. Paired with our 134-hp CAT 275 XE and its 40 GPM high-flow hydraulics, the M450S operates within its recommended range and gives us the power and productivity needed for demanding forestry mulching projects.",
+      "Runs on our CAT 275 XE and CAT 299D3 XE platforms. The Prinoth M450S-1900 is a premium forestry mulching head built for demanding vegetation management. Its 74.8-inch cutting width, BCS rotor with 40 cutting tools, and heavy duty hydraulic system deliver efficient processing and a consistent mulch finish through dense cedar, brush, and small trees. We chose the M450S for its combination of cutting performance, durability, and efficiency in the dense vegetation found throughout Central Texas. Paired with our 134-hp CAT 275 XE and its 40 GPM high flow hydraulics, the M450S operates within its recommended range and gives us the power and productivity needed for demanding forestry mulching projects.",
     specs: [
       { label: "Working Width", value: "74.8 in" },
       { label: "Power Range", value: "80–150 hp" },
@@ -146,7 +147,7 @@ const attachments: EquipmentItem[] = [
       { label: "Rock Removal", href: "/services/rock-removal" },
       { label: "Residential Lot Clearing", href: "/services/residential-lot-clearing" },
       { label: "Gravel Driveways & Roads", href: "/services/gravel-driveways-roads" },
-      { label: "Demolition & Debris Removal", href: "/services/demolition" },
+      { label: "Demolition", href: "/services/demolition" },
       { label: "Storm Damage Cleanup", href: "/services/storm-damage-cleanup" },
       { label: "Forestry Mulching Cleanup", href: "/services/forestry-mulching-cleanup" },
     ],
@@ -170,7 +171,7 @@ const attachments: EquipmentItem[] = [
       { label: "Rock Removal", href: "/services/rock-removal" },
       { label: "Residential Lot Clearing", href: "/services/residential-lot-clearing" },
       { label: "Tree & Stump Removal", href: "/services/tree-stump-removal" },
-      { label: "Demolition & Debris Removal", href: "/services/demolition" },
+      { label: "Demolition", href: "/services/demolition" },
       { label: "Storm Damage Cleanup", href: "/services/storm-damage-cleanup" },
       { label: "Forestry Mulching Cleanup", href: "/services/forestry-mulching-cleanup" },
       { label: "Site Preparation", href: "/services/site-preparation" },
@@ -195,7 +196,7 @@ const attachments: EquipmentItem[] = [
       { label: "Site Cleanup", href: "/services/site-cleanup" },
       { label: "Residential Lot Clearing", href: "/services/residential-lot-clearing" },
       { label: "Tree & Stump Removal", href: "/services/tree-stump-removal" },
-      { label: "Demolition & Debris Removal", href: "/services/demolition" },
+      { label: "Demolition", href: "/services/demolition" },
       { label: "Storm Damage Cleanup", href: "/services/storm-damage-cleanup" },
       { label: "Forestry Mulching Cleanup", href: "/services/forestry-mulching-cleanup" },
     ],
@@ -220,7 +221,7 @@ const attachments: EquipmentItem[] = [
       { label: "Rock Removal", href: "/services/rock-removal" },
       { label: "Tree & Stump Removal", href: "/services/tree-stump-removal" },
       { label: "Gravel Driveways & Roads", href: "/services/gravel-driveways-roads" },
-      { label: "Demolition & Debris Removal", href: "/services/demolition" },
+      { label: "Demolition", href: "/services/demolition" },
     ],
   },
 ];

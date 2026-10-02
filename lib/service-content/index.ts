@@ -3,6 +3,7 @@ import { cityFacts } from "@/data/city-facts";
 import { landClearingContent } from "./land-clearing";
 import { forestryMulchingContent } from "./forestry-mulching";
 import { rockCrushingContent } from "./rock-crushing";
+import { rockRemovalContent } from "./rock-removal";
 import { demolitionContent } from "./demolition";
 import { ServiceContent } from "./types";
 import { servicePricing } from "@/data/service-pricing";
@@ -12,6 +13,7 @@ const templates: Record<string, (city: string, nearby: string[]) => ServiceConte
   "land-clearing": landClearingContent,
   "forestry-mulching": forestryMulchingContent,
   "rock-crushing": rockCrushingContent,
+  "rock-removal": rockRemovalContent,
   "demolition": demolitionContent,
 };
 
@@ -24,6 +26,10 @@ export function getServiceContent(
   if (!cityInfo || !template) return null;
 
   if (serviceSlug === "rock-crushing" && !rockCrushingCities.includes(cityInfo.name)) {
+    return null;
+  }
+
+  if (serviceSlug === "rock-removal" && !rockCrushingCities.includes(cityInfo.name)) {
     return null;
   }
 

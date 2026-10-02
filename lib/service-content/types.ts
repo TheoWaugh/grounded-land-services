@@ -37,6 +37,7 @@ export interface ServiceSection {
   relatedServices?: { label: string; href: string }[];
   iconCards?: { icon: string; title: string; description: string }[];
   iconCardsColumns?: 2 | 3 | 4;
+  scenarios?: { icon: string; title: string; description: string }[];
   ctaButton?: { label: string; href: string };
   media?: { type: "image" | "youtube"; src: string; alt?: string; caption?: string }[];
 videoCarousel?: { videoIds: string[]; captions?: string[] };

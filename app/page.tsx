@@ -61,16 +61,16 @@ const whyUs = [
       </svg>
     ),
     title: "State-of-the-Art Equipment",
-    desc: "Cutting-edge machinery including CAT excavators with high-flow mulching heads for maximum efficiency and precision.",
+    desc: "Cutting edge machinery including CAT excavators with high flow mulching heads for maximum efficiency and precision.",
   },
   {
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.196-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.783-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
       </svg>
     ),
-    title: "Timely Project Completion",
-    desc: "We respect your timeline. Detailed project reporting keeps you informed at every phase, from start to professional finish.",
+    title: "23+ Five-Star Reviews",
+    desc: "Real feedback from real property owners across Central Texas, backed by consistent five star ratings on every completed project.",
   },
   {
     icon: (
@@ -214,8 +214,8 @@ const testimonials = [
 ];
 
 const galleryImages = [
-  { src: "/images/work/IMG_1809.jpeg", wide: true },
-  { src: "/images/work/0D85F6BC-81E3-48AD-ABF8-A506D42A0520.jpeg", wide: false },
+  { src: "/images/work/liberty-hill-rock-removal-after-3.jpeg", wide: true },
+  { src: "/images/work/henson-clearing-2-mulching.jpeg", wide: false },
   { src: "/images/work/dji_fly_20251216_170548_0077_1768262973755_photo.jpeg", wide: false },
   { src: "/images/work/F6E63EEB-DC78-41A9-AD5D-C83E2F489DAA.jpeg", wide: true },
   { src: "/images/work/IMG_1890.jpeg", wide: false },
@@ -385,6 +385,12 @@ export default function Home() {
                 </Link>
               </ScrollReveal>
             ))}
+                    </div>
+
+          <div className="text-center mt-10">
+            <Link href="/services" className="btn-dark inline-block">
+              All Services →
+            </Link>
           </div>
         </div>
       </section>
@@ -490,6 +496,12 @@ export default function Home() {
               </ScrollReveal>
             ))}
           </div>
+
+          <div className="text-center mt-10">
+            <Link href="/gallery" className="btn-primary inline-block">
+              Full Gallery →
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -542,6 +554,17 @@ export default function Home() {
               View All Service Areas
             </Link>
           </ScrollReveal>
+
+          <div className="mt-10 rounded-2xl overflow-hidden border border-gray-100 max-w-4xl mx-auto">
+            <iframe
+              title="Central Texas service area map"
+              width="100%"
+              height="320"
+              style={{ border: 0 }}
+              loading="lazy"
+              src="https://www.google.com/maps?q=Central%20Texas&output=embed"
+            />
+          </div>
         </div>
       </section>
 

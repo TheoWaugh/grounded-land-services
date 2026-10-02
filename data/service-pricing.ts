@@ -30,4 +30,10 @@ export const servicePricing: Record<string, ServicePricing> = {
     unit: "per job",
     note: "Pricing depends on structure size, materials, foundation type, and debris hauling needs.",
   },
+  "rock-removal": {
+    label: "Rock Removal",
+    range: "$1,750 – $6,000",
+    unit: "per acre",
+    note: "Pricing depends on the size and quantity of rock, how deeply it is embedded, site accessibility, terrain, equipment requirements, and hauling needs.",
+  },
 };

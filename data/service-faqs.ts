@@ -7,7 +7,7 @@ function forestryMulchingFaqs(city: string): ServiceFaq[] {
   return [
     {
       question: `How much does forestry mulching cost in ${city}?`,
-      answer: `Forestry mulching in ${city} typically runs ${pricing.range} ${pricing.unit}. ${pricing.note}`,
+      answer: `Forestry mulching in ${city} costs ${pricing.range} ${pricing.unit}. ${pricing.note}`,
     },
     {
       question: "How many acres can you mulch per day?",
@@ -127,7 +127,7 @@ function landClearingFaqs(city: string, nearby: string[]): ServiceFaq[] {
     },
     {
       question: `How much does traditional land clearing cost in ${city}?`,
-      answer: `Traditional land clearing in ${city} typically runs ${pricing.range} ${pricing.unit}. ${pricing.note} We provide free on-site estimates to develop an accurate quote for your project.`,
+      answer: `Traditional land clearing in ${city} costs ${pricing.range} ${pricing.unit}. ${pricing.note} We provide free on-site estimates to develop an accurate quote for your project.`,
     },
     {
       question: "Do you provide free estimates?",
@@ -164,6 +164,52 @@ function landClearingFaqs(city: string, nearby: string[]): ServiceFaq[] {
     {
       question: "Why choose Grounded Land Services for traditional land clearing?",
       answer: "Grounded Land Services combines professional equipment, experienced operators, attention to detail, and outstanding customer service to deliver high-quality land clearing projects. Whether you're preparing land for construction, improving a ranch, or reclaiming overgrown acreage, we're committed to leaving your property clean, functional, and ready for its next phase of development.",
+    },
+  ];
+}
+
+function rockRemovalFaqs(city: string): ServiceFaq[] {
+  const pricing = servicePricing["rock-removal"];
+  return [
+    {
+      question: "What is rock removal?",
+      answer: "Rock removal is the excavation and removal of surface or buried rock that interferes with a property's use. Rock may be removed for homesites, driveways, roads, drainage, utilities, pasture improvements, or other site work.",
+    },
+    {
+      question: "What types of rock can Grounded Land Services remove?",
+      answer: "We can remove large and small surface rock, buried rock, exposed limestone, and other rock that is interfering with the use or development of a property. The equipment and approach depend on the size, location, depth, and surrounding conditions.",
+    },
+    {
+      question: "How do I know if I need rock removal or rock crushing?",
+      answer: "Rock removal is generally used when rock needs to be completely removed from a specific area. Rock crushing is better suited for surface rock that can be broken down in place to create smoother, easier to maintain ground, particularly across pastures and open acreage.",
+    },
+    {
+      question: "Can you remove rock from a homesite?",
+      answer: "Yes. Rock removal can be used to clear rock from planned homesites and other building areas where exposed or buried rock is interfering with construction or site preparation.",
+    },
+    {
+      question: "Can you remove rock from a driveway or private road?",
+      answer: "Yes. Rock can be removed when it interferes with the planned location, width, grade, or use of a driveway or private road. The existing terrain and rock conditions are evaluated to determine the appropriate approach.",
+    },
+    {
+      question: "Can rock removal make a pasture easier to maintain?",
+      answer: "Yes. Removing larger or problematic rocks can make portions of a pasture easier and safer to access and maintain. Where rock does not need to be completely removed, crushing it in place may be a better option for creating smoother ground.",
+    },
+    {
+      question: "Does every rocky property need rock removal?",
+      answer: "No. Some properties may benefit more from rock crushing, while others may only require rock removal in specific areas. Grounded Land Services evaluates the rock, terrain, access, and intended use of the property before determining which approach makes sense.",
+    },
+    {
+      question: `How much does rock removal cost in ${city}?`,
+      answer: `Rock removal in ${city} costs ${pricing.range} ${pricing.unit}. ${pricing.note}`,
+    },
+    {
+      question: "Do you remove the rock from the property?",
+      answer: "When the project requires rock to be completely removed from a specific area, the handling of the excavated material can be discussed as part of the project. In other situations, rock may be broken down or processed on site depending on the property and intended use.",
+    },
+    {
+      question: `Do you provide rock removal in ${city}, Texas?`,
+      answer: `Yes. Grounded Land Services provides rock removal in ${city}, Texas, and surrounding areas for residential, ranch, agricultural, and construction properties.`,
     },
   ];
 }
@@ -235,7 +281,7 @@ function rockCrushingFaqs(city: string): ServiceFaq[] {
     },
     {
       question: `How much does rock crushing cost in ${city}?`,
-      answer: `Rock crushing in ${city} typically runs ${pricing.range} ${pricing.unit}. ${pricing.note} Grounded Land Services provides free on-site estimates for every project.`,
+      answer: `Rock crushing in ${city} costs ${pricing.range} ${pricing.unit}. ${pricing.note} Grounded Land Services provides free on-site estimates for every project.`,
     },
     {
       question: "Is rock crushing environmentally friendly?",
@@ -311,7 +357,7 @@ function demolitionFaqs(city: string, nearby: string[]): ServiceFaq[] {
     },
     {
       question: `How much does demolition cost in ${city}?`,
-      answer: `Demolition in ${city} typically runs ${pricing.range}. ${pricing.note} We provide free on-site estimates for every demolition project.`,
+      answer: `Demolition in ${city} costs ${pricing.range}. ${pricing.note} We provide free on-site estimates for every demolition project.`,
     },
     {
       question: "Do I need permits for demolition?",
@@ -352,6 +398,8 @@ export function getServiceFaqs(serviceSlug: string, city: string, nearby: string
       return landClearingFaqs(city, nearby);
     case "rock-crushing":
       return rockCrushingFaqs(city);
+    case "rock-removal":
+      return rockRemovalFaqs(city);
     case "demolition":
       return demolitionFaqs(city, nearby);
     default:

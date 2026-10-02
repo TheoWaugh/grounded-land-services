@@ -180,6 +180,14 @@ export default function ServiceAreasPage() {
                                   Rock Crushing
                                 </Link>
                               )}
+                              {rockCrushingCities.includes(city) && (
+                                <Link
+                                  href={`/service-areas/${citySlug}/rock-removal`}
+                                  className="text-xs text-amber-700 bg-amber-50 border border-amber-100 px-1.5 py-0.5 rounded-full hover:bg-amber-100 transition-colors"
+                                >
+                                  Rock Removal
+                                </Link>
+                              )}
                             </div>
                           </div>
                         );
