@@ -83,6 +83,11 @@ const testimonials: Testimonial[] = [
     name: "Clint Strittmatter",
     quote: "Logan did an amazing job with clearing my property. I'm going to need another day and I definitely won't hesitate to have him back out again. Thanks Logan!",
   },
+    {
+    name: "Preston Jones",
+    location: "Liberty Hill, TX",
+    quote: "Logan did a great job with rock removal on our property in Liberty Hill, TX. He was super easy to work with and definitely got the job done right! Would highly recommend him if you need any rock removal or land clearing done!",
+  },
 ];
 
 const featuredNames = ["Jacque Mendenhall", "Christopher Durst", "Mckenzie Schultz"];

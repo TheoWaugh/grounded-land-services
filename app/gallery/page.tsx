@@ -6,7 +6,7 @@ import ScrollReveal from "../components/ScrollReveal";
 import VideoCarousel from "../components/VideoCarousel";
 
 const allImages = [
-  { src: "/images/work/dji_fly_20251216_170548_0077_1768262973755_photo.jpeg", alt: "Completed land clearing job in Gonzales, TX", tag: "Land Clearing", featured: true },
+  { src: "/images/work/gonzales-5.JPG", alt: "Completed land clearing job in Gonzales, TX", tag: "Land Clearing", featured: true },
  { src: "/images/work/IMG_1592.jpeg", alt: "Completed forestry mulching job in Johnson City, TX", tag: "Forestry Mulching", featured: true },
   { src: "/images/work/choose-traditional.jpeg", alt: "Traditional land clearing in Bertram, TX", tag: "Land Clearing", featured: true },
   { src: "/images/work/dji_fly_20260130_143526_0122_1769999345932_photo.jpeg", alt: "Completed forestry mulching job in Burnet, TX", tag: "Forestry Mulching", featured: true },
@@ -69,6 +69,11 @@ const allImages = [
   { src: "/images/work/IMG_7144.jpeg", alt: "Completed forestry mulching job in Johnson City, TX", tag: "Forestry Mulching" },
   { src: "/images/work/077B2E5E-1FAE-4AA1-8427-01227EF05118.jpeg", alt: "Tree pile shredding in Bertram, TX", tag: "Forestry Mulching" },
   { src: "/images/work/07BE24F3-A999-4B83-AF2F-EEF630E6F1AC.jpeg", alt: "Forestry mulching cleanup in Burnet, TX", tag: "Forestry Mulching Cleanup" },
+  { src: "/images/work/gonzales-1.jpeg", alt: "Completed land clearing job in Gonzales, TX", tag: "Land Clearing" },
+{ src: "/images/work/gonzales-6.jpeg", alt: "Completed land clearing job in Gonzales, TX", tag: "Land Clearing" },
+{ src: "/images/work/gonzales-2.jpeg", alt: "Completed land clearing job in Gonzales, TX", tag: "Land Clearing" },
+{ src: "/images/work/gonzales-3.jpeg", alt: "Completed land clearing job in Gonzales, TX", tag: "Land Clearing" },
+{ src: "/images/work/gonzales-4.jpeg", alt: "Completed land clearing job in Gonzales, TX", tag: "Land Clearing" },
   { src: "/images/work/liberty-hill-rock-removal-1.jpeg", alt: "Completed rock removal job in Liberty Hill, TX", tag: "Rock Removal & Crushing" },
   { src: "/images/work/22B0719A-A744-4ADE-85E7-F9AA93064B88.jpeg", alt: "Road rejuvenation in Bertram, TX", tag: "Driveways" },
   { src: "/images/work/3E0906A9-AD6F-4F64-83BB-7F83B3CEC204.jpeg", alt: "Completed forestry mulching in Volente, TX", tag: "Forestry Mulching" },
@@ -98,8 +103,9 @@ const allImages = [
   { src: "/images/work/275-pic-equipment.jpeg", alt: "CAT 275 excavator with brush grapple in Spicewood, TX", tag: "Equipment" },
   { src: "/images/work/brixton-mulching-1.JPEG", alt: "Completed Forestry mulching project in Central Texas", tag: "Forestry Mulching" },
   { src: "/images/work/liberty-hill-rock-removal-7.JPEG", alt: "Completed rock removal job in Liberty Hill, TX", tag: "Rock Removal & Crushing" },
-  { src: "/images/work/cat-275-pic-2.jpeg", alt: "CAT 275 skid steer land clearing in action in Liberty Hill, TX", tag: "Equipment" }
- 
+  { src: "/images/work/cat-275-pic-2.jpeg", alt: "CAT 275 skid steer land clearing in action in Liberty Hill, TX", tag: "Equipment" },
+  { src: "/images/work/carmine-mulching.jpeg", alt: "Completed forestry mulching job in Carmine, TX", tag: "Forestry Mulching" },
+  { src: "/images/work/garrison-1.JPG", alt: "Completed land clearing job in Spicewood, TX", tag: "Land Clearing" },
 ];
 
 const tags = ["All", "Land Clearing", "Forestry Mulching", "Forestry Mulching Cleanup", "Rock Removal & Crushing", "Demolition", "Driveways", "Equipment"];
@@ -112,6 +118,8 @@ const galleryVideos = [
   { id: "0jYU5H4qCi0", caption: "Pool Demolition" },
   { id: "_3PySbe3zwU", caption: "Forestry mulching in action" },
   { id: "sroBopMm2rc", caption: "Completed land clearing action" },
+  { id: "CNAVOtb9FeU", caption: "Forestry mulching in Jonestown, TX" },
+{ id: "pjVyQg81nEE", caption: "Forestry mulching in Rockdale, TX" },
 ];
 export default function GalleryPage() {
   const [activeTag, setActiveTag] = useState("All");

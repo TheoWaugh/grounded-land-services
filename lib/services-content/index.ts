@@ -301,8 +301,10 @@ paragraphs: [
           { label: "Wildlife Habitat Restoration", href: "/services/residential-lot-clearing" },
         ],
         videoCarousel: {
-          videoIds: ["KjYxH1hgTwM", "hLimv0coUqo", "RwfM81A1NRk", "_3PySbe3zwU"],
+          videoIds: ["KjYxH1hgTwM", "hLimv0coUqo", "RwfM81A1NRk", "_3PySbe3zwU", "CNAVOtb9FeU", "pjVyQg81nEE"],
           captions: [
+            "Forestry mulching in action",
+            "Forestry mulching in action",
             "Forestry mulching in action",
             "Forestry mulching in action",
             "Forestry mulching in action",

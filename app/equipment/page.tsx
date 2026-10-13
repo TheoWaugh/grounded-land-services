@@ -80,10 +80,11 @@ const baseMachines: EquipmentItem[] = [
     usedFor: [{ label: "Versatile Enough for Our Full Range of Services", href: "/services" }],
   },
   {
-        name: "2020 CAT 299 D3 XE Land Management",
+    id: "cat-299",
+    name: "2020 CAT 299 D3 XE Land Management",
     category: "Compact Track Loader",
     icon: "🌳",
-    image: "/images/service-pics/cat-299-pic.jpeg",
+    image: "/images/service-pics/cat-299-pic-2.jpeg",
     description:
       "The 2020 CAT 299 D3 XE, is built specifically for demanding vegetation management work. Its high flow, high pressure XE hydraulic system delivers a calculated hydraulic power rating of 94 hp, giving it the muscle to run our full attachment lineup across the densest cedar stands and largest acreage projects.",
     specs: [
@@ -153,6 +154,7 @@ const attachments: EquipmentItem[] = [
     ],
   },
   {
+    id: "grapple-rake",
     name: "CAT Curved Tine Industrial Grapple Rake",
     category: "Grapple Attachment",
     icon: "🦾",

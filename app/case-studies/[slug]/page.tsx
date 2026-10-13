@@ -114,11 +114,31 @@ export default async function CaseStudyPage({ params }: { params: PageParams }) 
         )}
 
         {/* Photo gallery */}
-        {allPhotos.length > 1 && (
+        {allPhotos.length > 0 && (
           <div className="mb-10">
             <h2 className="text-2xl font-bold text-[#0a0a0a] mb-1">Check Out Some Pictures From This Job!</h2>
             <p className="text-xs font-semibold text-[#6e6e73] uppercase tracking-wide mb-3">Project Photos</p>
             <CaseStudyGallery photos={allPhotos} title={study.title} />
+          </div>
+        )}
+
+        {/* Videos */}
+        {study.videoIds && study.videoIds.length > 0 && (
+          <div className="mb-10">
+            <h2 className="text-2xl font-bold text-[#0a0a0a] mb-3">Project Video</h2>
+            <div className="grid grid-cols-1 gap-4 max-w-2xl mx-auto">
+              {study.videoIds.map((id) => (
+                <div key={id} className="relative aspect-video rounded-xl overflow-hidden bg-black">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${id}?autoplay=1&mute=1&loop=1&playlist=${id}&controls=1`}
+                    title="Project video"
+                    className="w-full h-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         )}
 
@@ -157,27 +177,6 @@ export default async function CaseStudyPage({ params }: { params: PageParams }) 
           </div>
         )}
 
-        
-
-        {/* Videos */}
-        {study.videoIds && study.videoIds.length > 0 && (
-          <div className="mb-10">
-            <p className="text-xs font-semibold text-[#6e6e73] uppercase tracking-wide mb-3">Project Video</p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {study.videoIds.map((id) => (
-                <div key={id} className="relative aspect-video rounded-xl overflow-hidden bg-black">
-                  <iframe
-                    src={`https://www.youtube.com/embed/${id}`}
-                    title="Project video"
-                    className="w-full h-full"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
 
         {/* CTA */}
         <div className="bg-[#0a0a0a] rounded-2xl py-10 px-6 text-center">

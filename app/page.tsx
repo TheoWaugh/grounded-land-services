@@ -210,7 +210,12 @@ const testimonials = [
     rating: 5,
     text: "I am very happy; he did an excellent job. I recommend him — an excellent person.",
   },
-
+  {
+    name: "Preston Jones",
+    location: "Liberty Hill, TX",
+    rating: 5,
+    text: "Logan did a great job with rock removal on our property in Liberty Hill, TX. He was super easy to work with and definitely got the job done right! Would highly recommend him if you need any rock removal or land clearing done!",
+  },
 ];
 
 const galleryImages = [

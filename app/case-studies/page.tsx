@@ -37,7 +37,7 @@ export default function CaseStudiesPage() {
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
             <p className="text-lg text-[#3a3a3c] leading-relaxed">
-              Browse completed land clearing, forestry mulching, rock removal, and site work projects from across Central and South-Central Texas. Each project includes real photos, location, acreage, and timeline.
+              Browse completed land clearing, forestry mulching, rock removal, and other projects from across Central Texas. Each project includes real photos, location, acreage, and timeline.
             </p>
           </ScrollReveal>
         </div>

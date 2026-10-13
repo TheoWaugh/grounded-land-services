@@ -139,7 +139,7 @@ const jsonLd = {
     ratingValue: "5.0",
     bestRating: "5",
     worstRating: "1",
-    reviewCount: "23",
+    reviewCount: "24",
   },
     review: [
     {
@@ -279,6 +279,12 @@ const jsonLd = {
       author: { "@type": "Person", name: "Clint Strittmatter" },
       reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
       reviewBody: "Logan did an amazing job with clearing my property. I'm going to need another day and I definitely won't hesitate to have him back out again. Thanks Logan!",
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Preston Jones" },
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      reviewBody: "Logan did a great job with rock removal on our property in Liberty Hill, TX. He was super easy to work with and definitely got the job done right! Would highly recommend him if you need any rock removal or land clearing done!",
     },
   ],
 };
