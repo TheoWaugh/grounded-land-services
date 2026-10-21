@@ -187,7 +187,7 @@ export default function Footer() {
       <div className="border-t border-[#C4922A]/15 px-6 py-5">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
           <p className="text-white/25 text-xs">© {new Date().getFullYear()} Grounded Land Services. All rights reserved.</p>
-          <p className="text-white/25 text-xs">Licensed · Insured · Certified</p>
+          <p className="text-white/25 text-xs">Licensed · Insured</p>
         </div>
       </div>
     </footer>

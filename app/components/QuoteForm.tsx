@@ -16,7 +16,7 @@ interface FormData {
   email: string;
 }
 
-type Errors = Partial<Record<"name" | "phone" | "city" | "otherCity", string>>;
+type Errors = Partial<Record<"name" | "phone" | "email" | "city" | "otherCity", string>>;
 
 const OTHER_CITY = "Other";
 const allCities = new Set(Object.values(serviceAreas).flat());
@@ -29,6 +29,9 @@ function validate(form: FormData): Errors {
   if (phoneDigits(form.phone).length !== 10) errors.phone = "Please enter a 10-digit phone number.";
   if (!form.city) errors.city = "Please choose the closest city.";
   if (form.city === OTHER_CITY && !form.otherCity.trim()) errors.otherCity = "Please enter your city or nearest town.";
+  // Listed after city so the first error focused matches the on-screen order
+  if (!form.email.trim()) errors.email = "Please enter your email.";
+  else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) errors.email = "Please enter a valid email, like name@example.com.";
   return errors;
 }
 
@@ -88,7 +91,7 @@ export default function QuoteForm({
     e.preventDefault();
     const found = validate(form);
     setErrors(found);
-    setTouched({ name: true, phone: true, city: true, otherCity: true });
+    setTouched({ name: true, phone: true, email: true, city: true, otherCity: true });
     if (Object.keys(found).length > 0) {
       const firstField = e.currentTarget.querySelector<HTMLElement>(`[name="${Object.keys(found)[0]}"]`);
       firstField?.focus();
@@ -119,7 +122,7 @@ export default function QuoteForm({
           _subject: `New quote request: ${lead.service} in ${city}`,
           name: form.name.trim(),
           phone: form.phone,
-          email: form.email,
+          email: form.email.trim(),
           city,
           serviceNeeded: form.service,
           lotSize: form.lotSize,
@@ -284,8 +287,27 @@ export default function QuoteForm({
         </div>
       )}
 
-      {/* Row 3: Lot Size + Email */}
+      {/* Row 3: Email + Lot Size */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label className={labelClass} htmlFor="email-input">
+            Email
+          </label>
+          <input
+            id="email-input"
+            type="email"
+            name="email"
+            inputMode="email"
+            autoComplete="email"
+            placeholder="john@example.com"
+            value={form.email}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            className={inputClass}
+            {...invalidProps("email")}
+          />
+          {fieldError("email")}
+        </div>
         <div>
           <label className={labelClass} htmlFor="lotsize-input">
             Rough Size <span className={optionalClass}>(optional)</span>
@@ -296,22 +318,6 @@ export default function QuoteForm({
             name="lotSize"
             placeholder="e.g. 5 acres"
             value={form.lotSize}
-            onChange={handleChange}
-            className={inputClass}
-          />
-        </div>
-        <div>
-          <label className={labelClass} htmlFor="email-input">
-            Email <span className={optionalClass}>(optional)</span>
-          </label>
-          <input
-            id="email-input"
-            type="email"
-            name="email"
-            inputMode="email"
-            autoComplete="email"
-            placeholder="john@example.com"
-            value={form.email}
             onChange={handleChange}
             className={inputClass}
           />

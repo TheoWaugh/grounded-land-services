@@ -28,7 +28,7 @@ const faqs = [
   },
   {
     q: "Are you licensed and insured?",
-    a: "Absolutely. Grounded Land Services is fully licensed, insured, and operated by certified professionals. Your property and our team are protected on every job.",
+    a: "Absolutely. Grounded Land Services is fully licensed and insured. Your property and our team are protected on every job.",
   },
   {
     q: "What's the difference between forestry mulching and traditional clearing?",

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     template: "%s | Grounded Land Services",
   },
   description:
-    "Grounded Land Services is Texas's premier land clearing and site development company. Specializing in forestry mulching, cedar removal, rock crushing, site preparation, utility trenching, and underbrushing. Serving Austin, San Antonio, Houston, Dallas, and 100+ Texas cities. Licensed, insured, and certified. Call (512) 571-6700 for a free quote.",
+    "Grounded Land Services is Texas's premier land clearing and site development company. Specializing in forestry mulching, cedar removal, rock crushing, site preparation, utility trenching, and underbrushing. Serving Austin, San Antonio, Houston, Dallas, and 100+ Texas cities. Licensed and insured. Call (512) 571-6700 for a free quote.",
   keywords: [
     "land clearing Texas",
     "forestry mulching Texas",
@@ -95,7 +95,6 @@ const jsonLd = {
   paymentAccepted: "Cash, Check, Credit Card",
     address: {
     "@type": "PostalAddress",
-    streetAddress: "120 Walnut Canyon Dr",
     addressLocality: "Bertram",
     addressRegion: "TX",
     postalCode: "78605",
@@ -141,7 +140,7 @@ const jsonLd = {
     ratingValue: "5.0",
     bestRating: "5",
     worstRating: "1",
-    reviewCount: "24",
+    reviewCount: "18",
   },
     review: [
     {
