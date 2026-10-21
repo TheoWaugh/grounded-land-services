@@ -16,6 +16,9 @@ import LoopingVideo from "@/app/components/LoopingVideo";
 import BreadcrumbSchema from "@/app/components/BreadcrumbSchema";
 import VideoSchema from "@/app/components/VideoSchema";
 import { videoMetadata } from "@/data/video-metadata";
+import { quoteServiceLabels } from "@/data/quote-services";
+import TrustStrip from "@/app/components/TrustStrip";
+import QuoteSection from "@/app/components/QuoteSection";
 
 type PageParams = Promise<{ service: string }>;
 
@@ -62,7 +65,7 @@ export default async function ServiceDetailPage({ params }: { params: PageParams
   const content = servicesContent[service];
   if (!content) notFound();
 
-  const quoteHref = `/contact?service=${encodeURIComponent(content.title)}#quote`;
+  const quoteHref = "#quote";
 
 const allVideoIds = content.sections.flatMap((s) => [
     ...(s.videoCarousel?.videoIds ?? []),
@@ -108,7 +111,10 @@ const allVideoIds = content.sections.flatMap((s) => [
       </div>
 
       <div className="max-w-3xl mx-auto px-6">
-        <p className="text-lg text-[#3a3a3c] leading-relaxed mb-3 mt-8"><RichText text={content.intro} /></p>
+        <div className="mt-6">
+          <TrustStrip />
+        </div>
+        <p className="text-lg text-[#3a3a3c] leading-relaxed mb-3 mt-6"><RichText text={content.intro} /></p>
         <p className="text-xs text-[#9a9a9e] mb-10">
           Written by Grounded Land Services — Central Texas land clearing professionals, based on firsthand experience working properties throughout the region.
         </p>
@@ -466,25 +472,10 @@ const content = (
         )}
       </div>
 
-      <div className="mt-16 w-full bg-[#0a0a0a] py-10 px-6 text-center">
-        <div className="max-w-sm mx-auto mb-8">
-          <a
-            href="/gallery"
-            className="flex items-center justify-center px-8 py-4 bg-[#C4922A] rounded-full text-black font-bold text-base hover:bg-amber-500 transition-colors"
-          >
-            View Our Completed Jobs
-          </a>
-        </div>
-        <p className="text-white text-2xl font-bold mb-2">
-          Ready to get started with {content.title.toLowerCase()}?
-        </p>
-        <p className="text-white/70 text-base">
-          Fill out the &ldquo;Request a Quote&rdquo; form below!
-        </p>
-        <p className="text-white/70 text-base">
-          Or give us a call for immediate assistance!
-        </p>
-      </div>
+      <QuoteSection
+        heading={`Get a Free ${content.title} Estimate`}
+        defaultService={quoteServiceLabels[service]}
+      />
 
       {content.faqs.length > 0 && (
         <script

@@ -111,7 +111,7 @@ export default function ChatWidget() {
       {/* Floating button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 right-6 z-50 w-16 h-16 rounded-full bg-gradient-to-br from-[#D4A840] to-[#C4922A] shadow-[0_8px_24px_-6px_rgba(196,146,42,0.6)] flex items-center justify-center transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_28px_-4px_rgba(196,146,42,0.7)]"
+        className="fixed bottom-[calc(5rem+env(safe-area-inset-bottom))] md:bottom-6 right-4 md:right-6 z-50 w-14 h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-br from-[#D4A840] to-[#C4922A] shadow-[0_8px_24px_-6px_rgba(196,146,42,0.6)] flex items-center justify-center transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_28px_-4px_rgba(196,146,42,0.7)]"
         aria-label="Open chat"
       >
         {isOpen ? (
@@ -127,7 +127,7 @@ export default function ChatWidget() {
 
       {/* Chat window */}
       <div
-        className={`fixed bottom-24 right-6 z-50 w-[calc(100vw-3rem)] max-w-sm h-[520px] max-h-[70vh] bg-white rounded-3xl shadow-2xl flex flex-col overflow-hidden origin-bottom-right transition-all duration-300 ${
+        className={`fixed bottom-[calc(9rem+env(safe-area-inset-bottom))] md:bottom-24 right-4 md:right-6 z-50 w-[calc(100vw-2rem)] max-w-sm h-[520px] max-h-[60vh] md:max-h-[70vh] bg-white rounded-3xl shadow-2xl flex flex-col overflow-hidden origin-bottom-right transition-all duration-300 ${
           isOpen ? "opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-90 pointer-events-none"
         }`}
       >

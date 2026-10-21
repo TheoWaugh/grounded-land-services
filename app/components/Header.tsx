@@ -62,26 +62,11 @@ className={`nav-link text-lg transition-colors ${                pathname === li
 
         {/* CTA */}
 <div className="hidden md:flex items-center gap-5">
-<a href="tel:5125716700"
-            className="nav-link text-lg"
-            onClick={() => {
-              if (typeof window !== "undefined" && (window as any).fbq) {
-                (window as any).fbq("track", "Contact");
-              }
-            }}
-          >
+<a href="tel:5125716700" data-track="header" className="nav-link text-lg">
             (512) 571-6700
           </a>
-          <Link
-            href="/contact"
-            className="btn-primary text-sm px-5 py-2.5"
-            onClick={() => {
-              if (typeof window !== "undefined" && (window as any).fbq) {
-                (window as any).fbq("track", "Contact");
-              }
-            }}
-          >
-            Contact Us
+          <Link href="/contact#quote" data-track="header" className="btn-primary text-sm px-5 py-2.5">
+            Get a Free Quote
           </Link>
         </div>
 
@@ -109,10 +94,10 @@ className={`nav-link text-lg transition-colors ${                pathname === li
               {link.label}
             </Link>
           ))}
-          <a href="tel:5125716700" className="text-white/85 text-base font-medium py-2 border-b border-white/10">
+          <a href="tel:5125716700" data-track="mobile_menu" className="text-white/85 text-base font-medium py-2 border-b border-white/10">
             (512) 571-6700
           </a>
-          <Link href="/contact" className="btn-primary mt-2 text-center">
+          <Link href="/contact#quote" data-track="mobile_menu" className="btn-primary mt-2 text-center">
             Get a Free Quote
           </Link>
         </nav>

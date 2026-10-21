@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { quoteServiceLabels } from "@/data/quote-services";
 
 const services = [
   "Forestry Mulching",
@@ -26,40 +27,14 @@ const quickLinks = [
   { label: "Get a Quote", href: "/contact#quote" },
 ];
 
-const quoteFormLabels: Record<string, string> = {
-  "land-clearing": "Land Clearing",
-  "forestry-mulching": "Forestry Mulching",
-  "rock-crushing": "Rock Crushing",
-  "demolition": "Demolition",
-  "cedar-tree-removal": "Cedar Tree Removal",
-  "rock-cactus-removal": "Rock & Cactus Removal",
-  "tree-pile-shredding": "Tree Pile Shredding",
-  "fence-line-clearing": "Fence Line Clearing",
-  "site-preparation": "Site Preparation",
-  "underbrushing": "Underbrushing",
-  "utility-trenching": "Utility Trenching",
-  "dirt-work-grading": "Dirt Work & Grading",
-  "site-cleanup": "Site Cleanup",
-  "retaining-walls": "Retaining Walls",
-  "rock-removal": "Rock Removal",
-  "right-of-way-clearing": "Right-of-Way Clearing",
-  "residential-lot-clearing": "Residential Lot Clearing",
-  "fire-breaks": "Fire Breaks",
-  "commercial-lot-clearing": "Commercial Lot Clearing",
-  "atv-trail-creation": "ATV Trail Creation",
-  "tree-stump-removal": "Tree & Stump Removal",
-  "gravel-driveways-roads": "Gravel Driveways & Roads",
-};
 
 export default function Footer() {
   const pathname = usePathname();
   const cityServiceMatch = pathname?.match(/^\/service-areas\/[^/]+\/([^/]+)/);
   const standaloneServiceMatch = pathname?.match(/^\/services\/([^/]+)$/);
   const serviceSlug = cityServiceMatch?.[1] ?? standaloneServiceMatch?.[1];
-  const quoteLabel = serviceSlug ? quoteFormLabels[serviceSlug] : undefined;
-  const requestQuoteHref = quoteLabel
-    ? `/contact?service=${encodeURIComponent(quoteLabel)}#quote`
-    : "/contact#quote";
+  // Service and city pages have their own quote form (id="quote"), prefilled with the service
+  const requestQuoteHref = serviceSlug && quoteServiceLabels[serviceSlug] ? "#quote" : "/contact#quote";
 
   return (
     <footer className="bg-[#0a0a0a] text-white">
@@ -78,12 +53,14 @@ export default function Footer() {
 <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
               href={requestQuoteHref}
+              data-track="footer_cta"
               className="inline-flex items-center justify-center gap-2 bg-black text-white font-semibold px-7 py-3.5 rounded-full hover:bg-[#1a1a1a] transition-colors"
             >
               Request a Quote
             </Link>
             <a
               href="tel:5125716700"
+              data-track="footer_cta"
               className="inline-flex items-center justify-center gap-2 bg-transparent text-black font-semibold px-7 py-3.5 rounded-full border-2 border-black/30 hover:border-black/60 transition-colors"
             >
               (512) 571-6700

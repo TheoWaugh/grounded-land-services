@@ -3,6 +3,8 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ChatWidget from "./components/ChatWidget";
+import MobileActionBar from "./components/MobileActionBar";
+import ClickTracker from "./components/ClickTracker";
 import Script from "next/script";
 
 const BASE_URL = "https://www.groundedlandservices.com";
@@ -314,8 +316,6 @@ export default function RootLayout({
         </Script>
 
         {/* Meta Pixel Code */}
-        <Script id="meta-pixel" strategy="lazyOnload"></Script>
-        {/* Meta Pixel Code */}
         <Script id="meta-pixel" strategy="lazyOnload">
           {`
             !function(f,b,e,v,n,t,s)
@@ -341,11 +341,13 @@ export default function RootLayout({
         </noscript>
         {/* End Meta Pixel Code */}
       </head>
-      <body className="min-h-full flex flex-col antialiased">
+      <body className="min-h-full flex flex-col antialiased pb-[calc(4rem+env(safe-area-inset-bottom))] md:pb-0">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
         <ChatWidget />
+        <MobileActionBar />
+        <ClickTracker />
       </body>
     </html>
   );
