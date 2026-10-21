@@ -2,7 +2,7 @@ export const serviceAreas: Record<string, string[]> = {
   "Austin Metro": [
     "Austin", "Bee Cave", "Buda", "Cedar Creek", "Driftwood",
     "Dripping Springs", "Elgin", "Hutto", "Kyle", "Leander",
-    "Liberty Hill", "Manor", "Paige", "Round Rock", "Taylor",
+    "Liberty Hill", "Manor", "Paige", "Rockdale", "Round Rock", "Taylor",
     "Thorndale",
   ],
   "Hill Country": [

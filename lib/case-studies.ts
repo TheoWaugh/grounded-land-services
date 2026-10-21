@@ -241,4 +241,25 @@ export const caseStudies: CaseStudy[] = [
       "/images/work/IMG_0535.jpeg",
     ],
   },
+  {
+    slug: "bertram-burn-pile-mulching",
+    title: "Forestry Mulching in Bertram, Texas",
+    description: "2 acres of forestry mulching in Bertram, Texas. We processed 6 old burn piles that had been sitting on the property for years, helping the owner get ready to plan their house build. With dirt and rock mixed throughout the piles, we used our grapple to separate the brush from the heavier material before mulching it.",
+    longDescription: "This 2-acre Bertram property had 6 old burn piles that had been sitting for years. The owner wanted to get the piles cleaned up so they could start planning their future house build.\n\nThe piles contained more than just brush and trees. Dirt and rock had been mixed throughout the material, making it difficult to mulch everything efficiently. We used our grapple to separate the brush from the dirt and rock before mulching it.\n\nBy sorting through the piles first, we were able to process the brush more efficiently and clean up the old piles that had been taking up space on the property.",
+    location: "Bertram, TX",
+    locationSlug: "bertram",
+    acreage: "2 Acres",
+    timeline: "1 Day",
+    services: [
+      { label: "Forestry Mulching", slug: "forestry-mulching" },
+      { label: "Tree Pile Shredding", slug: "tree-pile-shredding" },
+    ],
+    equipmentUsed: [
+      { label: "Cat 275 XE", equipmentId: "cat-275" },
+      { label: "Prinoth Mulching Head", equipmentId: "prinoth" },
+      { label: "Grapple Rake", equipmentId: "grapple-rake" },
+    ],
+    afterPhoto: "/images/work/dji_fly_20260130_143526_0122_1769999345932_photo.jpeg",
+    videoIds: ["hLimv0coUqo"],
+  },
 ];

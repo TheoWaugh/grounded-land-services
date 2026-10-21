@@ -23,3 +23,9 @@ npm-debug.log*
 
 # large source videos (only the compressed MP4 is needed)
 public/videos/
+
+# SEO kit: private traffic + lead data (don't upload to GitHub)
+seo-data/gsc/
+seo-data/bing/
+seo-data/analytics/
+seo-data/leads.csv
