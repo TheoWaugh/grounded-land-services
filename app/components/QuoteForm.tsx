@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { serviceAreas } from "@/data/service-areas";
 import { quoteServices } from "@/data/quote-services";
 
@@ -366,6 +367,13 @@ export default function QuoteForm({
       </button>
       <p className={`text-center text-sm ${dark ? "text-white/50" : "text-gray-500"}`}>
         Free on-site estimates · Logan replies within 24 hours
+      </p>
+      <p className={`text-center text-xs ${dark ? "text-white/40" : "text-gray-400"}`}>
+        By submitting, you agree to our{" "}
+        <Link href="/privacy" className="underline hover:text-[#D4A840]">
+          Privacy Policy
+        </Link>
+        .
       </p>
     </form>
   );
