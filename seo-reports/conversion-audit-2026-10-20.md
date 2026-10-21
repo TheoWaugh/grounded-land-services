@@ -27,7 +27,7 @@ Checked at 390px mobile width. Branch: `seo/2026-10-20-conversion`.
 - **Mobile action bar** (`MobileActionBar.tsx`): Call / Text / Get a Free Quote, phones only. It respects the safe-area inset, the body has bottom padding so the footer isn't covered, and the bar slides away while a form field is focused so it never covers the keyboard or the submit button. The chat button was moved up above it.
 - **Quote form on every service and city page** (`QuoteSection.tsx`, `id="quote"`). The city and service are pre-selected from the page, and every "Get a Free Estimate" and footer button now scrolls to it.
 - **Shorter quote form** (`QuoteForm.tsx`):
-  - Name, phone, city and email are required. Email was made required again at the owner's request. City is a dropdown of all service cities, grouped by region, plus "Other".
+  - Name, phone, city and email are required. Email was made required again at the owner's request. City is a text box that suggests our service cities as you type (HTML datalist), accepts any city, and is pre-filled (still editable) on city pages.
   - Service, rough size and details are optional.
   - Inline validation (10-digit phone) and correct mobile keyboards.
   - A hidden `_gotcha` honeypot to catch spam bots.
@@ -76,3 +76,4 @@ Most local-service leads hire whoever answers first, and one of your own reviews
 - "Certified" was removed everywhere: the homepage card and stats strip, the footer, the contact page FAQ, and the site meta description.
 - Schema reviewCount changed from 24 to 18. streetAddress was removed from the schema; Bertram, TX 78605 stays.
 - Email is required again on the quote form.
+- City went back to a free-text box (required). It suggests our service cities and is pre-filled on city pages.

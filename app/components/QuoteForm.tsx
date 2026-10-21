@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useId } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { serviceAreas } from "@/data/service-areas";
@@ -10,17 +10,16 @@ interface FormData {
   name: string;
   phone: string;
   city: string;
-  otherCity: string;
   service: string;
   lotSize: string;
   comments: string;
   email: string;
 }
 
-type Errors = Partial<Record<"name" | "phone" | "email" | "city" | "otherCity", string>>;
+type Errors = Partial<Record<"name" | "phone" | "email" | "city", string>>;
 
-const OTHER_CITY = "Other";
-const allCities = new Set(Object.values(serviceAreas).flat());
+// Autocomplete suggestions for the City field (any city can still be typed)
+const serviceCities = [...new Set(Object.values(serviceAreas).flat())].sort();
 
 const phoneDigits = (value: string) => value.replace(/\D/g, "").replace(/^1(?=\d{10}$)/, "");
 
@@ -28,8 +27,7 @@ function validate(form: FormData): Errors {
   const errors: Errors = {};
   if (!form.name.trim()) errors.name = "Please enter your name.";
   if (phoneDigits(form.phone).length !== 10) errors.phone = "Please enter a 10-digit phone number.";
-  if (!form.city) errors.city = "Please choose the closest city.";
-  if (form.city === OTHER_CITY && !form.otherCity.trim()) errors.otherCity = "Please enter your city or nearest town.";
+  if (!form.city.trim()) errors.city = "Please enter your city or nearest town.";
   // Listed after city so the first error focused matches the on-screen order
   if (!form.email.trim()) errors.email = "Please enter your email.";
   else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) errors.email = "Please enter a valid email, like name@example.com.";
@@ -46,11 +44,11 @@ export default function QuoteForm({
   defaultCity?: string;
 }) {
   const router = useRouter();
+  const cityListId = useId();
   const [form, setForm] = useState<FormData>({
     name: "",
     phone: "",
-    city: allCities.has(defaultCity) ? defaultCity : "",
-    otherCity: "",
+    city: defaultCity,
     service: quoteServices.includes(defaultService) ? defaultService : "",
     lotSize: "",
     comments: "",
@@ -92,14 +90,14 @@ export default function QuoteForm({
     e.preventDefault();
     const found = validate(form);
     setErrors(found);
-    setTouched({ name: true, phone: true, email: true, city: true, otherCity: true });
+    setTouched({ name: true, phone: true, email: true, city: true });
     if (Object.keys(found).length > 0) {
       const firstField = e.currentTarget.querySelector<HTMLElement>(`[name="${Object.keys(found)[0]}"]`);
       firstField?.focus();
       return;
     }
 
-    const city = form.city === OTHER_CITY ? form.otherCity.trim() : form.city;
+    const city = form.city.trim();
     const lead = { service: form.service || "Not specified", city };
 
     // Bots fill the hidden field; skip sending but act normally
@@ -229,26 +227,27 @@ export default function QuoteForm({
       {/* Row 2: City + Service */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label className={labelClass} htmlFor="city-select">Property City / Area</label>
-          <select
-            id="city-select"
+          <label className={labelClass} htmlFor="city-input">Property City / Area</label>
+          <input
+            id="city-input"
+            type="text"
             name="city"
+            list={cityListId}
+            autoComplete="address-level2"
+            autoCapitalize="words"
+            placeholder="e.g. Liberty Hill"
             value={form.city}
             onChange={handleChange}
             onBlur={handleBlur}
-            className={selectClass}
+            className={inputClass}
             {...invalidProps("city")}
-          >
-            <option value="">Choose the closest city...</option>
-            {Object.entries(serviceAreas).map(([region, cities]) => (
-              <optgroup key={region} label={region}>
-                {[...cities].sort().map((c) => (
-                  <option key={c} value={c}>{c}</option>
-                ))}
-              </optgroup>
+          />
+          {/* Suggestions only: any city can be typed */}
+          <datalist id={cityListId}>
+            {serviceCities.map((c) => (
+              <option key={c} value={c} />
             ))}
-            <option value={OTHER_CITY}>Other (not listed)</option>
-          </select>
+          </datalist>
           {fieldError("city")}
         </div>
         <div>
@@ -270,23 +269,6 @@ export default function QuoteForm({
         </div>
       </div>
 
-      {form.city === OTHER_CITY && (
-        <div>
-          <label className={labelClass} htmlFor="other-city-input">Your City or Nearest Town</label>
-          <input
-            id="other-city-input"
-            type="text"
-            name="otherCity"
-            autoComplete="address-level2"
-            value={form.otherCity}
-            onChange={handleChange}
-            onBlur={handleBlur}
-            className={inputClass}
-            {...invalidProps("otherCity")}
-          />
-          {fieldError("otherCity")}
-        </div>
-      )}
 
       {/* Row 3: Email + Lot Size */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
