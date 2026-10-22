@@ -311,7 +311,7 @@ export default function Home() {
            Reclaim Your Land.
           </p>
           <p className="text-white/75 text-lg md:text-xl max-w-xl mb-8 leading-relaxed">
-            Land clearing, forestry mulching &amp; rock removal across Austin, the Hill Country &amp; Central Texas. Build-ready lots and usable acreage, with a free on-site estimate.
+            Family-owned land clearing, forestry mulching &amp; rock removal across Austin, the Hill Country &amp; Central Texas. Build-ready lots and usable acreage, with a free on-site estimate.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mb-6">
             <a href="#quote" data-track="home_hero" className="btn-primary text-base">
@@ -437,7 +437,7 @@ export default function Home() {
               Unmatched Expertise &<br />Dedication to Your Land
             </h2>
             <p className="text-[#6e6e73] text-lg max-w-2xl mx-auto leading-relaxed">
-              At Grounded Land Services, we bring unmatched expertise and cutting-edge equipment to every project. Our team's precision and attention to detail ensure your land transformation is completed efficiently, safely, and to the highest standards.
+              Grounded Land Services is a family-owned business based in Bertram, and we bring unmatched expertise and cutting-edge equipment to every project. Our team&apos;s precision and attention to detail ensure your land transformation is completed efficiently, safely, and to the highest standards.
             </p>
           </ScrollReveal>
 

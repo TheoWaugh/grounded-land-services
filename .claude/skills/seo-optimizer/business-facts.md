@@ -17,6 +17,8 @@ Lines marked ❓ still need the owner's answer. Claude must not invent anything 
 - Year founded: 2025
 - Experience: doing land clearing work since 2020 (use "since 2020" for any years-of-experience wording)
 - Owner: Logan
+- Family-owned: YES (owner, 2026-10-22). Mention it plainly, no hype, once per section.
+  On the site: homepage hero subtext + homepage "Why Choose Us" intro. Don't add more.
 - Payment accepted: Cash, Check, Credit Card
 
 ## Services (pages exist on the site)
@@ -39,6 +41,8 @@ Lines marked ❓ still need the owner's answer. Claude must not invent anything 
 Also listed in the site schema: cedar tree removal, site preparation, utility
 trenching, underbrushing, fence line clearing, tree pile shredding, site
 cleanup, dirt work & grading, driveways, retaining walls.
+- Stumps: we do stump REMOVAL with the excavator, NOT stump grinding (owner, 2026-10-22).
+  Never list stump grinding as our service.
 PRIORITY services (owner): 1. Land clearing  2. Forestry mulching  3. Rock removal
 
 ## Service area (from data/service-areas.ts)

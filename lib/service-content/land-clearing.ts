@@ -132,7 +132,7 @@ const challengesParagraph = facts
   };
 
   const title = `Traditional Land Clearing in ${city}, Texas`;
-  const metaDescription = `Professional traditional land clearing services in ${city}, TX — cedar and brush removal, stump grinding, and construction-ready site prep.`;
+  const metaDescription = `Professional traditional land clearing services in ${city}, TX — cedar and brush removal, stump removal, and construction-ready site prep.`;
 
   const price = servicePricing["land-clearing"];
   const proof = whyUsProof(city, `We've completed 100+ projects and work with ${FLEET} for stumps, brush, and debris. [See our equipment](/equipment).`);
