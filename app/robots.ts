@@ -8,9 +8,14 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
         disallow: [],
       },
-      // Explicitly allow all major AI crawlers — full site access
+      // Explicitly allow search and AI crawlers — full site access
+      { userAgent: "Googlebot", allow: "/" },
+      { userAgent: "Bingbot", allow: "/" },
       { userAgent: "GPTBot", allow: "/" },
+      { userAgent: "OAI-SearchBot", allow: "/" },
       { userAgent: "ChatGPT-User", allow: "/" },
+      { userAgent: "Claude-SearchBot", allow: "/" },
+      { userAgent: "Claude-User", allow: "/" },
       { userAgent: "Google-Extended", allow: "/" },
       { userAgent: "PerplexityBot", allow: "/" },
       { userAgent: "ClaudeBot", allow: "/" },
@@ -24,6 +29,5 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: "Omgili", allow: "/" },
     ],
     sitemap: "https://www.groundedlandservices.com/sitemap.xml",
-    host: "https://www.groundedlandservices.com",
   };
 }

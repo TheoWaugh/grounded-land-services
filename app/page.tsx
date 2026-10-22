@@ -152,12 +152,6 @@ const testimonials = [
     text: "We had a fantastic experience working with Grounded Land Services! From start to finish, the communication was clear and professional. He truly listened to what we needed and followed through with care and attention to detail. He completed work both before and after the July 4th flood, and we were impressed with his consistency, reliability, and the quality of the results. Highly recommend for any land clearing or related projects.",
   },
   {
-    name: "Kelley Arnold",
-    location: "Bertram, Texas",
-    rating: 5,
-    text: "Logan, owner of Grounded Land Services, is the hardest worker out there! He has great attention to detail, does impeccable work, a work ethic that far exceeds his years, is honest and operates his business with the utmost integrity and professionalism.",
-  },
-  {
     name: "Evan Smith",
     location: "Bertram, Texas",
     rating: 5,
@@ -310,9 +304,12 @@ export default function Home() {
         <div className="absolute inset-0 hero-overlay" />
 
        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 pb-24 md:pb-32 flex flex-col items-start text-left">
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.05] tracking-tight max-w-4xl mb-6">
-           Reclaim Your Land.<br />
+          <h1 className="text-[#D4A840] text-sm md:text-base font-semibold uppercase tracking-wider mb-4">
+            Land Clearing &amp; Forestry Mulching in Central Texas &amp; the Hill Country
           </h1>
+          <p className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.05] tracking-tight max-w-4xl mb-6">
+           Reclaim Your Land.
+          </p>
           <p className="text-white/75 text-lg md:text-xl max-w-xl mb-8 leading-relaxed">
             Land clearing, forestry mulching &amp; rock removal across Austin, the Hill Country &amp; Central Texas. Build-ready lots and usable acreage, with a free on-site estimate.
           </p>

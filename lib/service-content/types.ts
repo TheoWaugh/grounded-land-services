@@ -32,6 +32,8 @@ export interface ServiceSection {
     afterLabel: string;
   };
   closingParagraphs?: string[];
+  /** Renders the customer reviews inside this section instead of near the bottom of the page. */
+  showReviews?: boolean;
   loopingVideo?: { videoId: string; caption?: string };
   areaMapQuery?: string;
   relatedServices?: { label: string; href: string }[];

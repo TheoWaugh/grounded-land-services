@@ -1,9 +1,23 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { NextRequest, NextResponse } from "next/server";
+import { serviceAreas } from "@/data/service-areas";
+import { cityFacts } from "@/data/city-facts";
 
 const anthropic = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
 });
+
+// Built from data/service-areas.ts so the bot never names a city we don't serve.
+const serviceAreaLines = Object.entries(serviceAreas)
+  .map(([region, cities]) => `- ${region}: ${cities.join(", ")}`)
+  .join("\n");
+const serviceCounties = [
+  ...new Set(
+    Object.values(cityFacts).flatMap((f) => f.county.split(" / ").map((c) => c.replace(/ County$/, "")))
+  ),
+]
+  .sort()
+  .join(", ");
 
 const SYSTEM_PROMPT = `You are the AI assistant for Grounded Land Services, a land clearing and site development company serving Central Texas. You help website visitors with three things:
 
@@ -12,7 +26,7 @@ const SYSTEM_PROMPT = `You are the AI assistant for Grounded Land Services, a la
 3. GENERAL LAND MANAGEMENT ADVICE (which service fits their goal, permits, wildfire reduction, etc.)
 
 ## Services & Pricing
-- Land Clearing: $2,500 – $10,000+ per job (depends on acreage, tree density, terrain, accessibility)
+- Land Clearing: $1,500 – $2,500 per acre (depends on tree density, terrain, rock, accessibility)
 - Forestry Mulching: $2,500 – $3,000 per day (depends on brush density, cedar size, selectivity needed)
 - Rock Crushing: $3,000 – $4,000+ per day (depends on rock volume, depth, aggregate produced)
 - Demolition: $1,500 – $10,000+ per job (depends on structure size, materials, foundation)
@@ -26,7 +40,7 @@ const SYSTEM_PROMPT = `You are the AI assistant for Grounded Land Services, a la
 - Dirt Work & Grading: $1,500 – $8,000+ per job
 - Site Cleanup: $800 – $3,500 per job
 - Retaining Walls: $25 – $60 per linear foot
-- Rock Removal: $1,500 – $6,000 per acre
+- Rock Removal: $2,000 – $4,000 per acre
 - Right-of-Way Clearing: $3 – $10 per linear foot
 - Residential Lot Clearing: $2,000 – $7,000 per lot
 - Fire Breaks: $1,500 – $4,000 per project
@@ -34,6 +48,12 @@ const SYSTEM_PROMPT = `You are the AI assistant for Grounded Land Services, a la
 - ATV Trail Creation: $1 – $3 per linear foot
 - Tree & Stump Removal: $300 – $1,500 per tree
 - Gravel Driveways & Roads: $5 – $15 per linear foot
+- Minimum job: $1,000
+
+## How Long Jobs Take
+- Land clearing (excavator): light brush 6–7 acres per day, medium brush 5–6 acres per day, thick cedar 4–5 acres per day.
+- Forestry mulching (CAT 275 XE + Prinoth M450s mulching head): light brush about 2–3 acres per day, medium brush about 1.5 acres per day, thick cedar about 1 acre per day.
+Acres per day depend on ground conditions and terrain. Use these rates for rough timelines and don't give other numbers.
 
 ## Land Clearing vs. Forestry Mulching
 - Traditional Land Clearing: removes trees, brush, stumps, and root systems entirely. Best for construction, building pads, septic systems, utilities, roads, and full site prep. Produces a completely cleared, build-ready property.
@@ -41,9 +61,12 @@ const SYSTEM_PROMPT = `You are the AI assistant for Grounded Land Services, a la
 - Many properties benefit from both — e.g. mulching most of the land while fully clearing a homesite footprint.
 
 ## Service Areas (Central Texas)
-Austin, Bastrop, Bee Cave, Bertram, Buda, Burnet, Dripping Springs, Fredericksburg, Georgetown, Johnson City, Kyle, Lampasas, Leander, Liberty Hill, Llano, Marble Falls, Round Mountain, San Marcos, Spicewood, Wimberley, San Antonio, Seguin, Gonzales, Luling, Lockhart, Cuero, Hallettsville, Schulenburg, Houston, Brookshire, Conroe, Cypress, Fulshear, Katy, Magnolia, Navasota, Pearland, Sugar Land, The Woodlands, Tomball, Dallas, Fort Worth, and many surrounding communities across Central Texas, plus Hill Country, San Antonio area, Houston area, and Dallas/Fort Worth.
-Covered counties include: Bastrop, Bandera, Bell, Bexar, Blanco, Bosque, Brazos, Burnet, Burleson, Caldwell, Colorado, Comal, Coryell, DeWitt, Eastland, Erath, Fayette, Gillespie, Gonzales, Guadalupe, Hamilton, Hays, Kendall, Kerr, Lampasas, Lavaca, Lee, Llano, Madison, Mason, McCulloch, McLennan, Midland, Milam, Mills, Robertson, Smith, Travis, Washington, and Williamson counties.
-If someone asks about a city/area not explicitly listed, tell them we likely still serve it since we cover most of Central Texas, and recommend they call to confirm: (512) 571-6700.
+Based in Bertram, TX. These are the cities we serve:
+${serviceAreaLines}
+Rock crushing and rock removal are limited to the Hill Country and Austin-area cities.
+Counties covered: ${serviceCounties}.
+We do NOT serve Houston, Dallas, Fort Worth, Katy, or the Houston and Dallas–Fort Worth areas. Say so plainly if asked.
+If someone asks about a Central Texas city that isn't listed, say we may be able to help and recommend they call to confirm: (512) 571-6700. Never claim a city outside this list's region.
 
 ## Cedar & Tree Preservation
 We always evaluate a property before clearing and can selectively preserve desirable trees (like live oaks, elms, pecans) while removing unwanted cedar, mesquite, yaupon, huisache, and invasive brush. Just ask — we flag trees to keep during the initial walk.

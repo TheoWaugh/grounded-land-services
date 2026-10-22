@@ -7,7 +7,7 @@ import RichText from "../components/RichText";
 
 export const metadata: Metadata = {
   title: "Contact Us",
-  description: "Get a free quote from Grounded Land Services. Call (512) 571-6700 or fill out our contact form for land clearing, forestry mulching, cedar removal, and site development across Central Texas.",
+  description: "Get a free land clearing or forestry mulching estimate in Central Texas. Call or text (512) 571-6700, or send the quote form. We reply within 24 hours.",
   alternates: {
     canonical: "https://www.groundedlandservices.com/contact",
   },

@@ -1,4 +1,6 @@
 import { ServicePageContent } from "./types";
+import { caseStudies } from "@/lib/case-studies";
+import { landClearingCostFactors } from "@/data/land-clearing-cost-factors";
 
 export const servicesContent: Record<string, ServicePageContent> = {
 "land-clearing": {
@@ -6,38 +8,71 @@ export const servicesContent: Record<string, ServicePageContent> = {
     metaDescription: "Professional traditional land clearing in Texas — complete tree, brush, stump, and debris removal for construction-ready, pasture-ready property.",
     icon: "🏗️",
     heroImage: "/images/official/land-clearing.jpeg",
-    intro: "Traditional land clearing is the most effective solution when a property needs to be completely prepared for construction, agriculture, infrastructure, or large-scale development. Unlike methods that only remove surface vegetation, traditional land clearing eliminates trees, brush, stumps, root systems, and other obstacles to create a clean, build-ready site.",
+    intro: "[Grounded Land Services](/) provides traditional land clearing across Central Texas for $1,500–$2,500 per acre, removing trees, stumps, brush, and debris to leave a clean, build-ready site. With our excavator we typically clear 4–7 acres a day, depending on how thick the brush is and the terrain. We're based in Bertram, have been doing this work since 2020, and every job starts with a free on-site estimate.",
     sections: [
 {
-        heading: "Professional Land Clearing",
-        paragraphs: [
-          "This approach is ideal when the land must be graded, excavated, developed, or converted into usable space. Whether you're building a home, expanding pasture, installing utilities, constructing roads, or preparing a commercial site, traditional land clearing provides a fresh start with minimal obstacles left behind.",
-          "At [Grounded Land Services](/), every project begins with understanding your goals. Some properties require selective tree removal to preserve mature oaks and desirable hardwoods, while others require complete clearing to maximize usable acreage. We tailor our approach to each property, ensuring the finished result meets your vision while protecting the health and usability of the land whenever possible.",
-          "Our equipment allows us to efficiently remove heavy vegetation, cedar thickets, mesquite, dense underbrush, fallen timber, and unwanted trees while safely working around structures, utilities, and environmentally sensitive areas.",
-        ],
-        listIntro: "Traditional land clearing is commonly used for:",
-        list: [
-          { label: "Residential home sites", href: "/services/residential-lot-clearing" },
-          { label: "Commercial developments", href: "/services/commercial-lot-clearing" },
-          { label: "Ranch and farm improvements", href: "/services/residential-lot-clearing" },
-          { label: "Pasture restoration", href: "/services/residential-lot-clearing" },
-          { label: "Utility installations", href: "/services/utility-trenching" },
-          { label: "Road and driveway construction", href: "/services/gravel-driveways-roads" },
-          { label: "Subdivision development", href: "/services/commercial-lot-clearing" },
-          { label: "Barn and shop sites", href: "/services/residential-lot-clearing" },
-          { label: "Recreational properties", href: "/services/residential-lot-clearing" },
-          { label: "Wildlife habitat improvements", href: "/services/residential-lot-clearing" },
-        ],
 videoCarousel: {
           videoIds: ["aSRb_PbjbIE", "W1AeIo_miIA","sroBopMm2rc"],
           captions: ["Completed land clearing project", "Completed land clearing project","Completed land clearing project"],
         },
       },
       {
-        heading: "Land Clearing vs. Forestry Mulching",
-        paragraphs: [
-          "Although both services remove unwanted vegetation, they are designed for very different goals. Choosing the right method depends on how you plan to use your property once the work is complete.",
+        // Becomes "How much does land clearing cost in Central Texas?" (lib/quick-answers.ts)
+        heading: "Land Clearing Cost Factors",
+        iconCards: landClearingCostFactors,
+        iconCardsColumns: 4,
+      },
+{
+        heading: "Our Land Clearing Process",
+        steps: [
+          { title: "Free On-Site Consultation", description: "We evaluate your property, discuss your goals, and create a land clearing plan tailored to your project." },
+          { title: "Land Clearing", description: "We remove unwanted trees, brush, stumps, rocks, and debris while protecting valuable vegetation whenever possible." },
+          { title: "Final Walkthrough", description: "We review the completed work to ensure your property is ready for the next phase." },
         ],
+        loopingVideo: {
+          videoId: "BRUpzEYxYFg",
+          caption: "Land clearing process in action",
+        },
+        ctaButton: { label: "Request a Free Estimate", href: "/contact?service=Land%20Clearing#quote" },
+      },
+            {
+        heading: "Common Vegetation We Remove",
+paragraphs: [
+          "Central Texas properties are often overrun with invasive trees, dense brush, and thick undergrowth that limit access, increase wildfire risk, and reduce usable land.",
+        ],
+        listIntro: "We safely remove:",
+        list: [
+          "Cedar Trees", "Mesquite", "Juniper", "Yaupon", "Huisache", "Prickly Pear",
+          "Thick Brush", "Underbrush", "Volunteer Trees", "Dead Trees", "Fallen Timber",
+          "Vines & Briars", "Invasive Vegetation", "Overgrown Fence Lines",
+        ],
+        listColumns: 4,
+      },
+      {
+        heading: "Why Choose Grounded Land Services?",
+        paragraphs: [
+          "Choosing the right contractor can make all the difference in how your property looks today — and for years to come. At [Grounded Land Services](/), we believe Land Clearing isn't just about clearing land; it's about leaving your property in better condition than we found it. From the equipment we operate to the attention we give every project, our goal is to deliver results that are clean, professional, and built to last.",
+          "Every project begins with understanding your goals. Some properties require selective tree removal to preserve mature oaks and desirable hardwoods, while others require complete clearing to maximize usable acreage. We tailor our approach to each property, ensuring the finished result meets your vision while protecting the health and usability of the land whenever possible.",
+          "Our equipment allows us to efficiently remove heavy vegetation, cedar thickets, mesquite, dense underbrush, fallen timber, and unwanted trees while safely working around structures, utilities, and environmentally sensitive areas.",
+          "We've completed 100+ projects, working with a 2025 CAT 323 excavator, a 2026 CAT 275 XE and a 2020 CAT 299 D3 XE land management track loader, plus CAT grapples and a grapple rake for stumps, brush, and debris. [See our equipment](/equipment).",
+          "From your first phone call to the final walkthrough, we're committed to providing honest communication, dependable scheduling, and quality workmanship. We show up prepared, treat your property with respect, and stand behind the work we perform.",
+          "A few recent land clearing projects:",
+        ],
+        list: caseStudies
+          .filter((c) => c.services[0]?.slug === "land-clearing")
+          .map((c) => ({ label: `${c.title} (${c.acreage}, ${c.timeline})`, href: `/case-studies/${c.slug}` })),
+        media: [
+          { type: "image", src: "/images/service-pics/why-choose-us.jpeg", alt: "Why choose Grounded Land Services" },
+        ],
+        showReviews: true,
+      },
+      {
+        heading: "Should I choose land clearing or forestry mulching?",
+        paragraphs: [
+          "Choose traditional land clearing when you need bare, stump-free ground for a home, driveway, building pad, or septic system. Choose [forestry mulching](/services/forestry-mulching) when you want to keep the good trees, skip the burn piles and hauling, and leave a layer of mulch that protects the soil.",
+          "Land clearing is ideal when the land must be graded, excavated, developed, or converted into usable space. Whether you're building a home, expanding pasture, installing utilities, constructing roads, or preparing a commercial site, traditional land clearing provides a fresh start with minimal obstacles left behind.",
+        ],
+        
         comparison: {
           left: {
             heading: "Traditional Land Clearing",
@@ -72,23 +107,6 @@ compareSlider: {
         },
       },
       {
-        heading: "Benefits of Professional Land Clearing",
-        paragraphs: [
-          "Professional land clearing creates safe, usable land that's ready for construction, agriculture, recreation, or future development. Every project is tailored to your property's goals while preserving valuable features whenever possible.",
-        ],
-        iconCards: [
-          { icon: "🌳", title: "More Usable Land", description: "Transform overgrown property into functional space for construction, agriculture, or recreation." },
-          { icon: "📈", title: "Increases Property Value", description: "Improve curb appeal and maximize the usability of your land." },
-          { icon: "🏗️", title: "Ready for Construction", description: "Prepare your property for barns, utilities, roads, and foundations." },
-          { icon: "🔥", title: "Reduces Wildfire Risk", description: "Remove excess vegetation to help protect structures and improve safety." },
-          { icon: "🚜", title: "Easier Property Maintenance", description: "Cleared land is easier to mow, maintain, inspect, and access throughout the year." },
-          { icon: "🛤️", title: "Improves Access", description: "Open trails, roads, and fence lines for easier movement around your property." },
-          { icon: "🌱", title: "Supports Healthier Vegetation", description: "Reduce competition from invasive vegetation and encourage native growth." },
-          { icon: "🎯", title: "Customized to Your Goals", description: "Every project is tailored to your property's specific goals." },
-        ],
-        iconCardsColumns: 4,
-      },
-{
         heading: "Which Service Is Right for My Property?",
         comparison: {
           left: {
@@ -119,6 +137,23 @@ compareSlider: {
         ],
       },
       {
+        heading: "Benefits of Professional Land Clearing",
+        paragraphs: [
+          "Professional land clearing creates safe, usable land that's ready for construction, agriculture, recreation, or future development. Every project is tailored to your property's goals while preserving valuable features whenever possible.",
+        ],
+        iconCards: [
+          { icon: "🌳", title: "More Usable Land", description: "Transform overgrown property into functional space for construction, agriculture, or recreation." },
+          { icon: "📈", title: "Increases Property Value", description: "Improve curb appeal and maximize the usability of your land." },
+          { icon: "🏗️", title: "Ready for Construction", description: "Prepare your property for barns, utilities, roads, and foundations." },
+          { icon: "🔥", title: "Reduces Wildfire Risk", description: "Remove excess vegetation to help protect structures and improve safety." },
+          { icon: "🚜", title: "Easier Property Maintenance", description: "Cleared land is easier to mow, maintain, inspect, and access throughout the year." },
+          { icon: "🛤️", title: "Improves Access", description: "Open trails, roads, and fence lines for easier movement around your property." },
+          { icon: "🌱", title: "Supports Healthier Vegetation", description: "Reduce competition from invasive vegetation and encourage native growth." },
+          { icon: "🎯", title: "Customized to Your Goals", description: "Every project is tailored to your property's specific goals." },
+        ],
+        iconCardsColumns: 4,
+      },
+      {
         heading: "Land Clearing Solutions for Every Property Type",
         paragraphs: [
           "Whether you're preparing a homesite, improving a ranch, or developing commercial land, Grounded Land Services provides professional land clearing solutions tailored to your property's unique needs.",
@@ -135,36 +170,12 @@ compareSlider: {
         ],
         iconCardsColumns: 4,
       },
-{
-        heading: "Our Land Clearing Process",
-        steps: [
-          { title: "Free On-Site Consultation", description: "We evaluate your property, discuss your goals, and create a land clearing plan tailored to your project." },
-          { title: "Land Clearing", description: "We remove unwanted trees, brush, stumps, rocks, and debris while protecting valuable vegetation whenever possible." },
-          { title: "Final Walkthrough", description: "We review the completed work to ensure your property is ready for the next phase." },
-        ],
-        loopingVideo: {
-          videoId: "BRUpzEYxYFg",
-          caption: "Land clearing process in action",
-        },
-        ctaButton: { label: "Request a Free Estimate", href: "/contact?service=Land%20Clearing#quote" },
-      },
       {
-        heading: "Land Clearing Cost Factors",
-        paragraphs: [
-          "What affects the cost of land clearing? The best way to determine the cost of your project is with a free on-site property evaluation. We'll assess your land, discuss your goals, and provide a customized estimate with no obligation.",
+        heading: "Industries We Serve",
+        industries: [
+          "Homeowners", "Ranch Owners", "Builders", "Developers",
+          "Farmers", "Municipalities", "Utility Companies", "Commercial Property Owners",
         ],
-        iconCards: [
-          { icon: "🌳", title: "Acreage", description: "Larger properties generally require more time, labor, and equipment, affecting the overall project scope." },
-          { icon: "🌲", title: "Tree Density", description: "Properties with dense trees, thick brush, or heavy vegetation typically require more work than lightly wooded land." },
-          { icon: "🏞️", title: "Terrain", description: "Steep slopes, rocky ground, creeks, and uneven terrain can increase the complexity of a land clearing project." },
-          { icon: "🚜", title: "Property Access", description: "Limited access, narrow gates, or difficult terrain may require specialized equipment or additional planning." },
-          { icon: "🪨", title: "Rock & Obstacles", description: "Large rocks, boulders, existing structures, and buried debris can add time and equipment requirements." },
-          { icon: "🌱", title: "Stump Removal", description: "Removing stumps and root systems creates a build-ready site but requires more work than clearing vegetation alone." },
-          { icon: "🪵", title: "Debris Disposal", description: "Debris can be mulched, piled, hauled away, or processed depending on your project's goals and site conditions." },
-          { icon: "✅", title: "Desired Finish", description: "Whether you need selective clearing, a clean homesite, pasture restoration, or a completely build-ready property will influence the scope of work." },
-        ],
-        iconCardsColumns: 4,
-
       },
       {
         heading: "Serving Central Texas Property Owners",
@@ -203,30 +214,6 @@ areaMapQuery: "Central Texas",
         },
       },
       {
-        heading: "Why Choose Grounded Land Services?",
-        paragraphs: [
-          "Choosing the right contractor can make all the difference in how your property looks today — and for years to come. At [Grounded Land Services](/), we believe Land Clearing isn't just about clearing land; it's about leaving your property in better condition than we found it. From the equipment we operate to the attention we give every project, our goal is to deliver results that are clean, professional, and built to last.",
-          "From your first phone call to the final walkthrough, we're committed to providing honest communication, dependable scheduling, and quality workmanship. We show up prepared, treat your property with respect, and stand behind the work we perform.",
-          "When you hire Grounded Land Services, you're not just hiring a land clearing contractor — you're choosing a company that takes pride in leaving your land cleaner, healthier, and ready for whatever comes next.",
-        ],
-        media: [
-          { type: "image", src: "/images/service-pics/why-choose-us.jpeg", alt: "Why choose Grounded Land Services" },
-        ],
-      },
-            {
-        heading: "Common Vegetation We Remove",
-paragraphs: [
-          "Central Texas properties are often overrun with invasive trees, dense brush, and thick undergrowth that limit access, increase wildfire risk, and reduce usable land.",
-        ],
-        listIntro: "We safely remove:",
-        list: [
-          "Cedar Trees", "Mesquite", "Juniper", "Yaupon", "Huisache", "Prickly Pear",
-          "Thick Brush", "Underbrush", "Volunteer Trees", "Dead Trees", "Fallen Timber",
-          "Vines & Briars", "Invasive Vegetation", "Overgrown Fence Lines",
-        ],
-        listColumns: 4,
-      },
-      {
         heading: "Related Services",
         relatedServices: [
           { label: "Traditional Land Clearing", href: "/services/land-clearing" },
@@ -240,17 +227,10 @@ paragraphs: [
           { label: "Underbrushing", href: "/services/underbrushing" },
         ],
       },
-      {
-        heading: "Industries We Serve",
-        industries: [
-          "Homeowners", "Ranch Owners", "Builders", "Developers",
-          "Farmers", "Municipalities", "Utility Companies", "Commercial Property Owners",
-        ],
-      },
     ],
     faqs: [
       { question: "What is land clearing?", answer: "Land clearing is the process of removing trees, brush, stumps, vegetation, and other obstacles to prepare a property for construction, agriculture, recreation, or improved land management. The best clearing method depends on your property's goals and future use." },
-      { question: "How much does land clearing cost?", answer: "Typically $2,500-$10,000+. The cost of land clearing depends on factors such as acreage, tree density, terrain, accessibility, stump removal, and the desired finished result. We provide free property evaluations and customized estimates for every project." },
+      { question: "How much does land clearing cost?", answer: "Land clearing typically costs $1,500–$2,500 per acre, with a $1,000 minimum job. The cost of land clearing depends on factors such as acreage, tree density, terrain, accessibility, stump removal, and the desired finished result. We provide free property evaluations and customized estimates for every project." },
       { question: "What's the difference between land clearing and forestry mulching?", answer: "Traditional land clearing removes trees, brush, stumps, and root systems to create a build-ready site. Forestry mulching grinds vegetation into mulch while leaving the root systems in place, making it ideal for property maintenance, trail creation, and habitat improvement.", link: { label: "Forestry Mulching", href: "/services/forestry-mulching" } },
       { question: "Do you remove cedar trees?", answer: "Yes. We specialize in removing invasive cedar trees throughout Central Texas. Cedar removal can improve water availability, reduce wildfire risk, and encourage the growth of native grasses and desirable vegetation.", link: { label: "Cedar Tree Removal", href: "/services/cedar-tree-removal" } },
       { question: "Do you remove stumps?", answer: "Yes. We offer stump removal when a completely cleared, build-ready property is needed. For projects where stump removal isn't necessary, we can tailor our services to your goals." },
@@ -260,7 +240,7 @@ paragraphs: [
       { question: "Is land clearing environmentally friendly?", answer: "When performed correctly, professional land clearing can improve the health of your property by removing invasive vegetation, reducing wildfire fuel, improving access, and allowing native plants and grasses to thrive. We use selective clearing methods whenever appropriate to preserve valuable trees and minimize unnecessary disturbance." },
       { question: "Do you clear land for new home construction?", answer: "Yes. We prepare homesites by removing trees, brush, stumps, and debris, creating a clean site that's ready for grading, utilities, driveways, and construction.", link: { label: "Residential Lot Clearing", href: "/services/residential-lot-clearing" } },
       { question: "Can you clear land for commercial projects?", answer: "Yes. We provide professional land clearing for commercial developments, retail sites, industrial properties, utility projects, and other large-scale construction projects.", link: { label: "Commercial Lot Clearing", href: "/services/commercial-lot-clearing" } },
-      { question: "How long does a land clearing project take?", answer: "Project timelines vary depending on the size of the property, vegetation density, terrain, and project scope. Smaller residential projects may take two or three days, while larger ranch and commercial projects can take longer." },
+      { question: "How long does a land clearing project take?", answer: "Land clearing typically covers 6–7 acres per day in light brush, 5–6 acres per day in medium brush, and 4–5 acres per day in thick cedar with our excavator. Acres per day depend on ground conditions and terrain." },
       { question: "What happens to the trees and brush after clearing?", answer: "Depending on your preferences and the project requirements, vegetation can be mulched, piled and burned, or hauled away. We'll discuss the best option during your property evaluation." },
       { question: "Do I need permits for land clearing?", answer: "Permit requirements vary by city, county, and project type. If permits are required, we'll help you understand what may be needed before work begins." },
       { question: "Can you clear fence lines and property boundaries?", answer: "Yes. We provide fence line clearing to remove brush, small trees, and overgrowth, making fence repairs, maintenance, and property access much easier.", link: { label: "Fence Line Clearing", href: "/services/fence-line-clearing" } },
@@ -271,7 +251,7 @@ paragraphs: [
       { question: "How do I get started?", answer: "Getting started is easy. Contact Grounded Land Services to schedule a free property evaluation. We'll walk your property, discuss your goals, recommend the best clearing method, and provide a customized estimate with no obligation.", link: { label: "Request a Free Quote", href: "/contact?service=Land%20Clearing#quote" } },
       { question: "Will land clearing increase my property's value?", answer: "Professional land clearing can increase a property's usability, curb appeal, and development potential. While every property is different, creating accessible, well-maintained land is often an investment that improves marketability and long-term value." },
     ],
-    pricing: { range: "$2,500 – $10,000+", unit: "per job", note: "Pricing depends on acreage, tree density, terrain, and accessibility." },
+    pricing: { range: "$1,500 – $2,500", unit: "per acre", note: "Pricing depends on tree density, terrain, rock removal requirements, and accessibility." },
   },
 
 "forestry-mulching": {
@@ -279,27 +259,9 @@ paragraphs: [
     metaDescription: "Professional forestry mulching services in Central Texas — efficient, environmentally responsible vegetation clearing that preserves soil health and mature trees.",
     icon: "🌿",
    heroImage: "/images/service-pics/Forestry Service areas (1).jpeg",
-    intro: "Forestry mulching is one of the most efficient, environmentally responsible, and cost-effective methods of clearing unwanted vegetation while preserving the health and beauty of your property. Whether you're reclaiming overgrown acreage, preparing land for development, improving accessibility, or reducing wildfire hazards, our experienced operators and specialized equipment deliver clean, efficient results tailored to your property's needs.",
+    intro: "[Grounded Land Services](/) provides forestry mulching across Central Texas for $2,500–$3,000 per day, grinding cedar, brush, and small trees into mulch while keeping the trees you want. Our mulcher typically covers 2–3 acres a day in light brush, about 1.5 acres in medium brush, and about 1 acre in thick cedar. We're based in Bertram, have been doing this work since 2020, and every job starts with a free on-site estimate.",
     sections: [
       {
-        heading: "Professional Forestry Mulching",
-        paragraphs: [
-          "Unlike conventional land clearing methods that often require bulldozing, burning, hauling debris away, or extensive soil disturbance, forestry mulching transforms unwanted trees, brush, vines, and undergrowth into nutrient-rich mulch that remains on the ground. This natural layer helps reduce erosion, retain moisture, suppress weed growth, and return organic material to the soil while eliminating expensive cleanup and debris disposal.",
-          "Every property presents unique challenges, which is why we customize every forestry mulching project based on your goals — whether that's selective clearing to preserve mature hardwoods, or complete vegetation management across large acreages.",
-        ],
-      listIntro: "Forestry Mulching is commonly used for:",
-        list: [
-          { label: "Cedar Tree Removal", href: "/services/cedar-tree-removal" },
-          { label: "Land Clearing & Brush Removal", href: "/services/land-clearing" },
-          { label: "Underbrushing", href: "/services/underbrushing" },
-          { label: "Fence Line Clearing", href: "/services/fence-line-clearing" },
-          { label: "Right-of-Way Clearing", href: "/services/right-of-way-clearing" },
-          { label: "Firebreak Construction", href: "/services/fire-breaks" },
-          { label: "ATV & UTV Trail Creation", href: "/services/atv-trail-creation" },
-          { label: "Pasture & Ranch Reclamation", href: "/services/residential-lot-clearing" },
-          { label: "Commercial Lot Clearing", href: "/services/commercial-lot-clearing" },
-          { label: "Wildlife Habitat Restoration", href: "/services/residential-lot-clearing" },
-        ],
         videoCarousel: {
           videoIds: ["KjYxH1hgTwM", "hLimv0coUqo", "RwfM81A1NRk", "_3PySbe3zwU", "CNAVOtb9FeU", "pjVyQg81nEE"],
           captions: [
@@ -311,6 +273,69 @@ paragraphs: [
             "Forestry mulching in action",
           ],
         },
+      },
+      {
+        heading: "Forestry Mulching Cost Factors",
+        paragraphs: [
+          "What affects the cost of forestry mulching? The best way to determine the cost of your project is with a free on-site property evaluation. We'll assess your land, discuss your goals, and provide a customized estimate with no obligation.",
+        ],
+        iconCards: [
+          { icon: "🌳", title: "Property Size", description: "Larger properties are often more efficient to mulch, while smaller projects may have higher mobilization costs." },
+          { icon: "🌲", title: "Vegetation Density", description: "Thick cedar, mesquite, yaupon, and heavy underbrush require more time to process than lightly wooded areas." },
+          { icon: "🌿", title: "Vegetation Size", description: "Small brush and saplings can be mulched quickly, while larger trees and mature vegetation require additional processing." },
+          { icon: "🏞️", title: "Terrain", description: "Steep slopes, rocky ground, creeks, and uneven terrain can affect equipment productivity and project complexity." },
+          { icon: "🚜", title: "Property Access", description: "Narrow gates, limited access, soft ground, or challenging entry points may require additional planning or specialized equipment." },
+          { icon: "🪨", title: "Rock & Ground Conditions", description: "Large surface rocks, hidden debris, and rough terrain can slow production and require extra care during mulching." },
+          { icon: "🎯", title: "Project Goals", description: "Whether you're creating trails, reclaiming pasture, improving wildlife habitat, reducing wildfire fuel, or clearing around trees, your project goals influence the scope of work." },
+          { icon: "✅", title: "Desired Finish", description: "Some properties require light underbrush removal, while others need a park-like appearance or complete vegetation management, affecting the time and effort required." },
+        ],
+        iconCardsColumns: 4,
+        ctaButton: { label: "Request a Free Estimate", href: "/contact?service=Forestry%20Mulching#quote" },
+      },
+      {
+        heading: "Our Forestry Mulching Process",
+        steps: [
+          { title: "Free On-Site Consultation", description: "We evaluate your property, discuss your goals, and create a land clearing plan tailored to your project." },
+          { title: "Forestry Mulching", description: "Our forestry mulcher clears unwanted brush, cedar, small trees, and undergrowth while leaving healthy trees and the root system intact." },
+          { title: "Final Walkthrough", description: "We ensure the mulch is evenly distributed, the property is clean, and the results meet your expectations before the job is complete." },
+        ],
+      },
+      {
+        heading: "What Can Forestry Mulching Remove?",
+        listIntro: "Our equipment efficiently processes a wide range of vegetation commonly found throughout Central Texas, including:",
+        listColumns: 4,
+        list: [
+          "Cedar (Ashe Juniper)",
+          "Mesquite",
+          "Yaupon Holly",
+          "Huisache",
+          "Privet",
+          "Chinese Tallow",
+          "Small Hardwoods",
+          "Brush & Undergrowth",
+          "Saplings",
+          "Volunteer Trees",
+        ],
+        paragraphs: [
+          "Selective clearing allows desirable hardwoods, mature shade trees, and native vegetation to remain untouched while unwanted growth is removed with precision.",
+        ],
+      },
+      {
+        heading: "Why Choose Grounded Land Services?",
+        paragraphs: [
+          "Choosing the right contractor can make all the difference in how your property looks today — and for years to come. At [Grounded Land Services](/), we believe forestry mulching isn't just about clearing land; it's about leaving your property in better condition than we found it. From the equipment we operate to the attention we give every project, our goal is to deliver results that are clean, professional, and built to last.",
+          "Every property presents unique challenges, which is why we customize every forestry mulching project based on your goals — whether that's selective clearing to preserve mature hardwoods, or complete vegetation management across large acreages.",
+          "From your first phone call to the final walkthrough, we're committed to providing honest communication, dependable scheduling, and quality workmanship. We show up prepared, treat your property with respect, and stand behind the work we perform.",
+          "We've completed 100+ projects, and we mulch with a 2026 CAT 275 XE running a 2025 Prinoth M450s mulching head. [See our equipment](/equipment).",
+          "A few recent forestry mulching projects:",
+        ],
+        list: caseStudies
+          .filter((c) => c.services[0]?.slug === "forestry-mulching")
+          .map((c) => ({ label: `${c.title} (${c.acreage}, ${c.timeline})`, href: `/case-studies/${c.slug}` })),
+        showReviews: true,
+        media: [
+          { type: "image", src: "/images/service-pics/why-choose-us.jpeg", alt: "Why choose Grounded Land Services" },
+        ],
       },
       {
         heading: "The Difference Is in the Finished Product",
@@ -357,26 +382,9 @@ paragraphs: [
         ],
       },
       {
-        heading: "The Benefits of Forestry Mulching",
+        heading: "Should I choose forestry mulching or land clearing?",
         paragraphs: [
-          "Forestry mulching is one of the most efficient ways to clear unwanted vegetation while improving the long-term health and usability of your property. Unlike traditional clearing methods, it minimizes disturbance and leaves behind a clean, natural finish.",
-        ],
-        iconCards: [
-          { icon: "🌱", title: "Minimal Soil Disturbance", description: "Clears unwanted vegetation while preserving topsoil and reducing ground disturbance." },
-          { icon: "🔥", title: "Reduced Wildfire Risk", description: "Removes excess brush and ladder fuels that can contribute to the spread of wildfires." },
-          { icon: "🌳", title: "Preserve Desirable Trees", description: "Selective clearing allows mature hardwoods and other valuable trees to remain while unwanted vegetation is removed." },
-          { icon: "💰", title: "Cost-Effective Land Management", description: "Combines cutting, grinding, and cleanup into one efficient process, saving both time and money." },
-          { icon: "✨", title: "Clean Finished Appearance", description: "Leaves your property with a neat, professional finish instead of scattered branches and large wood debris." },
-          { icon: "♻️", title: "Environmentally Friendly", description: "Forestry mulching recycles vegetation into natural mulch, reducing waste while improving long-term soil health." },
-          { icon: "🌾", title: "Faster Native Grass Growth", description: "Fine mulch allows sunlight, water, and nutrients to reach the soil, encouraging healthy grass growth." },
-          { icon: "🚫", title: "No Brush Piles or Burning", description: "Vegetation is processed on-site, eliminating the need for hauling, burning, or unsightly debris piles." },
-        ],
-        iconCardsColumns: 4,
-      },
-      {
-        heading: "Land Clearing vs. Forestry Mulching",
-        paragraphs: [
-          "Although both services remove unwanted vegetation, they are designed for very different goals. Choosing the right method depends on how you plan to use your property once the work is complete.",
+          "Choose forestry mulching when you want to keep the good trees, skip the burn piles and hauling, and leave a layer of mulch that protects the soil. Choose [traditional land clearing](/services/land-clearing) when you need bare, stump-free ground for a home, driveway, building pad, or septic system.",
         ],
         comparison: {
           left: {
@@ -412,6 +420,23 @@ compareSlider: {
         },
       },
       {
+        heading: "The Benefits of Forestry Mulching",
+        paragraphs: [
+          "Unlike conventional land clearing methods that often require bulldozing, burning, hauling debris away, or extensive soil disturbance, forestry mulching transforms unwanted trees, brush, vines, and undergrowth into nutrient-rich mulch that remains on the ground. This natural layer helps reduce erosion, retain moisture, suppress weed growth, and return organic material to the soil while eliminating expensive cleanup and debris disposal.",
+        ],
+        iconCards: [
+          { icon: "🌱", title: "Minimal Soil Disturbance", description: "Clears unwanted vegetation while preserving topsoil and reducing ground disturbance." },
+          { icon: "🔥", title: "Reduced Wildfire Risk", description: "Removes excess brush and ladder fuels that can contribute to the spread of wildfires." },
+          { icon: "🌳", title: "Preserve Desirable Trees", description: "Selective clearing allows mature hardwoods and other valuable trees to remain while unwanted vegetation is removed." },
+          { icon: "💰", title: "Cost-Effective Land Management", description: "Combines cutting, grinding, and cleanup into one efficient process, saving both time and money." },
+          { icon: "✨", title: "Clean Finished Appearance", description: "Leaves your property with a neat, professional finish instead of scattered branches and large wood debris." },
+          { icon: "♻️", title: "Environmentally Friendly", description: "Forestry mulching recycles vegetation into natural mulch, reducing waste while improving long-term soil health." },
+          { icon: "🌾", title: "Faster Native Grass Growth", description: "Fine mulch allows sunlight, water, and nutrients to reach the soil, encouraging healthy grass growth." },
+          { icon: "🚫", title: "No Brush Piles or Burning", description: "Vegetation is processed on-site, eliminating the need for hauling, burning, or unsightly debris piles." },
+        ],
+        iconCardsColumns: 4,
+      },
+      {
         heading: "Properties We Serve",
         paragraphs: [
           "From residential lots and ranches to hunting properties and commercial developments, we provide professional forestry mulching solutions tailored to your land and your goals.",
@@ -429,62 +454,6 @@ compareSlider: {
         iconCardsColumns: 4,
       },
       {
-        heading: "Choosing the Right Approach",
-        paragraphs: [
-          "Forestry mulching is an excellent solution when you want to remove unwanted vegetation while minimizing disturbance to the land. It is often the fastest and most environmentally friendly option for reclaiming overgrown property — but it isn't the right solution for every project.",
-        ],
-        comparison: {
-          left: {
-            heading: "Choose Traditional Land Clearing If...",
-            listIntro: "It is commonly recommended for:",
-            list: [
-              "Building a new home", "Installing septic systems", "Constructing shops or barns",
-              "Commercial developments", "Expanding grazing land", "Preparing subdivisions",
-              "Road construction", "Utility projects", "Large-scale property renovations",
-            ],
-            image: "/images/service-pics/choose-traditional.jpeg",
-            imageAlt: "Traditional land clearing example",
-          },
-          right: {
-            heading: "Choose Forestry Mulching If...",
-            listIntro: "It is commonly recommended for:",
-            list: [
-              "Cedar removal", "Underbrush management", "Wildlife habitat improvements",
-              "ATV and hiking trails", "Fence line maintenance", "Property maintenance",
-              "Fire fuel reduction", "Recreational properties", "Hunting land improvements",
-            ],
-            image: "/images/service-pics/choose-forestry.jpeg",
-            imageAlt: "Forestry mulching example",
-          },
-        },
-      },
-      {
-        heading: "Our Forestry Mulching Process",
-        steps: [
-          { title: "Free On-Site Consultation", description: "We evaluate your property, discuss your goals, and create a land clearing plan tailored to your project." },
-          { title: "Forestry Mulching", description: "Our forestry mulcher clears unwanted brush, cedar, small trees, and undergrowth while leaving healthy trees and the root system intact." },
-          { title: "Final Walkthrough", description: "We ensure the mulch is evenly distributed, the property is clean, and the results meet your expectations before the job is complete." },
-        ],
-      },
-      {
-        heading: "Forestry Mulching Cost Factors",
-        paragraphs: [
-          "What affects the cost of forestry mulching? The best way to determine the cost of your project is with a free on-site property evaluation. We'll assess your land, discuss your goals, and provide a customized estimate with no obligation.",
-        ],
-        iconCards: [
-          { icon: "🌳", title: "Property Size", description: "Larger properties are often more efficient to mulch, while smaller projects may have higher mobilization costs." },
-          { icon: "🌲", title: "Vegetation Density", description: "Thick cedar, mesquite, yaupon, and heavy underbrush require more time to process than lightly wooded areas." },
-          { icon: "🌿", title: "Vegetation Size", description: "Small brush and saplings can be mulched quickly, while larger trees and mature vegetation require additional processing." },
-          { icon: "🏞️", title: "Terrain", description: "Steep slopes, rocky ground, creeks, and uneven terrain can affect equipment productivity and project complexity." },
-          { icon: "🚜", title: "Property Access", description: "Narrow gates, limited access, soft ground, or challenging entry points may require additional planning or specialized equipment." },
-          { icon: "🪨", title: "Rock & Ground Conditions", description: "Large surface rocks, hidden debris, and rough terrain can slow production and require extra care during mulching." },
-          { icon: "🎯", title: "Project Goals", description: "Whether you're creating trails, reclaiming pasture, improving wildlife habitat, reducing wildfire fuel, or clearing around trees, your project goals influence the scope of work." },
-          { icon: "✅", title: "Desired Finish", description: "Some properties require light underbrush removal, while others need a park-like appearance or complete vegetation management, affecting the time and effort required." },
-        ],
-        iconCardsColumns: 4,
-        ctaButton: { label: "Request a Free Estimate", href: "/contact?service=Forestry%20Mulching#quote" },
-      },
-{
         heading: "Serving Central Texas Property Owners",
         listIntro: "Grounded Land Services proudly provides forestry mulching throughout Central Texas, including:",
 listColumns: 4,
@@ -521,37 +490,6 @@ paragraphs: [
         },
       },
       {
-        heading: "Why Choose Grounded Land Services?",
-        paragraphs: [
-          "Choosing the right contractor can make all the difference in how your property looks today — and for years to come. At [Grounded Land Services](/), we believe forestry mulching isn't just about clearing land; it's about leaving your property in better condition than we found it. From the equipment we operate to the attention we give every project, our goal is to deliver results that are clean, professional, and built to last.",
-          "From your first phone call to the final walkthrough, we're committed to providing honest communication, dependable scheduling, and quality workmanship. We show up prepared, treat your property with respect, and stand behind the work we perform.",
-          "When you hire Grounded Land Services, you're not just hiring a forestry mulching contractor — you're choosing a company that takes pride in leaving your land cleaner, healthier, and ready for whatever comes next.",
-        ],
-        media: [
-          { type: "image", src: "/images/service-pics/why-choose-us.jpeg", alt: "Why choose Grounded Land Services" },
-        ],
-      },
-      {
-        heading: "What Can Forestry Mulching Remove?",
-        listIntro: "Our equipment efficiently processes a wide range of vegetation commonly found throughout Central Texas, including:",
-        listColumns: 4,
-        list: [
-          "Cedar (Ashe Juniper)",
-          "Mesquite",
-          "Yaupon Holly",
-          "Huisache",
-          "Privet",
-          "Chinese Tallow",
-          "Small Hardwoods",
-          "Brush & Undergrowth",
-          "Saplings",
-          "Volunteer Trees",
-        ],
-        paragraphs: [
-          "Selective clearing allows desirable hardwoods, mature shade trees, and native vegetation to remain untouched while unwanted growth is removed with precision.",
-        ],
-      },
-      {
         heading: "Related Services",
         relatedServices: [
           { label: "Traditional Land Clearing", href: "/services/land-clearing" },
@@ -574,7 +512,7 @@ paragraphs: [
       { question: "What is forestry mulching used for?", answer: "Forestry mulching is commonly used for cedar removal, brush clearing, land clearing, fence line clearing, firebreak construction, ATV trail creation, right-of-way maintenance, wildlife habitat improvement, and homesite preparation." },
       { question: "What can forestry mulching remove?", answer: "Forestry mulching can remove cedar trees, mesquite, yaupon, huisache, brush, vines, saplings, invasive vegetation, and thick undergrowth. It is ideal for clearing unwanted vegetation while preserving desirable trees." },
       { question: "What can't forestry mulching remove?", answer: "Forestry mulching is not designed to remove large stumps, root systems, buried rocks, concrete, or building foundations. Those projects often require traditional land clearing or excavation." },
-      { question: "How much does forestry mulching cost?", answer: "Typically $2,500-$4,000 per day. The cost depends on acreage, vegetation density, terrain, tree size, accessibility, and project goals. Every property is unique, so we provide free estimates based on your specific needs." },
+      { question: "How much does forestry mulching cost?", answer: "Forestry mulching typically costs $2,500–$3,000 per day, with a $1,000 minimum job. The cost depends on acreage, vegetation density, terrain, tree size, accessibility, and project goals. Every property is unique, so we provide free estimates based on your specific needs." },
       { question: "Is forestry mulching cheaper than bulldozing?", answer: "In many situations, yes. Forestry mulching often costs less because it eliminates hauling, burning, and extensive cleanup while completing the work in fewer steps." },
       { question: "Is forestry mulching worth the cost?", answer: "For many property owners, forestry mulching provides excellent value because it improves property access, reduces maintenance, enhances appearance, and leaves behind beneficial mulch instead of debris piles." },
       { question: "Why choose forestry mulching instead of traditional land clearing?", answer: "Forestry mulching minimizes soil disturbance, reduces erosion, eliminates debris piles, preserves desirable trees, and often completes projects faster than traditional clearing methods." },
@@ -590,7 +528,7 @@ paragraphs: [
       { question: "Can you selectively remove trees?", answer: "Yes. We can remove unwanted vegetation while preserving mature oaks, pecans, elms, and other desirable trees." },
       { question: "Will forestry mulching kill cedar trees?", answer: "Yes, forestry mulching removes the above-ground portion of cedar trees, but regrowth depends on the species." },
       { question: "Does forestry mulching remove tree stumps?", answer: "Small stumps may be ground close to grade, but complete stump removal generally requires excavation or dedicated stump grinding." },
-      { question: "How long does forestry mulching take?", answer: "Every project is different. The timeline depends on acreage, vegetation density, terrain, and project objectives." },
+      { question: "How long does forestry mulching take?", answer: "Our CAT 275 XE with a Prinoth M450s mulching head clears about 2–3 acres per day in light brush, about 1.5 acres per day in medium brush, and about 1 acre per day in thick cedar. Terrain, rock, and how selective the clearing is also affect the timeline." },
       { question: "Can forestry mulching be done in wet conditions?", answer: "Yes, but weather and soil conditions affect every project. We evaluate site conditions before starting to minimize unnecessary soil disturbance." },
       { question: "Do you leave brush piles?", answer: "No. One of the biggest advantages of forestry mulching is that vegetation is processed into mulch instead of leaving large debris piles." },
       { question: "What happens to the mulch?", answer: "The mulch remains evenly distributed across the property, helping protect the soil while naturally decomposing over time." },
@@ -2780,22 +2718,9 @@ pricing: { range: "$25 – $60", unit: "per linear foot", note: "Pricing depends
     metaDescription: "Professional rock removal in Texas — excavating surface rock and limestone outcroppings to make land safe, usable, and build-ready.",
     icon: "🪨",
     heroImage: "/images/official/cactus-rock-removal.jpeg",
-    intro: "Rocky terrain can make a property difficult to access, maintain, and safely use. Grounded Land Services provides professional rock removal throughout Central Texas, removing large surface rocks, boulders, and embedded limestone from ranches, homesites, driveways, roads, and construction areas. By clearing problematic rock, we can help transform difficult, rocky property into cleaner, safer, and more accessible space.",
+    intro: "[Grounded Land Services](/) provides rock removal across Central Texas for $2,000–$4,000 per acre, excavating surface rock, boulders, and embedded limestone so the ground can be built on, driven across, and maintained. We're based in Bertram, have been doing this work since 2020, and every job starts with a free on-site estimate.",
     sections: [
-        {
-        heading: "What Is Rock Removal?",
-        paragraphs: [
-          "Rock removal is the process of excavating, loosening, lifting, relocating, or removing unwanted rocks, boulders, and exposed or embedded limestone. Grounded Land Services uses specialized [equipment](/equipment) and attachments to remove rock that makes a property difficult to access, maintain, grade, or safely use.",
-          "Across Central Texas, rocky terrain is common on residential properties, ranches, roads, pastures, and construction sites. Removing problematic rock can create cleaner, safer, and more accessible space while preparing the property for its next use.",
-        ],
-        subheading: "More Than Just Moving Rocks",
-        scenarios: [
-          { icon: "✅", title: "Safer and Easier to Maintain", description: "Reduce hazards and make routine property maintenance simpler." },
-          { icon: "🚜", title: "Better Access", description: "Improve access for trucks, equipment, and vehicles." },
-          { icon: "🛣️", title: "More Usable Space", description: "Open up space for driveways, roads, and building sites." },
-          { icon: "🏡", title: "Fewer Obstacles", description: "Remove obstacles around homes, fences, and other property features." },
-        ],
-                iconCardsColumns: 3,
+      {
         compareSlider: {
           beforeSrc: "/images/service-pics/liberty-hill-rock-removal-2.jpeg",
           beforeLabel: "Before",
@@ -2803,7 +2728,19 @@ pricing: { range: "$25 – $60", unit: "per linear foot", note: "Pricing depends
           afterLabel: "After",
         },
       },
-            {
+      {
+        heading: "Our Rock Removal Process",
+        paragraphs: [
+          "Every property has different rock, terrain, and access conditions, so we tailor our approach to the project.",
+        ],
+        steps: [
+          { title: "Evaluate & Plan", description: "We assess the rock, terrain, site access, and your goals for the property to determine the most practical equipment and removal approach." },
+          { title: "Remove & Process", description: "We use the appropriate heavy equipment and attachments to excavate, break, relocate, or remove the rock. When suitable, excavated material can also be processed with our rock crusher for reuse on the property." },
+          { title: "Clean Up", description: "Once the rock is removed, we clean up the work area and leave it ready for its next use, whether that's seeding, construction, improved access, or general property maintenance." },
+        ],
+        ctaButton: { label: "Get a Rock Removal Estimate", href: "/contact?service=Rock%20Removal#quote" },
+      },
+      {
         heading: "Professional Rock Removal Solutions",
         paragraphs: [
           "Every rock removal project is different. Some rocks can be excavated and relocated, while larger or embedded rock may require additional equipment to break it loose and remove it. Grounded Land Services evaluates each property to determine the most practical approach based on the rock, terrain, access, and your goals for the property.",
@@ -2820,7 +2757,21 @@ pricing: { range: "$25 – $60", unit: "per linear foot", note: "Pricing depends
           href: "/contact?service=Rock%20Removal#quote",
         },
       },
-                  {
+      {
+        heading: "Why Rock Removal Can Be Challenging in Central Texas",
+        paragraphs: [
+          "Central Texas is known for its rocky terrain and limestone geology. What makes the Hill Country beautiful can also make certain properties difficult to access, maintain, grade, and develop.",
+          "Rock removal can become more challenging when large or deeply embedded rock is combined with steep terrain, limited access, trees, fences, structures, or other obstacles.",
+        ],
+        scenarios: [
+          { icon: "🪨", title: "Hard Limestone", description: "Much of Central Texas contains hard limestone that can be difficult to excavate with standard equipment. Larger or deeply embedded formations may require hammering to break the material loose before it can be removed." },
+          { icon: "⛏️", title: "Large & Embedded Rock", description: "Some rocks extend well below the surface, making them substantially more difficult to remove than loose surface rock. The size, depth, and location of the rock all affect the equipment and approach required." },
+          { icon: "⛰️", title: "Sloped & Uneven Terrain", description: "Hillsides, uneven ground, and rocky terrain can make equipment access and safe excavation more difficult. Proper planning is important when working on slopes or challenging ground conditions." },
+          { icon: "🚧", title: "Limited Access", description: "Narrow gates, fences, trees, structures, and other property features can restrict equipment access to the work area. We evaluate access before determining the most practical approach for the project." },
+          { icon: "🏡", title: "Working Around Existing Property", description: "Rock removal may need to be performed near homes, driveways, fences, trees, utilities, or other features that need to remain in place. Careful equipment operation and planning help minimize unnecessary disturbance to the surrounding property." },
+        ],
+      },
+      {
         heading: "Types of Rock We Remove",
         paragraphs: [
           "Central Texas properties can have everything from loose surface rock to large boulders and embedded limestone. Grounded Land Services can evaluate the material on your property and determine the best approach for removing it.",
@@ -2838,7 +2789,52 @@ pricing: { range: "$25 – $60", unit: "per linear foot", note: "Pricing depends
           { type: "image", src: "/images/service-pics/rock-removal-rake.jpeg", alt: "Rock removal with rake attachment in Central Texas" },
         ],
       },
-        {
+      {
+        heading: "Why Choose Grounded Land Services?",
+        paragraphs: [
+          "Choosing the right contractor for your rock removal project can make a major difference in the finished result. At [Grounded Land Services](/), we focus on safely and efficiently removing problematic rocks, boulders, and limestone while creating cleaner, more accessible space. From surface rock to larger embedded formations, we use the right equipment and approach for the conditions of your property.",
+          "From your first phone call to the completion of the project, we're committed to honest communication, dependable scheduling, and quality workmanship. We show up prepared, work carefully around your property, and take pride in leaving each jobsite clean and ready for its next use.",
+          "We've completed 100+ projects, and our fleet includes a 2025 CAT 323 excavator, a 2026 CAT 275 XE and a 2020 CAT 299 D3 XE land management track loader, plus CAT grapples and a grapple rake. [See our equipment](/equipment).",
+          "A recent rock removal project:",
+        ],
+        list: caseStudies
+          .filter((c) => c.services[0]?.slug === "rock-removal")
+          .map((c) => ({ label: `${c.title} (${c.acreage}, ${c.timeline})`, href: `/case-studies/${c.slug}` })),
+        showReviews: true,
+        media: [
+          { type: "image", src: "/images/service-pics/why-choose-us.jpeg", alt: "Why choose Grounded Land Services for rock removal" },
+        ],
+      },
+      {
+        heading: "Should I choose rock removal or rock crushing?",
+        paragraphs: [
+          "Choose rock removal when large or embedded rock has to be dug out and taken away from a homesite, driveway, road, or construction area. Choose [rock crushing](/services/rock-crushing) when suitable rock can be crushed into aggregate and reused on the property for driveways and ranch roads.",
+        ],
+        media: [
+          { type: "image", src: "/images/work/liberty-hill-rock-removal-after-3.jpeg", alt: "Completed rock removal job in Liberty Hill, TX" }
+        ],
+        subheading: "Remove the Rock. Reuse the Material.",
+        closingParagraphs: [
+          "In some cases, the best solution is a combination of both services. We can excavate rock from an area where it's causing a problem, then use our rock crushing process to create suitable material into aggregate for a driveway, ranch road, or other application.",
+          "Instead of paying to haul usable rock away, you may be able to turn material already on your property into something useful.",
+        ],
+      },
+      {
+        heading: "What Is Rock Removal?",
+        paragraphs: [
+          "Rock removal is the process of excavating, loosening, lifting, relocating, or removing unwanted rocks, boulders, and exposed or embedded limestone. Grounded Land Services uses specialized [equipment](/equipment) and attachments to remove rock that makes a property difficult to access, maintain, grade, or safely use.",
+          "Across Central Texas, rocky terrain is common on residential properties, ranches, roads, pastures, and construction sites. Removing problematic rock can create cleaner, safer, and more accessible space while preparing the property for its next use.",
+        ],
+        subheading: "More Than Just Moving Rocks",
+        scenarios: [
+          { icon: "✅", title: "Safer and Easier to Maintain", description: "Reduce hazards and make routine property maintenance simpler." },
+          { icon: "🚜", title: "Better Access", description: "Improve access for trucks, equipment, and vehicles." },
+          { icon: "🛣️", title: "More Usable Space", description: "Open up space for driveways, roads, and building sites." },
+          { icon: "🏡", title: "Fewer Obstacles", description: "Remove obstacles around homes, fences, and other property features." },
+        ],
+        
+      },
+      {
         heading: "When Do You Need Rock Removal?",
         paragraphs: [
           "Rock removal can make a major difference when rocks and boulders limit how you can access, maintain, or use your property. From preparing a homesite to opening up a ranch road, removing problematic rock can turn difficult terrain into functional, accessible space.",
@@ -2855,137 +2851,7 @@ pricing: { range: "$25 – $60", unit: "per linear foot", note: "Pricing depends
           { type: "image", src: "/images/work/rock-removal-pic-2.jpeg", alt: "Completed rock removal job in Bee Cave, Texas" },
         ],
       },
-
-            {
-        heading: "Rock Removal vs. Rock Crushing",
-        paragraphs: [
-          "Not every rock removal project needs the same solution. Depending on the type and quantity of rock on your property, it may make more sense to remove it, relocate it, or process it into usable material.",
-        ],
-        comparison: {
-          left: {
-            heading: "Rock Removal",
-            listIntro: "Rock removal is the right choice when the goal is to clear unwanted rock from a specific area.",
-            list: [
-              "Remove large rocks and boulders",
-              "Excavate embedded limestone",
-              "Clear rock from homesites and building areas",
-              "Open up space for driveways and roads",
-              "Improve property access and maintenance",
-              "Relocate usable rock elsewhere on the property",
-              "Haul away rock that is no longer needed",
-            ],
-          },
-          right: {
-            heading: "Rock Crushing",
-            listIntro: "Rock crushing is a good option when suitable rock can be processed and reused on the property.",
-            list: [
-              "Crush suitable limestone and rock",
-              "Create usable aggregate on-site",
-              "Build or improve driveways and ranch roads",
-              "Reduce the need to haul material off-site",
-              "Turn unwanted rock into a useful resource",
-              "Reuse material already available on your property",
-            ],
-          },
-        },
-        media: [
-          { type: "image", src: "/images/work/liberty-hill-rock-removal-after-3.jpeg", alt: "Completed rock removal job in Liberty Hill, TX" }
-        ],
-        subheading: "Remove the Rock. Reuse the Material.",
-        closingParagraphs: [
-          "In some cases, the best solution is a combination of both services. We can excavate rock from an area where it's causing a problem, then use our rock crushing process to create suitable material into aggregate for a driveway, ranch road, or other application.",
-          "Instead of paying to haul usable rock away, you may be able to turn material already on your property into something useful.",
-        ],
-        note: {
-          text: "",
-          linkLabel: "Explore Our Rock Crushing Services",
-          href: "/services/rock-crushing",
-        },
-      },
-        {
-        heading: "Why Rock Removal Can Be Challenging in Central Texas",
-        paragraphs: [
-          "Central Texas is known for its rocky terrain and limestone geology. What makes the Hill Country beautiful can also make certain properties difficult to access, maintain, grade, and develop.",
-          "Rock removal can become more challenging when large or deeply embedded rock is combined with steep terrain, limited access, trees, fences, structures, or other obstacles.",
-        ],
-        scenarios: [
-          { icon: "🪨", title: "Hard Limestone", description: "Much of Central Texas contains hard limestone that can be difficult to excavate with standard equipment. Larger or deeply embedded formations may require hammering to break the material loose before it can be removed." },
-          { icon: "⛏️", title: "Large & Embedded Rock", description: "Some rocks extend well below the surface, making them substantially more difficult to remove than loose surface rock. The size, depth, and location of the rock all affect the equipment and approach required." },
-          { icon: "⛰️", title: "Sloped & Uneven Terrain", description: "Hillsides, uneven ground, and rocky terrain can make equipment access and safe excavation more difficult. Proper planning is important when working on slopes or challenging ground conditions." },
-          { icon: "🚧", title: "Limited Access", description: "Narrow gates, fences, trees, structures, and other property features can restrict equipment access to the work area. We evaluate access before determining the most practical approach for the project." },
-          { icon: "🏡", title: "Working Around Existing Property", description: "Rock removal may need to be performed near homes, driveways, fences, trees, utilities, or other features that need to remain in place. Careful equipment operation and planning help minimize unnecessary disturbance to the surrounding property." },
-        ],
-      },
-            {
-        heading: "Our Rock Removal Process",
-        paragraphs: [
-          "Every property has different rock, terrain, and access conditions, so we tailor our approach to the project.",
-        ],
-        steps: [
-          { title: "Evaluate & Plan", description: "We assess the rock, terrain, site access, and your goals for the property to determine the most practical equipment and removal approach." },
-          { title: "Remove & Process", description: "We use the appropriate heavy equipment and attachments to excavate, break, relocate, or remove the rock. When suitable, excavated material can also be processed with our rock crusher for reuse on the property." },
-          { title: "Clean Up", description: "Once the rock is removed, we clean up the work area and leave it ready for its next use, whether that's seeding, construction, improved access, or general property maintenance." },
-        ],
-        ctaButton: { label: "Get a Rock Removal Estimate", href: "/contact?service=Rock%20Removal#quote" },
-      },
-            {
-        heading: "Serving Central Texas Property Owners",
-        paragraphs: [
-          "[Grounded Land Services](/) provides professional rock removal throughout Central and South-Central Texas. From the rocky terrain of the Texas Hill Country to residential and ranch properties throughout the Austin area, we help property owners remove rock that limits access, maintenance, construction, and everyday use.",
-          "We're equipped to work on a variety of Central Texas properties, including ranches, rural acreage, homesites, driveways, roads, pastures, and construction sites.",
-        ],
-        listIntro: "Our rock removal services are available throughout Central Texas, including:",
-        list: [
-          { label: "Austin", href: "/service-areas" },
-          { label: "Bee Cave", href: "/service-areas" },
-          { label: "Bertram", href: "/service-areas" },
-          { label: "Burnet", href: "/service-areas" },
-          { label: "Dripping Springs", href: "/service-areas" },
-          { label: "Georgetown", href: "/service-areas" },
-          { label: "Johnson City", href: "/service-areas" },
-          { label: "Leander", href: "/service-areas" },
-          { label: "Liberty Hill", href: "/service-areas" },
-          { label: "Llano", href: "/service-areas" },
-          { label: "Marble Falls", href: "/service-areas" },
-          { label: "Round Rock", href: "/service-areas" },
-          { label: "San Marcos", href: "/service-areas" },
-          { label: "Spicewood", href: "/service-areas" },
-          { label: "Wimberley", href: "/service-areas" },
-        ],
-        listColumns: 4,
-        areaMapQuery: "Central Texas",
-        note: {
-          text: "Don't see your area listed? We may still be able to help. Contact us to discuss your property and project.",
-          linkLabel: "View All Service Areas",
-          href: "/service-areas",
-        },
-      },
-            {
-        heading: "Why Choose Grounded Land Services?",
-        paragraphs: [
-          "Choosing the right contractor for your rock removal project can make a major difference in the finished result. At [Grounded Land Services](/), we focus on safely and efficiently removing problematic rocks, boulders, and limestone while creating cleaner, more accessible space. From surface rock to larger embedded formations, we use the right equipment and approach for the conditions of your property.",
-          "From your first phone call to the completion of the project, we're committed to honest communication, dependable scheduling, and quality workmanship. We show up prepared, work carefully around your property, and take pride in leaving each jobsite clean and ready for its next use.",
-          "When you hire Grounded Land Services, you're choosing a rock removal contractor that understands Central Texas terrain and has the equipment and experience to turn difficult, rocky property into safer, more accessible, and more usable space.",
-        ],
-        media: [
-          { type: "image", src: "/images/service-pics/why-choose-us.jpeg", alt: "Why choose Grounded Land Services for rock removal" },
-        ],
-      },
-            {
-        heading: "Related Services",
-        paragraphs: [
-          "Rock removal is often part of a larger land clearing, excavation, or site preparation project. Explore our related services to see how we can help prepare your property from start to finish.",
-        ],
-        relatedServices: [
-          { label: "Land Clearing", href: "/services/land-clearing" },
-          { label: "Forestry Mulching", href: "/services/forestry-mulching" },
-          { label: "Site Preparation", href: "/services/site-preparation" },
-          { label: "Grading", href: "/services/dirt-work-grading" },
-          { label: "Rock Crushing", href: "/services/rock-crushing" },
-          { label: "Cedar Tree Removal", href: "/services/cedar-tree-removal" },
-        ],
-      },
-            {
+      {
         heading: "Rock Removal for Different Property Types",
         paragraphs: [
           "Rock can create challenges on almost any type of property. Whether you're preparing land for construction or simply trying to make a rocky property safer and easier to access, Grounded Land Services can tailor the removal approach to your property's needs.",
@@ -3000,6 +2866,52 @@ pricing: { range: "$25 – $60", unit: "per linear foot", note: "Pricing depends
         ],
         iconCardsColumns: 3,
       },
+      {
+        heading: "Serving Central Texas Property Owners",
+        paragraphs: [
+          "[Grounded Land Services](/) provides professional rock removal throughout Central and South-Central Texas. From the rocky terrain of the Texas Hill Country to residential and ranch properties throughout the Austin area, we help property owners remove rock that limits access, maintenance, construction, and everyday use.",
+          "We're equipped to work on a variety of Central Texas properties, including ranches, rural acreage, homesites, driveways, roads, pastures, and construction sites.",
+        ],
+        listIntro: "Our rock removal services are available throughout Central Texas, including:",
+        list: [
+          { label: "Austin", href: "/service-areas/austin/rock-removal" },
+          { label: "Bee Cave", href: "/service-areas/bee-cave/rock-removal" },
+          { label: "Bertram", href: "/service-areas/bertram/rock-removal" },
+          { label: "Burnet", href: "/service-areas/burnet/rock-removal" },
+          { label: "Dripping Springs", href: "/service-areas/dripping-springs/rock-removal" },
+          { label: "Georgetown", href: "/service-areas/georgetown/rock-removal" },
+          { label: "Johnson City", href: "/service-areas/johnson-city/rock-removal" },
+          { label: "Leander", href: "/service-areas/leander/rock-removal" },
+          { label: "Liberty Hill", href: "/service-areas/liberty-hill/rock-removal" },
+          { label: "Llano", href: "/service-areas/llano/rock-removal" },
+          { label: "Marble Falls", href: "/service-areas/marble-falls/rock-removal" },
+          { label: "Round Rock", href: "/service-areas/round-rock/rock-removal" },
+          { label: "San Marcos", href: "/service-areas/san-marcos/rock-removal" },
+          { label: "Spicewood", href: "/service-areas/spicewood/rock-removal" },
+          { label: "Wimberley", href: "/service-areas/wimberley/rock-removal" },
+        ],
+        listColumns: 4,
+        areaMapQuery: "Central Texas",
+        note: {
+          text: "Don't see your area listed? We may still be able to help. Contact us to discuss your property and project.",
+          linkLabel: "View All Service Areas",
+          href: "/service-areas",
+        },
+      },
+      {
+        heading: "Related Services",
+        paragraphs: [
+          "Rock removal is often part of a larger land clearing, excavation, or site preparation project. Explore our related services to see how we can help prepare your property from start to finish.",
+        ],
+        relatedServices: [
+          { label: "Land Clearing", href: "/services/land-clearing" },
+          { label: "Forestry Mulching", href: "/services/forestry-mulching" },
+          { label: "Site Preparation", href: "/services/site-preparation" },
+          { label: "Grading", href: "/services/dirt-work-grading" },
+          { label: "Rock Crushing", href: "/services/rock-crushing" },
+          { label: "Cedar Tree Removal", href: "/services/cedar-tree-removal" },
+        ],
+      },
     ],
         faqs: [
       { question: "What is rock removal?", answer: "Rock removal is the process of excavating, breaking, relocating, or removing unwanted rocks, boulders, and embedded limestone from a property. The goal is to create safer, cleaner, and more accessible space for construction, access, maintenance, or general property use." },
@@ -3013,12 +2925,12 @@ pricing: { range: "$25 – $60", unit: "per linear foot", note: "Pricing depends
       { question: "Can rock removal make my property safer?", answer: "Yes. Removing large rocks and boulders can eliminate obstacles and hazards for people, vehicles, livestock, and equipment while making the property easier to access and maintain." },
       { question: "Can rock removal improve property access?", answer: "Yes. Removing problematic rock from roads, driveways, trails, and equipment paths can turn difficult to access areas into cleaner and more usable property." },
       { question: "Can rock removal be combined with land clearing?", answer: "Yes. Rock removal can be incorporated into larger land clearing or site preparation projects when rock is preventing an area from being fully cleared, accessed, or prepared.", link: { label: "Land Clearing", href: "/services/land-clearing" } },
-      { question: "How much does rock removal cost?", answer: "$1,750–$6,000 per acre, but pricing varies based on the size and quantity of rock, how deeply it is embedded, site accessibility, terrain, equipment requirements, hauling, and the desired finished result. We provide customized estimates based on the specific property and project." },
+      { question: "How much does rock removal cost?", answer: "Rock removal typically costs $2,000–$4,000 per acre, with a $1,000 minimum job. Pricing varies based on the size and quantity of rock, how deeply it is embedded, site accessibility, terrain, equipment requirements, hauling, and the desired finished result. We provide customized estimates based on the specific property and project." },
       { question: "How long does rock removal take?", answer: "Project timelines vary depending on the amount and type of rock, accessibility, terrain, and removal method. Smaller projects may be completed quickly, while larger or deeply embedded rock can require more time and equipment." },
       { question: "Do you provide free rock removal estimates?", answer: "Yes. Contact Grounded Land Services to discuss your project and schedule a free estimate.", link: { label: "Request a Free Quote", href: "/contact?service=Rock%20Removal#quote" } },
       { question: "What areas do you serve for rock removal?", answer: "Grounded Land Services provides rock removal throughout Central and South-Central Texas, including the Austin metro, Texas Hill Country, and surrounding areas. Availability depends on the project location and scope.", link: { label: "View Service Areas", href: "/service-areas" } },
     ],
-    pricing: { range: "$1,750 – $6,000", unit: "per acre", note: "Pricing depends on rock size, depth, and density across the property." },
+    pricing: { range: "$2,000 – $4,000", unit: "per acre", note: "Pricing depends on rock size, depth, and density across the property." },
   },
 
   "right-of-way-clearing": {

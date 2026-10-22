@@ -20,10 +20,21 @@ Lines marked ❓ still need the owner's answer. Claude must not invent anything 
 - Payment accepted: Cash, Check, Credit Card
 
 ## Services (pages exist on the site)
-- Land clearing: $2,500 – $10,000+ per job (acreage, density, terrain, rock, access)
+- Land clearing: $1,500 – $2,500 per acre ONLY (owner, 2026-10-21; density,
+  terrain, rock, access). The old "$2,500 – $10,000+ per job" range is retired;
+  never use it.
 - Forestry mulching: $2,500 – $3,000 per day (density, cedar size, selectivity)
+- Minimum job: $1,000 (owner, 2026-10-21)
+- Production rates (owner, 2026-10-21). Use these for "how long does it take" answers;
+  acres per day depend on ground conditions and terrain. Don't invent other numbers.
+  - Forestry mulching (2026 CAT 275 XE + Prinoth M450s mulcher): light brush
+    2–3 acres/day; medium brush ~1.5 acres/day; thick cedar ~1 acre/day.
+  - Excavator land clearing: light brush 6–7 acres/day; medium brush 5–6 acres/day;
+    thick cedar 4–5 acres/day.
+  - Land clearing timelines: state the excavator rates directly. Don't say "runs"
+    and don't compare land clearing to forestry mulching.
 - Rock crushing: $3,000 – $4,000+ per day
-- Rock removal: $1,750 – $6,000 per acre
+- Rock removal: $2,000 – $4,000 per acre (owner, 2026-10-21; replaces $1,750 – $6,000)
 - Demolition: $1,500 – $10,000+ per job
 Also listed in the site schema: cedar tree removal, site preparation, utility
 trenching, underbrushing, fence line clearing, tree pile shredding, site
@@ -44,6 +55,8 @@ Based in Bertram. ~100 cities across 4 regions:
 - Rock crushing / rock removal: limited to 26 Hill Country + Austin cities
 PRIORITY cities (owner): Liberty Hill, Georgetown, Spicewood, Gonzales,
 Luling, Bertram, Briggs. Focus content, case studies, and links here first.
+- NOT served (owner, 2026-10-21): Houston, Dallas, Fort Worth, Katy (or any
+  Houston/DFW-area city). Never list them in copy, schema, keywords, or the chat bot.
 
 ## Proof / trust signals
 - Licensed in Texas; fully insured (from TrustBadges). Do NOT say "certified" (owner, 2026-10-20).
@@ -53,11 +66,24 @@ Luling, Bertram, Briggs. Focus content, case studies, and links here first.
   2025 Bobcat 84" attachment; CAT curved tine industrial grapple rake;
   CAT industrial grapple; standard buckets
 - Reviews: 5.0 from 18 Google reviews (owner, Oct 2026).
-  ✅ RESOLVED 2026-10-20: schema aggregateRating reviewCount set to 18 to match Google.
-  Keep the schema, TrustStrip, TrustBadges and homepage counts in sync when reviews grow.
-- Case studies on site: 28 entries in lib/case-studies.ts (e.g. Spicewood
-  53.8 ac land clearing, Gonzales 34.8 ac, Liberty Hill 4.1 ac rock removal)
-- Testimonials: on site with names and cities (Testimonials.tsx)
+  ✅ 2026-10-21: review/aggregateRating markup REMOVED from the site-wide schema
+  (self-serving LocalBusiness reviews aren't eligible for stars). Don't re-add it.
+  Keep the visible TrustStrip, TrustBadges and homepage counts in sync with Google.
+- The "Kelley Arnold" review is from a family member: removed from the site
+  (owner, 2026-10-21). Never show or mark it up.
+- Case studies on site: 10 in lib/case-studies.ts (owner confirmed 2026-10-21;
+  e.g. Spicewood 53.8 ac land clearing, Gonzales 34.8 ac, Liberty Hill 4.1 ac rock removal)
+- Testimonials: on site with names and cities (Testimonials.tsx, app/page.tsx)
+- Gallery photo locations: NOT confirmed (every alt says "Bertram, TX").
+  Leave gallery alt text alone until the owner confirms locations.
+- Texas A&M Forest Service Mechanical Fuel Reduction Grant: owner has completed
+  a job under this program (forestry mulching / debris reduction).
+  Program facts (verified at https://tfsweb.tamu.edu/mechgrant/): reimburses
+  private landowners in eligible Texas counties up to $2,000/acre for heavy
+  equipment, $20,000 max per landowner; next application window opens
+  June 1, 2027; work must be done by an unaffiliated contractor; burning
+  disqualifies. FUTURE guide page (not built yet). Always link the official
+  page; never promise eligibility.
 - Social: Instagram @Grounded.LandServices, Facebook /GroundedLandServices,
   TikTok @grounded.land.services
 - Analytics: Google Analytics 4 (G-KW3HPEJTNW) + Meta Pixel installed

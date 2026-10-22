@@ -4,7 +4,7 @@ import { videoMetadata } from "@/data/video-metadata";
 
 export const metadata: Metadata = {
   title: "Project Gallery",
-  description: "Browse real before-and-after photos and videos of Grounded Land Services' completed land clearing, forestry mulching, and site development projects across Central Texas.",
+  description: "Before-and-after photos and videos of real land clearing, forestry mulching, and site work projects by Grounded Land Services across Central Texas.",
   alternates: {
     canonical: "https://www.groundedlandservices.com/gallery",
   },

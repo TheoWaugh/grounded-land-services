@@ -7,7 +7,7 @@ import Testimonials from "@/app/components/Testimonials";
 import ServiceHeroImage from "@/app/components/ServiceHeroImage";
 import ServiceStickyTitle from "@/app/components/ServiceStickyTitle";
 import { serviceImages, serviceAltText } from "@/data/service-images";
-import { slugify } from "@/data/service-areas";
+import { slugify, rockCrushingCities } from "@/data/service-areas";
 import { serviceImagePosition } from "@/data/service-image-position";
 import RichText from "@/app/components/RichText";
 import LoopingVideo from "@/app/components/LoopingVideo";
@@ -21,6 +21,14 @@ import { videoMetadata } from "@/data/video-metadata";
 import { quoteServiceLabels } from "@/data/quote-services";
 import TrustStrip from "@/app/components/TrustStrip";
 import QuoteSection from "@/app/components/QuoteSection";
+import PriceCard from "@/app/components/PriceCard";
+import { withQuickAnswers } from "@/lib/quick-answers";
+import { brandedTitle, metaDescription } from "@/lib/seo-title";
+import { priceOffer } from "@/lib/price-schema";
+import type { ServicePricing } from "@/lib/service-content/types";
+
+// Rock services are only offered in rockCrushingCities; neighbors outside that list link to their city hub instead.
+const rockServices = ["rock-crushing", "rock-removal"];
 
 type PageParams = Promise<{ city: string; service: string }>;
 
@@ -32,15 +40,16 @@ export async function generateMetadata({
   const { city, service } = await params;
   const result = getServiceContent(city, service);
   if (!result) return {};
+  const label = quoteServiceLabels[service] ?? result.content.title;
   return {
-    title: result.content.title,
-    description: result.content.metaDescription,
+    title: brandedTitle(`${label} in ${result.cityName}, TX`),
+    description: metaDescription(result.content.metaDescription),
     alternates: {
       canonical: `https://www.groundedlandservices.com/service-areas/${city}/${service}`,
     },
   };
 }
-function ServiceSchema({ city, service, cityName, content }: { city: string; service: string; cityName: string; content: { title: string; metaDescription: string } }) {
+function ServiceSchema({ city, service, cityName, content }: { city: string; service: string; cityName: string; content: { title: string; metaDescription: string; pricing?: ServicePricing } }) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -53,6 +62,7 @@ function ServiceSchema({ city, service, cityName, content }: { city: string; ser
       containedInPlace: { "@type": "State", name: "Texas" },
     },
     url: `https://www.groundedlandservices.com/service-areas/${city}/${service}`,
+    ...(content.pricing ? { offers: priceOffer(content.pricing) } : {}),
   };
 
   return (
@@ -70,6 +80,8 @@ export default async function ServicePage({ params }: { params: PageParams }) {
   const { content, cityName } = result;
   const quoteLabel = quoteServiceLabels[service] ?? "";
   const quoteHref = "#quote";
+  const sections = withQuickAnswers(service, content.sections, cityName);
+  const reviewsInSections = sections.some((s) => s.showReviews);
   const imageSrc = serviceImages[service];
   const imageAlt = serviceAltText[service] ?? content.title;
 
@@ -103,24 +115,11 @@ const allVideoIds = content.sections.flatMap((s) => [
             objectPosition={serviceImagePosition[service] ?? "center"}
           />
           {content.pricing && (
-<div className="absolute top-20 right-4 md:top-24 md:right-6 z-10 w-56 md:w-64 p-4 bg-white/95 backdrop-blur-sm border-2 border-[#C4922A] rounded-2xl shadow-lg">
-              <p className="text-[10px] font-semibold text-amber-800 uppercase tracking-wide mb-1">
-                Estimated Cost
-              </p>
-              <p className="text-xl font-bold text-[#0a0a0a]">
-                {content.pricing.range}
-              </p>
-              <p className="text-xs font-medium text-[#6e6e73] mb-2">
-                {content.pricing.unit}
-              </p>
-              <p className="text-xs text-[#6e6e73] mb-3">{content.pricing.note}</p>
-              <a
-                href={quoteHref}
-                className="block text-center w-full px-4 py-2 bg-[#C4922A] text-black font-semibold rounded-full hover:bg-amber-500 transition-colors text-sm"
-              >
-                Get a Free Estimate
-              </a>
-            </div>
+            <PriceCard
+              pricing={content.pricing}
+              href={quoteHref}
+              className="absolute top-20 right-4 md:top-24 md:right-6 z-10 w-56 md:w-64 bg-white/95 backdrop-blur-sm shadow-lg"
+            />
           )}
         </div>
       )}
@@ -133,7 +132,7 @@ const allVideoIds = content.sections.flatMap((s) => [
           Written by Grounded Land Services — Central Texas land clearing professionals, based on firsthand experience working properties in {cityName} and throughout the region.
         </p>
 
-        {content.sections.map((section, i) => (
+        {sections.map((section, i) => (
           <div key={i} className="mb-12">
             {section.heading && (
               <h2 className="text-2xl font-bold text-[#0a0a0a] mb-4 flex items-center gap-3">
@@ -240,7 +239,11 @@ const allVideoIds = content.sections.flatMap((s) => [
                   {(section.list as string[]).map((item) => (
                     <li key={item}>
                       <a
-                        href={`/service-areas/${slugify(item)}/${service}`}
+                        href={
+                          rockServices.includes(service) && !rockCrushingCities.includes(item)
+                            ? `/service-areas/${slugify(item)}`
+                            : `/service-areas/${slugify(item)}/${service}`
+                        }
                         className="flex items-center gap-2 text-sm font-medium text-[#0a0a0a] bg-white border-2 border-[#0a0a0a] rounded-full px-4 py-2.5 hover:bg-[#f5f5f5] hover:shadow-md transition-all justify-center text-center"
                       >
                         <span className="w-1.5 h-1.5 rounded-full bg-[#0a0a0a] flex-shrink-0" />
@@ -440,18 +443,25 @@ const allVideoIds = content.sections.flatMap((s) => [
                 {p}
               </p>
             ))}
+            {section.showReviews && (
+              <div className="mt-8">
+                <Testimonials />
+              </div>
+            )}
           </div>
         ))}
 
         <TrustBadges />
 
-        <div className="mb-12">
-          <h2 className="text-2xl font-bold text-[#0a0a0a] mb-6 flex items-center gap-3">
-            <span className="w-1.5 h-6 bg-[#C4922A] rounded-full inline-block" />
-            What Our Customers Say
-          </h2>
-          <Testimonials />
-        </div>
+        {!reviewsInSections && (
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold text-[#0a0a0a] mb-6 flex items-center gap-3">
+              <span className="w-1.5 h-6 bg-[#C4922A] rounded-full inline-block" />
+              What Our Customers Say
+            </h2>
+            <Testimonials />
+          </div>
+        )}
 
         {content.faqs && content.faqs.length > 0 && (
           <div className="mb-12">

@@ -6,7 +6,7 @@ import RichText from "../components/RichText";
 
 export const metadata: Metadata = {
   title: "Our Equipment",
-  description: "The equipment behind every Grounded Land Services project — CAT excavators, land management compact track loaders, and a full attachment lineup built to handle Central Texas terrain.",
+  description: "The CAT excavator, CAT land management track loaders, Prinoth mulching head and attachments behind every Grounded Land Services job in Central Texas.",
   alternates: {
     canonical: "https://www.groundedlandservices.com/equipment",
   },

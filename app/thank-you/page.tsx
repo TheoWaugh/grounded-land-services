@@ -12,6 +12,9 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: false, follow: true },
   },
+  alternates: {
+    canonical: "https://www.groundedlandservices.com/thank-you",
+  },
 };
 
 const featuredSlugs = ["spicewood-land-clearing", "liberty-hill-rock-removal", "gonzales-land-clearing"];

@@ -5,12 +5,15 @@ export interface ServicePricing {
   note: string;
 }
 
+/** Smallest job the owner takes on (owner, 2026-10-21). */
+export const MINIMUM_JOB = "$1,000";
+
 export const servicePricing: Record<string, ServicePricing> = {
   "land-clearing": {
     label: "Traditional Land Clearing",
-    range: "$2,500 – $10,000+",
-    unit: "per job",
-    note: "Pricing depends on acreage, tree density, terrain, rock removal requirements, and accessibility.",
+    range: "$1,500 – $2,500",
+    unit: "per acre",
+    note: "Pricing depends on tree density, terrain, rock removal requirements, and accessibility.",
   },
 "forestry-mulching": {
     label: "Forestry Mulching",
@@ -32,7 +35,7 @@ export const servicePricing: Record<string, ServicePricing> = {
   },
   "rock-removal": {
     label: "Rock Removal",
-    range: "$1,750 – $6,000",
+    range: "$2,000 – $4,000",
     unit: "per acre",
     note: "Pricing depends on the size and quantity of rock, how deeply it is embedded, site accessibility, terrain, equipment requirements, and hauling needs.",
   },

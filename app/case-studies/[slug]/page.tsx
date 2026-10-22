@@ -7,6 +7,8 @@ import BeforeAfterSlider from "../../components/BeforeAfterSlider";
 import { caseStudies } from "@/lib/case-studies";
 import { equipmentPhotos } from "@/data/equipment-photos";
 import CaseStudyGallery from "../../components/CaseStudyGallery";
+import YouTubePlayer from "../../components/YouTubePlayer";
+import { brandedTitle, metaDescription } from "@/lib/seo-title";
 
 
 type PageParams = Promise<{ slug: string }>;
@@ -24,8 +26,8 @@ export async function generateMetadata({
   const study = caseStudies.find((s) => s.slug === slug);
   if (!study) return {};
   return {
-    title: study.title,
-    description: study.description,
+    title: brandedTitle(study.title),
+    description: metaDescription(study.description),
     alternates: {
       canonical: `https://www.groundedlandservices.com/case-studies/${slug}`,
     },
@@ -128,15 +130,7 @@ export default async function CaseStudyPage({ params }: { params: PageParams }) 
             <h2 className="text-2xl font-bold text-[#0a0a0a] mb-3">Project Video</h2>
             <div className="grid grid-cols-1 gap-4 max-w-2xl mx-auto">
               {study.videoIds.map((id) => (
-                <div key={id} className="relative aspect-video rounded-xl overflow-hidden bg-black">
-                  <iframe
-                    src={`https://www.youtube.com/embed/${id}?autoplay=1&mute=1&loop=1&playlist=${id}&controls=1`}
-                    title="Project video"
-                    className="w-full h-full"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                </div>
+                <YouTubePlayer key={id} videoId={id} title={study.title} loop />
               ))}
             </div>
           </div>

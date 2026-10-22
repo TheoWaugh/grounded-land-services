@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Service Areas",
-  description: "Grounded Land Services proudly serves Central Texas, including the Austin Metro, Hill Country, San Antonio Area, and beyond. Find your city and explore our land clearing services.",
+  // Template keeps the brand on child pages (city hubs and city × service pages).
+  title: {
+    default: "Central Texas Service Areas",
+    template: "%s | Grounded Land Services",
+  },
+  description: "Land clearing, forestry mulching and rock removal across the Austin Metro, Hill Country, Central Texas and San Antonio area. Find your city for a free estimate.",
   alternates: {
     canonical: "https://www.groundedlandservices.com/service-areas",
   },

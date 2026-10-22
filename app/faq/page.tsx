@@ -1,10 +1,11 @@
 import { Metadata } from "next";
 import FaqAccordion from "@/app/components/FaqAccordion";
 import { servicesContent } from "@/lib/services-content";
+import { brandedTitle } from "@/lib/seo-title";
 
 export const metadata: Metadata = {
-  title: "Frequently Asked Questions | Grounded Land Services",
-  description: "Answers to common questions about land clearing, forestry mulching, rock crushing, demolition, and every service Grounded Land Services offers across Central Texas.",
+  title: brandedTitle("Land Clearing FAQ: Costs, Timelines & Process"),
+  description: "Answers on land clearing, forestry mulching, rock removal and demolition costs, timelines and process across Central Texas. Questions? Call (512) 571-6700.",
   alternates: {
     canonical: "https://www.groundedlandservices.com/faq",
   },
@@ -21,8 +22,26 @@ export default function FaqPage() {
     }));
   });
 
+  // FAQPage schema mirrors the visible questions; several services share a question, so keep the first of each.
+  const seen = new Set<string>();
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: allFaqs
+      .filter((faq) => !seen.has(faq.question) && seen.add(faq.question))
+      .map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: { "@type": "Answer", text: faq.answer },
+      })),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <section className="relative h-64 md:h-80 flex items-end overflow-hidden bg-[#0a0a0a]">
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-black/20" />
         <div className="relative z-10 max-w-7xl mx-auto w-full px-6 pb-12">

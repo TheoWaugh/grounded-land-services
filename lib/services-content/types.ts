@@ -40,6 +40,8 @@ comparison?: {
   ctaButton?: { label: string; href: string };
   relatedServices?: { label: string; href: string }[];
   industries?: string[];
+  /** Renders the customer reviews inside this section instead of near the bottom of the page. */
+  showReviews?: boolean;
 }
 export interface ServicePageContent {
   title: string;

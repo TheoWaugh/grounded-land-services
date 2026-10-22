@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Our Services",
-  description: "Explore our full range of land clearing and site development services across Central Texas — forestry mulching, land clearing, cedar removal, rock crushing, demolition, and more.",
+  description: "Land clearing, forestry mulching, rock removal, demolition and site work across Central Texas and the Hill Country. Free estimates: (512) 571-6700.",
   alternates: {
     canonical: "https://www.groundedlandservices.com/services",
   },

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "How Grounded Land Services collects and uses your information when you request a quote or visit our website.",
+    "How Grounded Land Services collects, uses, and protects your information when you request a quote, use our chat assistant, or visit our website.",
   alternates: {
     canonical: "https://www.groundedlandservices.com/privacy",
   },

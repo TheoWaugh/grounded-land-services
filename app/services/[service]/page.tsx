@@ -19,8 +19,17 @@ import { videoMetadata } from "@/data/video-metadata";
 import { quoteServiceLabels } from "@/data/quote-services";
 import TrustStrip from "@/app/components/TrustStrip";
 import QuoteSection from "@/app/components/QuoteSection";
+import PriceCard from "@/app/components/PriceCard";
+import { withQuickAnswers } from "@/lib/quick-answers";
+import { servicePricing } from "@/data/service-pricing";
+import { serviceAreas, rockCrushingCities } from "@/data/service-areas";
+import { brandedTitle, metaDescription } from "@/lib/seo-title";
+import { priceOffer } from "@/lib/price-schema";
 
 type PageParams = Promise<{ service: string }>;
+
+const rockServices = ["rock-crushing", "rock-removal"];
+const allCities = Object.values(serviceAreas).flat();
 
 export async function generateMetadata({
   params,
@@ -31,25 +40,28 @@ export async function generateMetadata({
   const content = servicesContent[service];
   if (!content) return {};
   return {
-    title: content.title,
-    description: content.metaDescription,
+    title: brandedTitle(`${content.title} in Central Texas`),
+    description: metaDescription(content.metaDescription),
     alternates: {
       canonical: `https://www.groundedlandservices.com/services/${service}`,
     },
   };
 }
-function ServiceSchema({ service, content }: { service: string; content: { title: string; metaDescription: string } }) {
+function ServiceSchema({ service, content }: { service: string; content: { title: string; metaDescription: string; pricing: { range: string; unit: string } } }) {
+  const cities = rockServices.includes(service) ? rockCrushingCities : allCities;
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
     name: content.title,
     description: content.metaDescription,
     provider: { "@id": "https://www.groundedlandservices.com/#business" },
-    areaServed: {
-      "@type": "State",
-      name: "Texas",
-    },
+    areaServed: cities.map((city) => ({
+      "@type": "City",
+      name: `${city}, TX`,
+      containedInPlace: { "@type": "State", name: "Texas" },
+    })),
     url: `https://www.groundedlandservices.com/services/${service}`,
+    offers: priceOffer(servicePricing[service] ?? content.pricing),
   };
 
   return (
@@ -66,6 +78,8 @@ export default async function ServiceDetailPage({ params }: { params: PageParams
   if (!content) notFound();
 
   const quoteHref = "#quote";
+  const sections = withQuickAnswers(service, content.sections);
+  const reviewsInSections = sections.some((s) => s.showReviews);
 
 const allVideoIds = content.sections.flatMap((s) => [
     ...(s.videoCarousel?.videoIds ?? []),
@@ -94,20 +108,11 @@ const allVideoIds = content.sections.flatMap((s) => [
           objectPosition={serviceImagePosition[service] ?? "center"}
         />
 
-<div className="absolute top-20 right-4 md:top-24 md:right-6 z-10 w-56 md:w-64 p-4 bg-white/95 backdrop-blur-sm border-2 border-[#C4922A] rounded-2xl shadow-lg">
-          <p className="text-[10px] font-semibold text-amber-800 uppercase tracking-wide mb-1">
-            Estimated Cost
-          </p>
-          <p className="text-xl font-bold text-[#0a0a0a]">{content.pricing.range}</p>
-          <p className="text-xs font-medium text-[#6e6e73] mb-2">{content.pricing.unit}</p>
-          <p className="text-xs text-[#6e6e73] mb-3">{content.pricing.note}</p>
-          <a
-            href={quoteHref}
-            className="block text-center w-full px-4 py-2 bg-[#C4922A] text-black font-semibold rounded-full hover:bg-amber-500 transition-colors text-sm"
-          >
-            Get a Free Estimate
-          </a>
-        </div>
+        <PriceCard
+          pricing={content.pricing}
+          href={quoteHref}
+          className="absolute top-20 right-4 md:top-24 md:right-6 z-10 w-56 md:w-64 bg-white/95 backdrop-blur-sm shadow-lg"
+        />
       </div>
 
       <div className="max-w-3xl mx-auto px-6">
@@ -118,7 +123,7 @@ const allVideoIds = content.sections.flatMap((s) => [
         <p className="text-xs text-[#9a9a9e] mb-10">
           Written by Grounded Land Services — Central Texas land clearing professionals, based on firsthand experience working properties throughout the region.
         </p>
-{content.sections.map((section, i) => (
+{sections.map((section, i) => (
           <div key={i} className={section.heading ? "mb-12 pt-2" : "mb-10"}>
             {section.heading && (
               <>
@@ -444,20 +449,27 @@ const content = (
                 caption={section.loopingVideo.caption}
               />
             )}
+            {section.showReviews && (
+              <div className="mt-8">
+                <Testimonials />
+              </div>
+            )}
           </div>
         ))}
 
         <TrustBadges />
 
-        <div className="mb-16">
-          <div className="text-center mb-8">
-            <p className="text-xs font-bold tracking-[0.15em] uppercase text-[#C4922A] mb-2">
-              Customer Reviews
-            </p>
-            <h2 className="text-3xl font-bold text-[#0a0a0a]">What Our Customers Say</h2>
+        {!reviewsInSections && (
+          <div className="mb-16">
+            <div className="text-center mb-8">
+              <p className="text-xs font-bold tracking-[0.15em] uppercase text-[#C4922A] mb-2">
+                Customer Reviews
+              </p>
+              <h2 className="text-3xl font-bold text-[#0a0a0a]">What Our Customers Say</h2>
+            </div>
+            <Testimonials />
           </div>
-          <Testimonials />
-        </div>
+        )}
 
         {content.faqs.length > 0 && (
           <div className="mb-12 -mx-6 md:-mx-10 px-6 md:px-10 py-10 bg-gradient-to-b from-[#faf9f7] to-white rounded-3xl">

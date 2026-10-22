@@ -1,17 +1,18 @@
 import { ServiceFaq } from "@/lib/service-content/types";
-import { servicePricing } from "./service-pricing";
+import { servicePricing, MINIMUM_JOB } from "./service-pricing";
 import { rockCrushingCities } from "./service-areas";
+import { MULCHING_RATES, EXCAVATOR_RATES } from "./service-timelines";
 
 function forestryMulchingFaqs(city: string): ServiceFaq[] {
   const pricing = servicePricing["forestry-mulching"];
   return [
     {
       question: `How much does forestry mulching cost in ${city}?`,
-      answer: `Forestry mulching in ${city} costs ${pricing.range} ${pricing.unit}. ${pricing.note}`,
+      answer: `Forestry mulching in ${city} costs ${pricing.range} ${pricing.unit}. ${pricing.note} Our minimum job is ${MINIMUM_JOB}.`,
     },
     {
       question: "How many acres can you mulch per day?",
-      answer: `Production rates depend on vegetation density and terrain, but our equipment can typically clear multiple acres per day on ${city}-area properties with moderate brush and cedar cover. Denser cedar thickets or steep terrain will slow progress.`,
+      answer: `Our CAT 275 XE with a Prinoth M450s mulching head clears ${MULCHING_RATES}. Steep or very rocky ground on ${city}-area properties can slow that down.`,
     },
     {
       question: "Do you remove cedar trees?",
@@ -75,7 +76,7 @@ function forestryMulchingFaqs(city: string): ServiceFaq[] {
     },
     {
       question: "How long does a project take?",
-      answer: `Most residential-scale projects in ${city} take 1–2 days, while larger acreage or ranch projects may take several days depending on density and terrain.`,
+      answer: `It depends mostly on acreage and how thick the brush is: we mulch ${MULCHING_RATES}. Most residential-scale projects in ${city} take 1–2 days, while larger acreage or ranch projects take several days.`,
     },
   ];
 }
@@ -123,11 +124,11 @@ function landClearingFaqs(city: string, nearby: string[]): ServiceFaq[] {
     },
     {
       question: `How long does traditional land clearing take in ${city}?`,
-      answer: "Every project is different. Smaller residential lots may take one or two days, while larger ranches or commercial developments can take several weeks depending on acreage, vegetation density, terrain, and project scope.",
+      answer: `Land clearing in ${city} typically covers ${EXCAVATOR_RATES} with our excavator. Acres per day depend on ground conditions and terrain.`,
     },
     {
       question: `How much does traditional land clearing cost in ${city}?`,
-      answer: `Traditional land clearing in ${city} costs ${pricing.range} ${pricing.unit}. ${pricing.note} We provide free on-site estimates to develop an accurate quote for your project.`,
+      answer: `Traditional land clearing in ${city} costs ${pricing.range} ${pricing.unit}. ${pricing.note} Our minimum job is ${MINIMUM_JOB}, and we provide free on-site estimates.`,
     },
     {
       question: "Do you provide free estimates?",

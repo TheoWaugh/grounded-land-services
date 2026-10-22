@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ServiceMediaItem } from "@/lib/services-content/types";
+import YouTubePlayer from "./YouTubePlayer";
 
 export default function ServiceMedia({ items }: { items: ServiceMediaItem[] }) {
   const gridCols = items.length > 1 ? "sm:grid-cols-2" : "grid-cols-1";
@@ -25,15 +26,7 @@ export default function ServiceMedia({ items }: { items: ServiceMediaItem[] }) {
               )}
             </div>
           ) : (
-            <div className="relative w-full aspect-video mx-auto bg-black">
-              <iframe
-                src={`https://www.youtube.com/embed/${item.src}?autoplay=1&mute=1&loop=1&playlist=${item.src}&controls=1`}
-                title={item.caption ?? "Video"}
-                className="w-full h-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
+            <YouTubePlayer videoId={item.src} title={item.caption} loop />
           )}
           {item.caption && item.type !== "image" && (
             <figcaption className="px-3 py-2 text-xs text-[#6e6e73] bg-[#f9f9f9]">
