@@ -262,4 +262,27 @@ export const caseStudies: CaseStudy[] = [
     afterPhoto: "/images/work/dji_fly_20260130_143526_0122_1769999345932_photo.jpeg",
     videoIds: ["hLimv0coUqo"],
   },
+  {
+    slug: "leander-forestry-mulching",
+    title: "Forestry Mulching in Leander, Texas",
+    description: "1 acre of cedar, brush, and vines mulched from under the oaks at a Leander, Texas wedding venue in one day. We opened up shaded areas for guests to gather and left the mulch in place, working around rock and the venue's solar lights.",
+    longDescription: "This 1-acre property in Leander, Texas, is a wedding venue with beautiful oaks, but cedar, small trees, brush, and vines had grown in underneath them. The owner wanted to open up more shaded areas where guests could hang out under the oaks and make the venue look better overall.\n\nWe used our Cat 275 with the Prinoth mulching head to mulch the cedar, brush, vines, and unwanted trees in place, keeping the oaks. Rock and the venue's solar lights were scattered through the work area, so we moved the rock and the lights out of the way before mulching around them.\n\nThe job took one day. The result is open, shaded ground beneath the oaks with the mulch left in place, giving guests more room to gather and the venue a cleaner look.",
+    location: "Leander, TX",
+    locationSlug: "leander",
+    acreage: "1 Acre",
+    timeline: "1 Day",
+    services: [
+      { label: "Forestry Mulching", slug: "forestry-mulching" },
+      { label: "Underbrushing", slug: "underbrushing" },
+    ],
+    equipmentUsed: [
+      { label: "Cat 275 XE", equipmentId: "cat-275" },
+      { label: "Prinoth Mulching Head", equipmentId: "prinoth" },
+    ],
+    afterPhoto: "/projects/leander-forestry-mulching/forestry-mulching-leander-oaks-before-after.webp",
+    galleryPhotos: [
+      "/projects/leander-forestry-mulching/cedar-mulching-leander-before-after.webp",
+      "/projects/leander-forestry-mulching/underbrush-mulching-leander-tree-line-before-after.webp",
+    ],
+  },
 ];
