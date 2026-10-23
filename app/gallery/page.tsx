@@ -20,6 +20,7 @@ const allImages = [
 { src: "/images/work/garrison-clearing-4-land-clearing.jpeg", alt: "Completed land clearing job in Spicewood, TX", tag: "Land Clearing", featured: true },
   { src: "/images/work/IMG_1890.jpeg", alt: "Completed land clearing job in Belmont, TX", tag: "Land Clearing", featured: true },
   { src: "/images/work/garrison-clearing-2-land-clearing.jpeg", alt: "Completed land clearing job in Spicewood, TX", tag: "Land Clearing", featured: true },
+  { src: "/images/work/georgetown-clearing-2.JPEG", alt: "Before and after 10-acre cedar land clearing in Georgetown, TX: dense cedar removed from beneath a stand of oaks", tag: "Land Clearing", featured: true },
   { src: "/images/work/anderson-pool-demo.jpeg", alt: "Completed pool demolition due to concrete cancer in Bertram, TX", tag: "Demolition", featured: true },
  
   { src: "/images/work/henson-before-after-2-mulching.jpeg", alt: "Completed forestry mulching job in Bertram, TX", tag: "Forestry Mulching", featured: true },
@@ -69,6 +70,7 @@ const allImages = [
   { src: "/images/work/IMG_7144.jpeg", alt: "Completed forestry mulching job in Johnson City, TX", tag: "Forestry Mulching" },
   { src: "/images/work/077B2E5E-1FAE-4AA1-8427-01227EF05118.jpeg", alt: "Tree pile shredding in Bertram, TX", tag: "Forestry Mulching" },
   { src: "/images/work/07BE24F3-A999-4B83-AF2F-EEF630E6F1AC.jpeg", alt: "Forestry mulching cleanup in Burnet, TX", tag: "Forestry Mulching Cleanup" },
+  { src: "/images/work/georgetown-clearing-1.JPEG", alt: "Before and after 10-acre cedar land clearing in Georgetown, TX: cedar cleared from under an oak along the fence line", tag: "Land Clearing" },
   { src: "/images/work/gonzales-1.jpeg", alt: "Completed land clearing job in Gonzales, TX", tag: "Land Clearing" },
 { src: "/images/work/gonzales-6.jpeg", alt: "Completed land clearing job in Gonzales, TX", tag: "Land Clearing" },
 { src: "/images/work/gonzales-2.jpeg", alt: "Completed land clearing job in Gonzales, TX", tag: "Land Clearing" },
