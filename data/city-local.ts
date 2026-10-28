@@ -99,7 +99,7 @@ export const cityLocal: Record<string, CityLocal> = {
     serviceExperience: {
       "land-clearing": [
         "Most of our Liberty Hill land clearing is opening up homesites, subdivision lots, and larger ranches. A lot of that work is clearing cedar out from under the oaks. With less competition for water, the oaks have a better chance of making it through the next drought, and the property looks a lot better too. We also take out dead trees, whether they died in a drought or from disease. Oak wilt and Hypoxylon canker are both common across Liberty Hill and Central Texas.",
-        "Grubbing trees brings rock up to the surface, but most of the rock here is loose, so it comes out fast. After clearing, we run our [Harley rake](/equipment#harley-rake) over the ground to level it out and pick up the leftover debris and rock, leaving a clean, smooth finish. Solid limestone shelf usually only shows up when a job needs digging.",
+        "When we clear land, pulling out the trees often brings rock up to the surface with the roots. Most of the rock in Liberty Hill is loose, so it comes out fast. After clearing, we run our [Harley rake](/equipment#harley-rake) over the ground to level it out and pick up the leftover debris and rock, leaving a clean, smooth finish.",
         "On one 4.1-acre Liberty Hill property, we cleared the rock and dead trees, hauled off 12 loads of debris, spread 10 loads of dirt, and seeded the whole property with native grass so it could be used as pasture. [See the full project](/case-studies/liberty-hill-rock-removal)",
       ],
       "rock-removal": [
