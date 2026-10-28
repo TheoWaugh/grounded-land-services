@@ -20,7 +20,9 @@ function placeLabel(pageCity: string, otherCity: string): string {
  * Our work in and near a priority city: the owner's experience, the city's case studies (or the
  * nearest ones, labeled with distance) and the matching Google reviews.
  */
-export default function LocalProof({ city, local }: { city: string; local: CityLocal }) {
+export default function LocalProof({ city, local, service }: { city: string; local: CityLocal; service?: string }) {
+  const experience =
+    (service && local.serviceExperience?.[service as keyof NonNullable<CityLocal["serviceExperience"]>]) || local.experience;
   const studies = local.studies
     .map((slug) => caseStudies.find((c) => c.slug === slug))
     .filter((c): c is (typeof caseStudies)[number] => Boolean(c));
@@ -35,7 +37,7 @@ export default function LocalProof({ city, local }: { city: string; local: CityL
         <span className="w-1.5 h-6 bg-[#C4922A] rounded-full inline-block" />
         {hasLocalStudy ? `Our Work in ${city}` : `Our Work Near ${city}`}
       </h2>
-      {local.experience.map((p, i) => (
+      {experience.map((p, i) => (
         <p key={i} className="text-[#3a3a3c] leading-relaxed mb-4 text-[15px]">
           <RichText text={p} />
         </p>

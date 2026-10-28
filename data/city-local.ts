@@ -19,6 +19,8 @@ export interface CityLocal {
   land: string[];
   /** Our work in and around the city (owner experience only). */
   experience: string[];
+  /** Replaces `experience` in "Our Work in …" on that city × service page. */
+  serviceExperience?: Partial<Record<"land-clearing" | "forestry-mulching" | "rock-removal", string[]>>;
   /** One extra local paragraph per service page. */
   serviceNotes: Partial<Record<"land-clearing" | "forestry-mulching" | "rock-removal", string>>;
   /** Case study slugs to show, in order: local first, then nearest. */
@@ -94,6 +96,17 @@ export const cityLocal: Record<string, CityLocal> = {
       "Most of our Liberty Hill work is rock removal on new homesites, subdivision lots and larger ranches, plus clearing cedar out from under oaks and taking out dead trees. The rock we pull here is usually loose. Solid limestone shelf mostly shows up only when a job calls for excavating.",
       "On a 4.1-acre Liberty Hill property, we removed the rock and dead trees, hauled off 12 loads of debris, spread 10 loads of dirt, and seeded the whole property with native grass so it could be used as pasture.",
     ],
+    serviceExperience: {
+      "land-clearing": [
+        "Most of our Liberty Hill land clearing is opening up homesites, subdivision lots, and larger ranches. A lot of that work is clearing cedar out from under the oaks. With less competition for water, the oaks have a better chance of making it through the next drought, and the property looks a lot better too. We also take out dead trees, whether they died in a drought or from disease. Oak wilt and Hypoxylon canker are both common across Liberty Hill and Central Texas.",
+        "Grubbing trees brings rock up to the surface, but most of the rock here is loose, so it comes out fast. After clearing, we run our [Harley rake](/equipment#harley-rake) over the ground to level it out and pick up the leftover debris and rock, leaving a clean, smooth finish. Solid limestone shelf usually only shows up when a job needs digging.",
+        "On one 4.1-acre Liberty Hill property, we cleared the rock and dead trees, hauled off 12 loads of debris, spread 10 loads of dirt, and seeded the whole property with native grass so it could be used as pasture. [See the full project](/case-studies/liberty-hill-rock-removal)",
+      ],
+      "rock-removal": [
+        "Most of our Liberty Hill work is rock removal on new homesites, subdivision lots, and larger ranches. Most of the rock here is loose, which means it comes out quickly and keeps costs down, but large rock outcroppings are also common throughout the area. Solid limestone shelf usually only shows up when a job needs digging or excavation.",
+        "On one 4.1-acre Liberty Hill property, we removed the rock and dead trees, hauled off 12 loads of debris, spread 10 loads of dirt, and seeded it with native grass for pasture. [See the full project](/case-studies/liberty-hill-rock-removal)",
+      ],
+    },
     serviceNotes: {
       "land-clearing": "A typical Liberty Hill land clearing job for us is getting a homesite or subdivision lot open: cedar out from under the oaks, dead trees down, and the loose rock picked up so the ground is ready for what comes next.",
       "forestry-mulching": "On Liberty Hill acreage, mulching is usually about the oaks: grinding up the cedar that has grown in underneath them and the dead trees around them, with no burn piles left behind.",

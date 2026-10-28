@@ -8,6 +8,7 @@ was left off.
 ## Owner answers (2026-10-27)
 
 - **Liberty Hill:** Jobs are rock removal on homesites, subdivision lots and larger ranches, plus clearing cedar out from under oaks and removing dead trees. The rock is usually loose; limestone shelf mostly only shows up when excavating. The 4.1-acre LH rock-removal case study is **not** the Holton Garrison or Preston Jones job.
+  - *Added 2026-10-28:* Large rock outcroppings are also common. Clearing cedar from under oaks cuts competition for water, giving the oaks a better chance in the next drought. Dead trees come from drought or disease; oak wilt and Hypoxylon canker are both common in Liberty Hill and Central Texas (owner experience). Grubbing brings rock to the surface, so after clearing we run the Harley rake to level the ground and pick up leftover debris and rock.
 - **Georgetown:** The 10-acre cedar job took 10 days with the CAT 299 D3 and grapple. The customer's goal was saving his oak trees. It was outside city limits, so no city tree permit was needed. It's now a case study: `/case-studies/georgetown-land-clearing` (customer not named).
 - **Spicewood:** Barrett Garrison's review is the 53.8-acre case-study ranch. Mike Janak's review is also from Spicewood.
 - **Golden-cheeked warbler:** On the Jonestown job, we waited until warbler nesting season ended (March 1 – September 1) before clearing. This is used as our experience on the Spicewood, Liberty Hill and Jonestown pages. Make no legal claims about permits; point landowners with mature cedar-oak woodland to USFWS.

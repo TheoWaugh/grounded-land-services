@@ -101,6 +101,13 @@ seo-reports/city-notes-priority.md.
   also clearing cedar out from under oaks and removing dead trees. Rock is usually loose;
   limestone shelf mostly only shows up when excavating. The 4.1 ac LH rock removal case
   study is NOT the Holton Garrison or Preston Jones job (those are separate LH jobs).
+  (owner, 2026-10-28) Large rock outcroppings are also common around Liberty Hill.
+  Clearing cedar from under oaks means less competition for water, so the oaks have a better
+  chance in the next drought. Dead trees come from drought or disease; oak wilt and
+  Hypoxylon canker are both common in Liberty Hill and Central Texas (owner experience).
+- Harley rake after clearing (owner, 2026-10-28): grubbing trees brings rock up to the
+  surface, so after clearing we run the Harley rake (Bobcat 84" soil conditioner,
+  /equipment#harley-rake) to level the ground and pick up leftover debris and rock.
 - Georgetown: 10-acre cedar job, 10 days, CAT 299 D3 + grapple; customer's goal was saving
   his oak trees; outside city limits (no city tree permit needed). Customer not named.
   Photos: public/images/work/georgetown-clearing-1.JPEG and -2.JPEG. Case study:
