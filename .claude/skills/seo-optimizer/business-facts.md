@@ -75,8 +75,8 @@ Luling, Bertram, Briggs. Focus content, case studies, and links here first.
   Keep the visible TrustStrip, TrustBadges and homepage counts in sync with Google.
 - The "Kelley Arnold" review is from a family member: removed from the site
   (owner, 2026-10-21). Never show or mark it up.
-- Case studies on site: 12 in lib/case-studies.ts (owner confirmed 10 on 2026-10-21; more
-  added since, incl. Georgetown 10 ac on 2026-10-27; e.g. Spicewood 53.8 ac land clearing,
+- Case studies on site: 13 in lib/case-studies.ts (owner confirmed 10 on 2026-10-21; more
+  added since, incl. Georgetown 10 ac and Harwood 3 ac on 2026-10-27; e.g. Spicewood 53.8 ac land clearing,
   Gonzales 34.8 ac, Liberty Hill 4.1 ac rock removal)
 - Testimonials: on site with names and cities (Testimonials.tsx, app/page.tsx)
 - Gallery photo locations: NOT confirmed (every alt says "Bertram, TX"), except
@@ -117,8 +117,8 @@ seo-reports/city-notes-priority.md.
   Bertram/Burnet proof and say honestly that it's ~13 miles from our base.
 - Gonzales: the 34.8 ac job was on sandy soil. Owner prefers flat ground with less rock and
   wants more Gonzales/Luling work.
-- Luling: no jobs in Luling itself yet. Recently did a job in Harwood, TX (near Luling);
-  case study coming later. Has NOT worked around oil wells or pumpjacks: never claim it.
+- Luling: no jobs in Luling itself yet. Closest job: Harwood, TX (~9 mi east), 3 ac forestry
+  mulching, case study /case-studies/harwood-forestry-mulching (added 2026-10-27). Has NOT worked around oil wells or pumpjacks: never claim it.
 
 ## Leads & contact
 - Best way to reach you: call or text (512) 571-6700, or the quote form

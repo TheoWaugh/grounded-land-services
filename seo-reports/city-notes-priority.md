@@ -14,7 +14,7 @@ was left off.
 - **Bertram:** Dylan Gavit's review is the same job as the burn-pile mulching case study: 2 acres cleared on a 5-acre property (acreage still to be confirmed by owner).
 - **Briggs:** No jobs there yet. The pastures are mesquite and prickly pear, and we grub it. The pages use nearby Bertram/Burnet proof and say it's ~13 miles from our base.
 - **Gonzales:** The 34.8-acre job was on sandy soil. Owner prefers flat ground with less rock and wants more Gonzales/Luling work.
-- **Luling:** No jobs in Luling itself yet. Recent job in Harwood, TX (near Luling), with the case study coming later. Has **not** worked around oil wells or pumpjacks, so that FAQ was removed.
+- **Luling:** No jobs in Luling itself yet. Recent job in Harwood, TX (~9 mi east of Luling): 3 acres of forestry mulching, now a case study at `/case-studies/harwood-forestry-mulching`. Has **not** worked around oil wells or pumpjacks, so that FAQ was removed.
 
 ---
 

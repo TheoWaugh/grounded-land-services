@@ -264,7 +264,7 @@ export const cityLocal: Record<string, CityLocal> = {
       "land-clearing": "On the Gonzales pecan job we combined both methods: we grubbed the bigger trees and mulched the rest.",
       "forestry-mulching": "Mulching works well under big pecans. On the Gonzales job, everything under 2 inches went through the mulcher instead of being pushed into piles.",
     },
-    studies: ["gonzales-land-clearing"],
+    studies: ["gonzales-land-clearing", "harwood-forestry-mulching"],
     reviews: ["Emil Millet"],
     faqs: [
       {
@@ -290,19 +290,20 @@ export const cityLocal: Record<string, CityLocal> = {
       `Post oak, live oak, pecan, cedar elm and mesquite are common, with eastern redcedar, yaupon and huisache filling in. Properties are mostly farms, ranches, hunting land and rural homesites. Luling is about ${miles("Luling")} miles from our Bertram base.`,
     ],
     experience: [
-      `We haven't done a job inside Luling yet. We recently finished a job in Harwood, about ${milesTo("Luling", "Harwood")} miles east of Luling (that case study is coming soon), and our 34.8-acre Gonzales job is about ${milesTo("Luling", "Gonzales")} miles away.`,
+      `We haven't done a job inside Luling yet. Our closest job is in Harwood, about ${milesTo("Luling", "Harwood")} miles east of Luling, where we mulched 3 acres of cedar, mesquite and cactus in one day to open a field for dove season and help the owner pick a homesite. Our 34.8-acre Gonzales job is about ${milesTo("Luling", "Gonzales")} miles away.`,
       "Flat, sandy ground without much rock is ground we like working, and we'd like to take on more jobs around Luling and Gonzales.",
     ],
     serviceNotes: {
       "land-clearing": `If you're opening pasture or a homesite near Luling, we'll walk the property at the free site visit and quote it by the acre (${clearing.range} ${clearing.unit}).`,
       "forestry-mulching": "Eastern redcedar, yaupon and huisache are the brush we expect to find on Luling-area pasture.",
     },
-    studies: ["gonzales-land-clearing"],
+    studies: ["harwood-forestry-mulching", "gonzales-land-clearing"],
     reviews: ["Emil Millet"],
     faqs: [
       {
         question: "Have you worked near Luling?",
-        answer: `Yes. We recently finished a job in Harwood, about ${milesTo("Luling", "Harwood")} miles east of Luling, and we cleared 34.8 acres in Gonzales, about ${milesTo("Luling", "Gonzales")} miles away. We haven't done a job inside Luling yet.`,
+        answer: `Yes. We mulched 3 acres of cedar, mesquite and cactus in Harwood, about ${milesTo("Luling", "Harwood")} miles east of Luling, and we cleared 34.8 acres in Gonzales, about ${milesTo("Luling", "Gonzales")} miles away. We haven't done a job inside Luling yet.`,
+        link: { label: "Our 3-acre Harwood mulching job", href: "/case-studies/harwood-forestry-mulching" },
       },
       {
         question: "Can I burn brush piles near Luling?",

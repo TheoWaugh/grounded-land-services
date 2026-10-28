@@ -306,4 +306,25 @@ export const caseStudies: CaseStudy[] = [
       "/projects/georgetown-land-clearing/cedar-clearing-georgetown-fence-line-before-after.webp",
     ],
   },
+  {
+    slug: "harwood-forestry-mulching",
+    title: "Forestry Mulching in Harwood, Texas",
+    description: "3 acres of cedar, mesquite, and cactus mulched in one day in Harwood, Texas. The owner wanted the field opened up for dove season and room to see the best spot for his future house, so we mulched everything in place with our CAT 275 and Prinoth mulching head.",
+    longDescription: "This 3-acre Harwood property had cedar, mesquite, and cactus growing across a field the owner wanted to use. He had two goals: open the field up for dove season, and clear enough ground to see where the best spot for his house would be.\n\nWe used our CAT 275 with the Prinoth mulching head to mulch the cedar, mesquite, and cactus in place, so there were no burn piles and nothing to haul off. Along the way we found a few old tires and some old fence wire, so we pulled all of that trash into one pile.\n\nThe job took one day. The result is an open field with the big oaks still standing, ready for dove season and for the owner to plan his homesite.",
+    location: "Harwood, TX",
+    locationSlug: "harwood",
+    acreage: "3 Acres",
+    timeline: "1 Day",
+    services: [
+      { label: "Forestry Mulching", slug: "forestry-mulching" },
+    ],
+    equipmentUsed: [
+      { label: "Cat 275 XE", equipmentId: "cat-275" },
+      { label: "Prinoth Mulching Head", equipmentId: "prinoth" },
+    ],
+    afterPhoto: "/projects/harwood-forestry-mulching/forestry-mulching-harwood-oaks-after.webp",
+    galleryPhotos: [
+      "/projects/harwood-forestry-mulching/cedar-mesquite-mulching-harwood-before-after.webp",
+    ],
+  },
 ];
