@@ -244,8 +244,8 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "bertram-burn-pile-mulching",
     title: "Forestry Mulching in Bertram, Texas",
-    description: "2 acres of forestry mulching in Bertram, Texas. We processed 6 old burn piles that had been sitting on the property for years, helping the owner get ready to plan their house build. With dirt and rock mixed throughout the piles, we used our grapple to separate the brush from the heavier material before mulching it.",
-    longDescription: "This 2-acre Bertram property had 6 old burn piles that had been sitting for years. The owner wanted to get the piles cleaned up so they could start planning their future house build.\n\nThe piles contained more than just brush and trees. Dirt and rock had been mixed throughout the material, making it difficult to mulch everything efficiently. We used our grapple to separate the brush from the dirt and rock before mulching it.\n\nBy sorting through the piles first, we were able to process the brush more efficiently and clean up the old piles that had been taking up space on the property.",
+    description: "2 acres of forestry mulching on a 5-acre property in Bertram, Texas. We processed 6 old burn piles that had been sitting on the property for years, helping the owner get ready to plan their house build. With dirt and rock mixed throughout the piles, we used our grapple to separate the brush from the heavier material before mulching it.",
+    longDescription: "This 5-acre Bertram property had 6 old burn piles spread across 2 acres that had been sitting for years. The owner wanted to get the piles cleaned up so they could start planning their future house build.\n\nThe piles contained more than just brush and trees. Dirt and rock had been mixed throughout the material, making it difficult to mulch everything efficiently. We used our grapple to separate the brush from the dirt and rock before mulching it.\n\nBy sorting through the piles first, we were able to process the brush more efficiently and clean up the old piles that had been taking up space on the property.",
     location: "Bertram, TX",
     locationSlug: "bertram",
     acreage: "2 Acres",
@@ -283,6 +283,27 @@ export const caseStudies: CaseStudy[] = [
     galleryPhotos: [
       "/projects/leander-forestry-mulching/cedar-mulching-leander-before-after.webp",
       "/projects/leander-forestry-mulching/underbrush-mulching-leander-tree-line-before-after.webp",
+    ],
+  },
+  {
+    slug: "georgetown-land-clearing",
+    title: "Land Clearing in Georgetown, Texas",
+    description: "10 acres of cedar cleared from under and around the oaks on a Georgetown, Texas property in 10 days. The owner's goal was saving his oak trees, so we used our CAT 299 D3 and grapple to pull the cedar out while leaving the oaks standing.",
+    longDescription: "This 10-acre property outside Georgetown city limits had cedar growing up thick under and around its oak trees, including along the fence line. The owner's goal was to save his oaks.\n\nWe worked the property with our CAT 299 D3 and a grapple, pulling the cedar out from beneath and around the oaks and leaving the oaks themselves standing. The job took 10 days.\n\nBecause the property is outside city limits, no city tree permit was needed. The result is open ground under the oaks, with the cedar that had been crowding them gone.",
+    location: "Georgetown, TX",
+    locationSlug: "georgetown",
+    acreage: "10 Acres",
+    timeline: "10 Days",
+    services: [
+      { label: "Land Clearing", slug: "land-clearing" },
+      { label: "Cedar Tree Removal", slug: "cedar-tree-removal" },
+    ],
+    equipmentUsed: [
+      { label: "Cat 299 D3 XE", equipmentId: "cat-299" },
+    ],
+    afterPhoto: "/projects/georgetown-land-clearing/cedar-clearing-georgetown-oaks-before-after.webp",
+    galleryPhotos: [
+      "/projects/georgetown-land-clearing/cedar-clearing-georgetown-fence-line-before-after.webp",
     ],
   },
 ];

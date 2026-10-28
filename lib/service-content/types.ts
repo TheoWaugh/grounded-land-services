@@ -52,6 +52,8 @@ export interface ServicePricing {
   note: string;
 }
 
+import type { LocalFaq } from "@/data/city-local";
+
 export interface ServiceFaq {
   question: string;
   answer: string;
@@ -63,5 +65,7 @@ export interface ServiceContent {
   sections: ServiceSection[];
   pricing?: ServicePricing;
   faqs?: ServiceFaq[];
+  /** Priority-city questions (data/city-local.ts), shown above the general FAQs. */
+  localFaqs?: LocalFaq[];
   county?: string;
 }

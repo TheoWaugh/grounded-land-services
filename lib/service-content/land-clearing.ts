@@ -3,13 +3,14 @@ import { cityFacts } from "@/data/city-facts";
 import { servicePricing } from "@/data/service-pricing";
 import { landClearingCostFactors } from "@/data/land-clearing-cost-factors";
 import { bertramSentence } from "@/lib/bertram-distance";
-import { FLEET, invasiveSentence, whyUsProof } from "./shared";
+import { FLEET, invasiveSentence, localConditions, whyUsProof } from "./shared";
 
 // Answer-first layout: opening answer → video → cost → how long + process → local conditions →
 // why us → land clearing vs. mulching → benefits → areas → related.
 export function landClearingContent(city: string, nearby: string[]): ServiceContent {
   const nearbyList = nearby.slice(0, 12);
   const facts = cityFacts[city];
+  const local = localConditions(city, "land-clearing");
 
 const soilContext = facts?.soil
   ? ` The area's ${facts.soil} plays a major role in how vegetation grows and how ground equipment performs on-site.`
@@ -155,7 +156,9 @@ const challengesParagraph = facts
         iconCardsColumns: 4,
       },
       process, // Becomes "How long does land clearing take in {city}, and what's the process?"
-      facts?.invasiveVegetation
+      local
+        ? { ...challenges, paragraphs: local }
+        : facts?.invasiveVegetation
         ? { ...challenges, paragraphs: [...(challenges.paragraphs ?? []), invasiveSentence(city, facts.invasiveVegetation)] }
         : challenges,
       {

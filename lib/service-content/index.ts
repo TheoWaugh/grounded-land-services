@@ -8,6 +8,7 @@ import { demolitionContent } from "./demolition";
 import { ServiceContent } from "./types";
 import { servicePricing } from "@/data/service-pricing";
 import { getServiceFaqs } from "@/data/service-faqs";
+import { localFaqs } from "@/data/city-local";
 
 const templates: Record<string, (city: string, nearby: string[]) => ServiceContent> = {
   "land-clearing": landClearingContent,
@@ -36,6 +37,7 @@ export function getServiceContent(
 const content = template(cityInfo.name, cityInfo.nearby);
   content.pricing = servicePricing[serviceSlug];
   content.faqs = getServiceFaqs(serviceSlug, cityInfo.name, cityInfo.nearby);
+  content.localFaqs = localFaqs(cityInfo.name, serviceSlug);
   content.county = cityFacts[cityInfo.name]?.county;
 
   return { content, cityName: cityInfo.name };

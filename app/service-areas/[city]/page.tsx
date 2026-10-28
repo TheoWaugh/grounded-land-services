@@ -7,10 +7,14 @@ import { cityFacts } from "@/data/city-facts";
 import { servicePricing } from "@/data/service-pricing";
 import { quoteServiceLabels } from "@/data/quote-services";
 import { caseStudies } from "@/lib/case-studies";
+import { cityLocal, localFaqs } from "@/data/city-local";
 import { brandedTitle, metaDescription } from "@/lib/seo-title";
 import BreadcrumbSchema from "@/app/components/BreadcrumbSchema";
 import TrustStrip from "@/app/components/TrustStrip";
 import QuoteSection from "@/app/components/QuoteSection";
+import LocalProof from "@/app/components/LocalProof";
+import FaqAccordion from "@/app/components/FaqAccordion";
+import FaqPageSchema from "@/app/components/FaqPageSchema";
 
 type PageParams = Promise<{ city: string }>;
 
@@ -62,6 +66,8 @@ export default async function CityHubPage({ params }: { params: PageParams }) {
   const facts = cityFacts[name];
   const services = servicesFor(name);
   const studies = caseStudies.filter((s) => s.locationSlug === city);
+  const local = cityLocal[name];
+  const faqs = localFaqs(name);
 
   const localFacts = facts
     ? [
@@ -86,6 +92,7 @@ export default async function CityHubPage({ params }: { params: PageParams }) {
           { name, url: `/service-areas/${city}` },
         ]}
       />
+      <FaqPageSchema faqs={faqs} />
 
       <div className="max-w-3xl mx-auto px-6 pt-32 md:pt-36">
         <p className="section-label mb-3">{region}</p>
@@ -135,6 +142,11 @@ export default async function CityHubPage({ params }: { params: PageParams }) {
               <span className="w-1.5 h-6 bg-[#C4922A] rounded-full inline-block" />
               What {name} Land Is Like
             </h2>
+            {local?.land.map((p, i) => (
+              <p key={i} className="text-[#3a3a3c] leading-relaxed mb-4 text-[15px]">
+                {p}
+              </p>
+            ))}
             <dl className="divide-y divide-gray-100 border-y border-gray-100">
               {localFacts.map((f) => (
                 <div key={f.label} className="grid grid-cols-1 sm:grid-cols-[12rem_1fr] gap-1 sm:gap-4 py-3">
@@ -146,7 +158,9 @@ export default async function CityHubPage({ params }: { params: PageParams }) {
           </div>
         )}
 
-        {studies.length > 0 && (
+        {local ? (
+          <LocalProof city={name} local={local} />
+        ) : studies.length > 0 && (
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-[#0a0a0a] mb-5 flex items-center gap-3">
               <span className="w-1.5 h-6 bg-[#C4922A] rounded-full inline-block" />
@@ -179,6 +193,16 @@ export default async function CityHubPage({ params }: { params: PageParams }) {
                 </Link>
               ))}
             </div>
+          </div>
+        )}
+
+        {faqs.length > 0 && (
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold text-[#0a0a0a] mb-6 flex items-center gap-3">
+              <span className="w-1.5 h-6 bg-[#C4922A] rounded-full inline-block" />
+              {name} Landowner Questions
+            </h2>
+            <FaqAccordion faqs={faqs} />
           </div>
         )}
 

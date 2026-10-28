@@ -2,7 +2,7 @@ import { ServiceContent, ServiceSection } from "./types";
 import { cityFacts } from "@/data/city-facts";
 import { servicePricing } from "@/data/service-pricing";
 import { bertramSentence } from "@/lib/bertram-distance";
-import { invasiveSentence, whyUsProof } from "./shared";
+import { invasiveSentence, localConditions, whyUsProof } from "./shared";
 
 // Answer-first layout: opening answer → video → cost → how long + process → local conditions →
 // why us → finished product + mulching vs. land clearing → benefits → property types → areas → related.
@@ -10,6 +10,7 @@ import { invasiveSentence, whyUsProof } from "./shared";
 export function forestryMulchingContent(city: string, nearby: string[]): ServiceContent {
   const nearbyList = nearby.slice(0, 12);
   const facts = cityFacts[city];
+  const local = localConditions(city, "forestry-mulching");
 
 const soilContext = facts?.soil
   ? ` The area's ${facts.soil} plays a major role in how vegetation grows and how mulching equipment performs on-site.`
@@ -100,7 +101,9 @@ const challengesIntro = facts
         ],
         ctaButton: { label: "Request a Free Estimate", href: `/contact?service=Forestry%20Mulching#quote` },
       },
-      facts?.invasiveVegetation
+      local
+        ? { ...challenges, paragraphs: local }
+        : facts?.invasiveVegetation
         ? { ...challenges, paragraphs: [...(challenges.paragraphs ?? []), invasiveSentence(city, facts.invasiveVegetation)] }
         : challenges,
       { ...whyUs, ...proof, paragraphs: [...(whyUs.paragraphs ?? []), ...proof.paragraphs] },

@@ -12,15 +12,27 @@ const regionPhrase: Record<string, string> = {
   "San Antonio Area": "San Antonio",
 };
 
+type Point = { lat: number; lng: number };
+
+function greatCircleMiles(from: Point, to: Point): number {
+  const rad = (d: number) => (d * Math.PI) / 180;
+  const a =
+    Math.sin(rad(to.lat - from.lat) / 2) ** 2 +
+    Math.cos(rad(from.lat)) * Math.cos(rad(to.lat)) * Math.sin(rad(to.lng - from.lng) / 2) ** 2;
+  return 2 * 3958.8 * Math.asin(Math.sqrt(a));
+}
+
 /** Straight-line (great-circle) miles from Bertram, or null if we don't have the city's coordinates. */
 export function milesFromBertram(city: string): number | null {
   const c = cityCoordinates[city];
-  if (!c) return null;
-  const rad = (d: number) => (d * Math.PI) / 180;
-  const a =
-    Math.sin(rad(c.lat - BERTRAM.lat) / 2) ** 2 +
-    Math.cos(rad(BERTRAM.lat)) * Math.cos(rad(c.lat)) * Math.sin(rad(c.lng - BERTRAM.lng) / 2) ** 2;
-  return 2 * 3958.8 * Math.asin(Math.sqrt(a));
+  return c ? greatCircleMiles(BERTRAM, c) : null;
+}
+
+/** Straight-line miles between two cities in data/city-coordinates.ts, or null if either is missing. */
+export function milesBetween(a: string, b: string): number | null {
+  const from = cityCoordinates[a];
+  const to = cityCoordinates[b];
+  return from && to ? greatCircleMiles(from, to) : null;
 }
 
 /**

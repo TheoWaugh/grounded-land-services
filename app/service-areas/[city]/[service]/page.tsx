@@ -22,6 +22,9 @@ import { quoteServiceLabels } from "@/data/quote-services";
 import TrustStrip from "@/app/components/TrustStrip";
 import QuoteSection from "@/app/components/QuoteSection";
 import PriceCard from "@/app/components/PriceCard";
+import LocalProof from "@/app/components/LocalProof";
+import FaqPageSchema from "@/app/components/FaqPageSchema";
+import { cityLocal, LOCAL_SERVICES } from "@/data/city-local";
 import { withQuickAnswers } from "@/lib/quick-answers";
 import { brandedTitle, metaDescription } from "@/lib/seo-title";
 import { priceOffer } from "@/lib/price-schema";
@@ -82,6 +85,8 @@ export default async function ServicePage({ params }: { params: PageParams }) {
   const quoteHref = "#quote";
   const sections = withQuickAnswers(service, content.sections, cityName);
   const reviewsInSections = sections.some((s) => s.showReviews);
+  const local = LOCAL_SERVICES.includes(service) ? cityLocal[cityName] : undefined;
+  const localQuestions = content.localFaqs ?? [];
   const imageSrc = serviceImages[service];
   const imageAlt = serviceAltText[service] ?? content.title;
 
@@ -451,6 +456,8 @@ const allVideoIds = content.sections.flatMap((s) => [
           </div>
         ))}
 
+        {local && <LocalProof city={cityName} local={local} />}
+
         <TrustBadges />
 
         {!reviewsInSections && (
@@ -460,6 +467,16 @@ const allVideoIds = content.sections.flatMap((s) => [
               What Our Customers Say
             </h2>
             <Testimonials />
+          </div>
+        )}
+
+        {localQuestions.length > 0 && (
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold text-[#0a0a0a] mb-6 flex items-center gap-3">
+              <span className="w-1.5 h-6 bg-[#C4922A] rounded-full inline-block" />
+              {cityName} Landowner Questions
+            </h2>
+            <FaqAccordion faqs={localQuestions} />
           </div>
         )}
 
@@ -481,28 +498,7 @@ const allVideoIds = content.sections.flatMap((s) => [
         defaultCity={cityName}
       />
 
-      <div className="max-w-3xl mx-auto px-6">
-
-        {content.faqs && content.faqs.length > 0 && (
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                "@context": "https://schema.org",
-                "@type": "FAQPage",
-                mainEntity: content.faqs.map((faq) => ({
-                  "@type": "Question",
-                  name: faq.question,
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: faq.answer,
-                  },
-                })),
-              }),
-            }}
-          />
-        )}
-      </div>
+      <FaqPageSchema faqs={[...localQuestions, ...(content.faqs ?? [])]} />
     </section>
   );
 }

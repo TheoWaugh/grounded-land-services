@@ -75,10 +75,12 @@ Luling, Bertram, Briggs. Focus content, case studies, and links here first.
   Keep the visible TrustStrip, TrustBadges and homepage counts in sync with Google.
 - The "Kelley Arnold" review is from a family member: removed from the site
   (owner, 2026-10-21). Never show or mark it up.
-- Case studies on site: 10 in lib/case-studies.ts (owner confirmed 2026-10-21;
-  e.g. Spicewood 53.8 ac land clearing, Gonzales 34.8 ac, Liberty Hill 4.1 ac rock removal)
+- Case studies on site: 12 in lib/case-studies.ts (owner confirmed 10 on 2026-10-21; more
+  added since, incl. Georgetown 10 ac on 2026-10-27; e.g. Spicewood 53.8 ac land clearing,
+  Gonzales 34.8 ac, Liberty Hill 4.1 ac rock removal)
 - Testimonials: on site with names and cities (Testimonials.tsx, app/page.tsx)
-- Gallery photo locations: NOT confirmed (every alt says "Bertram, TX").
+- Gallery photo locations: NOT confirmed (every alt says "Bertram, TX"), except
+  georgetown-clearing-1/-2.JPEG, confirmed Georgetown (owner, 2026-10-27).
   Leave gallery alt text alone until the owner confirms locations.
 - Texas A&M Forest Service Mechanical Fuel Reduction Grant: owner has completed
   a job under this program (forestry mulching / debris reduction).
@@ -91,6 +93,32 @@ Luling, Bertram, Briggs. Focus content, case studies, and links here first.
 - Social: Instagram @Grounded.LandServices, Facebook /GroundedLandServices,
   TikTok @grounded.land.services
 - Analytics: Google Analytics 4 (G-KW3HPEJTNW) + Meta Pixel installed
+
+## Priority-city experience (owner, 2026-10-27)
+Used on the 7 priority city pages via data/city-local.ts. Research and sources:
+seo-reports/city-notes-priority.md.
+- Liberty Hill: jobs are rock removal on homesites, subdivision lots and larger ranches;
+  also clearing cedar out from under oaks and removing dead trees. Rock is usually loose;
+  limestone shelf mostly only shows up when excavating. The 4.1 ac LH rock removal case
+  study is NOT the Holton Garrison or Preston Jones job (those are separate LH jobs).
+- Georgetown: 10-acre cedar job, 10 days, CAT 299 D3 + grapple; customer's goal was saving
+  his oak trees; outside city limits (no city tree permit needed). Customer not named.
+  Photos: public/images/work/georgetown-clearing-1.JPEG and -2.JPEG. Case study:
+  /case-studies/georgetown-land-clearing.
+- Spicewood: Barrett Garrison's review is the 53.8 ac case-study ranch. Mike Janak's review
+  (50 x 300 ft path, huisache, prickly pear) is also from Spicewood.
+- Golden-cheeked warbler: on the Jonestown job we waited until warbler nesting season ended
+  (season runs March 1 – September 1) before clearing. Use as our experience on Spicewood,
+  Liberty Hill and Jonestown pages. NEVER make legal claims about when a federal permit is
+  required; tell landowners with mature cedar-oak woodland to check with USFWS.
+- Bertram: Dylan Gavit's review is the same job as the Bertram burn-pile mulching case study:
+  2 acres cleared on a 5-acre property. ❓ Owner to confirm the acreage before changing it again.
+- Briggs: no jobs there yet. Pastures are mesquite/prickly pear, and we grub it. Use nearby
+  Bertram/Burnet proof and say honestly that it's ~13 miles from our base.
+- Gonzales: the 34.8 ac job was on sandy soil. Owner prefers flat ground with less rock and
+  wants more Gonzales/Luling work.
+- Luling: no jobs in Luling itself yet. Recently did a job in Harwood, TX (near Luling);
+  case study coming later. Has NOT worked around oil wells or pumpjacks: never claim it.
 
 ## Leads & contact
 - Best way to reach you: call or text (512) 571-6700, or the quote form

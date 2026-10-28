@@ -2,7 +2,7 @@ import { ServiceContent } from "./types";
 import { cityFacts } from "@/data/city-facts";
 import { servicePricing } from "@/data/service-pricing";
 import { bertramSentence } from "@/lib/bertram-distance";
-import { FLEET, whyUsProof } from "./shared";
+import { FLEET, localConditions, whyUsProof } from "./shared";
 
 // Answer-first layout: opening answer → before/after → cost → process → local conditions →
 // why us → removal vs. crushing → benefits → areas → related.
@@ -39,7 +39,7 @@ export function rockRemovalContent(city: string, nearby: string[]): ServiceConte
       },
       {
         heading: `${city}'s Unique Rock Challenges`,
-        paragraphs: [
+        paragraphs: localConditions(city, "rock-removal") ?? [
           facts
             ? `Rock removal in ${city} often involves ${facts.terrain} within ${facts.county}. Ground conditions here are typically ${facts.groundConditions}, which means usable soil can sit directly over solid limestone, fractured rock, or harder layers that only become a problem once excavation reaches them.`
             : `Rock removal in ${city} often involves the shallow limestone and exposed rock conditions found across Central Texas and the Texas Hill Country. In some areas, usable soil may cover solid limestone, while other locations have large surface rock, fractured limestone, or harder layers that become a problem when excavation reaches them.`,
