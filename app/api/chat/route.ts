@@ -26,7 +26,7 @@ const SYSTEM_PROMPT = `You are the AI assistant for Grounded Land Services, a la
 3. GENERAL LAND MANAGEMENT ADVICE (which service fits their goal, permits, wildfire reduction, etc.)
 
 ## Services & Pricing
-- Land Clearing: $1,500 – $2,500 per acre (depends on tree density, terrain, rock, accessibility)
+- Land Clearing: $2,000 – $4,000 per acre (depends on tree density, terrain, rock, accessibility)
 - Forestry Mulching: $2,500 – $3,000 per day (depends on brush density, cedar size, selectivity needed)
 - Rock Crushing: $3,000 – $4,000+ per day (depends on rock volume, depth, aggregate produced)
 - Demolition: $1,500 – $10,000+ per job (depends on structure size, materials, foundation)

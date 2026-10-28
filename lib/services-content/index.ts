@@ -8,7 +8,7 @@ export const servicesContent: Record<string, ServicePageContent> = {
     metaDescription: "Professional traditional land clearing in Texas — complete tree, brush, stump, and debris removal for construction-ready, pasture-ready property.",
     icon: "🏗️",
     heroImage: "/images/official/land-clearing.jpeg",
-    intro: "[Grounded Land Services](/) provides traditional land clearing across Central Texas for $1,500–$2,500 per acre, removing trees, stumps, brush, and debris to leave a clean, build-ready site. With our excavator we typically clear 4–7 acres a day, depending on how thick the brush is and the terrain. We're based in Bertram, have been doing this work since 2020, and every job starts with a free on-site estimate.",
+    intro: "[Grounded Land Services](/) provides traditional land clearing across Central Texas for $2,000–$4,000 per acre, removing trees, stumps, brush, and debris to leave a clean, build-ready site. With our excavator we typically clear 4–7 acres a day, depending on how thick the brush is and the terrain. We're based in Bertram, have been doing this work since 2020, and every job starts with a free on-site estimate.",
     sections: [
 {
 videoCarousel: {
@@ -230,7 +230,7 @@ areaMapQuery: "Central Texas",
     ],
     faqs: [
       { question: "What is land clearing?", answer: "Land clearing is the process of removing trees, brush, stumps, vegetation, and other obstacles to prepare a property for construction, agriculture, recreation, or improved land management. The best clearing method depends on your property's goals and future use." },
-      { question: "How much does land clearing cost?", answer: "Land clearing typically costs $1,500–$2,500 per acre, with a $1,000 minimum job. The cost of land clearing depends on factors such as acreage, tree density, terrain, accessibility, stump removal, and the desired finished result. We provide free property evaluations and customized estimates for every project." },
+      { question: "How much does land clearing cost?", answer: "Land clearing typically costs $2,000–$4,000 per acre, with a $1,000 minimum job. The cost of land clearing depends on factors such as acreage, tree density, terrain, accessibility, stump removal, and the desired finished result. We provide free property evaluations and customized estimates for every project." },
       { question: "What's the difference between land clearing and forestry mulching?", answer: "Traditional land clearing removes trees, brush, stumps, and root systems to create a build-ready site. Forestry mulching grinds vegetation into mulch while leaving the root systems in place, making it ideal for property maintenance, trail creation, and habitat improvement.", link: { label: "Forestry Mulching", href: "/services/forestry-mulching" } },
       { question: "Do you remove cedar trees?", answer: "Yes. We specialize in removing invasive cedar trees throughout Central Texas. Cedar removal can improve water availability, reduce wildfire risk, and encourage the growth of native grasses and desirable vegetation.", link: { label: "Cedar Tree Removal", href: "/services/cedar-tree-removal" } },
       { question: "Do you remove stumps?", answer: "Yes. We offer stump removal when a completely cleared, build-ready property is needed. For projects where stump removal isn't necessary, we can tailor our services to your goals." },
@@ -251,7 +251,7 @@ areaMapQuery: "Central Texas",
       { question: "How do I get started?", answer: "Getting started is easy. Contact Grounded Land Services to schedule a free property evaluation. We'll walk your property, discuss your goals, recommend the best clearing method, and provide a customized estimate with no obligation.", link: { label: "Request a Free Quote", href: "/contact?service=Land%20Clearing#quote" } },
       { question: "Will land clearing increase my property's value?", answer: "Professional land clearing can increase a property's usability, curb appeal, and development potential. While every property is different, creating accessible, well-maintained land is often an investment that improves marketability and long-term value." },
     ],
-    pricing: { range: "$1,500 – $2,500", unit: "per acre", note: "Pricing depends on tree density, terrain, rock removal requirements, and accessibility." },
+    pricing: { range: "$2,000 – $4,000", unit: "per acre", note: "Pricing depends on tree density, terrain, rock removal requirements, and accessibility." },
   },
 
 "forestry-mulching": {

@@ -22,7 +22,7 @@ Lines marked ❓ still need the owner's answer. Claude must not invent anything 
 - Payment accepted: Cash, Check, Credit Card
 
 ## Services (pages exist on the site)
-- Land clearing: $1,500 – $2,500 per acre ONLY (owner, 2026-10-21; density,
+- Land clearing: $2,000 – $4,000 per acre ONLY (owner, 2026-10-28; was $1,500 – $2,500; density,
   terrain, rock, access). The old "$2,500 – $10,000+ per job" range is retired;
   never use it.
 - Forestry mulching: $2,500 – $3,000 per day (density, cedar size, selectivity)

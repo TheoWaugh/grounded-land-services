@@ -14,16 +14,16 @@ the owner's "overgrown acreage" and "park-like finish" wording. Paste exactly. T
 phone numbers because Google's description rules don't allow links.
 
 ```
-Grounded Land Services is a family-owned company that turns overgrown acreage into usable land across the Texas Hill Country and Central Texas from our base in Bertram. We specialize in land clearing, forestry mulching, and rock removal for landowners, ranchers, and builders, running our own CAT equipment. We've been clearing land since 2020 and have completed 100+ projects, from 1-acre homesites to 50+ acre ranches. We also handle cedar clearing, underbrushing, fire breaks, tree pile shredding, rock crushing, site prep, and demolition, all with a clean, park-like finish. Land clearing runs $1,500–$2,500 per acre and forestry mulching $2,500–$3,000 per day. Licensed in Texas and fully insured. Free on-site estimates.
+Grounded Land Services is a family-owned company that turns overgrown acreage into usable land across the Texas Hill Country and Central Texas from our base in Bertram. We specialize in land clearing, forestry mulching, and rock removal for landowners, ranchers, and builders, running our own CAT equipment. We've been clearing land since 2020 and have completed 100+ projects, from 1-acre homesites to 50+ acre ranches. We also handle cedar clearing, underbrushing, fire breaks, tree pile shredding, rock crushing, site prep, and demolition, all with a clean, park-like finish. Land clearing runs $2,000–$4,000 per acre and forestry mulching $2,500–$3,000 per day. Licensed in Texas and fully insured. Free on-site estimates.
 ```
 
 ### Replacement service text for the existing profile (all under 300 characters)
 
 **Land Clearing**: under *Forestry service*:
-Turn overgrown acreage into usable land. We grub out trees, stumps, and roots with an excavator and leave a clean, seed-ready surface. $1,500–$2,500 per acre depending on density, terrain, rock, and access. Free site visits.
+Turn overgrown acreage into usable land. We grub out trees, stumps, and roots with an excavator and leave a clean, seed-ready surface. $2,000–$4,000 per acre depending on density, terrain, rock, and access. Free site visits.
 
 **Land Clearing**: under *Excavating contractor*:
-Excavator land clearing for homesites, pasture, and ranches across the Hill Country. We remove trees, brush, stumps, and root systems, clearing about 4–7 acres per day depending on brush. $1,500–$2,500 per acre.
+Excavator land clearing for homesites, pasture, and ranches across the Hill Country. We remove trees, brush, stumps, and root systems, clearing about 4–7 acres per day depending on brush. $2,000–$4,000 per acre.
 
 **Cedar Removal**: under *Excavating contractor*:
 Cedar grubbed out roots and all with our CAT excavator. Ideal for pasture, homesites, and opening up the oaks. Priced per acre. Free site visits.
@@ -94,7 +94,7 @@ GBP list only needs to cover the area you most want map-pack calls from.
 Each description is under 300 characters. Put the three priority services first.
 
 **Land Clearing**
-Excavator land clearing for pasture, homesites, and ranches. We grub cedar, mesquite, and brush, roots and all. $1,500–$2,500 per acre depending on density, terrain, rock, and access. About 4–7 acres per day. Free site visits.
+Excavator land clearing for pasture, homesites, and ranches. We grub cedar, mesquite, and brush, roots and all. $2,000–$4,000 per acre depending on density, terrain, rock, and access. About 4–7 acres per day. Free site visits.
 
 **Forestry Mulching**
 One-pass forestry mulching that grinds cedar, brush, and small trees into mulch where they stand, with no burn piles and no hauling. Selective clearing around oaks and pecans. $2,500–$3,000 per day, about 1–3 acres per day depending on brush.
@@ -174,7 +174,7 @@ Button: "Learn more" → the matching service page with `?utm_source=google&utm_
 
 | Product name | Price (use "price range") | Category | Link path |
 |---|---|---|---|
-| Land Clearing (per acre) | $1,500 – $2,500 | Land Clearing | /services/land-clearing |
+| Land Clearing (per acre) | $2,000 – $4,000 | Land Clearing | /services/land-clearing |
 | Forestry Mulching (per day) | $2,500 – $3,000 | Forestry Mulching | /services/forestry-mulching |
 | Rock Removal (per acre) | $2,000 – $4,000 | Rock Removal | /services/rock-removal |
 | Rock Crushing (per day) | $3,000 – $4,000+ | Rock Crushing | /services/rock-crushing |

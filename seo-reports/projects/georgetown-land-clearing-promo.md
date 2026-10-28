@@ -18,7 +18,7 @@ beyond "outside Georgetown."
 >
 > We brought our CAT 299 D3 and a grapple and pulled the cedar out from under and around the oaks, leaving the oaks standing with open ground beneath them.
 >
-> Got cedar crowding your oaks? Land clearing runs $1,500–$2,500 per acre, and site visits are free. Call or text (512) 571-6700.
+> Got cedar crowding your oaks? Land clearing runs $2,000–$4,000 per acre, and site visits are free. Call or text (512) 571-6700.
 
 ---
 
@@ -31,7 +31,7 @@ Before → after near Georgetown, TX 🌳
 
 CAT 299 D3 + grapple. Cedar gone, oaks still standing.
 
-Land clearing: $1,500–$2,500/acre. Free site visits.
+Land clearing: $2,000–$4,000/acre. Free site visits.
 📞 Call or text (512) 571-6700
 
 #landclearing #georgetowntx #cedarclearing #cedarremoval #williamsoncounty #texashillcountry #groundedlandservices

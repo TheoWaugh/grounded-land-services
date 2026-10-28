@@ -11,7 +11,7 @@ export const MINIMUM_JOB = "$1,000";
 export const servicePricing: Record<string, ServicePricing> = {
   "land-clearing": {
     label: "Traditional Land Clearing",
-    range: "$1,500 – $2,500",
+    range: "$2,000 – $4,000",
     unit: "per acre",
     note: "Pricing depends on tree density, terrain, rock removal requirements, and accessibility.",
   },
