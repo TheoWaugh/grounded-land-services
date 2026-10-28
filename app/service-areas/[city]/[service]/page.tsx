@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getServiceContent } from "@/lib/service-content";
@@ -138,7 +139,8 @@ const allVideoIds = content.sections.flatMap((s) => [
         </p>
 
         {sections.map((section, i) => (
-          <div key={i} className="mb-12">
+          <Fragment key={i}>
+          <div className="mb-12">
             {section.heading && (
               <h2 className="text-2xl font-bold text-[#0a0a0a] mb-4 flex items-center gap-3">
                 <span className="w-1.5 h-6 bg-[#C4922A] rounded-full inline-block" />
@@ -454,9 +456,12 @@ const allVideoIds = content.sections.flatMap((s) => [
               </div>
             )}
           </div>
+          {/* The "why choose us" section is the one that shows reviews. */}
+          {local?.proofAfterWhyUs && section.showReviews && <LocalProof city={cityName} local={local} />}
+          </Fragment>
         ))}
 
-        {local && <LocalProof city={cityName} local={local} />}
+        {local && !local.proofAfterWhyUs && <LocalProof city={cityName} local={local} />}
 
         <TrustBadges />
 

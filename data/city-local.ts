@@ -26,6 +26,8 @@ export interface CityLocal {
   /** Testimonial names (data/testimonials.ts) to show, in order: local first, then nearest. */
   reviews: string[];
   faqs: LocalFaq[];
+  /** On city × service pages, show "Our Work in …" right under the "Why … Choose" section instead of near the end. */
+  proofAfterWhyUs?: boolean;
 }
 
 const miles = (city: string) => Math.round(milesFromBertram(city) ?? 0);
@@ -257,8 +259,8 @@ export const cityLocal: Record<string, CityLocal> = {
       `Live oak, post oak, pecan, cedar elm, hackberry and mesquite are the common trees, and yaupon, huisache and eastern redcedar are the brush that takes over. Gonzales is about ${miles("Gonzales")} miles from our Bertram base.`,
     ],
     experience: [
-      "Our 34.8-acre Gonzales job took a month. Cottonwood, cedar elm and mesquite had grown up under and around big legacy pecans, and the owner wanted usable pasture. We grubbed everything over 2 inches, mulched the smaller growth, and burned the piles on site. The ground was sandy.",
-      "Flat, sandy ground without much rock is ground we like working, and we'd like to take on more jobs around Gonzales and Luling.",
+      "Our 34.8-acre Gonzales job took a month. Cottonwood, cedar elm and mesquite had grown up under and around big legacy pecans, and the owner wanted usable pasture. We grubbed everything over 2 inches, mulched the smaller growth, and burned the piles on site. The ground was sandy, which let us dig burn pits for our fires to keep them safer and make cleanup easier.",
+      "Gonzales land is some of our favorite to clear: flat, sandy ground with little rock, legacy pecans and oaks, and wide-open pastures. Our equipment works fast here and finishes clean, which helps keep clearing costs down for landowners.",
     ],
     serviceNotes: {
       "land-clearing": "On the Gonzales pecan job we combined both methods: we grubbed the bigger trees and mulched the rest.",
@@ -266,6 +268,7 @@ export const cityLocal: Record<string, CityLocal> = {
     },
     studies: ["gonzales-land-clearing", "harwood-forestry-mulching"],
     reviews: ["Emil Millet"],
+    proofAfterWhyUs: true,
     faqs: [
       {
         question: "Can you clear under my big pecan trees without damaging them?",
