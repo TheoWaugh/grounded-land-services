@@ -26,7 +26,7 @@ videoCarousel: {
         heading: "Our Land Clearing Process",
         steps: [
           { title: "Free On-Site Consultation", description: "We evaluate your property, discuss your goals, and create a land clearing plan tailored to your project." },
-          { title: "Land Clearing", description: "We remove unwanted trees, brush, stumps, rocks, and debris while protecting valuable vegetation whenever possible." },
+          { title: "Land Clearing", description: "We remove unwanted trees, brush, stumps, rocks, and debris while protecting valuable vegetation whenever possible. When we clear land, pulling out the trees often brings rock up to the surface with the roots. After clearing, we run our [Harley rake](/equipment#harley-rake) over the ground to level it out and pick up the leftover debris and rock, leaving a clean, smooth finish." },
           { title: "Final Walkthrough", description: "We review the completed work to ensure your property is ready for the next phase." },
         ],
         loopingVideo: {

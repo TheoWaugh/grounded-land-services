@@ -420,7 +420,7 @@ const content = (
                       </span>
                       <div>
                         <h3 className="font-bold text-[#0a0a0a] mb-1">{step.title}</h3>
-                        <p className="text-sm text-[#3a3a3c] leading-relaxed">{step.description}</p>
+                        <p className="text-sm text-[#3a3a3c] leading-relaxed"><RichText text={step.description} /></p>
                       </div>
                     </div>
                   ))}

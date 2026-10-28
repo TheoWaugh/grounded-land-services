@@ -3,7 +3,19 @@ import { cityFacts } from "@/data/city-facts";
 import { servicePricing } from "@/data/service-pricing";
 import { landClearingCostFactors } from "@/data/land-clearing-cost-factors";
 import { bertramSentence } from "@/lib/bertram-distance";
+import { rockCrushingCities } from "@/data/service-areas";
 import { FLEET, invasiveSentence, localConditions, whyUsProof } from "./shared";
+
+const HARLEY_RAKE = "[Harley rake](/equipment#harley-rake)";
+
+/** Owner (2026-10-28): rocky cities mention rock coming up with the roots; the rest don't mention rock. */
+function harleyRakeSentence(city: string): string {
+  // Liberty Hill has its own version in "Our Work in Liberty Hill" (data/city-local.ts).
+  if (city === "Liberty Hill") return "";
+  return rockCrushingCities.includes(city)
+    ? ` When we clear land, pulling out the trees often brings rock up to the surface with the roots. After clearing, we run our ${HARLEY_RAKE} over the ground to level it out and pick up the leftover debris and rock, leaving a clean, smooth finish.`
+    : ` After clearing, we run our ${HARLEY_RAKE} over the ground to level it out and pick up leftover roots and debris, leaving a clean, smooth finish.`;
+}
 
 // Answer-first layout: opening answer → video → cost → how long + process → local conditions →
 // why us → land clearing vs. mulching → benefits → areas → related.
@@ -97,7 +109,7 @@ const challengesParagraph = facts
       },
       {
         title: "Land Clearing",
-        description: "We remove unwanted trees, brush, stumps, rocks, and debris while protecting valuable vegetation whenever possible.",
+        description: `We remove unwanted trees, brush, stumps, rocks, and debris while protecting valuable vegetation whenever possible.${harleyRakeSentence(city)}`,
       },
       {
         title: "Final Walkthrough",
