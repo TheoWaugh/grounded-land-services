@@ -33,7 +33,7 @@ export function localConditions(city: string, service: keyof CityLocal["serviceN
 export function whyUsProof(city: string, equipmentSentence: string): Required<Pick<ServiceSection, "paragraphs" | "showReviews">> & Pick<ServiceSection, "list"> {
   if (cityLocal[city]) {
     return {
-      paragraphs: [equipmentSentence, `See [our work in and near ${city}](#local-proof) further down this page.`],
+      paragraphs: [equipmentSentence, `See [our work in and near ${city}](#local-proof) below.`],
       showReviews: true,
     };
   }

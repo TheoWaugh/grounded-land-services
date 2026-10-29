@@ -28,8 +28,6 @@ export interface CityLocal {
   /** Testimonial names (data/testimonials.ts) to show, in order: local first, then nearest. */
   reviews: string[];
   faqs: LocalFaq[];
-  /** On city × service pages, show "Our Work in …" right under the "Why … Choose" section instead of near the end. */
-  proofAfterWhyUs?: boolean;
 }
 
 const miles = (city: string) => Math.round(milesFromBertram(city) ?? 0);
@@ -286,7 +284,6 @@ export const cityLocal: Record<string, CityLocal> = {
     },
     studies: ["gonzales-land-clearing", "harwood-forestry-mulching"],
     reviews: ["Emil Millet"],
-    proofAfterWhyUs: true,
     faqs: [
       {
         question: "Can you clear under my big pecan trees without damaging them?",

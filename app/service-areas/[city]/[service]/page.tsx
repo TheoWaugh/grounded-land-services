@@ -456,12 +456,12 @@ const allVideoIds = content.sections.flatMap((s) => [
               </div>
             )}
           </div>
-          {/* The "why choose us" section is the one that shows reviews. */}
-          {local?.proofAfterWhyUs && section.showReviews && <LocalProof city={cityName} local={local} service={service} />}
+          {/* "Our Work in …" sits right under the "Why … Choose" section, the one that shows reviews. */}
+          {local && section.showReviews && <LocalProof city={cityName} local={local} service={service} />}
           </Fragment>
         ))}
 
-        {local && !local.proofAfterWhyUs && <LocalProof city={cityName} local={local} service={service} />}
+        {local && !reviewsInSections && <LocalProof city={cityName} local={local} service={service} />}
 
         <TrustBadges />
 
