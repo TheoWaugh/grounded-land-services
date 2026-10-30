@@ -294,7 +294,7 @@ export default function Home() {
       {/* ══════════ HERO ══════════ */}
       <section className="relative h-screen min-h-[600px] flex items-end overflow-hidden">
         <Image
-          src="/images/official/homepage-pic.JPG"
+          src="/images/official/homepage-pic.jpg"
           alt="Grounded Land Services — transforming Texas land"
           fill
           priority
