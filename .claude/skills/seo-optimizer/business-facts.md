@@ -75,8 +75,8 @@ Luling, Bertram, Briggs. Focus content, case studies, and links here first.
   Keep the visible TrustStrip, TrustBadges and homepage counts in sync with Google.
 - The "Kelley Arnold" review is from a family member: removed from the site
   (owner, 2026-10-21). Never show or mark it up.
-- Case studies on site: 13 in lib/case-studies.ts (owner confirmed 10 on 2026-10-21; more
-  added since, incl. Georgetown 10 ac and Harwood 3 ac on 2026-10-27; e.g. Spicewood 53.8 ac land clearing,
+- Case studies on site: 14 in lib/case-studies.ts (owner confirmed 10 on 2026-10-21; more
+  added since, incl. Georgetown 10 ac and Harwood 3 ac on 2026-10-27, Kingsland 0.5 ac on 2026-10-30; e.g. Spicewood 53.8 ac land clearing,
   Gonzales 34.8 ac, Liberty Hill 4.1 ac rock removal)
 - Testimonials: on site with names and cities (Testimonials.tsx, app/page.tsx)
 - Gallery photo locations: NOT confirmed (every alt says "Bertram, TX"), except

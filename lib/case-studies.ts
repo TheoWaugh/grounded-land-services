@@ -327,4 +327,32 @@ export const caseStudies: CaseStudy[] = [
       "/projects/harwood-forestry-mulching/cedar-mesquite-mulching-harwood-before-after.webp",
     ],
   },
+  {
+    slug: "kingsland-land-clearing",
+    title: "Land Clearing in Kingsland, Texas",
+    description: "Half an acre cleared in a day and a half in Kingsland, Texas. The owner wanted a property that was easier to maintain, keeping only his oak trees, so we cleared the cedar, persimmon, mesquite, yucca, and cactus, tore down an old structure, removed rock and old fence, and finished the ground with our Harley rake.",
+    longDescription: "This half-acre Kingsland property was grown up with cedar, persimmon trees, mesquite, yucca, and cactus. It also had loose rock, a dead oak tree, an old fence, and an old wooden structure. The owner wanted a property that was easier to maintain, keeping only his oak trees.\n\nWe used our CAT 275 and grapple to clear everything except the live oaks, take down the old structure and fence, and remove the dead oak and rock. An internet line ran across the property above ground instead of buried, so we moved it out of the way while we worked. We hauled off three loads of brush and one load of debris and rock.\n\nTo finish, we ran our Harley rake over the ground to level it out and pick up the leftover debris and rock. The job took a day and a half. The result is open, smooth ground under the oaks that's easy to mow and maintain.",
+    location: "Kingsland, TX",
+    locationSlug: "kingsland",
+    acreage: "0.5 Acres",
+    timeline: "1.5 Days",
+    services: [
+      { label: "Land Clearing", slug: "land-clearing" },
+      { label: "Demolition", slug: "demolition" },
+      { label: "Rock Removal", slug: "rock-removal" },
+    ],
+    equipmentUsed: [
+      { label: "Cat 275 XE", equipmentId: "cat-275" },
+      { label: "Harley Rake", equipmentId: "harley-rake" },
+      { label: "Grapple Rake", equipmentId: "grapple-rake" },
+    ],
+    afterPhoto: "/projects/kingsland-land-clearing/land-clearing-kingsland-after.webp",
+    galleryPhotos: [
+      "/projects/kingsland-land-clearing/land-clearing-kingsland-yucca-brush-before-after.webp",
+      "/projects/kingsland-land-clearing/land-clearing-kingsland-oaks-before-after.webp",
+      "/projects/kingsland-land-clearing/demolition-kingsland-old-structure-before-after.webp",
+      "/projects/kingsland-land-clearing/land-clearing-kingsland-oaks-raked-after.webp",
+      "/projects/kingsland-land-clearing/land-clearing-kingsland-oak-raked-after.webp",
+    ],
+  },
 ];

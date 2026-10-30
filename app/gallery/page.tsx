@@ -21,6 +21,12 @@ const allImages = [
   { src: "/images/work/IMG_1890.jpeg", alt: "Completed land clearing job in Belmont, TX", tag: "Land Clearing", featured: true },
   { src: "/images/work/garrison-clearing-2-land-clearing.jpeg", alt: "Completed land clearing job in Spicewood, TX", tag: "Land Clearing", featured: true },
   { src: "/images/work/georgetown-clearing-2.JPEG", alt: "Before and after 10-acre cedar land clearing in Georgetown, TX: dense cedar removed from beneath a stand of oaks", tag: "Land Clearing", featured: true },
+  { src: "/projects/kingsland-land-clearing/land-clearing-kingsland-after.webp", alt: "Half-acre lot in Kingsland, TX after land clearing: smooth, Harley-raked ground with the live oaks left standing", tag: "Land Clearing", featured: true },
+  { src: "/projects/kingsland-land-clearing/land-clearing-kingsland-yucca-brush-before-after.webp", alt: "Before and after land clearing in Kingsland, TX: yucca and brush around an oak cleared to raked ground", tag: "Land Clearing", featured: false },
+  { src: "/projects/kingsland-land-clearing/land-clearing-kingsland-oaks-before-after.webp", alt: "Before and after land clearing in Kingsland, TX: brush cleared from beneath a row of live oaks", tag: "Land Clearing", featured: false },
+  { src: "/projects/kingsland-land-clearing/demolition-kingsland-old-structure-before-after.webp", alt: "Before and after in Kingsland, TX: an old wooden structure torn down and the lot cleared and raked smooth", tag: "Land Clearing", featured: false },
+  { src: "/projects/kingsland-land-clearing/land-clearing-kingsland-oaks-raked-after.webp", alt: "Live oaks standing over cleared, raked ground after land clearing in Kingsland, TX", tag: "Land Clearing", featured: false },
+  { src: "/projects/kingsland-land-clearing/land-clearing-kingsland-oak-raked-after.webp", alt: "A live oak kept on a cleared, Harley-raked lot in Kingsland, TX", tag: "Land Clearing", featured: false },
   { src: "/images/work/anderson-pool-demo.jpeg", alt: "Completed pool demolition due to concrete cancer in Bertram, TX", tag: "Demolition", featured: true },
  
   { src: "/images/work/henson-before-after-2-mulching.jpeg", alt: "Completed forestry mulching job in Bertram, TX", tag: "Forestry Mulching", featured: true },
