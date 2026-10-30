@@ -6,6 +6,11 @@ import { useState } from "react";
 import ScrollReveal from "./components/ScrollReveal";
 import QuoteForm from "./components/QuoteForm";
 import TrustStrip from "./components/TrustStrip";
+import { caseStudies } from "@/lib/case-studies";
+
+const featuredProjects = ["balcones-refuge-fire-break", "gonzales-land-clearing", "liberty-hill-rock-removal"]
+  .map((slug) => caseStudies.find((c) => c.slug === slug))
+  .filter((c): c is (typeof caseStudies)[number] => Boolean(c));
 const services = [
   {
     title: "Forestry Mulching",
@@ -394,6 +399,54 @@ export default function Home() {
           <div className="text-center mt-10">
             <Link href="/services" className="btn-dark inline-block">
               All Services →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════ FEATURED PROJECTS ══════════ */}
+      <section className="py-14 md:py-20 px-6 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <ScrollReveal>
+            <p className="section-label mb-3">Case Studies</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#0a0a0a] leading-tight mb-10">
+              Featured Projects
+            </h2>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {featuredProjects.map((study, i) => (
+              <ScrollReveal key={study.slug} animation="reveal" delay={([0, 100, 200] as const)[i]}>
+                <Link
+                  href={`/case-studies/${study.slug}`}
+                  className="group block h-full rounded-2xl overflow-hidden border-2 border-[#0a0a0a] bg-white card-hover"
+                >
+                  <div className="relative w-full aspect-[16/10] overflow-hidden">
+                    <Image
+                      src={study.afterPhoto}
+                      alt={study.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <p className="text-xs font-semibold uppercase tracking-wide text-[#C4922A] mb-2">
+                      {study.location} · {study.acreage}
+                    </p>
+                    <h3 className="font-semibold text-[#0a0a0a] text-lg mb-2 group-hover:text-[#C4922A] transition-colors">
+                      {study.title}
+                    </h3>
+                    <p className="text-[#6e6e73] text-sm leading-relaxed">{study.summary ?? study.description}</p>
+                  </div>
+                </Link>
+              </ScrollReveal>
+            ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <Link href="/case-studies" className="btn-dark inline-block">
+              See All Case Studies →
             </Link>
           </div>
         </div>

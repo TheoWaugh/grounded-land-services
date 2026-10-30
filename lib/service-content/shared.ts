@@ -37,11 +37,13 @@ export function whyUsProof(city: string, equipmentSentence: string): Required<Pi
       showReviews: true,
     };
   }
-  const local = caseStudies.filter((c) => c.locationSlug === slugify(city));
+  const slug = slugify(city);
+  const local = caseStudies.filter((c) => c.locationSlug === slug || c.nearbyCitySlugs?.includes(slug));
+  const where = local.some((c) => c.locationSlug !== slug) ? "in and near" : "in";
   return {
     paragraphs: [
       equipmentSentence,
-      local.length > 0 ? `Recent work in ${city}:` : "See more of our completed projects in our [case studies](/case-studies).",
+      local.length > 0 ? `Recent work ${where} ${city}:` : "See more of our completed projects in our [case studies](/case-studies).",
     ],
     list:
       local.length > 0

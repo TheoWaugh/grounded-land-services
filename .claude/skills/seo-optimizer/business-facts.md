@@ -75,12 +75,13 @@ Luling, Bertram, Briggs. Focus content, case studies, and links here first.
   Keep the visible TrustStrip, TrustBadges and homepage counts in sync with Google.
 - The "Kelley Arnold" review is from a family member: removed from the site
   (owner, 2026-10-21). Never show or mark it up.
-- Case studies on site: 14 in lib/case-studies.ts (owner confirmed 10 on 2026-10-21; more
-  added since, incl. Georgetown 10 ac and Harwood 3 ac on 2026-10-27, Kingsland 0.5 ac on 2026-10-30; e.g. Spicewood 53.8 ac land clearing,
+- Case studies on site: 15 in lib/case-studies.ts (owner confirmed 10 on 2026-10-21; more
+  added since, incl. Georgetown 5 ac and Harwood 3 ac on 2026-10-27, Kingsland 0.5 ac and Balcones refuge 5-mile fire break on 2026-10-30; e.g. Spicewood 53.8 ac land clearing,
   Gonzales 34.8 ac, Liberty Hill 4.1 ac rock removal)
 - Testimonials: on site with names and cities (Testimonials.tsx, app/page.tsx)
 - Gallery photo locations: NOT confirmed (every alt says "Bertram, TX"), except
-  georgetown-clearing-1/-2.JPEG, confirmed Georgetown (owner, 2026-10-27).
+  georgetown-clearing-1/-2.JPEG, confirmed Georgetown (owner, 2026-10-27), and
+  /projects/balcones-refuge-fire-break/*, confirmed Balcones Canyonlands NWR (owner, 2026-10-30).
   Leave gallery alt text alone until the owner confirms locations.
 - Texas A&M Forest Service Mechanical Fuel Reduction Grant: owner has completed
   a job under this program (forestry mulching / debris reduction).
@@ -108,12 +109,23 @@ seo-reports/city-notes-priority.md.
 - Harley rake after clearing (owner, 2026-10-28): grubbing trees brings rock up to the
   surface, so after clearing we run the Harley rake (Bobcat 84" soil conditioner,
   /equipment#harley-rake) to level the ground and pick up leftover debris and rock.
-- Georgetown: 10-acre cedar job, 10 days, CAT 299 D3 + grapple; customer's goal was saving
+- Georgetown (corrected by owner 2026-10-30): 5-acre selective cedar job, 2 days, CAT 299 only
+  (don't mention attachments); cedar piled for burning; NO Harley rake (too many large
+  rocks); customer's goal was saving
   his oak trees; outside city limits (no city tree permit needed). Customer not named.
   Photos: public/images/work/georgetown-clearing-1.JPEG and -2.JPEG. Case study:
   /case-studies/georgetown-land-clearing.
 - Spicewood: Barrett Garrison's review is the 53.8 ac case-study ranch. Mike Janak's review
   (50 x 300 ft path, huisache, prickly pear) is also from Spicewood.
+- Balcones Canyonlands NWR fire break (owner, 2026-10-30): completed a 5-mile fire break on
+  Balcones Canyonlands National Wildlife Refuge for the U.S. Fish & Wildlife Service (Feb 2026),
+  timed around warbler season: started Feb 2, finished before the March 1 nesting-season
+  deadline. CAT 275 + Prinoth (skid steer mulcher required: limited access, minimal ground
+  disturbance); steep inclines, tight access, rock; mulched a 5-mile slash pile of cedar and
+  brush in place. Also a firefighter access route. Owner OK to name the refuge and USFWS.
+  Say "wildfire", never "forest fire". Case study: /case-studies/balcones-refuge-fire-break
+  (location Leander, TX; off FM 1431; refuge is close to Leander, Jonestown, Liberty Hill and
+  Bertram; shown as nearby proof on Jonestown and Liberty Hill). Video: https://youtu.be/KjYxH1hgTwM
 - Golden-cheeked warbler: on the Jonestown job we waited until warbler nesting season ended
   (season runs March 1 – September 1) before clearing. Use as our experience on Spicewood,
   Liberty Hill and Jonestown pages. NEVER make legal claims about when a federal permit is

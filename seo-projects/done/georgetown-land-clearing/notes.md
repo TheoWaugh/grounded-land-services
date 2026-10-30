@@ -2,13 +2,13 @@
 
 - City / area: Georgetown, Texas (outside city limits)
 - Service (land clearing, forestry mulching, rock removal, demolition, ...): Land clearing (cedar)
-- Size (acres or sq ft): 10 acres
+- Size (acres or sq ft): 5 acres (corrected by owner 2026-10-30; was wrongly 10)
 - What was there (cedar, mesquite, brush, rock, old structure, slope...): cedar under and around oak trees, including along the fence line (from the photos)
 - What the customer wanted (build a house, pasture, fire break, driveway...): save his oak trees
-- Equipment used: CAT 299 D3 and grapple
-- How long it took: 10 days
-- Anything tricky and how you handled it: not given
-- What happened to the debris (mulched in place, hauled, burned w/ permit...): not given
+- Equipment used: CAT 299 only (don't mention attachments). No Harley rake: too many large rocks
+- How long it took: 2 days (corrected by owner 2026-10-30; was wrongly 10)
+- Anything tricky and how you handled it: lots of large rock; small cedar pulled one at a time around the oaks (selective clearing)
+- What happened to the debris (mulched in place, hauled, burned w/ permit...): cedar piled for burning
 - Customer quote (optional):
 - Customer OK with being named / quoted? (yes / first name only / no): not named (owner instruction)
 - Customer OK with showing the city? (yes / no — use county instead): yes

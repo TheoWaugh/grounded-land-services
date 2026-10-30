@@ -54,12 +54,12 @@ function oakWiltFaq(city: string, ourExperience = ""): LocalFaq {
   };
 }
 
-/** Owner's warbler experience (Jonestown job). Makes no claim about when a federal permit is required. */
+/** Owner's warbler experience (Jonestown job, Balcones refuge fire break). Makes no claim about when a federal permit is required. */
 function warblerFaq(city: string): LocalFaq {
   const where = city === "Jonestown" ? "here in Jonestown" : "in Jonestown";
   return {
     question: `Does the golden-cheeked warbler affect cedar clearing in ${city}?`,
-    answer: `It can. The golden-cheeked warbler is an endangered songbird that nests in Hill Country cedar (Ashe juniper) and oak woodland. On a cedar job ${where}, we waited until the warbler nesting season (March 1 – September 1) was over before we started clearing. We can't tell you whether your property needs a federal permit. If your land has mature cedar-oak woodland, check with the U.S. Fish & Wildlife Service before you clear.`,
+    answer: `It can. The golden-cheeked warbler is an endangered songbird that nests in Hill Country cedar (Ashe juniper) and oak woodland. On a cedar job ${where}, we waited until the warbler nesting season (March 1 – September 1) was over before we started clearing. We've also completed refuge work timed around warbler nesting season: a 5-mile fire break on the Balcones Canyonlands National Wildlife Refuge for the U.S. Fish & Wildlife Service, finished in February 2026 before nesting season began March 1. We can't tell you whether your property needs a federal permit. If your land has mature cedar-oak woodland, check with the U.S. Fish & Wildlife Service before you clear.`,
     link: SOURCES.usfws,
   };
 }
@@ -115,7 +115,7 @@ export const cityLocal: Record<string, CityLocal> = {
       "forestry-mulching": "On Liberty Hill acreage, mulching is usually about the oaks: grinding up the cedar that has grown in underneath them and the dead trees around them, with no burn piles left behind.",
       "rock-removal": "Rock removal is one of the most common jobs we do in Liberty Hill. On our 4.1-acre job here we used the CAT 275 XE and a Harley rake to pull the rock and dead trees before spreading dirt and seeding.",
     },
-    studies: ["liberty-hill-rock-removal", "leander-forestry-mulching", "bertram-burn-pile-mulching", "bertram-forestry-mulching", "jonestown-forestry-mulching"],
+    studies: ["liberty-hill-rock-removal", "leander-forestry-mulching", "balcones-refuge-fire-break", "bertram-burn-pile-mulching", "bertram-forestry-mulching", "jonestown-forestry-mulching"],
     reviews: ["Holton Garrison", "Preston Jones", "Dylan Gavit"],
     faqs: [
       {
@@ -140,12 +140,25 @@ export const cityLocal: Record<string, CityLocal> = {
       `Live oak, pecan, cedar elm, mesquite and hackberry are common, with cedar (Ashe juniper) mostly on the rockier west side. You'll find farms, ranches, acreage and homesites next to new residential and commercial development. Georgetown is about ${miles("Georgetown")} miles from our Bertram base.`,
     ],
     experience: [
-      "On a 10-acre property outside Georgetown city limits, the owner's goal was saving his oak trees. We spent 10 days with our CAT 299 D3 and grapple pulling cedar out from under and around the oaks, including along the fence line.",
+      "On a 5-acre property outside Georgetown city limits, the owner's goal was saving his oak trees. In two days with our CAT 299, we pulled the small cedar out from under and around the oaks one at a time, including along the fence line, and piled it for burning.",
       "Because that property was outside city limits, it didn't need a city tree permit. Inside the city and its ETJ, Georgetown has a tree ordinance, so check with the city before large trees come down.",
     ],
+    serviceExperience: {
+      "land-clearing": [
+        "Our Georgetown work is a good example of selective clearing. On a 5-acre property just outside city limits, the owner wanted to save his oaks, so we pulled the small cedar out from under and around them one at a time with our CAT 299, including along the fence line. The job took two days, and we piled the cedar for burning.",
+        "That property also had plenty of large rock, which is common on Georgetown's west side, where limestone sits close to the surface. [See the full project](/case-studies/georgetown-land-clearing)",
+      ],
+      "forestry-mulching": [
+        "Around Georgetown, forestry mulching is usually about saving the oaks. Mulching grinds the cedar and brush down in place, so there are no burn piles and nothing to haul off, and the mulch stays on the ground to protect the soil and hold in moisture. It's also a good fit for Georgetown's rocky west side, since it doesn't pull rock up with the roots.",
+        "About 12 miles away in Leander, we mulched a 1-acre wedding venue in one day, clearing cedar, brush, and vines from under the oaks so guests had more shade. [See the full project](/case-studies/leander-forestry-mulching)",
+      ],
+      "rock-removal": [
+        "On Georgetown's west and northwest side, Edwards Limestone sits close to the surface, and large rock is common. On our 5-acre Georgetown clearing job, the rock was too big to rake up, which is when rock removal becomes its own step in getting a lot ready to build on or use.",
+        "About 12 miles away in Liberty Hill, we removed rock and dead trees from a 4.1-acre property, hauled off the debris, and seeded it for pasture. [See the full project](/case-studies/liberty-hill-rock-removal)",
+      ],
+    },
     serviceNotes: {
       "land-clearing": "Where your property sits matters here. West-side ground tends to have limestone near the surface, while east-side ground is deeper clay.",
-      "forestry-mulching": "Mulching fits when the goal is the same one our 10-acre Georgetown customer had: keep the oaks and get the cedar out from under them.",
       "rock-removal": "On Georgetown's west side, where Edwards Limestone sits close to the surface, rock is often part of getting a lot ready to use.",
     },
     studies: ["georgetown-land-clearing", "liberty-hill-rock-removal", "leander-forestry-mulching"],
@@ -153,17 +166,17 @@ export const cityLocal: Record<string, CityLocal> = {
     faqs: [
       {
         question: "Do I need a permit to remove trees in Georgetown?",
-        answer: "Often, yes. Inside Georgetown city limits and its ETJ, removing or pruning a Heritage Tree or Protected Tree requires a city permit. Heritage Trees are 26 inches or larger in diameter at breast height and of listed species such as live oak, post oak, cedar elm, pecan and southern magnolia. Heritage tree work also needs Planning & Zoning approval and a Texas-registered arborist. Our 10-acre Georgetown cedar job was outside city limits, so it didn't need a city tree permit. Ask the city's Urban Forester at trees@georgetowntexas.gov before you clear.",
+        answer: "Often, yes. Inside Georgetown city limits and its ETJ, removing or pruning a Heritage Tree or Protected Tree requires a city permit. Heritage Trees are 26 inches or larger in diameter at breast height and of listed species such as live oak, post oak, cedar elm, pecan and southern magnolia. Heritage tree work also needs Planning & Zoning approval and a Texas-registered arborist. Our 5-acre Georgetown cedar job was outside city limits, so it didn't need a city tree permit. Ask the city's Urban Forester at trees@georgetowntexas.gov before you clear.",
         link: SOURCES.georgetownTrees,
       },
       {
-        question: "How long does it take to clear 10 acres of cedar around Georgetown?",
-        answer: "Our 10-acre Georgetown cedar job took 10 days with our CAT 299 D3 and grapple, working around the oaks the owner wanted to keep. Your timeline depends on how thick the cedar is, how many trees you're saving, and the ground. We'll give you a number at the free site visit.",
-        link: { label: "Our 10-acre Georgetown cedar clearing", href: "/case-studies/georgetown-land-clearing" },
+        question: "How long does selective cedar clearing take around Georgetown?",
+        answer: "Our 5-acre Georgetown job took two days with our CAT 299, pulling small cedar one at a time from under and around the oaks the owner wanted to keep. Your timeline depends on how thick the cedar is, how many trees you're saving, and the ground. We'll give you a number at the free site visit.",
+        link: { label: "Our 5-acre Georgetown cedar clearing", href: "/case-studies/georgetown-land-clearing" },
       },
       {
         question: "Can you clear cedar around Georgetown without hurting my oaks?",
-        answer: "Yes. Saving the oaks was the whole goal of our 10-acre Georgetown job. We pulled the cedar out from under and around them and left the oaks standing.",
+        answer: "Yes. Saving the oaks was the whole goal of our 5-acre Georgetown job. We pulled the cedar out from under and around them and left the oaks standing.",
         link: { label: "See the before and after", href: "/case-studies/georgetown-land-clearing" },
         services: ["land-clearing", "forestry-mulching"],
       },
@@ -335,9 +348,10 @@ export const cityLocal: Record<string, CityLocal> = {
   },
 };
 
-/** Cities where we share the owner's golden-cheeked warbler experience (Jonestown is where the job was). */
+/** Cities where we share the owner's golden-cheeked warbler experience (Jonestown job; the Balcones refuge fire break is near Leander and Jonestown). */
 const extraFaqs: Record<string, LocalFaq[]> = {
   "Jonestown": [warblerFaq("Jonestown")],
+  "Leander": [warblerFaq("Leander")],
 };
 
 /** City × service pages that get the local sections (the owner's priority services). */

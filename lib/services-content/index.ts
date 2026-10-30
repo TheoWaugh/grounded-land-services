@@ -3384,7 +3384,12 @@ pricing: { range: "$25 – $60", unit: "per linear foot", note: "Pricing depends
         paragraphs: [
           "Fire break clearing requires more than simply cutting vegetation. The property's terrain, vegetation density, access, and surrounding features all need to be considered.",
           "Grounded Land Services brings heavy equipment and Central Texas land clearing experience to create practical fire breaks and access routes. We can work through dense cedar, brush, mesquite, trees, and difficult terrain while working around features that need to remain.",
+          "In February 2026, we built a 5-mile fire break on the Balcones Canyonlands National Wildlife Refuge for the U.S. Fish & Wildlife Service. Limited access and minimal ground disturbance called for a skid steer mulcher, so we mulched a 5-mile slash pile of cedar and brush in place with our CAT 275 and Prinoth mulching head, working steep inclines and rock, and finished before golden-cheeked warbler nesting season began March 1. The fire break also gives firefighters an access route to stop a wildfire before it reaches more populated areas.",
+          "Recent fire break projects:",
         ],
+        list: caseStudies
+          .filter((c) => c.services.some((s) => s.slug === "fire-breaks"))
+          .map((c) => ({ label: `${c.title} (${c.acreage}, ${c.timeline})`, href: `/case-studies/${c.slug}` })),
         media: [
           { type: "image", src: "/images/service-pics/why-choose-us.jpeg", alt: "Why choose Grounded Land Services for rock removal" },
         ],

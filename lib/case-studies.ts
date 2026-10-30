@@ -2,9 +2,11 @@ export interface CaseStudy {
   slug: string;
   title: string;
   description: string;
+  summary?: string; // one line for cards (homepage Featured Projects)
   longDescription?: string;
   location: string;
   locationSlug: string; // matches the city slug in service-areas
+  nearbyCitySlugs?: string[]; // other city pages that list this as nearby work
   acreage: string;
   timeline: string;
   services: { label: string; slug: string }[]; // slug matches /services/[slug]
@@ -20,6 +22,7 @@ export const caseStudies: CaseStudy[] = [
     slug: "liberty-hill-rock-removal",
     title: "Rock Removal in Liberty Hill, Texas",
     description: "Rock removal and complete property cleanup across 4.1 acres in Liberty Hill. We removed rock and dead trees, hauled off 12 loads of debris, spread 10 loads of dirt, and finished by seeding the entire property with native Texas grass seed.",
+    summary: "Removed rock and dead trees, hauled off 12 loads of debris, and seeded the property with native grass for pasture.",
     longDescription: "This 4.1-acre Liberty Hill property had loose rock, dead trees, and a large amount of construction debris that needed to be cleaned up before it could be used as pasture. Grounded Land Services removed the rock and dead trees, hauled off 12 loads of debris, and spread 10 loads of dirt in areas that needed additional material.\n\nOnce the cleanup was finished, we seeded the entire 4.1 acres with native Texas grass seed, leaving the property pristine, open, and ready for native grass to establish and the land to be used as pasture.",
     location: "Liberty Hill, TX",
     locationSlug: "liberty-hill",
@@ -44,6 +47,66 @@ export const caseStudies: CaseStudy[] = [
       "/images/work/liberty-hill-rock-removal-6.JPEG",
       "/images/work/liberty-hill-rock-removal-7.JPEG",
     ],
+  },
+  {
+    slug: "balcones-refuge-fire-break",
+    title: "5-Mile Fire Break at Balcones Canyonlands National Wildlife Refuge",
+    description: "A 5-mile fire break mulched off FM 1431 on the Balcones Canyonlands National Wildlife Refuge near Leander, Texas, for the U.S. Fish & Wildlife Service. We started February 2, 2026, and finished before golden-cheeked warbler nesting season began March 1, mulching a 5-mile slash pile of cedar and brush in place with our CAT 275 and Prinoth mulching head.",
+    summary: "Mulched a 5-mile slash pile of cedar and brush in place for the U.S. Fish & Wildlife Service, finished before warbler nesting season.",
+    longDescription: "The U.S. Fish & Wildlife Service needed a fire break on the Balcones Canyonlands National Wildlife Refuge, off FM 1431. The refuge is close to Leander, Jonestown, Liberty Hill, and our base in Bertram. A 5-mile slash pile of cedar and brush ran along the fire break line, and it had to be cleared while disturbing as little ground as possible.\n\nThe job required a skid steer mulcher because of the limited access and the need for minimal ground disturbance, so we used our CAT 275 with the Prinoth mulching head. Extremely steep inclines, tight access, and rock made it a challenging job. We mulched the entire slash pile in place, with nothing burned or hauled off.\n\nTiming mattered too. All of the work had to be done before golden-cheeked warbler nesting season began on March 1. We started on February 2 and finished in February 2026.\n\nThe finished fire break also serves as a critical access route for firefighters, giving them a chance to stop a wildfire before it spreads to more populated areas.",
+    location: "Leander, TX",
+    locationSlug: "leander",
+    nearbyCitySlugs: ["jonestown"],
+    acreage: "5 Miles",
+    timeline: "About 1 Month",
+    services: [
+      { label: "Fire Breaks", slug: "fire-breaks" },
+      { label: "Forestry Mulching", slug: "forestry-mulching" },
+    ],
+    equipmentUsed: [
+      { label: "Cat 275 XE", equipmentId: "cat-275" },
+      { label: "Prinoth Mulching Head", equipmentId: "prinoth" },
+    ],
+    afterPhoto: "/projects/balcones-refuge-fire-break/fire-break-balcones-canyonlands-mulched-cedar.webp",
+    galleryPhotos: [
+      "/projects/balcones-refuge-fire-break/fire-break-balcones-canyonlands-hillside.webp",
+      "/projects/balcones-refuge-fire-break/fire-break-balcones-canyonlands-tree-line.webp",
+      "/projects/balcones-refuge-fire-break/fire-break-balcones-canyonlands-mulched-trail.webp",
+      "/projects/balcones-refuge-fire-break/fire-break-balcones-canyonlands-cedar-corridor.webp",
+    ],
+    videoIds: ["KjYxH1hgTwM"],
+  },
+  
+  {
+    slug: "gonzales-land-clearing",
+    title: "Land Clearing in Gonzales, Texas",
+    description: "34.8 acres cleared in Gonzales, Texas. We cleared cottonwood, cedar elm, and mesquite trees from beneath and around large legacy pecan trees. Trees larger than 2 inches were grubbed, while the remaining vegetation was mulched with our forestry mulcher.",
+    summary: "Cleared cottonwood, cedar elm, and mesquite from around legacy pecan trees to open up a usable pasture.",
+    longDescription: "This 34.8-acre Gonzales property had cottonwood, cedar elm, and mesquite growing heavily beneath and around several large legacy pecan trees. The goal of the project was to clear the unwanted growth while opening up the areas around the mature pecan trees to create a usable pasture.\n\nWe grubbed cottonwood, cedar elm, and mesquite trees larger than 2 inches. After the larger trees were removed, we used our forestry mulcher to process the remaining smaller vegetation and growth throughout the property.\n\nThe trees that were cleared were stacked into piles and burned on site. Once the clearing was completed, the property was opened up around the mature pecan trees, with the larger unwanted vegetation removed and the remaining smaller growth mulched.",
+    location: "Gonzales, TX",
+    locationSlug: "gonzales",
+    acreage: "34.8 Acres",
+    timeline: "1 Month",
+    services: [
+      { label: "Land Clearing", slug: "land-clearing" },
+      { label: "Forestry Mulching", slug: "forestry-mulching" },
+    ],
+    equipmentUsed: [
+      { label: "Cat 323", equipmentId: "cat-323" },
+      { label: "Cat 275 XE", equipmentId: "cat-275" },
+      { label: "Cat 299", equipmentId: "cat-299" },
+      { label: "Prinoth Forestry Mulcher", equipmentId: "prinoth" },
+      { label: "Grapple Rake", equipmentId: "grapple-rake" },
+    ],
+    afterPhoto: "/images/work/gonzales-5.JPG",
+    galleryPhotos: [
+      "/images/work/gonzales-1.jpeg",
+      "/images/work/gonzales-6.jpeg",
+      "/images/work/gonzales-2.jpeg",
+      "/images/work/gonzales-3.jpeg",
+      "/images/work/gonzales-4.jpeg",
+    ],
+    videoIds: ["aSRb_PbjbIE"],
   },
   {
     slug: "spicewood-land-clearing",
@@ -76,36 +139,6 @@ export const caseStudies: CaseStudy[] = [
       "/images/work/garrison-1.JPG",
     ],
      videoIds: ["W1AeIo_miIA"],
-  },
-  {
-    slug: "gonzales-land-clearing",
-    title: "Land Clearing in Gonzales, Texas",
-    description: "34.8 acres cleared in Gonzales, Texas. We cleared cottonwood, cedar elm, and mesquite trees from beneath and around large legacy pecan trees. Trees larger than 2 inches were grubbed, while the remaining vegetation was mulched with our forestry mulcher.",
-    longDescription: "This 34.8-acre Gonzales property had cottonwood, cedar elm, and mesquite growing heavily beneath and around several large legacy pecan trees. The goal of the project was to clear the unwanted growth while opening up the areas around the mature pecan trees to create a usable pasture.\n\nWe grubbed cottonwood, cedar elm, and mesquite trees larger than 2 inches. After the larger trees were removed, we used our forestry mulcher to process the remaining smaller vegetation and growth throughout the property.\n\nThe trees that were cleared were stacked into piles and burned on site. Once the clearing was completed, the property was opened up around the mature pecan trees, with the larger unwanted vegetation removed and the remaining smaller growth mulched.",
-    location: "Gonzales, TX",
-    locationSlug: "gonzales",
-    acreage: "34.8 Acres",
-    timeline: "1 Month",
-    services: [
-      { label: "Land Clearing", slug: "land-clearing" },
-      { label: "Forestry Mulching", slug: "forestry-mulching" },
-    ],
-    equipmentUsed: [
-      { label: "Cat 323", equipmentId: "cat-323" },
-      { label: "Cat 275 XE", equipmentId: "cat-275" },
-      { label: "Cat 299", equipmentId: "cat-299" },
-      { label: "Prinoth Forestry Mulcher", equipmentId: "prinoth" },
-      { label: "Grapple Rake", equipmentId: "grapple-rake" },
-    ],
-    afterPhoto: "/images/work/gonzales-5.JPG",
-    galleryPhotos: [
-      "/images/work/gonzales-1.jpeg",
-      "/images/work/gonzales-6.jpeg",
-      "/images/work/gonzales-2.jpeg",
-      "/images/work/gonzales-3.jpeg",
-      "/images/work/gonzales-4.jpeg",
-    ],
-    videoIds: ["aSRb_PbjbIE"],
   },
   {
     slug: "bertram-forestry-mulching",
@@ -288,12 +321,12 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "georgetown-land-clearing",
     title: "Land Clearing in Georgetown, Texas",
-    description: "10 acres of cedar cleared from under and around the oaks on a Georgetown, Texas property in 10 days. The owner's goal was saving his oak trees, so we used our CAT 299 D3 and grapple to pull the cedar out while leaving the oaks standing.",
-    longDescription: "This 10-acre property outside Georgetown city limits had cedar growing up thick under and around its oak trees, including along the fence line. The owner's goal was to save his oaks.\n\nWe worked the property with our CAT 299 D3 and a grapple, pulling the cedar out from beneath and around the oaks and leaving the oaks themselves standing. The job took 10 days.\n\nBecause the property is outside city limits, no city tree permit was needed. The result is open ground under the oaks, with the cedar that had been crowding them gone.",
+    description: "Selective cedar clearing on a 5-acre Georgetown, Texas property in two days. The owner's goal was saving his oak trees, so we used our CAT 299 to pull the small cedar out from under and around them one at a time and piled it for burning.",
+    longDescription: "This 5-acre property outside Georgetown city limits had small cedar growing up under and around its oak trees, including along the fence line. The owner's goal was to save his oaks.\n\nWe worked the property with our CAT 299, pulling the cedar out from beneath and around the oaks one at a time and leaving the oaks themselves standing. We piled the cedar for burning. The job took two days.\n\nThe property also had plenty of large rock, which is common on Georgetown's west side. Because it is outside city limits, no city tree permit was needed. The result is open ground under the oaks, with the cedar that had been crowding them gone.",
     location: "Georgetown, TX",
     locationSlug: "georgetown",
-    acreage: "10 Acres",
-    timeline: "10 Days",
+    acreage: "5 Acres",
+    timeline: "2 Days",
     services: [
       { label: "Land Clearing", slug: "land-clearing" },
       { label: "Cedar Tree Removal", slug: "cedar-tree-removal" },
@@ -355,4 +388,5 @@ export const caseStudies: CaseStudy[] = [
       "/projects/kingsland-land-clearing/land-clearing-kingsland-oak-raked-after.webp",
     ],
   },
+  
 ];

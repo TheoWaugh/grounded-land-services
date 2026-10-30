@@ -6,8 +6,8 @@ import { milesBetween } from "@/lib/bertram-distance";
 import type { CityLocal } from "@/data/city-local";
 import RichText from "./RichText";
 
-// "Spicewood, TX" → "Spicewood"
-const cityOf = (location: string) => location.split(",")[0].trim();
+// "Spicewood, TX" → "Spicewood", "Near Jonestown, TX" → "Jonestown"
+const cityOf = (location: string) => location.split(",")[0].replace(/^Near /, "").trim();
 
 /** "In Bertram" for the page's own city, otherwise "Burnet · about 11 mi away". */
 function placeLabel(pageCity: string, otherCity: string): string {

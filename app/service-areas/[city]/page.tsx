@@ -65,7 +65,8 @@ export default async function CityHubPage({ params }: { params: PageParams }) {
   const { name, region, nearby } = info;
   const facts = cityFacts[name];
   const services = servicesFor(name);
-  const studies = caseStudies.filter((s) => s.locationSlug === city);
+  const studies = caseStudies.filter((s) => s.locationSlug === city || s.nearbyCitySlugs?.includes(city));
+  const hasNearbyStudy = studies.some((s) => s.locationSlug !== city);
   const local = cityLocal[name];
   const faqs = localFaqs(name);
 
@@ -164,7 +165,7 @@ export default async function CityHubPage({ params }: { params: PageParams }) {
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-[#0a0a0a] mb-5 flex items-center gap-3">
               <span className="w-1.5 h-6 bg-[#C4922A] rounded-full inline-block" />
-              Our Projects in {name}
+              Our Projects {hasNearbyStudy ? "in and Near" : "in"} {name}
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {studies.map((study) => (

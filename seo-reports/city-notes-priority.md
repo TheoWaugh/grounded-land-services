@@ -9,7 +9,7 @@ was left off.
 
 - **Liberty Hill:** Jobs are rock removal on homesites, subdivision lots and larger ranches, plus clearing cedar out from under oaks and removing dead trees. The rock is usually loose; limestone shelf mostly only shows up when excavating. The 4.1-acre LH rock-removal case study is **not** the Holton Garrison or Preston Jones job.
   - *Added 2026-10-28:* Large rock outcroppings are also common. Clearing cedar from under oaks cuts competition for water, giving the oaks a better chance in the next drought. Dead trees come from drought or disease; oak wilt and Hypoxylon canker are both common in Liberty Hill and Central Texas (owner experience). Grubbing brings rock to the surface, so after clearing we run the Harley rake to level the ground and pick up leftover debris and rock.
-- **Georgetown:** The 10-acre cedar job took 10 days with the CAT 299 D3 and grapple. The customer's goal was saving his oak trees. It was outside city limits, so no city tree permit was needed. It's now a case study: `/case-studies/georgetown-land-clearing` (customer not named).
+- **Georgetown:** The 5-acre selective cedar job took 2 days with the CAT 299 (corrected by owner 2026-10-30). Cedar piled for burning; no Harley rake (too many large rocks). The customer's goal was saving his oak trees. It was outside city limits, so no city tree permit was needed. It's now a case study: `/case-studies/georgetown-land-clearing` (customer not named).
 - **Spicewood:** Barrett Garrison's review is the 53.8-acre case-study ranch. Mike Janak's review is also from Spicewood.
 - **Golden-cheeked warbler:** On the Jonestown job, we waited until warbler nesting season ended (March 1 – September 1) before clearing. This is used as our experience on the Spicewood, Liberty Hill and Jonestown pages. Make no legal claims about permits; point landowners with mature cedar-oak woodland to USFWS.
 - **Bertram:** Dylan Gavit's review is the same job as the burn-pile mulching case study: 2 acres cleared on a 5-acre property (acreage still to be confirmed by owner).
@@ -89,17 +89,17 @@ How to read this:
 **Nearby:** Liberty Hill (~12 mi), Leander (~12 mi), Round Rock, Lake Georgetown, San Gabriel River [site][S20].
 
 **Your work within ~15 mi:**
-- Gallery photos: **10-acre cedar clearing in Georgetown** (before/after, cedar cleared from under oaks) [site, `app/gallery/page.tsx`]. Not a case study yet.
+- Gallery photos: **5-acre cedar clearing in Georgetown** (before/after, cedar cleared from under oaks) [site, `app/gallery/page.tsx`]. Not a case study yet.
 - Nearby: Liberty Hill rock removal (~12 mi), Leander venue (~12 mi) [site]
 - Reviews: no review names Georgetown. Holton Garrison and Preston Jones are in Liberty Hill (~12 mi) [site]
 
 **Draft FAQs**
 1. *Do I need a permit to remove trees in Georgetown?* Draft: Often, yes. Inside the city and its ETJ, removing a Heritage or Protected tree needs a city permit [S22][S23]. Heritage trees are 26 in.+ of listed species such as live oak and pecan [S24]. Ask the city's Urban Forester before clearing (trees@georgetowntexas.gov) [S24].
-2. *Can you clear cedar without hurting my oaks?* Draft: That was the goal on our 10-acre Georgetown job, where we cleared cedar from under oaks [site]. Texas A&M recommends no oak wounding Feb–June [S5].
+2. *Can you clear cedar without hurting my oaks?* Draft: That was the goal on our 5-acre Georgetown job, where we cleared cedar from under oaks [site]. Texas A&M recommends no oak wounding Feb–June [S5].
 3. *Is my land over the Edwards Aquifer, and does that change anything?* Draft: Parts of Georgetown are in TCEQ's Edwards Aquifer zones [S15][S20]. Building your own single-family home under 20% impervious cover is exempt from the protection-plan filing [S16]. Check the TCEQ map for your tract.
 
 **Questions for Logan**
-- Can the 10-acre Georgetown job become a full case study? I need acreage, days, equipment, and goals.
+- Can the 5-acre Georgetown job become a full case study? I need acreage, days, equipment, and goals.
 - Did that job need a city tree permit, or was it outside city limits and the ETJ?
 - Do you see more east-side clay (sticky when wet) or west-side rock in Georgetown?
 

@@ -13,6 +13,9 @@ import { brandedTitle, metaDescription } from "@/lib/seo-title";
 
 type PageParams = Promise<{ slug: string }>;
 
+// Services with city pages (/service-areas/[city]/[service]). Others (e.g. fire breaks) link to the city hub.
+const CITY_SERVICE_PAGES = ["land-clearing", "forestry-mulching", "rock-removal", "rock-crushing", "demolition"];
+
 export async function generateStaticParams() {
   return caseStudies.map((study) => ({ slug: study.slug }));
 }
@@ -40,6 +43,8 @@ export default async function CaseStudyPage({ params }: { params: PageParams }) 
   if (!study) notFound();
 
   const allPhotos = [study.afterPhoto, ...(study.galleryPhotos ?? [])];
+  const cityService = study.services.find((s) => CITY_SERVICE_PAGES.includes(s.slug));
+  const locationHref = `/service-areas/${study.locationSlug}${cityService ? `/${cityService.slug}` : ""}`;
 
   return (
     <>
@@ -83,7 +88,7 @@ export default async function CaseStudyPage({ params }: { params: PageParams }) 
         <div className="grid grid-cols-3 gap-4 mb-10 p-5 bg-[#f9f9f9] rounded-2xl">
           <div className="text-center">
             <p className="text-[10px] font-semibold text-[#6e6e73] uppercase tracking-wide mb-1">Location</p>
-            <Link href={`/service-areas/${study.locationSlug}/${study.services[0]?.slug ?? "land-clearing"}`} className="text-base font-bold text-[#0a0a0a] hover:text-[#C4922A] transition-colors">
+            <Link href={locationHref} className="text-base font-bold text-[#0a0a0a] hover:text-[#C4922A] transition-colors">
               {study.location}
             </Link>
           </div>
