@@ -370,7 +370,7 @@ export const cityLocal: Record<string, CityLocal> = {
       `Post oak, live oak, pecan, cedar elm and mesquite are common, with eastern redcedar, yaupon and huisache filling in. Properties are mostly farms, ranches, hunting land and rural homesites. Luling is about ${miles("Luling")} miles from our Bertram base.`,
     ],
     experience: [
-      `Our closest job to Luling is in Harwood, about ${milesTo("Luling", "Harwood")} miles east, where we mulched 3 acres of cedar, mesquite, and cactus in one day to open a field for dove season and help the owner pick out a homesite. About ${milesTo("Luling", "Gonzales")} miles away in Gonzales, we cleared 34.8 acres from under legacy pecans to open up pasture.`,
+      `Our closest job to Luling is in Harwood, about ${milesTo("Luling", "Harwood")} miles east, where we mulched 3 acres of cedar, mesquite, and cactus in one day to open a field for dove season and help the owner pick out a homesite. About ${milesTo("Luling", "Gonzales")} miles away in Gonzales, cottonwood, cedar elm, and mesquite had grown up under and around a stand of big legacy pecans. Over a month, we cleared [34.8 acres](/case-studies/gonzales-land-clearing), grubbing the bigger trees and mulching the smaller growth, and opened it back up into pasture with the pecans left standing. [We also recently mulched a 1-acre Gonzales property to open up pasture and give the owners a clear view of their pond](/case-studies/gonzales-forestry-mulching).`,
       "Luling-area land is some of our favorite to clear: flat, sandy ground with little rock, post oaks and pecans, and wide-open pasture. Our equipment works fast here and finishes clean, which helps keep clearing costs down for landowners.",
     ],
     serviceNotes: {
