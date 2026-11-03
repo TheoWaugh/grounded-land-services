@@ -180,6 +180,7 @@ const attachments: EquipmentItem[] = [
     ],
   },
   {
+    id: "industrial-grapple",
     name: "CAT Industrial Grapple",
     category: "Grapple Bucket Attachment",
     icon: "🪣",

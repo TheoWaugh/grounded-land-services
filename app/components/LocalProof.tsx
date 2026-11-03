@@ -26,7 +26,9 @@ export default function LocalProof({ city, local, service }: { city: string; loc
   const studies = local.studies
     .map((slug) => caseStudies.find((c) => c.slug === slug))
     .filter((c): c is (typeof caseStudies)[number] => Boolean(c));
-  const reviews = local.reviews
+  const reviewNames =
+    (service && local.serviceReviews?.[service as keyof NonNullable<CityLocal["serviceReviews"]>]) || local.reviews;
+  const reviews = reviewNames
     .map((name) => testimonials.find((t) => t.name === name))
     .filter((t): t is (typeof testimonials)[number] => Boolean(t));
   const hasLocalStudy = studies.some((s) => cityOf(s.location) === city);
@@ -96,6 +98,11 @@ export default function LocalProof({ city, local, service }: { city: string; loc
                   <p className="text-sm font-bold text-[#0a0a0a]">{t.name}</p>
                   {t.location && (
                     <p className="text-xs text-[#6e6e73] tracking-wide">{placeLabel(city, cityOf(t.location))}</p>
+                  )}
+                  {t.caseStudy && (
+                    <Link href={`/case-studies/${t.caseStudy}`} className="inline-block mt-2 text-xs font-semibold text-[#C4922A] hover:underline">
+                      See this project →
+                    </Link>
                   )}
                 </figcaption>
               </figure>

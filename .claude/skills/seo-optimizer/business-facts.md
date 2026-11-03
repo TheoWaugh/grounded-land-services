@@ -75,8 +75,8 @@ Luling, Bertram, Briggs. Focus content, case studies, and links here first.
   Keep the visible TrustStrip, TrustBadges and homepage counts in sync with Google.
 - The "Kelley Arnold" review is from a family member: removed from the site
   (owner, 2026-10-21). Never show or mark it up.
-- Case studies on site: 15 in lib/case-studies.ts (owner confirmed 10 on 2026-10-21; more
-  added since, incl. Georgetown 5 ac and Harwood 3 ac on 2026-10-27, Kingsland 0.5 ac and Balcones refuge 5-mile fire break on 2026-10-30; e.g. Spicewood 53.8 ac land clearing,
+- Case studies on site: 19 in lib/case-studies.ts (owner confirmed 10 on 2026-10-21; more
+  added since, incl. Georgetown 5 ac and Harwood 3 ac on 2026-10-27, Kingsland 0.5 ac and Balcones refuge 5-mile fire break on 2026-10-30, Spicewood Lake Travis lot 0.5 ac and Spicewood sod lots 1.5 ac and Bertram mulching cleanup 1.2 ac and Bertram rock removal 0.5 ac on 2026-11-02; e.g. Spicewood 53.8 ac land clearing,
   Gonzales 34.8 ac, Liberty Hill 4.1 ac rock removal)
 - Testimonials: on site with names and cities (Testimonials.tsx, app/page.tsx)
 - Gallery photo locations: NOT confirmed (every alt says "Bertram, TX"), except
@@ -116,7 +116,21 @@ seo-reports/city-notes-priority.md.
   Photos: public/images/work/georgetown-clearing-1.JPEG and -2.JPEG. Case study:
   /case-studies/georgetown-land-clearing.
 - Spicewood: Barrett Garrison's review is the 53.8 ac case-study ranch. Mike Janak's review
-  (50 x 300 ft path, huisache, prickly pear) is also from Spicewood.
+  (50 x 300 ft path, huisache, prickly pear) is also from Spicewood: it's the Lake Travis lot job
+  (owner, 2026-11-02): mesquite, huisache, prickly pear and rock cleared so the owners could mow
+  without popping tires on thorns, plus a chainsawed trail down to their new dock. Case study:
+  /case-studies/spicewood-lake-travis-lot (0.5 ac, 1 day, June 2025; CAT 299, industrial grapple,
+  Prinoth, Harley rake; cedar mulched, cactus/mesquite/huisache hauled off; river rock). Owner
+  OK'd showing his named review on the case study (2026-11-02); the write-up doesn't name him.
+  (owner, 2026-11-02) Spicewood ground is mostly limestone (loose rock and solid ledges), with
+  river rock near Lake Travis and dolomite on some properties. On the 53.8 ac ranch we used the
+  CAT 275, CAT 323, CAT 299, Prinoth mulcher, Harley rake and root grapple, and burned the piles
+  on site, then cleaned up. Valleys/low spots: deep black dirt, little rock; slopes and upper end:
+  shallow, rocky soil over limestone ledges; we left the steep inclines and largest rock in place.
+  Also two neighboring Spicewood lots prepped for sod (stumps, leftover mulch and rock removed on
+  one; rock only on the other). Case study /case-studies/spicewood-sod-lots (owner, 2026-11-02):
+  1.5 ac total, 3 days, June 2026; CAT 275, grapple, Harley rake; rock left on site. Customers
+  not named.
 - Balcones Canyonlands NWR fire break (owner, 2026-10-30): completed a 5-mile fire break on
   Balcones Canyonlands National Wildlife Refuge for the U.S. Fish & Wildlife Service (Feb 2026),
   timed around warbler season: started Feb 2, finished before the March 1 nesting-season
@@ -132,8 +146,24 @@ seo-reports/city-notes-priority.md.
   required; tell landowners with mature cedar-oak woodland to check with USFWS.
 - Bertram: Dylan Gavit's review is the same job as the Bertram burn-pile mulching case study:
   2 acres cleared on a 5-acre property. ❓ Owner to confirm the acreage before changing it again.
+  (owner, 2026-11-02) Our family has lived in Bertram since 2021. Most Bertram properties have
+  large limestone outcroppings and loose limestone; some lots have good dirt. Bertram jobs also
+  include a forestry mulching cleanup (removed thick mulch, stumps and rock from an earlier
+  mulching job, plus some clearing), a rock removal job, and a natural stone retaining wall (in progress as of 2026-11-02:
+  "we're turning" the rock into a wall; don't call it finished) built from rock excavated for the homesite. The mulching cleanup is now a case study
+  (/case-studies/bertram-mulching-cleanup: 1.2 ac, 3 days, Aug 2026; CAT 275, root grapple, Harley
+  rake; debris hauled off; owner wanted mowable, seed-ready ground with no stumps for a future
+  house). Customer Gary Gorton (OK to name); his 5-star Google review is on the site and tied to it.
+  The rock removal job is now a case study too (/case-studies/bertram-rock-removal: just over
+  0.5 ac behind the pool, 2 days, Aug 2026; CAT 275, root grapple, Harley rake; loose rock, cedar
+  and cactus removed, large outcroppings kept on purpose; 8 loads hauled to a place that saved the
+  owner hundreds in dump truck costs; owner seeding grass and Texas native flowers). Customer:
+  "Steve" only in the write-up; his named review (Steve King, Bertram) is tied to it and shows on
+  the Bertram rock removal page. The retaining wall job has no case study yet.
 - Briggs: no jobs there yet. Pastures are mesquite/prickly pear, and we grub it. Use nearby
   Bertram/Burnet proof and say honestly that it's ~13 miles from our base.
+  (owner, 2026-11-02) Confident tone: lead with how close Briggs is and that it's the ground we
+  clear, without the "haven't done a job yet" framing. Still never claim a Briggs job.
 - Gonzales: the 34.8 ac job was on sandy soil. Owner prefers flat ground with less rock and
   wants more Gonzales/Luling work.
 - Luling: no jobs in Luling itself yet. Closest job: Harwood, TX (~9 mi east), 3 ac forestry

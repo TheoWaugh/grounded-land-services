@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import BreadcrumbSchema from "../../components/BreadcrumbSchema";
 import BeforeAfterSlider from "../../components/BeforeAfterSlider";
 import { caseStudies } from "@/lib/case-studies";
+import { testimonials } from "@/data/testimonials";
 import { equipmentPhotos } from "@/data/equipment-photos";
 import CaseStudyGallery from "../../components/CaseStudyGallery";
 import YouTubePlayer from "../../components/YouTubePlayer";
@@ -45,6 +46,7 @@ export default async function CaseStudyPage({ params }: { params: PageParams }) 
   const allPhotos = [study.afterPhoto, ...(study.galleryPhotos ?? [])];
   const cityService = study.services.find((s) => CITY_SERVICE_PAGES.includes(s.slug));
   const locationHref = `/service-areas/${study.locationSlug}${cityService ? `/${cityService.slug}` : ""}`;
+  const reviews = testimonials.filter((t) => t.caseStudy === study.slug);
 
   return (
     <>
@@ -176,6 +178,28 @@ export default async function CaseStudyPage({ params }: { params: PageParams }) 
           </div>
         )}
 
+        {/* Customer review (Google review tied to this job; no review markup) */}
+        {reviews.length > 0 && (
+          <div className="mb-10">
+            <h2 className="text-2xl font-bold text-[#0a0a0a] mb-3">What the Customer Said</h2>
+            {reviews.map((t) => (
+              <figure key={t.name} className="p-6 bg-[#f9f9f9] rounded-2xl mb-4">
+                <div className="flex gap-0.5 mb-3" aria-label="5 out of 5 stars">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-4 h-4 text-[#C4922A]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                    </svg>
+                  ))}
+                </div>
+                <blockquote className="text-[15px] text-[#2d2d2f] leading-relaxed mb-4">&ldquo;{t.quote}&rdquo;</blockquote>
+                <figcaption className="pt-4 border-t border-gray-200">
+                  <p className="text-sm font-bold text-[#0a0a0a]">{t.name}</p>
+                  {t.location && <p className="text-xs text-[#6e6e73] tracking-wide">{t.location} · Google review</p>}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        )}
 
         {/* CTA */}
         <div className="bg-[#0a0a0a] rounded-2xl py-10 px-6 text-center">

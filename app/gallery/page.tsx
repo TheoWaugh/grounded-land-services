@@ -50,6 +50,7 @@ const allImages = [
   { src: "/images/work/497D4F69-C9AD-4DC7-93C7-5A8184A544BE.jpeg", alt: "Completed access trail in Bertram, TX", tag: "Forestry Mulching", featured: true },
   { src: "/images/work/B8149350-A976-41F6-8DF0-33DA9C4C31ED.jpeg", alt: "Completed forestry mulching job in Luling, TX", tag: "Forestry Mulching", featured: true },
   { src: "/images/work/king-rock-removal.jpeg", alt: "Rock removal project in Bertram, TX", tag: "Rock Removal & Crushing", featured: true },
+  { src: "/projects/bertram-rock-removal/rock-removal-bertram-backyard-after.webp", alt: "Backyard behind a pool in Bertram, TX after rock removal: loose limestone, cedar, and cactus cleared, large limestone outcroppings kept", tag: "Rock Removal & Crushing" },
   { src: "/images/work/brixton-mulching-2.jpeg", alt: "Completed Forestry mulching project in Round Rock, Texas", tag: "Forestry Mulching", featured: true },
 
 
@@ -64,6 +65,8 @@ const allImages = [
   { src: "/images/work/IMG_1502.jpeg", alt: "Completed driveway in Dale, TX", tag: "Driveways" },
   { src: "/images/work/IMG_1593.jpeg", alt: "Completed forestry mulching job in Kyle, TX", tag: "Forestry Mulching" },
   { src: "/images/work/gorton-cleanup.JPEG", alt: "Forestry mulching cleanup project in Bertram, TX", tag: "Forestry Mulching" },
+  { src: "/projects/bertram-mulching-cleanup/mulching-cleanup-bertram-after.webp", alt: "Smooth, open ground after a forestry mulching cleanup in Bertram, TX: old mulch, stumps, and rock removed", tag: "Forestry Mulching" },
+  { src: "/projects/bertram-mulching-cleanup/mulching-cleanup-bertram-cat-275-root-grapple.webp", alt: "CAT 275 with root grapple pulling stumps and old brush during a forestry mulching cleanup in Bertram, TX", tag: "Forestry Mulching" },
   { src: "/images/work/IMG_2966.jpeg", alt: "Completed fence line clearing in Burnet, TX", tag: "Forestry Mulching" },
   { src: "/images/work/IMG_3180.jpeg", alt: "Prinoth forestry mulcher on a CAT 275 excavator", tag: "Equipment" },
   { src: "/images/work/henson-clearing-3-mulching.jpeg", alt: "Completed forestry mulching job in Bertram, TX", tag: "Forestry Mulching" },

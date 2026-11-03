@@ -4,6 +4,8 @@ export interface Testimonial {
   name: string;
   location?: string;
   quote: string;
+  /** Case study slug (lib/case-studies.ts) for this reviewer's job: shown on that page and linked from the review. */
+  caseStudy?: string;
 }
 
 export const testimonials: Testimonial[] = [
@@ -21,6 +23,12 @@ export const testimonials: Testimonial[] = [
     quote: "On time, hard-working, nonstop, knowledgeable, easy to work with, generous, first responder supportive, like-minded, honest, good people, outstanding equipment, top-tier service, went out of their way multiple times to make sure my wife and I were satisfied in a patient manner. All around great people and land clearing company I see sky rocketing. More than fair prices for services. My wife and I recently bought 5 acres in Bertram, Texas. We found Grounded Land Services and gave them a try. Man are we glad we did. They were able to mow down giant cedar brush piles that had been there for at least 15 years down to nothing, worked all day and then some to get the job done and went out of their way to do a little extra on the house. These guys have been nothing short of amazing to work with — we sat in lawn chairs and watched them work meticulously yet efficiently. I would highly recommend them to anyone needing absolutely any sort of land clearing needed. 10/10 five star crew and business.",
   },
   {
+    name: "Gary Gorton",
+    location: "Bertram, TX", // owner, 2026-11-02: OK to name
+    caseStudy: "bertram-mulching-cleanup",
+    quote: "Ground[ed] Land Services is a rare find. Knowledgeable, professional, punctual and a fair price. Logan met and exceeded all of our expectations. We will definitely use him again.",
+  },
+  {
     name: "Mckenzie Schultz",
     location: "Texas",
     quote: "I had an excellent experience with Grounded Land Services! They cleared five acres of heavy underbrush for me efficiently and thoroughly. The results exceeded my expectations! The crew was extremely professional and communicated clearly throughout the entire process. It's clear they take pride in their work. So happy with the results, would 100% recommend to anyone needing their services!",
@@ -28,6 +36,7 @@ export const testimonials: Testimonial[] = [
   {
     name: "Mike Janak",
     location: "Spicewood, TX", // owner, 2026-10-27
+    caseStudy: "spicewood-lake-travis-lot", // owner, 2026-11-02: OK to show his name with it
     quote: "I hired Grounded Land Services to clear a 50 ft by 300 ft path through heavily wooded, sloping terrain that was inundated with Huisache and Prickly Pear. Walking that area before was a miserable experience and now it's a beautiful stroll on my property! Logan's attention to detail and especially the cleanup has my neighbors asking me for his business card.",
   },
   {
@@ -54,6 +63,8 @@ export const testimonials: Testimonial[] = [
   },
   {
     name: "Steve King",
+    location: "Bertram, TX", // owner, 2026-11-02
+    caseStudy: "bertram-rock-removal",
     quote: "Logan worked on our property behind our pool and did a wonderful job clearing just over 1/2 acre. Logan's attention to detail coupled with methodical work ethic and a desire to do things the right way the first time lends to an outstanding finished product. He even found a source for the debris that saved us hundreds of dollars in dump truck removal costs! In addition, a neighbor asked me for his contact information! We highly recommend Logan and Grounded Land Services! They are professional, trustworthy and hard working. We are very happy and will be seeding soon with grass and Texas native flower seeds. Thanks to Grounded Land Services!!!",
   },
   {

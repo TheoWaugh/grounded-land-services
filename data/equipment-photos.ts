@@ -5,4 +5,5 @@ export const equipmentPhotos: Record<string, { image: string; imagePosition?: st
   "harley-rake": { image: "/images/work/harley-rake-pic.jpeg", imagePosition: "center 70%" },
   "prinoth": { image: "/images/service-pics/cat-275-pic.jpeg" },
   "grapple-rake": { image: "/images/work/275-pic-equipment.jpeg", imagePosition: "center 60%" },
+  "industrial-grapple": { image: "/images/service-pics/grapple-bucket-pic.jpeg", imagePosition: "center 65%" },
 };

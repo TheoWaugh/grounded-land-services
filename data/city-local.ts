@@ -27,6 +27,8 @@ export interface CityLocal {
   studies: string[];
   /** Testimonial names (data/testimonials.ts) to show, in order: local first, then nearest. */
   reviews: string[];
+  /** Replaces `reviews` on that city × service page. */
+  serviceReviews?: Partial<Record<"land-clearing" | "forestry-mulching" | "rock-removal", string[]>>;
   faqs: LocalFaq[];
 }
 
@@ -193,12 +195,27 @@ export const cityLocal: Record<string, CityLocal> = {
       "Our 53.8-acre Spicewood ranch job took 2.5 months. We grubbed cedar and mesquite over 4 inches, mulched the smaller growth, and used chainsaws on steep, rocky ridges the equipment couldn't reach. Several mature oaks had oak wilt, so we removed the ones too far gone and treated the oaks showing early signs. We also demolished and hauled off 2 old houses and 4 barns.",
       "That ranch's owner, Barrett Garrison, left us a review. So did Mike Janak, who had us clear a 50 by 300 foot path through wooded, sloping ground full of huisache and prickly pear.",
     ],
+    serviceExperience: {
+      "land-clearing": [
+        "Spicewood is some of the most varied ground we clear. On a 53.8-acre ranch here, the valleys and low spots had deep black dirt with little rock, while the slopes and upper end had shallow, rocky soil over limestone ledges. Over 2.5 months, we grubbed cedar and mesquite over 4 inches, mulched the smaller growth, and used chainsaws on the steep ridges the equipment couldn't safely reach.",
+        "Several mature oaks on that ranch had oak wilt, so we removed the ones too far gone and treated those showing early signs. We also demolished and hauled off 2 old houses and 4 barns, burned the brush piles on site and cleaned up afterward, then finished the ground with our [Harley rake](/equipment#harley-rake). [See the full project](/case-studies/spicewood-land-clearing)",
+        "On a lot right on Lake Travis, we cleared mesquite, huisache, prickly pear, and rock so the owners could mow without popping tires on thorns, then chainsawed a trail down to the water so they could reach their new dock.",
+      ],
+      "forestry-mulching": [
+        "Most Spicewood properties are a mix of thick cedar and mesquite, steep slopes, and rock, so we often combine methods. On a 53.8-acre ranch here, we grubbed the bigger cedar and mesquite and mulched everything smaller, leaving the mulch on the ground to protect the soil on the rocky slopes.",
+        "Across the lake, we mulched a 5-mile fire break on Balcones Canyonlands National Wildlife Refuge off FM 1431, working on steep, rocky ground with tight access and finishing before golden-cheeked warbler nesting season. [See the full project](/case-studies/balcones-refuge-fire-break)",
+      ],
+      "rock-removal": [
+        "Almost every Spicewood property we've worked on has had loose limestone rock and solid limestone ledges. Some also have river rock near Lake Travis, or dolomite, a very hard rock. On a 53.8-acre ranch, the slopes and upper end had shallow, rocky soil, so we removed a lot of rock and left the steep inclines and the largest rock in place.",
+        "On two neighboring Spicewood lots, both owners wanted their yards ready for sod, and sod needs smooth ground without rock or loose debris underneath so it can root into the soil. On the first lot, a previous clearing job had left old stumps and a layer of mulch behind, so we pulled the stumps, cleared out the leftover mulch, and removed the rock. On the second lot, the ground just needed the rock taken out. Both were left clean and ready for sod. [See the full project](/case-studies/spicewood-sod-lots)",
+      ],
+    },
     serviceNotes: {
       "land-clearing": "Expect steep ridges and rock. On the 53.8-acre ranch, we finished the ground the equipment couldn't safely reach with chainsaws.",
       "forestry-mulching": "On the 53.8-acre ranch we combined both methods: we grubbed the cedar and mesquite over 4 inches, then mulched everything smaller.",
       "rock-removal": "Clearing in Spicewood often exposes rock. On the 53.8-acre ranch, we removed the rock that came up during clearing along with the old debris.",
     },
-    studies: ["spicewood-land-clearing", "jonestown-forestry-mulching"],
+    studies: ["spicewood-land-clearing", "spicewood-lake-travis-lot", "spicewood-sod-lots", "balcones-refuge-fire-break", "jonestown-forestry-mulching"],
     reviews: ["Barrett Garrison", "Mike Janak"],
     faqs: [
       {
@@ -230,13 +247,29 @@ export const cityLocal: Record<string, CityLocal> = {
       "On a 1-acre Bertram property, cedar had grown in under several large red oaks and was competing with them, so we mulched it out in one day along with the dead limbs and trees.",
       "On a 5-acre Bertram property, we cleared 2 acres covered in six old burn piles that had sat for years with dirt and rock mixed in. We used a grapple to separate the brush from the dirt and rock before mulching it, so the owners could start planning their house. That's the job Dylan Gavit reviewed.",
     ],
+    serviceExperience: {
+      "land-clearing": [
+        "Bertram is home. Our family has lived here since 2021, so the free site visit is a short drive for us. Most Bertram properties have plenty of rock, with large limestone outcroppings and lots of loose limestone, though some lots have good dirt. When we clear land here, pulling out the trees often brings rock up with the roots, so we finish with our [Harley rake](/equipment#harley-rake) to level the ground and pick up the leftover debris and rock.",
+        "Right here in Bertram, we've also [cleaned up a property left rough by an earlier mulching job](/case-studies/bertram-mulching-cleanup), removing the thick mulch, stumps, and rock and doing some clearing so the owner had usable ground again.",
+      ],
+      "forestry-mulching": [
+        "On a 1-acre Bertram property, cedar had grown in under several large red oaks and was competing with them for water, so we mulched it out in one day along with the dead limbs and trees. On a 5-acre property, we cleared 2 acres covered in six old burn piles that had sat for years with dirt and rock mixed in. We used a grapple to separate the brush from the dirt and rock before mulching it, so the owners could start planning their house.",
+        "Mulching also leaves no burn piles behind, which matters here. Burnet County puts burn bans in place during dry spells, so you're not stuck waiting to burn.",
+      ],
+      "rock-removal": [
+        "Rock is part of almost every Bertram property: large limestone outcroppings and lots of loose limestone, with only some lots having good, deep dirt. We've done [rock removal right here in Bertram](/case-studies/bertram-rock-removal). On one Bertram homesite, we're turning the rock dug up for the house into a natural stone retaining wall, so the rock gets put to work instead of hauled off.",
+      ],
+    },
     serviceNotes: {
       "land-clearing": "Since we're based in Bertram, the free site visit is a short trip for us.",
       "forestry-mulching": "Both of our Bertram case studies are mulching jobs: cedar under red oaks, and old burn piles sorted with a grapple and mulched.",
       "rock-removal": "Rock here ranges from shallow limestone near town to granite and older rock farther west in the county.",
     },
-    studies: ["bertram-burn-pile-mulching", "bertram-forestry-mulching", "burnet-forestry-mulching", "liberty-hill-rock-removal"],
-    reviews: ["Dylan Gavit", "John Cortez", "Holton Garrison", "Preston Jones"],
+    studies: ["bertram-burn-pile-mulching", "bertram-forestry-mulching", "bertram-mulching-cleanup", "bertram-rock-removal", "burnet-forestry-mulching", "liberty-hill-rock-removal"],
+    reviews: ["Dylan Gavit", "Gary Gorton", "John Cortez", "Holton Garrison", "Preston Jones"],
+    serviceReviews: {
+      "rock-removal": ["Steve King", "Dylan Gavit", "Gary Gorton", "John Cortez", "Holton Garrison", "Preston Jones"],
+    },
     faqs: [
       {
         question: "I have old brush piles mixed with dirt and rock. Can you mulch them?",
@@ -259,7 +292,7 @@ export const cityLocal: Record<string, CityLocal> = {
       "A lot of the pasture here has been taken over by mesquite and prickly pear, with live oak, cedar, cedar elm and hackberry mixed in. Properties are mostly ranches, farms, acreage, homesites and hunting land.",
     ],
     experience: [
-      `We haven't done a job in Briggs yet, and we won't pretend otherwise. Mesquite and prickly pear pasture is exactly the kind of ground we work, and we grub it out. Our closest projects are in Bertram, about ${miles("Briggs")} miles away, and in Burnet.`,
+      `Briggs is just ${miles("Briggs")} miles from our Bertram base, and mesquite and prickly pear pasture is exactly the kind of ground we clear. We grub it out. Our closest projects are in Bertram and Burnet, and you can see them on this page.`,
     ],
     serviceNotes: {
       "land-clearing": "For mesquite and prickly pear pasture, we grub it out.",
@@ -271,7 +304,7 @@ export const cityLocal: Record<string, CityLocal> = {
     faqs: [
       {
         question: "Have you worked in Briggs?",
-        answer: `Not yet. Briggs is about ${miles("Briggs")} miles from our base in Bertram, where we've done two forestry mulching jobs, and we've also worked in Burnet. You can see those projects on this page.`,
+        answer: `Briggs is just ${miles("Briggs")} miles from our base in Bertram, so it's close to home for us. Our closest projects are right down the road: two forestry mulching jobs in Bertram and one in Burnet, and you can see them on this page. Mesquite and prickly pear pasture is exactly the kind of ground we clear.`,
       },
       {
         question: "My pasture is overrun with mesquite and prickly pear. What do you do with it?",
