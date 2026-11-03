@@ -25,6 +25,8 @@ export interface CityLocal {
   serviceNotes: Partial<Record<"land-clearing" | "forestry-mulching" | "rock-removal", string>>;
   /** Case study slugs to show, in order: local first, then nearest. */
   studies: string[];
+  /** Replaces `studies` on that city × service page. */
+  serviceStudies?: Partial<Record<"land-clearing" | "forestry-mulching" | "rock-removal", string[]>>;
   /** Testimonial names (data/testimonials.ts) to show, in order: local first, then nearest. */
   reviews: string[];
   /** Replaces `reviews` on that city × service page. */
@@ -325,12 +327,25 @@ export const cityLocal: Record<string, CityLocal> = {
       "In October 2026 we mulched 1 acre of brush, cedar and old fence-building brush piles in Gonzales in one day, so the owner had open pasture and a view of their pond. That ground was sandy with sandstone scattered through it, so we took extra care to keep the mulching head from throwing sparks.",
       "Gonzales land is some of our favorite to clear: flat, sandy ground that usually has little rock, legacy pecans and oaks, and wide-open pastures. Our equipment works fast here and finishes clean, which helps keep clearing costs down for landowners.",
     ],
+    serviceExperience: {
+      "land-clearing": [
+        "Our 34.8-acre Gonzales job took a month. Cottonwood, cedar elm and mesquite had grown up under and around big legacy pecans, and the owner wanted usable pasture. We grubbed everything over 2 inches, mulched the smaller growth, and burned the piles on site. The ground was sandy, which let us dig burn pits for our fires to keep them safer and make cleanup easier.",
+        "Gonzales land is some of our favorite to clear: flat, sandy ground that usually has little rock, legacy pecans and oaks, and wide-open pastures. Our equipment works fast here and finishes clean, which helps keep clearing costs down for landowners.",
+      ],
+      "forestry-mulching": [
+        "Around Gonzales, a lot of our mulching work is opening pasture back up. On a 1-acre Gonzales property, brush and cedar had grown in, along with piles of brush left behind when the fence was built. The owners wanted open pasture and a clear view of their pond, so we mulched it all in place in one day. The sandy ground there has sandstone scattered through it, which makes the terrain rough, so we took extra care to keep the mulching head from throwing sparks. [See the full project](/case-studies/gonzales-forestry-mulching)",
+        "In nearby Harwood, we mulched 3 acres of cedar, mesquite, and cactus in one day to open a field for dove season and help the owner pick out a homesite. [See the full project](/case-studies/harwood-forestry-mulching)",
+      ],
+    },
     serviceNotes: {
       "land-clearing": "On the Gonzales pecan job we combined both methods: we grubbed the bigger trees and mulched the rest.",
       "forestry-mulching": "Mulching works well under big pecans and oaks. On our 1-acre Gonzales mulching job, the brush, cedar and old brush piles were all mulched in place, with nothing burned or hauled off.",
     },
     studies: ["gonzales-land-clearing", "gonzales-forestry-mulching", "harwood-forestry-mulching"],
-    reviews: ["Emil Millet"],
+    serviceStudies: {
+      "forestry-mulching": ["gonzales-forestry-mulching", "gonzales-land-clearing", "harwood-forestry-mulching"],
+    },
+    reviews: ["Clint Strittmatter"],
     faqs: [
       {
         question: "Can you clear under my big pecan trees without damaging them?",
@@ -355,19 +370,19 @@ export const cityLocal: Record<string, CityLocal> = {
       `Post oak, live oak, pecan, cedar elm and mesquite are common, with eastern redcedar, yaupon and huisache filling in. Properties are mostly farms, ranches, hunting land and rural homesites. Luling is about ${miles("Luling")} miles from our Bertram base.`,
     ],
     experience: [
-      `We haven't done a job inside Luling yet. Our closest job is in Harwood, about ${milesTo("Luling", "Harwood")} miles east of Luling, where we mulched 3 acres of cedar, mesquite and cactus in one day to open a field for dove season and help the owner pick a homesite. Our 34.8-acre Gonzales job is about ${milesTo("Luling", "Gonzales")} miles away.`,
-      "Flat, sandy ground without much rock is ground we like working, and we'd like to take on more jobs around Luling and Gonzales.",
+      `Our closest job to Luling is in Harwood, about ${milesTo("Luling", "Harwood")} miles east, where we mulched 3 acres of cedar, mesquite, and cactus in one day to open a field for dove season and help the owner pick out a homesite. About ${milesTo("Luling", "Gonzales")} miles away in Gonzales, we cleared 34.8 acres from under legacy pecans to open up pasture.`,
+      "Luling-area land is some of our favorite to clear: flat, sandy ground with little rock, post oaks and pecans, and wide-open pasture. Our equipment works fast here and finishes clean, which helps keep clearing costs down for landowners.",
     ],
     serviceNotes: {
       "land-clearing": `If you're opening pasture or a homesite near Luling, we'll walk the property at the free site visit and quote it by the acre (${clearing.range} ${clearing.unit}).`,
       "forestry-mulching": "Eastern redcedar, yaupon and huisache are the brush we expect to find on Luling-area pasture.",
     },
-    studies: ["harwood-forestry-mulching", "gonzales-land-clearing"],
-    reviews: ["Emil Millet"],
+    studies: ["harwood-forestry-mulching", "gonzales-land-clearing", "gonzales-forestry-mulching"],
+    reviews: ["Clint Strittmatter"],
     faqs: [
       {
         question: "Have you worked near Luling?",
-        answer: `Yes. We mulched 3 acres of cedar, mesquite and cactus in Harwood, about ${milesTo("Luling", "Harwood")} miles east of Luling, and we cleared 34.8 acres in Gonzales, about ${milesTo("Luling", "Gonzales")} miles away. We haven't done a job inside Luling yet.`,
+        answer: `Yes. We mulched 3 acres of cedar, mesquite and cactus in Harwood, about ${milesTo("Luling", "Harwood")} miles east of Luling, and we cleared 34.8 acres in Gonzales, about ${milesTo("Luling", "Gonzales")} miles away.`,
         link: { label: "Our 3-acre Harwood mulching job", href: "/case-studies/harwood-forestry-mulching" },
       },
       {

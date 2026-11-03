@@ -171,7 +171,9 @@ seo-reports/city-notes-priority.md.
   Case study: /case-studies/gonzales-forestry-mulching. Owner prefers flat ground with less rock and
   wants more Gonzales/Luling work.
 - Luling: no jobs in Luling itself yet. Closest job: Harwood, TX (~9 mi east), 3 ac forestry
-  mulching, case study /case-studies/harwood-forestry-mulching (added 2026-10-27). Has NOT worked around oil wells or pumpjacks: never claim it.
+  mulching, case study /case-studies/harwood-forestry-mulching (added 2026-10-27).
+  (owner, 2026-11-03) Clint Strittmatter's review is from Harwood, TX; it shows on the Gonzales and Luling pages
+  (replacing Emil Millet) but is NOT linked to the Harwood case study. Has NOT worked around oil wells or pumpjacks: never claim it.
 
 ## Leads & contact
 - Best way to reach you: call or text (512) 571-6700, or the quote form

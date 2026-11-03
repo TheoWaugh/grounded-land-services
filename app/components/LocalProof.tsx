@@ -23,7 +23,9 @@ function placeLabel(pageCity: string, otherCity: string): string {
 export default function LocalProof({ city, local, service }: { city: string; local: CityLocal; service?: string }) {
   const experience =
     (service && local.serviceExperience?.[service as keyof NonNullable<CityLocal["serviceExperience"]>]) || local.experience;
-  const studies = local.studies
+  const studySlugs =
+    (service && local.serviceStudies?.[service as keyof NonNullable<CityLocal["serviceStudies"]>]) || local.studies;
+  const studies = studySlugs
     .map((slug) => caseStudies.find((c) => c.slug === slug))
     .filter((c): c is (typeof caseStudies)[number] => Boolean(c));
   const reviewNames =

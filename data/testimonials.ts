@@ -91,6 +91,7 @@ export const testimonials: Testimonial[] = [
   },
     {
     name: "Clint Strittmatter",
+    location: "Harwood, TX",
     quote: "Logan did an amazing job with clearing my property. I'm going to need another day and I definitely won't hesitate to have him back out again. Thanks Logan!",
   },
     {
