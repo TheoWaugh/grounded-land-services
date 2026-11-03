@@ -322,13 +322,14 @@ export const cityLocal: Record<string, CityLocal> = {
     ],
     experience: [
       "Our 34.8-acre Gonzales job took a month. Cottonwood, cedar elm and mesquite had grown up under and around big legacy pecans, and the owner wanted usable pasture. We grubbed everything over 2 inches, mulched the smaller growth, and burned the piles on site. The ground was sandy, which let us dig burn pits for our fires to keep them safer and make cleanup easier.",
-      "Gonzales land is some of our favorite to clear: flat, sandy ground with little rock, legacy pecans and oaks, and wide-open pastures. Our equipment works fast here and finishes clean, which helps keep clearing costs down for landowners.",
+      "In October 2026 we mulched 1 acre of brush, cedar and old fence-building brush piles in Gonzales in one day, so the owner had open pasture and a view of their pond. That ground was sandy with sandstone scattered through it, so we took extra care to keep the mulching head from throwing sparks.",
+      "Gonzales land is some of our favorite to clear: flat, sandy ground that usually has little rock, legacy pecans and oaks, and wide-open pastures. Our equipment works fast here and finishes clean, which helps keep clearing costs down for landowners.",
     ],
     serviceNotes: {
       "land-clearing": "On the Gonzales pecan job we combined both methods: we grubbed the bigger trees and mulched the rest.",
-      "forestry-mulching": "Mulching works well under big pecans. On the Gonzales job, everything under 2 inches went through the mulcher instead of being pushed into piles.",
+      "forestry-mulching": "Mulching works well under big pecans and oaks. On our 1-acre Gonzales mulching job, the brush, cedar and old brush piles were all mulched in place, with nothing burned or hauled off.",
     },
-    studies: ["gonzales-land-clearing", "harwood-forestry-mulching"],
+    studies: ["gonzales-land-clearing", "gonzales-forestry-mulching", "harwood-forestry-mulching"],
     reviews: ["Emil Millet"],
     faqs: [
       {

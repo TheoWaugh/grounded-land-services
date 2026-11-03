@@ -491,4 +491,24 @@ export const caseStudies: CaseStudy[] = [
       "/images/work/king-rock-removal.jpeg",
     ],
   },
+  {
+    slug: "gonzales-forestry-mulching",
+    title: "Forestry Mulching in Gonzales, Texas",
+    description: "1 acre of brush, cedar, and leftover brush piles mulched in one day in Gonzales, Texas. The owner wanted to open up pasture and see their pond, so we mulched everything in place with our CAT 275 and Prinoth mulching head, taking extra care on sandy ground scattered with sandstone to keep the mulching head from throwing sparks.",
+    summary: "Mulched brush, cedar, and old fence-building brush piles in place to open up pasture and a view of the pond.",
+    longDescription: "This 1-acre Gonzales property was grown up in brush and cedar, and there were piles of brush left behind from when the fence was built. The owner wanted two things: open pasture, and a clear view of their pond.\n\nThe ground was sandy soil with sandstone scattered throughout, which made the terrain rough. Sandstone is hard on a mulching head, and steel teeth hitting rock can throw sparks, so we took extra care to keep the mulching head from throwing sparks while we worked through the rocky spots.\n\nWe used our CAT 275 with the Prinoth mulching head to mulch the brush, the cedar, and the old brush piles in place, so there were no burn piles and nothing to haul off.\n\nThe job took one day and was finished in October 2026. The result is open ground under the oaks with a view of the pond, ready to use as pasture.",
+    location: "Gonzales, TX",
+    locationSlug: "gonzales",
+    acreage: "1 Acre",
+    timeline: "1 Day",
+    services: [
+      { label: "Forestry Mulching", slug: "forestry-mulching" },
+      { label: "Tree Pile Shredding", slug: "tree-pile-shredding" },
+    ],
+    equipmentUsed: [
+      { label: "Cat 275 XE", equipmentId: "cat-275" },
+      { label: "Prinoth Mulching Head", equipmentId: "prinoth" },
+    ],
+    afterPhoto: "/projects/gonzales-forestry-mulching/forestry-mulching-gonzales-oaks-pond-after.webp",
+  },
 ];

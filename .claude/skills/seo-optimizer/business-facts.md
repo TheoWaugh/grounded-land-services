@@ -75,8 +75,8 @@ Luling, Bertram, Briggs. Focus content, case studies, and links here first.
   Keep the visible TrustStrip, TrustBadges and homepage counts in sync with Google.
 - The "Kelley Arnold" review is from a family member: removed from the site
   (owner, 2026-10-21). Never show or mark it up.
-- Case studies on site: 19 in lib/case-studies.ts (owner confirmed 10 on 2026-10-21; more
-  added since, incl. Georgetown 5 ac and Harwood 3 ac on 2026-10-27, Kingsland 0.5 ac and Balcones refuge 5-mile fire break on 2026-10-30, Spicewood Lake Travis lot 0.5 ac and Spicewood sod lots 1.5 ac and Bertram mulching cleanup 1.2 ac and Bertram rock removal 0.5 ac on 2026-11-02; e.g. Spicewood 53.8 ac land clearing,
+- Case studies on site: 20 in lib/case-studies.ts (owner confirmed 10 on 2026-10-21; more
+  added since, incl. Georgetown 5 ac and Harwood 3 ac on 2026-10-27, Kingsland 0.5 ac and Balcones refuge 5-mile fire break on 2026-10-30, Spicewood Lake Travis lot 0.5 ac and Spicewood sod lots 1.5 ac and Bertram mulching cleanup 1.2 ac and Bertram rock removal 0.5 ac on 2026-11-02, Gonzales forestry mulching 1 ac on 2026-11-03; e.g. Spicewood 53.8 ac land clearing,
   Gonzales 34.8 ac, Liberty Hill 4.1 ac rock removal)
 - Testimonials: on site with names and cities (Testimonials.tsx, app/page.tsx)
 - Gallery photo locations: NOT confirmed (every alt says "Bertram, TX"), except
@@ -164,7 +164,11 @@ seo-reports/city-notes-priority.md.
   Bertram/Burnet proof and say honestly that it's ~13 miles from our base.
   (owner, 2026-11-02) Confident tone: lead with how close Briggs is and that it's the ground we
   clear, without the "haven't done a job yet" framing. Still never claim a Briggs job.
-- Gonzales: the 34.8 ac job was on sandy soil. Owner prefers flat ground with less rock and
+- Gonzales: the 34.8 ac job was on sandy soil. (owner, 2026-11-03) Second Gonzales job: 1 ac forestry mulching,
+  1 day, Oct 2026, CAT 275 + Prinoth; brush, cedar and brush piles left from building the fence, mulched
+  in place; owner wanted pasture and a view of their pond; sandy soil with sandstone scattered throughout
+  (rough terrain), extra care taken to keep the mulching head from throwing sparks. Customer not named.
+  Case study: /case-studies/gonzales-forestry-mulching. Owner prefers flat ground with less rock and
   wants more Gonzales/Luling work.
 - Luling: no jobs in Luling itself yet. Closest job: Harwood, TX (~9 mi east), 3 ac forestry
   mulching, case study /case-studies/harwood-forestry-mulching (added 2026-10-27). Has NOT worked around oil wells or pumpjacks: never claim it.

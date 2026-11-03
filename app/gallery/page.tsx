@@ -113,6 +113,7 @@ const allImages = [
   { src: "/images/work/spicewood-harley-raking1.JPEG", alt: "Completed Harley raking in Spicewood, TX", tag: "Site Prep" },
   { src: "/images/work/harley-rake-pic.jpeg", alt: "Harley rake attachment on a CAT 275 excavator", tag: "Equipment" },
   { src: "/images/work/harwood-mulching.JPEG", alt: "Completed forestry mulching project in Harwood, TX", tag: "Forestry Mulching" },
+  { src: "/projects/gonzales-forestry-mulching/forestry-mulching-gonzales-oaks-pond-after.webp", alt: "Forestry mulching in Gonzales, TX: brush and cedar mulched under the oaks to open pasture and a view of the pond", tag: "Forestry Mulching" },
   { src: "/images/work/299-275-case-pic.jpeg", alt: "Grounded Land Services skid steers with various attachments", tag: "Equipment" },
   { src: "/images/work/dji_fly_20251022_072324_0022_1768263397042_photo.jpeg", alt: "Completed land clearing job in Spicewood, TX", tag: "Land Clearing" },
   { src: "/images/work/IMG_6405.jpeg", alt: "Completed erosion control job in Central Texas", tag: "Site Prep" },
