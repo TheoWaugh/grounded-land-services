@@ -164,7 +164,7 @@ seo-reports/city-notes-priority.md.
   Bertram/Burnet proof and say honestly that it's ~13 miles from our base.
   (owner, 2026-11-02) Confident tone: lead with how close Briggs is and that it's the ground we
   clear, without the "haven't done a job yet" framing. Still never claim a Briggs job.
-- Gonzales: the 34.8 ac job was on sandy soil. (owner, 2026-11-03) Second Gonzales job: 1 ac forestry mulching,
+- Gonzales: the 34.8 ac job was on sandy soil, along the Guadalupe River (owner, 2026-11-03). (owner, 2026-11-03) Second Gonzales job: 1 ac forestry mulching,
   1 day, Oct 2026, CAT 275 + Prinoth; brush, cedar and brush piles left from building the fence, mulched
   in place; owner wanted pasture and a view of their pond; sandy soil with sandstone scattered throughout
   (rough terrain), extra care taken to keep the mulching head from throwing sparks. Customer not named.
