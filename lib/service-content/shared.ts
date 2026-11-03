@@ -30,10 +30,11 @@ export function localConditions(city: string, service: keyof CityLocal["serviceN
  * of them, and the customer reviews rendered inside the section. Priority cities point to the
  * local-proof block instead, which lists their case studies and the nearest ones.
  */
-export function whyUsProof(city: string, equipmentSentence: string): Required<Pick<ServiceSection, "paragraphs" | "showReviews">> & Pick<ServiceSection, "list"> {
+export function whyUsProof(city: string, equipmentSentence: string): Required<Pick<ServiceSection, "paragraphs" | "showReviews">> & Pick<ServiceSection, "list" | "localProofLine"> {
   if (cityLocal[city]) {
     return {
-      paragraphs: [equipmentSentence, `See [our work in and near ${city}](#local-proof) below.`],
+      paragraphs: [equipmentSentence],
+      localProofLine: `See [our work in and near ${city}](#local-proof) below.`,
       showReviews: true,
     };
   }
