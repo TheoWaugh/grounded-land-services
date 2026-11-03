@@ -154,6 +154,9 @@ const allVideoIds = content.sections.flatMap((s) => [
               </p>
             ))}
 
+            {/* "Our Work in …" sits right under the "See our work in and near …" line, above the reviews. */}
+            {local && section.showReviews && <LocalProof city={cityName} local={local} service={service} />}
+
             {section.listIntro && (
               <p className="font-semibold text-amber-800 mb-3 mt-2">{section.listIntro}</p>
             )}
@@ -456,8 +459,6 @@ const allVideoIds = content.sections.flatMap((s) => [
               </div>
             )}
           </div>
-          {/* "Our Work in …" sits right under the "Why … Choose" section, the one that shows reviews. */}
-          {local && section.showReviews && <LocalProof city={cityName} local={local} service={service} />}
           </Fragment>
         ))}
 
