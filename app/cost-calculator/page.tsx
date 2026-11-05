@@ -25,8 +25,9 @@ const faqs = [
     answer: `Land clearing costs ${clearing.range} ${clearing.unit}. Light brush with little rock lands near the low end, and thick cedar with lots of rock lands near the high end. Terrain and access matter too, and we give you a firm price at a free site visit.`,
   },
   {
-    question: "How long does forestry mulching take?",
-    answer: `Forestry mulching covers ${MULCHING_RATES}. It costs ${mulching.range} ${mulching.unit}, so the number of days decides your total.`,
+    question: "How is forestry mulching priced?",
+    answer: `Forestry mulching costs ${mulching.range} ${mulching.unit}, so your total depends on how thick the brush is and how much ground there is to cover. For how long a mulching job takes, see our forestry mulching page.`,
+    link: { label: "Forestry mulching", href: "/services/forestry-mulching" },
   },
   {
     question: "Is there a minimum job?",

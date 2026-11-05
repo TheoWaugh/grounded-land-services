@@ -10,7 +10,6 @@ import {
   priceDrivers,
   estimate,
   formatDollars,
-  formatDays,
   type CalculatorService,
   type Density,
   type RockLevel,
@@ -144,11 +143,6 @@ export default function CostCalculator({
                 ? `${formatDollars(result.low)} minimum job`
                 : `${formatDollars(result.low)} – ${formatDollars(result.high)}`}
             </p>
-            {result.days && (
-              <p className="text-sm font-medium text-[#3a3a3c] mt-1">
-                Estimated time on site: {formatDays(result.days)}
-              </p>
-            )}
             <p className="text-sm text-[#6e6e73] mt-2">{priceDrivers[service]}</p>
           </>
         ) : (

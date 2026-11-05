@@ -49,7 +49,7 @@ function perAcreBand(step: number, maxStep: number): [number, number] {
 
 export const priceDrivers: Record<CalculatorService, string> = {
   "land-clearing": "Brush density and rock move the price most, then terrain and access.",
-  "forestry-mulching": "Mulching is billed by the day, so how thick the brush is decides how many days it takes.",
+  "forestry-mulching": "Mulching is billed by the day, so how thick the brush is moves the price most.",
   "rock-removal": "How much rock there is moves the price most, then how deep it's embedded and haul-off.",
 };
 
@@ -58,8 +58,6 @@ export interface Estimate {
   high: number;
   /** True when the whole range is at or under the minimum job. */
   minimumOnly: boolean;
-  /** Forestry mulching only: estimated days on site. */
-  days?: [number, number];
 }
 
 const roundDown = (n: number) => Math.floor(n / 100) * 100;
@@ -70,13 +68,12 @@ export function estimate(service: CalculatorService, acres: number, density: Den
 
   let low: number;
   let high: number;
-  let days: [number, number] | undefined;
 
   if (service === "forestry-mulching") {
+    // Priced by the day: days = acres ÷ acres per day (used for the price only, not shown)
     const [slowest, fastest] = MULCHING_ACRES_PER_DAY[density];
-    days = [acres / fastest, acres / slowest];
-    low = days[0] * DAY_RATE_LOW;
-    high = days[1] * DAY_RATE_HIGH;
+    low = (acres / fastest) * DAY_RATE_LOW;
+    high = (acres / slowest) * DAY_RATE_HIGH;
   } else {
     const [perLow, perHigh] =
       service === "land-clearing"
@@ -89,19 +86,9 @@ export function estimate(service: CalculatorService, acres: number, density: Den
   low = roundDown(low);
   high = roundUp(high);
   if (high <= MINIMUM_JOB_DOLLARS) {
-    return { low: MINIMUM_JOB_DOLLARS, high: MINIMUM_JOB_DOLLARS, minimumOnly: true, days };
+    return { low: MINIMUM_JOB_DOLLARS, high: MINIMUM_JOB_DOLLARS, minimumOnly: true };
   }
-  return { low: Math.max(low, MINIMUM_JOB_DOLLARS), high, minimumOnly: false, days };
+  return { low: Math.max(low, MINIMUM_JOB_DOLLARS), high, minimumOnly: false };
 }
 
 export const formatDollars = (n: number) => `$${n.toLocaleString("en-US")}`;
-
-/** "less than a day", "about 1 day", "about 2.5 days", "about 2–3 days" */
-export function formatDays([fewest, most]: [number, number]): string {
-  const half = (n: number) => Math.max(0.5, Math.ceil(n * 2) / 2);
-  const label = (n: number) => `${n} day${n === 1 ? "" : "s"}`;
-  if (most < 1) return "less than a day";
-  const a = half(fewest);
-  const b = half(most);
-  return a === b ? `about ${label(a)}` : `about ${a}–${label(b)}`;
-}
