@@ -5,7 +5,6 @@ import FaqAccordion from "@/app/components/FaqAccordion";
 import FaqPageSchema from "@/app/components/FaqPageSchema";
 import BreadcrumbSchema from "@/app/components/BreadcrumbSchema";
 import { servicePricing, MINIMUM_JOB } from "@/data/service-pricing";
-import { MULCHING_RATES } from "@/data/service-timelines";
 
 const clearing = servicePricing["land-clearing"];
 const mulching = servicePricing["forestry-mulching"];
@@ -22,7 +21,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "How much does land clearing cost per acre in Central Texas?",
-    answer: `Land clearing costs ${clearing.range} ${clearing.unit}. Light brush with little rock lands near the low end, and thick cedar with lots of rock lands near the high end. Terrain and access matter too, and we give you a firm price at a free site visit.`,
+    answer: `Land clearing costs ${clearing.range} ${clearing.unit}, with Harley raking included. Thicker brush costs more per acre, and hauling debris off site is extra. Terrain and access matter too, and we give you a firm price at a free site visit.`,
   },
   {
     question: "How is forestry mulching priced?",
@@ -74,21 +73,24 @@ export default function CostCalculatorPage() {
               <strong className="text-[#0a0a0a]">
                 <Link href="/services/land-clearing" className="hover:text-[#C4922A] transition-colors">Land clearing</Link>:
               </strong>{" "}
-              {clearing.range} {clearing.unit}. The calculator starts light brush with little rock at the low end of that
-              range and moves toward the high end as the brush gets thicker and the rock increases.
+              {clearing.range} {clearing.unit}, with Harley raking included. The calculator prices it by brush density:
+              light brush costs less per acre, thick cedar costs more. Check &ldquo;Haul debris off site&rdquo; to add
+              haul-off loads. Haul-offs depend on how much debris and rock there is.
             </li>
             <li>
               <strong className="text-[#0a0a0a]">
                 <Link href="/services/forestry-mulching" className="hover:text-[#C4922A] transition-colors">Forestry mulching</Link>:
               </strong>{" "}
-              {mulching.range} {mulching.unit}. We cover {MULCHING_RATES}, so the calculator divides your acreage by that
-              rate to estimate the days, then multiplies by the day rate.
+              {mulching.range} {mulching.unit}. The calculator works out how many days your acreage and brush take,
+              rounded up to the nearest half day with a one-day minimum, then multiplies by the day rate. Everything is
+              mulched in place, so there&apos;s nothing to haul off.
             </li>
             <li>
               <strong className="text-[#0a0a0a]">
                 <Link href="/services/rock-removal" className="hover:text-[#C4922A] transition-colors">Rock removal</Link>:
               </strong>{" "}
-              {rockRemoval.range} {rockRemoval.unit}, scaled by how much rock is on the ground.
+              {rockRemoval.range} {rockRemoval.unit}, priced by how much rock there is and how big it is. Haul-off is
+              checked by default; uncheck it if the rock is staying on your property.
             </li>
             <li>
               <strong className="text-[#0a0a0a]">Minimum job:</strong> {MINIMUM_JOB}. If an estimate comes in lower, it

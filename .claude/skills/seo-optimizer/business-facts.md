@@ -35,6 +35,20 @@ Lines marked ❓ still need the owner's answer. Claude must not invent anything 
     thick cedar 4–5 acres/day.
   - Land clearing timelines: state the excavator rates directly. Don't say "runs"
     and don't compare land clearing to forestry mulching.
+- Cost calculator pricing rules (owner, 2026-11-04). Used ONLY by the calculator math
+  (lib/cost-estimate.ts). The published prices above stay exactly as they are; don't write
+  these per-tier numbers into page copy.
+  - Forestry mulching: days = acres ÷ rate (light 2–3 acres/day, medium 1.25–1.75,
+    thick cedar 0.7–1), rounded up to the nearest half day, minimum 1 day. Price = days ×
+    $2,500 (low) to days × $3,000 (high). No haul-off (mulched in place). Don't display days.
+  - Land clearing (Harley raking included): light $3,000/acre, medium $3,500/acre, thick
+    cedar $4,000/acre. Optional haul-off: 3–6 loads per acre at $250–$350 per load.
+    Note: "Haul-offs depend on how much debris and rock there is."
+  - Rock removal: small rock $2,000/acre, some mixed rock $3,000/acre, lots of rock of all
+    sizes $4,000/acre. Haul-off on by default (same 3–6 loads/acre at $250–$350/load).
+  - All services: $1,000 minimum job; show a range; keep the estimates-only note.
+- INTERNAL ONLY, never on the site or in the calculator (owner, 2026-11-04): mulching jobs
+  of 3+ days are charged $2,000/day.
 - Rock crushing: $3,000 – $4,000+ per day
 - Rock removal: $2,000 – $4,000 per acre (owner, 2026-10-21; replaces $1,750 – $6,000)
 - Demolition: $1,500 – $10,000+ per job

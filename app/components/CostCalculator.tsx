@@ -10,6 +10,8 @@ import {
   priceDrivers,
   estimate,
   formatDollars,
+  haulOffDefault,
+  haulOffNote,
   type CalculatorService,
   type Density,
   type RockLevel,
@@ -68,17 +70,25 @@ export default function CostCalculator({
   const [acresInput, setAcresInput] = useState("");
   const [density, setDensity] = useState<Density>("medium");
   const [rock, setRock] = useState<RockLevel>("some");
+  const [haulOff, setHaulOff] = useState(haulOffDefault[initialService] ?? false);
+
+  // Each service starts with its own haul-off default (rock removal: on; land clearing: off)
+  const changeService = (next: CalculatorService) => {
+    setService(next);
+    setHaulOff(haulOffDefault[next] ?? false);
+  };
 
   const acres = Number(acresInput);
-  const usesRock = service !== "forestry-mulching";
+  const usesRock = service === "rock-removal";
   const usesDensity = service !== "rock-removal";
-  const result = estimate(service, acres, density, rock);
+  const offersHaulOff = service in haulOffDefault;
+  const result = estimate(service, acres, density, rock, offersHaulOff && haulOff);
   const serviceLabel = calculatorServices.find((s) => s.value === service)?.label ?? "";
   const quoteHref = `/contact?service=${encodeURIComponent(serviceLabel)}${result ? `&acres=${acres}` : ""}#quote`;
 
   // calculator_used: once per page view, after the inputs have settled on a result
   const usedSent = useRef(false);
-  const resultKey = result ? `${service}|${acres}|${density}|${rock}` : "";
+  const resultKey = result ? `${service}|${acres}|${density}|${rock}|${haulOff}` : "";
   useEffect(() => {
     if (!resultKey || usedSent.current) return;
     const timer = setTimeout(() => {
@@ -88,6 +98,7 @@ export default function CostCalculator({
         acres: String(acres),
         density: usesDensity ? density : "",
         rock: usesRock ? rock : "",
+        haul_off: offersHaulOff ? String(haulOff) : "",
         calculator_location: compact ? "service_page" : "calculator_page",
       });
     }, 1200);
@@ -106,7 +117,7 @@ export default function CostCalculator({
 
       <div className="space-y-5">
         {!compact && (
-          <OptionGroup legend="Service" name={`${id}-service`} options={calculatorServices} value={service} onChange={setService} />
+          <OptionGroup legend="Service" name={`${id}-service`} options={calculatorServices} value={service} onChange={changeService} />
         )}
 
         <div>
@@ -132,15 +143,33 @@ export default function CostCalculator({
         {usesRock && (
           <OptionGroup legend="Rock" name={`${id}-rock`} options={rockOptions} value={rock} onChange={setRock} />
         )}
+        {offersHaulOff && (
+          <div>
+            <label className="inline-flex items-center gap-3 cursor-pointer text-sm font-semibold text-[#0a0a0a]">
+              <input
+                type="checkbox"
+                checked={haulOff}
+                onChange={(e) => setHaulOff(e.target.checked)}
+                className="w-5 h-5 accent-[#C4922A]"
+              />
+              Haul debris off site
+            </label>
+            <p className="text-xs text-[#6e6e73] mt-1 ml-8">{haulOffNote}</p>
+          </div>
+        )}
       </div>
 
       <div aria-live="polite" className="mt-6 p-5 bg-[#f9f9f9] rounded-2xl">
         {result ? (
           <>
-            <p className="text-[10px] font-semibold text-amber-800 uppercase tracking-wide mb-1">Estimated Range</p>
+            <p className="text-[10px] font-semibold text-amber-800 uppercase tracking-wide mb-1">
+              {result.low === result.high && !result.minimumOnly ? "Estimate" : "Estimated Range"}
+            </p>
             <p className="text-3xl font-bold text-[#0a0a0a]">
               {result.minimumOnly
                 ? `${formatDollars(result.low)} minimum job`
+                : result.low === result.high
+                ? `About ${formatDollars(result.low)}`
                 : `${formatDollars(result.low)} – ${formatDollars(result.high)}`}
             </p>
             <p className="text-sm text-[#6e6e73] mt-2">{priceDrivers[service]}</p>

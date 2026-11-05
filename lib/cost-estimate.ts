@@ -1,7 +1,6 @@
-// Cost calculator math. Only the owner's numbers from business-facts.md (2026-10-21/28):
-// land clearing and rock removal $2,000–$4,000 per acre, forestry mulching $2,500–$3,000 per day,
-// mulching rates (light 2–3 ac/day, medium ~1.5, thick cedar ~1), $1,000 minimum job.
-// Keep in sync with data/service-pricing.ts and data/service-timelines.ts.
+// Cost calculator math: the owner's calculator pricing rules in business-facts.md (2026-11-04).
+// These per-tier numbers are for the calculator only; page copy keeps the published ranges in
+// data/service-pricing.ts. The internal multi-day mulching rate is deliberately NOT used here.
 
 export type CalculatorService = "land-clearing" | "forestry-mulching" | "rock-removal";
 export type Density = "light" | "medium" | "thick";
@@ -20,37 +19,43 @@ export const densityOptions: { value: Density; label: string }[] = [
 ];
 
 export const rockOptions: { value: RockLevel; label: string }[] = [
-  { value: "little", label: "Little rock" },
-  { value: "some", label: "Some rock" },
-  { value: "lots", label: "Lots of rock" },
+  { value: "little", label: "Small rock" },
+  { value: "some", label: "Some mixed rock" },
+  { value: "lots", label: "Lots of rock, all sizes" },
 ];
 
 export const MINIMUM_JOB_DOLLARS = 1000;
-const PER_ACRE_LOW = 2000;
-const PER_ACRE_HIGH = 4000;
+
+// Forestry mulching: billed by the day, mulched in place (no haul-off).
 const DAY_RATE_LOW = 2500;
 const DAY_RATE_HIGH = 3000;
-/** Acres per day mulched: [fewest, most]. */
+/** Acres mulched per day: [slowest, fastest]. */
 const MULCHING_ACRES_PER_DAY: Record<Density, [number, number]> = {
   light: [2, 3],
-  medium: [1.5, 1.5],
-  thick: [1, 1],
+  medium: [1.25, 1.75],
+  thick: [0.7, 1],
 };
 
-const DENSITY_STEP: Record<Density, number> = { light: 0, medium: 1, thick: 2 };
-const ROCK_STEP: Record<RockLevel, number> = { little: 0, some: 1, lots: 2 };
+// Land clearing per acre, Harley raking included.
+const CLEARING_PER_ACRE: Record<Density, number> = { light: 3000, medium: 3500, thick: 4000 };
+// Rock removal per acre.
+const ROCK_PER_ACRE: Record<RockLevel, number> = { little: 2000, some: 3000, lots: 4000 };
 
-/** Moves along the $2,000–$4,000 per-acre range: step 0 = $2,000–$3,000 … top step = $3,000–$4,000. */
-function perAcreBand(step: number, maxStep: number): [number, number] {
-  const width = (PER_ACRE_HIGH - PER_ACRE_LOW) / 2;
-  const low = PER_ACRE_LOW + (width * step) / maxStep;
-  return [low, low + width];
-}
+// Haul-off: 3–6 loads per acre at $250–$350 per load.
+const LOADS_PER_ACRE: [number, number] = [3, 6];
+const LOAD_COST: [number, number] = [250, 350];
+
+/** Haul-off checkbox: offered for these services, and whether it starts checked. */
+export const haulOffDefault: Partial<Record<CalculatorService, boolean>> = {
+  "land-clearing": false,
+  "rock-removal": true,
+};
+export const haulOffNote = "Haul-offs depend on how much debris and rock there is.";
 
 export const priceDrivers: Record<CalculatorService, string> = {
-  "land-clearing": "Brush density and rock move the price most, then terrain and access.",
+  "land-clearing": "Brush density moves the price most, and hauling debris off adds to it.",
   "forestry-mulching": "Mulching is billed by the day, so how thick the brush is moves the price most.",
-  "rock-removal": "How much rock there is moves the price most, then how deep it's embedded and haul-off.",
+  "rock-removal": "How much rock there is, and how big, moves the price most. Hauling it off adds to it.",
 };
 
 export interface Estimate {
@@ -60,27 +65,36 @@ export interface Estimate {
   minimumOnly: boolean;
 }
 
-const roundDown = (n: number) => Math.floor(n / 100) * 100;
-const roundUp = (n: number) => Math.ceil(n / 100) * 100;
+// To the nearest $50 (outward), so fractional acres don't show odd dollar amounts
+const roundDown = (n: number) => Math.floor(n / 50) * 50;
+const roundUp = (n: number) => Math.ceil(n / 50) * 50;
+/** Up to the nearest half day, at least one day. */
+const billableDays = (days: number) => Math.max(1, Math.ceil(days * 2) / 2);
 
-export function estimate(service: CalculatorService, acres: number, density: Density, rock: RockLevel): Estimate | null {
+export function estimate(
+  service: CalculatorService,
+  acres: number,
+  density: Density,
+  rock: RockLevel,
+  haulOff: boolean
+): Estimate | null {
   if (!Number.isFinite(acres) || acres <= 0) return null;
 
   let low: number;
   let high: number;
 
   if (service === "forestry-mulching") {
-    // Priced by the day: days = acres ÷ acres per day (used for the price only, not shown)
+    // Days are used for the price only, never shown.
     const [slowest, fastest] = MULCHING_ACRES_PER_DAY[density];
-    low = (acres / fastest) * DAY_RATE_LOW;
-    high = (acres / slowest) * DAY_RATE_HIGH;
+    low = billableDays(acres / fastest) * DAY_RATE_LOW;
+    high = billableDays(acres / slowest) * DAY_RATE_HIGH;
   } else {
-    const [perLow, perHigh] =
-      service === "land-clearing"
-        ? perAcreBand(DENSITY_STEP[density] + ROCK_STEP[rock], 4)
-        : perAcreBand(ROCK_STEP[rock], 2);
-    low = acres * perLow;
-    high = acres * perHigh;
+    const perAcre = service === "land-clearing" ? CLEARING_PER_ACRE[density] : ROCK_PER_ACRE[rock];
+    low = high = acres * perAcre;
+    if (haulOff) {
+      low += Math.ceil(acres * LOADS_PER_ACRE[0]) * LOAD_COST[0];
+      high += Math.ceil(acres * LOADS_PER_ACRE[1]) * LOAD_COST[1];
+    }
   }
 
   low = roundDown(low);
