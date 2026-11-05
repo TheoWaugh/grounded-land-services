@@ -64,6 +64,7 @@ function answersFor(service: string, city?: string): Answers | null {
 }
 
 const isCostSection = (s: Section) => /\bcost\b/i.test(s.heading ?? "");
+const calculatorLink = "Want a rough number for your property? Try our [land clearing cost calculator](/cost-calculator).";
 const isProcessSection = (s: Section) => /\bprocess\b/i.test(s.heading ?? "");
 
 /**
@@ -77,7 +78,7 @@ export function withQuickAnswers<T extends Section>(service: string, sections: T
 
   const merged = sections.map((s) => {
     if (isCostSection(s)) {
-      return { ...s, heading: a.costHeading, paragraphs: [a.cost, a.costFactorsLead] };
+      return { ...s, heading: a.costHeading, paragraphs: [a.cost, calculatorLink, a.costFactorsLead], costCalculator: true };
     }
     if (isProcessSection(s) && a.timeline && a.processHeading) {
       return { ...s, heading: a.processHeading, paragraphs: [a.timeline, ...(s.paragraphs ?? [])] };
@@ -88,7 +89,7 @@ export function withQuickAnswers<T extends Section>(service: string, sections: T
   if (sections.some(isCostSection)) return merged;
 
   // No cost-factors section: the cost question goes just before the process section (cost, then how long).
-  const standalone = { heading: a.costHeading, paragraphs: [a.cost, a.costDetail] } as T;
+  const standalone = { heading: a.costHeading, paragraphs: [a.cost, a.costDetail, calculatorLink], costCalculator: true } as unknown as T;
   const processIndex = sections.findIndex(isProcessSection);
   const at = processIndex >= 0 ? processIndex : Math.min(1, merged.length);
   return [...merged.slice(0, at), standalone, ...merged.slice(at)];

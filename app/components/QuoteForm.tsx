@@ -71,6 +71,11 @@ export default function QuoteForm({
         setForm((prev) => ({ ...prev, service: match }));
       }
     }
+    // From the cost calculator: ?acres=5 → "5 acres"
+    const acres = Number(params.get("acres"));
+    if (acres > 0) {
+      setForm((prev) => ({ ...prev, lotSize: `${acres} acre${acres === 1 ? "" : "s"}` }));
+    }
   }, []);
 
   const handleChange = (

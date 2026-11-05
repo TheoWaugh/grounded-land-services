@@ -1,10 +1,17 @@
 // Conversion events, sent to GA4 (gtag) and Meta Pixel (fbq) when they're loaded.
-// GA4 names: call_click, text_click, quote_cta_click, form_submit
+// GA4 names: call_click, text_click, quote_cta_click, form_submit, calculator_used, calculator_quote_click
 // Mark call_click, text_click and form_submit as Key Events in GA4.
 
-type EventName = "call_click" | "text_click" | "quote_cta_click" | "form_submit";
+type EventName =
+  | "call_click"
+  | "text_click"
+  | "quote_cta_click"
+  | "form_submit"
+  | "calculator_used"
+  | "calculator_quote_click";
 
-const metaEvents: Record<EventName, string> = {
+// Standard Meta events; anything not listed here is sent as a Meta custom event with the GA4 name.
+const metaEvents: Partial<Record<EventName, string>> = {
   call_click: "Contact",
   text_click: "Contact",
   quote_cta_click: "Contact",
@@ -29,6 +36,8 @@ export function trackEvent(name: EventName, params: Record<string, string> = {})
   }
   w.gtag("event", name, payload);
   if (typeof w.fbq === "function") {
-    w.fbq("track", metaEvents[name], { content_name: name });
+    const metaEvent = metaEvents[name];
+    if (metaEvent) w.fbq("track", metaEvent, { content_name: name });
+    else w.fbq("trackCustom", name, params);
   }
 }

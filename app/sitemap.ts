@@ -52,6 +52,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry("/gallery", ["app/gallery/page.tsx"], "weekly", 0.8),
     entry("/equipment", ["app/equipment/page.tsx"], "monthly", 0.6),
     entry("/faq", ["app/faq/page.tsx", "lib/services-content/index.ts"], "monthly", 0.7),
+    entry("/cost-calculator", ["app/cost-calculator/page.tsx", "lib/cost-estimate.ts"], "monthly", 0.8),
     entry("/privacy", ["app/privacy/page.tsx"], "yearly", 0.2),
   ];
 

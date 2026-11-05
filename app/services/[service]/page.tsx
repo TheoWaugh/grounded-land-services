@@ -20,6 +20,8 @@ import { quoteServiceLabels } from "@/data/quote-services";
 import TrustStrip from "@/app/components/TrustStrip";
 import QuoteSection from "@/app/components/QuoteSection";
 import PriceCard from "@/app/components/PriceCard";
+import CostCalculator from "@/app/components/CostCalculator";
+import type { CalculatorService } from "@/lib/cost-estimate";
 import { withQuickAnswers } from "@/lib/quick-answers";
 import { servicePricing } from "@/data/service-pricing";
 import { serviceAreas, rockCrushingCities } from "@/data/service-areas";
@@ -280,6 +282,7 @@ const content = (
                 </div>
               </div>
             )}
+            {section.costCalculator && <CostCalculator service={service as CalculatorService} compact />}
 {section.iconCards && (
               <div
                 className={`grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2 ${

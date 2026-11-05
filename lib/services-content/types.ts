@@ -42,6 +42,8 @@ comparison?: {
   industries?: string[];
   /** Renders the customer reviews inside this section instead of near the bottom of the page. */
   showReviews?: boolean;
+  /** Set by withQuickAnswers on the cost section; the service page embeds the cost calculator there. */
+  costCalculator?: boolean;
 }
 export interface ServicePageContent {
   title: string;
