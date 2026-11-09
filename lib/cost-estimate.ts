@@ -42,8 +42,8 @@ const MULCHING_ACRES_PER_DAY: Record<Density, [number, number]> = {
 // Land clearing per acre, Harley raking included. Small jobs cost more per acre (travel and setup).
 function clearingPerAcre(acres: number, density: Density): number {
   if (acres < 2) return { light: 3000, medium: 3500, thick: 4000 }[density];
-  if (acres < 5) return { light: 2500, medium: 2500, thick: 3000 }[density];
-  return { light: 2000, medium: 2000, thick: 3000 }[density];
+  if (acres < 5) return { light: 2500, medium: 2700, thick: 3000 }[density];
+  return { light: 2000, medium: 2200, thick: 3000 }[density];
 }
 // Rock removal per acre.
 const ROCK_PER_ACRE: Record<RockLevel, number> = { little: 2000, some: 3000, lots: 4000 };
