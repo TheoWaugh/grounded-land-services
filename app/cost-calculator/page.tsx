@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "How much does land clearing cost per acre in Central Texas?",
-    answer: `Land clearing costs ${clearing.range} ${clearing.unit}, with Harley raking included. Thicker brush costs more per acre, and hauling debris off site is extra. Terrain and access matter too, and we give you a firm price at a free site visit.`,
+    answer: `Land clearing costs ${clearing.range} ${clearing.unit}, with Harley raking included. Thicker brush and smaller lots cost more per acre, and hauling debris off site is extra. Terrain and access matter too, and we give you a firm price at a free site visit.`,
   },
   {
     question: "How is forestry mulching priced?",
@@ -73,9 +73,11 @@ export default function CostCalculatorPage() {
               <strong className="text-[#0a0a0a]">
                 <Link href="/services/land-clearing" className="hover:text-[#C4922A] transition-colors">Land clearing</Link>:
               </strong>{" "}
-              {clearing.range} {clearing.unit}, with Harley raking included. The calculator prices it by brush density:
-              light brush costs less per acre, thick cedar costs more. Check &ldquo;Haul debris off site&rdquo; to add
-              haul-off loads. Haul-offs depend on how much debris and rock there is.
+              {clearing.range} {clearing.unit}, with Harley raking included. The calculator prices it by brush density
+              and lot size: thicker brush costs more per acre, and small lots cost more per acre than big ones because
+              travel and setup are spread over fewer acres. Small lots usually need the brush hauled off, so haul-off is
+              checked by default under 2 acres. Haul-offs depend on how much debris and rock there is. Steep terrain,
+              trash removal or rock removal can raise the price up to $4,000 an acre.
             </li>
             <li>
               <strong className="text-[#0a0a0a]">

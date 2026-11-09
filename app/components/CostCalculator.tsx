@@ -11,6 +11,8 @@ import {
   estimate,
   formatDollars,
   haulOffDefault,
+  offersHaulOff,
+  clearingCeilingNote,
   haulOffNote,
   type CalculatorService,
   type Density,
@@ -72,19 +74,20 @@ function CalculatorBody({
   const [acresInput, setAcresInput] = useState("");
   const [density, setDensity] = useState<Density>("medium");
   const [rock, setRock] = useState<RockLevel>("some");
-  const [haulOff, setHaulOff] = useState(haulOffDefault[initialService] ?? false);
+  // null = follow the default for this service and acreage, until the visitor ticks or unticks the box
+  const [haulOffChoice, setHaulOffChoice] = useState<boolean | null>(null);
 
-  // Each service starts with its own haul-off default (rock removal: on; land clearing: off)
   const changeService = (next: CalculatorService) => {
     setService(next);
-    setHaulOff(haulOffDefault[next] ?? false);
+    setHaulOffChoice(null);
   };
 
   const acres = Number(acresInput);
   const usesRock = service === "rock-removal";
   const usesDensity = service !== "rock-removal";
-  const offersHaulOff = service in haulOffDefault;
-  const result = estimate(service, acres, density, rock, offersHaulOff && haulOff);
+  const hasHaulOff = offersHaulOff(service);
+  const haulOff = hasHaulOff && (haulOffChoice ?? haulOffDefault(service, acres));
+  const result = estimate(service, acres, density, rock, haulOff);
   const serviceLabel = calculatorServices.find((s) => s.value === service)?.label ?? "";
   const quoteHref = `/contact?service=${encodeURIComponent(serviceLabel)}${result ? `&acres=${acres}` : ""}#quote`;
 
@@ -100,7 +103,7 @@ function CalculatorBody({
         acres: String(acres),
         density: usesDensity ? density : "",
         rock: usesRock ? rock : "",
-        haul_off: offersHaulOff ? String(haulOff) : "",
+        haul_off: hasHaulOff ? String(haulOff) : "",
         calculator_location: location,
       });
     }, 1200);
@@ -143,20 +146,20 @@ function CalculatorBody({
         </div>
 
         {usesDensity && (
-          <Segmented legend="Brush density" name={`${id}-density`} options={densityOptions} value={density} onChange={setDensity} />
+          <Segmented legend="Brush density" name={`${id}-density`} options={densityOptions(service)} value={density} onChange={setDensity} />
         )}
         {usesRock && (
           <Segmented legend="Rock" name={`${id}-rock`} options={rockOptions} value={rock} onChange={setRock} />
         )}
       </div>
 
-      {offersHaulOff && (
+      {hasHaulOff && (
         <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-0.5">
           <label className="inline-flex items-center gap-2 cursor-pointer text-sm font-medium text-[#0a0a0a]">
             <input
               type="checkbox"
               checked={haulOff}
-              onChange={(e) => setHaulOff(e.target.checked)}
+              onChange={(e) => setHaulOffChoice(e.target.checked)}
               className="w-4 h-4 accent-[#C4922A]"
             />
             Haul debris off site
@@ -213,6 +216,9 @@ function CalculatorBody({
         </div>
       </div>
 
+      {service === "land-clearing" && result && (
+        <p className="text-xs text-[#3a3a3c] mt-2 leading-relaxed">{clearingCeilingNote}</p>
+      )}
       <p className="text-[11px] text-[#6e6e73] mt-2 leading-relaxed">
         Estimates only. Your exact price depends on terrain, access and what&apos;s on the land. We&apos;ll give you a
         firm number at the free site visit.

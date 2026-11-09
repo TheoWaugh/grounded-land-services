@@ -41,9 +41,18 @@ Lines marked ❓ still need the owner's answer. Claude must not invent anything 
   - Forestry mulching: days = acres ÷ rate (light 2–3 acres/day, medium 1.25–1.75,
     thick cedar 0.7–1), rounded up to the nearest half day, minimum 1 day. Price = days ×
     $2,500 (low) to days × $3,000 (high). No haul-off (mulched in place). Don't display days.
-  - Land clearing (Harley raking included): light $3,000/acre, medium $3,500/acre, thick
-    cedar $4,000/acre. Optional haul-off: 3–6 loads per acre at $250–$350 per load.
-    Note: "Haul-offs depend on how much debris and rock there is."
+  - Land clearing (Harley raking included), updated by owner 2026-11-09. Density options:
+    Light brush, Medium brush, Thick brush. Per acre by job size:
+    - Under 2 acres: light $3,000, medium $3,500, thick $4,000. Haul-off ON by default
+      (small lots usually need brush hauled off).
+    - 2 to 4.9 acres: light and medium $2,500, thick $3,000. Haul-off off by default.
+    - 5 acres and up: light and medium $2,000, thick $3,000. Haul-off off by default.
+    - Haul-off add-on: 3–6 loads per acre at $250–$350 per load.
+      Note: "Haul-offs depend on how much debris and rock there is."
+    - Under the result: "Steep terrain, trash removal, or rock removal can raise the price up
+      to $4,000 an acre. We'll give you a firm price after we see the property."
+    - Why: small jobs cost more per acre because of travel and setup. Reaching $4,000/acre
+      depends on terrain, trash removal and rock.
   - Rock removal: small rock $2,000/acre, some mixed rock $3,000/acre, lots of rock of all
     sizes $4,000/acre. Haul-off on by default (same 3–6 loads/acre at $250–$350/load).
   - All services: $1,000 minimum job; show a range; keep the estimates-only note.
