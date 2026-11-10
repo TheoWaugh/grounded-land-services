@@ -99,4 +99,9 @@ export const testimonials: Testimonial[] = [
     location: "Liberty Hill, TX",
     quote: "Logan did a great job with rock removal on our property in Liberty Hill, TX. He was super easy to work with and definitely got the job done right! Would highly recommend him if you need any rock removal or land clearing done!",
   },
+    {
+    name: "Salvador Rebollar",
+    location: "Dale, TX",
+    quote: "Great work, goes above and beyond and reliable.",
+  },
 ];

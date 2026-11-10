@@ -378,7 +378,7 @@ export const cityLocal: Record<string, CityLocal> = {
       "forestry-mulching": "Eastern redcedar, yaupon and huisache are the brush we expect to find on Luling-area pasture.",
     },
     studies: ["harwood-forestry-mulching", "gonzales-land-clearing", "gonzales-forestry-mulching"],
-    reviews: ["Clint Strittmatter"],
+    reviews: ["Clint Strittmatter", "Salvador Rebollar"],
     faqs: [
       {
         question: "Have you worked near Luling?",
