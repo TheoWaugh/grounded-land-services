@@ -76,7 +76,7 @@ Luling, Bertram, Briggs. Focus content, case studies, and links here first.
 - The "Kelley Arnold" review is from a family member: removed from the site
   (owner, 2026-10-21). Never show or mark it up.
 - Case studies on site: 20 in lib/case-studies.ts (owner confirmed 10 on 2026-10-21; more
-  added since, incl. Georgetown 5 ac and Harwood 3 ac on 2026-10-27, Kingsland 0.5 ac and Balcones refuge 5-mile fire break on 2026-10-30, Spicewood Lake Travis lot 0.5 ac and Spicewood sod lots 1.5 ac and Bertram mulching cleanup 1.2 ac and Bertram rock removal 0.5 ac on 2026-11-02, Gonzales forestry mulching 1 ac on 2026-11-03, Dale forestry mulching 2 ac on 2026-11-09, Lampasas rock removal 2 ac on 2026-11-09, Lampasas forestry mulching cleanup 2 ac (grant job, July 2025) on 2026-11-09, Bertram pool demolition 1,575 sq ft on 2026-11-09; e.g. Spicewood 53.8 ac land clearing,
+  added since, incl. Georgetown 5 ac and Harwood 3 ac on 2026-10-27, Kingsland 0.5 ac and Balcones refuge 5-mile fire break on 2026-10-30, Spicewood Lake Travis lot 0.5 ac and Spicewood sod lots 1.5 ac and Bertram mulching cleanup 1.2 ac and Bertram rock removal 0.5 ac on 2026-11-02, Gonzales forestry mulching 1 ac on 2026-11-03, Dale forestry mulching 2 ac on 2026-11-09, Lampasas rock removal 2 ac on 2026-11-09, Lampasas forestry mulching cleanup 2 ac (grant job, July 2025) on 2026-11-09, Bertram pool demolition 1,575 sq ft on 2026-11-09, Kingsland forestry mulching 1 ac on 2026-11-09; e.g. Spicewood 53.8 ac land clearing,
   Gonzales 34.8 ac, Liberty Hill 4.1 ac rock removal)
 - Testimonials: on site with names and cities (Testimonials.tsx, app/page.tsx)
 - Gallery photo locations: NOT confirmed (every alt says "Bertram, TX"), except
@@ -145,6 +145,12 @@ seo-reports/city-notes-priority.md.
   (season runs March 1 – September 1) before clearing. Use as our experience on Spicewood,
   Liberty Hill and Jonestown pages. NEVER make legal claims about when a federal permit is
   required; tell landowners with mature cedar-oak woodland to check with USFWS.
+- Kingsland forestry mulching (owner, 2026-11-09): 1 ac cedar, mesquite and brush mulched in place in 1 day,
+  Aug 2026, CAT 275 + Prinoth, for a builder clearing a homesite; the builder then removed the mulch and
+  stumps from the build pad (we did NOT do the stump/mulch removal on this job). We work with builders on
+  homesite prep. Customer not named. Case study /case-studies/kingsland-forestry-mulching, photo
+  /images/work/kingsland-forestry-mulching.jpeg (GPS stripped in place 2026-11-09; the original with GPS
+  is still in git history).
 - Bertram pool demolition (owner, 2026-11-09): 1,575 sq ft concrete/gunite pool + patio torn out for
   concrete cancer, about 1 week, June 2026. Took down part of the fence for access; tight space between
   house and pool. CAT 275 + a RENTED Bobcat E80 with a hydraulic hammer (we don't own a hammer or the E80:
