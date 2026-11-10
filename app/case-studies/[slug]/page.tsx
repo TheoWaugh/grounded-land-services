@@ -77,7 +77,7 @@ export default async function CaseStudyPage({ params }: { params: PageParams }) 
           <div className="flex flex-wrap gap-2 mb-3">
             {study.services.map((s) => (
               <Link
-                key={s.slug}
+                key={s.label}
                 href={`/services/${s.slug}`}
                 className="px-3 py-1 bg-[#C4922A] text-black text-xs font-semibold rounded-full hover:bg-amber-500 transition-colors"
               >

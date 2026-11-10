@@ -14,23 +14,26 @@ export interface LocalFaq {
   services?: string[];
 }
 
+/** City × service pages that can have their own local copy. */
+type LocalService = "land-clearing" | "forestry-mulching" | "rock-removal" | "demolition";
+
 export interface CityLocal {
   /** What the land is like: terrain, soil, vegetation, land uses, distance from Bertram. */
   land: string[];
   /** Our work in and around the city (owner experience only). */
   experience: string[];
   /** Replaces `experience` in "Our Work in …" on that city × service page. */
-  serviceExperience?: Partial<Record<"land-clearing" | "forestry-mulching" | "rock-removal", string[]>>;
+  serviceExperience?: Partial<Record<LocalService, string[]>>;
   /** One extra local paragraph per service page. */
-  serviceNotes: Partial<Record<"land-clearing" | "forestry-mulching" | "rock-removal", string>>;
+  serviceNotes: Partial<Record<LocalService, string>>;
   /** Case study slugs to show, in order: local first, then nearest. */
   studies: string[];
   /** Replaces `studies` on that city × service page. */
-  serviceStudies?: Partial<Record<"land-clearing" | "forestry-mulching" | "rock-removal", string[]>>;
+  serviceStudies?: Partial<Record<LocalService, string[]>>;
   /** Testimonial names (data/testimonials.ts) to show, in order: local first, then nearest. */
   reviews: string[];
   /** Replaces `reviews` on that city × service page. */
-  serviceReviews?: Partial<Record<"land-clearing" | "forestry-mulching" | "rock-removal", string[]>>;
+  serviceReviews?: Partial<Record<LocalService, string[]>>;
   faqs: LocalFaq[];
 }
 
@@ -261,13 +264,19 @@ export const cityLocal: Record<string, CityLocal> = {
       "rock-removal": [
         "Rock is part of almost every Bertram property: large limestone outcroppings and lots of loose limestone, with only some lots having good, deep dirt. We've done [rock removal right here in Bertram](/case-studies/bertram-rock-removal). On one Bertram homesite, we're turning the rock dug up for the house into a natural stone retaining wall, so the rock gets put to work instead of hauled off.",
       ],
+      demolition: [
+        "Right here in Bertram, we [took out a 1,575-square-foot gunite pool](/case-studies/bertram-pool-demolition) that was coming apart from concrete cancer. We took down part of the fence for access, worked carefully in the tight space between the house and the pool, and broke out the pool and patio with our CAT 275 and a rented Bobcat E80 with a hydraulic hammer. Part of the concrete went to build up the back of the owners' shooting berm, which saved on haul-off. Then we backfilled, graded, poured a 10x8 pad for their jacuzzi, and laid sod.",
+      ],
     },
     serviceNotes: {
       "land-clearing": "Since we're based in Bertram, the free site visit is a short trip for us.",
       "forestry-mulching": "Both of our Bertram case studies are mulching jobs: cedar under red oaks, and old burn piles sorted with a grapple and mulched.",
       "rock-removal": "Rock here ranges from shallow limestone near town to granite and older rock farther west in the county.",
     },
-    studies: ["bertram-burn-pile-mulching", "bertram-forestry-mulching", "bertram-mulching-cleanup", "bertram-rock-removal", "burnet-forestry-mulching", "liberty-hill-rock-removal"],
+    studies: ["bertram-burn-pile-mulching", "bertram-forestry-mulching", "bertram-mulching-cleanup", "bertram-rock-removal", "bertram-pool-demolition", "burnet-forestry-mulching", "liberty-hill-rock-removal"],
+    serviceStudies: {
+      demolition: ["bertram-pool-demolition", "kingsland-land-clearing", "spicewood-land-clearing"],
+    },
     reviews: ["Dylan Gavit", "Gary Gorton", "John Cortez", "Holton Garrison", "Preston Jones"],
     serviceReviews: {
       "rock-removal": ["Steve King", "Dylan Gavit", "Gary Gorton", "John Cortez", "Holton Garrison", "Preston Jones"],

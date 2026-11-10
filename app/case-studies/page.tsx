@@ -67,7 +67,7 @@ export default function CaseStudiesPage() {
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {study.services.map((s) => (
-                      <span key={s.slug} className="px-2.5 py-1 bg-[#f5f5f7] text-[#1d1d1f] text-xs font-medium rounded-full">
+                      <span key={s.label} className="px-2.5 py-1 bg-[#f5f5f7] text-[#1d1d1f] text-xs font-medium rounded-full">
                         {s.label}
                       </span>
                     ))}
