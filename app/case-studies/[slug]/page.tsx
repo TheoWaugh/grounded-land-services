@@ -9,6 +9,7 @@ import { testimonials } from "@/data/testimonials";
 import { equipmentPhotos } from "@/data/equipment-photos";
 import CaseStudyGallery from "../../components/CaseStudyGallery";
 import YouTubePlayer from "../../components/YouTubePlayer";
+import RichText from "../../components/RichText";
 import { brandedTitle, metaDescription } from "@/lib/seo-title";
 
 
@@ -47,6 +48,9 @@ export default async function CaseStudyPage({ params }: { params: PageParams }) 
   const cityService = study.services.find((s) => CITY_SERVICE_PAGES.includes(s.slug));
   const locationHref = `/service-areas/${study.locationSlug}${cityService ? `/${cityService.slug}` : ""}`;
   const reviews = testimonials.filter((t) => t.caseStudy === study.slug);
+  const related = (study.related?.slugs ?? [])
+    .map((s) => caseStudies.find((c) => c.slug === s))
+    .filter((c): c is (typeof caseStudies)[number] => Boolean(c));
 
   return (
     <>
@@ -107,7 +111,9 @@ export default async function CaseStudyPage({ params }: { params: PageParams }) 
         {/* Description */}
         <p className="text-lg text-[#3a3a3c] leading-relaxed mb-4">{study.description}</p>
         {study.longDescription && (
-          <p className="text-[#3a3a3c] leading-relaxed mb-6">{study.longDescription}</p>
+          <p className="text-[#3a3a3c] leading-relaxed mb-6">
+            <RichText text={study.longDescription} />
+          </p>
         )}
 
         {study.beforePhoto && (
@@ -198,6 +204,39 @@ export default async function CaseStudyPage({ params }: { params: PageParams }) 
                 </figcaption>
               </figure>
             ))}
+          </div>
+        )}
+
+        {/* Related case studies */}
+        {study.related && related.length > 0 && (
+          <div className="mb-10">
+            <h2 className="text-2xl font-bold text-[#0a0a0a] mb-3">{study.related.heading}</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {related.map((r) => (
+                <Link
+                  key={r.slug}
+                  href={`/case-studies/${r.slug}`}
+                  className="group block rounded-2xl overflow-hidden border-2 border-[#0a0a0a] bg-white card-hover"
+                >
+                  <div className="relative w-full aspect-[16/10]">
+                    <Image
+                      src={r.afterPhoto}
+                      alt={r.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 640px) 100vw, 50vw"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <p className="text-xs font-semibold uppercase tracking-wide text-[#C4922A] mb-1">{r.location}</p>
+                    <h3 className="font-bold text-[#0a0a0a] mb-1 group-hover:text-[#C4922A] transition-colors">{r.title}</h3>
+                    <p className="text-sm text-[#6e6e73]">
+                      {r.acreage} · {r.timeline}
+                    </p>
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
         )}
 

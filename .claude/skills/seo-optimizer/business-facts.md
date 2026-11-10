@@ -99,7 +99,7 @@ Luling, Bertram, Briggs. Focus content, case studies, and links here first.
 - The "Kelley Arnold" review is from a family member: removed from the site
   (owner, 2026-10-21). Never show or mark it up.
 - Case studies on site: 20 in lib/case-studies.ts (owner confirmed 10 on 2026-10-21; more
-  added since, incl. Georgetown 5 ac and Harwood 3 ac on 2026-10-27, Kingsland 0.5 ac and Balcones refuge 5-mile fire break on 2026-10-30, Spicewood Lake Travis lot 0.5 ac and Spicewood sod lots 1.5 ac and Bertram mulching cleanup 1.2 ac and Bertram rock removal 0.5 ac on 2026-11-02, Gonzales forestry mulching 1 ac on 2026-11-03, Dale forestry mulching 2 ac on 2026-11-09, Lampasas rock removal 2 ac on 2026-11-09; e.g. Spicewood 53.8 ac land clearing,
+  added since, incl. Georgetown 5 ac and Harwood 3 ac on 2026-10-27, Kingsland 0.5 ac and Balcones refuge 5-mile fire break on 2026-10-30, Spicewood Lake Travis lot 0.5 ac and Spicewood sod lots 1.5 ac and Bertram mulching cleanup 1.2 ac and Bertram rock removal 0.5 ac on 2026-11-02, Gonzales forestry mulching 1 ac on 2026-11-03, Dale forestry mulching 2 ac on 2026-11-09, Lampasas rock removal 2 ac on 2026-11-09, Lampasas forestry mulching cleanup 2 ac (grant job, July 2025) on 2026-11-09; e.g. Spicewood 53.8 ac land clearing,
   Gonzales 34.8 ac, Liberty Hill 4.1 ac rock removal)
 - Testimonials: on site with names and cities (Testimonials.tsx, app/page.tsx)
 - Gallery photo locations: NOT confirmed (every alt says "Bertram, TX"), except
@@ -107,7 +107,8 @@ Luling, Bertram, Briggs. Focus content, case studies, and links here first.
   /projects/balcones-refuge-fire-break/*, confirmed Balcones Canyonlands NWR (owner, 2026-10-30).
   Leave gallery alt text alone until the owner confirms locations.
 - Texas A&M Forest Service Mechanical Fuel Reduction Grant: owner has completed
-  a job under this program (forestry mulching / debris reduction).
+  a job under this program (forestry mulching / debris reduction). That job: Lampasas, July 2025, private
+  landowner, 2 ac forestry mulching cleanup (owner, 2026-11-09); see the Lampasas notes below.
   Program facts (verified at https://tfsweb.tamu.edu/mechgrant/): reimburses
   private landowners in eligible Texas counties up to $2,000/acre for heavy
   equipment, $20,000 max per landowner; next application window opens
@@ -209,6 +210,13 @@ seo-reports/city-notes-priority.md.
   the property (not hauled off); 2 old burn piles cleaned up, one still smoldering and piled to be hauled
   off later; pasture Harley-raked level. Owner wanted it mowable without worrying about sparks, for hunting,
   and the pasture leveled. Customer not named. Case study /case-studies/lampasas-rock-removal.
+  (owner, 2026-11-09) Completed a Texas A&M Forest Service Mechanical Fuel Reduction Grant job for a private
+  landowner in Lampasas (July 2025): 2 ac forestry mulching cleanup, 2 days, CAT 299 + Harley rake; removed
+  old mulch left from a previous mulching job, stumps, cactus and surface rock, Harley-raked smooth, hauled
+  off 12 loads of debris and cactus. Owner wanted to zero-turn mow and reduce wildfire fuel around the house.
+  OK to mention the grant; customer not named. Case study /case-studies/lampasas-mulching-cleanup-grant.
+  Link the official program page (https://tfsweb.tamu.edu/mechgrant/) and never promise other landowners
+  eligibility (program sets eligible counties and application periods; closed as of 2026-11-09).
 
 ## Leads & contact
 - Best way to reach you: call or text (512) 571-6700, or the quote form
