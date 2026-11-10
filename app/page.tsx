@@ -76,7 +76,7 @@ const whyUs = [
       </svg>
     ),
     title: "5.0 Stars on Google",
-    desc: "18 five-star Google reviews from real property owners across Central Texas.",
+    desc: "19 five-star Google reviews from real property owners across Central Texas.",
   },
   {
     icon: (

@@ -69,7 +69,7 @@ Luling, Bertram, Briggs. Focus content, case studies, and links here first.
   2020 CAT 299 D3 XE Land Management; 2025 Prinoth M450s-1900 mulching head;
   2025 Bobcat 84" attachment; CAT curved tine industrial grapple rake;
   CAT industrial grapple; standard buckets
-- Reviews: 5.0 from 18 Google reviews (owner, Oct 2026).
+- Reviews: 5.0 from 19 Google reviews (owner, Nov 9 2026; 19th is Salvador Rebollar, Dale, TX).
   ✅ 2026-10-21: review/aggregateRating markup REMOVED from the site-wide schema
   (self-serving LocalBusiness reviews aren't eligible for stars). Don't re-add it.
   Keep the visible TrustStrip, TrustBadges and homepage counts in sync with Google.
