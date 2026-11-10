@@ -1738,6 +1738,7 @@ paragraphs: [
         heading: "Pool Demolition",
         paragraphs: [
           "An old or damaged swimming pool can become a major problem for a property owner. Cracked concrete, structural deterioration, leaks, or concrete cancer can make an aging pool difficult and expensive to maintain.",
+          "In June 2026, we [took out a 1,575-square-foot gunite pool in Bertram](/case-studies/bertram-pool-demolition) that had concrete cancer. We broke out the pool and patio with our CAT 275 and a hydraulic hammer, used part of the concrete to build up the owners' shooting berm instead of hauling it all off, then backfilled, graded, poured a pad for their jacuzzi, and laid sod.",
           "[Grounded Land Services](/) provides demolition for residential, ranch, and commercial properties throughout Central Texas. We use heavy equipment and specialized attachments to carefully dismantle unwanted structures, break up concrete, remove debris, and prepare the area for its next use.", 
         ],
         subheading: "When Pool Demolition Makes Sense",
@@ -1849,6 +1850,10 @@ paragraphs: [
           { icon: "✅", title: "One Contractor From Start to Finish", description: "From tearing down the unwanted structure to cleaning up the site and preparing it for what's next, we can handle multiple stages of the project under one roof." },
         ],
         iconCardsColumns: 2,
+        listIntro: "Recent demolition projects:",
+        list: caseStudies
+          .filter((c) => c.services.some((s) => s.slug === "demolition"))
+          .map((c) => ({ label: `${c.title} (${c.acreage}, ${c.timeline})`, href: `/case-studies/${c.slug}` })),
         media: [
           { type: "image", src: "/images/service-pics/why-choose-us.jpeg", alt: "Why choose Grounded Land Services for demolition" },
         ],

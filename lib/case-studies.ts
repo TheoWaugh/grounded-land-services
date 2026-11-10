@@ -554,6 +554,26 @@ export const caseStudies: CaseStudy[] = [
     related: { heading: "Related Wildfire-Mitigation Work", slugs: ["balcones-refuge-fire-break"] },
   },
   {
+    slug: "bertram-pool-demolition",
+    title: "Pool Demolition in Bertram, Texas",
+    description: "A 1,575-square-foot concrete (gunite) pool and its patio removed in about a week in Bertram, Texas, because the concrete was deteriorating from concrete cancer. We broke it out with our CAT 275 and a rented Bobcat E80 with a hydraulic hammer, backfilled and graded, poured a 10x8 concrete pad for a jacuzzi, and laid 5 pallets of sod.",
+    summary: "Broke out a 1,575 sq ft gunite pool with concrete cancer, then backfilled, poured a jacuzzi pad, and laid sod so the owners have a yard again.",
+    longDescription: "This Bertram backyard had a 1,575-square-foot concrete (gunite) pool that had to come out. The concrete was deteriorating: it was cracking and crumbling as the steel inside it rusted, which is often called \"concrete cancer.\" The owners wanted a yard again, plus a spot for a jacuzzi.\n\nWe took down part of their fence for access and worked carefully in the tight space between the house and the pool. We broke out the pool and the patio with our CAT 275 and a rented Bobcat E80 with a hydraulic hammer.\n\nWe hauled off 2 loads of concrete and 1 load of rebar. The rest of the concrete went to build up the back of the owners' shooting berm, which saved them on haul-off.\n\nThen we backfilled the hole, compacted and graded it, poured a 10x8 concrete pad for the jacuzzi, and laid 5 pallets of sod.\n\nThe job took about a week and was finished in June 2026. The result is new sod where the pool used to be and a pad ready for the jacuzzi.",
+    location: "Bertram, TX",
+    locationSlug: "bertram",
+    acreage: "1,575 Sq Ft",
+    timeline: "About 1 Week",
+    services: [
+      { label: "Pool Demolition", slug: "demolition" },
+      { label: "Demolition", slug: "demolition" },
+    ],
+    equipmentUsed: [
+      { label: "Cat 275 XE", equipmentId: "cat-275" },
+    ],
+    afterPhoto: "/projects/bertram-pool-demolition/pool-demolition-bertram-sod-jacuzzi-pad-after.webp",
+    galleryPhotos: ["/images/work/anderson-pool-demo.jpeg"],
+  },
+  {
     slug: "georgetown-land-clearing",
     title: "Land Clearing in Georgetown, Texas",
     description: "Selective cedar clearing on a 5-acre Georgetown, Texas property in two days. The owner's goal was saving his oak trees, so we used our CAT 299 to pull the small cedar out from under and around them one at a time and piled it for burning.",

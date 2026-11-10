@@ -86,7 +86,10 @@ export default async function ServicePage({ params }: { params: PageParams }) {
   const quoteHref = "#quote";
   const sections = withQuickAnswers(service, content.sections, cityName);
   const reviewsInSections = sections.some((s) => s.showReviews);
-  const local = LOCAL_SERVICES.includes(service) ? cityLocal[cityName] : undefined;
+  // Priority services always get the local block; other services only where the city has its own studies for them (e.g. Bertram demolition)
+  const cityData = cityLocal[cityName];
+  const hasServiceStudies = Boolean((cityData?.serviceStudies as Record<string, string[]> | undefined)?.[service]);
+  const local = LOCAL_SERVICES.includes(service) || hasServiceStudies ? cityData : undefined;
   const localQuestions = content.localFaqs ?? [];
   const imageSrc = serviceImages[service];
   const imageAlt = serviceAltText[service] ?? content.title;
