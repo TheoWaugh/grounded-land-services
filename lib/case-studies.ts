@@ -574,6 +574,25 @@ export const caseStudies: CaseStudy[] = [
     galleryPhotos: ["/images/work/anderson-pool-demo.jpeg"],
   },
   {
+    slug: "kingsland-forestry-mulching",
+    title: "Forestry Mulching in Kingsland, Texas",
+    description: "1 acre of cedar, mesquite, and brush mulched in one day in Kingsland, Texas, for a builder clearing a homesite. We knocked everything down and mulched it in place with our CAT 275 and Prinoth mulcher, and the builder then removed the mulch and stumps from the build pad.",
+    summary: "Mulched 1 acre of cedar, mesquite, and brush in a day so a builder could start on a homesite.",
+    longDescription: "A builder needed the trees knocked down on a 1-acre homesite in Kingsland. The lot was grown up in cedar, mesquite, and brush.\n\nWe used our CAT 275 with the Prinoth mulching head to mulch the cedar, mesquite, and brush in place in one day. The builder then came in after us and removed the mulch and stumps from the build pad.\n\nWe work with builders on [homesite prep](/services/site-preparation). On this job our mulching was the first step, and the builder's crew took it from there.\n\nThe job was finished in August 2026. The result is a cleared homesite, ready for the builder's site work.",
+    location: "Kingsland, TX",
+    locationSlug: "kingsland",
+    acreage: "1 Acre",
+    timeline: "1 Day",
+    services: [
+      { label: "Forestry Mulching", slug: "forestry-mulching" },
+    ],
+    equipmentUsed: [
+      { label: "Cat 275 XE", equipmentId: "cat-275" },
+      { label: "Prinoth Mulching Head", equipmentId: "prinoth" },
+    ],
+    afterPhoto: "/images/work/kingsland-forestry-mulching.jpeg",
+  },
+  {
     slug: "georgetown-land-clearing",
     title: "Land Clearing in Georgetown, Texas",
     description: "Selective cedar clearing on a 5-acre Georgetown, Texas property in two days. The owner's goal was saving his oak trees, so we used our CAT 299 to pull the small cedar out from under and around them one at a time and piled it for burning.",
