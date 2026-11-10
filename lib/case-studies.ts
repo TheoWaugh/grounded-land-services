@@ -534,4 +534,30 @@ export const caseStudies: CaseStudy[] = [
       "/projects/dale-forestry-mulching/brush-mulching-dale-before-after.webp",
     ],
   },
+  {
+    slug: "lampasas-rock-removal",
+    title: "Rock Removal in Lampasas, Texas",
+    description: "Loose limestone and sandstone removed from 2 acres of pasture in one day in Lampasas, Texas, along with two old burn piles cleaned up and the ground leveled with our Harley rake. The owner wanted level pasture that could be mowed without worrying about sparks, and ground ready for hunting.",
+    summary: "Removed loose limestone and sandstone, cleaned up two old burn piles, and Harley-raked 2 acres of pasture level for mowing.",
+    longDescription: "This 2-acre Lampasas property had loose limestone that was pulled up when the land was cleared, loose sandstone on the ridges, and two old burn piles that needed to be cleaned up. The owner wanted the pasture leveled, wanted to be able to mow it without worrying about the mower hitting rock and throwing sparks, and wanted it ready for hunting.\n\nWe used our CAT 275 with a standard bucket and our Harley rake. We picked up the loose limestone and sandstone and, instead of hauling it off, spread it out elsewhere on the property. We cleaned up the two burn piles too. One old burn pile was still smoldering, so we safely piled it to be hauled off later.\n\nTo finish, we ran our Harley rake over the pasture to level it out.\n\nThe job took one day and was finished in November 2026. The result is 2 acres of level pasture, ready to mow and to use for hunting.",
+    location: "Lampasas, TX",
+    locationSlug: "lampasas",
+    acreage: "2 Acres",
+    timeline: "1 Day",
+    services: [
+      { label: "Rock Removal", slug: "rock-removal" },
+      { label: "Burn Pile Cleanup", slug: "site-cleanup" },
+      { label: "Harley Raking", slug: "land-clearing" },
+    ],
+    equipmentUsed: [
+      { label: "Cat 275 XE", equipmentId: "cat-275" },
+      { label: "Harley Rake", equipmentId: "harley-rake" },
+    ],
+    afterPhoto: "/projects/lampasas-rock-removal/rock-removal-lampasas-raked-pasture-after.webp",
+    galleryPhotos: [
+      "/projects/lampasas-rock-removal/burn-pile-cleanup-lampasas-before-after.webp",
+      "/projects/lampasas-rock-removal/harley-raking-lampasas-pasture-leveling.webp",
+      "/projects/lampasas-rock-removal/burn-pile-cleanup-lampasas-aerial-after.webp",
+    ],
+  },
 ];
