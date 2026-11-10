@@ -511,4 +511,27 @@ export const caseStudies: CaseStudy[] = [
     ],
     afterPhoto: "/projects/gonzales-forestry-mulching/forestry-mulching-gonzales-oaks-pond-after.webp",
   },
+  {
+    slug: "dale-forestry-mulching",
+    title: "Forestry Mulching in Dale, Texas",
+    description: "2 acres of thick brush, cedar, and dead trees mulched in one day under the post oaks in Dale, Texas, in Caldwell County about 15 miles from Luling. The owner wanted the land opened up for hunting and leisure and easy to maintain, so we mulched everything in place with our CAT 275 and Prinoth mulching head.",
+    summary: "Mulched thick brush, cedar, and dead trees in place under the post oaks to open 2 acres for hunting and leisure.",
+    longDescription: "This 2-acre property in Dale, in Caldwell County near Lockhart and Luling, had thick brush growing up under the post oaks, with cedar mixed in and dead trees and branches throughout. The owner wanted the 2 acres cleared for hunting and leisure, and wanted the land to be easy to maintain afterward.\n\nWe used our CAT 275 with the Prinoth mulching head to mulch the brush, the cedar, and the dead trees and branches in place, so there were no burn piles and nothing to haul off. The post oaks were left standing.\n\nThe job took one day and was finished in November 2026. The result is open ground under the post oaks, ready for hunting and leisure and much easier to keep maintained.",
+    location: "Dale, TX",
+    locationSlug: "luling",
+    acreage: "2 Acres",
+    timeline: "1 Day",
+    services: [
+      { label: "Forestry Mulching", slug: "forestry-mulching" },
+    ],
+    equipmentUsed: [
+      { label: "Cat 275 XE", equipmentId: "cat-275" },
+      { label: "Prinoth Mulching Head", equipmentId: "prinoth" },
+    ],
+    afterPhoto: "/projects/dale-forestry-mulching/forestry-mulching-dale-post-oaks-aerial.webp",
+    galleryPhotos: [
+      "/projects/dale-forestry-mulching/forestry-mulching-dale-post-oak-after.webp",
+      "/projects/dale-forestry-mulching/brush-mulching-dale-before-after.webp",
+    ],
+  },
 ];

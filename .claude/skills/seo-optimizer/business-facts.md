@@ -76,7 +76,7 @@ Luling, Bertram, Briggs. Focus content, case studies, and links here first.
 - The "Kelley Arnold" review is from a family member: removed from the site
   (owner, 2026-10-21). Never show or mark it up.
 - Case studies on site: 20 in lib/case-studies.ts (owner confirmed 10 on 2026-10-21; more
-  added since, incl. Georgetown 5 ac and Harwood 3 ac on 2026-10-27, Kingsland 0.5 ac and Balcones refuge 5-mile fire break on 2026-10-30, Spicewood Lake Travis lot 0.5 ac and Spicewood sod lots 1.5 ac and Bertram mulching cleanup 1.2 ac and Bertram rock removal 0.5 ac on 2026-11-02, Gonzales forestry mulching 1 ac on 2026-11-03; e.g. Spicewood 53.8 ac land clearing,
+  added since, incl. Georgetown 5 ac and Harwood 3 ac on 2026-10-27, Kingsland 0.5 ac and Balcones refuge 5-mile fire break on 2026-10-30, Spicewood Lake Travis lot 0.5 ac and Spicewood sod lots 1.5 ac and Bertram mulching cleanup 1.2 ac and Bertram rock removal 0.5 ac on 2026-11-02, Gonzales forestry mulching 1 ac on 2026-11-03, Dale forestry mulching 2 ac on 2026-11-09; e.g. Spicewood 53.8 ac land clearing,
   Gonzales 34.8 ac, Liberty Hill 4.1 ac rock removal)
 - Testimonials: on site with names and cities (Testimonials.tsx, app/page.tsx)
 - Gallery photo locations: NOT confirmed (every alt says "Bertram, TX"), except
@@ -174,6 +174,13 @@ seo-reports/city-notes-priority.md.
   mulching, case study /case-studies/harwood-forestry-mulching (added 2026-10-27).
   (owner, 2026-11-03) Clint Strittmatter's review is from Harwood, TX; it shows on the Gonzales and Luling pages
   (replacing Emil Millet) but is NOT linked to the Harwood case study. Has NOT worked around oil wells or pumpjacks: never claim it.
+- Dale (Caldwell County, near Lockhart and Luling; not a service-area city): (owner, 2026-11-09) 2 ac forestry
+  mulching, 1 day, Nov 2026, CAT 275 + Prinoth; thick brush under post oaks with cedar mixed in, dead trees
+  and branches, mulched in place; owner wanted it cleared for hunting and leisure and easy to maintain;
+  nothing tricky. Customer not named. Case study /case-studies/dale-forestry-mulching, locationSlug
+  "luling", shown on Luling pages as nearby work (owner says ~15 mi from Luling). Salvador Rebollar's
+  review (Dale, TX) shows on the Luling pages but must NOT be linked to or mentioned on the Dale case
+  study: that customer doesn't want to be named there.
 
 ## Leads & contact
 - Best way to reach you: call or text (512) 571-6700, or the quote form
