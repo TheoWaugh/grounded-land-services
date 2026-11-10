@@ -117,6 +117,7 @@ const allImages = [
   { src: "/projects/dale-forestry-mulching/forestry-mulching-dale-post-oaks-aerial.webp", alt: "Forestry mulching in Dale, TX: aerial view of thick brush and cedar mulched under the post oaks", tag: "Forestry Mulching" },
   { src: "/projects/dale-forestry-mulching/forestry-mulching-dale-post-oak-after.webp", alt: "Forestry mulching in Dale, TX: brush and dead trees mulched in place under a post oak", tag: "Forestry Mulching" },
   { src: "/projects/dale-forestry-mulching/brush-mulching-dale-before-after.webp", alt: "Before and after forestry mulching in Dale, TX: thick brush and cedar under the post oaks mulched to open ground", tag: "Forestry Mulching" },
+  { src: "/projects/lampasas-mulching-cleanup-grant/forestry-mulching-cleanup-lampasas-raked-after.webp", alt: "Forestry mulching cleanup and wildfire fuel reduction in Lampasas, TX: old mulch, stumps, cactus and rock removed and the ground raked smooth", tag: "Forestry Mulching" },
   { src: "/images/work/299-275-case-pic.jpeg", alt: "Grounded Land Services skid steers with various attachments", tag: "Equipment" },
   { src: "/images/work/dji_fly_20251022_072324_0022_1768263397042_photo.jpeg", alt: "Completed land clearing job in Spicewood, TX", tag: "Land Clearing" },
   { src: "/images/work/IMG_6405.jpeg", alt: "Completed erosion control job in Central Texas", tag: "Site Prep" },

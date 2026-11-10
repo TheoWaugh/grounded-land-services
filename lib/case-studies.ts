@@ -15,9 +15,39 @@ export interface CaseStudy {
   afterPhoto: string; // always required — the primary "after" shot
   galleryPhotos?: string[]; // additional photos for the individual page
   videoIds?: string[]; // YouTube video IDs
+  related?: { heading: string; slugs: string[] }; // case studies linked as related work at the bottom of the page
 }
 
 export const caseStudies: CaseStudy[] = [
+  {
+    slug: "balcones-refuge-fire-break",
+    title: "5-Mile Fire Break at Balcones Canyonlands National Wildlife Refuge",
+    description: "A 5-mile fire break mulched off FM 1431 on the Balcones Canyonlands National Wildlife Refuge near Leander, Texas, for the U.S. Fish & Wildlife Service. We started February 2, 2026, and finished before golden-cheeked warbler nesting season began March 1, mulching a 5-mile slash pile of cedar and brush in place with our CAT 275 and Prinoth mulching head.",
+    summary: "Mulched a 5-mile slash pile of cedar and brush in place for the U.S. Fish & Wildlife Service, finished before warbler nesting season.",
+    longDescription: "The U.S. Fish & Wildlife Service needed a fire break on the Balcones Canyonlands National Wildlife Refuge, off FM 1431. The refuge is close to Leander, Jonestown, Liberty Hill, and our base in Bertram. A 5-mile slash pile of cedar and brush ran along the fire break line, and it had to be cleared while disturbing as little ground as possible.\n\nThe job required a skid steer mulcher because of the limited access and the need for minimal ground disturbance, so we used our CAT 275 with the Prinoth mulching head. Extremely steep inclines, tight access, and rock made it a challenging job. We mulched the entire slash pile in place, with nothing burned or hauled off.\n\nTiming mattered too. All of the work had to be done before golden-cheeked warbler nesting season began on March 1. We started on February 2 and finished in February 2026.\n\nThe finished fire break also serves as a critical access route for firefighters, giving them a chance to stop a wildfire before it spreads to more populated areas.",
+    location: "Leander, TX",
+    locationSlug: "leander",
+    nearbyCitySlugs: ["jonestown"],
+    acreage: "5 Miles",
+    timeline: "About 1 Month",
+    services: [
+      { label: "Fire Breaks", slug: "fire-breaks" },
+      { label: "Forestry Mulching", slug: "forestry-mulching" },
+    ],
+    equipmentUsed: [
+      { label: "Cat 275 XE", equipmentId: "cat-275" },
+      { label: "Prinoth Mulching Head", equipmentId: "prinoth" },
+    ],
+    afterPhoto: "/projects/balcones-refuge-fire-break/fire-break-balcones-canyonlands-mulched-cedar.webp",
+    galleryPhotos: [
+      "/projects/balcones-refuge-fire-break/fire-break-balcones-canyonlands-hillside.webp",
+      "/projects/balcones-refuge-fire-break/fire-break-balcones-canyonlands-tree-line.webp",
+      "/projects/balcones-refuge-fire-break/fire-break-balcones-canyonlands-mulched-trail.webp",
+      "/projects/balcones-refuge-fire-break/fire-break-balcones-canyonlands-cedar-corridor.webp",
+    ],
+    videoIds: ["KjYxH1hgTwM"],
+    related: { heading: "Related Wildfire-Mitigation Work", slugs: ["lampasas-mulching-cleanup-grant"] },
+  },
   {
     slug: "liberty-hill-rock-removal",
     title: "Rock Removal in Liberty Hill, Texas",
@@ -48,34 +78,7 @@ export const caseStudies: CaseStudy[] = [
       "/images/work/liberty-hill-rock-removal-7.JPEG",
     ],
   },
-  {
-    slug: "balcones-refuge-fire-break",
-    title: "5-Mile Fire Break at Balcones Canyonlands National Wildlife Refuge",
-    description: "A 5-mile fire break mulched off FM 1431 on the Balcones Canyonlands National Wildlife Refuge near Leander, Texas, for the U.S. Fish & Wildlife Service. We started February 2, 2026, and finished before golden-cheeked warbler nesting season began March 1, mulching a 5-mile slash pile of cedar and brush in place with our CAT 275 and Prinoth mulching head.",
-    summary: "Mulched a 5-mile slash pile of cedar and brush in place for the U.S. Fish & Wildlife Service, finished before warbler nesting season.",
-    longDescription: "The U.S. Fish & Wildlife Service needed a fire break on the Balcones Canyonlands National Wildlife Refuge, off FM 1431. The refuge is close to Leander, Jonestown, Liberty Hill, and our base in Bertram. A 5-mile slash pile of cedar and brush ran along the fire break line, and it had to be cleared while disturbing as little ground as possible.\n\nThe job required a skid steer mulcher because of the limited access and the need for minimal ground disturbance, so we used our CAT 275 with the Prinoth mulching head. Extremely steep inclines, tight access, and rock made it a challenging job. We mulched the entire slash pile in place, with nothing burned or hauled off.\n\nTiming mattered too. All of the work had to be done before golden-cheeked warbler nesting season began on March 1. We started on February 2 and finished in February 2026.\n\nThe finished fire break also serves as a critical access route for firefighters, giving them a chance to stop a wildfire before it spreads to more populated areas.",
-    location: "Leander, TX",
-    locationSlug: "leander",
-    nearbyCitySlugs: ["jonestown"],
-    acreage: "5 Miles",
-    timeline: "About 1 Month",
-    services: [
-      { label: "Fire Breaks", slug: "fire-breaks" },
-      { label: "Forestry Mulching", slug: "forestry-mulching" },
-    ],
-    equipmentUsed: [
-      { label: "Cat 275 XE", equipmentId: "cat-275" },
-      { label: "Prinoth Mulching Head", equipmentId: "prinoth" },
-    ],
-    afterPhoto: "/projects/balcones-refuge-fire-break/fire-break-balcones-canyonlands-mulched-cedar.webp",
-    galleryPhotos: [
-      "/projects/balcones-refuge-fire-break/fire-break-balcones-canyonlands-hillside.webp",
-      "/projects/balcones-refuge-fire-break/fire-break-balcones-canyonlands-tree-line.webp",
-      "/projects/balcones-refuge-fire-break/fire-break-balcones-canyonlands-mulched-trail.webp",
-      "/projects/balcones-refuge-fire-break/fire-break-balcones-canyonlands-cedar-corridor.webp",
-    ],
-    videoIds: ["KjYxH1hgTwM"],
-  },
+  
   
   {
     slug: "gonzales-land-clearing",
@@ -189,46 +192,25 @@ export const caseStudies: CaseStudy[] = [
       "/images/work/IMG_7144.jpeg",
     ],
   },
-{
-    slug: "rockdale-forestry-mulching",
-    title: "Forestry Mulching in Rockdale, Texas",
-    description: "1.6 acres of overgrown property mulched in Rockdale, Texas. We cleared dead trees, cedar elms, mesquite, and hackberry to open up the property and make it easier to access.",
-    longDescription: "This 1.6-acre Rockdale property had a mix of dead trees, cedar elms, mesquite, and hackberry that made portions of the property difficult to access and see.\n\nGrounded Land Services mulched the trees and brush across the property, opening up the overgrown areas and creating better access throughout the acreage. The main goal of the project was to make the property easier for potential buyers to walk and get a better view of the land.\n\nAfter the mulching was completed, the property was more open and accessible, giving visitors a much clearer view of the acreage and making it easier to walk and evaluate the property.",
-    location: "Rockdale, TX",
-    locationSlug: "rockdale",
-    acreage: "1.6 Acres",
-    timeline: "2 Days",
-    services: [
-      { label: "Forestry Mulching", slug: "forestry-mulching" },
-    ],
-    equipmentUsed: [
-      { label: "Cat 275 XE", equipmentId: "cat-275" },
-      { label: "Prinoth Forestry Mulcher", equipmentId: "prinoth" },
-    ],
-    afterPhoto: "/images/work/rockdale-mulching-2.jpeg",
-    videoIds: ["pjVyQg81nEE"],
-    galleryPhotos: [
-      "/images/work/rockdale-mulching-1.JPG",
-    ],
-  },
-{
-    slug: "jonestown-forestry-mulching",
-    title: "Forestry Mulching in Jonestown, Texas",
-    description: "1.2 acres of forestry mulching in Jonestown, Texas. We mulched down large and small cedar trees, dead brush and limbs, and several dead red oaks to open up the property for recreational use. Despite the steep incline, rocky terrain, and trash scattered throughout, we completed the job in just one day.",
-    longDescription: "This 1.2-acre property in Jonestown, Texas, needed clearing to make the area more accessible for recreational use. The property had large and small cedar trees, dead brush and limbs, and several dead red oaks that needed to be mulched.\n\nWe used our Prinoth mulching head paired with our Cat 275 to clear the unwanted vegetation and dead material throughout the area. The steep incline, rocky terrain, and trash scattered throughout the property made some sections more challenging to work through, but we completed the entire job in one day.\n\nThe result was a more open area that the owner can enjoy, with the cedar overgrowth, dead brush, limbs, and dead trees mulched in place.",
-    location: "Jonestown, TX",
-    locationSlug: "jonestown",
-    acreage: "1.2 Acres",
+  {
+    slug: "gonzales-forestry-mulching",
+    title: "Forestry Mulching in Gonzales, Texas",
+    description: "1 acre of brush, cedar, and leftover brush piles mulched in one day in Gonzales, Texas. The owner wanted to open up pasture and see their pond, so we mulched everything in place with our CAT 275 and Prinoth mulching head, taking extra care on sandy ground scattered with sandstone to keep the mulching head from throwing sparks.",
+    summary: "Mulched brush, cedar, and old fence-building brush piles in place to open up pasture and a view of the pond.",
+    longDescription: "This 1-acre Gonzales property was grown up in brush and cedar, and there were piles of brush left behind from when the fence was built. The owner wanted two things: open pasture, and a clear view of their pond.\n\nThe ground was sandy soil with sandstone scattered throughout, which made the terrain rough. Sandstone is hard on a mulching head, and steel teeth hitting rock can throw sparks, so we took extra care to keep the mulching head from throwing sparks while we worked through the rocky spots.\n\nWe used our CAT 275 with the Prinoth mulching head to mulch the brush, the cedar, and the old brush piles in place, so there were no burn piles and nothing to haul off.\n\nThe job took one day and was finished in October 2026. The result is open ground under the oaks with a view of the pond, ready to use as pasture.",
+    location: "Gonzales, TX",
+    locationSlug: "gonzales",
+    acreage: "1 Acre",
     timeline: "1 Day",
     services: [
       { label: "Forestry Mulching", slug: "forestry-mulching" },
+      { label: "Tree Pile Shredding", slug: "tree-pile-shredding" },
     ],
     equipmentUsed: [
       { label: "Cat 275 XE", equipmentId: "cat-275" },
       { label: "Prinoth Mulching Head", equipmentId: "prinoth" },
     ],
-    afterPhoto: "/images/work/lago-vista-mulching.JPG",
-    videoIds: ["CNAVOtb9FeU"],
+    afterPhoto: "/projects/gonzales-forestry-mulching/forestry-mulching-gonzales-oaks-pond-after.webp",
   },
 {
     slug: "carmine-forestry-mulching",
@@ -251,6 +233,76 @@ export const caseStudies: CaseStudy[] = [
       "/images/work/B8149350-A976-41F6-8DF0-33DA9C4C31ED.jpeg",
       "/images/work/0D85F6BC-81E3-48AD-ABF8-A506D42A0520.jpeg",
       "/images/work/F6E63EEB-DC78-41A9-AD5D-C83E2F489DAA.jpeg",
+    ],
+  },
+  {
+    slug: "kingsland-land-clearing",
+    title: "Land Clearing in Kingsland, Texas",
+    description: "Half an acre cleared in a day and a half in Kingsland, Texas. The owner wanted a property that was easier to maintain, keeping only his oak trees, so we cleared the cedar, persimmon, mesquite, yucca, and cactus, tore down an old structure, removed rock and old fence, and finished the ground with our Harley rake.",
+    longDescription: "This half-acre Kingsland property was grown up with cedar, persimmon trees, mesquite, yucca, and cactus. It also had loose rock, a dead oak tree, an old fence, and an old wooden structure. The owner wanted a property that was easier to maintain, keeping only his oak trees.\n\nWe used our CAT 275 and grapple to clear everything except the live oaks, take down the old structure and fence, and remove the dead oak and rock. An internet line ran across the property above ground instead of buried, so we moved it out of the way while we worked. We hauled off three loads of brush and one load of debris and rock.\n\nTo finish, we ran our Harley rake over the ground to level it out and pick up the leftover debris and rock. The job took a day and a half. The result is open, smooth ground under the oaks that's easy to mow and maintain.",
+    location: "Kingsland, TX",
+    locationSlug: "kingsland",
+    acreage: "0.5 Acres",
+    timeline: "1.5 Days",
+    services: [
+      { label: "Land Clearing", slug: "land-clearing" },
+      { label: "Demolition", slug: "demolition" },
+      { label: "Rock Removal", slug: "rock-removal" },
+    ],
+    equipmentUsed: [
+      { label: "Cat 275 XE", equipmentId: "cat-275" },
+      { label: "Harley Rake", equipmentId: "harley-rake" },
+      { label: "Grapple Rake", equipmentId: "grapple-rake" },
+    ],
+    afterPhoto: "/projects/kingsland-land-clearing/land-clearing-kingsland-after.webp",
+    galleryPhotos: [
+      "/projects/kingsland-land-clearing/land-clearing-kingsland-yucca-brush-before-after.webp",
+      "/projects/kingsland-land-clearing/land-clearing-kingsland-oaks-before-after.webp",
+      "/projects/kingsland-land-clearing/demolition-kingsland-old-structure-before-after.webp",
+      "/projects/kingsland-land-clearing/land-clearing-kingsland-oaks-raked-after.webp",
+      "/projects/kingsland-land-clearing/land-clearing-kingsland-oak-raked-after.webp",
+    ],
+  },
+{
+    slug: "jonestown-forestry-mulching",
+    title: "Forestry Mulching in Jonestown, Texas",
+    description: "1.2 acres of forestry mulching in Jonestown, Texas. We mulched down large and small cedar trees, dead brush and limbs, and several dead red oaks to open up the property for recreational use. Despite the steep incline, rocky terrain, and trash scattered throughout, we completed the job in just one day.",
+    longDescription: "This 1.2-acre property in Jonestown, Texas, needed clearing to make the area more accessible for recreational use. The property had large and small cedar trees, dead brush and limbs, and several dead red oaks that needed to be mulched.\n\nWe used our Prinoth mulching head paired with our Cat 275 to clear the unwanted vegetation and dead material throughout the area. The steep incline, rocky terrain, and trash scattered throughout the property made some sections more challenging to work through, but we completed the entire job in one day.\n\nThe result was a more open area that the owner can enjoy, with the cedar overgrowth, dead brush, limbs, and dead trees mulched in place.",
+    location: "Jonestown, TX",
+    locationSlug: "jonestown",
+    acreage: "1.2 Acres",
+    timeline: "1 Day",
+    services: [
+      { label: "Forestry Mulching", slug: "forestry-mulching" },
+    ],
+    equipmentUsed: [
+      { label: "Cat 275 XE", equipmentId: "cat-275" },
+      { label: "Prinoth Mulching Head", equipmentId: "prinoth" },
+    ],
+    afterPhoto: "/images/work/lago-vista-mulching.JPG",
+    videoIds: ["CNAVOtb9FeU"],
+  },
+
+  {
+    slug: "rockdale-forestry-mulching",
+    title: "Forestry Mulching in Rockdale, Texas",
+    description: "1.6 acres of overgrown property mulched in Rockdale, Texas. We cleared dead trees, cedar elms, mesquite, and hackberry to open up the property and make it easier to access.",
+    longDescription: "This 1.6-acre Rockdale property had a mix of dead trees, cedar elms, mesquite, and hackberry that made portions of the property difficult to access and see.\n\nGrounded Land Services mulched the trees and brush across the property, opening up the overgrown areas and creating better access throughout the acreage. The main goal of the project was to make the property easier for potential buyers to walk and get a better view of the land.\n\nAfter the mulching was completed, the property was more open and accessible, giving visitors a much clearer view of the acreage and making it easier to walk and evaluate the property.",
+    location: "Rockdale, TX",
+    locationSlug: "rockdale",
+    acreage: "1.6 Acres",
+    timeline: "2 Days",
+    services: [
+      { label: "Forestry Mulching", slug: "forestry-mulching" },
+    ],
+    equipmentUsed: [
+      { label: "Cat 275 XE", equipmentId: "cat-275" },
+      { label: "Prinoth Forestry Mulcher", equipmentId: "prinoth" },
+    ],
+    afterPhoto: "/images/work/rockdale-mulching-2.jpeg",
+    videoIds: ["pjVyQg81nEE"],
+    galleryPhotos: [
+      "/images/work/rockdale-mulching-1.JPG",
     ],
   },
   {
@@ -295,50 +347,32 @@ export const caseStudies: CaseStudy[] = [
     afterPhoto: "/images/work/dji_fly_20260130_143526_0122_1769999345932_photo.jpeg",
     videoIds: ["hLimv0coUqo"],
   },
+  
+ 
   {
-    slug: "leander-forestry-mulching",
-    title: "Forestry Mulching in Leander, Texas",
-    description: "1 acre of cedar, brush, and vines mulched from under the oaks at a Leander, Texas wedding venue in one day. We opened up shaded areas for guests to gather and left the mulch in place, working around rock and the venue's solar lights.",
-    longDescription: "This 1-acre property in Leander, Texas, is a wedding venue with beautiful oaks, but cedar, small trees, brush, and vines had grown in underneath them. The owner wanted to open up more shaded areas where guests could hang out under the oaks and make the venue look better overall.\n\nWe used our Cat 275 with the Prinoth mulching head to mulch the cedar, brush, vines, and unwanted trees in place, keeping the oaks. Rock and the venue's solar lights were scattered through the work area, so we moved the rock and the lights out of the way before mulching around them.\n\nThe job took one day. The result is open, shaded ground beneath the oaks with the mulch left in place, giving guests more room to gather and the venue a cleaner look.",
-    location: "Leander, TX",
-    locationSlug: "leander",
-    acreage: "1 Acre",
+    slug: "dale-forestry-mulching",
+    title: "Forestry Mulching in Dale, Texas",
+    description: "2 acres of thick brush, cedar, and dead trees mulched in one day under the post oaks in Dale, Texas, in Caldwell County about 15 miles from Luling. The owner wanted the land opened up for hunting and leisure and easy to maintain, so we mulched everything in place with our CAT 275 and Prinoth mulching head.",
+    summary: "Mulched thick brush, cedar, and dead trees in place under the post oaks to open 2 acres for hunting and leisure.",
+    longDescription: "This 2-acre property in Dale, in Caldwell County near Lockhart and Luling, had thick brush growing up under the post oaks, with cedar mixed in and dead trees and branches throughout. The owner wanted the 2 acres cleared for hunting and leisure, and wanted the land to be easy to maintain afterward.\n\nWe used our CAT 275 with the Prinoth mulching head to mulch the brush, the cedar, and the dead trees and branches in place, so there were no burn piles and nothing to haul off. The post oaks were left standing.\n\nThe job took one day and was finished in November 2026. The result is open ground under the post oaks, ready for hunting and leisure and much easier to keep maintained.",
+    location: "Dale, TX",
+    locationSlug: "luling",
+    acreage: "2 Acres",
     timeline: "1 Day",
     services: [
       { label: "Forestry Mulching", slug: "forestry-mulching" },
-      { label: "Underbrushing", slug: "underbrushing" },
     ],
     equipmentUsed: [
       { label: "Cat 275 XE", equipmentId: "cat-275" },
       { label: "Prinoth Mulching Head", equipmentId: "prinoth" },
     ],
-    afterPhoto: "/projects/leander-forestry-mulching/forestry-mulching-leander-oaks-before-after.webp",
+    afterPhoto: "/projects/dale-forestry-mulching/forestry-mulching-dale-post-oaks-aerial.webp",
     galleryPhotos: [
-      "/projects/leander-forestry-mulching/cedar-mulching-leander-before-after.webp",
-      "/projects/leander-forestry-mulching/underbrush-mulching-leander-tree-line-before-after.webp",
+      "/projects/dale-forestry-mulching/forestry-mulching-dale-post-oak-after.webp",
+      "/projects/dale-forestry-mulching/brush-mulching-dale-before-after.webp",
     ],
   },
-  {
-    slug: "georgetown-land-clearing",
-    title: "Land Clearing in Georgetown, Texas",
-    description: "Selective cedar clearing on a 5-acre Georgetown, Texas property in two days. The owner's goal was saving his oak trees, so we used our CAT 299 to pull the small cedar out from under and around them one at a time and piled it for burning.",
-    longDescription: "This 5-acre property outside Georgetown city limits had small cedar growing up under and around its oak trees, including along the fence line. The owner's goal was to save his oaks.\n\nWe worked the property with our CAT 299, pulling the cedar out from beneath and around the oaks one at a time and leaving the oaks themselves standing. We piled the cedar for burning. The job took two days.\n\nThe property also had plenty of large rock, which is common on Georgetown's west side. Because it is outside city limits, no city tree permit was needed. The result is open ground under the oaks, with the cedar that had been crowding them gone.",
-    location: "Georgetown, TX",
-    locationSlug: "georgetown",
-    acreage: "5 Acres",
-    timeline: "2 Days",
-    services: [
-      { label: "Land Clearing", slug: "land-clearing" },
-      { label: "Cedar Tree Removal", slug: "cedar-tree-removal" },
-    ],
-    equipmentUsed: [
-      { label: "Cat 299 D3 XE", equipmentId: "cat-299" },
-    ],
-    afterPhoto: "/projects/georgetown-land-clearing/cedar-clearing-georgetown-oaks-before-after.webp",
-    galleryPhotos: [
-      "/projects/georgetown-land-clearing/cedar-clearing-georgetown-fence-line-before-after.webp",
-    ],
-  },
+  
   {
     slug: "harwood-forestry-mulching",
     title: "Forestry Mulching in Harwood, Texas",
@@ -360,34 +394,7 @@ export const caseStudies: CaseStudy[] = [
       "/projects/harwood-forestry-mulching/cedar-mesquite-mulching-harwood-before-after.webp",
     ],
   },
-  {
-    slug: "kingsland-land-clearing",
-    title: "Land Clearing in Kingsland, Texas",
-    description: "Half an acre cleared in a day and a half in Kingsland, Texas. The owner wanted a property that was easier to maintain, keeping only his oak trees, so we cleared the cedar, persimmon, mesquite, yucca, and cactus, tore down an old structure, removed rock and old fence, and finished the ground with our Harley rake.",
-    longDescription: "This half-acre Kingsland property was grown up with cedar, persimmon trees, mesquite, yucca, and cactus. It also had loose rock, a dead oak tree, an old fence, and an old wooden structure. The owner wanted a property that was easier to maintain, keeping only his oak trees.\n\nWe used our CAT 275 and grapple to clear everything except the live oaks, take down the old structure and fence, and remove the dead oak and rock. An internet line ran across the property above ground instead of buried, so we moved it out of the way while we worked. We hauled off three loads of brush and one load of debris and rock.\n\nTo finish, we ran our Harley rake over the ground to level it out and pick up the leftover debris and rock. The job took a day and a half. The result is open, smooth ground under the oaks that's easy to mow and maintain.",
-    location: "Kingsland, TX",
-    locationSlug: "kingsland",
-    acreage: "0.5 Acres",
-    timeline: "1.5 Days",
-    services: [
-      { label: "Land Clearing", slug: "land-clearing" },
-      { label: "Demolition", slug: "demolition" },
-      { label: "Rock Removal", slug: "rock-removal" },
-    ],
-    equipmentUsed: [
-      { label: "Cat 275 XE", equipmentId: "cat-275" },
-      { label: "Harley Rake", equipmentId: "harley-rake" },
-      { label: "Grapple Rake", equipmentId: "grapple-rake" },
-    ],
-    afterPhoto: "/projects/kingsland-land-clearing/land-clearing-kingsland-after.webp",
-    galleryPhotos: [
-      "/projects/kingsland-land-clearing/land-clearing-kingsland-yucca-brush-before-after.webp",
-      "/projects/kingsland-land-clearing/land-clearing-kingsland-oaks-before-after.webp",
-      "/projects/kingsland-land-clearing/demolition-kingsland-old-structure-before-after.webp",
-      "/projects/kingsland-land-clearing/land-clearing-kingsland-oaks-raked-after.webp",
-      "/projects/kingsland-land-clearing/land-clearing-kingsland-oak-raked-after.webp",
-    ],
-  },
+  
   {
     slug: "spicewood-lake-travis-lot",
     title: "Lake Travis Lot Clearing in Spicewood, Texas",
@@ -491,49 +498,8 @@ export const caseStudies: CaseStudy[] = [
       "/images/work/king-rock-removal.jpeg",
     ],
   },
-  {
-    slug: "gonzales-forestry-mulching",
-    title: "Forestry Mulching in Gonzales, Texas",
-    description: "1 acre of brush, cedar, and leftover brush piles mulched in one day in Gonzales, Texas. The owner wanted to open up pasture and see their pond, so we mulched everything in place with our CAT 275 and Prinoth mulching head, taking extra care on sandy ground scattered with sandstone to keep the mulching head from throwing sparks.",
-    summary: "Mulched brush, cedar, and old fence-building brush piles in place to open up pasture and a view of the pond.",
-    longDescription: "This 1-acre Gonzales property was grown up in brush and cedar, and there were piles of brush left behind from when the fence was built. The owner wanted two things: open pasture, and a clear view of their pond.\n\nThe ground was sandy soil with sandstone scattered throughout, which made the terrain rough. Sandstone is hard on a mulching head, and steel teeth hitting rock can throw sparks, so we took extra care to keep the mulching head from throwing sparks while we worked through the rocky spots.\n\nWe used our CAT 275 with the Prinoth mulching head to mulch the brush, the cedar, and the old brush piles in place, so there were no burn piles and nothing to haul off.\n\nThe job took one day and was finished in October 2026. The result is open ground under the oaks with a view of the pond, ready to use as pasture.",
-    location: "Gonzales, TX",
-    locationSlug: "gonzales",
-    acreage: "1 Acre",
-    timeline: "1 Day",
-    services: [
-      { label: "Forestry Mulching", slug: "forestry-mulching" },
-      { label: "Tree Pile Shredding", slug: "tree-pile-shredding" },
-    ],
-    equipmentUsed: [
-      { label: "Cat 275 XE", equipmentId: "cat-275" },
-      { label: "Prinoth Mulching Head", equipmentId: "prinoth" },
-    ],
-    afterPhoto: "/projects/gonzales-forestry-mulching/forestry-mulching-gonzales-oaks-pond-after.webp",
-  },
-  {
-    slug: "dale-forestry-mulching",
-    title: "Forestry Mulching in Dale, Texas",
-    description: "2 acres of thick brush, cedar, and dead trees mulched in one day under the post oaks in Dale, Texas, in Caldwell County about 15 miles from Luling. The owner wanted the land opened up for hunting and leisure and easy to maintain, so we mulched everything in place with our CAT 275 and Prinoth mulching head.",
-    summary: "Mulched thick brush, cedar, and dead trees in place under the post oaks to open 2 acres for hunting and leisure.",
-    longDescription: "This 2-acre property in Dale, in Caldwell County near Lockhart and Luling, had thick brush growing up under the post oaks, with cedar mixed in and dead trees and branches throughout. The owner wanted the 2 acres cleared for hunting and leisure, and wanted the land to be easy to maintain afterward.\n\nWe used our CAT 275 with the Prinoth mulching head to mulch the brush, the cedar, and the dead trees and branches in place, so there were no burn piles and nothing to haul off. The post oaks were left standing.\n\nThe job took one day and was finished in November 2026. The result is open ground under the post oaks, ready for hunting and leisure and much easier to keep maintained.",
-    location: "Dale, TX",
-    locationSlug: "luling",
-    acreage: "2 Acres",
-    timeline: "1 Day",
-    services: [
-      { label: "Forestry Mulching", slug: "forestry-mulching" },
-    ],
-    equipmentUsed: [
-      { label: "Cat 275 XE", equipmentId: "cat-275" },
-      { label: "Prinoth Mulching Head", equipmentId: "prinoth" },
-    ],
-    afterPhoto: "/projects/dale-forestry-mulching/forestry-mulching-dale-post-oaks-aerial.webp",
-    galleryPhotos: [
-      "/projects/dale-forestry-mulching/forestry-mulching-dale-post-oak-after.webp",
-      "/projects/dale-forestry-mulching/brush-mulching-dale-before-after.webp",
-    ],
-  },
+  
+  
   {
     slug: "lampasas-rock-removal",
     title: "Rock Removal in Lampasas, Texas",
@@ -558,6 +524,77 @@ export const caseStudies: CaseStudy[] = [
       "/projects/lampasas-rock-removal/burn-pile-cleanup-lampasas-before-after.webp",
       "/projects/lampasas-rock-removal/harley-raking-lampasas-pasture-leveling.webp",
       "/projects/lampasas-rock-removal/burn-pile-cleanup-lampasas-aerial-after.webp",
+    ],
+  },
+  {
+    slug: "lampasas-mulching-cleanup-grant",
+    title: "Forestry Mulching Cleanup in Lampasas, Texas",
+    description: "2 acres of old mulch, stumps, cactus, and surface rock cleaned up in two days in Lampasas, Texas, so the owner could mow with a zero-turn and cut down wildfire fuel around their house. We Harley-raked the ground smooth and hauled off 12 loads of debris and cactus. The landowner received a Texas A&M Forest Service Mechanical Fuel Reduction Grant for the work.",
+    summary: "Removed old mulch, stumps, cactus, and rock, Harley-raked 2 acres smooth for zero-turn mowing, and cut wildfire fuel around the house.",
+    longDescription: "This 2-acre Lampasas property had old mulch left over from a previous forestry mulching job, along with stumps, cactus, and surface rock. The owner wanted to be able to mow the property with a zero-turn mower and, at the same time, reduce the wildfire fuel around their house.\n\nWe used our CAT 299 and our Harley rake. We removed the old mulch, the stumps, the cactus, and the rock, then Harley-raked the ground smooth. We hauled off 12 loads of debris and cactus.\n\nThe landowner received the Texas A&M Forest Service [Mechanical Fuel Reduction Grant](https://tfsweb.tamu.edu/mechgrant/) for this work. Eligibility and application periods are set by Texas A&M Forest Service, so check the program page for current details.\n\nThe job took two days and was finished in July 2025. The result is 2 acres of smooth ground that's ready for a zero-turn mower, with less fuel for a wildfire near the house.",
+    location: "Lampasas, TX",
+    locationSlug: "lampasas",
+    acreage: "2 Acres",
+    timeline: "2 Days",
+    services: [
+      { label: "Forestry Mulching Cleanup", slug: "forestry-mulching-cleanup" },
+      { label: "Rock Removal", slug: "rock-removal" },
+      { label: "Cactus Removal", slug: "rock-cactus-removal" },
+      { label: "Stump Removal", slug: "tree-stump-removal" },
+    ],
+    equipmentUsed: [
+      { label: "Cat 299", equipmentId: "cat-299" },
+      { label: "Harley Rake", equipmentId: "harley-rake" },
+    ],
+    afterPhoto: "/projects/lampasas-mulching-cleanup-grant/forestry-mulching-cleanup-lampasas-raked-after.webp",
+    galleryPhotos: [
+      "/projects/lampasas-mulching-cleanup-grant/wildfire-fuel-reduction-lampasas-oaks-after.webp",
+      "/projects/lampasas-mulching-cleanup-grant/forestry-mulching-cleanup-lampasas-mowable-ground.webp",
+    ],
+    related: { heading: "Related Wildfire-Mitigation Work", slugs: ["balcones-refuge-fire-break"] },
+  },
+  {
+    slug: "georgetown-land-clearing",
+    title: "Land Clearing in Georgetown, Texas",
+    description: "Selective cedar clearing on a 5-acre Georgetown, Texas property in two days. The owner's goal was saving his oak trees, so we used our CAT 299 to pull the small cedar out from under and around them one at a time and piled it for burning.",
+    longDescription: "This 5-acre property outside Georgetown city limits had small cedar growing up under and around its oak trees, including along the fence line. The owner's goal was to save his oaks.\n\nWe worked the property with our CAT 299, pulling the cedar out from beneath and around the oaks one at a time and leaving the oaks themselves standing. We piled the cedar for burning. The job took two days.\n\nThe property also had plenty of large rock, which is common on Georgetown's west side. Because it is outside city limits, no city tree permit was needed. The result is open ground under the oaks, with the cedar that had been crowding them gone.",
+    location: "Georgetown, TX",
+    locationSlug: "georgetown",
+    acreage: "5 Acres",
+    timeline: "2 Days",
+    services: [
+      { label: "Land Clearing", slug: "land-clearing" },
+      { label: "Cedar Tree Removal", slug: "cedar-tree-removal" },
+    ],
+    equipmentUsed: [
+      { label: "Cat 299 D3 XE", equipmentId: "cat-299" },
+    ],
+    afterPhoto: "/projects/georgetown-land-clearing/cedar-clearing-georgetown-oaks-before-after.webp",
+    galleryPhotos: [
+      "/projects/georgetown-land-clearing/cedar-clearing-georgetown-fence-line-before-after.webp",
+    ],
+  },
+   {
+    slug: "leander-forestry-mulching",
+    title: "Forestry Mulching in Leander, Texas",
+    description: "1 acre of cedar, brush, and vines mulched from under the oaks at a Leander, Texas wedding venue in one day. We opened up shaded areas for guests to gather and left the mulch in place, working around rock and the venue's solar lights.",
+    longDescription: "This 1-acre property in Leander, Texas, is a wedding venue with beautiful oaks, but cedar, small trees, brush, and vines had grown in underneath them. The owner wanted to open up more shaded areas where guests could hang out under the oaks and make the venue look better overall.\n\nWe used our Cat 275 with the Prinoth mulching head to mulch the cedar, brush, vines, and unwanted trees in place, keeping the oaks. Rock and the venue's solar lights were scattered through the work area, so we moved the rock and the lights out of the way before mulching around them.\n\nThe job took one day. The result is open, shaded ground beneath the oaks with the mulch left in place, giving guests more room to gather and the venue a cleaner look.",
+    location: "Leander, TX",
+    locationSlug: "leander",
+    acreage: "1 Acre",
+    timeline: "1 Day",
+    services: [
+      { label: "Forestry Mulching", slug: "forestry-mulching" },
+      { label: "Underbrushing", slug: "underbrushing" },
+    ],
+    equipmentUsed: [
+      { label: "Cat 275 XE", equipmentId: "cat-275" },
+      { label: "Prinoth Mulching Head", equipmentId: "prinoth" },
+    ],
+    afterPhoto: "/projects/leander-forestry-mulching/forestry-mulching-leander-oaks-before-after.webp",
+    galleryPhotos: [
+      "/projects/leander-forestry-mulching/cedar-mulching-leander-before-after.webp",
+      "/projects/leander-forestry-mulching/underbrush-mulching-leander-tree-line-before-after.webp",
     ],
   },
 ];
