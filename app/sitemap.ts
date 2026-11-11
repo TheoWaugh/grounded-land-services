@@ -53,6 +53,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry("/equipment", ["app/equipment/page.tsx"], "monthly", 0.6),
     entry("/faq", ["app/faq/page.tsx", "lib/services-content/index.ts"], "monthly", 0.7),
     entry("/cost-calculator", ["app/cost-calculator/page.tsx", "lib/cost-estimate.ts"], "monthly", 0.8),
+    entry("/guides/texas-mechanical-fuel-reduction-grant", ["app/guides/texas-mechanical-fuel-reduction-grant/page.tsx"], "monthly", 0.7),
     entry("/privacy", ["app/privacy/page.tsx"], "yearly", 0.2),
   ];
 

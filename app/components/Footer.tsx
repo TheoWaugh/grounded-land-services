@@ -26,6 +26,7 @@ const quickLinks = [
   { label: "Contact Us", href: "/contact" },
   { label: "Get a Quote", href: "/contact#quote" },
   { label: "Cost Calculator", href: "/cost-calculator" },
+  { label: "Grant Guide", href: "/guides/texas-mechanical-fuel-reduction-grant" },
   { label: "Privacy Policy", href: "/privacy" },
 ];
 

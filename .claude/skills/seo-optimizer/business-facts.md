@@ -109,12 +109,21 @@ Luling, Bertram, Briggs. Focus content, case studies, and links here first.
 - Texas A&M Forest Service Mechanical Fuel Reduction Grant: owner has completed
   a job under this program (forestry mulching / debris reduction). That job: Lampasas, July 2025, private
   landowner, 2 ac forestry mulching cleanup (owner, 2026-11-09); see the Lampasas notes below.
-  Program facts (verified at https://tfsweb.tamu.edu/mechgrant/): reimburses
-  private landowners in eligible Texas counties up to $2,000/acre for heavy
-  equipment, $20,000 max per landowner; next application window opens
-  June 1, 2027; work must be done by an unaffiliated contractor; burning
-  disqualifies. FUTURE guide page (not built yet). Always link the official
-  page; never promise eligibility.
+  Program facts (verified 2026-11-10 at https://tfsweb.tamu.edu/mechgrant/ and the 2026 announcement
+  https://tfsweb.tamu.edu/texas-am-forest-service-announces-wildfire-mitigation-grant-opportunities-and-landowner-outreach-events/ , dated Apr 23, 2026):
+  - Cost-share REIMBURSEMENT grant to reduce wildfire risk to communities; funded through the USDA Forest Service.
+  - Rates (actual costs up to): hand-cutting $750/ac; combination $1,500/ac; heavy equipment (forestry mulchers) $2,000/ac.
+    Max $20,000 per applicant (program page: per landowner). May not cover 100% of costs.
+  - Who (2026 announcement): private landowners, HOAs, nonprofits, city and local government entities in designated
+    project areas; 2026 = 39 Central Texas counties. Program page says Central, South, West and Northwest Texas and that
+    counties may change yearly. Don't list counties; link the official county map.
+  - 2026 window: June 1 - July 14, 2026. Next window opens June 1, 2027 (program page). Grant apps closed as of 2026-11-10.
+  - Rules: landowner pays first, reimbursed after post-inspection on paid-in-full invoices (3-6 weeks); contractor must be
+    qualified and NOT affiliated with the landowner; landowner can't do the work; no work before the TFS pre-inspection
+    (earlier work isn't reimbursed); burning of any kind disqualifies; debris must be removed or mechanically reduced
+    (mulching fits); fuel breaks at least 66 ft wide; one treatment type per application; selection is competitive.
+  - Our guide: /guides/texas-mechanical-fuel-reduction-grant (built 2026-11-10; "Last updated: November 2026").
+    Update its dates when TFS announces the 2027 round. Always link the official page; never promise eligibility or approval.
 - Social: Instagram @Grounded.LandServices, Facebook /GroundedLandServices,
   TikTok @grounded.land.services
 - Analytics: Google Analytics 4 (G-KW3HPEJTNW) + Meta Pixel installed
