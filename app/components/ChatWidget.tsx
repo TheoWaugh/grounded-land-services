@@ -20,7 +20,7 @@ function trackChatLink(href: string) {
 }
 
 function renderLink(label: string, href: string, key: number | string) {
-  const isExternal = href.startsWith("tel:") || href.startsWith("http");
+  const isExternal = href.startsWith("tel:") || href.startsWith("sms:") || href.startsWith("http");
   const className = "font-semibold underline text-[#C4922A] hover:text-amber-600 transition-colors";
   if (isExternal) {
     return (
