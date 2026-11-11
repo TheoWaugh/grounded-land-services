@@ -7,6 +7,8 @@ import { buildThankYouEmail, LEAD_EMAIL_FROM, LEAD_EMAIL_REPLY_TO } from "@/lib/
 // Env vars (never in code): LEAD_SHEET_URL, LEAD_SHEET_SECRET, RESEND_API_KEY.
 
 export const maxDuration = 30;
+// GET reads the env vars at request time, so photo uploads switch on as soon as they're set
+export const dynamic = "force-dynamic";
 
 const LEAD_SOURCES = ["Google Profile", "Calculator", "Chat", "Website"];
 const MAX_PHOTOS = 5;
@@ -65,6 +67,11 @@ async function sendThankYou(to: string, name: string, service: string, city: str
     console.error("Thank-you email: request failed", error);
     return "failed";
   }
+}
+
+/** Tells the quote form whether photos have somewhere to go (the Google Sheet + Drive connection is set up). */
+export async function GET() {
+  return NextResponse.json({ photos: Boolean(process.env.LEAD_SHEET_URL && process.env.LEAD_SHEET_SECRET) });
 }
 
 export async function POST(req: NextRequest) {

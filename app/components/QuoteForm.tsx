@@ -68,9 +68,18 @@ export default function QuoteForm({
   const [photos, setPhotos] = useState<string[]>([]);
   const [photoNote, setPhotoNote] = useState("");
   const [addingPhotos, setAddingPhotos] = useState(false);
+  // Photos only have somewhere to go once the Google Sheet connection is set up on the server
+  const [photosEnabled, setPhotosEnabled] = useState(false);
   const photoInputId = useId();
   // When the form appeared, for the server's "filled out too fast to be a person" spam check
   const shownAt = useRef(0);
+
+  useEffect(() => {
+    fetch("/api/lead")
+      .then((r) => r.json())
+      .then((d: { photos?: boolean }) => setPhotosEnabled(d.photos === true))
+      .catch(() => {});
+  }, []);
 
   useEffect(() => {
     shownAt.current = Date.now();
@@ -390,7 +399,8 @@ export default function QuoteForm({
         />
       </div>
 
-      {/* Photos */}
+      {/* Photos (hidden until the server can store them) */}
+      {photosEnabled && (
       <div>
         <p className={labelClass}>
           Photos of Your Property <span className={optionalClass}>(optional, up to {MAX_PHOTOS})</span>
@@ -436,6 +446,7 @@ export default function QuoteForm({
         </div>
         {photoNote && <p className={`mt-1.5 text-sm ${dark ? "text-white/60" : "text-gray-500"}`}>{photoNote}</p>}
       </div>
+      )}
 
       {sendError && (
         <p role="alert" className="text-sm text-red-400">
