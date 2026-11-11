@@ -1,5 +1,6 @@
 // Conversion events, sent to GA4 (gtag) and Meta Pixel (fbq) when they're loaded.
-// GA4 names: call_click, text_click, quote_cta_click, form_submit, calculator_used, calculator_quote_click
+// GA4 names: call_click, text_click, quote_cta_click, form_submit, calculator_used, calculator_quote_click,
+// chat_open, chat_message, chat_phone_click, chat_quote_click
 // Mark call_click, text_click and form_submit as Key Events in GA4.
 
 type EventName =
@@ -8,7 +9,11 @@ type EventName =
   | "quote_cta_click"
   | "form_submit"
   | "calculator_used"
-  | "calculator_quote_click";
+  | "calculator_quote_click"
+  | "chat_open"
+  | "chat_message"
+  | "chat_phone_click"
+  | "chat_quote_click";
 
 // Standard Meta events; anything not listed here is sent as a Meta custom event with the GA4 name.
 const metaEvents: Partial<Record<EventName, string>> = {

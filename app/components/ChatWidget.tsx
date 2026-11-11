@@ -2,23 +2,31 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import { trackEvent } from "@/lib/track";
 
 interface Message {
   role: "user" | "assistant";
   content: string;
 }
+
+// Chat-specific counts. ClickTracker still sends call_click / quote_cta_click for these links (link_location "chat").
+function trackChatLink(href: string) {
+  if (href.startsWith("tel:")) trackEvent("chat_phone_click");
+  else if (href.includes("#quote") || href.startsWith("/contact")) trackEvent("chat_quote_click");
+}
+
 function renderLink(label: string, href: string, key: number | string) {
   const isExternal = href.startsWith("tel:") || href.startsWith("http");
   const className = "font-semibold underline text-[#C4922A] hover:text-amber-600 transition-colors";
   if (isExternal) {
     return (
-      <a key={key} href={href} className={className}>
+      <a key={key} href={href} data-track="chat" onClick={() => trackChatLink(href)} className={className}>
         {label}
       </a>
     );
   }
   return (
-    <Link key={key} href={href} className={className}>
+    <Link key={key} href={href} data-track="chat" onClick={() => trackChatLink(href)} className={className}>
       {label}
     </Link>
   );
@@ -79,6 +87,8 @@ export default function ChatWidget() {
     setMessages(newMessages);
     setInput("");
     setLoading(true);
+    // Count only: never send the message text to GA or Meta
+    trackEvent("chat_message", { message_number: String(newMessages.filter((m) => m.role === "user").length) });
 
     try {
       const res = await fetch("/api/chat", {
@@ -110,7 +120,10 @@ export default function ChatWidget() {
     <>
       {/* Floating button */}
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => {
+          if (!isOpen) trackEvent("chat_open");
+          setIsOpen(!isOpen);
+        }}
         className="fixed bottom-[calc(5rem+env(safe-area-inset-bottom))] md:bottom-6 right-4 md:right-6 z-50 w-14 h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-br from-[#D4A840] to-[#C4922A] shadow-[0_8px_24px_-6px_rgba(196,146,42,0.6)] flex items-center justify-center transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_28px_-4px_rgba(196,146,42,0.7)]"
         aria-label="Open chat"
       >
