@@ -2,11 +2,15 @@
 
 import { useEffect } from "react";
 import { trackEvent } from "@/lib/track";
+import { rememberUtm } from "@/lib/lead-source";
 
 // One listener for the whole site, so every tel:/sms:/quote link is counted
 // without wiring onClick handlers into each component.
 export default function ClickTracker() {
   useEffect(() => {
+    // Remember a tagged landing link (e.g. a GBP post) for the quote form's lead source
+    rememberUtm();
+
     const handleClick = (e: MouseEvent) => {
       const link = (e.target as Element | null)?.closest?.("a");
       if (!link) return;

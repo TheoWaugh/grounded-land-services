@@ -18,6 +18,7 @@ import {
   type Density,
   type RockLevel,
 } from "@/lib/cost-estimate";
+import { markLeadSource } from "@/lib/lead-source";
 
 const fieldLabel = "block text-[11px] font-semibold text-[#6e6e73] uppercase tracking-wide mb-1.5";
 
@@ -191,13 +192,14 @@ function CalculatorBody({
           <a
             href={quoteHref}
             data-track="cost_calculator"
-            onClick={() =>
+            onClick={() => {
               trackEvent("calculator_quote_click", {
                 calculator_service: service,
                 acres: result ? String(acres) : "",
                 calculator_location: location,
-              })
-            }
+              });
+              markLeadSource("Calculator", priceText ?? "");
+            }}
             className="flex-1 sm:flex-none text-center px-4 py-2.5 bg-[#C4922A] text-black text-sm font-bold rounded-full hover:bg-amber-500 transition-colors"
           >
             Get your exact quote, free site visit

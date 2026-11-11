@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { trackEvent } from "@/lib/track";
+import { markLeadSource } from "@/lib/lead-source";
 
 interface Message {
   role: "user" | "assistant";
@@ -12,7 +13,10 @@ interface Message {
 // Chat-specific counts. ClickTracker still sends call_click / quote_cta_click for these links (link_location "chat").
 function trackChatLink(href: string) {
   if (href.startsWith("tel:")) trackEvent("chat_phone_click");
-  else if (href.includes("#quote") || href.startsWith("/contact")) trackEvent("chat_quote_click");
+  else if (href.includes("#quote") || href.startsWith("/contact")) {
+    trackEvent("chat_quote_click");
+    markLeadSource("Chat");
+  }
 }
 
 function renderLink(label: string, href: string, key: number | string) {

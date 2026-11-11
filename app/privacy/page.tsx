@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   },
 };
 
-const LAST_UPDATED = "October 20, 2026";
+const LAST_UPDATED = "November 10, 2026";
 
 const h2 = "text-xl md:text-2xl font-bold text-[#0a0a0a] mt-10 mb-3";
 const p = "text-[#3a3a3c] leading-relaxed mb-4";
@@ -36,10 +36,12 @@ export default function PrivacyPage() {
           <li>Your email address</li>
           <li>Your city or area</li>
           <li>Project details you choose to share, such as the service you need, rough property size, and comments</li>
+          <li>Photos of your property, if you choose to attach them</li>
         </ul>
         <p className={p}>
           We also note which page you sent the form from and, if you arrived through a tagged link (for
-          example, from our Google Business Profile), where that link came from.
+          example, from our Google Business Profile), where that link came from, and whether you came from
+          our cost calculator (with its estimate) or our chat assistant.
         </p>
 
         <h2 className={h2}>How we use it</h2>
@@ -52,7 +54,14 @@ export default function PrivacyPage() {
           <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className={a}>
             Formspree
           </a>
-          , a form-handling service.
+          , a form-handling service. We also keep a copy of each request in our own Google Sheet, and any
+          photos you attach are stored in our Google Drive. We send you an automatic confirmation email
+          through{" "}
+          <a href="https://resend.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className={a}>
+            Resend
+          </a>
+          , an email delivery service. Photos are shrunk and have their location data removed on your
+          device before they&apos;re sent.
         </p>
 
         <h2 className={h2}>Analytics and advertising</h2>
