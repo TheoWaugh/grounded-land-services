@@ -6,6 +6,7 @@ import { useState } from "react";
 import ScrollReveal from "./components/ScrollReveal";
 import QuoteForm from "./components/QuoteForm";
 import TrustStrip from "./components/TrustStrip";
+import GrantCallout from "./components/GrantCallout";
 import { caseStudies } from "@/lib/case-studies";
 
 const featuredProjects = ["balcones-refuge-fire-break", "gonzales-land-clearing", "liberty-hill-rock-removal"]
@@ -400,6 +401,10 @@ export default function Home() {
             <Link href="/services" className="btn-dark inline-block">
               All Services →
             </Link>
+          </div>
+
+          <div className="mt-10">
+            <GrantCallout variant="banner" />
           </div>
         </div>
       </section>

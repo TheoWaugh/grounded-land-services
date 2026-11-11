@@ -11,7 +11,7 @@ const navLinks = [
   { label: "Equipment", href: "/equipment"},
   { label: "Gallery", href: "/gallery" },
   { label: "Case Studies", href: "/case-studies" },
-  {label: "FAQs", href: "/faq"} 
+  { label: "Grant Guide", href: "/guides/texas-mechanical-fuel-reduction-grant" },
 ];
 
 export default function Header() {

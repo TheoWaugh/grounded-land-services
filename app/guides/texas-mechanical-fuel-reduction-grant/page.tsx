@@ -1,8 +1,11 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import FaqAccordion from "@/app/components/FaqAccordion";
 import FaqPageSchema from "@/app/components/FaqPageSchema";
 import BreadcrumbSchema from "@/app/components/BreadcrumbSchema";
+import YouTubePlayer from "@/app/components/YouTubePlayer";
+import { GRANT_GUIDE_PATH } from "@/lib/grant-guide";
 
 // Program facts checked against the official pages on 2026-11-10 (see business-facts.md).
 // Update the dates and LAST_UPDATED when Texas A&M Forest Service announces the 2027 round.
@@ -11,7 +14,7 @@ const PROGRAM_URL = "https://tfsweb.tamu.edu/mechgrant/";
 const ANNOUNCEMENT_URL =
   "https://tfsweb.tamu.edu/texas-am-forest-service-announces-wildfire-mitigation-grant-opportunities-and-landowner-outreach-events/";
 const QUOTE_HREF = "/contact?service=Forestry%20Mulching#quote";
-const PATH = "/guides/texas-mechanical-fuel-reduction-grant";
+const PATH = GRANT_GUIDE_PATH;
 
 export const metadata: Metadata = {
   title: { absolute: "Texas A&M Forest Service Fuel Reduction Grant Guide" },
@@ -95,8 +98,16 @@ export default function GrantGuidePage() {
       />
       <FaqPageSchema faqs={faqs} />
 
-      <section className="relative min-h-[18rem] md:min-h-[22rem] flex items-end overflow-hidden bg-[#0a0a0a]">
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-black/20" />
+      <section className="relative min-h-[22rem] md:min-h-[28rem] flex items-end overflow-hidden bg-[#0a0a0a]">
+        <Image
+          src="/projects/balcones-refuge-fire-break/fire-break-balcones-canyonlands-mulched-cedar.webp"
+          alt="Wildfire fire break mulched through cedar on Balcones Canyonlands National Wildlife Refuge near Leander, Texas"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/55 to-black/30" />
         <div className="relative z-10 max-w-7xl mx-auto w-full px-6 pt-28 pb-12">
           <p className="section-label-light mb-2">Wildfire Grant Guide</p>
           <h1 className="text-3xl md:text-5xl font-bold text-white max-w-4xl leading-tight">
@@ -216,7 +227,8 @@ export default function GrantGuidePage() {
             What are the rules?
           </h2>
           <p className={p}>The biggest rules are about who pays, who does the work, and what happens to the brush:</p>
-          <ul className="space-y-3 text-[15px] text-[#3a3a3c] leading-relaxed list-disc pl-5 mb-4">
+          <div className="grid md:grid-cols-5 gap-6 mb-4">
+          <ul className="md:col-span-3 space-y-3 text-[15px] text-[#3a3a3c] leading-relaxed list-disc pl-5">
             <li>
               <strong className="text-[#0a0a0a]">It&apos;s a reimbursement.</strong> You pay the contractor first, then
               get paid back after the work is inspected.
@@ -240,6 +252,21 @@ export default function GrantGuidePage() {
               fits so well: everything is mulched in place, with no burn piles and nothing to haul off.
             </li>
           </ul>
+          <figure className="md:col-span-2 md:self-end">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+              <Image
+                src="/images/service-pics/cat-275-pic.jpeg"
+                alt="Grounded Land Services CAT 275 compact track loader with a Prinoth M450s forestry mulching head on freshly mulched ground"
+                fill
+                sizes="(max-width: 768px) 100vw, 300px"
+                className="object-cover"
+              />
+            </div>
+            <figcaption className="text-xs text-[#6e6e73] mt-2 leading-relaxed">
+              Our CAT 275 and Prinoth mulching head turn brush into mulch on the spot, so there&apos;s nothing to burn.
+            </figcaption>
+          </figure>
+          </div>
           <p className="text-sm text-[#6e6e73] leading-relaxed">
             Selection is competitive and approval isn&apos;t guaranteed. The{" "}
             <a href={PROGRAM_URL} {...external} className={a}>
@@ -299,6 +326,32 @@ export default function GrantGuidePage() {
               : mulched for the U.S. Fish &amp; Wildlife Service, with nothing burned or hauled off.
             </li>
           </ul>
+
+          {/* The Lampasas grant job only has after photos, so these sit side by side (no before/after slider) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+            {[
+              {
+                src: "/projects/lampasas-mulching-cleanup-grant/forestry-mulching-cleanup-lampasas-raked-after.webp",
+                alt: "Lampasas, Texas property after wildfire fuel reduction: old mulch, stumps, cactus and rock removed and the ground raked smooth",
+              },
+              {
+                src: "/projects/lampasas-mulching-cleanup-grant/wildfire-fuel-reduction-lampasas-oaks-after.webp",
+                alt: "Oaks left standing on open, mowable ground after grant-funded wildfire fuel reduction in Lampasas, Texas",
+              },
+            ].map((photo) => (
+              <div key={photo.src} className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+                <Image src={photo.src} alt={photo.alt} fill sizes="(max-width: 640px) 100vw, 384px" className="object-cover" />
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-[#6e6e73] mt-2">After: the Lampasas grant job, finished July 2025.</p>
+
+          <div className="mt-8">
+            <p className="text-xs font-semibold text-[#6e6e73] uppercase tracking-wide mb-3">
+              Video: the Balcones Canyonlands fire break
+            </p>
+            <YouTubePlayer videoId="KjYxH1hgTwM" title="5-mile fire break at Balcones Canyonlands National Wildlife Refuge" loop />
+          </div>
         </section>
 
         <div className="bg-[#0a0a0a] rounded-2xl py-10 px-6 text-center mb-14">

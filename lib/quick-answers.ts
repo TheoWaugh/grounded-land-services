@@ -1,5 +1,6 @@
 import { servicePricing, MINIMUM_JOB } from "@/data/service-pricing";
 import { MULCHING_RATES, EXCAVATOR_RATES } from "@/data/service-timelines";
+import { GRANT_GUIDE_PATH } from "@/lib/grant-guide";
 
 // Answer-first "How much / how long" content for the owner's priority services. Rather than adding
 // new blocks, it turns the page's own cost-factors and process sections into question-headed
@@ -22,6 +23,8 @@ interface Answers {
   processHeading?: string;
   /** First paragraph of the process section: the timeline in the first sentence. */
   timeline?: string;
+  /** An extra line in the cost section, after the calculator link. */
+  costNote?: string;
 }
 
 function answersFor(service: string, city?: string): Answers | null {
@@ -50,6 +53,10 @@ function answersFor(service: string, city?: string): Answers | null {
         costDetail: "Since it's billed by the day, your total comes down to how much ground we can cover.",
         processHeading: `How long does forestry mulching take${inCity}, and what's the process?`,
         timeline: `Forestry mulching${inCity} covers ${MULCHING_RATES}. That means a 5-acre tract of thick cedar takes about five days, while the same five acres of light brush takes about two.`,
+        // City pages only: the national service page has its own grant callout box
+        costNote: city
+          ? `[Ask us about the Texas A&M Forest Service Mechanical Fuel Reduction Grant](${GRANT_GUIDE_PATH}).`
+          : undefined,
       };
     case "rock-removal":
       return {
@@ -78,7 +85,8 @@ export function withQuickAnswers<T extends Section>(service: string, sections: T
 
   const merged = sections.map((s) => {
     if (isCostSection(s)) {
-      return { ...s, heading: a.costHeading, paragraphs: [a.cost, calculatorLink, a.costFactorsLead], costCalculator: true };
+      const note = a.costNote ? [a.costNote] : [];
+      return { ...s, heading: a.costHeading, paragraphs: [a.cost, calculatorLink, ...note, a.costFactorsLead], costCalculator: true };
     }
     if (isProcessSection(s) && a.timeline && a.processHeading) {
       return { ...s, heading: a.processHeading, paragraphs: [a.timeline, ...(s.paragraphs ?? [])] };
@@ -89,7 +97,11 @@ export function withQuickAnswers<T extends Section>(service: string, sections: T
   if (sections.some(isCostSection)) return merged;
 
   // No cost-factors section: the cost question goes just before the process section (cost, then how long).
-  const standalone = { heading: a.costHeading, paragraphs: [a.cost, a.costDetail, calculatorLink], costCalculator: true } as unknown as T;
+  const standalone = {
+    heading: a.costHeading,
+    paragraphs: [a.cost, a.costDetail, calculatorLink, ...(a.costNote ? [a.costNote] : [])],
+    costCalculator: true,
+  } as unknown as T;
   const processIndex = sections.findIndex(isProcessSection);
   const at = processIndex >= 0 ? processIndex : Math.min(1, merged.length);
   return [...merged.slice(0, at), standalone, ...merged.slice(at)];

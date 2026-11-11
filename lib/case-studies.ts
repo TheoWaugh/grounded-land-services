@@ -16,6 +16,7 @@ export interface CaseStudy {
   galleryPhotos?: string[]; // additional photos for the individual page
   videoIds?: string[]; // YouTube video IDs
   related?: { heading: string; slugs: string[] }; // case studies linked as related work at the bottom of the page
+  grantGuideText?: string; // shows a callout linking to the Texas fuel reduction grant guide
 }
 
 export const caseStudies: CaseStudy[] = [
@@ -24,7 +25,7 @@ export const caseStudies: CaseStudy[] = [
     title: "5-Mile Fire Break at Balcones Canyonlands National Wildlife Refuge",
     description: "A 5-mile fire break mulched off FM 1431 on the Balcones Canyonlands National Wildlife Refuge near Leander, Texas, for the U.S. Fish & Wildlife Service. We started February 2, 2026, and finished before golden-cheeked warbler nesting season began March 1, mulching a 5-mile slash pile of cedar and brush in place with our CAT 275 and Prinoth mulching head.",
     summary: "Mulched a 5-mile slash pile of cedar and brush in place for the U.S. Fish & Wildlife Service, finished before warbler nesting season.",
-    longDescription: "The U.S. Fish & Wildlife Service needed a fire break on the Balcones Canyonlands National Wildlife Refuge, off FM 1431. The refuge is close to Leander, Jonestown, Liberty Hill, and our base in Bertram. A 5-mile slash pile of cedar and brush ran along the fire break line, and it had to be cleared while disturbing as little ground as possible.\n\nThe job required a skid steer mulcher because of the limited access and the need for minimal ground disturbance, so we used our CAT 275 with the Prinoth mulching head. Extremely steep inclines, tight access, and rock made it a challenging job. We mulched the entire slash pile in place, with nothing burned or hauled off.\n\nTiming mattered too. All of the work had to be done before golden-cheeked warbler nesting season began on March 1. We started on February 2 and finished in February 2026.\n\nThe finished fire break also serves as a critical access route for firefighters, giving them a chance to stop a wildfire before it spreads to more populated areas.\n\nPrivate landowners doing similar wildfire fuel work may be able to get some of the cost back: see our [guide to the Texas fuel reduction grant](/guides/texas-mechanical-fuel-reduction-grant).",
+    longDescription: "The U.S. Fish & Wildlife Service needed a fire break on the Balcones Canyonlands National Wildlife Refuge, off FM 1431. The refuge is close to Leander, Jonestown, Liberty Hill, and our base in Bertram. A 5-mile slash pile of cedar and brush ran along the fire break line, and it had to be cleared while disturbing as little ground as possible.\n\nThe job required a skid steer mulcher because of the limited access and the need for minimal ground disturbance, so we used our CAT 275 with the Prinoth mulching head. Extremely steep inclines, tight access, and rock made it a challenging job. We mulched the entire slash pile in place, with nothing burned or hauled off.\n\nTiming mattered too. All of the work had to be done before golden-cheeked warbler nesting season began on March 1. We started on February 2 and finished in February 2026.\n\nThe finished fire break also serves as a critical access route for firefighters, giving them a chance to stop a wildfire before it spreads to more populated areas.",
     location: "Leander, TX",
     locationSlug: "leander",
     nearbyCitySlugs: ["jonestown"],
@@ -47,6 +48,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     videoIds: ["KjYxH1hgTwM"],
     related: { heading: "Related Wildfire-Mitigation Work", slugs: ["lampasas-mulching-cleanup-grant"] },
+    grantGuideText: "Doing wildfire fuel work on your own land? Texas A&M Forest Service's Mechanical Fuel Reduction Grant may pay back up to $2,000 an acre.",
   },
   {
     slug: "liberty-hill-rock-removal",
@@ -420,6 +422,7 @@ export const caseStudies: CaseStudy[] = [
       "/projects/lampasas-mulching-cleanup-grant/forestry-mulching-cleanup-lampasas-mowable-ground.webp",
     ],
     related: { heading: "Related Wildfire-Mitigation Work", slugs: ["balcones-refuge-fire-break"] },
+    grantGuideText: "This landowner received Texas A&M Forest Service's Mechanical Fuel Reduction Grant. See how the grant works and whether your property might qualify.",
   },
   {
     slug: "bertram-pool-demolition",

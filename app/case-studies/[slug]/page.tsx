@@ -10,6 +10,7 @@ import { equipmentPhotos } from "@/data/equipment-photos";
 import CaseStudyGallery from "../../components/CaseStudyGallery";
 import YouTubePlayer from "../../components/YouTubePlayer";
 import RichText from "../../components/RichText";
+import GrantCallout from "../../components/GrantCallout";
 import { brandedTitle, metaDescription } from "@/lib/seo-title";
 
 
@@ -115,6 +116,8 @@ export default async function CaseStudyPage({ params }: { params: PageParams }) 
             <RichText text={study.longDescription} />
           </p>
         )}
+
+        {study.grantGuideText && <GrantCallout text={study.grantGuideText} buttonLabel="Read our grant guide" />}
 
         {study.beforePhoto && (
           <div className="mb-10">
