@@ -221,6 +221,10 @@ export const cityLocal: Record<string, CityLocal> = {
       "rock-removal": "Clearing in Spicewood often exposes rock. On the 53.8-acre ranch, we removed the rock that came up during clearing along with the old debris.",
     },
     studies: ["spicewood-land-clearing", "spicewood-lake-travis-lot", "spicewood-sod-lots", "balcones-refuge-fire-break", "jonestown-forestry-mulching"],
+    serviceStudies: {
+      // Hudson Bend is near Lake Travis: nearby lake-area proof for mulching
+      "forestry-mulching": ["spicewood-land-clearing", "spicewood-lake-travis-lot", "spicewood-sod-lots", "hudson-bend-forestry-mulching", "balcones-refuge-fire-break", "jonestown-forestry-mulching"],
+    },
     reviews: ["Barrett Garrison", "Mike Janak"],
     faqs: [
       {

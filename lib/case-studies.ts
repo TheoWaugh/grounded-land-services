@@ -464,6 +464,28 @@ export const caseStudies: CaseStudy[] = [
     afterPhoto: "/images/work/kingsland-forestry-mulching.jpeg",
   },
   {
+    slug: "hudson-bend-forestry-mulching",
+    title: "Forestry Mulching in Hudson Bend near Lake Travis, Texas",
+    description: "Half an acre of cedar mulched in place in one day in Hudson Bend near Lake Travis, Texas, so the owner's property would look more appealing to potential buyers. We used our CAT 275 and Prinoth mulcher, and left the oaks standing on a clean, open lot.",
+    summary: "Mulched half an acre of cedar in a day on Lake Travis so the property would show better to buyers.",
+    longDescription: "The owner of this half-acre property in Hudson Bend, near Lake Travis and Lakeway, wanted it to look more appealing to potential buyers. The lot was grown up in cedar.\n\nWe used our CAT 275 with the Prinoth mulching head to mulch the cedar in place in one day. The mulch stays on the ground, so there were no brush piles to burn or haul off. The oaks were left standing, and the lot is now open under them.\n\nThis kind of job is a good fit for landowners and realtors getting a lot ready to list. A day of mulching lets buyers see the trees, the ground and the size of the lot. [See our forestry mulching service](/services/forestry-mulching).\n\nThe job was finished in November 2026.",
+    location: "Hudson Bend, TX",
+    locationSlug: "lakeway",
+    acreage: "0.5 Acres",
+    timeline: "1 Day",
+    services: [
+      { label: "Forestry Mulching", slug: "forestry-mulching" },
+    ],
+    equipmentUsed: [
+      { label: "Cat 275 XE", equipmentId: "cat-275" },
+      { label: "Prinoth Mulching Head", equipmentId: "prinoth" },
+    ],
+    afterPhoto: "/projects/hudson-bend-forestry-mulching/forestry-mulching-hudson-bend-lake-travis-cedar-after.webp",
+    galleryPhotos: [
+      "/projects/hudson-bend-forestry-mulching/cedar-mulching-hudson-bend-lake-travis-lot.webp",
+    ],
+  },
+  {
     slug: "spicewood-lake-travis-lot",
     title: "Lake Travis Lot Clearing in Spicewood, Texas",
     description: "Half an acre cleared in one day on a lot right on Lake Travis in Spicewood, Texas. The owners wanted to mow without popping tires on thorns or hitting rock, so we cleared the mesquite, huisache, cedar, prickly pear, and river rock, then chainsawed a trail down to the lake so they could reach their dock.",
