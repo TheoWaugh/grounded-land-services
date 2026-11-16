@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import CostCalculator from "@/app/components/CostCalculator";
+import { Suspense } from "react";
+import CostCalculator, { CostCalculatorFromLink } from "@/app/components/CostCalculator";
 import FaqAccordion from "@/app/components/FaqAccordion";
 import FaqPageSchema from "@/app/components/FaqPageSchema";
 import BreadcrumbSchema from "@/app/components/BreadcrumbSchema";
@@ -61,7 +62,10 @@ export default function CostCalculatorPage() {
           at a free site visit.
         </p>
 
-        <CostCalculator />
+        {/* A service page's link (?service=forestry-mulching) opens it with that service selected */}
+        <Suspense fallback={<CostCalculator />}>
+          <CostCalculatorFromLink />
+        </Suspense>
 
         <section className="mt-14">
           <h2 className="text-2xl md:text-3xl font-bold text-[#0a0a0a] mb-5 flex items-center gap-3">

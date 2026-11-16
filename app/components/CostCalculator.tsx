@@ -2,6 +2,7 @@
 
 import { useEffect, useId, useRef, useState } from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { trackEvent } from "@/lib/track";
 import {
   calculatorServices,
@@ -277,7 +278,7 @@ export default function CostCalculator({
         <div id={panelId} className="mt-4 pt-4 border-t border-gray-200">
           <CalculatorBody initialService={service} showServicePicker={false} location="service_page" />
           <Link
-            href="/cost-calculator"
+            href={`/cost-calculator?service=${service}`}
             className="inline-block mt-2 text-xs font-semibold text-[#C4922A] hover:text-amber-600 transition-colors"
           >
             Open the full cost calculator →
@@ -286,4 +287,11 @@ export default function CostCalculator({
       )}
     </div>
   );
+}
+
+/** The full calculator on /cost-calculator, with the service from `?service=` (e.g. a service page's link) pre-selected. */
+export function CostCalculatorFromLink() {
+  const requested = useSearchParams().get("service");
+  const match = calculatorServices.find((s) => s.value === requested);
+  return <CostCalculator key={match?.value} service={match?.value} />;
 }

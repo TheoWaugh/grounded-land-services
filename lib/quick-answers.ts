@@ -71,7 +71,9 @@ function answersFor(service: string, city?: string): Answers | null {
 }
 
 const isCostSection = (s: Section) => /\bcost\b/i.test(s.heading ?? "");
-const calculatorLink = "Want a rough number for your property? Try our [land clearing cost calculator](/cost-calculator).";
+/** Opens the calculator with this page's service already selected. */
+const calculatorLinkFor = (service: string) =>
+  `Want a rough number for your property? Try our [${service.replace(/-/g, " ")} cost calculator](/cost-calculator?service=${service}).`;
 const isProcessSection = (s: Section) => /\bprocess\b/i.test(s.heading ?? "");
 
 /**
@@ -82,6 +84,7 @@ const isProcessSection = (s: Section) => /\bprocess\b/i.test(s.heading ?? "");
 export function withQuickAnswers<T extends Section>(service: string, sections: T[], city?: string): T[] {
   const a = answersFor(service, city);
   if (!a) return sections;
+  const calculatorLink = calculatorLinkFor(service);
 
   const merged = sections.map((s) => {
     if (isCostSection(s)) {
