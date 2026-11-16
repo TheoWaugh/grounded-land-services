@@ -28,7 +28,7 @@ import { serviceAreas, rockCrushingCities } from "@/data/service-areas";
 import { brandedTitle, metaDescription } from "@/lib/seo-title";
 import { priceOffer } from "@/lib/price-schema";
 import GrantCallout from "@/app/components/GrantCallout";
-import { GRANT_GUIDE_SERVICES } from "@/lib/grant-guide";
+import { GRANT_GUIDE_SERVICES, GRANT_CALLOUT_EARLY } from "@/lib/grant-guide";
 
 type PageParams = Promise<{ service: string }>;
 
@@ -84,10 +84,12 @@ export default async function ServiceDetailPage({ params }: { params: PageParams
   const quoteHref = "#quote";
   const sections = withQuickAnswers(service, content.sections);
   const reviewsInSections = sections.some((s) => s.showReviews);
-  // Wildfire-fuel services point to the grant guide: right after the cost section, or the process section if there isn't one
+  // Wildfire-fuel services point to the grant guide: right after the cost section, or the process section if there isn't one (fire breaks and cedar removal: right after the first section)
   const costIndex = sections.findIndex((s) => /\bcost\b/i.test(s.heading ?? ""));
   const grantCalloutAfter = !GRANT_GUIDE_SERVICES.includes(service)
     ? -1
+    : GRANT_CALLOUT_EARLY.includes(service)
+    ? 0
     : costIndex >= 0
     ? costIndex
     : sections.findIndex((s) => /\bprocess\b/i.test(s.heading ?? ""));

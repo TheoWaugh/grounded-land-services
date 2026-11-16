@@ -1,6 +1,8 @@
 import { ServicePageContent } from "./types";
 import { caseStudies } from "@/lib/case-studies";
 import { landClearingCostFactors } from "@/data/land-clearing-cost-factors";
+import { MINIMUM_JOB } from "@/data/service-pricing";
+import { MULCHING_RATES, EXCAVATOR_RATES } from "@/data/service-timelines";
 
 export const servicesContent: Record<string, ServicePageContent> = {
 "land-clearing": {
@@ -554,10 +556,10 @@ paragraphs: [
 
   "cedar-tree-removal": {
     title: "Cedar Tree Removal",
-    metaDescription: "Professional cedar tree removal in Texas — restore groundwater, pasture health, and reduce wildfire risk by clearing invasive cedar stands.",
+    metaDescription: "Cedar removal in Central Texas for $1,500–$4,500+ per acre. We pull cedar out or mulch it in place and leave your oaks standing. Free on-site estimates.",
     icon: "🌲",
     heroImage: "/images/official/cedar-removal.jpeg",
-    intro: "Texas cedar (Ashe juniper) is one of the most aggressive invasive species on Central Texas land — a single mature tree can pull up to 30 gallons of groundwater a day, choking out native grasses and starving desirable hardwoods. Cedar removal restores that balance, opening up pasture, improving water availability, and cutting wildfire risk in one project.",
+    intro: "Cedar removal clears Ashe juniper off your land, either pulled out with the stump or mulched in place, while the oaks you want to keep stay standing. We clear cedar across Central Texas and the Hill Country from our base in Bertram with our own CAT equipment and Prinoth mulcher, and we've been doing land clearing since 2020. Cedar removal costs $1,500 – $4,500+ per acre, and site visits are free.",
     sections: [
       {
         
@@ -708,9 +710,9 @@ paragraphs: [
         ],
       },
       {
-        heading: "Our Cedar Removal Process",
+        heading: "How does cedar removal work?",
         paragraphs: [
-          "Every property is different. We evaluate your land and goals to determine the right equipment and clearing approach for the job.",
+          "We walk the property with you, mark the oaks and anything else that stays, then pull the cedar out with the stump or mulch it in place, depending on what you want the land to become.",
         ],
         steps: [
           { title: "Contact Us", description: "Tell us about your property, cedar problem, and what you want to accomplish." },
@@ -723,9 +725,17 @@ paragraphs: [
         ctaButton: { label: "Request a Free Estimate", href: "/contact?service=Cedar%20Tree%20Removal#quote" },
       },
       {
-        heading: "Cedar Removal Cost Factors",
+        heading: "How long does cedar removal take?",
         paragraphs: [
-          "The cost of cedar removal depends on the property and the amount of work required. Cedar density, tree size, terrain, access, clearing method, and your desired finished result can all affect the time and equipment needed for the project. Rather than relying on a one-size-fits-all price, we evaluate the scope of work and provide project-specific pricing.",
+          `Mulching cedar in place covers ${MULCHING_RATES}. Clearing with our excavator covers ${EXCAVATOR_RATES}.`,
+          "Selective work goes slower. On a [5-acre Georgetown property](/case-studies/georgetown-land-clearing), we pulled small cedar out from under the oaks one at a time, and it took two days. A [53.8-acre Spicewood ranch](/case-studies/spicewood-land-clearing) with steep, rocky ridges took 2.5 months.",
+        ],
+      },
+      {
+        heading: "How much does cedar removal cost?",
+        paragraphs: [
+          `Cedar removal costs $1,500 – $4,500+ per acre, with a ${MINIMUM_JOB} minimum job and free on-site estimates. When we mulch the cedar in place, we bill forestry mulching by the day at $2,500 – $3,000.`,
+          "Where your property falls in that range comes down to these factors:",
         ],
         iconCards: [
           { icon: "🌲", title: "Cedar Density", description: "Scattered cedar trees generally require less work than dense stands covering large portions of the property." },
@@ -777,8 +787,9 @@ paragraphs: [
         },
       },
       {
-        heading: "Property Types We Serve",
+        heading: "Who is cedar removal for?",
         paragraphs: [
+          "Landowners with cedar taking over their pasture, homesite, fence lines, hunting land, or the ground under their oaks.",
           "Cedar can become a challenge on all types of Central Texas properties, from small residential acreage to large ranches. Grounded Land Services provides cedar removal for property owners throughout the Texas Hill Country, Central Texas, and surrounding areas.",
         ],
         iconCards: [
@@ -797,7 +808,13 @@ paragraphs: [
           "Choosing the right contractor can make all the difference in how your property looks today — and for years to come. At [Grounded Land Services](/), we believe land clearing isn't just about clearing land; it's about leaving your property in better condition than we found it. From the equipment we operate to the attention we give every project, our goal is to deliver results that are clean, professional, and built to last.",
           "From your first phone call to the final walkthrough, we're committed to providing honest communication, dependable scheduling, and quality workmanship. We show up prepared, treat your property with respect, and stand behind the work we perform.",
           "When you hire Grounded Land Services, you're not just hiring a land clearing contractor — you're choosing a company that takes pride in leaving your land cleaner, healthier, and ready for whatever comes next.",
+          "Around [Liberty Hill](/service-areas/liberty-hill/land-clearing), a lot of our cedar work is clearing it out from under oaks, so the oaks have less competition for water in the next drought.",
+          "Recent cedar removal projects:",
         ],
+        list: ["georgetown-land-clearing", "spicewood-land-clearing", "leander-forestry-mulching"]
+          .map((slug) => caseStudies.find((c) => c.slug === slug))
+          .filter((c): c is (typeof caseStudies)[number] => Boolean(c))
+          .map((c) => ({ label: `${c.title} (${c.acreage}, ${c.timeline})`, href: `/case-studies/${c.slug}` })),
         media: [
           { type: "image", src: "/images/service-pics/why-choose-us.jpeg", alt: "Why choose Grounded Land Services" },
         ],
@@ -821,43 +838,11 @@ paragraphs: [
       
     ],
     faqs: [
-      { question: "What is cedar removal?", answer: "Cedar removal is the process of removing unwanted cedar trees from a property to reclaim usable land, improve access, open views, manage dense vegetation, or prepare an area for another use. In Central Texas, \"cedar\" commonly refers to Ashe juniper. Cedar removal can range from selectively removing individual trees to clearing dense stands across larger areas." },
-      { question: "Why is cedar so common in Central Texas?", answer: "Cedar is native to much of Central Texas and is well adapted to the region's climate, soils, and rocky terrain. Under the right conditions, it can become dense across pastures, ranches, hillsides, fence lines, and undeveloped acreage." },
-      { question: "Should I remove all the cedar from my property?", answer: "Not necessarily. Cedar removal can be selective. You may want to remove dense stands while preserving mature oaks, desirable vegetation, wildlife areas, shade trees, or other features. The right balance depends on how you plan to use and manage the property." },
-      { question: "Is cedar bad for my property?", answer: "Cedar is a natural part of the Central Texas landscape, so it isn't inherently bad. The issue is often density and location. Dense cedar can reduce usable pasture, obstruct access and views, compete with grasses and other vegetation for available resources, and create heavy woody vegetation that can be difficult to manage." },
-      { question: "Does cedar use a lot of water?", answer: "Dense cedar stands can use substantial amounts of water. Ashe juniper intercepts rainfall and uses water through transpiration. Reducing dense cedar can allow more precipitation to reach the ground and, depending on site conditions, potentially increase water availability for surrounding vegetation, runoff, and groundwater recharge. The actual effect varies based on rainfall, soil, terrain, vegetation, and other site conditions." },
-      { question: "Does removing cedar reduce wildfire risk?", answer: "Strategic cedar removal can reduce dense woody fuel and create breaks between heavily vegetated areas. This can be particularly useful around homes, driveways, roads, and other important areas. Cedar removal is only one part of wildfire preparedness, however, and overall fire behavior depends on weather, terrain, fuel conditions, and other factors." },
+      { question: "Will cedar grow back after it's cleared?", answer: "Ashe juniper, the cedar across most of the Hill Country, dies when it's cut and doesn't sprout back from the stump. But the soil is full of cedar seed, so seedlings come back over time: Texas Parks and Wildlife says land is due for another treatment after 7–8 years. Knocking seedlings out while they're small is the cheapest way to keep land open.", link: { label: "Texas Parks and Wildlife: Hill Country habitat management", href: "https://tpwd.texas.gov/landwater/land/habitats/hillcountry/habitat_management/" } },
+      { question: "Can you remove cedar without hurting my oaks?", answer: "Yes. That's one of the most common things we're asked to do. On a 5-acre Georgetown property, saving the oaks was the owner's whole goal, so we pulled the small cedar out from under and around them one at a time.", link: { label: "Our Georgetown cedar clearing", href: "/case-studies/georgetown-land-clearing" } },
+      { question: "Should I mulch the cedar or pull it out?", answer: "Mulch it if you want to open up pasture, trails, views or hunting land and leave the ground covered. Pull it out with the stumps if you're building a home, road or driveway, or need the ground fully cleared. Many properties get some of both.", link: { label: "Forestry Mulching", href: "/services/forestry-mulching" } },
+      { question: "Do I need a permit to clear cedar?", answer: "It depends on where you are. Some cities protect heritage trees inside city limits, and land with mature cedar-oak woodland can be golden-cheeked warbler habitat, so check with the U.S. Fish & Wildlife Service before clearing it. On a Jonestown job we waited until warbler nesting season (March 1 – September 1) ended before clearing.", link: { label: "U.S. Fish & Wildlife Service, Austin office", href: "https://www.fws.gov/office/austin-ecological-services/species" } },
       { question: "Is there a grant that helps pay for cedar removal?", answer: "There can be: Texas A&M Forest Service's Mechanical Fuel Reduction Grant pays landowners back for clearing wildfire fuel like cedar and brush. It reimburses eligible landowners in designated counties up to $2,000 an acre for heavy equipment like forestry mulchers, and up to $20,000 per applicant. Approval isn't guaranteed, so check our guide for the rules and dates.", link: { label: "Texas fuel reduction grant guide", href: "/guides/texas-mechanical-fuel-reduction-grant" } },
-      { question: "What is the best way to clear cedar?", answer: "There isn't one method that is best for every property. The two primary approaches are forestry mulching and traditional land clearing. Forestry mulching processes cedar and other woody vegetation into mulch in place, while traditional land clearing is better suited to projects where vegetation needs to be removed for a more thoroughly cleared site.", link: { label: "Forestry Mulching", href: "/services/forestry-mulching" } },
-      { question: "Is forestry mulching a good way to clear cedar?", answer: "Yes. Forestry mulching can be an efficient option for reclaiming acreage covered in cedar and other woody vegetation. The mulcher processes the vegetation into mulch directly on the property, reducing the need to pile and haul large quantities of material away." },
-      { question: "When is land clearing better than forestry mulching?", answer: "Traditional land clearing may be the better choice when you need a more thoroughly cleared site for a homesite, building area, road, driveway, construction project, or other improvement. It can also be appropriate when vegetation and stumps need to be handled separately rather than processed in place.", link: { label: "Traditional Land Clearing", href: "/services/land-clearing" } },
-      { question: "What's the difference between cedar removal and forestry mulching?", answer: "Cedar removal describes the goal of removing unwanted cedar, while forestry mulching is one of the methods that can be used to accomplish that goal. Forestry mulching processes cedar and other woody vegetation into mulch in place. Traditional land clearing physically removes vegetation from the work area and may include additional site preparation." },
-      { question: "Can you selectively remove cedar?", answer: "Yes. Selective cedar removal can target specific trees or areas while preserving desirable trees and vegetation. This is useful when you want to open views, improve access, reclaim pasture, or clear around structures without completely changing the character of the property." },
-      { question: "Can you remove cedar without damaging my oak trees?", answer: "When site conditions allow, cedar can be selectively removed while preserving desirable mature oaks and other trees. Before work begins, areas and features you want preserved should be identified so the clearing approach can be planned accordingly." },
-      { question: "Can you remove cedar around my house?", answer: "Yes. Cedar can be removed around homes, shops, barns, driveways, fences, and other structures when the site can be safely accessed. The location of the trees, structures, utilities, terrain, and equipment access all factor into how the work is performed." },
-      { question: "Can you clear cedar from fence lines?", answer: "Yes. Cedar removal can open overgrown fence lines and make property boundaries easier to inspect, repair, maintain, or prepare for new fencing.", link: { label: "Fence Line Clearing", href: "/services/fence-line-clearing" } },
-      { question: "Can cedar be removed from steep Hill Country terrain?", answer: "Many Hill Country properties can be cleared despite challenging terrain, but slope, rock, soil conditions, access, and equipment limitations must be evaluated before work begins. Difficult terrain can affect production and may require a different clearing approach." },
-      { question: "What happens to the cedar after it is removed?", answer: "It depends on the clearing method. With forestry mulching, cedar and other woody vegetation is processed into mulch and distributed across the work area. With traditional land clearing, vegetation can be handled separately depending on the project's scope and desired finished condition." },
-      { question: "Does forestry mulching remove the cedar roots?", answer: "Forestry mulching primarily processes the above-ground vegetation. It does not typically excavate the entire root system. If complete stump or root removal is required, traditional land clearing or additional stump-removal work may be more appropriate." },
-      { question: "Will cedar grow back after removal?", answer: "Cedar can return after clearing because new seedlings can become established over time. If you want to keep an area open long-term, ongoing property maintenance is important. The amount of regrowth depends on site conditions and how the property is managed afterward." },
-      { question: "When is the best time to remove cedar?", answer: "There isn't one ideal time for every property. Weather, soil conditions, terrain, accessibility, vegetation, and the type of clearing being performed can all affect project timing. Favorable ground conditions can help equipment operate efficiently and reduce unnecessary ground disturbance." },
-      { question: "How much does cedar removal cost?", answer: "There is no single price that applies to every cedar removal project. Cost can vary based on cedar density, tree size, clearing area, terrain, access, vegetation mix, clearing method, desired finished condition, and additional services required." },
-      { question: "Do you charge by the acre?", answer: "Acreage can be a factor in pricing, but it doesn't tell the whole story. Two properties with the same acreage can require very different amounts of work depending on cedar density, tree size, terrain, access, and ground conditions." },
-      { question: "How long does cedar removal take?", answer: "Project duration depends on the size of the clearing area, cedar density, tree size, terrain, access, clearing method, and desired finished condition. A small selective project may take considerably less time than a large acreage project with dense cedar." },
-      { question: "Can cedar removal prepare my property for construction?", answer: "Yes. Cedar removal can be the first step before building a home, shop, barn, driveway, road, or other improvement. Depending on the project, additional land clearing, excavation, grading, rock removal, or site preparation may also be necessary.", link: { label: "Site Preparation", href: "/services/site-preparation" } },
-      { question: "What should I do after the cedar is cleared?", answer: "That depends on your goals for the property. Some owners simply want to reclaim access and maintain open acreage. Others may want to establish pasture, build a road, install fencing, create trails, or prepare a homesite. Additional services such as grading, site preparation, excavation, rock removal, or ongoing vegetation management may be appropriate." },
-      { question: "Do I need to clear my entire property?", answer: "No. Strategic clearing can often accomplish your goals without removing every tree. You may only need to clear certain pastures, access routes, fence lines, views, areas around structures, or future development sites." },
-      { question: "Can cedar removal be combined with other land services?", answer: "Yes. Cedar removal is often part of a larger property improvement project. Depending on the property, services may include forestry mulching, land clearing, underbrushing, fence line clearing, tree and stump removal, rock and cactus removal, excavation, grading, or site preparation.", link: { label: "View All Services", href: "/services" } },
-      { question: "I just bought acreage. Where should I start?", answer: "Start by determining how you want to use the property. Identify areas you want to preserve, areas you want opened, existing access routes, structures, fences, desirable trees, and locations where cedar is limiting your ability to use the land. From there, Grounded Land Services can evaluate the property and help determine whether selective cedar removal, forestry mulching, traditional land clearing, or a combination of services makes the most sense." },
-      { question: "How do I know whether forestry mulching or land clearing is right for me?", answer: "Think about your desired finished result. If you want to reclaim overgrown acreage and process cedar and woody vegetation in place, forestry mulching may be the better option. If you need a more thoroughly cleared site for construction, a homesite, road, or other development, traditional land clearing may be more appropriate." },
-      { question: "Can you help me decide what cedar should stay and what should go?", answer: "Yes. Your goals should guide the clearing plan. If you're unsure where to begin, we can evaluate the property and discuss the areas you want opened, the vegetation you want preserved, and how you intend to use the land." },
-      { question: "Do you service my area?", answer: "Grounded Land Services focuses on Central and South-Central Texas, including the Austin metro, Texas Hill Country, and communities extending toward the San Antonio area. If you're unsure whether your property is within our service area, contact us with your location and project details.", link: { label: "View Service Areas", href: "/service-areas" } },
-      { question: "How do I get started with cedar removal?", answer: "Contact Grounded Land Services and tell us about your property, approximate acreage, cedar density, location, and what you want to accomplish. We'll help you understand your options and determine whether cedar removal, forestry mulching, traditional land clearing, or a combination of services is the right fit for your property.", link: { label: "Request a Free Quote", href: "/contact?service=Cedar%20Tree%20Removal#quote" } },
-      { question: "How do I clear cedar from my property?", answer: "The best way to clear cedar depends on the amount of cedar, tree size, terrain, access, surrounding vegetation, and what you want the property to look like afterward. For larger properties, the two primary mechanical approaches are forestry mulching and traditional land clearing. Forestry mulching cuts and processes cedar and other woody vegetation into mulch in place, making it useful for reclaiming overgrown acreage. Traditional land clearing removes vegetation from the work area and is often better suited for homesites, roads, construction areas, and projects requiring a more thoroughly cleared site. For selective projects, individual cedar trees can also be targeted while preserving desirable oaks, vegetation, structures, and other features." },
-      { question: "Can I clear cedar myself?", answer: "Small numbers of cedar trees may be manageable with appropriate tools and experience, but large or dense cedar stands are a very different job. Larger projects can involve heavy trees, uneven or rocky terrain, fences, structures, equipment access, and other hazards. Professional land-clearing equipment can also make large-scale cedar removal substantially more efficient than attempting to remove every tree manually. If you're dealing with significant acreage or dense cedar, having the property evaluated before beginning can help determine the safest and most efficient approach." },
-      { question: "How do you clear large areas of cedar?", answer: "Large cedar-covered properties are typically cleared using specialized land-clearing equipment rather than removing trees individually by hand. Depending on the property and desired result, forestry mulching can process cedar and other woody vegetation directly into mulch, while traditional land clearing can remove vegetation from areas that need to be more thoroughly cleared. Large projects are generally planned around cedar density, tree size, terrain, access, desirable vegetation, structures, fences, and the intended use of the cleared land." },
-      { question: "Should I mulch or clear cedar?", answer: "The answer depends on what you want the property to look like after the work is finished. Choose forestry mulching when your goal is to reclaim overgrown acreage while processing cedar and woody vegetation in place. Choose traditional land clearing when you need a more thoroughly cleared site and vegetation needs to be removed for a homesite, construction area, road, driveway, or other project. If you're primarily trying to improve pasture, access, views, or general property usability, forestry mulching may be a practical option. If you're preparing for construction or development, traditional land clearing may make more sense." },
-      { question: "How do I keep cedar from coming back after clearing?", answer: "Removing existing cedar does not permanently prevent new cedar seedlings from becoming established. Long-term control requires ongoing property management. Keeping cleared areas accessible, monitoring for new seedlings, and addressing new growth before it becomes established can help maintain the results of a clearing project. The best long-term approach depends on your property, vegetation, land use, and how aggressively you want to maintain cleared areas." },
     ],
     pricing: { range: "$1,500 – $4,500+", unit: "per acre", note: "Pricing depends on cedar density, tree size, and whether removal is selective or complete." },
   },
@@ -1705,10 +1690,10 @@ paragraphs: [
 
   "demolition": {
     title: "Demolition",
-    metaDescription: "Professional demolition services in Texas — safe removal of homes, structures, concrete, and foundations to prepare your site for what's next.",
+    metaDescription: "Pool, structure and concrete demolition in Central Texas for $1,500–$10,000+ per job. We tear it out, haul it off and leave the ground ready to use.",
     icon: "🏚️",
     heroImage: "/images/service-pics/demolition-image.jpeg",
-    intro: "Demolition is often the first step toward a much bigger project. Whether it's an aging home, an old barn, or a deteriorating concrete slab, we safely remove unwanted structures and prepare your property for its next phase — cleanly, efficiently, and with full attention to underlying utilities and site conditions.",
+    intro: "We tear out swimming pools, old structures and concrete across Central Texas from our base in Bertram, then haul off or reuse the debris and leave the ground ready for its next use. In June 2026 we [took out a 1,575-square-foot gunite pool and patio in Bertram](/case-studies/bertram-pool-demolition) in about a week, then backfilled it, poured a pad for a jacuzzi and laid sod. Demolition costs $1,500 – $10,000+ per job, and estimates are free.",
     sections: [
         {
         heading: "Professional Demolition Services",
@@ -1737,13 +1722,36 @@ paragraphs: [
         iconCardsColumns: 2,
       },
         {
-        heading: "Pool Demolition",
+        // Pool Demolition & Removal
+        heading: "Do you remove in-ground pools?",
         paragraphs: [
-          "An old or damaged swimming pool can become a major problem for a property owner. Cracked concrete, structural deterioration, leaks, or concrete cancer can make an aging pool difficult and expensive to maintain.",
-          "In June 2026, we [took out a 1,575-square-foot gunite pool in Bertram](/case-studies/bertram-pool-demolition) that had concrete cancer. We broke out the pool and patio with our CAT 275 and a hydraulic hammer, used part of the concrete to build up the owners' shooting berm instead of hauling it all off, then backfilled, graded, poured a pad for their jacuzzi, and laid sod.",
-          "[Grounded Land Services](/) provides demolition for residential, ranch, and commercial properties throughout Central Texas. We use heavy equipment and specialized attachments to carefully dismantle unwanted structures, break up concrete, remove debris, and prepare the area for its next use.", 
+          "Yes. We break out concrete and gunite pools, haul off the concrete and rebar, then backfill, compact and grade the hole and finish it with sod or seed, so the space becomes usable yard again.",
+          "If you want, we can reuse the broken concrete on your property to save on haul-off. On a [1,575-square-foot gunite pool in Bertram](/case-studies/bertram-pool-demolition) that had concrete cancer, the rest of the concrete built up the back of the owners' shooting berm, so we only hauled off 2 loads of concrete and 1 load of rebar.",
+          "Every pool and yard is different, so we don't publish a set price for pool removal. Site visits and estimates are free.",
         ],
-        subheading: "When Pool Demolition Makes Sense",
+        note: {
+          text: "Featured project: a 1,575 sq ft gunite pool and patio in Bertram, torn out in about a week, then backfilled, given a concrete pad for a jacuzzi, and sodded.",
+          linkLabel: "See the Bertram pool demolition",
+          href: "/case-studies/bertram-pool-demolition",
+        },
+        media: [
+          { type: "image", src: "/projects/bertram-pool-demolition/pool-demolition-bertram-sod-jacuzzi-pad-after.webp", alt: "Backyard in Bertram, TX after pool demolition: new sod and a concrete jacuzzi pad where the pool used to be" },
+        ],
+        steps: [
+          { title: "Break Out the Pool", description: "We break up the concrete or gunite shell and any patio around it." },
+          { title: "Haul Off Concrete & Rebar", description: "We haul off the concrete and rebar, or reuse the concrete on your property if you want, like building up a berm." },
+          { title: "Backfill", description: "We fill the hole back in." },
+          { title: "Compact", description: "We compact the fill so the ground stays firm." },
+          { title: "Grade", description: "We grade the area to match the rest of the yard." },
+          { title: "Sod or Seed", description: "We finish with sod or seed so the space is usable yard again." },
+        ],
+        ctaButton: { label: "Get a Free Pool Removal Estimate", href: "/contact?service=Demolition#quote" },
+      },
+      {
+        heading: "When does pool demolition make sense?",
+        paragraphs: [
+          "When an old or damaged pool costs more to keep than it's worth. Cracked concrete, structural deterioration, leaks, or concrete cancer can make an aging pool difficult and expensive to maintain.",
+        ],
         scenarios: [
           { icon: "🧱", title: "Concrete Cancer", description: "Deteriorating reinforcing steel can cause concrete to crack, spall, and weaken over time." },
           { icon: "🏊", title: "Structural Damage", description: "Significant cracking or deterioration can make an older pool difficult to repair." },
@@ -1770,6 +1778,7 @@ paragraphs: [
             {
         heading: "What Happens to Demolition Debris?",
         paragraphs: [
+          "We break it down, haul off what has to go, and reuse what we can on site. On the Bertram pool, we hauled off 2 loads of concrete and 1 load of rebar, and the rest of the concrete built up the back of the owners' shooting berm.",
           "Demolition doesn't end when a structure comes down. Concrete, wood, metal, and other materials need to be broken down, separated, and removed from the site so the property can be used for its next purpose.",
           "Grounded Land Services handles the cleanup and removal of demolition debris as part of the project. Depending on the material and project requirements, debris can be processed, loaded, and hauled away, while recyclable materials may be separated when practical.",
           "For projects involving large amounts of concrete, our [rock crushing](/services/rock-crushing) capabilities can also provide an option for processing concrete and other suitable material on site when conditions allow.",
@@ -1780,8 +1789,9 @@ paragraphs: [
         emphasizeLastClosing: true,
       },
         {
-        heading: "Our Demolition Process",
+        heading: "How does pool and structure demolition work?",
         paragraphs: [
+          "We plan how to get equipment in, break out the concrete or take down the structure, haul off or reuse the debris, then backfill, compact and grade the site.",
           "Every demolition project is different, so we plan the work around the structure, site conditions, and your goals for the property.",
         ],
         steps: [
@@ -1791,10 +1801,18 @@ paragraphs: [
         ],
         ctaButton: { label: "Get a Demolition Estimate", href: "/contact?service=Demolition#quote" },
       },
-        {
-        heading: "Demolition Cost Factors",
+      {
+        heading: "How long does pool demolition take?",
         paragraphs: [
-          "Every demolition project is different, so pricing depends on the property and the work required. Several factors can affect the overall cost of demolition.",
+          "Plan on about a week for an in-ground pool with a patio: our [1,575-square-foot gunite pool in Bertram](/case-studies/bertram-pool-demolition) took about a week from tear-out to fresh sod.",
+          "Smaller structures and slabs can go faster. Access, the amount of concrete, and how much has to be hauled off all change the timeline. In Bertram, the pool sat in a tight space next to the house, so we took down part of the fence to get the equipment in.",
+        ],
+      },
+        {
+        heading: "How much does demolition cost?",
+        paragraphs: [
+          `Demolition costs $1,500 – $10,000+ per job, with a ${MINIMUM_JOB} minimum job and free on-site estimates.`,
+          "For a pool, how much concrete gets hauled off matters: on the Bertram job, using part of it to build up the owners' shooting berm meant fewer loads to haul. Where your job falls in the range comes down to these factors:",
         ],
         iconCards: [
           { icon: "📏", title: "Size of the Structure", description: "Larger structures generally require more equipment time, labor, and debris removal." },
@@ -1875,8 +1893,9 @@ paragraphs: [
         ],
       },
             {
-        heading: "Property Types We Serve",
+        heading: "Who is demolition for?",
         paragraphs: [
+          "Homeowners, ranch owners and commercial property owners who need an old pool, structure or concrete gone so they can use the space again or build something new.",
           "Demolition needs can vary depending on the property and what you're planning to do with the space. We work with property owners across Central Texas on a wide range of demolition projects.",
         ],
         iconCards: [
@@ -1889,17 +1908,13 @@ paragraphs: [
       },
     ],
         faqs: [
-      { question: "How much does demolition cost?", answer: "Demolition costs vary based on the size and type of structure, materials involved, site access, debris volume, and the condition of the property. We evaluate each project individually to provide an accurate estimate." },
-      { question: "Do you demolish swimming pools?", answer: "Yes. We demolish and remove unwanted swimming pools, including older pools affected by structural deterioration or concrete cancer." },
+      { question: "Do you demolish swimming pools?", answer: "Yes. We tear out old and damaged in-ground pools, including pools with concrete cancer, like the gunite pool and patio we took out in Bertram.", link: { label: "Our Bertram pool demolition", href: "/case-studies/bertram-pool-demolition" } },
+      { question: "How much does it cost to remove a pool?", answer: "We don't have a set price for pools because every one is different. The size of the pool and patio, access to the backyard, and how much concrete gets hauled off versus reused on site all change the cost. Site visits and estimates are free.", link: { label: "Get a free pool removal estimate", href: "/contact?service=Demolition#quote" } },
+      { question: "Can you reuse the pool concrete on my property?", answer: "Yes, if you want it. Reusing the broken concrete saves on haul-off. On a Bertram pool we used the rest of the concrete to build up the back of the owners' shooting berm and only hauled off 2 loads of concrete and 1 load of rebar.", link: { label: "Our Bertram pool demolition", href: "/case-studies/bertram-pool-demolition" } },
       { question: "What is concrete cancer?", answer: "Concrete cancer is the deterioration of concrete caused by corrosion of the reinforcing steel inside it. As the steel expands, it can cause the surrounding concrete to crack, spall, and deteriorate." },
-      { question: "Do you remove demolition debris?", answer: "Yes. Debris removal and site cleanup can be included as part of your demolition project. Depending on the material and project requirements, debris may be processed, loaded, hauled away, or recycled when practical." },
-      { question: "Can you demolish barns and outbuildings?", answer: "Yes. We can demolish and remove barns, sheds, detached garages, workshops, and other unwanted structures." },
-      { question: "Do you demolish concrete?", answer: "Yes. We can break up and remove concrete slabs, patios, foundations, driveways, walkways, and other concrete structures." },
-      { question: "Can you grade the property after demolition?", answer: "Yes. Depending on the project, we can transition from demolition into grading, clearing, excavation, or other landwork needed to prepare the site for its next use.", link: { label: "Site Preparation", href: "/services/site-preparation" } },
-      { question: "How long does a demolition project take?", answer: "Project timelines vary depending on the size and complexity of the demolition, site access, materials, and amount of debris that needs to be removed. We can provide a more accurate timeline after evaluating the property." },
-      { question: "Do I need to prepare anything before demolition?", answer: "The preparation required depends on the project. During the site evaluation, we'll identify access requirements, surrounding features, and other considerations that need to be addressed before demolition begins." },
-      { question: "Do you provide residential demolition?", answer: "Yes. We provide demolition for residential properties, including swimming pools, detached structures, concrete, and other unwanted structures." },
-      { question: "What happens to the property after demolition?", answer: "After the demolition and debris removal are complete, the site can be left ready for its next use. Depending on the project, additional grading, clearing, excavation, or site preparation can also be performed.", link: { label: "Request a Free Quote", href: "/contact?service=Demolition#quote" } },
+      { question: "Can you get equipment into a tight backyard?", answer: "Usually. In Bertram the pool sat in a tight space next to the house, so we took down part of the fence to get the equipment in. We'll check access with you at the site visit." },
+      { question: "What happens to the yard after the pool is gone?", answer: "We backfill, compact and grade it so you can use the space again. On the Bertram job we also poured a 10x8 concrete pad for a jacuzzi and laid 5 pallets of sod.", link: { label: "Site Preparation", href: "/services/site-preparation" } },
+      { question: "Can you demolish barns, sheds and concrete slabs too?", answer: "Yes. We take down barns, sheds, detached garages and other outbuildings, and break up and remove slabs, patios, foundations and driveways." },
     ],
     pricing: { range: "$1,500 – $10,000+", unit: "per job", note: "Pricing depends on structure size, materials, foundation type, and debris hauling needs." },
   },
@@ -3268,10 +3283,10 @@ pricing: { range: "$25 – $60", unit: "per linear foot", note: "Pricing depends
 
   "fire-breaks": {
     title: "Fire Breaks",
-    metaDescription: "Professional firebreak construction in Texas — clearing strategic vegetation barriers to slow wildfire spread and protect structures.",
+    metaDescription: "Fire break clearing in Central Texas for $2,000–$4,000+ per acre. We built a 5-mile fire break on the Balcones Canyonlands refuge. Free on-site estimates.",
     icon: "🔥",
     heroImage: "/images/official/forestry-mulching.jpeg",
-    intro: "Professional fire break clearing for ranches, rural properties, and large acreage throughout Central Texas. We clear cedar, brush, trees, and other vegetation to create strategic breaks in vegetation and improve critical access across your property.",
+    intro: "A fire break is a strip of land cleared of cedar, brush and other fuel, so a wildfire has less to burn and firefighters have a way in. We build fire breaks for ranches, rural homes and large acreage across Central Texas from our base in Bertram, including a [5-mile fire break on the Balcones Canyonlands National Wildlife Refuge](/case-studies/balcones-refuge-fire-break) for the U.S. Fish & Wildlife Service. Fire break clearing costs $2,000 – $4,000+ per acre, and site visits are free.",
     sections: [
             {
         heading: "What Is a Fire Break?",
@@ -3307,8 +3322,9 @@ pricing: { range: "$25 – $60", unit: "per linear foot", note: "Pricing depends
         ],
       },
             {
-        heading: "Where Fire Breaks Make Sense in Texas",
+        heading: "Who needs a fire break?",
         paragraphs: [
+          "Fire breaks are for ranches, rural homes, hunting land and large acreage where cedar, brush and dry grass run unbroken across the property, especially where a fire could reach a house or where trucks can't get in.",
           "Texas properties can have very different wildfire conditions depending on the vegetation, terrain, and location. In Central Texas, dense cedar, brush, wooded areas, and dry grasses can create continuous fuels across large properties. Wind, drought, and dry vegetation can further increase wildfire spread and intensity.",
         ],
         subheading: "Fire Breaks Can Be Strategically Placed Around:",
@@ -3345,8 +3361,35 @@ pricing: { range: "$25 – $60", unit: "per linear foot", note: "Pricing depends
           "Fire access trails should be planned around the property's vegetation, terrain, existing roads, and overall fire management needs.",
         ],
       },
+      {
+        heading: "How much does a fire break cost?",
+        paragraphs: [
+          `Fire break clearing costs $2,000 – $4,000+ per acre, with a ${MINIMUM_JOB} minimum job and free on-site estimates.`,
+          "To figure the acres, multiply the length by the width: a quarter mile of fire break 33 feet wide is 1 acre. Where your price falls in the range comes down to these factors:",
+        ],
+        iconCards: [
+          { icon: "📏", title: "Length & Width", description: "A longer or wider break covers more acres." },
+          { icon: "🌲", title: "Cedar & Brush Density", description: "Thick cedar takes longer to clear than light brush and grass." },
+          { icon: "⛰️", title: "Terrain & Rock", description: "Steep slopes and rocky ground slow the equipment down." },
+          { icon: "🚜", title: "Access", description: "Tight gates, remote corners and no existing roads add time." },
+        ],
+        iconCardsColumns: 2,
+        closingParagraphs: [
+          "If you're applying for the Texas A&M Forest Service Mechanical Fuel Reduction Grant, the work can't start before their pre-inspection. Our [grant guide](/guides/texas-mechanical-fuel-reduction-grant) covers the rules and dates.",
+        ],
+      },
+      {
+        heading: "How long does it take to build a fire break?",
+        paragraphs: [
+          `With our mulcher, a fire break goes at forestry mulching speed: ${MULCHING_RATES}.`,
+          "Our [5-mile fire break on the Balcones Canyonlands refuge](/case-studies/balcones-refuge-fire-break) took about a month. We started February 2 and finished before golden-cheeked warbler nesting season began March 1, working steep inclines, tight access and rock.",
+        ],
+      },
             {
-        heading: "Our Fire Break Clearing Process",
+        heading: "How does fire break clearing work?",
+        paragraphs: [
+          "We look at the property with you at a free site visit, plan where the break goes, then clear the cedar and brush and finish the surface so it's usable and easy to maintain.",
+        ],
         steps: [
           { title: "Plan the Clearing", description: "We evaluate the property's terrain, vegetation, access, and surrounding features to determine where the fire break should be created." },
           { title: "Clear the Vegetation", description: "We remove cedar, brush, trees, and other vegetation from the designated area while working around features that need to remain." },
@@ -3418,14 +3461,11 @@ pricing: { range: "$25 – $60", unit: "per linear foot", note: "Pricing depends
       },
     ],
       faqs: [
-      { question: "What is a fire break?", answer: "A fire break is a cleared area where vegetation and other combustible fuels have been reduced or removed to create separation between areas of vegetation." },
-      { question: "How does a fire break help during a wildfire?", answer: "Reducing continuous vegetation can reduce available fuel and may help slow fire spread while providing improved access for firefighters across the property." },
+      { question: "How wide should a fire break be?", answer: "It depends on how tall and thick the fuel is next to the break, the terrain, and what the break is for, so we lay it out with you at the site visit.", link: { label: "Texas fuel reduction grant guide", href: "/guides/texas-mechanical-fuel-reduction-grant" } },
+      { question: "Do you burn the brush you clear?", answer: "No. We mulch the cedar and brush in place with our Prinoth mulcher, so there are no burn piles. That matters if you're using the Texas A&M Forest Service grant, too: burning of any kind disqualifies the work." },
       { question: "Is there a grant that helps pay for fire breaks?", answer: "There can be: Texas A&M Forest Service's Mechanical Fuel Reduction Grant covers fuel breaks and defensible space. It reimburses eligible landowners in designated counties up to $2,000 an acre for heavy equipment like forestry mulchers, and up to $20,000 per applicant. Approval isn't guaranteed, so check our guide for the rules and dates.", link: { label: "Texas fuel reduction grant guide", href: "/guides/texas-mechanical-fuel-reduction-grant" } },
-      { question: "Where should a fire break be placed?", answer: "The location depends on the property's terrain, vegetation, structures, roads, access, and overall fire management needs. Each property should be evaluated individually." },
-      { question: "Can you clear cedar and brush for a fire break?", answer: "Yes. We clear cedar, mesquite, brush, small trees, and other vegetation from designated fire break areas.", link: { label: "Cedar Tree Removal", href: "/services/cedar-tree-removal" } },
-      { question: "Can a fire break also be used as an access trail?", answer: "Yes. A properly planned cleared route can provide both vegetation separation and access for property owners or emergency personnel.", link: { label: "ATV Trail Creation", href: "/services/atv-trail-creation" } },
-      { question: "Can you create fire breaks around homes and outbuildings?", answer: "Yes. We can clear designated areas around homes, barns, shops, and other structures while working around features that need to remain." },
-      { question: "How much does fire break clearing cost?", answer: "$2,000–$4,000 per acre. Pricing depends on the clearing method, length and width of the fire break, vegetation density, terrain, access, and the amount of clearing required. We can evaluate your property and provide a project specific estimate.", link: { label: "Request a Free Quote", href: "/contact?service=Fire%20Breaks#quote" } },
+      { question: "Can a fire break double as a road or trail?", answer: "Yes. A planned route can break up the fuel and give you and firefighters a way across the property. The 5-mile fire break we built on the Balcones Canyonlands refuge is also an access route for firefighters.", link: { label: "ATV Trail Creation", href: "/services/atv-trail-creation" } },
+      { question: "Can you build a fire break where there are golden-cheeked warblers?", answer: "We plan around them. On the Balcones Canyonlands refuge we finished the fire break before warbler nesting season began March 1. If your land has mature cedar-oak woodland, check with the U.S. Fish & Wildlife Service before clearing.", link: { label: "U.S. Fish & Wildlife Service, Austin office", href: "https://www.fws.gov/office/austin-ecological-services/species" } },
     ],
     pricing: { range: "$2,000 – $4,000+", unit: "per acre", note: "Pricing depends on firebreak length, width, clearing method, and vegetation density." },
   },
@@ -4095,10 +4135,10 @@ pricing: { range: "$2,500 – $5,000+", unit: "per job", note: "Pricing depends 
 
   "forestry-mulching-cleanup": {
     title: "Forestry Mulching Cleanup",
-    metaDescription: "Professional forestry mulching cleanup in Texas — touch-up mulching and finish work to leave your property clean and evenly processed.",
+    metaDescription: "Forestry mulching cleanup in Central Texas: we remove thick mulch, stumps and rock, then Harley-rake the ground smooth for seed and mowing. Free estimates.",
     icon: "🧹",
     heroImage: "/images/service-pics/forestry-mulching-cleanup.jpeg",
-    intro: "Not every forestry mulching job is finished to the same standard. Forestry mulching cleanup removes the thick layer of mulch left behind, stumps that are scattered throughout the property, and any debris left over. We finish the job to a clean, professional standard — whether it's touch-up work on our own project or cleanup after another contractor.",
+    intro: "Forestry mulching cleanup is the finish work after a mulching job: we remove the thick mulch, stumps, rock and leftover debris, then run our Harley rake so the ground is smooth and ready for seed and a zero-turn mower. We do it across Central Texas from our base in Bertram, whether we did the mulching or another contractor did. In Bertram, we [cleaned up 1.2 acres in three days](/case-studies/bertram-mulching-cleanup) after someone else's mulching job left the ground too rough to mow.",
     sections: [
                   {
         heading: "Forestry Mulching Cleanup in Central Texas",
@@ -4114,8 +4154,9 @@ pricing: { range: "$2,500 – $5,000+", unit: "per job", note: "Pricing depends 
         ctaButton: { label: "Request a Quote", href: "/contact?service=Forestry%20Mulching%20Cleanup#quote" },
       },
             {
-        heading: "Why Forestry Mulching May Need Cleanup",
+        heading: "Why does a mulched property need cleanup?",
         paragraphs: [
+          "Because mulching can leave a thick layer of wood chips, stumps sticking up and rock on the surface, and grass has a hard time coming up through it.",
           "Forestry mulching is an effective way to clear trees and brush, but the finished ground isn't always ready for grass, mowing, or other uses. Depending on the vegetation and site conditions, significant material can remain on the surface.",
         ],
         scenarios: [
@@ -4144,9 +4185,9 @@ pricing: { range: "$2,500 – $5,000+", unit: "per job", note: "Pricing depends 
       },
 
       {
-        heading: "Our Forestry Mulching Cleanup Process",
+        heading: "How does forestry mulching cleanup work?",
         paragraphs: [
-          "We use a straightforward process to take heavily mulched ground from rough and unfinished to clean, smooth, and ready for its next use.",
+          "We remove the excess mulch, stumps and rock, haul off the debris when it needs to go, then run our Harley rake over the ground to leave a smooth surface ready for seed.",
         ],
         steps: [
           { title: "Evaluate the Property", description: "We assess the mulch depth, remaining stumps, rocks, debris, terrain, and overall condition of the property to determine what needs to be removed." },
@@ -4154,6 +4195,13 @@ pricing: { range: "$2,500 – $5,000+", unit: "per job", note: "Pricing depends 
           { title: "Harley Rake & Finish", description: "We use our Harley rake to collect remaining debris, break up and distribute material, and smooth the surface into a clean, finished condition ready for native grass seed and zero turn mowing." },
         ],
         ctaButton: { label: "Request a Quote", href: "/contact?service=Forestry%20Mulching%20Cleanup#quote" },
+      },
+      {
+        heading: "How long does forestry mulching cleanup take?",
+        paragraphs: [
+          "Our recent cleanups each took 2 to 3 days. We cleaned up [2 acres in Lampasas](/case-studies/lampasas-mulching-cleanup-grant) in 2 days, and [1.2 acres in Bertram](/case-studies/bertram-mulching-cleanup) took 3 days because it also had stumps, rock and some land clearing.",
+          "The time depends on how deep the mulch is, how many stumps and rocks there are, the terrain, and how much material gets hauled off.",
+        ],
       },
             {
         heading: "The Finished Result",
@@ -4177,9 +4225,10 @@ pricing: { range: "$2,500 – $5,000+", unit: "per job", note: "Pricing depends 
         },
       },
             {
-        heading: "Forestry Mulching Cleanup Cost Factors",
+        heading: "How much does forestry mulching cleanup cost?",
         paragraphs: [
-          "The cost of forestry mulching cleanup depends on how much material needs to be removed and the condition of the property. Several factors can affect the equipment, labor, and time required.",
+          `Forestry mulching cleanup costs $2,500 – $10,000+ per job, depending on the acreage and how much is left behind, with a ${MINIMUM_JOB} minimum job and free on-site estimates.`,
+          "When the cleanup cuts wildfire fuel around a home, it may qualify for the Texas A&M Forest Service Mechanical Fuel Reduction Grant: the landowner on our [Lampasas cleanup](/case-studies/lampasas-mulching-cleanup-grant) received it for the work. These factors set where your job falls in the range:",
         ],
         iconCards: [
           { icon: "📏", title: "Acreage", description: "Larger areas require more time and equipment to clean up, making the total acreage one of the biggest cost factors." },
@@ -4207,8 +4256,9 @@ pricing: { range: "$2,500 – $5,000+", unit: "per job", note: "Pricing depends 
         ],
       },
             {
-        heading: "Property Types We Serve",
+        heading: "Who is forestry mulching cleanup for?",
         paragraphs: [
+          "It's for landowners whose property has already been mulched, by us or another contractor, and who now want ground they can seed, mow with a zero-turn, or build on.",
           "Forestry mulching cleanup can help property owners turn recently cleared, rough ground into a cleaner and more usable finished space.",
         ],
         iconCards: [
@@ -4283,25 +4333,11 @@ pricing: { range: "$2,500 – $5,000+", unit: "per job", note: "Pricing depends 
       },
     ],
         faqs: [
-      { question: "What is forestry mulching cleanup?", answer: "Forestry mulching cleanup is the process of removing excess mulch, remaining stumps, larger rocks, and debris after forestry mulching. We then use a Harley rake to collect remaining material and prepare the property for its intended use.", link: { label: "View Our Equipment", href: "/equipment" } },
-      { question: "Why would a property need cleanup after forestry mulching?", answer: "Forestry mulching can leave behind a thick layer of mulch, stumps, and large branches. If the goal is to establish native grass or maintain the property with a zero turn mower, additional cleanup may be needed.", link: { label: "Forestry Mulching", href: "/services/forestry-mulching" } },
+      { question: "Can you clean up a property someone else mulched?", answer: "Yes. You don't have to use the company that did the mulching. Our Bertram cleanup was after another contractor's job left thick mulch, stumps and rock behind.", link: { label: "Our Bertram mulching cleanup", href: "/case-studies/bertram-mulching-cleanup" } },
+      { question: "Why won't grass grow through my mulch?", answer: "A thick layer of wood mulch shades the soil and can take years to break down, so grass seed has a hard time reaching the dirt. Removing the excess mulch and raking the surface gives the seed a much better chance." },
+      { question: "Do you haul the debris off?", answer: "When it needs to go, yes. On our Lampasas cleanup we hauled off 12 loads of debris and cactus. We'll talk through what stays and what goes at the site visit." },
+      { question: "Will my property be ready for a zero-turn mower?", answer: "That's usually the goal. We pull the stumps and larger rock and Harley-rake the ground smooth. How smooth it ends up also depends on the terrain." },
       { question: "Is there a grant that helps pay for forestry mulching cleanup?", answer: "There can be, when the work reduces wildfire fuel: the landowner on one of our Lampasas cleanups received Texas A&M Forest Service's Mechanical Fuel Reduction Grant for the work. It reimburses eligible landowners in designated counties up to $2,000 an acre for heavy equipment, and up to $20,000 per applicant. Approval isn't guaranteed, so check our guide for the rules and dates.", link: { label: "Texas fuel reduction grant guide", href: "/guides/texas-mechanical-fuel-reduction-grant" } },
-      { question: "How long does forestry mulch take to decompose?", answer: "The time varies depending on the type and amount of material and site conditions. A heavy layer of woody mulch can take years to break down, which is why removing excess material may be beneficial when preparing the property for grass." },
-      { question: "Can you remove a thick layer of mulch?", answer: "Yes. We can remove and redistribute or haul away excess mulch depending on the project and desired finished condition." },
-      { question: "Can you remove stumps left after forestry mulching?", answer: "Yes. Remaining stumps are removed when they are part of the project scope. The size, quantity, and depth of the stumps can affect the equipment and time required.", link: { label: "Tree & Stump Removal", href: "/services/tree-stump-removal" } },
-      { question: "Can you remove rocks after forestry mulching?", answer: "Yes. We can remove larger rocks and exposed stone that need to be cleared from the property, particularly when they interfere with mowing or the desired finished condition.", link: { label: "Rock & Cactus Removal", href: "/services/rock-cactus-removal" } },
-      { question: "Do you use a Harley rake?", answer: "Yes. Our Harley rake is used during the finishing process to collect remaining debris, work through surface material, and help create a cleaner, more even surface." },
-      { question: "Can you prepare my property for native grass seed?", answer: "Yes. We can prepare the surface for native grass or wildflower seed by removing excess mulch and debris and creating a cleaner, more suitable seedbed." },
-      { question: "Will the property be ready for a zero turn mower?", answer: "A properly finished property can be made much more suitable for zero turn mowing by removing larger stumps, rocks, and excess material. The final condition depends on the site's terrain and the agreed-upon scope of work." },
-      { question: "Can you make a mulched property look like a park?", answer: "Yes. When site conditions and the project scope allow, we can take rough, heavily mulched ground and create a cleaner, smoother, park like finished appearance." },
-      { question: "Do you haul away the mulch?", answer: "It depends on the project. Some material can be redistributed or processed on site, while projects requiring complete removal may involve loading and hauling." },
-      { question: "How much does forestry mulching cleanup cost?", answer: "Pricing depends on acreage, mulch depth, stump size and quantity, rock content, terrain, equipment access, and whether material needs to be hauled away." },
-      { question: "Can you clean up a property someone else forestry mulched?", answer: "Yes. You do not have to use the same company that performed the original forestry mulching. We can evaluate the current condition of the property and determine what cleanup is needed." },
-      { question: "How large of a property can you clean up?", answer: "We work on properties ranging from smaller acreage to large ranch and rural properties. The size of the project and amount of material present will determine the equipment and approach required." },
-      { question: "Do you remove all of the mulch?", answer: "Not necessarily. The amount of mulch removed depends on the desired finished condition and what the property needs for its next use. Some material may be left or redistributed when appropriate." },
-      { question: "Can you clean up a property that was mulched several years ago?", answer: "Yes. Older mulched properties can still be evaluated for excess mulch, stumps, rocks, and other material that may need to be removed before the property is seeded or maintained." },
-      { question: "Can you clean up around trees that were intentionally left standing?", answer: "Yes. Cleanup can be performed around retained trees while focusing on removing unwanted mulch, debris, stumps, and rocks from the surrounding area." },
-      { question: "How do I get a quote for forestry mulching cleanup?", answer: "Contact Grounded Land Services with your property location, approximate acreage, and details about the current condition. Photos of the property can also help us understand the scope of the cleanup.", link: { label: "Request a Free Quote", href: "/contact?service=Forestry%20Mulching%20Cleanup#quote" } },
     ],
     pricing: { range: "$2,500 – $10,000+", unit: "per job", note: "Pricing depends on the amount of leftover debris and acreage." },
   },

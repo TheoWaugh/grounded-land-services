@@ -99,7 +99,7 @@ Luling, Bertram, Briggs. Focus content, case studies, and links here first.
 - The "Kelley Arnold" review is from a family member: removed from the site
   (owner, 2026-10-21). Never show or mark it up.
 - Case studies on site: 20 in lib/case-studies.ts (owner confirmed 10 on 2026-10-21; more
-  added since, incl. Georgetown 5 ac and Harwood 3 ac on 2026-10-27, Kingsland 0.5 ac and Balcones refuge 5-mile fire break on 2026-10-30, Spicewood Lake Travis lot 0.5 ac and Spicewood sod lots 1.5 ac and Bertram mulching cleanup 1.2 ac and Bertram rock removal 0.5 ac on 2026-11-02, Gonzales forestry mulching 1 ac on 2026-11-03, Dale forestry mulching 2 ac on 2026-11-09, Lampasas rock removal 2 ac on 2026-11-09, Lampasas forestry mulching cleanup 2 ac (grant job, July 2025) on 2026-11-09, Bertram pool demolition 1,575 sq ft on 2026-11-09, Kingsland forestry mulching 1 ac on 2026-11-09; e.g. Spicewood 53.8 ac land clearing,
+  added since, incl. Georgetown 5 ac and Harwood 3 ac on 2026-10-27, Kingsland 0.5 ac and Balcones refuge 5-mile fire break on 2026-10-30, Spicewood Lake Travis lot 0.5 ac and Spicewood sod lots 1.5 ac and Bertram mulching cleanup 1.2 ac and Bertram rock removal 0.5 ac on 2026-11-02, Gonzales forestry mulching 1 ac on 2026-11-03, Dale forestry mulching 2 ac on 2026-11-09, Lampasas rock removal 2 ac on 2026-11-09, Lampasas forestry mulching cleanup 2 ac (grant job, July 2025) on 2026-11-09, Bertram pool demolition 1,575 sq ft on 2026-11-09, Kingsland forestry mulching 1 ac on 2026-11-09, Hudson Bend (near Lake Travis) forestry mulching 0.5 ac on 2026-11-16; e.g. Spicewood 53.8 ac land clearing,
   Gonzales 34.8 ac, Liberty Hill 4.1 ac rock removal)
 - Testimonials: on site with names and cities (Testimonials.tsx, app/page.tsx)
 - Gallery photo locations: NOT confirmed (every alt says "Bertram, TX"), except
@@ -121,7 +121,7 @@ Luling, Bertram, Briggs. Focus content, case studies, and links here first.
   - Rules: landowner pays first, reimbursed after post-inspection on paid-in-full invoices (3-6 weeks); contractor must be
     qualified and NOT affiliated with the landowner; landowner can't do the work; no work before the TFS pre-inspection
     (earlier work isn't reimbursed); burning of any kind disqualifies; debris must be removed or mechanically reduced
-    (mulching fits); fuel breaks at least 66 ft wide; one treatment type per application; selection is competitive.
+    (mulching fits); NO minimum fire break width: the official program FAQ doesn't state one (owner, 2026-11-16), so never claim a width rule; one treatment type per application; selection is competitive.
   - Our guide: /guides/texas-mechanical-fuel-reduction-grant (built 2026-11-10; "Last updated: November 2026").
     Update its dates when TFS announces the 2027 round. Always link the official page; never promise eligibility or approval.
 - Social: Instagram @Grounded.LandServices, Facebook /GroundedLandServices,
@@ -183,6 +183,12 @@ seo-reports/city-notes-priority.md.
   homesite prep. Customer not named. Case study /case-studies/kingsland-forestry-mulching, photo
   /images/work/kingsland-forestry-mulching.jpeg (GPS stripped in place 2026-11-09; the original with GPS
   is still in git history).
+- Hudson Bend forestry mulching (owner, 2026-11-16): 0.5 ac cedar mulched in place in 1 day, Nov 2026,
+  CAT 275 + Prinoth, near Lake Travis and Lakeway (NOT a lakeside lot). The owner wanted the property to look more appealing to
+  potential buyers (good fit for landowners and realtors getting a lot ready to list). Oaks left standing
+  (visible in the photos). Hudson Bend is not a service-area city: locationSlug "lakeway", also listed on
+  the Spicewood forestry mulching page. Customer not named. Case study
+  /case-studies/hudson-bend-forestry-mulching.
 - Bertram pool demolition (owner, 2026-11-09): 1,575 sq ft concrete/gunite pool + patio torn out for
   concrete cancer, about 1 week, June 2026. Took down part of the fence for access; tight space between
   house and pool. CAT 275 + a RENTED Bobcat E80 with a hydraulic hammer (we don't own a hammer or the E80:
