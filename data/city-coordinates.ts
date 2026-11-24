@@ -55,7 +55,6 @@ export const cityCoordinates: Record<string, { lat: number; lng: number }> = {
   "Mullin": { lat: 31.555229, lng: -98.66566 },
   // Central Texas
   "Bastrop": { lat: 30.1111, lng: -97.318152 },
-  "Brady": { lat: 31.115378, lng: -99.345935 },
   "Brenham": { lat: 30.15816, lng: -96.395616 },
   "Bryan": { lat: 30.666016, lng: -96.381049 },
   "Caldwell": { lat: 30.529807, lng: -96.699724 },
@@ -74,7 +73,6 @@ export const cityCoordinates: Record<string, { lat: number; lng: number }> = {
   "Rising Star": { lat: 32.097634, lng: -98.96652 },
   "Smithville": { lat: 30.00883, lng: -97.151865 },
   "Somerville": { lat: 30.345438, lng: -96.530948 },
-  "Stephenville": { lat: 32.214544, lng: -98.219885 },
   "Temple": { lat: 31.104936, lng: -97.388512 },
   "Waco": { lat: 31.557994, lng: -97.18975 },
   "Wellborn": { lat: 30.53528, lng: -96.30167 }, // Wikipedia (annexed by College Station; not a Census place)

@@ -67,7 +67,7 @@ export default async function CaseStudyPage({ params }: { params: PageParams }) 
       <section className="relative h-72 md:h-[28rem] overflow-hidden bg-[#0a0a0a]">
         <Image
           src={study.afterPhoto}
-          alt={study.title}
+          alt={study.photoAlts?.[study.afterPhoto] ?? study.title}
           fill
           priority
           className="object-cover"
@@ -136,7 +136,7 @@ export default async function CaseStudyPage({ params }: { params: PageParams }) 
           <div className="mb-10">
             <h2 className="text-2xl font-bold text-[#0a0a0a] mb-1">Check Out Some Pictures From This Job!</h2>
             <p className="text-xs font-semibold text-[#6e6e73] uppercase tracking-wide mb-3">Project Photos</p>
-            <CaseStudyGallery photos={allPhotos} title={study.title} />
+            <CaseStudyGallery photos={allPhotos} title={study.title} alts={study.photoAlts} />
           </div>
         )}
 

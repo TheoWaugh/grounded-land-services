@@ -104,4 +104,15 @@ export const testimonials: Testimonial[] = [
     location: "Dale, TX",
     quote: "Great work, goes above and beyond and reliable.",
   },
+  {
+    name: "Tom",
+    location: "Lake Travis (Hwy 620), TX", // owner, 2026-11-24: don't link to the Hudson Bend case study
+    quote: "I have a little over a half acre in the Lake Travis highway 620 area that was overgrown with dead and live cedars and underbrush. In one day Grounded Land Services transformed the property from an eyesore to park like appearance. The cedar and underbrush were reduced to a fine mat of mulch and the oaks were left untouched. Logan provided a prompt quote at a reasonable price and was very agreeable to work with throughout the process. He went above and beyond to ensure the job was done to my satisfaction with no up sell or high pressure, a very rare thing in this day and age. If you just want the job done right for a fair price look no further.",
+  },
+  {
+    name: "James Mathis",
+    location: "Killeen, TX",
+    caseStudy: "killeen-forestry-mulching", // owner, 2026-11-24: OK to name
+    quote: "I cant thank Logan with Grounded Land Services enough. The quality of work was beyond my expectations. The attention to detail on the clearing of vines growing in the trees. He went above and beyond to ensure everything was cleared and taken care of. I estimate 2 acres of brush and growth around multiple trees were mulched up with ease. Dead and unwanted trees were turned into mulch and dust. His quality of work exceeded my expectations. 10 out of 10 would recommend Logan for any of your land clearing projects that you would need to have done. I will be adding photos of his work tomorrow.",
+  },
 ];

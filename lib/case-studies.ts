@@ -14,6 +14,7 @@ export interface CaseStudy {
   beforePhoto?: string; // if present, renders the before/after slider
   afterPhoto: string; // always required — the primary "after" shot
   galleryPhotos?: string[]; // additional photos for the individual page
+  photoAlts?: Record<string, string>; // alt text by photo path; photos without one use the title
   videoIds?: string[]; // YouTube video IDs
   related?: { heading: string; slugs: string[] }; // case studies linked as related work at the bottom of the page
   grantGuideText?: string; // shows a callout linking to the Texas fuel reduction grant guide
@@ -241,7 +242,7 @@ export const caseStudies: CaseStudy[] = [
     slug: "kingsland-land-clearing",
     title: "Land Clearing in Kingsland, Texas",
     description: "Half an acre cleared in a day and a half in Kingsland, Texas. The owner wanted a property that was easier to maintain, keeping only his oak trees, so we cleared the cedar, persimmon, mesquite, yucca, and cactus, tore down an old structure, removed rock and old fence, and finished the ground with our Harley rake.",
-    longDescription: "This half-acre Kingsland property was grown up with cedar, persimmon trees, mesquite, yucca, and cactus. It also had loose rock, a dead oak tree, an old fence, and an old wooden structure. The owner wanted a property that was easier to maintain, keeping only his oak trees.\n\nWe used our CAT 275 and grapple to clear everything except the live oaks, take down the old structure and fence, and remove the dead oak and rock. An internet line ran across the property above ground instead of buried, so we moved it out of the way while we worked. We hauled off three loads of brush and one load of debris and rock.\n\nTo finish, we ran our Harley rake over the ground to level it out and pick up the leftover debris and rock. The job took a day and a half. The result is open, smooth ground under the oaks that's easy to mow and maintain.",
+    longDescription: "This half-acre Kingsland property was grown up with cedar, persimmon trees, mesquite, yucca, and cactus. It also had loose rock, a dead oak tree, an old fence, and an old wooden structure. The owner wanted a property that was easier to maintain, keeping only his oak trees.\n\nWe used our CAT 275 and grapple to clear everything except the live oaks, take down the old structure and fence, and remove the dead oak and rock. An internet line ran across the property above ground instead of buried, so we moved it out of the way while we worked. We hauled off three loads of brush and one load of debris and rock.\n\nTo finish, we ran our Harley rake over the ground to level it out and pick up the leftover debris and rock. The job took a day and a half. The result is open, smooth ground under the oaks that's easy to mow and maintain.\n\nAfter we finished, the owner seeded it, and about three weeks later green grass had filled in under the oaks. The raked, rock-free ground gave the seed a clean bed to take.",
     location: "Kingsland, TX",
     locationSlug: "kingsland",
     acreage: "0.5 Acres",
@@ -256,14 +257,28 @@ export const caseStudies: CaseStudy[] = [
       { label: "Harley Rake", equipmentId: "harley-rake" },
       { label: "Grapple Rake", equipmentId: "grapple-rake" },
     ],
-    afterPhoto: "/projects/kingsland-land-clearing/land-clearing-kingsland-after.webp",
+    afterPhoto: "/projects/kingsland-land-clearing/land-clearing-kingsland-oaks-green-grass-3-weeks-after.webp",
     galleryPhotos: [
+      "/projects/kingsland-land-clearing/land-clearing-kingsland-oak-green-grass-3-weeks-after.webp",
+      "/projects/kingsland-land-clearing/land-clearing-kingsland-open-lot-green-grass-3-weeks-after.webp",
+      "/projects/kingsland-land-clearing/land-clearing-kingsland-oak-brush-before-after-3-weeks.webp",
+      "/projects/kingsland-land-clearing/land-clearing-kingsland-oaks-before-after-3-weeks.webp",
+      "/projects/kingsland-land-clearing/land-clearing-kingsland-old-structure-before-after-3-weeks.webp",
+      "/projects/kingsland-land-clearing/land-clearing-kingsland-after.webp",
       "/projects/kingsland-land-clearing/land-clearing-kingsland-yucca-brush-before-after.webp",
       "/projects/kingsland-land-clearing/land-clearing-kingsland-oaks-before-after.webp",
       "/projects/kingsland-land-clearing/demolition-kingsland-old-structure-before-after.webp",
       "/projects/kingsland-land-clearing/land-clearing-kingsland-oaks-raked-after.webp",
       "/projects/kingsland-land-clearing/land-clearing-kingsland-oak-raked-after.webp",
     ],
+    photoAlts: {
+      "/projects/kingsland-land-clearing/land-clearing-kingsland-oaks-green-grass-3-weeks-after.webp": "Land clearing in Kingsland, TX about 3 weeks after seeding: green grass filled in under the live oaks",
+      "/projects/kingsland-land-clearing/land-clearing-kingsland-oak-green-grass-3-weeks-after.webp": "Green grass around a live oak in Kingsland, TX, about 3 weeks after the owner seeded the cleared lot",
+      "/projects/kingsland-land-clearing/land-clearing-kingsland-open-lot-green-grass-3-weeks-after.webp": "Open, cleared lot in Kingsland, TX green with new grass about 3 weeks after seeding",
+      "/projects/kingsland-land-clearing/land-clearing-kingsland-oak-brush-before-after-3-weeks.webp": "Land clearing in Kingsland, TX: yucca and brush around an oak before, raked ground right after, and green grass 3 weeks after seeding",
+      "/projects/kingsland-land-clearing/land-clearing-kingsland-oaks-before-after-3-weeks.webp": "Land clearing in Kingsland, TX: brush behind the oaks before, cleared and raked right after, and green grass 3 weeks after seeding",
+      "/projects/kingsland-land-clearing/land-clearing-kingsland-old-structure-before-after-3-weeks.webp": "Kingsland, TX lot with an old wooden structure before, cleared and raked right after, and green grass 3 weeks after seeding",
+    },
   },
 {
     slug: "jonestown-forestry-mulching",
@@ -462,6 +477,34 @@ export const caseStudies: CaseStudy[] = [
       { label: "Prinoth Mulching Head", equipmentId: "prinoth" },
     ],
     afterPhoto: "/images/work/kingsland-forestry-mulching.jpeg",
+  },
+  {
+    slug: "killeen-forestry-mulching",
+    title: "Forestry Mulching in Killeen, Texas",
+    description: "2 acres of brush, vines, and dead trees mulched in one day in Killeen, Texas. We cleared the vines out of the trees and mulched the brush and dead trees in place with our CAT 275 and Prinoth mulcher, opening up the owner's oaks so the property is easy to maintain.",
+    summary: "Cleared vines out of the trees and mulched 2 acres of brush and dead trees in a day to open up the owner's oaks.",
+    longDescription: "James Mathis wanted to open up the oaks on 2 acres of his Killeen property and be able to maintain it. Brush and growth had filled in around multiple trees, with vines climbing up into them, plus dead and unwanted trees.\n\nWe used our CAT 275 with the Prinoth mulching head. We cleared the vines out of the trees and mulched the brush and the dead and unwanted trees in place.\n\nThe job took one day and was finished in November 2026. The oaks are opened up, and the property is easy to maintain.",
+    location: "Killeen, TX",
+    locationSlug: "killeen",
+    acreage: "2 Acres",
+    timeline: "1 Day",
+    services: [
+      { label: "Forestry Mulching", slug: "forestry-mulching" },
+    ],
+    equipmentUsed: [
+      { label: "Cat 275 XE", equipmentId: "cat-275" },
+      { label: "Prinoth Mulching Head", equipmentId: "prinoth" },
+    ],
+    afterPhoto: "/projects/killeen-forestry-mulching/forestry-mulching-killeen-oaks-after.webp",
+    galleryPhotos: [
+      "/projects/killeen-forestry-mulching/forestry-mulching-killeen-open-ground-after.webp",
+      "/projects/killeen-forestry-mulching/brush-vine-mulching-killeen-before-after.webp",
+    ],
+    photoAlts: {
+      "/projects/killeen-forestry-mulching/forestry-mulching-killeen-oaks-after.webp": "Forestry mulching in Killeen, TX: brush mulched to open ground under the oaks, with our CAT 275 in the background",
+      "/projects/killeen-forestry-mulching/forestry-mulching-killeen-open-ground-after.webp": "Open, mulched ground beneath the trees after forestry mulching in Killeen, TX",
+      "/projects/killeen-forestry-mulching/brush-vine-mulching-killeen-before-after.webp": "Before and after forestry mulching in Killeen, TX: thick brush and growth around the trees, then opened up and mulched",
+    },
   },
   {
     slug: "hudson-bend-forestry-mulching",

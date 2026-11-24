@@ -2,7 +2,7 @@ import { servicePricing, MINIMUM_JOB } from "./service-pricing";
 import { milesFromBertram, milesBetween } from "@/lib/bertram-distance";
 
 // Hand-written local content for the owner's priority cities (business-facts.md). Research and
-// sources: seo-reports/city-notes-priority.md. Only facts with an official source, the existing
+// sources: seo-reports/city-notes-priority.md and city-notes-batch2.md. Only facts with an official source, the existing
 // city facts, or the owner's own experience go here. Never add unverified or weak-source claims.
 
 export interface LocalFaq {
@@ -18,7 +18,7 @@ export interface LocalFaq {
 type LocalService = "land-clearing" | "forestry-mulching" | "rock-removal" | "demolition";
 
 export interface CityLocal {
-  /** What the land is like: terrain, soil, vegetation, land uses, distance from Bertram. */
+  /** What the land is like: terrain, soil, vegetation, land uses, distance from Bertram. Empty keeps the city-facts copy. */
   land: string[];
   /** Our work in and around the city (owner experience only). */
   experience: string[];
@@ -26,6 +26,8 @@ export interface CityLocal {
   serviceExperience?: Partial<Record<LocalService, string[]>>;
   /** One extra local paragraph per service page. */
   serviceNotes: Partial<Record<LocalService, string>>;
+  /** Service pages that show "Our Work" right after the how long / process section instead of inside "Why choose us". */
+  proofAfterProcess?: LocalService[];
   /** Case study slugs to show, in order: local first, then nearest. */
   studies: string[];
   /** Replaces `studies` on that city × service page. */
@@ -47,6 +49,14 @@ const SOURCES = {
   burnetBurnBan: { label: "Burnet County burn ban order (2026)", href: "https://public.destinyhosted.com/burnemindocs/2026/Spec/20260702_4586/minutes/1574_Burn_Ban.pdf" },
   georgetownTrees: { label: "City of Georgetown: heritage trees", href: "https://georgetowntexas.qscend.com/askgtx/knowledgebase/article/588" },
   libertyHillTrees: { label: "City of Liberty Hill: Heritage Tree Permit", href: "https://www.libertyhilltx.gov/DocumentCenter/View/2756/Heritage-Tree-Permit-Application" },
+  burnetBurnRules: { label: "Burnet County: outdoor burning guidelines", href: "https://public.destinyhosted.com/burnemindocs/2021/ComCt/20211123_4392/1373_12._Adopted_Guidleines_for_Outdoor_Burning.pdf" },
+  haysBurn: { label: "South Hays ESD 3: outdoor burning", href: "https://shcesd3.specialdistrict.org/outdoor-burning" },
+  gillespieBurn: { label: "Gillespie County: burn ban", href: "https://www.gillespiecounty.gov/1253/Burn-Ban" },
+  lakewayTrees: { label: "City of Lakeway: 2025 tree ordinance", href: "https://lakeway-tx.civicweb.net/document/99121/" },
+  lakewayOaks: { label: "City of Lakeway: oak pruning schedule", href: "https://www.lakeway-tx.gov/1059" },
+  wimberleyForms: { label: "City of Wimberley: forms and applications", href: "https://www.cityofwimberley.com/177/Forms-Applications" },
+  edwards: { label: "Texas Administrative Code: Edwards Aquifer contributing zone", href: "https://www.law.cornell.edu/regulations/texas/30-Tex-Admin-Code-SS-213-22" },
+  tpwdCedar: { label: "Texas Parks and Wildlife: Hill Country habitat management", href: "https://tpwd.texas.gov/landwater/land/habitats/hillcountry/habitat_management/" },
   gonzalesBurn: { label: "Gonzales County: burn ban status", href: "https://newtools.cira.state.tx.us/page/Gonzales.Burn.Ban.Status" },
 };
 
@@ -226,6 +236,9 @@ export const cityLocal: Record<string, CityLocal> = {
       "forestry-mulching": ["spicewood-land-clearing", "spicewood-lake-travis-lot", "spicewood-sod-lots", "hudson-bend-forestry-mulching", "balcones-refuge-fire-break", "jonestown-forestry-mulching"],
     },
     reviews: ["Barrett Garrison", "Mike Janak"],
+    serviceReviews: {
+      "forestry-mulching": ["Barrett Garrison", "Mike Janak", "Tom"],
+    },
     faqs: [
       {
         question: "My Spicewood land is steep and rocky. Can you still clear it?",
@@ -406,6 +419,226 @@ export const cityLocal: Record<string, CityLocal> = {
       },
       travelFaq("Luling"),
       oakWiltFaq("Luling"),
+    ],
+  },
+
+  "Burnet": {
+    land: [],
+    experience: [
+      "Inside Burnet city limits, we cleared an acre: we stacked and burned the downed cedar, then raked the ground clean. We're based 11 miles away in Bertram, so Burnet jobs are close to home. Burnet sits right where the ground changes, with granite and sand on the west side of town and limestone on the east. Each one clears a little differently, so we come out and look at yours before we quote.",
+      "Next to Lake Buchanan, we mulched 2.4 acres of cedar around the oaks in two days for an owner getting ready to sell. The ground was steep and rocky, with trash scattered through it. Near Inks Lake and Lake LBJ, off Park Road 4, we mulched a 1-acre homesite in Kingsland.",
+      "Our closest rock removal job is in Bertram, 11 miles away, on half an acre. Around Burnet you can hit granite to the west and limestone to the east, so we look at the rock before we quote.",
+    ],
+    serviceExperience: {
+      "land-clearing": [
+        "Inside Burnet city limits, we cleared an acre: we stacked and burned the downed cedar, then raked the ground clean. We're based 11 miles away in Bertram, so Burnet jobs are close to home. Burnet sits right where the ground changes, with granite and sand on the west side of town and limestone on the east. Each one clears a little differently, so we come out and look at yours before we quote.",
+      ],
+      "forestry-mulching": [
+        "Next to Lake Buchanan, we mulched 2.4 acres of cedar around the oaks in two days for an owner getting ready to sell. The ground was steep and rocky, with trash scattered through it. Near Inks Lake and Lake LBJ, off Park Road 4, we mulched a 1-acre homesite in Kingsland.",
+      ],
+      "rock-removal": [
+        "Our closest rock removal job is in Bertram, 11 miles away, on half an acre. Around Burnet you can hit granite to the west and limestone to the east, so we look at the rock before we quote.",
+      ],
+    },
+    serviceNotes: {},
+    proofAfterProcess: ["land-clearing", "forestry-mulching"], // owner, 2026-11-24: trying this order on Burnet first
+    studies: ["burnet-forestry-mulching", "kingsland-forestry-mulching", "kingsland-land-clearing", "bertram-rock-removal", "bertram-burn-pile-mulching", "bertram-forestry-mulching"],
+    reviews: ["John Cortez", "Dylan Gavit", "Gary Gorton", "Steve King"],
+    faqs: [
+      {
+        question: "Have you worked in Burnet?",
+        answer: "Yes. We cleared an acre inside city limits, and we mulched 2.4 acres of cedar next to Lake Buchanan. We're based 11 miles away in Bertram.",
+        link: { label: "Our 2.4-acre Burnet mulching job", href: "/case-studies/burnet-forestry-mulching" },
+      },
+      {
+        question: "Can I burn my cedar piles?",
+        answer: "Outside city limits, only when there's no county burn ban. Burnet County's guidelines say to notify the Sheriff's Office at 512-756-8080 before you burn, and never to burn on Red Flag days. Inside city limits, the City of Burnet has its own burn permit, so check with the Fire Marshal. Or we can mulch the cedar in place and leave no pile at all.",
+        link: SOURCES.burnetBurnRules,
+        services: ["land-clearing", "forestry-mulching"],
+      },
+      {
+        question: "Do you work lake lots on Buchanan, Inks Lake and LBJ?",
+        answer: "Yes. We mulched 2.4 acres next to Lake Buchanan and a 1-acre homesite in Kingsland, near Inks Lake and Lake LBJ off Park Road 4.",
+        link: { label: "Our 1-acre Kingsland homesite", href: "/case-studies/kingsland-forestry-mulching" },
+      },
+      {
+        question: "Will the cedar come back?",
+        answer: "Cut cedar (Ashe juniper) dies, but new seedlings come up from seed in the soil. Texas Parks and Wildlife says to plan on another treatment in about 7–8 years.",
+        link: SOURCES.tpwdCedar,
+        services: ["land-clearing", "forestry-mulching"],
+      },
+    ],
+  },
+
+  "Lakeway": {
+    land: [],
+    experience: [
+      "Lakeway lots are often steep and rocky, close to the lake. On a Spicewood lake lot the slope was too steep for equipment, so we chainsawed a trail down to the dock by hand. Lakeway's 2025 tree ordinance lists cedar as unprotected, but hardwoods 12 inches and up are protected, so we go over which trees stay before any work starts.",
+      "In Hudson Bend, near Lake Travis, we mulched half an acre of cedar in one day so the lot would look better to buyers. In Jonestown we mulched 1.2 steep, rocky acres in a day. We work for homeowners with large lots, property owners, and realtors.",
+    ],
+    serviceExperience: {
+      "land-clearing": [
+        "Lakeway lots are often steep and rocky, close to the lake. On a Spicewood lake lot the slope was too steep for equipment, so we chainsawed a trail down to the dock by hand. Lakeway's 2025 tree ordinance lists cedar as unprotected, but hardwoods 12 inches and up are protected, so we go over which trees stay before any work starts.",
+      ],
+      "forestry-mulching": [
+        "In Hudson Bend, near Lake Travis, we mulched half an acre of cedar in one day so the lot would look better to buyers. In Jonestown we mulched 1.2 steep, rocky acres in a day. We work for homeowners with large lots, property owners, and realtors.",
+      ],
+    },
+    serviceNotes: {},
+    studies: ["hudson-bend-forestry-mulching", "spicewood-lake-travis-lot", "jonestown-forestry-mulching", "spicewood-land-clearing", "spicewood-sod-lots"],
+    reviews: ["Tom", "Barrett Garrison", "Mike Janak"],
+    faqs: [
+      {
+        question: "Do I need a permit to remove cedar in Lakeway?",
+        answer: "Lakeway's 2025 tree ordinance lists cedar as an unprotected tree, and unprotected trees don't need a removal permit. Hardwoods 12 inches and up are protected, and heritage trees (24 inches and up) need a permit. Clearing for commercial or multifamily projects needs a permit too. For a vacant lot, ask the city's Building and Development Services before work starts.",
+        link: SOURCES.lakewayTrees,
+      },
+      {
+        question: "When can oaks be trimmed in Lakeway?",
+        answer: "Not from February 1 to June 30. The city bans oak pruning then because of oak wilt, every cut must be sealed, and fines are possible.",
+        link: SOURCES.lakewayOaks,
+      },
+      {
+        question: "Can you get my lot ready before I list it?",
+        answer: "Yes. In Hudson Bend we mulched half an acre of cedar in one day so the lot would show better to buyers. Realtors call us for the same thing.",
+        link: { label: "Our half-acre Hudson Bend job", href: "/case-studies/hudson-bend-forestry-mulching" },
+      },
+      {
+        question: "Can you work a steep lot near the lake?",
+        answer: "Yes. On a Spicewood lake lot the slope was too steep for equipment, so we cut a trail down to the dock by hand.",
+        link: { label: "Our Spicewood lake lot", href: "/case-studies/spicewood-lake-travis-lot" },
+      },
+    ],
+  },
+
+  "Dripping Springs": {
+    land: [],
+    experience: [
+      "Around Dripping Springs you'll hit both solid limestone and loose rock, often on the same property. We look at which you have before we quote.",
+      "Our closest mulching job is in Johnson City, where we mulched 1.8 acres of cedar and small brush under oaks on rocky ground. Mulching leaves a layer of nutrient-rich mulch on the ground, so there's no brush pile to burn.",
+      "For the Uhland Fall Fest, we cleared 20 acres of mesquite, cactus and cedar elm. In Buda, we cleared thick cedar and brush while keeping the owner's trees. West of Spicewood, we cleared a 53.8-acre ranch.",
+    ],
+    serviceExperience: {
+      "rock-removal": [
+        "Around Dripping Springs you'll hit both solid limestone and loose rock, often on the same property. We look at which you have before we quote.",
+      ],
+      "forestry-mulching": [
+        "Our closest mulching job is in Johnson City, where we mulched 1.8 acres of cedar and small brush under oaks on rocky ground. Mulching leaves a layer of nutrient-rich mulch on the ground, so there's no brush pile to burn.",
+      ],
+      "land-clearing": [
+        "For the Uhland Fall Fest, we cleared 20 acres of mesquite, cactus and cedar elm. In Buda, we cleared thick cedar and brush while keeping the owner's trees. West of Spicewood, we cleared a 53.8-acre ranch.",
+      ],
+    },
+    serviceNotes: {},
+    studies: ["johnson-city-forestry-mulching", "spicewood-land-clearing", "spicewood-lake-travis-lot", "spicewood-sod-lots", "jonestown-forestry-mulching"],
+    reviews: ["Emil Millet"],
+    faqs: [
+      {
+        question: "Do I need a permit to clear cedar in Dripping Springs?",
+        answer: "Inside city limits, check with the city's Planning Department first. Dripping Springs has a tree ordinance that protects heritage trees, and a large cedar may count.",
+        services: ["land-clearing", "forestry-mulching"],
+      },
+      {
+        question: "Can you get the rock out so I can mow?",
+        answer: "Yes. Most properties here have both solid limestone and loose rock. We remove what's in the way and tell you up front what can't come out.",
+        services: ["rock-removal", "land-clearing"],
+      },
+      {
+        question: "Can I burn the brush?",
+        answer: "Only when Hays County has no burn ban, and within state rules. Questions go to the Hays County Fire Marshal at 512-393-7339. Mulching leaves no pile to burn.",
+        link: SOURCES.haysBurn,
+        services: ["land-clearing", "forestry-mulching"],
+      },
+      {
+        question: "Will the cedar come back?",
+        answer: "Cut cedar dies, but seedlings come up from seed in the soil. Texas Parks and Wildlife says to plan on another treatment in about 7–8 years.",
+        link: SOURCES.tpwdCedar,
+        services: ["land-clearing", "forestry-mulching"],
+      },
+    ],
+  },
+
+  "Wimberley": {
+    land: [],
+    experience: [
+      "For the Uhland Fall Fest, we cleared 20 acres of mesquite, cactus and cedar elm. In Buda, about 15 miles away, we cleared thick cedar and brush while keeping the owner's legacy oaks. On Wimberley properties, that usually means keeping the legacy hardwoods: oak, cypress and pecan.",
+      "Mulching takes out cedar and brush, keeps the trees you want, and leaves a layer of nutrient-rich mulch on the ground. Our closest mulching job is in Johnson City: 1.8 acres of cedar and small brush under oaks on rocky ground.",
+    ],
+    serviceExperience: {
+      "land-clearing": [
+        "For the Uhland Fall Fest, we cleared 20 acres of mesquite, cactus and cedar elm. In Buda, about 15 miles away, we cleared thick cedar and brush while keeping the owner's legacy oaks. On Wimberley properties, that usually means keeping the legacy hardwoods: oak, cypress and pecan.",
+      ],
+      "forestry-mulching": [
+        "Mulching takes out cedar and brush, keeps the trees you want, and leaves a layer of nutrient-rich mulch on the ground. Our closest mulching job is in Johnson City: 1.8 acres of cedar and small brush under oaks on rocky ground.",
+      ],
+      "rock-removal": [], // no rock removal copy yet
+    },
+    serviceNotes: {},
+    studies: ["johnson-city-forestry-mulching", "spicewood-land-clearing", "spicewood-lake-travis-lot", "spicewood-sod-lots", "jonestown-forestry-mulching"],
+    reviews: ["Emil Millet"],
+    faqs: [
+      {
+        question: "Can you clear near the Blanco River or Cypress Creek?",
+        answer: "Check with the City of Wimberley about the floodplain first. The city has a floodplain development permit, and its development application asks about floodplain and Edwards Aquifer zones.",
+        link: SOURCES.wimberleyForms,
+      },
+      {
+        question: "Can you take the cedar and leave the oaks, cypress and pecans?",
+        answer: "Yes. We clear around the trees you keep. Texas A&M Forest Service says not to wound oaks from February through June, because of oak wilt.",
+        link: SOURCES.oakWilt,
+        services: ["land-clearing", "forestry-mulching"],
+      },
+      {
+        question: "Does the Edwards Aquifer affect clearing?",
+        answer: "It can. State rules don't cover clearing vegetation without disturbing the soil, but work that changes the ground or how water runs off is regulated. TCEQ can tell you if your property is in the zone.",
+        link: SOURCES.edwards,
+      },
+      {
+        question: "Do you travel to Wimberley?",
+        answer: "Yes. We're based in Bertram, about 50 miles away. Whether the drive adds to the price depends on the job, and we'll tell you up front.",
+      },
+    ],
+  },
+
+  "Fredericksburg": {
+    land: [],
+    experience: [
+      "Most land around Fredericksburg is rangeland on shallow, rocky limestone hills, with deeper soil in the Pedernales River bottoms. We clear cedar and brush for pasture and keep the live oaks. Planning a vineyard, orchard or cabin site? We can clear the ground and leave the trees you want.",
+      "Our closest mulching job is in Johnson City, east on US 290: 1.8 acres of cedar and small brush mulched under oaks on rocky ground.",
+    ],
+    serviceExperience: {
+      "land-clearing": [
+        "Most land around Fredericksburg is rangeland on shallow, rocky limestone hills, with deeper soil in the Pedernales River bottoms. We clear cedar and brush for pasture and keep the live oaks. Planning a vineyard, orchard or cabin site? We can clear the ground and leave the trees you want.",
+      ],
+      "forestry-mulching": [
+        "Our closest mulching job is in Johnson City, east on US 290: 1.8 acres of cedar and small brush mulched under oaks on rocky ground.",
+      ],
+      "rock-removal": [], // no rock removal copy yet
+    },
+    serviceNotes: {},
+    studies: ["johnson-city-forestry-mulching", "kingsland-land-clearing", "kingsland-forestry-mulching", "spicewood-land-clearing", "spicewood-lake-travis-lot", "spicewood-sod-lots"],
+    reviews: [],
+    faqs: [
+      {
+        question: "Can I burn brush piles near Fredericksburg?",
+        answer: "Only outside city limits and when there's no burn ban. Gillespie County says to notify the Fredericksburg Fire Department first at 830-990-8793 (press 1), and someone must watch the fire the whole time.",
+        link: SOURCES.gillespieBurn,
+        services: ["land-clearing", "forestry-mulching"],
+      },
+      {
+        question: "Do you travel to Fredericksburg?",
+        answer: "Yes. We're based in Bertram, about 60 miles away. Whether the drive adds to the price depends on the job, and we'll tell you up front.",
+      },
+      {
+        question: "Can you work granite ground near Enchanted Rock?",
+        answer: "Yes. We work granite and sandy ground regularly west of Burnet, closer to home.",
+      },
+      {
+        question: "Will the cedar come back?",
+        answer: "Cut cedar dies, but seedlings come up from seed in the soil. Texas Parks and Wildlife says to plan on another treatment in about 7–8 years.",
+        link: SOURCES.tpwdCedar,
+        services: ["land-clearing", "forestry-mulching"],
+      },
     ],
   },
 };

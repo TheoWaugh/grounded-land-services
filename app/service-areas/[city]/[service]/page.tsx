@@ -24,8 +24,10 @@ import TrustStrip from "@/app/components/TrustStrip";
 import QuoteSection from "@/app/components/QuoteSection";
 import PriceCard from "@/app/components/PriceCard";
 import LocalProof from "@/app/components/LocalProof";
+import LocalReviews from "@/app/components/LocalReviews";
 import FaqPageSchema from "@/app/components/FaqPageSchema";
 import { cityLocal, LOCAL_SERVICES } from "@/data/city-local";
+import { reviewsFor } from "@/data/city-reviews";
 import { withQuickAnswers } from "@/lib/quick-answers";
 import { brandedTitle, metaDescription } from "@/lib/seo-title";
 import { priceOffer } from "@/lib/price-schema";
@@ -90,6 +92,11 @@ export default async function ServicePage({ params }: { params: PageParams }) {
   const cityData = cityLocal[cityName];
   const hasServiceStudies = Boolean((cityData?.serviceStudies as Record<string, string[]> | undefined)?.[service]);
   const local = LOCAL_SERVICES.includes(service) || hasServiceStudies ? cityData : undefined;
+  const cityReviewNames = local ? [] : reviewsFor(cityName, service);
+  // Index of the process section that "Our Work" follows, or -1 to keep it inside the reviews section
+  const proofAfterIndex = (local?.proofAfterProcess as string[] | undefined)?.includes(service)
+    ? sections.findIndex((s) => /process/i.test(s.heading ?? ""))
+    : -1;
   const localQuestions = content.localFaqs ?? [];
   const imageSrc = serviceImages[service];
   const imageAlt = serviceAltText[service] ?? content.title;
@@ -244,12 +251,21 @@ const allVideoIds = content.sections.flatMap((s) => [
             {section.media && <ServiceMedia items={section.media} />}
 
             {/* Intro → image → "See our work in and near …" → "Our Work in …" → reviews. */}
-            {section.localProofLine && (
+            {section.localProofLine && proofAfterIndex < 0 && (
               <p className="text-[#3a3a3c] leading-relaxed mb-4 text-[15px]">
                 <RichText text={section.localProofLine} />
               </p>
             )}
-            {local && section.showReviews && <LocalProof city={cityName} local={local} service={service} />}
+            {local && section.showReviews && proofAfterIndex < 0 && <LocalProof city={cityName} local={local} service={service} />}
+            {section.showReviews && cityReviewNames.length > 0 && (
+              <div className="mb-12">
+                <h2 className="text-2xl font-bold text-[#0a0a0a] mb-5 flex items-center gap-3">
+                  <span className="w-1.5 h-6 bg-[#C4922A] rounded-full inline-block" />
+                  Reviews from {cityName} and Nearby
+                </h2>
+                <LocalReviews city={cityName} names={cityReviewNames} />
+              </div>
+            )}
 
             {section.list && section.areasServed && (
               <>
@@ -467,10 +483,20 @@ const allVideoIds = content.sections.flatMap((s) => [
               </div>
             )}
           </div>
+          {local && i === proofAfterIndex && <LocalProof city={cityName} local={local} service={service} />}
           </Fragment>
         ))}
 
-        {local && !reviewsInSections && <LocalProof city={cityName} local={local} service={service} />}
+        {local && !reviewsInSections && proofAfterIndex < 0 && <LocalProof city={cityName} local={local} service={service} />}
+        {!reviewsInSections && cityReviewNames.length > 0 && (
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold text-[#0a0a0a] mb-5 flex items-center gap-3">
+              <span className="w-1.5 h-6 bg-[#C4922A] rounded-full inline-block" />
+              Reviews from {cityName} and Nearby
+            </h2>
+            <LocalReviews city={cityName} names={cityReviewNames} />
+          </div>
+        )}
 
         <TrustBadges />
 

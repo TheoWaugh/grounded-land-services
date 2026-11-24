@@ -8,11 +8,13 @@ import { servicePricing } from "@/data/service-pricing";
 import { quoteServiceLabels } from "@/data/quote-services";
 import { caseStudies } from "@/lib/case-studies";
 import { cityLocal, localFaqs } from "@/data/city-local";
+import { reviewsFor } from "@/data/city-reviews";
 import { brandedTitle, metaDescription } from "@/lib/seo-title";
 import BreadcrumbSchema from "@/app/components/BreadcrumbSchema";
 import TrustStrip from "@/app/components/TrustStrip";
 import QuoteSection from "@/app/components/QuoteSection";
 import LocalProof from "@/app/components/LocalProof";
+import LocalReviews from "@/app/components/LocalReviews";
 import FaqAccordion from "@/app/components/FaqAccordion";
 import FaqPageSchema from "@/app/components/FaqPageSchema";
 
@@ -68,6 +70,7 @@ export default async function CityHubPage({ params }: { params: PageParams }) {
   const studies = caseStudies.filter((s) => s.locationSlug === city || s.nearbyCitySlugs?.includes(city));
   const hasNearbyStudy = studies.some((s) => s.locationSlug !== city);
   const local = cityLocal[name];
+  const cityReviewNames = local ? [] : reviewsFor(name);
   const faqs = localFaqs(name);
 
   const localFacts = facts
@@ -194,6 +197,16 @@ export default async function CityHubPage({ params }: { params: PageParams }) {
                 </Link>
               ))}
             </div>
+          </div>
+        )}
+
+        {cityReviewNames.length > 0 && (
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold text-[#0a0a0a] mb-5 flex items-center gap-3">
+              <span className="w-1.5 h-6 bg-[#C4922A] rounded-full inline-block" />
+              Reviews from {name} and Nearby
+            </h2>
+            <LocalReviews city={name} names={cityReviewNames} />
           </div>
         )}
 

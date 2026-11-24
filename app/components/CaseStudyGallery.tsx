@@ -3,7 +3,7 @@
 import { useState, useCallback, useEffect } from "react";
 import Image from "next/image";
 
-export default function CaseStudyGallery({ photos, title }: { photos: string[]; title: string }) {
+export default function CaseStudyGallery({ photos, title, alts }: { photos: string[]; title: string; alts?: Record<string, string> }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const close = useCallback(() => setOpenIndex(null), []);
@@ -39,7 +39,7 @@ export default function CaseStudyGallery({ photos, title }: { photos: string[]; 
           >
             <Image
               src={photo}
-              alt={`${title} photo ${i + 1}`}
+              alt={alts?.[photo] ?? `${title} photo ${i + 1}`}
               fill
               className="object-cover transition-transform duration-300 group-hover:scale-105"
               sizes="(max-width: 768px) 50vw, 33vw"
@@ -87,7 +87,7 @@ export default function CaseStudyGallery({ photos, title }: { photos: string[]; 
           >
             <Image
               src={photos[openIndex]}
-              alt={`${title} photo ${openIndex + 1}`}
+              alt={alts?.[photos[openIndex]] ?? `${title} photo ${openIndex + 1}`}
               fill
               className="object-contain"
               sizes="100vw"

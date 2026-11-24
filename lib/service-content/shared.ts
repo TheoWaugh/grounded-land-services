@@ -16,11 +16,11 @@ export const FLEET =
 
 /**
  * Priority cities (data/city-local.ts): the hand-written local conditions plus this service's local
- * note, replacing the generic city-facts paragraphs. Null for every other city.
+ * note, replacing the generic city-facts paragraphs. Null for every other city, and for cities with no land copy.
  */
 export function localConditions(city: string, service: keyof CityLocal["serviceNotes"]): string[] | null {
   const local = cityLocal[city];
-  if (!local) return null;
+  if (!local || local.land.length === 0) return null;
   const note = local.serviceNotes[service];
   return note ? [...local.land, note] : local.land;
 }

@@ -9,7 +9,7 @@ export default function TrustStrip({ dark = false }: { dark?: boolean }) {
     <ul className={`flex flex-wrap items-center gap-x-3 gap-y-1.5 text-sm ${text}`}>
       <li>
         <a href={GBP_URL} target="_blank" rel="noopener noreferrer" className="font-semibold hover:underline">
-          <span className="text-[#C4922A]" aria-hidden="true">★★★★★</span> 5.0 on Google (19 reviews)
+          <span className="text-[#C4922A]" aria-hidden="true">★★★★★</span> 5.0 on Google (21 reviews)
         </a>
       </li>
       <li className={dot} aria-hidden="true">·</li>

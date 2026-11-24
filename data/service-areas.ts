@@ -15,12 +15,12 @@ export const serviceAreas: Record<string, string[]> = {
     "Jonestown", "Lakeway", "San Saba", "Mullin",
   ],
   "Central Texas": [
-    "Bastrop", "Brady", "Brenham", "Bryan", "Caldwell",
+    "Bastrop", "Brenham", "Bryan", "Caldwell",
     "Carmine", "College Station", "Columbus", "Gatesville",
     "Giddings", "Hamilton", "Hearne", "Jonesboro",
     "Killeen", "Madisonville", "McDade", "Meridian",
     "Rising Star", "Smithville", "Somerville",
-    "Stephenville", "Temple", "Waco", "Wellborn",
+    "Temple", "Waco", "Wellborn",
   ],
   "San Antonio Area": [
     "San Antonio", "Seguin", "Gonzales", "Luling", "Lockhart",

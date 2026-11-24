@@ -78,12 +78,14 @@ Based in Bertram. ~100 cities across 4 regions:
   Kerrville, Lampasas, Llano, Marble Falls, Mason, New Braunfels, Round
   Mountain, San Marcos, Spicewood, Wimberley, Kingsland, Granite Shoals,
   Meadowlakes, Lago Vista, Jonestown, Lakeway, San Saba, Mullin
-- Central Texas (24) and San Antonio Area (26): see data/service-areas.ts
+- Central Texas (22) and San Antonio Area (26): see data/service-areas.ts
 - Rock crushing / rock removal: limited to 26 Hill Country + Austin cities
 PRIORITY cities (owner): Liberty Hill, Georgetown, Spicewood, Gonzales,
 Luling, Bertram, Briggs. Focus content, case studies, and links here first.
 - NOT served (owner, 2026-10-21): Houston, Dallas, Fort Worth, Katy (or any
   Houston/DFW-area city). Never list them in copy, schema, keywords, or the chat bot.
+  Also NOT served (owner, 2026-11-24): Stephenville, Brady, Cisco, Caddo Mills. Pages removed; 301s to
+  /service-areas are in next.config.ts. Waco stays.
 
 ## Proof / trust signals
 - Licensed in Texas; fully insured (from TrustBadges). Do NOT say "certified" (owner, 2026-10-20).
@@ -92,14 +94,16 @@ Luling, Bertram, Briggs. Focus content, case studies, and links here first.
   2020 CAT 299 D3 XE Land Management; 2025 Prinoth M450s-1900 mulching head;
   2025 Bobcat 84" attachment; CAT curved tine industrial grapple rake;
   CAT industrial grapple; standard buckets
-- Reviews: 5.0 from 19 Google reviews (owner, Nov 9 2026; 19th is Salvador Rebollar, Dale, TX).
+- Reviews: 5.0 from 21 Google reviews (owner, Nov 24 2026; newest are Tom, Lake Travis/Hwy 620, and James Mathis, Killeen).
+  Tom's review shows on the Lakeway pages and the Spicewood forestry mulching page; never link it to the Hudson Bend case study.
+  James Mathis's review shows on the Killeen pages.
   ✅ 2026-10-21: review/aggregateRating markup REMOVED from the site-wide schema
   (self-serving LocalBusiness reviews aren't eligible for stars). Don't re-add it.
   Keep the visible TrustStrip, TrustBadges and homepage counts in sync with Google.
 - The "Kelley Arnold" review is from a family member: removed from the site
   (owner, 2026-10-21). Never show or mark it up.
 - Case studies on site: 20 in lib/case-studies.ts (owner confirmed 10 on 2026-10-21; more
-  added since, incl. Georgetown 5 ac and Harwood 3 ac on 2026-10-27, Kingsland 0.5 ac and Balcones refuge 5-mile fire break on 2026-10-30, Spicewood Lake Travis lot 0.5 ac and Spicewood sod lots 1.5 ac and Bertram mulching cleanup 1.2 ac and Bertram rock removal 0.5 ac on 2026-11-02, Gonzales forestry mulching 1 ac on 2026-11-03, Dale forestry mulching 2 ac on 2026-11-09, Lampasas rock removal 2 ac on 2026-11-09, Lampasas forestry mulching cleanup 2 ac (grant job, July 2025) on 2026-11-09, Bertram pool demolition 1,575 sq ft on 2026-11-09, Kingsland forestry mulching 1 ac on 2026-11-09, Hudson Bend (near Lake Travis) forestry mulching 0.5 ac on 2026-11-16; e.g. Spicewood 53.8 ac land clearing,
+  added since, incl. Georgetown 5 ac and Harwood 3 ac on 2026-10-27, Kingsland 0.5 ac and Balcones refuge 5-mile fire break on 2026-10-30, Spicewood Lake Travis lot 0.5 ac and Spicewood sod lots 1.5 ac and Bertram mulching cleanup 1.2 ac and Bertram rock removal 0.5 ac on 2026-11-02, Gonzales forestry mulching 1 ac on 2026-11-03, Dale forestry mulching 2 ac on 2026-11-09, Lampasas rock removal 2 ac on 2026-11-09, Lampasas forestry mulching cleanup 2 ac (grant job, July 2025) on 2026-11-09, Bertram pool demolition 1,575 sq ft on 2026-11-09, Kingsland forestry mulching 1 ac on 2026-11-09, Hudson Bend (near Lake Travis) forestry mulching 0.5 ac on 2026-11-16, Killeen forestry mulching 2 ac on 2026-11-24; e.g. Spicewood 53.8 ac land clearing,
   Gonzales 34.8 ac, Liberty Hill 4.1 ac rock removal)
 - Testimonials: on site with names and cities (Testimonials.tsx, app/page.tsx)
 - Gallery photo locations: NOT confirmed (every alt says "Bertram, TX"), except
@@ -121,7 +125,7 @@ Luling, Bertram, Briggs. Focus content, case studies, and links here first.
   - Rules: landowner pays first, reimbursed after post-inspection on paid-in-full invoices (3-6 weeks); contractor must be
     qualified and NOT affiliated with the landowner; landowner can't do the work; no work before the TFS pre-inspection
     (earlier work isn't reimbursed); burning of any kind disqualifies; debris must be removed or mechanically reduced
-    (mulching fits); NO minimum fire break width: the official program FAQ doesn't state one (owner, 2026-11-16), so never claim a width rule; one treatment type per application; selection is competitive.
+    (mulching fits); GRANT jobs only: "Each treatment must be a minimum of 66 feet wide" (main text of the program page, not its FAQ; rechecked 2026-11-24; never state it as a general fire break rule); one treatment type per application; selection is competitive.
   - Our guide: /guides/texas-mechanical-fuel-reduction-grant (built 2026-11-10; "Last updated: November 2026").
     Update its dates when TFS announces the 2027 round. Always link the official page; never promise eligibility or approval.
 - Social: Instagram @Grounded.LandServices, Facebook /GroundedLandServices,
@@ -177,6 +181,9 @@ seo-reports/city-notes-priority.md.
   (season runs March 1 – September 1) before clearing. Use as our experience on Spicewood,
   Liberty Hill and Jonestown pages. NEVER make legal claims about when a federal permit is
   required; tell landowners with mature cedar-oak woodland to check with USFWS.
+- Kingsland land clearing update (owner, 2026-11-24): after the job the owner (not us) seeded it; about 3 weeks
+  later green grass had filled in under the oaks. New photos on /case-studies/kingsland-land-clearing; the
+  neighborhood sign is blurred in two of them, so never publish the originals.
 - Kingsland forestry mulching (owner, 2026-11-09): 1 ac cedar, mesquite and brush mulched in place in 1 day,
   Aug 2026, CAT 275 + Prinoth, for a builder clearing a homesite; the builder then removed the mulch and
   stumps from the build pad (we did NOT do the stump/mulch removal on this job). We work with builders on
@@ -189,6 +196,10 @@ seo-reports/city-notes-priority.md.
   (visible in the photos). Hudson Bend is not a service-area city: locationSlug "lakeway", also listed on
   the Spicewood forestry mulching page. Customer not named. Case study
   /case-studies/hudson-bend-forestry-mulching.
+- Killeen forestry mulching (owner, 2026-11-24): 2 ac mulched in place in 1 day, Nov 2026, CAT 275 + Prinoth; brush and
+  growth around multiple trees, vines climbing into them (cleared out), dead and unwanted trees; owner wanted his
+  oaks opened up and easy maintenance; nothing tricky. Customer James Mathis (OK to name); his Google review is tied
+  to it. Case study /case-studies/killeen-forestry-mulching.
 - Bertram pool demolition (owner, 2026-11-09): 1,575 sq ft concrete/gunite pool + patio torn out for
   concrete cancer, about 1 week, June 2026. Took down part of the fence for access; tight space between
   house and pool. CAT 275 + a RENTED Bobcat E80 with a hydraulic hammer (we don't own a hammer or the E80:
@@ -246,6 +257,10 @@ seo-reports/city-notes-priority.md.
   OK to mention the grant; customer not named. Case study /case-studies/lampasas-mulching-cleanup-grant.
   Link the official program page (https://tfsweb.tamu.edu/mechgrant/) and never promise other landowners
   eligibility (program sets eligible counties and application periods; closed as of 2026-11-09).
+
+- Batch 2 cities (owner, 2026-11-24): wants Fredericksburg and Wimberley work. Has done one job in Lakeway,
+  separate from Hudson Bend (❓ details; owner is adding it). Currently working a job in Driftwood: in progress, never call it
+  finished. ❓ Details and customer permission for both. Notes: seo-reports/city-notes-batch2.md.
 
 ## Leads & contact
 - Best way to reach you: call or text (512) 571-6700, or the quote form

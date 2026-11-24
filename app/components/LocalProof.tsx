@@ -1,20 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { caseStudies } from "@/lib/case-studies";
-import { testimonials } from "@/data/testimonials";
-import { milesBetween } from "@/lib/bertram-distance";
+import { cityOf, placeLabel } from "@/lib/place-label";
 import type { CityLocal } from "@/data/city-local";
+import LocalReviews from "./LocalReviews";
 import RichText from "./RichText";
-
-// "Spicewood, TX" → "Spicewood", "Near Jonestown, TX" → "Jonestown"
-const cityOf = (location: string) => location.split(",")[0].replace(/^Near /, "").trim();
-
-/** "In Bertram" for the page's own city, otherwise "Burnet · about 11 mi away". */
-function placeLabel(pageCity: string, otherCity: string): string {
-  if (otherCity === pageCity) return `In ${pageCity}`;
-  const miles = milesBetween(pageCity, otherCity);
-  return miles === null ? otherCity : `${otherCity} · about ${Math.round(miles)} mi away`;
-}
 
 /**
  * Our work in and near a priority city: the owner's experience, the city's case studies (or the
@@ -30,9 +20,6 @@ export default function LocalProof({ city, local, service }: { city: string; loc
     .filter((c): c is (typeof caseStudies)[number] => Boolean(c));
   const reviewNames =
     (service && local.serviceReviews?.[service as keyof NonNullable<CityLocal["serviceReviews"]>]) || local.reviews;
-  const reviews = reviewNames
-    .map((name) => testimonials.find((t) => t.name === name))
-    .filter((t): t is (typeof testimonials)[number] => Boolean(t));
   const hasLocalStudy = studies.some((s) => cityOf(s.location) === city);
 
   return (
@@ -80,36 +67,12 @@ export default function LocalProof({ city, local, service }: { city: string; loc
         </div>
       )}
 
-      {reviews.length > 0 && (
+      {reviewNames.length > 0 && (
         <>
           <h3 className="text-lg font-bold text-[#0a0a0a] mt-10 mb-4">
             Reviews from {city} and Nearby
           </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 items-start">
-            {reviews.map((t) => (
-              <figure key={t.name} className="p-6 bg-white border border-gray-100 rounded-2xl">
-                <div className="flex gap-0.5 mb-3" aria-label="5 out of 5 stars">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-4 h-4 text-[#C4922A]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                    </svg>
-                  ))}
-                </div>
-                <blockquote className="text-[15px] text-[#2d2d2f] leading-relaxed mb-4">&ldquo;{t.quote}&rdquo;</blockquote>
-                <figcaption className="pt-4 border-t border-gray-100">
-                  <p className="text-sm font-bold text-[#0a0a0a]">{t.name}</p>
-                  {t.location && (
-                    <p className="text-xs text-[#6e6e73] tracking-wide">{placeLabel(city, cityOf(t.location))}</p>
-                  )}
-                  {t.caseStudy && (
-                    <Link href={`/case-studies/${t.caseStudy}`} className="inline-block mt-2 text-xs font-semibold text-[#C4922A] hover:underline">
-                      See this project →
-                    </Link>
-                  )}
-                </figcaption>
-              </figure>
-            ))}
-          </div>
+          <LocalReviews city={city} names={reviewNames} />
         </>
       )}
     </div>
